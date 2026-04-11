@@ -173,19 +173,29 @@ body.eur .price-usd{display:none}body.eur .price-eur{display:inline}
 .btn-pl{display:inline-flex;align-items:center;gap:10px;background:var(--black);color:#fff;text-decoration:none;padding:13px 24px;border-radius:100px;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1)}
 .btn-pl:hover{background:var(--blue);transform:translateY(-3px)}
 
-/* ECOMMERCE */
-.ecom-block{display:grid;grid-template-columns:1fr 1.3fr;gap:1px;background:var(--border);border:1px solid var(--border)}
-.ecom-img{background:var(--off);padding:48px 36px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px}
-.ecom-img img{width:100%;max-width:320px;border-radius:4px;object-fit:cover;aspect-ratio:4/3;transition:transform .4s cubic-bezier(.22,1,.36,1)}
-.ecom-img:hover img{transform:scale(1.04)}
-.platform-icons{display:flex;gap:20px;font-size:28px;color:var(--muted)}
-.ecom-info{background:var(--white);padding:48px 40px}
-.ecom-label{font-size:11px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:10px}
-.ecom-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,52px);color:var(--black);line-height:1;margin-bottom:6px}
-.ecom-price{font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--black);line-height:1;margin-bottom:4px}
-.ecom-note{font-size:11px;color:var(--soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:300;margin-bottom:24px}
-.pay-icons{display:flex;gap:14px;font-size:22px;color:var(--border);margin-bottom:24px}
-.ecom-desc{font-size:14px;color:var(--soft);font-weight:300;line-height:1.7;margin-bottom:20px}
+/* ECOMMERCE COMPACT */
+.ecom-card{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);margin-top:40px;overflow:hidden}
+.ecom-card-left{background:var(--black);padding:44px 40px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.ecom-card-left::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(74,120,255,.15) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.ecom-card-left::after{content:'EC';position:absolute;bottom:-20px;right:-10px;font-family:'Bebas Neue',sans-serif;font-size:120px;color:rgba(255,255,255,.04);pointer-events:none;line-height:1}
+.ecom-platforms{display:flex;gap:10px;margin-bottom:24px;position:relative;z-index:1}
+.ecom-platform-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:5px 12px;font-size:11px;color:rgba(255,255,255,.7);letter-spacing:.5px}
+.ecom-platform-tag i{font-size:12px}
+.ecom-card-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,44px);color:#fff;line-height:1;margin-bottom:8px;position:relative;z-index:1}
+.ecom-card-sub{font-size:13px;color:rgba(255,255,255,.45);font-weight:300;line-height:1.6;position:relative;z-index:1}
+.ecom-card-price-wrap{position:relative;z-index:1}
+.ecom-card-price{font-family:'Bebas Neue',sans-serif;font-size:56px;color:#fff;line-height:1}
+.ecom-card-price em{font-style:normal;font-size:28px;color:var(--blue-s)}
+.ecom-card-note{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:2px}
+.ecom-card-right{background:var(--white);padding:40px;display:flex;flex-direction:column;gap:20px}
+.ecom-includes-title{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--soft);font-weight:500;margin-bottom:4px}
+.ecom-pill-grid{display:flex;flex-direction:column;gap:8px}
+.ecom-pill{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border:1px solid var(--border);border-radius:4px;font-size:13px;color:var(--muted);font-weight:300;line-height:1.4;transition:border-color .2s,background .2s}
+.ecom-pill:hover{border-color:rgba(20,56,204,.25);background:rgba(20,56,204,.02)}
+.ecom-pill i{color:var(--blue);font-size:11px;margin-top:2px;flex-shrink:0}
+.ecom-pay{display:flex;gap:10px;font-size:20px;color:var(--border)}
+@media(max-width:1000px){.ecom-card{grid-template-columns:1fr}}
+@media(max-width:600px){.ecom-card-left{padding:32px 24px}.ecom-card-right{padding:28px 24px}}
 
 /* REVIEWS */
 .reviews-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
@@ -241,10 +251,35 @@ body.eur .price-usd{display:none}body.eur .price-eur{display:inline}
 .footer-cta-sub{font-size:14px;color:var(--soft);margin-top:10px;font-weight:300}
 
 /* FOOTER */
-footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:32px 52px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:3px;color:var(--black);display:flex;align-items:center;gap:8px}
-.footer-logo span{color:var(--blue)}
-.footer-info{font-size:12px;color:var(--soft);letter-spacing:.5px}
+footer{position:relative;z-index:1;background:var(--black);color:#fff;padding:64px 52px 32px;overflow:hidden}
+footer::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(74,120,255,.1) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
+.footer-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-brand{}
+.footer-brand-logo{display:flex;align-items:center;gap:10px;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px;color:#fff;margin-bottom:14px;text-decoration:none}
+.footer-brand-logo img{width:32px;height:32px;object-fit:contain;border-radius:4px}
+.footer-brand-logo span{color:var(--blue-s)}
+.footer-brand-desc{font-size:13px;color:rgba(255,255,255,.4);font-weight:300;line-height:1.7;max-width:220px;margin-bottom:24px}
+.footer-social{display:flex;gap:10px}
+.footer-social-link{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.5);font-size:14px;text-decoration:none;transition:border-color .2s,color .2s,background .2s}
+.footer-social-link:hover{border-color:var(--blue-s);color:var(--blue-s);background:rgba(74,120,255,.1)}
+.footer-col-title{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;color:#fff;margin-bottom:18px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-link{font-size:13px;color:rgba(255,255,255,.4);text-decoration:none;font-weight:300;transition:color .2s;display:flex;align-items:center;gap:6px}
+.footer-link:hover{color:#fff}
+.footer-link i{font-size:10px;color:var(--blue-s);opacity:.7}
+.footer-contact-item{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.4);font-weight:300;margin-bottom:10px}
+.footer-contact-item i{color:var(--blue-s);font-size:13px;width:16px;text-align:center}
+.footer-contact-item a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+.footer-contact-item a:hover{color:#fff}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:28px;gap:20px;flex-wrap:wrap}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.25);letter-spacing:.5px}
+.footer-copy span{color:var(--blue-s)}
+.footer-bottom-links{display:flex;gap:20px}
+.footer-bottom-link{font-size:11px;color:rgba(255,255,255,.25);text-decoration:none;letter-spacing:.5px;transition:color .2s}
+.footer-bottom-link:hover{color:rgba(255,255,255,.6)}
+@media(max-width:1000px){.footer-top{grid-template-columns:1fr 1fr;gap:36px}footer{padding:48px 28px 28px}}
+@media(max-width:600px){.footer-top{grid-template-columns:1fr}footer{padding:40px 20px 24px}.footer-bottom{flex-direction:column;align-items:flex-start;gap:12px}}
 
 /* LANG */
 [data-en]{display:none}
@@ -821,37 +856,45 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
   <div class="reveal">
     <div class="sec-eyebrow" data-es>Ventas Online</div><div class="sec-eyebrow" data-en>Online Sales</div>
     <h2 class="sec-title"><span data-es>GESTIÓN <span class="accent">E-COMMERCE</span></span><span data-en>E-COMMERCE <span class="accent">MANAGEMENT</span></span></h2>
+    <p class="sec-sub" data-es>Tu presencia en las plataformas más grandes del mundo, gestionada por nosotros.</p>
+    <p class="sec-sub" data-en>Your presence on the world's largest platforms, managed by us.</p>
   </div>
-  <div class="ecom-block reveal" style="margin-top:48px;transition-delay:.1s">
-    <div class="ecom-img">
-      <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=800&auto=format&fit=crop" alt="E-Commerce">
-      <div class="platform-icons"><i class="fa-brands fa-tiktok"></i><i class="fa-brands fa-amazon"></i><i class="fa-solid fa-store"></i></div>
+  <div class="ecom-card reveal" style="transition-delay:.1s">
+    <div class="ecom-card-left">
+      <div>
+        <div class="ecom-platforms">
+          <span class="ecom-platform-tag"><i class="fa-brands fa-amazon"></i> Amazon</span>
+          <span class="ecom-platform-tag"><i class="fa-brands fa-tiktok"></i> TikTok Shop</span>
+          <span class="ecom-platform-tag"><i class="fa-solid fa-store"></i> Walmart</span>
+        </div>
+        <div class="ecom-card-title" data-es>PLAN DE GESTIÓN<br>E-COMMERCE</div>
+        <div class="ecom-card-title" data-en>E-COMMERCE<br>MANAGEMENT PLAN</div>
+        <p class="ecom-card-sub" data-es>Todo lo que necesitas para vender en las plataformas más grandes, sin complicaciones.</p>
+        <p class="ecom-card-sub" data-en>Everything you need to sell on the biggest platforms, hassle-free.</p>
+      </div>
+      <div class="ecom-card-price-wrap">
+        <div class="ecom-card-price">
+          <span class="price-usd"><em>$</em>750</span>
+          <span class="price-eur"><em>€</em><span class="ea" data-v="750">675</span></span>
+        </div>
+        <div class="ecom-card-note" data-es>Pago único · Sin mensualidades</div>
+        <div class="ecom-card-note" data-en>One-time payment · No monthly fees</div>
+        <div class="ecom-pay" style="margin-top:16px"><i class="fa-brands fa-cc-paypal"></i><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i></div>
+        <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20Plan%20de%20Gestión%20E-Commerce" target="_blank" class="btn-main" style="margin-top:24px;display:inline-flex"><span data-es>Quiero este plan</span><span data-en>I want this plan</span><span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
     </div>
-    <div class="ecom-info">
-      <div class="ecom-label">Amazon · TikTok Shop · Walmart</div>
-      <h2 class="ecom-title" data-es>PLAN DE GESTIÓN<br>E-COMMERCE</h2><h2 class="ecom-title" data-en>E-COMMERCE<br>MANAGEMENT PLAN</h2>
-      <div class="ecom-price">
-        <span class="price-usd"><em style="font-style:normal;font-size:30px;color:var(--blue)">$</em>750</span>
-        <span class="price-eur"><em style="font-style:normal;font-size:30px;color:var(--blue)">€</em><span class="ea" data-v="750">675</span></span>
+    <div class="ecom-card-right">
+      <div>
+        <div class="ecom-includes-title" data-es>¿Qué incluye?</div>
+        <div class="ecom-includes-title" data-en>What's included?</div>
+        <div class="ecom-pill-grid" style="margin-top:12px">
+          <div class="ecom-pill"><i class="fa-solid fa-check"></i><span data-es>Configuración de cuentas y optimización de perfiles en todas las plataformas</span><span data-en>Account setup and profile optimization across all platforms</span></div>
+          <div class="ecom-pill"><i class="fa-solid fa-check"></i><span data-es>Apertura y onboarding en Walmart Marketplace</span><span data-en>Walmart Marketplace opening and onboarding</span></div>
+          <div class="ecom-pill"><i class="fa-solid fa-check"></i><span data-es>Asesoría en productos físicos y digitales</span><span data-en>Advisory on physical and digital products</span></div>
+          <div class="ecom-pill"><i class="fa-solid fa-check"></i><span data-es>Gestión de requisitos legales y permisos FDA</span><span data-en>Legal requirements & FDA permit management</span></div>
+          <div class="ecom-pill"><i class="fa-solid fa-check"></i><span data-es>Acompañamiento estratégico por 30 días</span><span data-en>30-day strategic support</span></div>
+        </div>
       </div>
-      <div class="ecom-note" data-es>Pago único</div><div class="ecom-note" data-en>One-time payment</div>
-      <div class="pay-icons"><i class="fa-brands fa-cc-paypal"></i><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i></div>
-      <p class="ecom-desc" data-es>Gestionamos tu presencia en las plataformas más grandes del mundo para maximizar tus ventas y presencia digital.</p>
-      <p class="ecom-desc" data-en>We manage your presence on the world's largest platforms to maximize your sales and digital footprint.</p>
-      <button class="ecom-collapse-btn" onclick="toggleEcom(this)">
-        <span class="ecom-collapse-label" data-es>Ver qué incluye</span><span class="ecom-collapse-label" data-en>See what's included</span>
-        <i class="fa-solid fa-chevron-down ecom-collapse-icon"></i>
-      </button>
-      <div class="ecom-collapsible">
-        <ul class="feat-list" style="margin-top:12px;margin-bottom:28px">
-          <li><i class="fa-solid fa-check ck"></i><span data-es>Configuración de cuentas y optimización de perfiles</span><span data-en>Account setup and profile optimization</span></li>
-          <li><i class="fa-solid fa-check ck"></i><span data-es>Apertura en Walmart Marketplace</span><span data-en>Walmart Marketplace onboarding</span></li>
-          <li><i class="fa-solid fa-check ck"></i><span data-es>Asesoría en productos físicos y digitales</span><span data-en>Advisory on physical and digital products</span></li>
-          <li><i class="fa-solid fa-check ck"></i><span data-es>Gestión de requisitos legales y permisos FDA</span><span data-en>Legal requirements & FDA permit management</span></li>
-          <li><i class="fa-solid fa-check ck"></i><span data-es>Acompañamiento estratégico por 30 días</span><span data-en>30-day strategic support</span></li>
-        </ul>
-      </div>
-      <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20Plan%20de%20Gestión%20E-Commerce" target="_blank" class="btn-main"><span data-es>Comprar ahora</span><span data-en>Buy now</span><span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
     </div>
   </div>
 </div>
@@ -969,13 +1012,74 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 </div>
 
 <footer>
-  <span class="footer-logo">
-    <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" style="width:22px;height:22px;object-fit:contain;border-radius:3px" alt="DGP">
-    DGP GROUP <span>USA</span>
-  </span>
-  <span class="footer-info">@dgpgroup.us</span>
-  <span class="footer-info" data-es>© 2025 · Todos los derechos reservados</span>
-  <span class="footer-info" data-en>© 2025 · All rights reserved</span>
+  <div class="footer-inner">
+    <div class="footer-top">
+
+      <!-- BRAND -->
+      <div class="footer-brand">
+        <a href="#" class="footer-brand-logo">
+          <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" alt="DGP">
+          DGP GROUP <span>USA</span>
+        </a>
+        <p class="footer-brand-desc" data-es>Agencia de marketing digital especializada en hacer crecer negocios con estrategias reales y resultados medibles.</p>
+        <p class="footer-brand-desc" data-en>Digital marketing agency specialized in growing businesses with real strategies and measurable results.</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/dgpgroup.us" target="_blank" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com/dgpgroupusa" target="_blank" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://tiktok.com/@dgpgroup.us" target="_blank" class="footer-social-link"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://wa.me/12398231738" target="_blank" class="footer-social-link"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- SERVICIOS -->
+      <div>
+        <div class="footer-col-title" data-es>SERVICIOS</div>
+        <div class="footer-col-title" data-en>SERVICES</div>
+        <div class="footer-links">
+          <a href="#diseno" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Diseño Gráfico</span><span data-en>Graphic Design</span></a>
+          <a href="#paquetes" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Paquetes</span><span data-en>Packages</span></a>
+          <a href="#web" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Planes Web</span><span data-en>Web Plans</span></a>
+          <a href="#ecommerce" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Gestión E-Commerce</span><span data-en>E-Commerce Management</span></a>
+          <a href="#servicios" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Redes Sociales</span><span data-en>Social Media</span></a>
+        </div>
+      </div>
+
+      <!-- COMPAÑÍA -->
+      <div>
+        <div class="footer-col-title" data-es>COMPAÑÍA</div>
+        <div class="footer-col-title" data-en>COMPANY</div>
+        <div class="footer-links">
+          <a href="#proceso" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Cómo Trabajamos</span><span data-en>How We Work</span></a>
+          <a href="#resenas" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Reseñas</span><span data-en>Reviews</span></a>
+          <a href="javascript:openContactModal()" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Contacto</span><span data-en>Contact</span></a>
+        </div>
+      </div>
+
+      <!-- CONTACTO -->
+      <div>
+        <div class="footer-col-title" data-es>CONTACTO</div>
+        <div class="footer-col-title" data-en>CONTACT</div>
+        <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/12398231738" target="_blank">+1 (239) 823-1738</a></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:info@dgpgroup.us">info@dgpgroup.us</a></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-globe"></i><a href="https://dgpgroup.us" target="_blank">dgpgroup.us</a></div>
+        <div class="footer-contact-item"><i class="fa-solid fa-location-dot"></i><span>Florida, USA</span></div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        © 2026 <span>DGP Global Group</span> · <span data-es>Todos los derechos reservados</span><span data-en>All rights reserved</span>
+      </div>
+      <div class="footer-bottom-links">
+        <a href="#" class="footer-bottom-link" data-es>Política de Privacidad</a>
+        <a href="#" class="footer-bottom-link" data-en>Privacy Policy</a>
+        <a href="#" class="footer-bottom-link" data-es>Términos de Uso</a>
+        <a href="#" class="footer-bottom-link" data-en>Terms of Use</a>
+        <a href="#" class="footer-bottom-link">@dgpgroup.us</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script>
