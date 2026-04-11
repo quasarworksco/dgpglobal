@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DGP Group USA | Agencia de Marketing Digital</title>
+<meta name="description" content="DGP Group USA — Agencia de marketing digital con estrategias reales para resultados medibles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--white:#ffffff;--off:#f7f7f5;--black:#0a0a0a;--blue:#1438cc;--blue-l:#2a52e0;--blue-s:#4d78ff;--muted:#2a3f7e;--border:#e8e8e4;--soft:#64748b;--gold:#d4af37}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--black);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,#c8c8c8 1px,transparent 1px);background-size:36px 36px;opacity:.35;pointer-events:none;z-index:0}
+
+/* LOADER */
+#loader{position:fixed;inset:0;background:#fff;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transition:opacity .8s ease,visibility .8s ease}
+#loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.ldr-logo{animation:ldrPop .9s cubic-bezier(.34,1.56,.64,1) both;position:relative;width:220px;height:220px;display:flex;align-items:center;justify-content:center}
+.ldr-ring-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+@keyframes ldrPop{from{opacity:0;transform:scale(.6) translateY(24px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.ldr-ring{animation:ldrSpin 2s linear infinite;transform-origin:center}
+@keyframes ldrSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.ldr-wm{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:6px;color:var(--black);animation:ldrFade .6s .4s both}
+.ldr-wm span{color:var(--blue)}
+.ldr-tag{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--soft);animation:ldrFade .6s .5s both}
+.ldr-phrase{font-size:13px;color:var(--muted);font-weight:300;height:20px;overflow:hidden;animation:ldrFade .4s .6s both;text-align:center}
+.ldr-phrase span{display:block;height:20px;line-height:20px;opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s}
+.ldr-phrase span.on{opacity:1;transform:translateY(0)}
+.ldr-bar-wrap{width:200px;height:2px;background:var(--border);overflow:hidden;border-radius:2px;animation:ldrFade .4s .5s both}
+.ldr-bar{height:100%;width:0%;background:var(--blue);transition:width .05s linear;border-radius:2px}
+@keyframes ldrFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+/* TOP CONTROLS */
+.top-ctrl{position:fixed;top:20px;right:24px;z-index:1000;display:flex;gap:6px;opacity:0;animation:fadeDown .5s 2.4s forwards}
+.ctrl-grp{display:flex;gap:2px;background:rgba(255,255,255,.94);border:1px solid var(--border);border-radius:100px;padding:4px;backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.ctrl-btn{padding:6px 13px;border-radius:100px;border:none;background:transparent;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);cursor:pointer;transition:all .2s}
+.ctrl-btn.active{background:var(--black);color:#fff}
+
+/* NAV */
+nav{position:relative;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:32px 52px 0;opacity:0;animation:fadeDown .7s .5s forwards}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:4px;color:var(--black);text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo-sm{width:28px;height:28px;flex-shrink:0}
+.logo span{color:var(--blue)}
+.nav-badge{display:flex;align-items:center;gap:7px;background:var(--off);border:1px solid var(--border);border-radius:100px;padding:6px 14px;font-size:11px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:400;margin-right:180px}
+.dot{width:6px;height:6px;background:#22c55e;border-radius:50%;animation:blink 1.8s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+
+/* HERO */
+#hero{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:space-between;padding:0 52px 44px;overflow:hidden}
+.glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(20,56,204,.08) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:0;animation:breathe 5s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.12)}}
+.bg-word{position:absolute;bottom:-30px;right:-10px;font-family:'Bebas Neue',sans-serif;font-size:clamp(160px,22vw,320px);color:transparent;-webkit-text-stroke:1px rgba(0,0,0,.04);pointer-events:none;user-select:none;z-index:0}
+.hero-content{position:relative;z-index:10;padding-top:24px;opacity:0;transform:translateY(32px);animation:fadeUp .9s .7s cubic-bezier(.22,1,.36,1) forwards}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:28px}
+.eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--blue)}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(68px,12vw,170px);line-height:.9;color:var(--black);letter-spacing:-1px}
+.hero-title .shine{display:block;background:linear-gradient(105deg,var(--blue) 0%,var(--blue) 35%,#a8c0ff 48%,#fff 54%,#a8c0ff 60%,var(--blue) 75%,var(--blue) 100%);background-size:250% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:1.5px;animation:shine 2.8s 1.4s ease-in-out infinite}
+.hero-bottom{position:relative;z-index:10;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;gap:32px;padding-top:48px;border-top:1px solid var(--border);opacity:0;animation:fadeUp .9s 1.0s cubic-bezier(.22,1,.36,1) forwards}
+.hero-desc{font-size:clamp(14px,1.3vw,16px);color:var(--muted);line-height:1.7;font-weight:300;max-width:300px}
+.stats{display:flex;justify-content:flex-end;gap:40px}
+.stat{text-align:right}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:42px;color:var(--black);line-height:1;display:block}
+.stat-num em{color:var(--blue);font-style:normal}
+.stat-lbl{font-size:11px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:300}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* SECTION */
+.section{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:80px 48px}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:14px}
+.sec-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--blue)}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6.5vw,82px);line-height:.92;color:var(--black);margin-bottom:16px}
+.sec-title .accent{background:linear-gradient(105deg,var(--blue) 0%,var(--blue) 35%,#a8c0ff 48%,#fff 54%,#a8c0ff 60%,var(--blue) 75%,var(--blue) 100%);background-size:250% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 3s ease-in-out infinite}
+.sec-sub{font-size:15px;color:var(--soft);font-weight:300;line-height:1.7;max-width:520px}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+.divider{width:calc(100% - 96px);max-width:1100px;height:1px;background:var(--border);margin:0 auto}
+
+/* CURRENCY */
+.price-usd{display:inline}.price-eur{display:none}
+body.eur .price-usd{display:none}body.eur .price-eur{display:inline}
+
+/* BTNS */
+.btn-main{display:inline-flex;align-items:center;gap:14px;background:var(--black);color:#fff;text-decoration:none;padding:19px 38px;border-radius:100px;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;box-shadow:0 8px 30px rgba(0,0,0,.12)}
+.btn-main:hover{background:var(--blue);transform:translateY(-4px);box-shadow:0 16px 40px rgba(20,56,204,.3)}
+.btn-main .arr{width:28px;height:28px;background:rgba(255,255,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.btn-main:hover .arr{transform:rotate(45deg)}
+.btn-sm{display:inline-flex;align-items:center;justify-content:space-between;gap:12px;background:var(--black);color:#fff;text-decoration:none;padding:13px 20px;border-radius:100px;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.btn-sm:hover{background:var(--blue);transform:translateY(-3px)}
+.btn-sm .a{width:22px;height:22px;background:rgba(255,255,255,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;transition:transform .3s cubic-bezier(.34,1.56,.64,1);flex-shrink:0}
+.btn-sm:hover .a{transform:rotate(45deg)}
+
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:48px}
+.svc-card{background:var(--white);padding:44px 36px;transition:background .3s;position:relative;overflow:hidden}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.svc-card:hover{background:rgba(20,56,204,.03)}.svc-card:hover::after{transform:scaleX(1)}
+.svc-card:hover .svc-icon{color:var(--blue);transform:scale(1.15) rotate(-5deg)}
+.svc-icon{font-size:30px;color:var(--muted);margin-bottom:24px;display:block;transition:color .3s,transform .4s cubic-bezier(.34,1.56,.64,1)}
+.svc-name{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--black);margin-bottom:12px}
+.svc-desc{font-size:14px;color:var(--soft);line-height:1.7;font-weight:300}
+
+/* DESIGN LIST */
+.design-list{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border)}
+.design-row{background:var(--white);display:flex;align-items:center;justify-content:space-between;padding:28px 36px;gap:24px;transition:background .25s;position:relative;overflow:hidden}
+.design-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--blue);transform:scaleY(0);transform-origin:bottom;transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.design-row:hover{background:rgba(20,56,204,.03)}.design-row:hover::before{transform:scaleY(1)}
+.design-row:hover .row-icon{color:var(--blue);transform:scale(1.15)}
+.row-left{display:flex;align-items:center;gap:20px;flex:1}
+.row-icon{font-size:22px;color:var(--muted);width:44px;text-align:center;flex-shrink:0;transition:color .25s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.row-info h3{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--black);margin-bottom:2px}
+.row-info p{font-size:13px;color:var(--soft);font-weight:300;line-height:1.5}
+.row-right{display:flex;align-items:center;gap:20px;flex-shrink:0}
+.row-price{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--black);line-height:1}
+.row-price em{font-style:normal;font-size:18px;color:var(--blue)}
+
+/* PACKAGES */
+.pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
+.pkg-card{background:var(--white);padding:36px 28px;transition:background .25s,transform .3s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden}
+.pkg-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.pkg-card:hover{background:rgba(20,56,204,.03);transform:translateY(-4px)}.pkg-card:hover::after{transform:scaleX(1)}
+.pkg-card:hover .pkg-icon{color:var(--blue);transform:scale(1.15) rotate(-5deg)}
+.pkg-icon{font-size:26px;color:var(--muted);margin-bottom:20px;transition:color .25s,transform .4s cubic-bezier(.34,1.56,.64,1)}
+.pkg-name{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--black);margin-bottom:4px}
+.pkg-price{font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--black);line-height:1;margin-bottom:20px}
+.feat-list{list-style:none;margin-bottom:28px}
+.feat-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--soft);font-weight:300;padding:7px 0;border-bottom:1px solid rgba(0,0,0,.04);line-height:1.5}
+.feat-list li:last-child{border-bottom:none}
+.ck{color:var(--blue);font-size:10px;margin-top:3px;flex-shrink:0}
+
+/* WEB PLANS */
+.web-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.plan-card{background:var(--white);border:1px solid var(--border);border-radius:4px;overflow:hidden;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+.plan-card:hover{transform:translateY(-8px);box-shadow:0 20px 56px rgba(20,56,204,.15)}
+.plan-card.pop{border-color:var(--blue)}
+.plan-head{padding:24px 28px}
+.plan-head.h1{background:linear-gradient(120deg,#2a52e0,#1438cc)}
+.plan-head.h2{background:linear-gradient(120deg,#1438cc,#0d2a9e)}
+.plan-head.h3{background:linear-gradient(120deg,#0d2a9e,#080f3d)}
+.plan-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:4px}
+.plan-name{font-family:'Bebas Neue',sans-serif;font-size:32px;color:#fff;letter-spacing:1px;line-height:1}
+.pop-badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:100px;padding:3px 10px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#fff;margin-top:10px}
+.plan-body{padding:28px}
+.plan-price{font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--black);line-height:1;margin-bottom:4px}
+.plan-note{font-size:11px;color:var(--soft);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px;font-weight:300}
+.plan-div{width:100%;height:1px;background:var(--border);margin-bottom:20px}
+
+/* PULSE */
+.pulse-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
+.pulse-dark{background:var(--black);padding:48px 40px;transition:background .3s}.pulse-dark:hover{background:#0f0f0f}
+.pulse-light{background:var(--white);padding:48px 40px;transition:background .3s}.pulse-light:hover{background:rgba(20,56,204,.03)}
+.p-icon{width:48px;height:48px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:24px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.pulse-dark:hover .p-icon,.pulse-light:hover .p-icon{transform:scale(1.1) rotate(-5deg)}
+.p-icon-d{background:rgba(255,255,255,.08);color:var(--blue-s)}.p-icon-l{background:rgba(20,56,204,.08);color:var(--blue)}
+.pulse-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:100px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:24px}
+.pill-d{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6)}
+.pill-l{background:rgba(20,56,204,.06);border:1px solid rgba(20,56,204,.15);color:var(--blue)}
+.ping{width:6px;height:6px;border-radius:50%;animation:blink 1.8s ease-in-out infinite;flex-shrink:0}
+.ping-g{background:#22d3ee}.ping-b{background:var(--blue)}
+.p-title-d{font-family:'Bebas Neue',sans-serif;font-size:28px;color:#fff;margin-bottom:12px}
+.p-title-l{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--black);margin-bottom:12px}
+.p-desc-d{font-size:14px;color:rgba(255,255,255,.5);font-weight:300;line-height:1.7;margin-bottom:28px}
+.p-desc-l{font-size:14px;color:var(--soft);font-weight:300;line-height:1.7;margin-bottom:28px}
+.btn-pd{display:inline-flex;align-items:center;gap:10px;background:var(--blue);color:#fff;text-decoration:none;padding:13px 24px;border-radius:100px;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.btn-pd:hover{background:var(--blue-l);transform:translateY(-3px)}
+.btn-pl{display:inline-flex;align-items:center;gap:10px;background:var(--black);color:#fff;text-decoration:none;padding:13px 24px;border-radius:100px;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.btn-pl:hover{background:var(--blue);transform:translateY(-3px)}
+
+/* ECOMMERCE */
+.ecom-block{display:grid;grid-template-columns:1fr 1.3fr;gap:1px;background:var(--border);border:1px solid var(--border)}
+.ecom-img{background:var(--off);padding:48px 36px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px}
+.ecom-img img{width:100%;max-width:320px;border-radius:4px;object-fit:cover;aspect-ratio:4/3;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.ecom-img:hover img{transform:scale(1.04)}
+.platform-icons{display:flex;gap:20px;font-size:28px;color:var(--muted)}
+.ecom-info{background:var(--white);padding:48px 40px}
+.ecom-label{font-size:11px;color:var(--blue);letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:10px}
+.ecom-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,52px);color:var(--black);line-height:1;margin-bottom:6px}
+.ecom-price{font-family:'Bebas Neue',sans-serif;font-size:56px;color:var(--black);line-height:1;margin-bottom:4px}
+.ecom-note{font-size:11px;color:var(--soft);letter-spacing:1.5px;text-transform:uppercase;font-weight:300;margin-bottom:24px}
+.pay-icons{display:flex;gap:14px;font-size:22px;color:var(--border);margin-bottom:24px}
+.ecom-desc{font-size:14px;color:var(--soft);font-weight:300;line-height:1.7;margin-bottom:20px}
+
+/* REVIEWS */
+.reviews-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.card{background:var(--white);border:1px solid var(--border);position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--blue-l),var(--blue));background-size:200% 100%;animation:slideLine 3s ease-in-out infinite}
+@keyframes slideLine{0%{background-position:0% center}50%{background-position:100% center}100%{background-position:0% center}}
+.form-card{padding:40px 36px 36px}
+.card-icon{width:48px;height:48px;border:1px solid var(--border);background:rgba(20,56,204,.04);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:20px;margin-bottom:24px}
+.card-heading{font-family:'Bebas Neue',sans-serif;font-size:30px;color:var(--black);margin-bottom:6px}
+.card-sub{font-size:13px;color:var(--soft);font-weight:300;margin-bottom:28px;line-height:1.6;border-left:2px solid var(--border);padding-left:14px}
+.field{margin-bottom:14px}
+.field input,.field textarea{width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--black);outline:none;transition:border-color .2s,box-shadow .2s;border-radius:0;-webkit-appearance:none}
+.field input:focus,.field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,56,204,.07)}
+.field textarea{resize:vertical;min-height:90px}
+.rating-row{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border:1px solid var(--border);margin-bottom:14px;background:#f8f9fb}
+.rating-label{font-size:12px;text-transform:uppercase;letter-spacing:1.5px;color:var(--soft);font-weight:500}
+.star-input{display:flex;flex-direction:row-reverse;gap:2px}
+.star-input input{display:none}
+.star-input label{font-size:22px;color:#d8dce3;cursor:pointer;transition:color .15s,transform .2s;line-height:1}
+.star-input label:hover{transform:scale(1.3)}
+.star-input input:checked ~ label,.star-input label:hover,.star-input label:hover ~ label{color:var(--gold)}
+.submit-btn{width:100%;background:var(--black);color:#fff;border:none;padding:16px 24px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:4px;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .25s}
+.submit-btn:hover:not(:disabled){background:var(--blue);transform:translateY(-3px);box-shadow:0 10px 30px rgba(20,56,204,.22)}
+.submit-btn:disabled{opacity:.6;cursor:not-allowed}
+.submit-btn .barr{width:24px;height:24px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.submit-btn:hover .barr{transform:rotate(45deg)}
+.status{margin-top:14px;padding:12px 16px;font-size:13px;display:none;text-align:center}
+.ok{display:block;background:rgba(20,56,204,.05);border-left:3px solid var(--blue);color:var(--blue)}
+.err{display:block;background:rgba(204,20,20,.05);border-left:3px solid #cc1414;color:#cc1414}
+.panel-head{padding:32px 32px 0;display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px}
+.panel-title{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--black)}
+.rev-count{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);font-weight:300}
+.reviews-scroll{padding:0 32px 32px;display:flex;flex-direction:column;gap:14px;max-height:520px;overflow-y:auto}
+.reviews-scroll::-webkit-scrollbar{width:4px}.reviews-scroll::-webkit-scrollbar-thumb{background:var(--border)}
+.rev-item{border:1px solid var(--border);padding:20px;position:relative;transition:border-color .25s,box-shadow .25s,transform .25s}
+.rev-item:hover{border-color:rgba(20,56,204,.25);box-shadow:0 4px 20px rgba(20,56,204,.06);transform:translateX(4px)}
+.rev-item::after{content:'\201C';position:absolute;top:12px;right:18px;font-family:Georgia,serif;font-size:48px;color:rgba(20,56,204,.08);line-height:1;pointer-events:none}
+.rev-top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.rev-avatar{width:36px;height:36px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;color:#fff;letter-spacing:.5px;flex-shrink:0}
+.rev-name{font-weight:500;font-size:13px;color:var(--black)}
+.rev-stars{color:var(--gold);font-size:13px;letter-spacing:1px;margin-top:2px}
+.rev-text{font-size:13px;color:var(--soft);line-height:1.75;font-weight:300;font-style:italic}
+.shimmer{height:80px;background:linear-gradient(90deg,var(--border) 25%,#f0f0ec 50%,var(--border) 75%);background-size:200% 100%;animation:shimmer 1.2s infinite}
+@keyframes shimmer{0%{background-position:200% center}100%{background-position:-200% center}}
+.empty-state{text-align:center;padding:40px 20px;color:var(--soft);font-size:13px;font-weight:300}
+.empty-state i{font-size:28px;color:var(--border);display:block;margin-bottom:12px}
+
+/* FOOTER CTA */
+.footer-cta{margin-top:80px;padding:60px 52px;border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:40px;transition:border-color .3s,box-shadow .3s}
+.footer-cta:hover{border-color:rgba(20,56,204,.3);box-shadow:0 8px 40px rgba(20,56,204,.08)}
+.footer-cta-text{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,52px);color:var(--black);line-height:1}
+.footer-cta-text span{color:var(--blue)}
+.footer-cta-sub{font-size:14px;color:var(--soft);margin-top:10px;font-weight:300}
+
+/* FOOTER */
+footer{position:relative;z-index:1;border-top:1px solid var(--border);padding:32px 52px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:3px;color:var(--black);display:flex;align-items:center;gap:8px}
+.footer-logo span{color:var(--blue)}
+.footer-info{font-size:12px;color:var(--soft);letter-spacing:.5px}
+
+/* LANG */
+[data-en]{display:none}
+body.en [data-es]{display:none}body.en [data-en]{display:block}
+body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
+
+/* HERO BG IMAGE */
+#hero{background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1800&auto=format&fit=crop');background-size:cover;background-position:center;background-repeat:no-repeat}
+#hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.92) 0%,rgba(247,247,245,.85) 40%,rgba(20,56,204,.06) 100%);z-index:1;pointer-events:none}
+#hero .glow,#hero .bg-word,#hero .hero-content,#hero .hero-bottom{z-index:2}
+
+/* CONTACT MODAL */
+#contactModal{display:none;position:fixed;inset:0;z-index:5000;align-items:center;justify-content:center;padding:20px}
+#contactModal.open{display:flex}
+.modal-backdrop{position:absolute;inset:0;background:rgba(10,10,10,.55);backdrop-filter:blur(6px)}
+.modal-box{position:relative;background:#fff;border:1px solid var(--border);width:100%;max-width:440px;padding:44px 40px 36px;box-shadow:0 24px 80px rgba(0,0,0,.18);animation:modalPop .35s cubic-bezier(.34,1.56,.64,1)}
+@keyframes modalPop{from{opacity:0;transform:translateY(24px) scale(.96)}to{opacity:1;transform:translateY(0) scale(1)}}
+.modal-close{position:absolute;top:16px;right:20px;background:none;border:none;font-size:20px;color:var(--soft);cursor:pointer;line-height:1;padding:4px;transition:color .2s}
+.modal-close:hover{color:var(--black)}
+.modal-eyebrow{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.modal-eyebrow::before{content:'';display:block;width:18px;height:1px;background:var(--blue)}
+.modal-title{font-family:'Bebas Neue',sans-serif;font-size:34px;color:var(--black);line-height:1;margin-bottom:6px}
+.modal-sub{font-size:13px;color:var(--soft);font-weight:300;margin-bottom:28px;line-height:1.6}
+.modal-field{margin-bottom:12px}
+.modal-field input,.modal-field textarea,.modal-field select{width:100%;padding:12px 15px;border:1px solid var(--border);background:#fafafa;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--black);outline:none;border-radius:0;-webkit-appearance:none;transition:border-color .2s,box-shadow .2s}
+.modal-field input:focus,.modal-field textarea:focus,.modal-field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,56,204,.07);background:#fff}
+.modal-field textarea{min-height:80px;resize:vertical}
+.modal-field select{color:var(--soft)}
+.modal-field select option{color:var(--black)}
+.modal-send{width:100%;background:var(--black);color:#fff;border:none;padding:16px 24px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;margin-top:4px;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.modal-send:hover{background:var(--blue);transform:translateY(-2px)}
+.modal-send .barr{width:22px;height:22px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.modal-send:hover .barr{transform:rotate(45deg)}
+@media(max-width:600px){.modal-box{padding:36px 24px 28px}}
+@media(max-width:1000px){
+  nav{padding:28px 28px 0}.nav-badge{margin-right:10px}
+  #hero{padding:0 28px 40px}.hero-bottom{grid-template-columns:1fr;gap:24px}
+  .stats{justify-content:flex-start}.stat{text-align:left}
+  .section{padding:60px 28px}
+  .svc-grid,.pkg-grid,.web-plans,.pulse-grid,.ecom-block,.reviews-wrap{grid-template-columns:1fr}
+  .footer-cta{flex-direction:column;align-items:flex-start;padding:40px 28px}
+  footer{flex-direction:column;align-items:flex-start;padding:28px}
+}
+@media(max-width:600px){
+  nav{padding:24px 20px 0}.nav-badge{display:none}
+  #hero{padding:0 20px 36px}.section{padding:48px 20px}
+  .design-row{flex-direction:column;align-items:flex-start}.row-right{width:100%;justify-content:space-between}
+  .top-ctrl{top:14px;right:14px;gap:4px}
+}
+
+/* ── EXTRA ANIMATIONS ───────────────────────────────── */
+/* Floating orbs in hero */
+.hero-orb{position:absolute;border-radius:50%;pointer-events:none;z-index:1}
+.hero-orb-1{width:6px;height:6px;background:var(--blue);opacity:.5;top:25%;left:15%;animation:orbFloat 6s ease-in-out infinite}
+.hero-orb-2{width:4px;height:4px;background:var(--blue-s);opacity:.4;top:60%;left:30%;animation:orbFloat 8s ease-in-out 1s infinite}
+.hero-orb-3{width:8px;height:8px;background:#a8c0ff;opacity:.35;top:40%;right:20%;animation:orbFloat 7s ease-in-out 2s infinite}
+.hero-orb-4{width:3px;height:3px;background:var(--blue);opacity:.6;top:75%;right:35%;animation:orbFloat 5s ease-in-out .5s infinite}
+.hero-orb-5{width:5px;height:5px;background:var(--blue-s);opacity:.3;top:15%;right:15%;animation:orbFloat 9s ease-in-out 3s infinite}
+@keyframes orbFloat{0%,100%{transform:translateY(0) translateX(0)}25%{transform:translateY(-18px) translateX(8px)}50%{transform:translateY(-8px) translateX(-12px)}75%{transform:translateY(-24px) translateX(6px)}}
+
+/* Cursor glow blob */
+.cursor-glow{position:fixed;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(20,56,204,.06) 0%,transparent 68%);pointer-events:none;z-index:0;transform:translate(-50%,-50%);transition:left .15s ease,top .15s ease}
+
+/* Shimmer border on footer-cta */
+.footer-cta{background:linear-gradient(var(--white),var(--white)) padding-box,linear-gradient(90deg,var(--border),var(--blue-s),var(--border)) border-box;border:1px solid transparent;animation:borderRoll 4s linear infinite}
+@keyframes borderRoll{0%,100%{border-image-source:linear-gradient(90deg,var(--border),var(--blue-s),var(--border))}50%{border-image-source:linear-gradient(270deg,var(--border),var(--blue-s),var(--border))}}
+
+/* Stat counter pop */
+@keyframes statBounce{0%,100%{transform:scale(1)}40%{transform:scale(1.18)}70%{transform:scale(.96)}}
+.stat-num{transition:color .3s}
+.stat-num.popped{animation:statBounce .5s cubic-bezier(.34,1.56,.64,1)}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="ldr-logo" style="position:relative">
+    <div class="ldr-ring-wrap">
+      <svg width="220" height="220" viewBox="0 0 220 220" fill="none" style="position:absolute;top:0;left:0">
+        <circle cx="110" cy="110" r="104" stroke="#e8e8e4" stroke-width="2"/>
+        <circle cx="110" cy="110" r="104" stroke="#1438cc" stroke-width="2.5" stroke-dasharray="100 554" stroke-linecap="round" class="ldr-ring"/>
+      </svg>
+    </div>
+    <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w400" alt="DGP" style="width:200px;height:200px;object-fit:contain;border-radius:8px;display:block">
+  </div>
+  <div class="ldr-wm">DGP GROUP <span>USA</span></div>
+  <div class="ldr-tag" data-es>Agencia de Marketing Digital</div>
+  <div class="ldr-tag" data-en>Digital Marketing Agency</div>
+  <div class="ldr-phrase" id="ldrPhrase"><span class="on" data-es>Transformamos marcas en movimientos.</span><span data-en>We transform brands into movements.</span></div>
+  <div class="ldr-bar-wrap"><div class="ldr-bar" id="ldrBar"></div></div>
+</div>
+
+<!-- TOP CONTROLS -->
+<div class="top-ctrl">
+  <div class="ctrl-grp">
+    <button class="ctrl-btn active" onclick="setCurr('usd')">USD</button>
+    <button class="ctrl-btn" onclick="setCurr('eur')">EUR</button>
+  </div>
+  <div class="ctrl-grp">
+    <button class="ctrl-btn active" onclick="setLang('es')">ES</button>
+    <button class="ctrl-btn" onclick="setLang('en')">EN</button>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" class="logo-sm" alt="DGP Group USA" style="width:42px;height:42px;object-fit:contain;border-radius:4px">
+    DGP GROUP <span>USA</span>
+  </a>
+  <div class="nav-badge">
+    <span class="dot"></span>
+    <span data-es>Nuevos proyectos</span><span data-en>New projects</span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="glow"></div>
+  <div class="bg-word">DGP</div>
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+  <div class="hero-orb hero-orb-4"></div>
+  <div class="hero-orb hero-orb-5"></div>
+  <div class="hero-content">
+    <div class="eyebrow" data-es>Marketing · Diseño · Crecimiento</div>
+    <div class="eyebrow" data-en>Marketing · Design · Growth</div>
+    <h1 class="hero-title">
+      <span data-es>AGENCIA DE<br><span class="shine">MARKETING</span>DIGITAL</span>
+      <span data-en>DIGITAL<br><span class="shine">MARKETING</span>AGENCY</span>
+    </h1>
+  </div>
+  <div class="hero-bottom">
+    <p class="hero-desc">
+      <span data-es>Estrategias reales para resultados medibles. Innovación y tecnología aplicadas a tu crecimiento.</span>
+      <span data-en>Real strategies for measurable results. Innovation and technology applied to your growth.</span>
+    </p>
+    <div style="display:flex;justify-content:center">
+      <a href="https://wa.me/12398231738?text=Hola%20DGP%20Group,%20quiero%20cotizar%20un%20proyecto." class="btn-main" target="_blank">
+        <span data-es>COMIENZA TU PROYECTO</span><span data-en>START YOUR PROJECT</span>
+        <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-num">100<em>+</em></span>
+        <span class="stat-lbl" data-es>Clientes</span><span class="stat-lbl" data-en>Clients</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3<em>x</em></span>
+        <span class="stat-lbl" data-es>ROI Promedio</span><span class="stat-lbl" data-en>Avg. ROI</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SERVICIOS -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow" data-es>Lo que hacemos</div><div class="sec-eyebrow" data-en>What we do</div>
+    <h2 class="sec-title"><span data-es>NUESTROS <span class="accent">SERVICIOS</span></span><span data-en>OUR <span class="accent">SERVICES</span></span></h2>
+    <p class="sec-sub" data-es>Soluciones integrales para digitalizar y potenciar tu presencia en el mercado actual.</p>
+    <p class="sec-sub" data-en>Comprehensive solutions to digitize and boost your presence in today's market.</p>
+  </div>
+  <div class="svc-grid">
+    <div class="svc-card reveal" style="transition-delay:.05s">
+      <i class="fa-solid fa-users svc-icon"></i>
+      <h3 class="svc-name" data-es>Crecimiento Social</h3><h3 class="svc-name" data-en>Social Growth</h3>
+      <p class="svc-desc" data-es>Aumenta tu autoridad con estrategias de engagement y crecimiento orgánico en redes sociales.</p>
+      <p class="svc-desc" data-en>Build your authority with engagement strategies and organic growth across social media.</p>
+    </div>
+    <div class="svc-card reveal" style="transition-delay:.15s">
+      <i class="fa-solid fa-palette svc-icon"></i>
+      <h3 class="svc-name" data-es>Diseño Gráfico</h3><h3 class="svc-name" data-en>Graphic Design</h3>
+      <p class="svc-desc" data-es>Identidad visual completa: logotipos, material publicitario y diseño corporativo.</p>
+      <p class="svc-desc" data-en>Full visual identity: logos, advertising material and corporate design.</p>
+    </div>
+    <div class="svc-card reveal" style="transition-delay:.25s">
+      <i class="fa-solid fa-laptop-code svc-icon"></i>
+      <h3 class="svc-name" data-es>Desarrollo Web</h3><h3 class="svc-name" data-en>Web Development</h3>
+      <p class="svc-desc" data-es>Sitios web modernos y optimizados para convertir visitantes en clientes potenciales.</p>
+      <p class="svc-desc" data-en>Modern, optimized websites that convert visitors into potential customers.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- DISEÑO -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow" data-es>Identidad Visual</div><div class="sec-eyebrow" data-en>Visual Identity</div>
+    <h2 class="sec-title"><span data-es>SERVICIOS DE <span class="accent">DISEÑO</span></span><span data-en>DESIGN <span class="accent">SERVICES</span></span></h2>
+    <p class="sec-sub" data-es>Identidades visuales que reflejan tu esencia y comunican tu valor.</p>
+    <p class="sec-sub" data-en>Visual identities that reflect your essence and communicate your value.</p>
+  </div>
+  <div class="design-list reveal" style="margin-top:40px;transition-delay:.1s">
+    <div class="design-row">
+      <div class="row-left"><i class="fa-solid fa-pen-nib row-icon"></i>
+        <div class="row-info">
+          <h3 data-es>Logo — Identidad Visual</h3><h3 data-en>Logo — Visual Identity</h3>
+          <p data-es>Logo + Variaciones, Paleta de Colores, Tipografía y Mockups.</p>
+          <p data-en>Logo + Variations, Color Palette, Typography and Mockups.</p>
+        </div>
+      </div>
+      <div class="row-right">
+        <div class="row-price"><span class="price-usd"><em>$</em>111</span><span class="price-eur"><em>€</em><span class="ea" data-v="111">100</span></span></div>
+        <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20servicio%20de%20Logo" target="_blank" class="btn-sm"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+    <div class="design-row">
+      <div class="row-left"><i class="fa-solid fa-address-card row-icon"></i>
+        <div class="row-info">
+          <h3 data-es>Tarjeta de Presentación</h3><h3 data-en>Business Card</h3>
+          <p data-es>Código QR, Diseño Adaptado y Entrega en Tiempo Récord.</p>
+          <p data-en>QR Code, Custom Design and Record-Time Delivery.</p>
+        </div>
+      </div>
+      <div class="row-right">
+        <div class="row-price"><span class="price-usd"><em>$</em>26</span><span class="price-eur"><em>€</em><span class="ea" data-v="26">23</span></span></div>
+        <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20diseño%20de%20Tarjeta" target="_blank" class="btn-sm"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+    <div class="design-row">
+      <div class="row-left"><i class="fa-solid fa-image row-icon"></i>
+        <div class="row-info">
+          <h3 data-es>Post / Flyers RRSS</h3><h3 data-en>Social Media Posts / Flyers</h3>
+          <p data-es>Adaptado a todas las medidas, orientado a tu Identidad Visual.</p>
+          <p data-en>Adapted to all sizes, aligned with your Visual Identity.</p>
+        </div>
+      </div>
+      <div class="row-right">
+        <div class="row-price"><span class="price-usd"><em>$</em>13</span><span class="price-eur"><em>€</em><span class="ea" data-v="13">12</span></span></div>
+        <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20servicio%20de%20Post/Flyers" target="_blank" class="btn-sm"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAQUETES -->
+  <div class="reveal" style="margin-top:72px;transition-delay:.05s">
+    <div class="sec-eyebrow" data-es>Todo incluido</div><div class="sec-eyebrow" data-en>All included</div>
+    <h2 class="sec-title"><span data-es>PAQUETES <span class="accent">PROFESIONALES</span></span><span data-en>PROFESSIONAL <span class="accent">PACKAGES</span></span></h2>
+    <p class="sec-sub" data-es>Combina servicios y ahorra. Soluciones completas para arrancar con todo.</p>
+    <p class="sec-sub" data-en>Bundle services and save. Complete solutions to launch with everything you need.</p>
+  </div>
+  <div class="pkg-grid" style="margin-top:40px">
+    <div class="pkg-card reveal" style="transition-delay:0s">
+      <i class="fa-solid fa-seedling pkg-icon"></i>
+      <div class="pkg-name" data-es>PAQUETE BÁSICO</div><div class="pkg-name" data-en>BASIC PACKAGE</div>
+      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:var(--blue)">$</em>124</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:var(--blue)">€</em><span class="ea" data-v="124">112</span></span></div>
+      <ul class="feat-list">
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Logo Profesional</span><span data-en>Professional Logo</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Creación de RRSS</span><span data-en>Social Media Setup</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Historias destacadas y Bio</span><span data-en>Story Highlights & Bio</span></li>
+      </ul>
+      <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20Paquete%20Básico" target="_blank" class="btn-sm" style="width:100%"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+    </div>
+    <div class="pkg-card reveal" style="transition-delay:.12s">
+      <i class="fa-solid fa-chart-line pkg-icon"></i>
+      <div class="pkg-name" data-es>PAQUETE INTERMEDIO</div><div class="pkg-name" data-en>INTERMEDIATE PACKAGE</div>
+      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:var(--blue)">$</em>221</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:var(--blue)">€</em><span class="ea" data-v="221">199</span></span></div>
+      <ul class="feat-list">
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Todo el Básico</span><span data-en>Everything in Basic</span></li>
+        <li><i class="fa-solid fa-check ck"></i>2,000 <span data-es>Seguidores</span><span data-en>Followers</span></li>
+        <li><i class="fa-solid fa-check ck"></i>5 Posts <span data-es>para Instagram</span><span data-en>for Instagram</span></li>
+      </ul>
+      <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20Paquete%20Intermedio" target="_blank" class="btn-sm" style="width:100%"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+    </div>
+    <div class="pkg-card reveal" style="transition-delay:.24s">
+      <i class="fa-solid fa-rocket pkg-icon"></i>
+      <div class="pkg-name" data-es>PAQUETE AVANZADO</div><div class="pkg-name" data-en>ADVANCED PACKAGE</div>
+      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:var(--blue)">$</em>553</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:var(--blue)">€</em><span class="ea" data-v="553">498</span></span></div>
+      <ul class="feat-list">
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Factura y Business Card</span><span data-en>Invoice & Business Card</span></li>
+        <li><i class="fa-solid fa-check ck"></i>5,000 <span data-es>Seg. + 10 Posts</span><span data-en>Followers + 10 Posts</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Web One Page</span><span data-en>One Page Website</span></li>
+      </ul>
+      <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20Paquete%20Avanzado" target="_blank" class="btn-sm" style="width:100%"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PLANES WEB -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow" data-es>Precios claros</div><div class="sec-eyebrow" data-en>Clear pricing</div>
+    <h2 class="sec-title"><span data-es>PLANES DE <span class="accent">DISEÑO WEB</span></span><span data-en>WEB DESIGN <span class="accent">PLANS</span></span></h2>
+    <p class="sec-sub" data-es>Elige el plan que mejor se adapta a tu negocio. Todos incluyen soporte y entrega en tiempo récord.</p>
+    <p class="sec-sub" data-en>Choose the plan that best fits your business. All include support and record-time delivery.</p>
+  </div>
+  <div class="web-plans" style="margin-top:48px">
+    <div class="plan-card reveal" style="transition-delay:0s">
+      <div class="plan-head h1"><div class="plan-label">Plan 01</div><div class="plan-name" data-es>BÁSICO</div><div class="plan-name" data-en>BASIC</div></div>
+      <div class="plan-body">
+        <div class="plan-price"><span class="price-usd"><em style="font-style:normal;font-size:28px;color:var(--blue)">$</em>280</span><span class="price-eur"><em style="font-style:normal;font-size:28px;color:var(--blue)">€</em><span class="ea" data-v="280">252</span></span></div>
+        <div class="plan-note" data-es>Pago único</div><div class="plan-note" data-en>One-time payment</div>
+        <div class="plan-div"></div>
+        <ul class="feat-list">
+          <li><i class="fa-solid fa-check ck"></i>Landing Page</li>
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Tarjeta de Presentación Física</span><span data-en>Physical Business Card</span></li>
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Código QR a Sitio Web</span><span data-en>QR Code to Website</span></li>
+        </ul>
+        <a href="https://wa.me/12398231738?text=Hola%20DGP%20Group,%20quiero%20el%20Plan%20Básico." target="_blank" class="btn-sm" style="width:100%;justify-content:space-between"><span data-es>Contratar plan</span><span data-en>Get this plan</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+    <div class="plan-card pop reveal" style="transition-delay:.12s">
+      <div class="plan-head h2"><div class="plan-label">Plan 02</div><div class="plan-name" data-es>ESTÁNDAR</div><div class="plan-name" data-en>STANDARD</div><div class="pop-badge" data-es>Más popular</div><div class="pop-badge" data-en>Most popular</div></div>
+      <div class="plan-body">
+        <div class="plan-price"><span class="price-usd"><em style="font-style:normal;font-size:28px;color:var(--blue)">$</em>455</span><span class="price-eur"><em style="font-style:normal;font-size:28px;color:var(--blue)">€</em><span class="ea" data-v="455">410</span></span></div>
+        <div class="plan-note" data-es>Pago único</div><div class="plan-note" data-en>One-time payment</div>
+        <div class="plan-div"></div>
+        <ul class="feat-list">
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Sitio Multi-Páginas (hasta 5)</span><span data-en>Multi-Page Site (up to 5)</span></li>
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Tarjeta Digital y Física</span><span data-en>Digital & Physical Card</span></li>
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Botón de WhatsApp</span><span data-en>WhatsApp Button</span></li>
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Formulario de Contacto</span><span data-en>Contact Form</span></li>
+        </ul>
+        <a href="https://wa.me/12398231738?text=Hola%20DGP%20Group,%20quiero%20el%20Plan%20Estándar." target="_blank" class="btn-sm" style="width:100%;justify-content:space-between"><span data-es>Contratar plan</span><span data-en>Get this plan</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+    <div class="plan-card reveal" style="transition-delay:.24s">
+      <div class="plan-head h3"><div class="plan-label">Plan 03</div><div class="plan-name">PREMIUM</div></div>
+      <div class="plan-body">
+        <div class="plan-price"><span class="price-usd"><em style="font-style:normal;font-size:28px;color:var(--blue)">$</em>650</span><span class="price-eur"><em style="font-style:normal;font-size:28px;color:var(--blue)">€</em><span class="ea" data-v="650">585</span></span></div>
+        <div class="plan-note" data-es>Pago único</div><div class="plan-note" data-en>One-time payment</div>
+        <div class="plan-div"></div>
+        <ul class="feat-list">
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Sitio Completo (Catálogo / Reservas)</span><span data-en>Full Site (Catalog / Bookings)</span></li>
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Tarjeta y Kit Social Premium</span><span data-en>Business Card & Premium Social Kit</span></li>
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Guía de Estilo Mini</span><span data-en>Mini Style Guide</span></li>
+        </ul>
+        <a href="https://wa.me/12398231738?text=Hola%20DGP%20Group,%20quiero%20el%20Plan%20Premium." target="_blank" class="btn-sm" style="width:100%;justify-content:space-between"><span data-es>Contratar plan</span><span data-en>Get this plan</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ECOMMERCE -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow" data-es>Ventas Online</div><div class="sec-eyebrow" data-en>Online Sales</div>
+    <h2 class="sec-title"><span data-es>GESTIÓN <span class="accent">E-COMMERCE</span></span><span data-en>E-COMMERCE <span class="accent">MANAGEMENT</span></span></h2>
+  </div>
+  <div class="ecom-block reveal" style="margin-top:48px;transition-delay:.1s">
+    <div class="ecom-img">
+      <img src="https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=800&auto=format&fit=crop" alt="E-Commerce">
+      <div class="platform-icons"><i class="fa-brands fa-tiktok"></i><i class="fa-brands fa-amazon"></i><i class="fa-solid fa-store"></i></div>
+    </div>
+    <div class="ecom-info">
+      <div class="ecom-label">Amazon · TikTok Shop · Walmart</div>
+      <h2 class="ecom-title" data-es>PLAN DE GESTIÓN<br>E-COMMERCE</h2><h2 class="ecom-title" data-en>E-COMMERCE<br>MANAGEMENT PLAN</h2>
+      <div class="ecom-price">
+        <span class="price-usd"><em style="font-style:normal;font-size:30px;color:var(--blue)">$</em>325</span>
+        <span class="price-eur"><em style="font-style:normal;font-size:30px;color:var(--blue)">€</em><span class="ea" data-v="325">293</span></span>
+      </div>
+      <div class="ecom-note" data-es>Pago único</div><div class="ecom-note" data-en>One-time payment</div>
+      <div class="pay-icons"><i class="fa-brands fa-cc-paypal"></i><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i></div>
+      <p class="ecom-desc" data-es>Gestionamos tu presencia en las plataformas más grandes del mundo para maximizar tus ventas y presencia digital.</p>
+      <p class="ecom-desc" data-en>We manage your presence on the world's largest platforms to maximize your sales and digital footprint.</p>
+      <ul class="feat-list" style="margin-bottom:28px">
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Configuración de cuentas y optimización de perfiles</span><span data-en>Account setup and profile optimization</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Apertura en Walmart Marketplace</span><span data-en>Walmart Marketplace onboarding</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Asesoría en productos físicos y digitales</span><span data-en>Advisory on physical and digital products</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Gestión de requisitos legales y permisos FDA</span><span data-en>Legal requirements & FDA permit management</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Acompañamiento estratégico por 30 días</span><span data-en>30-day strategic support</span></li>
+      </ul>
+      <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20Plan%20de%20Gestión%20E-Commerce" target="_blank" class="btn-main"><span data-es>Comprar ahora</span><span data-en>Buy now</span><span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- RESEÑAS -->
+<div class="section">
+  <div class="reveal" style="text-align:center;margin-bottom:56px">
+    <div class="sec-eyebrow" style="justify-content:center;display:flex" data-es>Comunidad</div>
+    <div class="sec-eyebrow" style="justify-content:center;display:flex" data-en>Community</div>
+    <h2 class="sec-title" style="text-align:center"><span data-es>LO QUE DICEN DE <span class="accent">NOSOTROS</span></span><span data-en>WHAT THEY SAY <span class="accent">ABOUT US</span></span></h2>
+    <p class="sec-sub" style="margin:0 auto" data-es>Las experiencias reales de quienes ya confían en DGP Group USA.</p>
+    <p class="sec-sub" style="margin:0 auto" data-en>Real experiences from those who already trust DGP Group USA.</p>
+  </div>
+  <div class="reviews-wrap">
+    <div class="card form-card reveal" style="transition-delay:0s">
+      <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
+      <h2 class="card-heading" data-es>DÉJANOS TU OPINIÓN</h2><h2 class="card-heading" data-en>LEAVE YOUR REVIEW</h2>
+      <p class="card-sub" data-es>Tu valoración nos ayuda a seguir creciendo y servir mejor a nuestra comunidad.</p>
+      <p class="card-sub" data-en>Your rating helps us keep growing and serve our community better.</p>
+      <form id="reviewForm" novalidate>
+        <div class="field"><input type="text" id="nombre" data-ph-es="Nombre completo" data-ph-en="Full name" placeholder="Nombre completo" required></div>
+        <div class="field"><input type="email" id="correo" data-ph-es="Correo electrónico" data-ph-en="Email address" placeholder="Correo electrónico" required></div>
+        <div class="rating-row">
+          <span class="rating-label" data-es>Tu valoración</span><span class="rating-label" data-en>Your rating</span>
+          <div class="star-input">
+            <input type="radio" name="stars" id="s5" value="5" required><label for="s5">★</label>
+            <input type="radio" name="stars" id="s4" value="4"><label for="s4">★</label>
+            <input type="radio" name="stars" id="s3" value="3"><label for="s3">★</label>
+            <input type="radio" name="stars" id="s2" value="2"><label for="s2">★</label>
+            <input type="radio" name="stars" id="s1" value="1"><label for="s1">★</label>
+          </div>
+        </div>
+        <div class="field"><textarea id="comentario" rows="4" data-ph-es="Escribe tu experiencia con DGP Group USA..." data-ph-en="Write about your experience with DGP Group USA..." placeholder="Escribe tu experiencia con DGP Group USA..." required></textarea></div>
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span id="btnTxt" data-es>ENVIAR RESEÑA</span><span id="btnTxt" data-en>SEND REVIEW</span>
+          <span class="barr"><i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+      </form>
+      <div id="statusMsg" class="status"></div>
+    </div>
+    <div class="card reveal" style="transition-delay:.15s">
+      <div class="panel-head">
+        <span class="panel-title" data-es>OPINIONES</span><span class="panel-title" data-en>REVIEWS</span>
+        <span class="rev-count" id="revCount">...</span>
+      </div>
+      <div class="reviews-scroll" id="revContainer">
+        <div class="shimmer"></div>
+        <div class="shimmer" style="height:70px;opacity:.6"></div>
+        <div class="shimmer" style="height:60px;opacity:.35"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-cta reveal" style="transition-delay:.1s">
+    <div>
+      <div class="footer-cta-text"><span data-es>CONVERTIMOS TUS IDEAS EN <span>REALIDAD</span></span><span data-en>WE TURN YOUR IDEAS INTO <span>REALITY</span></span></div>
+      <p class="footer-cta-sub" data-es>Escríbenos hoy y recibe una propuesta personalizada.</p>
+      <p class="footer-cta-sub" data-en>Write us today and receive a personalized proposal.</p>
+    </div>
+    <button onclick="openContactModal()" class="btn-main" style="border:none;cursor:pointer"><span data-es>CONTÁCTANOS HOY</span><span data-en>CONTACT US TODAY</span><span class="arr"><i class="fa-solid fa-arrow-right"></i></span></button>
+  </div>
+</div>
+
+<!-- CONTACT MODAL -->
+<div id="contactModal">
+  <div class="modal-backdrop" onclick="closeContactModal()"></div>
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeContactModal()">✕</button>
+    <div class="modal-eyebrow" data-es>Escribenos</div><div class="modal-eyebrow" data-en>Get in touch</div>
+    <div class="modal-title" data-es>CUÉNTANOS TU PROYECTO</div><div class="modal-title" data-en>TELL US YOUR PROJECT</div>
+    <p class="modal-sub" data-es>Completa el formulario y te contactamos por WhatsApp en minutos.</p>
+    <p class="modal-sub" data-en>Fill in the form and we'll reach you on WhatsApp in minutes.</p>
+    <div class="modal-field"><input type="text" id="mc-name" data-ph-es="Tu nombre completo" data-ph-en="Your full name" placeholder="Tu nombre completo"></div>
+    <div class="modal-field">
+      <select id="mc-service">
+        <option value="" disabled selected data-es>¿Qué servicio te interesa?</option>
+        <option data-es value="Marketing en Redes Sociales">Marketing en Redes Sociales</option>
+        <option data-es value="Diseño Gráfico / Identidad">Diseño Gráfico / Identidad</option>
+        <option data-es value="Desarrollo Web">Desarrollo Web</option>
+        <option data-es value="Gestión E-Commerce">Gestión E-Commerce</option>
+        <option data-es value="Paquete Completo">Paquete Completo</option>
+        <option data-es value="Otro">Otro / No sé aún</option>
+      </select>
+    </div>
+    <div class="modal-field"><textarea id="mc-msg" data-ph-es="Cuéntanos brevemente tu proyecto o idea..." data-ph-en="Tell us briefly about your project or idea..." placeholder="Cuéntanos brevemente tu proyecto o idea..." rows="3"></textarea></div>
+    <button class="modal-send" onclick="sendContactWA()">
+      <span data-es>ENVIAR POR WHATSAPP</span><span data-en>SEND VIA WHATSAPP</span>
+      <span class="barr"><i class="fa-brands fa-whatsapp"></i></span>
+    </button>
+  </div>
+</div>
+
+<footer>
+  <span class="footer-logo">
+    <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" style="width:22px;height:22px;object-fit:contain;border-radius:3px" alt="DGP">
+    DGP GROUP <span>USA</span>
+  </span>
+  <span class="footer-info">@dgpgroup.us</span>
+  <span class="footer-info" data-es>© 2025 · Todos los derechos reservados</span>
+  <span class="footer-info" data-en>© 2025 · All rights reserved</span>
+</footer>
+
+<script>
+const SCRIPT_URL='https://script.google.com/macros/s/AKfycbypY5TPcjUePxLwplMjyz7lLTAwxF6zDOXR3ub3CVrzraNBi3FViAlIcvxOMgqNy3F6jA/exec';
+const CSV_URL='https://docs.google.com/spreadsheets/d/e/2PACX-1vTPpmwX4hdgbUsrtTk9_-jDaWpqjB-ixIrHfPqDj5y0HqvJ-fEdbj-0B78jgxQ3lXRji9Z9teaRl9O6/pub?output=csv';
+let lang='es', curr='usd', rate=0.90;
+
+/* LIVE RATE */
+async function getRate(){
+  try{const r=await fetch('https://api.exchangerate-api.com/v4/latest/USD');const d=await r.json();if(d?.rates?.EUR)rate=d.rates.EUR;}catch(e){}
+  updateEur();
+}
+function updateEur(){document.querySelectorAll('.ea').forEach(el=>{el.textContent=Math.round(parseFloat(el.dataset.v)*rate);})}
+
+/* LOADER */
+const phrases={
+  es:['Transformamos marcas en movimientos.','Tu negocio, nuestra pasión.','Diseño que convierte visitantes.','Resultados medibles, siempre.'],
+  en:['We transform brands into movements.','Your business, our passion.','Design that converts visitors.','Measurable results, always.']
+};
+function runLoader(){
+  const bar=document.getElementById('ldrBar');
+  const ph=document.getElementById('ldrPhrase');
+  let p=0,pi=0;
+  function setP(i){const l=phrases[lang];ph.innerHTML=`<span class="on">${l[i%l.length]}</span>`}
+  setP(0);
+  const t=setInterval(()=>{
+    p+=1.8;bar.style.width=p+'%';
+    if(Math.floor(p)%25===0&&Math.floor(p)>0){pi++;setP(pi)}
+    if(p>=100){clearInterval(t);setTimeout(()=>document.getElementById('loader').classList.add('hidden'),500)}
+  },30);
+}
+window.addEventListener('load',()=>setTimeout(runLoader,200));
+
+/* LANG */
+function setLang(l){
+  lang=l;
+  document.body.classList.toggle('en',l==='en');
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-ph-'+l+']').forEach(el=>el.placeholder=el.getAttribute('data-ph-'+l));
+  syncBtns();
+}
+/* CURRENCY */
+function setCurr(c){
+  curr=c;
+  document.body.classList.toggle('eur',c==='eur');
+  if(c==='eur')updateEur();
+  syncBtns();
+}
+function syncBtns(){
+  document.querySelectorAll('.ctrl-btn').forEach(b=>{
+    const t=b.textContent.trim();
+    b.classList.toggle('active',t===lang.toUpperCase()||t===curr.toUpperCase());
+  });
+}
+
+/* REVEAL */
+const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.07});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* REVIEWS */
+function ini(n){return n.trim().split(' ').slice(0,2).map(w=>w[0]||'').join('').toUpperCase()||'?'}
+function sts(n){return'★'.repeat(n)+'☆'.repeat(5-n)}
+async function loadRevs(){
+  const c=document.getElementById('revContainer'),cnt=document.getElementById('revCount');
+  try{
+    const txt=await(await fetch(CSV_URL)).text();
+    const rows=txt.split('\n').slice(1).filter(r=>r.trim());
+    c.innerHTML='';
+    if(!rows.length){cnt.textContent='0';c.innerHTML=`<div class="empty-state"><i class="fa-regular fa-star"></i><p>${lang==='es'?'Aún no hay reseñas.':'No reviews yet.'}</p></div>`;return}
+    cnt.textContent=rows.length+(lang==='es'?' reseña'+(rows.length>1?'s':''):(rows.length>1?' reviews':' review'));
+    [...rows].reverse().forEach((row,i)=>{
+      const cols=row.split(',');if(cols.length<5)return;
+      const n=(cols[1]||'').replace(/"/g,'').trim(),v=parseInt(cols[3])||0,t=(cols[4]||'').replace(/"/g,'').trim();
+      if(!n||!t)return;
+      const d=document.createElement('div');d.className='rev-item';d.style.animationDelay=`${i*.06}s`;
+      d.innerHTML=`<div class="rev-top"><div class="rev-avatar">${ini(n)}</div><div><div class="rev-name">${n}</div><div class="rev-stars">${sts(v)}</div></div></div><p class="rev-text">${t}</p>`;
+      c.appendChild(d);
+    });
+  }catch(e){cnt.textContent='—';c.innerHTML=`<div class="empty-state"><i class="fa-solid fa-triangle-exclamation"></i><p>${lang==='es'?'Error al cargar.':'Error loading.'}</p></div>`}
+}
+document.getElementById('reviewForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const n=document.getElementById('nombre').value.trim(),em=document.getElementById('correo').value.trim();
+  const si=document.querySelector('input[name="stars"]:checked'),com=document.getElementById('comentario').value.trim();
+  const btn=document.getElementById('submitBtn'),st=document.getElementById('statusMsg');
+  if(!n||!em||!si||!com){st.className='status err';st.textContent=lang==='es'?'Por favor completa todos los campos.':'Please complete all fields.';return}
+  btn.disabled=true;btn.querySelector('span').textContent=lang==='es'?'ENVIANDO...':'SENDING...';st.className='status';
+  fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:JSON.stringify({nombre:n,correo:em,valoracion:si.value,comentario:com})})
+  .then(()=>{
+    st.className='status ok';st.textContent=lang==='es'?'✓ ¡Gracias! Reseña registrada.':'✓ Thank you! Review submitted.';
+    this.reset();btn.disabled=false;btn.querySelector('span').textContent=lang==='es'?'ENVIAR RESEÑA':'SEND REVIEW';
+    setTimeout(loadRevs,2500);
+  }).catch(()=>{st.className='status err';st.textContent=lang==='es'?'Error. Intenta de nuevo.':'Error. Try again.';btn.disabled=false;btn.querySelector('span').textContent=lang==='es'?'ENVIAR RESEÑA':'SEND REVIEW'});
+});
+/* CONTACT MODAL */
+function openContactModal(){
+  document.getElementById('contactModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeContactModal(){
+  document.getElementById('contactModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function sendContactWA(){
+  const name=(document.getElementById('mc-name').value||'').trim();
+  const svc=document.getElementById('mc-service').value||'';
+  const msg=(document.getElementById('mc-msg').value||'').trim();
+  if(!name){document.getElementById('mc-name').focus();return;}
+  let txt=`Hola DGP Group! 👋\n\n*Nombre:* ${name}`;
+  if(svc) txt+=`\n*Servicio de interés:* ${svc}`;
+  if(msg) txt+=`\n*Mensaje:* ${msg}`;
+  txt+='\n\nMe gustaría recibir más información.';
+  window.open(`https://wa.me/12398231738?text=${encodeURIComponent(txt)}`,'_blank');
+  closeContactModal();
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeContactModal();});
+
+getRate();loadRevs();
+
+/* CURSOR GLOW */
+(function(){
+  const g=document.createElement('div');g.className='cursor-glow';document.body.appendChild(g);
+  document.addEventListener('mousemove',e=>{g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
+})();
+
+/* STAT BOUNCE on hero enter */
+(function(){
+  const stats=document.querySelectorAll('.stat-num');
+  const trig=document.querySelector('.hero-bottom');
+  if(!trig)return;
+  let done=false;
+  const ob=new IntersectionObserver(en=>{
+    if(en[0].isIntersecting&&!done){
+      done=true;
+      stats.forEach((s,i)=>setTimeout(()=>{s.classList.add('popped');setTimeout(()=>s.classList.remove('popped'),500)},i*150));
+      ob.disconnect();
+    }
+  },{threshold:.5});
+  ob.observe(trig);
+})();
+</script>
+</body>
+</html>
