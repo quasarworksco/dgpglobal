@@ -297,7 +297,62 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
   .hero-bottom{padding-top:28px}
 }
 
-/* ── EXTRA ANIMATIONS ───────────────────────────────── */
+/* ── DARK SECTIONS ───────────────────────────────────── */
+.section-dark{background:var(--black);position:relative;z-index:1;overflow:hidden}
+.section-dark::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(74,120,255,.12) 1px,transparent 1px);background-size:32px 32px;opacity:1;pointer-events:none}
+.section-dark .sec-eyebrow{color:rgba(255,255,255,.45)}
+.section-dark .sec-eyebrow::before{background:rgba(255,255,255,.3)}
+.section-dark .sec-title{color:#fff}
+.section-dark .sec-sub{color:rgba(255,255,255,.5)}
+.section-dark .svc-grid{background:rgba(255,255,255,.06)}
+.section-dark .svc-card{background:transparent;border-color:rgba(255,255,255,.08)}
+.section-dark .svc-card:hover{background:rgba(74,120,255,.12)}
+.section-dark .svc-name{color:#fff}
+.section-dark .svc-desc{color:rgba(255,255,255,.5)}
+.section-dark .svc-icon{color:rgba(74,120,255,.9)}
+.section-dark .svc-card::after{background:var(--blue-s)}
+
+/* Dark glow blob inside dark section */
+.dark-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(20,56,204,.22) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;animation:breathe 6s ease-in-out infinite}
+
+/* BLUE MID SECTION */
+.section-blue{background:linear-gradient(145deg,#0d1f5c 0%,#070e2e 100%);position:relative;z-index:1;overflow:hidden}
+.section-blue::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.08) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.section-blue::after{content:'DGP';position:absolute;bottom:-40px;right:-20px;font-family:'Bebas Neue',sans-serif;font-size:clamp(140px,18vw,260px);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.04);pointer-events:none;user-select:none}
+.section-blue .sec-eyebrow{color:rgba(255,255,255,.6)}
+.section-blue .sec-eyebrow::before{background:rgba(255,255,255,.4)}
+.section-blue .sec-title{color:#fff}
+.section-blue .sec-sub{color:rgba(255,255,255,.65)}
+.section-blue .pkg-grid{background:rgba(255,255,255,.08)}
+.section-blue .pkg-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1)}
+.section-blue .pkg-card:hover{background:rgba(255,255,255,.12)}
+.section-blue .pkg-card::after{background:#fff}
+.section-blue .pkg-icon{color:rgba(255,255,255,.7)}
+.section-blue .pkg-card:hover .pkg-icon{color:#fff}
+.section-blue .pkg-name{color:#fff}
+.section-blue .pkg-price{color:#fff}
+.section-blue .pkg-price em{color:rgba(255,255,255,.7)}
+.section-blue .feat-list li{color:rgba(255,255,255,.6);border-bottom-color:rgba(255,255,255,.06)}
+.section-blue .ck{color:rgba(255,255,255,.9)}
+.section-blue .btn-sm{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.2)}
+.section-blue .btn-sm:hover{background:#fff;color:var(--black)}
+
+/* ANIMATED DIVIDER */
+.wave-divider{position:relative;z-index:2;line-height:0;overflow:hidden}
+.wave-divider svg{display:block;width:100%;height:60px}
+.wave-divider.dark-to-white svg{fill:var(--white)}
+.wave-divider.white-to-dark svg{fill:var(--black)}
+.wave-divider.blue-to-white svg{fill:var(--white)}
+.wave-divider.white-to-blue svg{fill:#1438cc}
+.wave-divider.dark-to-blue svg{fill:#1438cc}
+.wave-divider.blue-to-dark svg{fill:var(--black)}
+
+/* TICKER STRIP */
+.ticker-strip{background:var(--blue);overflow:hidden;padding:14px 0;position:relative;z-index:2}
+.ticker-track{display:flex;gap:0;width:max-content;animation:tickerScroll 22s linear infinite}
+.ticker-item{font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:3px;color:rgba(255,255,255,.85);padding:0 32px;white-space:nowrap;display:flex;align-items:center;gap:12px}
+.ticker-item::after{content:'·';color:rgba(255,255,255,.3)}
+@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 /* Floating orbs in hero */
 .hero-orb{position:absolute;border-radius:50%;pointer-events:none;z-index:1}
 .hero-orb-1{width:6px;height:6px;background:var(--blue);opacity:.5;top:25%;left:15%;animation:orbFloat 6s ease-in-out infinite}
@@ -405,17 +460,38 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
   </div>
 </section>
 
-<hr class="divider">
+<!-- TICKER -->
+<div class="ticker-strip">
+  <div class="ticker-track">
+    <span class="ticker-item">Marketing Digital</span>
+    <span class="ticker-item">Diseño Gráfico</span>
+    <span class="ticker-item">Desarrollo Web</span>
+    <span class="ticker-item">E-Commerce</span>
+    <span class="ticker-item">Redes Sociales</span>
+    <span class="ticker-item">Identidad Visual</span>
+    <span class="ticker-item">SEO & Posicionamiento</span>
+    <span class="ticker-item">Estrategia Digital</span>
+    <span class="ticker-item">Marketing Digital</span>
+    <span class="ticker-item">Diseño Gráfico</span>
+    <span class="ticker-item">Desarrollo Web</span>
+    <span class="ticker-item">E-Commerce</span>
+    <span class="ticker-item">Redes Sociales</span>
+    <span class="ticker-item">Identidad Visual</span>
+    <span class="ticker-item">SEO & Posicionamiento</span>
+    <span class="ticker-item">Estrategia Digital</span>
+  </div>
+</div>
 
 <!-- SERVICIOS -->
-<div class="section">
-  <div class="reveal">
+<div class="section section-dark">
+  <div class="dark-glow"></div>
+  <div class="reveal" style="position:relative;z-index:2">
     <div class="sec-eyebrow" data-es>Lo que hacemos</div><div class="sec-eyebrow" data-en>What we do</div>
     <h2 class="sec-title"><span data-es>NUESTROS <span class="accent">SERVICIOS</span></span><span data-en>OUR <span class="accent">SERVICES</span></span></h2>
     <p class="sec-sub" data-es>Soluciones integrales para digitalizar y potenciar tu presencia en el mercado actual.</p>
     <p class="sec-sub" data-en>Comprehensive solutions to digitize and boost your presence in today's market.</p>
   </div>
-  <div class="svc-grid">
+  <div class="svc-grid" style="position:relative;z-index:2">
     <div class="svc-card reveal" style="transition-delay:.05s">
       <i class="fa-solid fa-users svc-icon"></i>
       <h3 class="svc-name" data-es>Crecimiento Social</h3><h3 class="svc-name" data-en>Social Growth</h3>
@@ -437,7 +513,6 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
   </div>
 </div>
 
-<hr class="divider">
 
 <!-- DISEÑO -->
 <div class="section">
@@ -483,24 +558,26 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
         </div>
       </div>
       <div class="row-right">
-        <div class="row-price"><span class="price-usd"><em>$</em>13</span><span class="price-eur"><em>€</em><span class="ea" data-v="13">12</span></span></div>
+        <div class="row-price"><span class="price-usd"><em>$</em>15</span><span class="price-eur"><em>€</em><span class="ea" data-v="15">14</span></span></div>
         <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20servicio%20de%20Post/Flyers" target="_blank" class="btn-sm"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- PAQUETES -->
-  <div class="reveal" style="margin-top:72px;transition-delay:.05s">
+<!-- PAQUETES (BLUE) -->
+<div class="section section-blue">
+  <div class="reveal" style="position:relative;z-index:2;transition-delay:.05s">
     <div class="sec-eyebrow" data-es>Todo incluido</div><div class="sec-eyebrow" data-en>All included</div>
     <h2 class="sec-title"><span data-es>PAQUETES <span class="accent">PROFESIONALES</span></span><span data-en>PROFESSIONAL <span class="accent">PACKAGES</span></span></h2>
     <p class="sec-sub" data-es>Combina servicios y ahorra. Soluciones completas para arrancar con todo.</p>
     <p class="sec-sub" data-en>Bundle services and save. Complete solutions to launch with everything you need.</p>
   </div>
-  <div class="pkg-grid" style="margin-top:40px">
+  <div class="pkg-grid" style="margin-top:40px;position:relative;z-index:2">
     <div class="pkg-card reveal" style="transition-delay:0s">
       <i class="fa-solid fa-seedling pkg-icon"></i>
       <div class="pkg-name" data-es>PAQUETE BÁSICO</div><div class="pkg-name" data-en>BASIC PACKAGE</div>
-      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:var(--blue)">$</em>124</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:var(--blue)">€</em><span class="ea" data-v="124">112</span></span></div>
+      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">$</em>124</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">€</em><span class="ea" data-v="124">112</span></span></div>
       <ul class="feat-list">
         <li><i class="fa-solid fa-check ck"></i><span data-es>Logo Profesional</span><span data-en>Professional Logo</span></li>
         <li><i class="fa-solid fa-check ck"></i><span data-es>Creación de RRSS</span><span data-en>Social Media Setup</span></li>
@@ -511,7 +588,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <div class="pkg-card reveal" style="transition-delay:.12s">
       <i class="fa-solid fa-chart-line pkg-icon"></i>
       <div class="pkg-name" data-es>PAQUETE INTERMEDIO</div><div class="pkg-name" data-en>INTERMEDIATE PACKAGE</div>
-      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:var(--blue)">$</em>221</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:var(--blue)">€</em><span class="ea" data-v="221">199</span></span></div>
+      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">$</em>221</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">€</em><span class="ea" data-v="221">199</span></span></div>
       <ul class="feat-list">
         <li><i class="fa-solid fa-check ck"></i><span data-es>Todo el Básico</span><span data-en>Everything in Basic</span></li>
         <li><i class="fa-solid fa-check ck"></i>2,000 <span data-es>Seguidores</span><span data-en>Followers</span></li>
@@ -522,7 +599,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <div class="pkg-card reveal" style="transition-delay:.24s">
       <i class="fa-solid fa-rocket pkg-icon"></i>
       <div class="pkg-name" data-es>PAQUETE AVANZADO</div><div class="pkg-name" data-en>ADVANCED PACKAGE</div>
-      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:var(--blue)">$</em>553</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:var(--blue)">€</em><span class="ea" data-v="553">498</span></span></div>
+      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">$</em>553</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">€</em><span class="ea" data-v="553">498</span></span></div>
       <ul class="feat-list">
         <li><i class="fa-solid fa-check ck"></i><span data-es>Factura y Business Card</span><span data-en>Invoice & Business Card</span></li>
         <li><i class="fa-solid fa-check ck"></i>5,000 <span data-es>Seg. + 10 Posts</span><span data-en>Followers + 10 Posts</span></li>
@@ -576,7 +653,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <div class="plan-card reveal" style="transition-delay:.24s">
       <div class="plan-head h3"><div class="plan-label">Plan 03</div><div class="plan-name">PREMIUM</div></div>
       <div class="plan-body">
-        <div class="plan-price"><span class="price-usd"><em style="font-style:normal;font-size:28px;color:var(--blue)">$</em>650</span><span class="price-eur"><em style="font-style:normal;font-size:28px;color:var(--blue)">€</em><span class="ea" data-v="650">585</span></span></div>
+        <div class="plan-price"><span class="price-usd"><em style="font-style:normal;font-size:28px;color:var(--blue)">$</em>950</span><span class="price-eur"><em style="font-style:normal;font-size:28px;color:var(--blue)">€</em><span class="ea" data-v="950">855</span></span></div>
         <div class="plan-note" data-es>Pago único</div><div class="plan-note" data-en>One-time payment</div>
         <div class="plan-div"></div>
         <ul class="feat-list">
@@ -607,8 +684,8 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
       <div class="ecom-label">Amazon · TikTok Shop · Walmart</div>
       <h2 class="ecom-title" data-es>PLAN DE GESTIÓN<br>E-COMMERCE</h2><h2 class="ecom-title" data-en>E-COMMERCE<br>MANAGEMENT PLAN</h2>
       <div class="ecom-price">
-        <span class="price-usd"><em style="font-style:normal;font-size:30px;color:var(--blue)">$</em>325</span>
-        <span class="price-eur"><em style="font-style:normal;font-size:30px;color:var(--blue)">€</em><span class="ea" data-v="325">293</span></span>
+        <span class="price-usd"><em style="font-style:normal;font-size:30px;color:var(--blue)">$</em>750</span>
+        <span class="price-eur"><em style="font-style:normal;font-size:30px;color:var(--blue)">€</em><span class="ea" data-v="750">675</span></span>
       </div>
       <div class="ecom-note" data-es>Pago único</div><div class="ecom-note" data-en>One-time payment</div>
       <div class="pay-icons"><i class="fa-brands fa-cc-paypal"></i><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i></div>
