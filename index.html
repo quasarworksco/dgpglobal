@@ -45,7 +45,7 @@ nav{position:relative;z-index:10;display:flex;align-items:center;justify-content
 .logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:4px;color:var(--black);text-decoration:none;display:flex;align-items:center;gap:10px}
 .logo-sm{width:28px;height:28px;flex-shrink:0}
 .logo span{color:var(--blue)}
-.nav-badge{display:flex;align-items:center;gap:7px;background:var(--off);border:1px solid var(--border);border-radius:100px;padding:6px 14px;font-size:11px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:400;margin-right:180px}
+.nav-badge{display:flex;align-items:center;gap:7px;background:var(--off);border:1px solid var(--border);border-radius:100px;padding:6px 14px;font-size:11px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;font-weight:400}
 .dot{width:6px;height:6px;background:#22c55e;border-radius:50%;animation:blink 1.8s ease-in-out infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
 
@@ -297,6 +297,78 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
   .hero-bottom{padding-top:28px}
 }
 
+/* ── HAMBURGER MENU ─────────────────────────────────── */
+.hamburger{background:none;border:none;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;padding:8px;transition:opacity .2s}
+.hamburger:hover{opacity:.7}
+.hamburger span{display:block;width:20px;height:1.5px;background:var(--black);border-radius:2px;transition:transform .3s,opacity .3s,width .3s}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0;width:0}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+.nav-drawer{position:fixed;top:0;right:0;height:100%;width:280px;background:#fff;z-index:1050;transform:translateX(100%);transition:transform .4s cubic-bezier(.22,1,.36,1);box-shadow:-12px 0 48px rgba(0,0,0,.12);display:flex !important;flex-direction:column;padding:70px 0 40px;justify-content:flex-start !important;align-items:stretch !important}
+.nav-drawer.open{transform:translateX(0)}
+.drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:1040;opacity:0;pointer-events:none;transition:opacity .3s;backdrop-filter:blur(2px)}
+.drawer-overlay.open{opacity:1;pointer-events:all}
+.drawer-logo{padding:0 28px 28px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px;color:var(--black)}
+.drawer-logo img{width:32px;height:32px;object-fit:contain;border-radius:4px}
+.drawer-logo span{color:var(--blue)}
+.drawer-links{flex:1;overflow-y:auto;padding:16px 0}
+.drawer-link{display:flex;align-items:center;gap:14px;padding:14px 28px;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:background .2s,color .2s;border-left:3px solid transparent}
+.drawer-link:hover,.drawer-link.active{background:rgba(20,56,204,.04);color:var(--blue);border-left-color:var(--blue)}
+.drawer-link i{width:18px;text-align:center;font-size:14px;color:var(--blue);opacity:.7}
+.drawer-sep{height:1px;background:var(--border);margin:8px 28px}
+.drawer-cta{padding:20px 28px 0}
+
+/* ── PROCESO DE TRABAJO ─────────────────────────────── */
+#proceso{background:var(--off);position:relative;z-index:1;overflow:hidden}
+#proceso::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,#d0d0cc 1px,transparent 1px);background-size:36px 36px;opacity:.3;pointer-events:none}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:48px;position:relative;z-index:2}
+.process-step{background:var(--off);padding:44px 36px;position:relative;overflow:hidden;transition:background .3s}
+.process-step:hover{background:#fff}
+.step-num{font-family:'Bebas Neue',sans-serif;font-size:72px;color:rgba(20,56,204,.07);line-height:1;position:absolute;top:16px;right:20px;pointer-events:none;transition:color .3s}
+.process-step:hover .step-num{color:rgba(20,56,204,.12)}
+.step-icon{width:48px;height:48px;background:rgba(20,56,204,.08);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--blue);margin-bottom:20px;transition:background .3s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.process-step:hover .step-icon{background:var(--blue);color:#fff;transform:scale(1.08) rotate(-4deg)}
+.step-title{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--black);margin-bottom:10px}
+.step-desc{font-size:13px;color:var(--soft);line-height:1.7;font-weight:300}
+.step-tag{display:inline-flex;align-items:center;gap:6px;margin-top:16px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);font-weight:500}
+@media(max-width:1000px){.process-steps{grid-template-columns:1fr}}
+
+/* ── ECOM COLLAPSIBLE ───────────────────────────────── */
+.ecom-collapse-btn{display:flex;align-items:center;justify-content:space-between;width:100%;background:rgba(20,56,204,.04);border:1px solid rgba(20,56,204,.12);border-radius:4px;padding:14px 18px;cursor:pointer;margin-bottom:0;transition:background .2s;font-family:'DM Sans',sans-serif}
+.ecom-collapse-btn:hover{background:rgba(20,56,204,.08)}
+.ecom-collapse-label{font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue)}
+.ecom-collapse-icon{font-size:12px;color:var(--blue);transition:transform .3s cubic-bezier(.22,1,.36,1)}
+.ecom-collapse-icon.open{transform:rotate(180deg)}
+.ecom-collapsible{overflow:hidden;max-height:0;transition:max-height .5s cubic-bezier(.22,1,.36,1)}
+.ecom-collapsible.open{max-height:400px}
+
+/* RESPONSIVE DRAWER */
+@media(max-width:600px){.nav-drawer{width:100%}}
+
+/* ── DELIVERY BADGE ─────────────────────────────────── */
+.delivery-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(20,56,204,.06);border:1px solid rgba(20,56,204,.15);border-radius:100px;padding:5px 12px;font-size:11px;font-weight:500;letter-spacing:1px;text-transform:uppercase;color:var(--blue);margin-bottom:16px}
+.delivery-badge i{font-size:10px}
+.section-blue .delivery-badge{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:rgba(255,255,255,.85)}
+
+/* WHATSAPP FLOAT */
+#wa-float{position:fixed;bottom:28px;right:28px;z-index:4000;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+#wa-fab{width:56px;height:56px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;color:#fff;cursor:pointer;box-shadow:0 6px 24px rgba(37,211,102,.4);transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s;border:none;animation:waPulse 2.5s ease-in-out infinite}
+#wa-fab:hover{transform:scale(1.1);box-shadow:0 10px 32px rgba(37,211,102,.55)}
+@keyframes waPulse{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.4)}50%{box-shadow:0 6px 32px rgba(37,211,102,.7),0 0 0 8px rgba(37,211,102,.1)}}
+#wa-popup{background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;width:290px;box-shadow:0 12px 48px rgba(0,0,0,.15);display:none;animation:waPop .3s cubic-bezier(.34,1.56,.64,1)}
+#wa-popup.open{display:block}
+@keyframes waPop{from{opacity:0;transform:translateY(12px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
+.wa-popup-head{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.wa-popup-icon{width:36px;height:36px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0}
+.wa-popup-title{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--black);line-height:1}
+.wa-popup-sub{font-size:11px;color:var(--soft);font-weight:300}
+.wa-popup-msg{width:100%;border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--black);resize:none;outline:none;min-height:80px;transition:border-color .2s;background:#fafafa}
+.wa-popup-msg:focus{border-color:#25d366;background:#fff}
+.wa-send-btn{width:100%;background:#25d366;color:#fff;border:none;border-radius:8px;padding:12px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:10px;transition:background .2s,transform .2s}
+.wa-send-btn:hover{background:#1fb558;transform:translateY(-1px)}
+@media(max-width:600px){#wa-float{bottom:80px;right:16px}#wa-popup{width:260px}}
+
 /* ── DARK SECTIONS ───────────────────────────────────── */
 .section-dark{background:var(--black);position:relative;z-index:1;overflow:hidden}
 .section-dark::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(74,120,255,.12) 1px,transparent 1px);background-size:32px 32px;opacity:1;pointer-events:none}
@@ -377,6 +449,34 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 </head>
 <body>
 
+<!-- DRAWER OVERLAY -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+
+<!-- NAV DRAWER -->
+<div class="nav-drawer" id="navDrawer">
+  <button onclick="closeDrawer()" style="position:absolute;top:20px;right:20px;background:none;border:none;font-size:20px;color:var(--soft);cursor:pointer;line-height:1;padding:4px;transition:color .2s" onmouseover="this.style.color='#000'" onmouseout="this.style.color=''">✕</button>
+  <div class="drawer-logo">
+    <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" alt="DGP">
+    DGP GROUP <span>USA</span>
+  </div>
+  <div class="drawer-links">
+    <a href="#servicios" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-briefcase"></i><span data-es>Servicios</span><span data-en>Services</span></a>
+    <a href="#proceso" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-list-check"></i><span data-es>Cómo Trabajamos</span><span data-en>How We Work</span></a>
+    <a href="#diseno" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-pen-nib"></i><span data-es>Diseño</span><span data-en>Design</span></a>
+    <a href="#paquetes" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-box-open"></i><span data-es>Paquetes</span><span data-en>Packages</span></a>
+    <a href="#web" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-laptop-code"></i><span data-es>Planes Web</span><span data-en>Web Plans</span></a>
+    <a href="#ecommerce" class="drawer-link" onclick="closeDrawer()"><i class="fa-brands fa-amazon"></i><span data-es>E-Commerce</span><span data-en>E-Commerce</span></a>
+    <div class="drawer-sep"></div>
+    <a href="#resenas" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-star"></i><span data-es>Reseñas</span><span data-en>Reviews</span></a>
+  </div>
+  <div class="drawer-cta">
+    <button onclick="openContactModal();closeDrawer();" class="btn-main" style="border:none;cursor:pointer;width:100%;justify-content:center">
+      <span data-es>CONTÁCTANOS</span><span data-en>CONTACT US</span>
+      <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
+    </button>
+  </div>
+</div>
+
 <!-- LOADER -->
 <div id="loader">
   <div class="ldr-logo" style="position:relative">
@@ -413,9 +513,14 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" class="logo-sm" alt="DGP Group USA" style="width:42px;height:42px;object-fit:contain;border-radius:4px">
     DGP GROUP <span>USA</span>
   </a>
-  <div class="nav-badge">
-    <span class="dot"></span>
-    <span data-es>Nuevos proyectos</span><span data-en>New projects</span>
+  <div style="display:flex;align-items:center;gap:16px">
+    <div class="nav-badge">
+      <span class="dot"></span>
+      <span data-es>Nuevos proyectos</span><span data-en>New projects</span>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleDrawer()">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -483,7 +588,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 </div>
 
 <!-- SERVICIOS -->
-<div class="section section-dark">
+<div class="section section-dark" id="servicios">
   <div class="dark-glow"></div>
   <div class="reveal" style="position:relative;z-index:2">
     <div class="sec-eyebrow" data-es>Lo que hacemos</div><div class="sec-eyebrow" data-en>What we do</div>
@@ -514,8 +619,44 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 </div>
 
 
+<!-- PROCESO DE TRABAJO -->
+<div class="section" id="proceso" style="max-width:100%;padding:80px 0">
+  <div style="max-width:1100px;margin:0 auto;padding:0 48px" class="reveal">
+    <div class="sec-eyebrow" data-es>Simple y transparente</div><div class="sec-eyebrow" data-en>Simple & transparent</div>
+    <h2 class="sec-title"><span data-es>CÓMO <span class="accent">TRABAJAMOS</span></span><span data-en>HOW WE <span class="accent">WORK</span></span></h2>
+    <p class="sec-sub" data-es>Tres pasos. Sin sorpresas. Tu proyecto listo antes de lo que imaginas.</p>
+    <p class="sec-sub" data-en>Three steps. No surprises. Your project ready faster than you think.</p>
+  </div>
+  <div class="process-steps" style="max-width:1100px;margin:48px auto 0;margin-left:auto;margin-right:auto;position:relative;z-index:2">
+    <div class="process-step reveal" style="transition-delay:0s">
+      <div class="step-num">01</div>
+      <div class="step-icon"><i class="fa-solid fa-comments"></i></div>
+      <div class="step-title" data-es>CONTÁCTANOS</div><div class="step-title" data-en>REACH OUT</div>
+      <p class="step-desc" data-es>Escríbenos por WhatsApp o el formulario. Cuéntanos tu idea, tu negocio y qué necesitas. Sin compromisos.</p>
+      <p class="step-desc" data-en>Write us on WhatsApp or the form. Tell us your idea, your business and what you need. No commitments.</p>
+      <div class="step-tag"><i class="fa-solid fa-bolt"></i><span data-es>Respuesta en minutos</span><span data-en>Reply in minutes</span></div>
+    </div>
+    <div class="process-step reveal" style="transition-delay:.12s">
+      <div class="step-num">02</div>
+      <div class="step-icon"><i class="fa-solid fa-file-pen"></i></div>
+      <div class="step-title" data-es>PROPUESTA</div><div class="step-title" data-en>PROPOSAL</div>
+      <p class="step-desc" data-es>Te enviamos una propuesta personalizada con precio, tiempo de entrega y todo lo que incluye. Sin letras pequeñas.</p>
+      <p class="step-desc" data-en>We send you a custom proposal with price, delivery time and everything included. No fine print.</p>
+      <div class="step-tag"><i class="fa-solid fa-check"></i><span data-es>Precio claro desde el inicio</span><span data-en>Clear price from the start</span></div>
+    </div>
+    <div class="process-step reveal" style="transition-delay:.24s">
+      <div class="step-num">03</div>
+      <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
+      <div class="step-title" data-es>ENTREGAMOS</div><div class="step-title" data-en>WE DELIVER</div>
+      <p class="step-desc" data-es>Nos ponemos a trabajar y te entregamos en el tiempo acordado. Con soporte post-entrega incluido.</p>
+      <p class="step-desc" data-en>We get to work and deliver on time as agreed. Post-delivery support included.</p>
+      <div class="step-tag"><i class="fa-solid fa-shield-halved"></i><span data-es>Soporte incluido</span><span data-en>Support included</span></div>
+    </div>
+  </div>
+</div>
+
 <!-- DISEÑO -->
-<div class="section">
+<div class="section" id="diseno">
   <div class="reveal">
     <div class="sec-eyebrow" data-es>Identidad Visual</div><div class="sec-eyebrow" data-en>Visual Identity</div>
     <h2 class="sec-title"><span data-es>SERVICIOS DE <span class="accent">DISEÑO</span></span><span data-en>DESIGN <span class="accent">SERVICES</span></span></h2>
@@ -566,7 +707,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 </div>
 
 <!-- PAQUETES (BLUE) -->
-<div class="section section-blue">
+<div class="section section-blue" id="paquetes">
   <div class="reveal" style="position:relative;z-index:2;transition-delay:.05s">
     <div class="sec-eyebrow" data-es>Todo incluido</div><div class="sec-eyebrow" data-en>All included</div>
     <h2 class="sec-title"><span data-es>PAQUETES <span class="accent">PROFESIONALES</span></span><span data-en>PROFESSIONAL <span class="accent">PACKAGES</span></span></h2>
@@ -577,6 +718,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <div class="pkg-card reveal" style="transition-delay:0s">
       <i class="fa-solid fa-seedling pkg-icon"></i>
       <div class="pkg-name" data-es>PAQUETE BÁSICO</div><div class="pkg-name" data-en>BASIC PACKAGE</div>
+      <div class="delivery-badge" style="margin-top:4px"><i class="fa-solid fa-bolt"></i><span data-es>Entrega en 48h</span><span data-en>48h delivery</span></div>
       <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">$</em>124</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">€</em><span class="ea" data-v="124">112</span></span></div>
       <ul class="feat-list">
         <li><i class="fa-solid fa-check ck"></i><span data-es>Logo Profesional</span><span data-en>Professional Logo</span></li>
@@ -588,6 +730,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <div class="pkg-card reveal" style="transition-delay:.12s">
       <i class="fa-solid fa-chart-line pkg-icon"></i>
       <div class="pkg-name" data-es>PAQUETE INTERMEDIO</div><div class="pkg-name" data-en>INTERMEDIATE PACKAGE</div>
+      <div class="delivery-badge" style="margin-top:4px"><i class="fa-solid fa-bolt"></i><span data-es>Entrega en 48h</span><span data-en>48h delivery</span></div>
       <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">$</em>221</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">€</em><span class="ea" data-v="221">199</span></span></div>
       <ul class="feat-list">
         <li><i class="fa-solid fa-check ck"></i><span data-es>Todo el Básico</span><span data-en>Everything in Basic</span></li>
@@ -599,6 +742,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <div class="pkg-card reveal" style="transition-delay:.24s">
       <i class="fa-solid fa-rocket pkg-icon"></i>
       <div class="pkg-name" data-es>PAQUETE AVANZADO</div><div class="pkg-name" data-en>ADVANCED PACKAGE</div>
+      <div class="delivery-badge" style="margin-top:4px"><i class="fa-solid fa-bolt"></i><span data-es>Entrega en 48h</span><span data-en>48h delivery</span></div>
       <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">$</em>553</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">€</em><span class="ea" data-v="553">498</span></span></div>
       <ul class="feat-list">
         <li><i class="fa-solid fa-check ck"></i><span data-es>Factura y Business Card</span><span data-en>Invoice & Business Card</span></li>
@@ -613,7 +757,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 <hr class="divider">
 
 <!-- PLANES WEB -->
-<div class="section">
+<div class="section" id="web">
   <div class="reveal">
     <div class="sec-eyebrow" data-es>Precios claros</div><div class="sec-eyebrow" data-en>Clear pricing</div>
     <h2 class="sec-title"><span data-es>PLANES DE <span class="accent">DISEÑO WEB</span></span><span data-en>WEB DESIGN <span class="accent">PLANS</span></span></h2>
@@ -626,6 +770,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
       <div class="plan-body">
         <div class="plan-price"><span class="price-usd"><em style="font-style:normal;font-size:28px;color:var(--blue)">$</em>280</span><span class="price-eur"><em style="font-style:normal;font-size:28px;color:var(--blue)">€</em><span class="ea" data-v="280">252</span></span></div>
         <div class="plan-note" data-es>Pago único</div><div class="plan-note" data-en>One-time payment</div>
+        <div class="delivery-badge"><i class="fa-solid fa-bolt"></i><span data-es>Entrega en 24–48h</span><span data-en>Delivered in 24–48h</span></div>
         <div class="plan-div"></div>
         <ul class="feat-list">
           <li><i class="fa-solid fa-check ck"></i>Landing Page</li>
@@ -640,6 +785,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
       <div class="plan-body">
         <div class="plan-price"><span class="price-usd"><em style="font-style:normal;font-size:28px;color:var(--blue)">$</em>455</span><span class="price-eur"><em style="font-style:normal;font-size:28px;color:var(--blue)">€</em><span class="ea" data-v="455">410</span></span></div>
         <div class="plan-note" data-es>Pago único</div><div class="plan-note" data-en>One-time payment</div>
+        <div class="delivery-badge"><i class="fa-solid fa-clock"></i><span data-es>Entrega en 2–3 días</span><span data-en>Delivered in 2–3 days</span></div>
         <div class="plan-div"></div>
         <ul class="feat-list">
           <li><i class="fa-solid fa-check ck"></i><span data-es>Sitio Multi-Páginas (hasta 5)</span><span data-en>Multi-Page Site (up to 5)</span></li>
@@ -655,6 +801,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
       <div class="plan-body">
         <div class="plan-price"><span class="price-usd"><em style="font-style:normal;font-size:28px;color:var(--blue)">$</em>950</span><span class="price-eur"><em style="font-style:normal;font-size:28px;color:var(--blue)">€</em><span class="ea" data-v="950">855</span></span></div>
         <div class="plan-note" data-es>Pago único</div><div class="plan-note" data-en>One-time payment</div>
+        <div class="delivery-badge"><i class="fa-solid fa-calendar-check"></i><span data-es>Entrega en 4–5 días</span><span data-en>Delivered in 4–5 days</span></div>
         <div class="plan-div"></div>
         <ul class="feat-list">
           <li><i class="fa-solid fa-check ck"></i><span data-es>Sitio Completo (Catálogo / Reservas)</span><span data-en>Full Site (Catalog / Bookings)</span></li>
@@ -670,7 +817,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 <hr class="divider">
 
 <!-- ECOMMERCE -->
-<div class="section">
+<div class="section" id="ecommerce">
   <div class="reveal">
     <div class="sec-eyebrow" data-es>Ventas Online</div><div class="sec-eyebrow" data-en>Online Sales</div>
     <h2 class="sec-title"><span data-es>GESTIÓN <span class="accent">E-COMMERCE</span></span><span data-en>E-COMMERCE <span class="accent">MANAGEMENT</span></span></h2>
@@ -691,13 +838,19 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
       <div class="pay-icons"><i class="fa-brands fa-cc-paypal"></i><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i></div>
       <p class="ecom-desc" data-es>Gestionamos tu presencia en las plataformas más grandes del mundo para maximizar tus ventas y presencia digital.</p>
       <p class="ecom-desc" data-en>We manage your presence on the world's largest platforms to maximize your sales and digital footprint.</p>
-      <ul class="feat-list" style="margin-bottom:28px">
-        <li><i class="fa-solid fa-check ck"></i><span data-es>Configuración de cuentas y optimización de perfiles</span><span data-en>Account setup and profile optimization</span></li>
-        <li><i class="fa-solid fa-check ck"></i><span data-es>Apertura en Walmart Marketplace</span><span data-en>Walmart Marketplace onboarding</span></li>
-        <li><i class="fa-solid fa-check ck"></i><span data-es>Asesoría en productos físicos y digitales</span><span data-en>Advisory on physical and digital products</span></li>
-        <li><i class="fa-solid fa-check ck"></i><span data-es>Gestión de requisitos legales y permisos FDA</span><span data-en>Legal requirements & FDA permit management</span></li>
-        <li><i class="fa-solid fa-check ck"></i><span data-es>Acompañamiento estratégico por 30 días</span><span data-en>30-day strategic support</span></li>
-      </ul>
+      <button class="ecom-collapse-btn" onclick="toggleEcom(this)">
+        <span class="ecom-collapse-label" data-es>Ver qué incluye</span><span class="ecom-collapse-label" data-en>See what's included</span>
+        <i class="fa-solid fa-chevron-down ecom-collapse-icon"></i>
+      </button>
+      <div class="ecom-collapsible">
+        <ul class="feat-list" style="margin-top:12px;margin-bottom:28px">
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Configuración de cuentas y optimización de perfiles</span><span data-en>Account setup and profile optimization</span></li>
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Apertura en Walmart Marketplace</span><span data-en>Walmart Marketplace onboarding</span></li>
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Asesoría en productos físicos y digitales</span><span data-en>Advisory on physical and digital products</span></li>
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Gestión de requisitos legales y permisos FDA</span><span data-en>Legal requirements & FDA permit management</span></li>
+          <li><i class="fa-solid fa-check ck"></i><span data-es>Acompañamiento estratégico por 30 días</span><span data-en>30-day strategic support</span></li>
+        </ul>
+      </div>
       <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20Plan%20de%20Gestión%20E-Commerce" target="_blank" class="btn-main"><span data-es>Comprar ahora</span><span data-en>Buy now</span><span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
     </div>
   </div>
@@ -706,7 +859,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 <hr class="divider">
 
 <!-- RESEÑAS -->
-<div class="section">
+<div class="section" id="resenas">
   <div class="reveal" style="text-align:center;margin-bottom:56px">
     <div class="sec-eyebrow" style="justify-content:center;display:flex" data-es>Comunidad</div>
     <div class="sec-eyebrow" style="justify-content:center;display:flex" data-en>Community</div>
@@ -762,6 +915,28 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     </div>
     <button onclick="openContactModal()" class="btn-main" style="border:none;cursor:pointer"><span data-es>CONTÁCTANOS HOY</span><span data-en>CONTACT US TODAY</span><span class="arr"><i class="fa-solid fa-arrow-right"></i></span></button>
   </div>
+</div>
+
+<!-- WA FLOAT -->
+<div id="wa-float">
+  <div id="wa-popup">
+    <div class="wa-popup-head">
+      <div class="wa-popup-icon"><i class="fa-brands fa-whatsapp"></i></div>
+      <div>
+        <div class="wa-popup-title">DGP Group USA</div>
+        <div class="wa-popup-sub" data-es>Respuesta en minutos · En línea</div>
+        <div class="wa-popup-sub" data-en>Reply in minutes · Online</div>
+      </div>
+    </div>
+    <textarea id="wa-msg-text" class="wa-popup-msg" rows="3">Hola DGP Group! 👋 Me interesa conocer más sobre sus servicios. ¿Podrían ayudarme?</textarea>
+    <button class="wa-send-btn" onclick="sendWAFloat()">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span data-es>Enviar mensaje</span><span data-en>Send message</span>
+    </button>
+  </div>
+  <button id="wa-fab" onclick="toggleWAPopup()" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </button>
 </div>
 
 <!-- CONTACT MODAL -->
@@ -894,6 +1069,47 @@ document.getElementById('reviewForm').addEventListener('submit',function(e){
     this.reset();btn.disabled=false;btn.querySelector('span').textContent=lang==='es'?'ENVIAR RESEÑA':'SEND REVIEW';
     setTimeout(loadRevs,2500);
   }).catch(()=>{st.className='status err';st.textContent=lang==='es'?'Error. Intenta de nuevo.':'Error. Try again.';btn.disabled=false;btn.querySelector('span').textContent=lang==='es'?'ENVIAR RESEÑA':'SEND REVIEW'});
+});
+/* DRAWER */
+function toggleDrawer(){
+  const d=document.getElementById('navDrawer'),o=document.getElementById('drawerOverlay'),h=document.getElementById('hamburger');
+  const isOpen=d.classList.contains('open');
+  d.classList.toggle('open',!isOpen);
+  o.classList.toggle('open',!isOpen);
+  h.classList.toggle('open',!isOpen);
+  document.body.style.overflow=isOpen?'':'hidden';
+}
+function closeDrawer(){
+  document.getElementById('navDrawer').classList.remove('open');
+  document.getElementById('drawerOverlay').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+  document.body.style.overflow='';
+}
+/* ECOM COLLAPSIBLE */
+function toggleEcom(btn){
+  const icon=btn.querySelector('.ecom-collapse-icon');
+  const panel=btn.nextElementSibling;
+  const isOpen=panel.classList.contains('open');
+  panel.classList.toggle('open',!isOpen);
+  icon.classList.toggle('open',!isOpen);
+  btn.querySelector('[data-es]').textContent=isOpen?'Ver qué incluye':'Ocultar detalles';
+  btn.querySelector('[data-en]').textContent=isOpen?'See what\'s included':'Hide details';
+}
+
+/* WA FLOAT */
+function toggleWAPopup(){
+  const p=document.getElementById('wa-popup');
+  p.classList.toggle('open');
+}
+function sendWAFloat(){
+  const msg=document.getElementById('wa-msg-text').value.trim();
+  if(!msg)return;
+  window.open('https://wa.me/12398231738?text='+encodeURIComponent(msg),'_blank');
+  document.getElementById('wa-popup').classList.remove('open');
+}
+document.addEventListener('click',e=>{
+  const f=document.getElementById('wa-float');
+  if(f&&!f.contains(e.target))document.getElementById('wa-popup').classList.remove('open');
 });
 /* CONTACT MODAL */
 function openContactModal(){
