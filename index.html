@@ -35,7 +35,7 @@ body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(
 @keyframes ldrFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 
 /* TOP CONTROLS */
-.top-ctrl{position:fixed;top:20px;right:24px;z-index:1000;display:flex;gap:6px;opacity:0;animation:fadeDown .5s 2.4s forwards}
+.top-ctrl{position:fixed;bottom:24px;left:24px;z-index:1000;display:flex;gap:6px;opacity:0;animation:fadeDown .5s 2.4s forwards}
 .ctrl-grp{display:flex;gap:2px;background:rgba(255,255,255,.94);border:1px solid var(--border);border-radius:100px;padding:4px;backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.08)}
 .ctrl-btn{padding:6px 13px;border-radius:100px;border:none;background:transparent;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);cursor:pointer;transition:all .2s}
 .ctrl-btn.active{background:var(--black);color:#fff}
@@ -281,7 +281,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 @media(max-width:600px){.modal-box{padding:36px 24px 28px}}
 @media(max-width:1000px){
   nav{padding:28px 28px 0}.nav-badge{margin-right:10px}
-  #hero{padding:0 28px 40px}.hero-bottom{grid-template-columns:1fr;gap:24px}
+  #hero{padding:0 28px 40px;min-height:auto;justify-content:flex-start;gap:40px}.hero-bottom{grid-template-columns:1fr;gap:24px}
   .stats{justify-content:flex-start}.stat{text-align:left}
   .section{padding:60px 28px}
   .svc-grid,.pkg-grid,.web-plans,.pulse-grid,.ecom-block,.reviews-wrap{grid-template-columns:1fr}
@@ -290,9 +290,11 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 }
 @media(max-width:600px){
   nav{padding:24px 20px 0}.nav-badge{display:none}
-  #hero{padding:0 20px 36px}.section{padding:48px 20px}
+  #hero{padding:0 20px 36px;gap:28px}.section{padding:48px 20px}
   .design-row{flex-direction:column;align-items:flex-start}.row-right{width:100%;justify-content:space-between}
-  .top-ctrl{top:14px;right:14px;gap:4px}
+  .top-ctrl{bottom:16px;left:16px;gap:4px}
+  .hero-content{padding-top:16px}
+  .hero-bottom{padding-top:28px}
 }
 
 /* ── EXTRA ANIMATIONS ───────────────────────────────── */
