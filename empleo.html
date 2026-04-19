@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Se Busca Gestor de Ventas Digitales · DGP Group USA</title>
+<meta name="description" content="Únete al equipo comercial de DGP Group USA. Posición remota abierta para USA y Venezuela. Comisiones del 15–25%.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --white:#ffffff;--off:#f7f7f5;--black:#0a0a0a;--blue:#1438cc;
+  --blue-l:#2a52e0;--blue-s:#4d78ff;--muted:#2a3f7e;
+  --border:#e8e8e4;--soft:#64748b;--gold:#d4af37;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--black);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,#c8c8c8 1px,transparent 1px);background-size:36px 36px;opacity:.3;pointer-events:none;z-index:0}
+.cursor-glow{position:fixed;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(20,56,204,.055) 0%,transparent 68%);pointer-events:none;z-index:0;transform:translate(-50%,-50%);transition:left .15s ease,top .15s ease}
+
+/* NAV */
+nav{position:relative;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:32px 52px 0;opacity:0;animation:fadeDown .7s .2s forwards}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:4px;color:var(--black);text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo img{width:40px;height:40px;object-fit:contain;border-radius:4px}
+.logo span{color:var(--blue)}
+.nav-tag{display:flex;align-items:center;gap:7px;background:rgba(20,56,204,.06);border:1px solid rgba(20,56,204,.18);border-radius:100px;padding:7px 16px;font-size:11px;color:var(--blue);letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
+.dot-live{width:6px;height:6px;background:#22c55e;border-radius:50%;animation:blink 1.8s ease-in-out infinite;flex-shrink:0}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+
+/* HERO */
+#hero{position:relative;z-index:1;padding:60px 52px 56px;min-height:90vh;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.hero-bg-word{position:absolute;bottom:-60px;right:-20px;font-family:'Bebas Neue',sans-serif;font-size:clamp(180px,22vw,340px);color:transparent;-webkit-text-stroke:1px rgba(20,56,204,.05);pointer-events:none;user-select:none;z-index:0;line-height:1}
+.hero-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(20,56,204,.07) 0%,transparent 65%);top:40%;left:40%;transform:translate(-50%,-50%);pointer-events:none;z-index:0;animation:breathe 6s ease-in-out infinite}
+@keyframes breathe{0%,100%{transform:translate(-50%,-50%) scale(1)}50%{transform:translate(-50%,-50%) scale(1.1)}}
+.hero-inner{position:relative;z-index:2;max-width:900px;opacity:0;animation:fadeUp .9s .35s cubic-bezier(.22,1,.36,1) forwards}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:24px}
+.eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--blue)}
+.hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,128px);line-height:.9;color:var(--black);letter-spacing:-1px;margin-bottom:28px}
+.hero-title .shine{display:block;background:linear-gradient(105deg,var(--blue) 0%,var(--blue) 30%,#a8c0ff 46%,#fff 52%,#a8c0ff 58%,var(--blue) 74%,var(--blue) 100%);background-size:250% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 2.8s 1s ease-in-out infinite}
+@keyframes shine{0%{background-position:200% center}100%{background-position:-200% center}}
+.hero-desc{font-size:16px;color:var(--muted);line-height:1.75;font-weight:300;max-width:620px;margin-bottom:36px}
+.hero-desc strong{color:var(--black);font-weight:500}
+.hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px;opacity:0;animation:fadeUp .7s .7s forwards}
+.badge{display:inline-flex;align-items:center;gap:7px;background:var(--off);border:1px solid var(--border);border-radius:100px;padding:8px 16px;font-size:12px;color:var(--muted);font-weight:400}
+.badge i{color:var(--blue);font-size:11px}
+.badge.hot{background:rgba(20,56,204,.06);border-color:rgba(20,56,204,.2);color:var(--blue);font-weight:500}
+.hero-bottom-strip{position:relative;z-index:2;border-top:1px solid var(--border);padding-top:32px;display:flex;align-items:center;gap:40px;flex-wrap:wrap;opacity:0;animation:fadeUp .7s .85s forwards}
+.strip-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--soft);font-weight:400}
+.strip-val{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--black);line-height:1}
+.strip-val em{color:var(--blue);font-style:normal}
+.strip-sep{width:1px;height:40px;background:var(--border)}
+
+/* TICKER */
+.ticker-strip{background:var(--blue);overflow:hidden;padding:13px 0;position:relative;z-index:2}
+.ticker-track{display:flex;width:max-content;animation:ticker 22s linear infinite}
+.ticker-item{font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:3px;color:rgba(255,255,255,.8);padding:0 28px;white-space:nowrap;display:flex;align-items:center;gap:10px}
+.ticker-item::after{content:'·';color:rgba(255,255,255,.3)}
+@keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.section{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:80px 52px}
+.sec-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:14px}
+.sec-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--blue)}
+.sec-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,76px);line-height:.92;color:var(--black);margin-bottom:14px}
+.sec-title .accent{background:linear-gradient(105deg,var(--blue) 0%,var(--blue) 35%,#a8c0ff 48%,#fff 54%,#a8c0ff 60%,var(--blue) 75%,var(--blue) 100%);background-size:250% 100%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shine 3s ease-in-out infinite}
+.sec-sub{font-size:15px;color:var(--soft);font-weight:300;line-height:1.7;max-width:560px}
+.divider{width:calc(100% - 96px);max-width:1100px;height:1px;background:var(--border);margin:0 auto}
+
+/* BUSCAMOS */
+.req-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:44px}
+.req-card{background:var(--white);padding:40px 36px;position:relative;overflow:hidden;transition:background .3s}
+.req-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.req-card:hover{background:rgba(20,56,204,.03)}.req-card:hover::after{transform:scaleX(1)}
+.req-card:hover .req-icon{color:var(--blue);transform:scale(1.15) rotate(-5deg)}
+.req-icon{font-size:28px;color:var(--muted);margin-bottom:20px;display:block;transition:color .3s,transform .4s cubic-bezier(.34,1.56,.64,1)}
+.req-num{position:absolute;top:14px;right:20px;font-family:'Bebas Neue',sans-serif;font-size:64px;color:rgba(20,56,204,.05);line-height:1;pointer-events:none;transition:color .3s}
+.req-card:hover .req-num{color:rgba(20,56,204,.1)}
+.req-name{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--black);margin-bottom:10px}
+.req-desc{font-size:14px;color:var(--soft);line-height:1.75;font-weight:300}
+
+/* DARK */
+.section-dark{background:var(--black);position:relative;z-index:1;overflow:hidden}
+.section-dark::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(74,120,255,.1) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
+.dark-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(20,56,204,.2) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;animation:breathe 6s ease-in-out infinite}
+.section-dark .sec-eyebrow{color:rgba(255,255,255,.45)}
+.section-dark .sec-eyebrow::before{background:rgba(255,255,255,.3)}
+.section-dark .sec-title{color:#fff}
+.section-dark .sec-sub{color:rgba(255,255,255,.5)}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);margin-top:44px;position:relative;z-index:2}
+.offer-card{background:transparent;padding:40px 32px;transition:background .3s;position:relative;overflow:hidden}
+.offer-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--blue-s);transform:scaleX(0);transform-origin:left;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.offer-card:hover{background:rgba(74,120,255,.1)}.offer-card:hover::after{transform:scaleX(1)}
+.offer-card:hover .offer-icon{color:var(--blue-s);transform:scale(1.15) rotate(-5deg)}
+.offer-icon{font-size:26px;color:rgba(74,120,255,.8);margin-bottom:20px;display:block;transition:color .3s,transform .4s cubic-bezier(.34,1.56,.64,1)}
+.offer-name{font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;margin-bottom:10px}
+.offer-desc{font-size:13px;color:rgba(255,255,255,.5);line-height:1.75;font-weight:300}
+.comm-highlight{display:inline-flex;align-items:baseline;gap:4px;font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--blue-s);line-height:1;margin:8px 0 12px}
+.comm-highlight small{font-size:18px;color:rgba(255,255,255,.5);font-family:'DM Sans',sans-serif;font-weight:300}
+
+/* OFF SECTION */
+.section-off{background:var(--off);position:relative;z-index:1;overflow:hidden}
+.section-off::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,#d0d0cc 1px,transparent 1px);background-size:36px 36px;opacity:.3;pointer-events:none}
+.filter-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:44px;position:relative;z-index:2}
+.filter-step{background:var(--off);padding:40px 32px;position:relative;overflow:hidden;transition:background .3s}
+.filter-step:hover{background:#fff}
+.filter-step:hover .fstep-icon{background:var(--blue);color:#fff;transform:scale(1.08) rotate(-4deg)}
+.fstep-num{position:absolute;top:16px;right:20px;font-family:'Bebas Neue',sans-serif;font-size:72px;color:rgba(20,56,204,.06);line-height:1;pointer-events:none}
+.filter-step:hover .fstep-num{color:rgba(20,56,204,.12)}
+.fstep-icon{width:46px;height:46px;background:rgba(20,56,204,.08);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--blue);margin-bottom:20px;transition:background .3s,color .3s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.fstep-name{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--black);margin-bottom:10px}
+.fstep-desc{font-size:13px;color:var(--soft);line-height:1.7;font-weight:300}
+.fstep-tag{display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);font-weight:500}
+.alert-box{border:1px solid var(--border);background:var(--white);padding:24px 28px;display:flex;gap:18px;align-items:flex-start;margin-top:24px}
+.alert-icon{width:42px;height:42px;background:rgba(20,56,204,.07);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.alert-title{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--black);margin-bottom:6px}
+.alert-text{font-size:13px;color:var(--soft);line-height:1.75;font-weight:300}
+.alert-text strong{color:var(--black);font-weight:500}
+
+/* ── FORM ── */
+.form-section{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:80px 52px}
+.form-wrap{display:grid;grid-template-columns:320px 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:44px;overflow:hidden}
+
+.form-left{background:var(--black);padding:48px 36px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:28px}
+.form-left::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(74,120,255,.12) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+.form-left::after{content:'DGP';position:absolute;bottom:-40px;right:-16px;font-family:'Bebas Neue',sans-serif;font-size:160px;color:rgba(255,255,255,.03);pointer-events:none;line-height:1}
+.fl-tag{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:6px 14px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.6);width:fit-content;position:relative;z-index:1}
+.fl-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,2.6vw,34px);color:#fff;line-height:1.05;position:relative;z-index:1}
+.fl-sub{font-size:13px;color:rgba(255,255,255,.4);font-weight:300;line-height:1.7;position:relative;z-index:1}
+.fl-comm-box{background:rgba(20,56,204,.28);border:1px solid rgba(74,120,255,.3);padding:20px;position:relative;z-index:1}
+.fl-comm-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px}
+.fl-comm-val{font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--blue-s);line-height:1}
+.fl-comm-sub{font-size:12px;color:rgba(255,255,255,.38);font-weight:300;margin-top:4px;line-height:1.5}
+.fl-steps{display:flex;flex-direction:column;gap:11px;position:relative;z-index:1}
+.fl-step{display:flex;align-items:flex-start;gap:11px}
+.fl-step-num{width:22px;height:22px;background:rgba(20,56,204,.55);border:1px solid rgba(74,120,255,.35);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:11px;color:#fff;flex-shrink:0;margin-top:2px}
+.fl-step-text{font-size:12px;color:rgba(255,255,255,.46);font-weight:300;line-height:1.6}
+.fl-step-text strong{color:rgba(255,255,255,.8);font-weight:500}
+
+.form-right{background:var(--white);padding:48px 44px}
+.fsec-title{font-family:'Bebas Neue',sans-serif;font-size:17px;color:var(--black);letter-spacing:1px;margin:32px 0 16px;padding-bottom:8px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px}
+.fsec-title:first-child{margin-top:0}
+.fsec-title i{color:var(--blue);font-size:14px}
+.field{margin-bottom:13px}
+.field label{display:block;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--soft);font-weight:500;margin-bottom:5px}
+.req{color:var(--blue);margin-left:2px}
+.field input,.field textarea,.field select{width:100%;padding:12px 15px;border:1px solid var(--border);background:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--black);outline:none;transition:border-color .2s,box-shadow .2s;border-radius:0;-webkit-appearance:none}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(20,56,204,.07)}
+.field textarea{resize:vertical;min-height:92px}
+.field select{color:var(--soft)}.field select.filled{color:var(--black)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+/* Exp blocks */
+.exp-block{border:1px solid var(--border);padding:16px;margin-bottom:10px;position:relative;background:#fafafa}
+.exp-remove{position:absolute;top:10px;right:12px;background:none;border:none;color:var(--soft);cursor:pointer;font-size:13px;transition:color .2s;padding:2px 6px}
+.exp-remove:hover{color:#cc1414}
+.add-exp-btn{display:flex;align-items:center;gap:8px;background:none;border:1px dashed var(--border);width:100%;padding:12px 16px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);cursor:pointer;transition:border-color .2s,color .2s,background .2s;margin-top:4px}
+.add-exp-btn:hover{border-color:var(--blue);color:var(--blue);background:rgba(20,56,204,.02)}
+
+/* Skills checkboxes */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:6px}
+.skill-check{display:flex;align-items:center;gap:8px;padding:9px 11px;border:1px solid var(--border);cursor:pointer;transition:border-color .2s,background .2s;user-select:none;font-size:12px;color:var(--muted)}
+.skill-check input{display:none}
+.sk-box{width:15px;height:15px;border:1.5px solid var(--border);border-radius:2px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,border-color .2s;font-size:8px;color:#fff}
+.skill-check input:checked ~ .sk-box{background:var(--blue);border-color:var(--blue)}
+.skill-check:hover{border-color:rgba(20,56,204,.3);background:rgba(20,56,204,.02)}
+.skill-check input:checked ~ span{color:var(--black);font-weight:500}
+
+/* Radio */
+.radio-group{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.radio-opt{display:flex;align-items:center;gap:7px;padding:9px 14px;border:1px solid var(--border);cursor:pointer;transition:border-color .2s,background .2s;user-select:none;font-size:13px;color:var(--muted)}
+.radio-opt input{display:none}
+.radio-dot{width:14px;height:14px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;transition:border-color .2s;flex-shrink:0}
+.radio-dot::after{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;opacity:0;transition:opacity .2s}
+.radio-opt input:checked ~ .radio-dot{border-color:var(--blue)}
+.radio-opt input:checked ~ .radio-dot::after{opacity:1}
+.radio-opt:hover{border-color:rgba(20,56,204,.3);background:rgba(20,56,204,.02)}
+.radio-opt input:checked ~ span{color:var(--black);font-weight:500}
+
+/* Quality bar */
+.quality-bar-wrap{background:var(--off);border:1px solid var(--border);padding:13px 16px;margin-bottom:14px;display:flex;align-items:center;gap:14px}
+.quality-bar-track{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden}
+.quality-bar-fill{height:100%;width:0%;background:var(--blue);transition:width .4s cubic-bezier(.22,1,.36,1),background .3s;border-radius:2px}
+.quality-label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);font-weight:500;white-space:nowrap;min-width:90px;text-align:right}
+.word-count{font-size:11px;color:var(--border);text-align:right;margin-top:3px;transition:color .2s}
+.word-count.ok{color:var(--blue)}
+
+/* Submit */
+.submit-btn{width:100%;background:var(--black);color:#fff;border:none;padding:17px 24px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:500;letter-spacing:2px;text-transform:uppercase;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;margin-top:4px}
+.submit-btn:hover{background:var(--blue);transform:translateY(-3px);box-shadow:0 10px 30px rgba(20,56,204,.22)}
+.submit-btn .barr{width:24px;height:24px;background:rgba(255,255,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+.submit-btn:hover .barr{transform:rotate(45deg)}
+.wa-note{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--soft);font-weight:300;margin-top:10px;padding:10px 14px;background:rgba(37,211,102,.04);border:1px solid rgba(37,211,102,.15)}
+.wa-note i{color:#25d366;font-size:14px;flex-shrink:0}
+.status-msg{padding:12px 16px;font-size:13px;display:none;margin-top:10px}
+.status-ok{display:block;background:rgba(20,56,204,.05);border-left:3px solid var(--blue);color:var(--blue)}
+.status-err{display:block;background:rgba(204,20,20,.05);border-left:3px solid #cc1414;color:#cc1414}
+
+/* FOOTER */
+footer{position:relative;z-index:1;background:var(--black);color:#fff;padding:40px 52px 28px;overflow:hidden}
+footer::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(74,120,255,.08) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
+.footer-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,.08)}
+.footer-logo{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:10px}
+.footer-logo img{width:30px;height:30px;object-fit:contain;border-radius:4px}
+.footer-logo span{color:var(--blue-s)}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap}
+.footer-link{font-size:12px;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:6px}
+.footer-link:hover{color:rgba(255,255,255,.7)}
+.footer-link i{color:var(--blue-s);font-size:11px}
+.footer-copy{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding-top:18px;font-size:12px;color:rgba(255,255,255,.2);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.footer-copy span{color:var(--blue-s)}
+
+/* WA FLOAT */
+#wa-float{position:fixed;bottom:28px;right:28px;z-index:4000}
+#wa-fab{width:54px;height:54px;background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;cursor:pointer;box-shadow:0 6px 24px rgba(37,211,102,.4);border:none;animation:waPulse 2.5s ease-in-out infinite;transition:transform .3s}
+#wa-fab:hover{transform:scale(1.1)}
+@keyframes waPulse{0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.4)}50%{box-shadow:0 6px 32px rgba(37,211,102,.7),0 0 0 8px rgba(37,211,102,.1)}}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+  nav{padding:24px 28px 0}
+  #hero{padding:52px 28px 48px;min-height:auto}
+  .section,.form-section{padding:64px 28px}
+  .req-grid,.offer-grid,.filter-grid{grid-template-columns:1fr}
+  .form-wrap{grid-template-columns:1fr}
+  .form-left,.form-right{padding:36px 28px}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  footer{padding:36px 28px 24px}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:600px){
+  nav{padding:20px 20px 0}
+  #hero{padding:40px 20px 40px}
+  .hero-title{font-size:52px}
+  .hero-bottom-strip{gap:20px}
+  .section,.form-section{padding:52px 20px}
+  .field-row{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+  .form-left,.form-right{padding:28px 20px}
+  .footer-copy{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="https://dgpgroup.us" class="logo">
+    <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" alt="DGP Group USA">
+    DGP GROUP <span>USA</span>
+  </a>
+  <div class="nav-tag"><span class="dot-live"></span>Posición Abierta</div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-bg-word">DGP</div>
+  <div class="hero-inner">
+    <div class="eyebrow">Estamos Contratando · DGP Group USA</div>
+    <h1 class="hero-title">
+      GESTOR DE<br><span class="shine">VENTAS</span>DIGITALES
+    </h1>
+    <p class="hero-desc">
+      No buscamos un vendedor de catálogo. Buscamos un <strong>estratega digital</strong> que entienda la lógica de los sistemas y sepa conectar nuestra propuesta con lo que el cliente realmente necesita.
+    </p>
+    <div class="hero-badges">
+      <div class="badge hot"><i class="fa-solid fa-wifi"></i> 100% Remoto</div>
+      <div class="badge"><i class="fa-solid fa-flag-usa"></i> USA — Todo el país</div>
+      <div class="badge"><i class="fa-solid fa-globe-americas"></i> Venezuela</div>
+      <div class="badge hot"><i class="fa-solid fa-percent"></i> Comisión 15–25%</div>
+      <div class="badge"><i class="fa-solid fa-rocket"></i> Inicio Inmediato</div>
+    </div>
+    <div class="hero-bottom-strip">
+      <div>
+        <div class="strip-label">Modalidad</div>
+        <div class="strip-val">100% <em>Remoto</em></div>
+      </div>
+      <div class="strip-sep"></div>
+      <div>
+        <div class="strip-label">Comisión por venta</div>
+        <div class="strip-val">15<em>–</em>25<em>%</em></div>
+      </div>
+      <div class="strip-sep"></div>
+      <div>
+        <div class="strip-label">Horario</div>
+        <div class="strip-val">Flexible</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-strip">
+  <div class="ticker-track">
+    <span class="ticker-item">Alto Potencial</span><span class="ticker-item">15–25% por Venta</span>
+    <span class="ticker-item">100% Remoto</span><span class="ticker-item">USA & Venezuela</span>
+    <span class="ticker-item">Sin Techo de Ganancias</span><span class="ticker-item">Equipo Digital</span>
+    <span class="ticker-item">DGP Group USA</span><span class="ticker-item">Inicio Inmediato</span>
+    <span class="ticker-item">Alto Potencial</span><span class="ticker-item">15–25% por Venta</span>
+    <span class="ticker-item">100% Remoto</span><span class="ticker-item">USA & Venezuela</span>
+    <span class="ticker-item">Sin Techo de Ganancias</span><span class="ticker-item">Equipo Digital</span>
+    <span class="ticker-item">DGP Group USA</span><span class="ticker-item">Inicio Inmediato</span>
+  </div>
+</div>
+
+<!-- ¿QUÉ BUSCAMOS? -->
+<div class="section" id="buscamos">
+  <div class="reveal">
+    <div class="sec-eyebrow">El perfil ideal</div>
+    <h2 class="sec-title">¿QUÉ <span class="accent">BUSCAMOS?</span></h2>
+    <p class="sec-sub">Cuatro pilares que definen a la persona que queremos en nuestro equipo comercial.</p>
+  </div>
+  <div class="req-grid">
+    <div class="req-card reveal" style="transition-delay:.04s">
+      <div class="req-num">01</div><i class="fa-solid fa-bolt req-icon"></i>
+      <h3 class="req-name">Agilidad Digital</h3>
+      <p class="req-desc">Eres un "nativo digital". Dominas atajos de teclado, gestión de archivos en la nube y aplicaciones móviles. La tecnología es tu lenguaje natural y te mueves con velocidad.</p>
+    </div>
+    <div class="req-card reveal" style="transition-delay:.1s">
+      <div class="req-num">02</div><i class="fa-solid fa-brain req-icon"></i>
+      <h3 class="req-name">Mentalidad Lógica</h3>
+      <p class="req-desc">Entiendes cómo funcionan webs, sistemas y automatizaciones. No necesitas programar, pero sí traducir un requerimiento técnico a un lenguaje que el cliente comprenda.</p>
+    </div>
+    <div class="req-card reveal" style="transition-delay:.16s">
+      <div class="req-num">03</div><i class="fa-solid fa-book-open req-icon"></i>
+      <h3 class="req-name">Autodidacta</h3>
+      <p class="req-desc">Tienes hambre de aprender. Si no conoces una herramienta, la investigas y la dominas antes de pedir ayuda. El aprendizaje continuo es un hábito, no una obligación.</p>
+    </div>
+    <div class="req-card reveal" style="transition-delay:.22s">
+      <div class="req-num">04</div><i class="fa-solid fa-pen-nib req-icon"></i>
+      <h3 class="req-name">Comunicación Impecable</h3>
+      <p class="req-desc">Tu forma de escribir y organizar ideas dice mucho de tu profesionalismo. Eres claro, preciso y sabes que la claridad es poder en cualquier negociación.</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- LO QUE OFRECEMOS -->
+<div class="section-dark" id="ofrecemos">
+  <div class="dark-glow"></div>
+  <div class="section" style="position:relative;z-index:2;padding-top:80px;padding-bottom:80px">
+    <div class="reveal">
+      <div class="sec-eyebrow">Beneficios reales</div>
+      <h2 class="sec-title">LO QUE <span class="accent">OFRECEMOS</span></h2>
+      <p class="sec-sub">Sin promesas vacías. Esto es lo que obtienes al unirte al equipo.</p>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-card reveal" style="transition-delay:.05s">
+        <i class="fa-solid fa-percent offer-icon"></i>
+        <div class="offer-name">Comisión por Proyecto</div>
+        <div class="comm-highlight">15<small>–</small>25<small>%</small></div>
+        <p class="offer-desc">Del total vendido en cada proyecto entregado. Sin techo de ganancias — cuanto más cierras, más ganas.</p>
+      </div>
+      <div class="offer-card reveal" style="transition-delay:.13s">
+        <i class="fa-solid fa-laptop-house offer-icon"></i>
+        <div class="offer-name">100% Remoto</div>
+        <p class="offer-desc">Trabaja desde cualquier ciudad de USA o Venezuela. Sin horarios rígidos. Lo que importan son los resultados.</p>
+      </div>
+      <div class="offer-card reveal" style="transition-delay:.21s">
+        <i class="fa-solid fa-graduation-cap offer-icon"></i>
+        <div class="offer-name">Formación Directa</div>
+        <p class="offer-desc">Formación en la metodología y flujo de trabajo de DGP. Aprenderás cómo opera una agencia digital de alto rendimiento.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CÓMO APLICAR -->
+<div class="section-off" id="como-aplicar">
+  <div class="section" style="max-width:1100px;padding-top:80px;padding-bottom:80px">
+    <div class="reveal">
+      <div class="sec-eyebrow">Proceso de selección</div>
+      <h2 class="sec-title">CÓMO <span class="accent">APLICAR</span></h2>
+      <p class="sec-sub">No envíes un CV estándar. Queremos ver cómo piensas, cómo escribes y cómo te presentas.</p>
+    </div>
+    <div class="filter-grid">
+      <div class="filter-step reveal" style="transition-delay:.04s">
+        <div class="fstep-num">01</div>
+        <div class="fstep-icon"><i class="fa-solid fa-user"></i></div>
+        <div class="fstep-name">Quién Eres</div>
+        <p class="fstep-desc">Preséntate brevemente y cuéntanos tu experiencia. Sin párrafos infinitos: claridad ante todo.</p>
+        <div class="fstep-tag"><i class="fa-solid fa-check"></i> Presentación breve</div>
+      </div>
+      <div class="filter-step reveal" style="transition-delay:.12s">
+        <div class="fstep-icon"><i class="fa-solid fa-laptop"></i></div>
+        <div class="fstep-num">02</div>
+        <div class="fstep-name">Tus Herramientas</div>
+        <p class="fstep-desc">¿Qué herramientas digitales dominas? Sé específico. El formulario tiene una sección para tus skills.</p>
+        <div class="fstep-tag"><i class="fa-solid fa-check"></i> Skills verificables</div>
+      </div>
+      <div class="filter-step reveal" style="transition-delay:.20s">
+        <div class="fstep-icon"><i class="fa-solid fa-rocket"></i></div>
+        <div class="fstep-num">03</div>
+        <div class="fstep-name">Por Qué DGP</div>
+        <p class="fstep-desc">¿Por qué encajarías en un entorno de alto rendimiento? Convéncenos con argumentos reales, no clichés.</p>
+        <div class="fstep-tag"><i class="fa-solid fa-check"></i> Argumento sólido</div>
+      </div>
+    </div>
+    <div class="alert-box reveal" style="transition-delay:.3s">
+      <div class="alert-icon"><i class="fa-solid fa-triangle-exclamation" style="color:var(--blue);font-size:18px"></i></div>
+      <div>
+        <div class="alert-title">Nota del filtrado — Léelo antes de aplicar</div>
+        <p class="alert-text">Nos fijamos en tres cosas antes de responder: <strong>Puntuación y ortografía</strong> (quien no cuida la escritura no cuidará los detalles en la venta), <strong>Estructura</strong> (¿párrafos claros o un bloque de texto interminable?), y <strong>Tono</strong> (profesional pero cercano). Este filtro elimina automáticamente al 90% de candidatos que no se toman el tiempo de leer ni de redactar bien.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FORMULARIO COMPLETO -->
+<div class="form-section" id="postular">
+  <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto">
+    <div class="sec-eyebrow" style="justify-content:center;display:flex">Postulación directa</div>
+    <h2 class="sec-title" style="text-align:center">APLICA <span class="accent">AHORA</span></h2>
+    <p class="sec-sub" style="margin:0 auto">Completa el formulario con cuidado. Tu postulación llegará directo a nuestro WhatsApp.</p>
+  </div>
+
+  <div class="form-wrap reveal" style="transition-delay:.1s">
+
+    <!-- PANEL IZQUIERDO -->
+    <div class="form-left">
+      <div class="fl-tag"><i class="fa-brands fa-whatsapp"></i> Vía WhatsApp</div>
+      <div>
+        <div class="fl-title">TU POSTULACIÓN LLEGA DIRECTO A NOSOTROS</div>
+        <p class="fl-sub" style="margin-top:10px">Sin intermediarios. Completa el formulario y se generará un mensaje estructurado listo para enviar por WhatsApp.</p>
+      </div>
+      <div class="fl-comm-box">
+        <div class="fl-comm-label">Comisión por proyecto entregado</div>
+        <div class="fl-comm-val">15 – 25%</div>
+        <div class="fl-comm-sub">Del total vendido. Sin techo de ganancias.<br>Tú controlas tu ingreso.</div>
+      </div>
+      <div class="fl-steps">
+        <div class="fl-step"><div class="fl-step-num">1</div><p class="fl-step-text"><strong>Datos personales</strong> y experiencia laboral</p></div>
+        <div class="fl-step"><div class="fl-step-num">2</div><p class="fl-step-text"><strong>Habilidades digitales</strong> que dominas hoy</p></div>
+        <div class="fl-step"><div class="fl-step-num">3</div><p class="fl-step-text"><strong>Preguntas de perfil</strong> rápidas y directas</p></div>
+        <div class="fl-step"><div class="fl-step-num">4</div><p class="fl-step-text"><strong>Carta de presentación</strong> — tu primera impresión</p></div>
+      </div>
+    </div>
+
+    <!-- FORMULARIO DERECHO -->
+    <div class="form-right">
+
+      <!-- 1. DATOS PERSONALES -->
+      <div class="fsec-title"><i class="fa-solid fa-user"></i> DATOS PERSONALES</div>
+      <div class="field-row">
+        <div class="field">
+          <label>Nombre <span class="req">*</span></label>
+          <input type="text" id="f-nombre" placeholder="Ej: Carlos">
+        </div>
+        <div class="field">
+          <label>Apellidos <span class="req">*</span></label>
+          <input type="text" id="f-apellidos" placeholder="Ej: García López">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>Correo electrónico <span class="req">*</span></label>
+          <input type="email" id="f-email" placeholder="tu@correo.com">
+        </div>
+        <div class="field">
+          <label>Teléfono / WhatsApp</label>
+          <input type="tel" id="f-tel" placeholder="+1 (USA) o +58 (VE)">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label>País <span class="req">*</span></label>
+          <select id="f-pais" onchange="this.classList.add('filled')">
+            <option value="" disabled selected>Selecciona...</option>
+            <option>Estados Unidos (USA)</option>
+            <option>Venezuela</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Ciudad / Estado</label>
+          <input type="text" id="f-ciudad" placeholder="Ej: Miami · FL">
+        </div>
+      </div>
+      <div class="field">
+        <label>Edad</label>
+        <input type="number" id="f-edad" placeholder="Ej: 24" min="16" max="70" style="max-width:140px">
+      </div>
+
+      <!-- 2. EXPERIENCIA LABORAL -->
+      <div class="fsec-title"><i class="fa-solid fa-briefcase"></i> EXPERIENCIA LABORAL</div>
+      <div id="exp-container">
+        <div class="exp-block" id="exp-0">
+          <button type="button" class="exp-remove" onclick="removeExp('exp-0')" title="Eliminar">✕</button>
+          <div class="field-row">
+            <div class="field"><label>Empresa / Organización</label><input type="text" class="exp-empresa" placeholder="Ej: Freelance, Mi empresa..."></div>
+            <div class="field"><label>Cargo / Rol</label><input type="text" class="exp-cargo" placeholder="Ej: Asesor de ventas"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Período</label><input type="text" class="exp-periodo" placeholder="Ej: 2022 – 2024"></div>
+            <div class="field"><label>Área</label>
+              <select class="exp-area" onchange="this.classList.add('filled')">
+                <option value="" disabled selected>Selecciona...</option>
+                <option>Ventas / Comercial</option><option>Marketing Digital</option>
+                <option>Atención al Cliente</option><option>Diseño / Creativo</option>
+                <option>Tecnología / IT</option><option>Emprendimiento propio</option><option>Otro</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label>¿Qué hacías? (breve)</label><input type="text" class="exp-desc" placeholder="Ej: Captación de clientes, cierre de ventas, gestión de CRM..."></div>
+        </div>
+      </div>
+      <button type="button" class="add-exp-btn" onclick="addExp()"><i class="fa-solid fa-plus"></i> Agregar otra experiencia</button>
+
+      <!-- 3. HABILIDADES DIGITALES -->
+      <div class="fsec-title"><i class="fa-solid fa-star"></i> HABILIDADES DIGITALES</div>
+      <div class="field">
+        <label>Herramientas que dominas <span style="font-size:10px;color:var(--soft);font-weight:300;letter-spacing:0;text-transform:none">(marca todas las que apliquen)</span></label>
+        <div class="skills-grid">
+          <label class="skill-check"><input type="checkbox" value="WhatsApp Business"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>WhatsApp Business</span></label>
+          <label class="skill-check"><input type="checkbox" value="Google Drive / Docs"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>Google Drive</span></label>
+          <label class="skill-check"><input type="checkbox" value="Canva"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>Canva</span></label>
+          <label class="skill-check"><input type="checkbox" value="Instagram / Meta Ads"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>Instagram / Meta</span></label>
+          <label class="skill-check"><input type="checkbox" value="TikTok"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>TikTok</span></label>
+          <label class="skill-check"><input type="checkbox" value="Notion"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>Notion</span></label>
+          <label class="skill-check"><input type="checkbox" value="Trello / Asana"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>Trello / Asana</span></label>
+          <label class="skill-check"><input type="checkbox" value="Excel / Google Sheets"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>Excel / Sheets</span></label>
+          <label class="skill-check"><input type="checkbox" value="Zoom / Google Meet"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>Zoom / Meet</span></label>
+          <label class="skill-check"><input type="checkbox" value="CRM (cualquiera)"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>CRM</span></label>
+          <label class="skill-check"><input type="checkbox" value="ChatGPT / IA Generativa"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>ChatGPT / IA</span></label>
+          <label class="skill-check"><input type="checkbox" value="WordPress / Diseño Web"><span class="sk-box"><i class="fa-solid fa-check"></i></span><span>WordPress / Web</span></label>
+        </div>
+      </div>
+      <div class="field" style="margin-top:10px">
+        <label>Otras herramientas o habilidades</label>
+        <input type="text" id="f-otras-skills" placeholder="Ej: Shopify, CapCut, Manychat, edición de video, copywriting...">
+      </div>
+
+      <!-- 4. PERFIL PROFESIONAL -->
+      <div class="fsec-title"><i class="fa-solid fa-chart-bar"></i> PERFIL Y PREGUNTAS RÁPIDAS</div>
+      <div class="field">
+        <label>Nivel de experiencia en ventas <span class="req">*</span></label>
+        <div class="radio-group">
+          <label class="radio-opt"><input type="radio" name="exp-nivel" value="Sin experiencia formal"><span class="radio-dot"></span><span>Sin experiencia formal</span></label>
+          <label class="radio-opt"><input type="radio" name="exp-nivel" value="Menos de 1 año"><span class="radio-dot"></span><span>Menos de 1 año</span></label>
+          <label class="radio-opt"><input type="radio" name="exp-nivel" value="1–3 años"><span class="radio-dot"></span><span>1–3 años</span></label>
+          <label class="radio-opt"><input type="radio" name="exp-nivel" value="Más de 3 años"><span class="radio-dot"></span><span>+3 años</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label>¿Has vendido servicios digitales antes?</label>
+        <div class="radio-group">
+          <label class="radio-opt"><input type="radio" name="venta-digital" value="Sí, es mi especialidad"><span class="radio-dot"></span><span>Sí, es mi especialidad</span></label>
+          <label class="radio-opt"><input type="radio" name="venta-digital" value="Sí, alguna vez"><span class="radio-dot"></span><span>Sí, alguna vez</span></label>
+          <label class="radio-opt"><input type="radio" name="venta-digital" value="No, pero aprendo rápido"><span class="radio-dot"></span><span>No, pero aprendo rápido</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Disponibilidad horaria</label>
+        <div class="radio-group">
+          <label class="radio-opt"><input type="radio" name="disponibilidad" value="Tiempo completo"><span class="radio-dot"></span><span>Tiempo completo</span></label>
+          <label class="radio-opt"><input type="radio" name="disponibilidad" value="Medio tiempo"><span class="radio-dot"></span><span>Medio tiempo</span></label>
+          <label class="radio-opt"><input type="radio" name="disponibilidad" value="Flexible / Por horas"><span class="radio-dot"></span><span>Flexible</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label>¿Qué te motiva de esta oportunidad? <span class="req">*</span></label>
+        <div class="radio-group">
+          <label class="radio-opt"><input type="radio" name="motivacion" value="Las comisiones y el ingreso variable"><span class="radio-dot"></span><span>Las comisiones</span></label>
+          <label class="radio-opt"><input type="radio" name="motivacion" value="Crecer en el mundo del marketing digital"><span class="radio-dot"></span><span>Crecer en digital</span></label>
+          <label class="radio-opt"><input type="radio" name="motivacion" value="La flexibilidad del trabajo remoto"><span class="radio-dot"></span><span>Trabajo remoto</span></label>
+          <label class="radio-opt"><input type="radio" name="motivacion" value="Todo: comisiones, crecimiento y flexibilidad"><span class="radio-dot"></span><span>Todo lo anterior</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label>¿Tienes experiencia gestionando clientes por WhatsApp o redes sociales?</label>
+        <div class="radio-group">
+          <label class="radio-opt"><input type="radio" name="gestion-clientes" value="Sí, de forma profesional"><span class="radio-dot"></span><span>Sí, profesionalmente</span></label>
+          <label class="radio-opt"><input type="radio" name="gestion-clientes" value="Sí, informalmente"><span class="radio-dot"></span><span>Sí, informalmente</span></label>
+          <label class="radio-opt"><input type="radio" name="gestion-clientes" value="No, pero me adapto rápido"><span class="radio-dot"></span><span>No, pero me adapto</span></label>
+        </div>
+      </div>
+      <div class="field">
+        <label>¿Cómo describirías tu perfil?</label>
+        <div class="radio-group">
+          <label class="radio-opt"><input type="radio" name="perfil-tipo" value="Más comercial / vendedor nato"><span class="radio-dot"></span><span>Comercial / Vendedor</span></label>
+          <label class="radio-opt"><input type="radio" name="perfil-tipo" value="Más estratégico / analítico"><span class="radio-dot"></span><span>Estratégico / Analítico</span></label>
+          <label class="radio-opt"><input type="radio" name="perfil-tipo" value="Equilibrio entre ambos"><span class="radio-dot"></span><span>Equilibrio de ambos</span></label>
+        </div>
+      </div>
+
+      <!-- 5. CARTA DE PRESENTACIÓN -->
+      <div class="fsec-title"><i class="fa-solid fa-pen-nib"></i> CARTA DE PRESENTACIÓN</div>
+      <div class="field">
+        <label>Tu mensaje <span class="req">*</span> <span style="font-size:10px;color:var(--soft);font-weight:300;letter-spacing:0;text-transform:none">(mín. 80 palabras · ortografía y estructura son el primer filtro)</span></label>
+        <textarea id="f-carta" rows="8" placeholder="Cuéntanos quién eres, qué te hace diferente y por qué encajarías en un equipo de alto rendimiento como DGP.&#10;&#10;Este mensaje es tu primera impresión real. Párrafos claros, sin errores ortográficos y con un tono profesional pero cercano."></textarea>
+        <div class="word-count" id="wordCount">0 palabras</div>
+      </div>
+      <div class="quality-bar-wrap">
+        <div style="font-size:12px;color:var(--soft);font-weight:400;white-space:nowrap;flex-shrink:0">Calidad del mensaje</div>
+        <div class="quality-bar-track"><div class="quality-bar-fill" id="qualityBar"></div></div>
+        <div class="quality-label" id="qualityLabel">Escribe...</div>
+      </div>
+
+      <button class="submit-btn" onclick="submitForm()">
+        <i class="fa-brands fa-whatsapp"></i>
+        ENVIAR POSTULACIÓN POR WHATSAPP
+        <span class="barr"><i class="fa-solid fa-arrow-right"></i></span>
+      </button>
+      <div class="wa-note"><i class="fa-brands fa-whatsapp"></i> Se abrirá WhatsApp con toda tu información estructurada. Solo presiona "Enviar".</div>
+      <div class="status-msg" id="statusMsg"></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="https://dgpgroup.us" class="footer-logo">
+      <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" alt="DGP">
+      DGP GROUP <span>USA</span>
+    </a>
+    <div class="footer-links">
+      <a href="https://dgpgroup.us" class="footer-link"><i class="fa-solid fa-arrow-left"></i> Volver al sitio</a>
+      <a href="https://wa.me/12398231738" target="_blank" class="footer-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp directo</a>
+      <a href="https://instagram.com/dgpgroup.us" target="_blank" class="footer-link"><i class="fa-brands fa-instagram"></i> Instagram</a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <span>© 2026 <span>DGP Global Group</span> · Todos los derechos reservados</span>
+    <span>Florida, USA · dgpgroup.us</span>
+  </div>
+</footer>
+
+<div id="wa-float">
+  <button id="wa-fab" onclick="window.open('https://wa.me/12398231738?text=Hola%20DGP!%20Vi%20la%20vacante%20de%20Gestor%20de%20Ventas%20y%20quiero%20postularme.','_blank')" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </button>
+</div>
+
+<script>
+/* CURSOR GLOW */
+const cg = document.getElementById('cursorGlow');
+document.addEventListener('mousemove', e => { cg.style.left = e.clientX+'px'; cg.style.top = e.clientY+'px'; });
+
+/* REVEAL */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: .07 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* EXP BLOCKS */
+let expCount = 1;
+function addExp() {
+  const id = 'exp-' + expCount++;
+  const div = document.createElement('div');
+  div.className = 'exp-block'; div.id = id;
+  div.innerHTML = `
+    <button type="button" class="exp-remove" onclick="removeExp('${id}')" title="Eliminar">✕</button>
+    <div class="field-row">
+      <div class="field"><label>Empresa / Organización</label><input type="text" class="exp-empresa" placeholder="Ej: Empresa o Freelance"></div>
+      <div class="field"><label>Cargo / Rol</label><input type="text" class="exp-cargo" placeholder="Ej: Asesor comercial"></div>
+    </div>
+    <div class="field-row">
+      <div class="field"><label>Período</label><input type="text" class="exp-periodo" placeholder="Ej: 2023 – Presente"></div>
+      <div class="field"><label>Área</label>
+        <select class="exp-area" onchange="this.classList.add('filled')">
+          <option value="" disabled selected>Selecciona...</option>
+          <option>Ventas / Comercial</option><option>Marketing Digital</option>
+          <option>Atención al Cliente</option><option>Diseño / Creativo</option>
+          <option>Tecnología / IT</option><option>Emprendimiento propio</option><option>Otro</option>
+        </select>
+      </div>
+    </div>
+    <div class="field"><label>¿Qué hacías? (breve)</label><input type="text" class="exp-desc" placeholder="Ej: Captación de leads, cierre de ventas..."></div>`;
+  document.getElementById('exp-container').appendChild(div);
+}
+function removeExp(id) {
+  const el = document.getElementById(id);
+  if(el) el.remove();
+}
+
+/* WORD COUNT + QUALITY */
+const cartaEl = document.getElementById('f-carta');
+const wcEl    = document.getElementById('wordCount');
+const barEl   = document.getElementById('qualityBar');
+const lblEl   = document.getElementById('qualityLabel');
+cartaEl.addEventListener('input', () => {
+  const words = cartaEl.value.trim().split(/\s+/).filter(w => w.length > 0).length;
+  wcEl.textContent = words + ' palabra' + (words !== 1 ? 's' : '');
+  wcEl.className   = 'word-count' + (words >= 80 ? ' ok' : '');
+  const pct = Math.min(100, (words / 130) * 100);
+  barEl.style.width = pct + '%';
+  if(!words){ barEl.style.background='var(--border)'; lblEl.textContent='Escribe...'; }
+  else if(words < 30){ barEl.style.background='#ef4444'; lblEl.textContent='Muy corto'; }
+  else if(words < 60){ barEl.style.background='#f97316'; lblEl.textContent='Incompleto'; }
+  else if(words < 80){ barEl.style.background='#eab308'; lblEl.textContent='Casi listo'; }
+  else if(words < 110){ barEl.style.background='var(--blue)'; lblEl.textContent='Bien ✓'; }
+  else { barEl.style.background='#22c55e'; lblEl.textContent='Excelente ✓'; }
+});
+
+/* SUBMIT → WhatsApp */
+function submitForm() {
+  const nombre    = document.getElementById('f-nombre').value.trim();
+  const apellidos = document.getElementById('f-apellidos').value.trim();
+  const email     = document.getElementById('f-email').value.trim();
+  const tel       = document.getElementById('f-tel').value.trim();
+  const pais      = document.getElementById('f-pais').value || '';
+  const ciudad    = document.getElementById('f-ciudad').value.trim();
+  const edad      = document.getElementById('f-edad').value.trim();
+  const otrasSkills = document.getElementById('f-otras-skills').value.trim();
+  const carta     = document.getElementById('f-carta').value.trim();
+  const statusEl  = document.getElementById('statusMsg');
+
+  if(!nombre || !apellidos || !email || !pais || !carta){
+    statusEl.className = 'status-msg status-err';
+    statusEl.textContent = '⚠ Por favor completa todos los campos obligatorios (*).';
+    statusEl.style.display = 'block';
+    return;
+  }
+  const words = carta.split(/\s+/).filter(w=>w.length>0).length;
+  if(words < 40){
+    statusEl.className = 'status-msg status-err';
+    statusEl.textContent = '⚠ Tu carta de presentación es muy corta. La claridad y el detalle son parte del filtrado.';
+    statusEl.style.display = 'block';
+    return;
+  }
+
+  // Skills
+  const skills = [...document.querySelectorAll('.skills-grid input:checked')].map(i => i.value);
+
+  // Experiencias
+  let expText = '';
+  document.querySelectorAll('.exp-block').forEach((b, i) => {
+    const emp  = b.querySelector('.exp-empresa')?.value.trim() || '';
+    const cargo = b.querySelector('.exp-cargo')?.value.trim() || '';
+    const per  = b.querySelector('.exp-periodo')?.value.trim() || '';
+    const area = b.querySelector('.exp-area')?.value || '';
+    const desc = b.querySelector('.exp-desc')?.value.trim() || '';
+    if(emp || cargo) {
+      expText += `\n  • ${cargo}${emp ? ' @ '+emp : ''}${per ? ' ('+per+')' : ''}${area ? ' · '+area : ''}`;
+      if(desc) expText += `\n    ↳ ${desc}`;
+    }
+  });
+
+  // Radios
+  const r = (name) => document.querySelector(`input[name="${name}"]:checked`)?.value || '—';
+
+  let msg = `🚀 *POSTULACIÓN — GESTOR DE VENTAS DIGITALES*\n`;
+  msg += `*DGP GROUP USA*\n`;
+  msg += `━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+  msg += `👤 *DATOS PERSONALES*\n`;
+  msg += `• Nombre completo: ${nombre} ${apellidos}\n`;
+  if(edad) msg += `• Edad: ${edad} años\n`;
+  msg += `• Email: ${email}\n`;
+  if(tel)  msg += `• Teléfono/WA: ${tel}\n`;
+  msg += `• País: ${pais}\n`;
+  if(ciudad) msg += `• Ciudad: ${ciudad}\n`;
+  msg += `\n💼 *EXPERIENCIA LABORAL*\n`;
+  msg += expText || '  No especificada';
+  msg += `\n\n🛠️ *HABILIDADES DIGITALES*\n`;
+  msg += skills.length ? `  ${skills.join(' · ')}` : '  No seleccionadas';
+  if(otrasSkills) msg += `\n  + ${otrasSkills}`;
+  msg += `\n\n📊 *PERFIL PROFESIONAL*\n`;
+  msg += `• Experiencia en ventas: ${r('exp-nivel')}\n`;
+  msg += `• Ventas digitales: ${r('venta-digital')}\n`;
+  msg += `• Disponibilidad: ${r('disponibilidad')}\n`;
+  msg += `• Motivación principal: ${r('motivacion')}\n`;
+  msg += `• Gestión de clientes por WA/RRSS: ${r('gestion-clientes')}\n`;
+  msg += `• Perfil: ${r('perfil-tipo')}\n`;
+  msg += `\n✍️ *CARTA DE PRESENTACIÓN*\n${carta}`;
+  msg += `\n\n━━━━━━━━━━━━━━━━━━━━━━━━\n_Enviado desde dgpgroup.us/careers_`;
+
+  window.open(`https://wa.me/12398231738?text=${encodeURIComponent(msg)}`, '_blank');
+
+  statusEl.className = 'status-msg status-ok';
+  statusEl.textContent = '✓ WhatsApp abierto. Revisa el mensaje y presiona "Enviar" para completar tu postulación.';
+  statusEl.style.display = 'block';
+}
+
+/* No submit con Enter en inputs de texto */
+document.querySelectorAll('input[type="text"],input[type="email"],input[type="tel"],input[type="number"]').forEach(inp => {
+  inp.addEventListener('keydown', e => { if(e.key === 'Enter') e.preventDefault(); });
+});
+</script>
+</body>
+</html>
