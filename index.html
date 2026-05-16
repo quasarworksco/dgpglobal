@@ -719,20 +719,22 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 /* Preview image */
 .port-preview{text-align:center}
 .port-preview-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--soft);margin-bottom:12px}
-.port-preview-frame{display:inline-block;border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.08);max-width:320px;width:100%}
+.port-preview-frame{display:inline-block;border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.08);max-width:480px;width:100%}
 .port-preview-bar{background:#f0f0f0;padding:6px 10px;display:flex;align-items:center;gap:6px;border-bottom:1px solid var(--border)}
 .ppb-dots{display:flex;gap:4px}
 .ppb-dot{width:7px;height:7px;border-radius:50%}
 .ppb-dot:nth-child(1){background:#ff5f57}
 .ppb-dot:nth-child(2){background:#febc2e}
 .ppb-dot:nth-child(3){background:#28c840}
-.port-preview-img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top center;transition:opacity .4s}
-.port-preview-img.fading{opacity:0}
+.port-preview-screen{position:relative;overflow:hidden;height:300px;background:#f5f5f5}
+.port-preview-iframe{position:absolute;top:0;left:0;width:1280px;height:1000px;border:none;transform-origin:0 0;pointer-events:none;transition:opacity .35s}
+.port-preview-iframe.fading{opacity:0}
 @media(max-width:700px){
-  .port-carousel{grid-template-columns:1fr;grid-template-rows:auto auto auto}
-  .port-arrow{display:none}
+  .port-carousel{grid-template-columns:44px 1fr 44px}
   .port-dots{gap:10px}
   .port-dots .port-dot{width:8px;height:8px}
+  .port-preview-frame{max-width:100%}
+  .port-preview-screen{height:220px}
 }
 
 /* ── RESPONSIVE GLOBAL ─────────────────────────────────── */
@@ -788,6 +790,13 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
   .hero-title{font-size:40px}
   nav{padding:14px 14px 0}
   .section{padding:36px 14px}
+}
+/* Portfolio section title mobile fix */
+@media(max-width:600px){
+  #portafolio .sec-title{font-size:clamp(32px,9vw,56px);line-height:.95}
+  #portafolio .sec-sub{font-size:13px}
+  .pc-title{font-size:clamp(24px,7vw,40px)}
+  .port-preview-label{font-size:9px}
 }
 </style>
 </head>
@@ -1259,7 +1268,9 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
       <div class="port-preview-bar">
         <div class="ppb-dots"><span class="ppb-dot"></span><span class="ppb-dot"></span><span class="ppb-dot"></span></div>
       </div>
-      <img id="port-prev-img" class="port-preview-img" src="https://image.thum.io/get/width/640/crop/400/wait/15/https://caiboconstruction.com/?_v=5" alt="Preview" loading="lazy">
+      <div class="port-preview-screen">
+        <iframe id="port-prev-iframe" class="port-preview-iframe" src="https://caiboconstruction.com/" loading="lazy" scrolling="no" tabindex="-1" title="Preview"></iframe>
+      </div>
     </div>
   </div>
 </div>
@@ -1775,14 +1786,24 @@ function renderPort(idx,animate){
   document.getElementById('pc-link').href=p.url;
   document.querySelectorAll('.port-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
   const img=document.getElementById('port-prev-img');
-  if(img){img.classList.add('fading');setTimeout(()=>{img.src='https://image.thum.io/get/width/640/crop/400/wait/15/'+p.url+'?_v=5';img.classList.remove('fading');},350);}
+  const iframe=document.getElementById('port-prev-iframe');
+  if(iframe){iframe.classList.add('fading');setTimeout(()=>{iframe.src=p.url;iframe.classList.remove('fading');},350);}
   portIdx=idx;
 }
 function portNav(dir){renderPort((portIdx+dir+PORT_P.length)%PORT_P.length,true);}
+function scalePortFrame(){
+  const screen=document.querySelector('.port-preview-screen');
+  const iframe=document.getElementById('port-prev-iframe');
+  if(!screen||!iframe)return;
+  const scale=screen.offsetWidth/1280;
+  iframe.style.transform=`scale(${scale})`;
+}
 (function initPort(){
   const dots=document.getElementById('port-dots');
   if(dots)dots.innerHTML=PORT_P.map((_,i)=>`<span class="port-dot${i===0?' active':''}" onclick="renderPort(${i},true)"></span>`).join('');
   renderPort(0,false);
+  scalePortFrame();
+  window.addEventListener('resize',scalePortFrame);
 })();
 
 
