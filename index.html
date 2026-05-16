@@ -677,8 +677,18 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 .grev-btn-write{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px 20px;background:var(--blue);color:#fff;text-decoration:none;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;transition:background .2s,transform .2s;border:1px solid var(--blue)}
 .grev-btn-write:hover{background:var(--blue-l);transform:translateY(-1px)}
 .grev-btn-write i{font-size:14px}
-.grev-map{width:100%;height:220px;border:0;filter:grayscale(20%);margin-top:12px;display:block}
-.grev-right{}
+.grev-service-area{border:1px solid var(--border);padding:20px 22px;margin-top:12px}
+.gsa-title{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2.5px;color:var(--blue);margin-bottom:8px;display:flex;align-items:center;gap:7px}
+.gsa-sub{font-size:12px;color:var(--soft);font-weight:300;margin-bottom:14px;line-height:1.5}
+.gsa-pills{display:flex;flex-wrap:wrap;gap:7px}
+.gsa-pill{font-size:11px;color:var(--muted);background:rgba(20,56,204,.05);border:1px solid rgba(20,56,204,.12);padding:5px 10px;display:flex;align-items:center;gap:5px}
+.gsa-pill i{color:var(--blue);font-size:9px}
+.btn-outline-hero{display:inline-flex;align-items:center;gap:10px;padding:19px 28px;border-radius:100px;border:1.5px solid rgba(0,0,0,.2);background:transparent;color:var(--black);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:border-color .25s,background .25s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+.btn-outline-hero:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-4px)}
+.btn-outline-dark{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border:1.5px solid rgba(255,255,255,.25);background:transparent;color:rgba(255,255,255,.7);text-decoration:none;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;border-radius:100px;transition:border-color .2s,color .2s,background .2s;width:100%;justify-content:center}
+.btn-outline-dark:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,.08)}
+.modal-send-email{background:var(--blue)!important}
+.modal-send-email:hover{background:var(--blue-l)!important}
 @media(max-width:1000px){.grev-wrap{grid-template-columns:1fr}}
 </style>
 </head>
@@ -782,10 +792,15 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
       <span data-es>Estrategias reales para resultados medibles. Innovación y tecnología aplicadas a tu crecimiento.</span>
       <span data-en>Real strategies for measurable results. Innovation and technology applied to your growth.</span>
     </p>
-    <div style="display:flex;justify-content:center">
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
       <a href="https://wa.me/12398231738?text=Hola%20DGP%20Group,%20quiero%20cotizar%20un%20proyecto." class="btn-main" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
         <span data-es>COMIENZA TU PROYECTO</span><span data-en>START YOUR PROJECT</span>
         <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a href="mailto:dgpgroup.usa@gmail.com?subject=Cotización%20de%20proyecto&body=Hola%20DGP%20Global%20Group,%20quiero%20cotizar%20un%20proyecto." class="btn-outline-hero">
+        <i class="fa-solid fa-envelope"></i>
+        <span data-es>ENVIAR EMAIL</span><span data-en>SEND EMAIL</span>
       </a>
     </div>
     <div class="stats">
@@ -1161,8 +1176,9 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
       <p class="sis-hero-sub" data-es>Analizamos tu proceso, diseñamos la solución y la construimos desde cero. Sin plantillas, sin límites. Cada sistema es único, como tu negocio.</p>
       <p class="sis-hero-sub" data-en>We analyze your process, design the solution and build it from scratch. No templates, no limits. Every system is unique, like your business.</p>
     </div>
-    <div class="sis-hero-btn">
-      <a href="https://wa.me/12398231738?text=Hola%20DGP%20Global%20Group,%20quiero%20cotizar%20un%20sistema%20personalizado." target="_blank" class="btn-main"><span data-es>COTIZAR MI SISTEMA</span><span data-en>GET MY QUOTE</span><span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
+    <div class="sis-hero-btn" style="display:flex;flex-direction:column;gap:10px;align-items:flex-end">
+      <a href="https://wa.me/12398231738?text=Hola%20DGP%20Global%20Group,%20quiero%20cotizar%20un%20sistema%20personalizado." target="_blank" class="btn-main"><i class="fa-brands fa-whatsapp"></i><span data-es>COTIZAR POR WHATSAPP</span><span data-en>QUOTE VIA WHATSAPP</span><span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
+      <a href="mailto:dgpgroup.usa@gmail.com?subject=Cotización%20Sistema%20Personalizado&body=Hola%20DGP%20Global%20Group,%20quiero%20cotizar%20un%20sistema%20personalizado." class="btn-outline-dark"><i class="fa-solid fa-envelope"></i><span data-es>COTIZAR POR EMAIL</span><span data-en>QUOTE VIA EMAIL</span></a>
     </div>
   </div>
 </div>
@@ -1198,14 +1214,20 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
         <i class="fa-solid fa-pen"></i>
         <span data-es>DEJAR RESEÑA EN GOOGLE</span><span data-en>WRITE A GOOGLE REVIEW</span>
       </a>
-      <iframe
-        class="grev-map"
-        src="https://maps.google.com/maps?cid=17197988016077419191&output=embed&hl=es"
-        title="DGP Global Group en Google Maps"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        allowfullscreen>
-      </iframe>
+      <div class="grev-service-area">
+        <div class="gsa-title" data-es><i class="fa-solid fa-earth-americas"></i> ÁREA DE SERVICIO</div>
+        <div class="gsa-title" data-en><i class="fa-solid fa-earth-americas"></i> SERVICE AREA</div>
+        <p class="gsa-sub" data-es>Servicio 100% remoto — atendemos a clientes en:</p>
+        <p class="gsa-sub" data-en>100% remote service — we serve clients in:</p>
+        <div class="gsa-pills">
+          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> Florida, USA</span>
+          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> <span data-es>Todo USA</span><span data-en>All USA</span></span>
+          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> España</span>
+          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> Venezuela</span>
+          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> Europa</span>
+          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> <span data-es>Latinoamérica</span><span data-en>Latin America</span></span>
+        </div>
+      </div>
     </div>
     <div class="card form-card reveal" style="transition-delay:.15s">
       <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
@@ -1274,8 +1296,8 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <button class="modal-close" onclick="closeContactModal()">✕</button>
     <div class="modal-eyebrow" data-es>Escribenos</div><div class="modal-eyebrow" data-en>Get in touch</div>
     <div class="modal-title" data-es>CUÉNTANOS TU PROYECTO</div><div class="modal-title" data-en>TELL US YOUR PROJECT</div>
-    <p class="modal-sub" data-es>Completa el formulario y te contactamos por WhatsApp en minutos.</p>
-    <p class="modal-sub" data-en>Fill in the form and we'll reach you on WhatsApp in minutes.</p>
+    <p class="modal-sub" data-es>Completa el formulario y elige cómo prefieres que te contactemos.</p>
+    <p class="modal-sub" data-en>Fill in the form and choose how you'd like us to contact you.</p>
     <div class="modal-field"><input type="text" id="mc-name" data-ph-es="Tu nombre completo" data-ph-en="Your full name" placeholder="Tu nombre completo"></div>
     <div class="modal-field">
       <select id="mc-service">
@@ -1290,10 +1312,16 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
       </select>
     </div>
     <div class="modal-field"><textarea id="mc-msg" data-ph-es="Cuéntanos brevemente tu proyecto o idea..." data-ph-en="Tell us briefly about your project or idea..." placeholder="Cuéntanos brevemente tu proyecto o idea..." rows="3"></textarea></div>
-    <button class="modal-send" onclick="sendContactWA()">
-      <span data-es>ENVIAR POR WHATSAPP</span><span data-en>SEND VIA WHATSAPP</span>
-      <span class="barr"><i class="fa-brands fa-whatsapp"></i></span>
-    </button>
+    <div style="display:flex;gap:8px;margin-top:4px">
+      <button class="modal-send" style="flex:1" onclick="sendContactWA()">
+        <span data-es>WHATSAPP</span><span data-en>WHATSAPP</span>
+        <span class="barr"><i class="fa-brands fa-whatsapp"></i></span>
+      </button>
+      <button class="modal-send modal-send-email" style="flex:1" onclick="sendContactEmail()">
+        <span data-es>EMAIL</span><span data-en>EMAIL</span>
+        <span class="barr"><i class="fa-solid fa-envelope"></i></span>
+      </button>
+    </div>
   </div>
 </div>
 
@@ -1305,7 +1333,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
       <div class="footer-brand">
         <a href="#" class="footer-brand-logo">
           <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" alt="DGP">
-          DGP GROUP <span>USA</span>
+          DGP <span>GLOBAL</span> GROUP
         </a>
         <p class="footer-brand-desc" data-es>Agencia de marketing digital especializada en hacer crecer negocios con estrategias reales y resultados medibles.</p>
         <p class="footer-brand-desc" data-en>Digital marketing agency specialized in growing businesses with real strategies and measurable results.</p>
@@ -1526,6 +1554,19 @@ function sendContactWA(){
   if(msg) txt+=`\n*Mensaje:* ${msg}`;
   txt+='\n\nMe gustaría recibir más información.';
   window.open(`https://wa.me/12398231738?text=${encodeURIComponent(txt)}`,'_blank');
+  closeContactModal();
+}
+function sendContactEmail(){
+  const name=(document.getElementById('mc-name').value||'').trim();
+  const svc=document.getElementById('mc-service').value||'';
+  const msg=(document.getElementById('mc-msg').value||'').trim();
+  if(!name){document.getElementById('mc-name').focus();return;}
+  const subject=svc?`Consulta: ${svc}`:'Consulta desde dgpglobalgroup.com';
+  let body=`Hola DGP Global Group,\n\nNombre: ${name}`;
+  if(svc) body+=`\nServicio de interés: ${svc}`;
+  if(msg) body+=`\nMensaje: ${msg}`;
+  body+='\n\nQuedo en espera de su respuesta.';
+  window.location.href=`mailto:dgpgroup.usa@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   closeContactModal();
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeContactModal();});
