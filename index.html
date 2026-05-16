@@ -708,23 +708,23 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 .laptop-cam{width:5px;height:5px;background:#0a0b14;border-radius:50%;margin:0 auto 7px;border:1px solid rgba(255,255,255,.08)}
 .laptop-screen-area{width:100%;aspect-ratio:16/10;background:#050507;border-radius:3px;overflow:hidden;position:relative}
 .laptop-screen-area::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.04) 0%,transparent 50%);pointer-events:none;z-index:2}
-.laptop-screen-area img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:object-position 10s ease}
-.port-card:hover .laptop-screen-area img{object-position:bottom center}
+.laptop-screen-area img{width:100%;height:auto;object-fit:fill;display:block;transition:transform 10s ease;transform:translateY(0)}
+.port-card:hover .laptop-screen-area img{transform:translateY(calc(-100% + 250px))}
 .laptop-base{width:calc(100% + 20px);margin-left:-10px;height:16px;background:#181a2a;border-radius:0 0 3px 3px}
 .laptop-foot{width:calc(100% + 44px);margin-left:-22px;height:8px;background:#13152096;border-radius:0 0 6px 6px;box-shadow:0 4px 14px rgba(0,0,0,.28)}
 /* Tablet */
 .mockup-tablet{position:absolute;top:-28px;right:-46px;width:128px;z-index:0;background:#1c1e30;border-radius:10px;padding:7px 5px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 0 0 1px #0a0b14,0 12px 40px rgba(0,0,0,.3)}
 .tablet-cam{width:4px;height:4px;background:#0a0b14;border-radius:50%;margin:0 auto 5px;border:1px solid rgba(255,255,255,.07)}
 .tablet-screen-area{width:100%;aspect-ratio:3/4;background:#050507;border-radius:5px;overflow:hidden}
-.tablet-screen-area img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:object-position 10s ease}
-.port-card:hover .tablet-screen-area img{object-position:bottom}
+.tablet-screen-area img{width:100%;height:auto;display:block;transition:transform 10s ease;transform:translateY(0)}
+.port-card:hover .tablet-screen-area img{transform:translateY(-40%)}
 .tablet-home-bar{width:22px;height:3px;background:rgba(255,255,255,.12);border-radius:2px;margin:5px auto 0}
 /* Phone */
 .mockup-phone{position:absolute;bottom:-44px;right:8px;width:92px;z-index:2;background:#1c1e30;border-radius:16px;padding:7px 5px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 0 0 1px #0a0b14,0 16px 48px rgba(0,0,0,.35)}
 .phone-notch{width:24px;height:4px;background:#0a0b14;border-radius:2px;margin:0 auto 5px}
 .phone-screen-area{width:100%;aspect-ratio:9/19;background:#050507;border-radius:10px;overflow:hidden}
-.phone-screen-area img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:object-position 10s ease}
-.port-card:hover .phone-screen-area img{object-position:bottom}
+.phone-screen-area img{width:100%;height:auto;display:block;transition:transform 10s ease;transform:translateY(0)}
+.port-card:hover .phone-screen-area img{transform:translateY(-40%)}
 .phone-home-bar{width:22px;height:3px;background:rgba(255,255,255,.12);border-radius:2px;margin:5px auto 0}
 /* Info */
 .port-info{max-width:420px}
@@ -1193,14 +1193,14 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <div class="mockup-tablet">
           <div class="tablet-cam"></div>
           <div class="tablet-screen-area">
-            <img src="https://image.thum.io/get/width/800/crop/1066/https://caiboconstruction.com/" alt="Caibo Construction tablet" loading="lazy">
+            <img src="https://image.thum.io/get/width/800/crop/1066/wait/6/https://caiboconstruction.com/" alt="Caibo Construction tablet" loading="lazy">
           </div>
           <div class="tablet-home-bar"></div>
         </div>
         <div class="mockup-laptop">
           <div class="laptop-cam"></div>
           <div class="laptop-screen-area">
-            <img src="https://image.thum.io/get/width/1200/crop/750/https://caiboconstruction.com/" alt="Caibo Construction" loading="lazy">
+            <img src="https://image.thum.io/get/width/1200/crop/750/wait/6/https://caiboconstruction.com/" alt="Caibo Construction" loading="lazy">
           </div>
           <div class="laptop-base"></div>
           <div class="laptop-foot"></div>
@@ -1208,7 +1208,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <div class="mockup-phone">
           <div class="phone-notch"></div>
           <div class="phone-screen-area">
-            <img src="https://image.thum.io/get/width/400/crop/866/https://caiboconstruction.com/" alt="Caibo Construction mobile" loading="lazy">
+            <img src="https://image.thum.io/get/width/400/crop/866/wait/6/https://caiboconstruction.com/" alt="Caibo Construction mobile" loading="lazy">
           </div>
           <div class="phone-home-bar"></div>
         </div>
@@ -1249,14 +1249,14 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <div class="mockup-tablet">
           <div class="tablet-cam"></div>
           <div class="tablet-screen-area">
-            <img src="https://image.thum.io/get/width/800/crop/1066/https://cleaninggroup.dgp-link.com/" alt="Cleaning Group tablet" loading="lazy">
+            <img src="https://image.thum.io/get/width/800/crop/1066/wait/6/https://cleaninggroup.dgp-link.com/" alt="Cleaning Group tablet" loading="lazy">
           </div>
           <div class="tablet-home-bar"></div>
         </div>
         <div class="mockup-laptop">
           <div class="laptop-cam"></div>
           <div class="laptop-screen-area">
-            <img src="https://image.thum.io/get/width/1200/crop/750/https://cleaninggroup.dgp-link.com/" alt="Cleaning Group" loading="lazy">
+            <img src="https://image.thum.io/get/width/1200/crop/750/wait/6/https://cleaninggroup.dgp-link.com/" alt="Cleaning Group" loading="lazy">
           </div>
           <div class="laptop-base"></div>
           <div class="laptop-foot"></div>
@@ -1264,7 +1264,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <div class="mockup-phone">
           <div class="phone-notch"></div>
           <div class="phone-screen-area">
-            <img src="https://image.thum.io/get/width/400/crop/866/https://cleaninggroup.dgp-link.com/" alt="Cleaning Group mobile" loading="lazy">
+            <img src="https://image.thum.io/get/width/400/crop/866/wait/6/https://cleaninggroup.dgp-link.com/" alt="Cleaning Group mobile" loading="lazy">
           </div>
           <div class="phone-home-bar"></div>
         </div>
@@ -1277,14 +1277,14 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <div class="mockup-tablet">
           <div class="tablet-cam"></div>
           <div class="tablet-screen-area">
-            <img src="https://image.thum.io/get/width/800/crop/1066/https://buythesweetzone.com/" alt="Sweet Zone tablet" loading="lazy">
+            <img src="https://image.thum.io/get/width/800/crop/1066/wait/6/https://buythesweetzone.com/" alt="Sweet Zone tablet" loading="lazy">
           </div>
           <div class="tablet-home-bar"></div>
         </div>
         <div class="mockup-laptop">
           <div class="laptop-cam"></div>
           <div class="laptop-screen-area">
-            <img src="https://image.thum.io/get/width/1200/crop/750/https://buythesweetzone.com/" alt="Buy The Sweet Zone" loading="lazy">
+            <img src="https://image.thum.io/get/width/1200/crop/750/wait/6/https://buythesweetzone.com/" alt="Buy The Sweet Zone" loading="lazy">
           </div>
           <div class="laptop-base"></div>
           <div class="laptop-foot"></div>
@@ -1292,7 +1292,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <div class="mockup-phone">
           <div class="phone-notch"></div>
           <div class="phone-screen-area">
-            <img src="https://image.thum.io/get/width/400/crop/866/https://buythesweetzone.com/" alt="Sweet Zone mobile" loading="lazy">
+            <img src="https://image.thum.io/get/width/400/crop/866/wait/6/https://buythesweetzone.com/" alt="Sweet Zone mobile" loading="lazy">
           </div>
           <div class="phone-home-bar"></div>
         </div>
@@ -1302,11 +1302,11 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <div class="port-tags">
           <span class="port-tag-item">E-Commerce</span>
           <span class="port-tag-item">Tienda Online</span>
-          <span class="port-tag-item">Dulces</span>
+          <span class="port-tag-item">Retail</span>
         </div>
         <h3 class="port-title">BUY THE SWEET ZONE</h3>
-        <p class="port-desc" data-es>Tienda online de dulces y snacks. Catálogo de productos, experiencia de compra fluida y diseño apetecible para maximizar ventas.</p>
-        <p class="port-desc" data-en>Online candy and snacks store. Product catalog, smooth shopping experience and eye-catching design to maximize sales.</p>
+        <p class="port-desc" data-es>Tienda online con catálogo de productos, experiencia de compra fluida y diseño atractivo orientado a maximizar conversiones.</p>
+        <p class="port-desc" data-en>Online store with product catalog, smooth shopping experience and attractive design focused on maximizing conversions.</p>
         <a href="https://buythesweetzone.com/" target="_blank" rel="noopener" class="port-visit">
           <span data-es>Ver sitio</span><span data-en>View site</span>&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
         </a>
@@ -1333,14 +1333,14 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <div class="mockup-tablet">
           <div class="tablet-cam"></div>
           <div class="tablet-screen-area">
-            <img src="https://image.thum.io/get/width/800/crop/1066/https://valpatruck.dgp-link.com/" alt="Valpa Truck tablet" loading="lazy">
+            <img src="https://image.thum.io/get/width/800/crop/1066/wait/6/https://valpatruck.dgp-link.com/" alt="Valpa Truck tablet" loading="lazy">
           </div>
           <div class="tablet-home-bar"></div>
         </div>
         <div class="mockup-laptop">
           <div class="laptop-cam"></div>
           <div class="laptop-screen-area">
-            <img src="https://image.thum.io/get/width/1200/crop/750/https://valpatruck.dgp-link.com/" alt="Valpa Truck" loading="lazy">
+            <img src="https://image.thum.io/get/width/1200/crop/750/wait/6/https://valpatruck.dgp-link.com/" alt="Valpa Truck" loading="lazy">
           </div>
           <div class="laptop-base"></div>
           <div class="laptop-foot"></div>
@@ -1348,7 +1348,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <div class="mockup-phone">
           <div class="phone-notch"></div>
           <div class="phone-screen-area">
-            <img src="https://image.thum.io/get/width/400/crop/866/https://valpatruck.dgp-link.com/" alt="Valpa Truck mobile" loading="lazy">
+            <img src="https://image.thum.io/get/width/400/crop/866/wait/6/https://valpatruck.dgp-link.com/" alt="Valpa Truck mobile" loading="lazy">
           </div>
           <div class="phone-home-bar"></div>
         </div>
