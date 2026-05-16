@@ -694,28 +694,26 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 @media(max-width:1000px){.grev-wrap{grid-template-columns:1fr}}
 
 /* ── PORTAFOLIO ──────────────────────────────────────────── */
-.port-scene{display:flex;align-items:flex-end;justify-content:center;gap:20px;margin:48px 0 40px}
-/* Browser window (desktop view) */
-.dev-browser{flex:1;max-width:680px;background:#1a1a1e;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.32),0 0 0 1px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.06);transform:perspective(1400px) rotateY(-5deg) rotateX(2deg);transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s}
-.port-scene:hover .dev-browser{transform:perspective(1400px) rotateY(-2deg) rotateX(1deg);box-shadow:0 40px 100px rgba(20,56,204,.14),0 0 0 1px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.06)}
-.browser-bar{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#252529;border-bottom:1px solid rgba(0,0,0,.35)}
-.browser-dots{display:flex;gap:5px;flex-shrink:0}
-.browser-dot{width:10px;height:10px;border-radius:50%}
-.browser-dot:nth-child(1){background:#ff5f57}
-.browser-dot:nth-child(2){background:#febc2e}
-.browser-dot:nth-child(3){background:#28c840}
-.browser-urlbar{flex:1;background:rgba(255,255,255,.07);border-radius:5px;height:26px;display:flex;align-items:center;padding:0 10px;gap:6px;overflow:hidden;min-width:0}
-.browser-lock{color:rgba(255,255,255,.35);font-size:9px;flex-shrink:0}
-.browser-url-text{font-size:11px;color:rgba(255,255,255,.38);font-family:monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.browser-screen{aspect-ratio:16/9;overflow:hidden;background:#e8e8e8;position:relative}
-.browser-screen img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:opacity .4s ease}
-/* Phone (mobile view) */
-.dev-phone{width:108px;flex-shrink:0;background:linear-gradient(160deg,#2c2c30,#17171b);border-radius:34px;padding:10px 7px;box-shadow:0 24px 64px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.07),inset 0 1px 0 rgba(255,255,255,.05);transform:perspective(600px) rotateY(7deg) rotateX(-1deg);transition:transform .5s cubic-bezier(.22,1,.36,1);align-self:flex-end;margin-bottom:28px}
-.port-scene:hover .dev-phone{transform:perspective(600px) rotateY(3deg) rotateX(0deg)}
-.phone-island{width:38px;height:10px;background:#000;border-radius:5px;margin:0 auto 7px}
-.phone-screen{background:#111;border-radius:22px;overflow:hidden;aspect-ratio:9/19.5;position:relative}
-.phone-screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:opacity .4s ease}
-.phone-bar{width:30px;height:3px;background:rgba(255,255,255,.18);border-radius:2px;margin:7px auto 0}
+@keyframes portFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+@keyframes portIn{from{opacity:0;transform:translateY(24px) rotate(-1.5deg)}to{opacity:1;transform:translateY(0) rotate(-1.5deg)}}
+.port-scene{position:relative;display:flex;justify-content:center;margin:56px 0 48px;padding-bottom:32px}
+.port-glow{position:absolute;width:70%;height:80%;background:radial-gradient(ellipse at 50% 60%,rgba(20,56,204,.1) 0%,transparent 65%);top:10%;left:15%;pointer-events:none;filter:blur(30px);z-index:0}
+.port-float{position:relative;z-index:1;width:100%;max-width:800px;animation:portFloat 7s ease-in-out infinite}
+.port-float:hover{animation-play-state:paused}
+.port-card{background:#17171c;border-radius:16px;overflow:hidden;box-shadow:0 50px 130px rgba(0,0,0,.3),0 20px 50px rgba(0,0,0,.14),0 0 0 1px rgba(255,255,255,.05);transform:rotate(-1.5deg);transition:transform .55s cubic-bezier(.22,1,.36,1),box-shadow .55s;animation:portIn .7s cubic-bezier(.22,1,.36,1) both}
+.port-float:hover .port-card{transform:rotate(0deg) translateY(-10px);box-shadow:0 70px 160px rgba(20,56,204,.2),0 30px 70px rgba(0,0,0,.18),0 0 0 1px rgba(20,56,204,.15)}
+.card-bar{display:flex;align-items:center;gap:10px;padding:11px 16px;background:#1c1c23;border-bottom:1px solid rgba(0,0,0,.4)}
+.card-dots{display:flex;gap:5px;flex-shrink:0}
+.card-dot{width:10px;height:10px;border-radius:50%}
+.card-dot:nth-child(1){background:#ff5f57}
+.card-dot:nth-child(2){background:#febc2e}
+.card-dot:nth-child(3){background:#28c840}
+.card-urlbar{flex:1;height:24px;background:rgba(255,255,255,.07);border-radius:5px;display:flex;align-items:center;padding:0 10px;gap:5px;overflow:hidden;min-width:0}
+.card-lock{color:rgba(255,255,255,.3);font-size:9px;flex-shrink:0}
+.card-url-text{font-size:10px;color:rgba(255,255,255,.38);font-family:monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .3s}
+.card-screen{aspect-ratio:16/9;overflow:hidden;background:#e5e5e5;position:relative}
+.card-screen img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:opacity .45s ease,transform .45s ease}
+.card-screen img.fade-out{opacity:0;transform:scale(1.015)}
 /* Switcher */
 .port-switcher{display:flex;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:36px}
 .port-tab{flex:1;background:#fff;border:none;padding:16px 18px;text-align:left;cursor:pointer;transition:background .2s;display:flex;flex-direction:column;gap:4px}
@@ -736,11 +734,11 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 .port-visit:hover{background:var(--blue);transform:translateY(-3px);box-shadow:0 12px 30px rgba(20,56,204,.3)}
 .port-visit i{font-size:10px}
 @media(max-width:900px){
-  .dev-phone{display:none}
   .port-scene{margin:36px 0 28px}
   .port-tab{flex:1 1 40%}
 }
 @media(max-width:600px){
+  .port-card{transform:rotate(0deg)}
   .port-tab{flex:1 1 100%;padding:12px 14px}
   .pt-name{font-size:10px}
 }
@@ -1175,39 +1173,33 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 <!-- PORTAFOLIO -->
 <div class="section" id="portafolio">
   <div class="reveal" style="text-align:center">
-    <div class="sec-eyebrow" style="justify-content:center;display:flex" data-es>Algunos ejemplos</div>
-    <div class="sec-eyebrow" style="justify-content:center;display:flex" data-en>Some examples</div>
-    <h2 class="sec-title" style="text-align:center"><span data-es>MIRA LO QUE HEMOS <span class="accent">CREADO</span></span><span data-en>LOOK AT WHAT WE'VE <span class="accent">BUILT</span></span></h2>
-    <p class="sec-sub" style="margin:0 auto" data-es>Una muestra de los sitios que hemos diseñado y desarrollado. Cada proyecto, único y hecho a medida.</p>
-    <p class="sec-sub" style="margin:0 auto" data-en>A sample of the websites we've designed and developed. Each project, unique and tailor-made.</p>
+    <div class="sec-eyebrow" style="justify-content:center;display:flex" data-es>Portafolio</div>
+    <div class="sec-eyebrow" style="justify-content:center;display:flex" data-en>Portfolio</div>
+    <h2 class="sec-title" style="text-align:center"><span data-es>PROYECTOS QUE HABLAN <span class="accent">POR SÍ SOLOS</span></span><span data-en>PROJECTS THAT SPEAK <span class="accent">FOR THEMSELVES</span></span></h2>
+    <p class="sec-sub" style="margin:0 auto" data-es>Diseño con propósito, código con precisión. Cada sitio que construimos está pensado para destacar, convertir y posicionar tu marca.</p>
+    <p class="sec-sub" style="margin:0 auto" data-en>Purposeful design, precise code. Every site we build is crafted to stand out, convert visitors, and position your brand.</p>
   </div>
 
-  <!-- Device Scene -->
+  <!-- Floating Card Scene -->
   <div class="port-scene reveal" style="transition-delay:.15s">
-    <!-- Browser (desktop) -->
-    <div class="dev-browser">
-      <div class="browser-bar">
-        <div class="browser-dots">
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
-          <div class="browser-dot"></div>
+    <div class="port-glow"></div>
+    <div class="port-float">
+      <div class="port-card">
+        <div class="card-bar">
+          <div class="card-dots">
+            <div class="card-dot"></div>
+            <div class="card-dot"></div>
+            <div class="card-dot"></div>
+          </div>
+          <div class="card-urlbar">
+            <i class="fa-solid fa-lock card-lock"></i>
+            <span class="card-url-text" id="port-url-bar">caiboconstruction.com</span>
+          </div>
         </div>
-        <div class="browser-urlbar">
-          <i class="fa-solid fa-lock browser-lock"></i>
-          <span class="browser-url-text" id="port-url-bar">caiboconstruction.com</span>
+        <div class="card-screen">
+          <img id="pimg-laptop" src="https://image.thum.io/get/width/1280/crop/800/wait/14/https://caiboconstruction.com/" alt="Portfolio" loading="eager">
         </div>
       </div>
-      <div class="browser-screen">
-        <img id="pimg-laptop" src="https://image.thum.io/get/width/1280/crop/800/wait/14/https://caiboconstruction.com/" alt="Portfolio desktop" loading="eager">
-      </div>
-    </div>
-    <!-- Phone (mobile) -->
-    <div class="dev-phone">
-      <div class="phone-island"></div>
-      <div class="phone-screen">
-        <img id="pimg-phone" src="https://image.thum.io/get/width/390/crop/844/wait/14/https://caiboconstruction.com/" alt="Portfolio mobile" loading="eager">
-      </div>
-      <div class="phone-bar"></div>
     </div>
   </div>
 
@@ -1736,25 +1728,31 @@ getRate();loadRevs();
 
 /* PORTFOLIO SWITCHER */
 const PORT_PROJECTS=[
-  {tags_es:['Construcción','Landing Page','Florida'],tags_en:['Construction','Landing Page','Florida'],title:'CAIBO CONSTRUCTION',desc_es:'Sitio web profesional para empresa de construcción en Florida. Diseño limpio, presentación de servicios y formulario de contacto directo.',desc_en:'Professional website for a Florida construction company. Clean design, service showcase and direct contact form.',url:'https://caiboconstruction.com/',img_l:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://caiboconstruction.com/',img_p:'https://image.thum.io/get/width/390/crop/844/wait/14/https://caiboconstruction.com/'},
-  {tags_es:['Limpieza','Landing Page','Servicios'],tags_en:['Cleaning','Landing Page','Services'],title:'CLEANING GROUP',desc_es:'Landing page optimizada para empresa de limpieza profesional. Enfocada en conversión, captación de clientes y llamadas directas.',desc_en:'Optimized landing page for a professional cleaning company. Focused on conversion, lead capture and direct calls.',url:'https://cleaninggroup.dgp-link.com/',img_l:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://cleaninggroup.dgp-link.com/',img_p:'https://image.thum.io/get/width/390/crop/844/wait/14/https://cleaninggroup.dgp-link.com/'},
-  {tags_es:['E-Commerce','Tienda Online','Retail'],tags_en:['E-Commerce','Online Store','Retail'],title:'THE SWEET ZONE',desc_es:'Tienda online con catálogo de productos, experiencia de compra fluida y diseño atractivo orientado a maximizar conversiones.',desc_en:'Online store with product catalog, smooth shopping experience and attractive design focused on maximizing conversions.',url:'https://buythesweetzone.com/',img_l:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://buythesweetzone.com/',img_p:'https://image.thum.io/get/width/390/crop/844/wait/14/https://buythesweetzone.com/'},
-  {tags_es:['Transporte','Logística','Landing Page'],tags_en:['Transport','Logistics','Landing Page'],title:'VALPA TRUCK',desc_es:'Sitio web para empresa de transporte y logística. Presentación de flota, servicios de carga y cotización integrada.',desc_en:'Website for a transportation and logistics company. Fleet, freight services and integrated quote system.',url:'https://valpatruck.dgp-link.com/',img_l:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://valpatruck.dgp-link.com/',img_p:'https://image.thum.io/get/width/390/crop/844/wait/14/https://valpatruck.dgp-link.com/'}
+  {tags_es:['Construcción','Landing Page','Florida'],tags_en:['Construction','Landing Page','Florida'],title:'CAIBO CONSTRUCTION',desc_es:'Sitio web para empresa de construcción en Florida. Diseño limpio, presentación de servicios y formulario de contacto directo.',desc_en:'Website for a Florida construction company. Clean design, service showcase and direct contact form.',url:'https://caiboconstruction.com/',img:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://caiboconstruction.com/'},
+  {tags_es:['Limpieza','Landing Page','Servicios'],tags_en:['Cleaning','Landing Page','Services'],title:'CLEANING GROUP',desc_es:'Landing page para empresa de limpieza profesional. Enfocada en conversión, captación de clientes y llamadas directas.',desc_en:'Landing page for a professional cleaning company. Focused on conversion, lead capture and direct calls.',url:'https://cleaninggroup.dgp-link.com/',img:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://cleaninggroup.dgp-link.com/'},
+  {tags_es:['E-Commerce','Tienda Online','Retail'],tags_en:['E-Commerce','Online Store','Retail'],title:'THE SWEET ZONE',desc_es:'Tienda online con catálogo de productos, experiencia de compra fluida y diseño orientado a maximizar ventas.',desc_en:'Online store with product catalog, smooth shopping experience and design focused on maximizing sales.',url:'https://buythesweetzone.com/',img:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://buythesweetzone.com/'},
+  {tags_es:['Transporte','Logística','Landing Page'],tags_en:['Transport','Logistics','Landing Page'],title:'VALPA TRUCK',desc_es:'Sitio web para empresa de transporte y logística. Presentación de flota, servicios de carga y cotización integrada.',desc_en:'Website for a transportation and logistics company. Fleet presentation, freight services and integrated quote system.',url:'https://valpatruck.dgp-link.com/',img:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://valpatruck.dgp-link.com/'}
 ];
 let activeProj=0;
 function renderPortProj(idx,animate){
   const p=PORT_PROJECTS[idx];
   const isEn=lang==='en';
   const tags=isEn?p.tags_en:p.tags_es;
-  const imgs=[{id:'pimg-laptop',src:p.img_l},{id:'pimg-phone',src:p.img_p}];
-  if(animate){
-    imgs.forEach(({id})=>{const el=document.getElementById(id);if(el)el.style.opacity='0';});
-    setTimeout(()=>{imgs.forEach(({id,src})=>{const el=document.getElementById(id);if(el){el.src=src;el.style.opacity='1';}});},350);
-  }else{
-    imgs.forEach(({id,src})=>{const el=document.getElementById(id);if(el)el.src=src;});
-  }
+  const img=document.getElementById('pimg-laptop');
   const urlBar=document.getElementById('port-url-bar');
-  if(urlBar)urlBar.textContent=p.url.replace(/^https?:\/\//,'').replace(/\/$/,'');
+  if(animate&&img){
+    img.classList.add('fade-out');
+    if(urlBar)urlBar.style.opacity='0';
+    setTimeout(()=>{
+      img.src=p.img;
+      img.onload=()=>{img.classList.remove('fade-out');};
+      img.onerror=()=>{img.classList.remove('fade-out');};
+      if(urlBar){urlBar.textContent=p.url.replace(/^https?:\/\//,'').replace(/\/$/,'');urlBar.style.opacity='1';}
+    },420);
+  }else{
+    if(img)img.src=p.img;
+    if(urlBar)urlBar.textContent=p.url.replace(/^https?:\/\//,'').replace(/\/$/,'');
+  }
   document.getElementById('port-tags').innerHTML=tags.map(t=>`<span class="port-tag-item">${t}</span>`).join('');
   document.getElementById('port-title').textContent=p.title;
   const des=document.getElementById('port-desc-es'),den=document.getElementById('port-desc-en');
