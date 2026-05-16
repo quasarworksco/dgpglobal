@@ -694,38 +694,28 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 @media(max-width:1000px){.grev-wrap{grid-template-columns:1fr}}
 
 /* ── PORTAFOLIO ──────────────────────────────────────────── */
-/* Scene */
-.port-scene{display:flex;align-items:flex-end;justify-content:center;gap:0;margin:56px 0 44px;padding-top:40px}
-/* MacBook */
-.dev-mac{width:500px;flex-shrink:0;position:relative;z-index:2;filter:drop-shadow(0 40px 80px rgba(0,0,0,.22));transform:perspective(1000px) rotateY(-8deg) rotateX(4deg);transition:transform .5s cubic-bezier(.22,1,.36,1),filter .5s}
-.port-scene:hover .dev-mac{transform:perspective(1000px) rotateY(-12deg) rotateX(6deg);filter:drop-shadow(0 50px 100px rgba(20,56,204,.2))}
-.mac-lid{background:linear-gradient(170deg,#5a5a5a 0%,#3d3d3d 100%);border-radius:14px 14px 3px 3px;padding:14px 14px 8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.15),inset 0 0 0 1px rgba(255,255,255,.06),0 0 0 1px #1a1a1a;position:relative}
-.mac-cam{width:6px;height:6px;background:#111;border-radius:50%;margin:0 auto 10px;box-shadow:0 0 0 2px rgba(255,255,255,.06)}
-.mac-screen{background:#000;border-radius:5px;overflow:hidden;aspect-ratio:16/10;position:relative}
-.mac-screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:opacity .35s ease}
-.mac-screen::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.05) 0%,transparent 40%);pointer-events:none;z-index:2}
-.mac-hinge{height:5px;background:linear-gradient(to bottom,#2a2a2a,#222);margin:0 8px}
-.mac-body{background:linear-gradient(170deg,#525252 0%,#404040 100%);border-radius:0 0 14px 14px;padding:16px 24px 20px;box-shadow:0 0 0 1px #1a1a1a,0 24px 60px rgba(0,0,0,.4)}
-.mac-kbd{background:#2e2e2e;border-radius:6px;padding:8px;margin-bottom:10px}
-.mac-kbd-inner{height:60px;background:repeating-linear-gradient(90deg,transparent,transparent 30px,rgba(0,0,0,.4) 30px,rgba(0,0,0,.4) 31px),repeating-linear-gradient(0deg,transparent,transparent 18px,rgba(0,0,0,.4) 18px,rgba(0,0,0,.4) 19px);background-color:#333;border-radius:3px}
-.mac-touchbar{height:6px;background:#1c1c1c;border-radius:3px;margin-bottom:10px}
-.mac-trackpad{width:100px;height:60px;background:linear-gradient(155deg,#3a3a3a,#2e2e2e);border-radius:8px;margin:0 auto;border:1px solid rgba(0,0,0,.5)}
-/* iPad */
-.dev-ipad{width:155px;flex-shrink:0;align-self:flex-start;margin-left:-18px;margin-top:-20px;position:relative;z-index:1;filter:drop-shadow(0 20px 40px rgba(0,0,0,.3));transform:perspective(600px) rotateY(10deg) rotateX(2deg);transition:transform .5s cubic-bezier(.22,1,.36,1)}
-.port-scene:hover .dev-ipad{transform:perspective(600px) rotateY(14deg) rotateX(3deg)}
-.ipad-body{background:linear-gradient(160deg,#4a4a4a,#363636);border-radius:14px;padding:10px 7px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),0 0 0 1px #1a1a1a}
-.ipad-cam{width:5px;height:5px;background:#111;border-radius:50%;margin:0 auto 7px;box-shadow:0 0 0 1.5px rgba(255,255,255,.05)}
-.ipad-screen{background:#000;border-radius:6px;overflow:hidden;aspect-ratio:3/4}
-.ipad-screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:opacity .35s ease}
-.ipad-homebar{width:36px;height:3px;background:rgba(255,255,255,.15);border-radius:2px;margin:7px auto 0}
-/* iPhone */
-.dev-iphone{width:100px;flex-shrink:0;margin-left:-14px;align-self:flex-end;margin-bottom:20px;position:relative;z-index:3;filter:drop-shadow(0 20px 50px rgba(0,0,0,.35));transform:perspective(400px) rotateY(6deg) rotateX(-2deg);transition:transform .5s cubic-bezier(.22,1,.36,1)}
-.port-scene:hover .dev-iphone{transform:perspective(400px) rotateY(10deg) rotateX(-3deg)}
-.iphone-body{background:linear-gradient(160deg,#2e2e2e,#1a1a1a);border-radius:28px;padding:9px 6px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),0 0 0 1px #0a0a0a}
-.iphone-island{width:36px;height:8px;background:#000;border-radius:4px;margin:0 auto 6px}
-.iphone-screen{background:#000;border-radius:18px;overflow:hidden;aspect-ratio:9/19}
-.iphone-screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:opacity .35s ease}
-.iphone-homebar{width:28px;height:3px;background:rgba(255,255,255,.15);border-radius:2px;margin:6px auto 0}
+.port-scene{display:flex;align-items:flex-end;justify-content:center;gap:20px;margin:48px 0 40px}
+/* Browser window (desktop view) */
+.dev-browser{flex:1;max-width:680px;background:#1a1a1e;border-radius:12px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.32),0 0 0 1px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.06);transform:perspective(1400px) rotateY(-5deg) rotateX(2deg);transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s}
+.port-scene:hover .dev-browser{transform:perspective(1400px) rotateY(-2deg) rotateX(1deg);box-shadow:0 40px 100px rgba(20,56,204,.14),0 0 0 1px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.06)}
+.browser-bar{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#252529;border-bottom:1px solid rgba(0,0,0,.35)}
+.browser-dots{display:flex;gap:5px;flex-shrink:0}
+.browser-dot{width:10px;height:10px;border-radius:50%}
+.browser-dot:nth-child(1){background:#ff5f57}
+.browser-dot:nth-child(2){background:#febc2e}
+.browser-dot:nth-child(3){background:#28c840}
+.browser-urlbar{flex:1;background:rgba(255,255,255,.07);border-radius:5px;height:26px;display:flex;align-items:center;padding:0 10px;gap:6px;overflow:hidden;min-width:0}
+.browser-lock{color:rgba(255,255,255,.35);font-size:9px;flex-shrink:0}
+.browser-url-text{font-size:11px;color:rgba(255,255,255,.38);font-family:monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.browser-screen{aspect-ratio:16/9;overflow:hidden;background:#e8e8e8;position:relative}
+.browser-screen img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:opacity .4s ease}
+/* Phone (mobile view) */
+.dev-phone{width:108px;flex-shrink:0;background:linear-gradient(160deg,#2c2c30,#17171b);border-radius:34px;padding:10px 7px;box-shadow:0 24px 64px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.07),inset 0 1px 0 rgba(255,255,255,.05);transform:perspective(600px) rotateY(7deg) rotateX(-1deg);transition:transform .5s cubic-bezier(.22,1,.36,1);align-self:flex-end;margin-bottom:28px}
+.port-scene:hover .dev-phone{transform:perspective(600px) rotateY(3deg) rotateX(0deg)}
+.phone-island{width:38px;height:10px;background:#000;border-radius:5px;margin:0 auto 7px}
+.phone-screen{background:#111;border-radius:22px;overflow:hidden;aspect-ratio:9/19.5;position:relative}
+.phone-screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:opacity .4s ease}
+.phone-bar{width:30px;height:3px;background:rgba(255,255,255,.18);border-radius:2px;margin:7px auto 0}
 /* Switcher */
 .port-switcher{display:flex;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:36px}
 .port-tab{flex:1;background:#fff;border:none;padding:16px 18px;text-align:left;cursor:pointer;transition:background .2s;display:flex;flex-direction:column;gap:4px}
@@ -745,14 +735,12 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 .port-visit{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;background:var(--black);color:#fff;text-decoration:none;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border-radius:100px;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;box-shadow:0 6px 20px rgba(0,0,0,.12)}
 .port-visit:hover{background:var(--blue);transform:translateY(-3px);box-shadow:0 12px 30px rgba(20,56,204,.3)}
 .port-visit i{font-size:10px}
-@media(max-width:1000px){
-  .dev-mac{width:100%;max-width:400px}
-  .dev-ipad,.dev-iphone{display:none}
-  .port-scene{margin:40px 0 32px}
+@media(max-width:900px){
+  .dev-phone{display:none}
+  .port-scene{margin:36px 0 28px}
   .port-tab{flex:1 1 40%}
 }
 @media(max-width:600px){
-  .dev-mac{max-width:300px}
   .port-tab{flex:1 1 100%;padding:12px 14px}
   .pt-name{font-size:10px}
 }
@@ -1194,42 +1182,32 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
     <p class="sec-sub" style="margin:0 auto" data-en>A sample of the websites we've designed and developed. Each project, unique and tailor-made.</p>
   </div>
 
-  <!-- 3D Device Scene -->
+  <!-- Device Scene -->
   <div class="port-scene reveal" style="transition-delay:.15s">
-    <!-- MacBook -->
-    <div class="dev-mac">
-      <div class="mac-lid">
-        <div class="mac-cam"></div>
-        <div class="mac-screen">
-          <img id="pimg-laptop" src="https://image.thum.io/get/width/1200/crop/750/wait/8/https://caiboconstruction.com/" alt="Portfolio laptop" loading="eager">
+    <!-- Browser (desktop) -->
+    <div class="dev-browser">
+      <div class="browser-bar">
+        <div class="browser-dots">
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+          <div class="browser-dot"></div>
+        </div>
+        <div class="browser-urlbar">
+          <i class="fa-solid fa-lock browser-lock"></i>
+          <span class="browser-url-text" id="port-url-bar">caiboconstruction.com</span>
         </div>
       </div>
-      <div class="mac-hinge"></div>
-      <div class="mac-body">
-        <div class="mac-kbd"><div class="mac-kbd-inner"></div></div>
-        <div class="mac-touchbar"></div>
-        <div class="mac-trackpad"></div>
+      <div class="browser-screen">
+        <img id="pimg-laptop" src="https://image.thum.io/get/width/1280/crop/800/wait/14/https://caiboconstruction.com/" alt="Portfolio desktop" loading="eager">
       </div>
     </div>
-    <!-- iPad -->
-    <div class="dev-ipad">
-      <div class="ipad-body">
-        <div class="ipad-cam"></div>
-        <div class="ipad-screen">
-          <img id="pimg-tablet" src="https://image.thum.io/get/width/800/crop/1066/wait/8/https://caiboconstruction.com/" alt="Portfolio tablet" loading="eager">
-        </div>
-        <div class="ipad-homebar"></div>
+    <!-- Phone (mobile) -->
+    <div class="dev-phone">
+      <div class="phone-island"></div>
+      <div class="phone-screen">
+        <img id="pimg-phone" src="https://image.thum.io/get/width/390/crop/844/wait/14/https://caiboconstruction.com/" alt="Portfolio mobile" loading="eager">
       </div>
-    </div>
-    <!-- iPhone -->
-    <div class="dev-iphone">
-      <div class="iphone-body">
-        <div class="iphone-island"></div>
-        <div class="iphone-screen">
-          <img id="pimg-phone" src="https://image.thum.io/get/width/400/crop/855/wait/8/https://caiboconstruction.com/" alt="Portfolio phone" loading="eager">
-        </div>
-        <div class="iphone-homebar"></div>
-      </div>
+      <div class="phone-bar"></div>
     </div>
   </div>
 
@@ -1758,23 +1736,25 @@ getRate();loadRevs();
 
 /* PORTFOLIO SWITCHER */
 const PORT_PROJECTS=[
-  {tags_es:['Construcción','Landing Page','Florida'],tags_en:['Construction','Landing Page','Florida'],title:'CAIBO CONSTRUCTION',desc_es:'Sitio web profesional para empresa de construcción en Florida. Diseño limpio, presentación de servicios y formulario de contacto directo.',desc_en:'Professional website for a Florida construction company. Clean design, service showcase and direct contact form.',url:'https://caiboconstruction.com/',img_l:'https://image.thum.io/get/width/1200/crop/750/wait/8/https://caiboconstruction.com/',img_t:'https://image.thum.io/get/width/800/crop/1066/wait/8/https://caiboconstruction.com/',img_p:'https://image.thum.io/get/width/400/crop/855/wait/8/https://caiboconstruction.com/'},
-  {tags_es:['Limpieza','Landing Page','Servicios'],tags_en:['Cleaning','Landing Page','Services'],title:'CLEANING GROUP',desc_es:'Landing page optimizada para empresa de limpieza profesional. Enfocada en conversión, captación de clientes y llamadas directas.',desc_en:'Optimized landing page for a professional cleaning company. Focused on conversion, lead capture and direct calls.',url:'https://cleaninggroup.dgp-link.com/',img_l:'https://image.thum.io/get/width/1200/crop/750/wait/8/https://cleaninggroup.dgp-link.com/',img_t:'https://image.thum.io/get/width/800/crop/1066/wait/8/https://cleaninggroup.dgp-link.com/',img_p:'https://image.thum.io/get/width/400/crop/855/wait/8/https://cleaninggroup.dgp-link.com/'},
-  {tags_es:['E-Commerce','Tienda Online','Retail'],tags_en:['E-Commerce','Online Store','Retail'],title:'THE SWEET ZONE',desc_es:'Tienda online con catálogo de productos, experiencia de compra fluida y diseño atractivo orientado a maximizar conversiones.',desc_en:'Online store with product catalog, smooth shopping experience and attractive design focused on maximizing conversions.',url:'https://buythesweetzone.com/',img_l:'https://image.thum.io/get/width/1200/crop/750/wait/8/https://buythesweetzone.com/',img_t:'https://image.thum.io/get/width/800/crop/1066/wait/8/https://buythesweetzone.com/',img_p:'https://image.thum.io/get/width/400/crop/855/wait/8/https://buythesweetzone.com/'},
-  {tags_es:['Transporte','Logística','Landing Page'],tags_en:['Transport','Logistics','Landing Page'],title:'VALPA TRUCK',desc_es:'Sitio web para empresa de transporte y logística. Presentación de flota, servicios de carga y cotización integrada.',desc_en:'Website for a transportation and logistics company. Fleet, freight services and integrated quote system.',url:'https://valpatruck.dgp-link.com/',img_l:'https://image.thum.io/get/width/1200/crop/750/wait/8/https://valpatruck.dgp-link.com/',img_t:'https://image.thum.io/get/width/800/crop/1066/wait/8/https://valpatruck.dgp-link.com/',img_p:'https://image.thum.io/get/width/400/crop/855/wait/8/https://valpatruck.dgp-link.com/'}
+  {tags_es:['Construcción','Landing Page','Florida'],tags_en:['Construction','Landing Page','Florida'],title:'CAIBO CONSTRUCTION',desc_es:'Sitio web profesional para empresa de construcción en Florida. Diseño limpio, presentación de servicios y formulario de contacto directo.',desc_en:'Professional website for a Florida construction company. Clean design, service showcase and direct contact form.',url:'https://caiboconstruction.com/',img_l:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://caiboconstruction.com/',img_p:'https://image.thum.io/get/width/390/crop/844/wait/14/https://caiboconstruction.com/'},
+  {tags_es:['Limpieza','Landing Page','Servicios'],tags_en:['Cleaning','Landing Page','Services'],title:'CLEANING GROUP',desc_es:'Landing page optimizada para empresa de limpieza profesional. Enfocada en conversión, captación de clientes y llamadas directas.',desc_en:'Optimized landing page for a professional cleaning company. Focused on conversion, lead capture and direct calls.',url:'https://cleaninggroup.dgp-link.com/',img_l:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://cleaninggroup.dgp-link.com/',img_p:'https://image.thum.io/get/width/390/crop/844/wait/14/https://cleaninggroup.dgp-link.com/'},
+  {tags_es:['E-Commerce','Tienda Online','Retail'],tags_en:['E-Commerce','Online Store','Retail'],title:'THE SWEET ZONE',desc_es:'Tienda online con catálogo de productos, experiencia de compra fluida y diseño atractivo orientado a maximizar conversiones.',desc_en:'Online store with product catalog, smooth shopping experience and attractive design focused on maximizing conversions.',url:'https://buythesweetzone.com/',img_l:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://buythesweetzone.com/',img_p:'https://image.thum.io/get/width/390/crop/844/wait/14/https://buythesweetzone.com/'},
+  {tags_es:['Transporte','Logística','Landing Page'],tags_en:['Transport','Logistics','Landing Page'],title:'VALPA TRUCK',desc_es:'Sitio web para empresa de transporte y logística. Presentación de flota, servicios de carga y cotización integrada.',desc_en:'Website for a transportation and logistics company. Fleet, freight services and integrated quote system.',url:'https://valpatruck.dgp-link.com/',img_l:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://valpatruck.dgp-link.com/',img_p:'https://image.thum.io/get/width/390/crop/844/wait/14/https://valpatruck.dgp-link.com/'}
 ];
 let activeProj=0;
 function renderPortProj(idx,animate){
   const p=PORT_PROJECTS[idx];
   const isEn=lang==='en';
   const tags=isEn?p.tags_en:p.tags_es;
-  const imgs=[{id:'pimg-laptop',src:p.img_l},{id:'pimg-tablet',src:p.img_t},{id:'pimg-phone',src:p.img_p}];
+  const imgs=[{id:'pimg-laptop',src:p.img_l},{id:'pimg-phone',src:p.img_p}];
   if(animate){
     imgs.forEach(({id})=>{const el=document.getElementById(id);if(el)el.style.opacity='0';});
     setTimeout(()=>{imgs.forEach(({id,src})=>{const el=document.getElementById(id);if(el){el.src=src;el.style.opacity='1';}});},350);
   }else{
     imgs.forEach(({id,src})=>{const el=document.getElementById(id);if(el)el.src=src;});
   }
+  const urlBar=document.getElementById('port-url-bar');
+  if(urlBar)urlBar.textContent=p.url.replace(/^https?:\/\//,'').replace(/\/$/,'');
   document.getElementById('port-tags').innerHTML=tags.map(t=>`<span class="port-tag-item">${t}</span>`).join('');
   document.getElementById('port-title').textContent=p.title;
   const des=document.getElementById('port-desc-es'),den=document.getElementById('port-desc-en');
