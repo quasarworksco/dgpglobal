@@ -166,8 +166,10 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--white:#ffffff;--off:#f7f7f5;--black:#0a0a0a;--blue:#1438cc;--blue-l:#2a52e0;--blue-s:#4d78ff;--muted:#2a3f7e;--border:#e8e8e4;--soft:#64748b;--gold:#d4af37}
@@ -1269,7 +1271,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <div class="ppb-dots"><span class="ppb-dot"></span><span class="ppb-dot"></span><span class="ppb-dot"></span></div>
       </div>
       <div class="port-preview-screen">
-        <iframe id="port-prev-iframe" class="port-preview-iframe" src="https://caiboconstruction.com/" loading="lazy" scrolling="no" tabindex="-1" title="Preview"></iframe>
+        <iframe id="port-prev-iframe" class="port-preview-iframe" data-src="https://caiboconstruction.com/" scrolling="no" tabindex="-1" title="Preview"></iframe>
       </div>
     </div>
   </div>
@@ -1762,7 +1764,7 @@ function sendContactEmail(){
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeContactModal();});
 
-getRate();loadRevs();
+setTimeout(()=>{getRate();loadRevs();},1500);
 
 /* PORTFOLIO CAROUSEL */
 const PORT_P=[
@@ -1787,7 +1789,13 @@ function renderPort(idx,animate){
   document.querySelectorAll('.port-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
   const img=document.getElementById('port-prev-img');
   const iframe=document.getElementById('port-prev-iframe');
-  if(iframe){iframe.classList.add('fading');setTimeout(()=>{iframe.src=p.url;iframe.classList.remove('fading');},350);}
+  if(iframe){
+    iframe.classList.add('fading');
+    setTimeout(()=>{
+      if(iframe._loaded){iframe.src=p.url;}else{iframe.dataset.src=p.url;}
+      iframe.classList.remove('fading');
+    },350);
+  }
   portIdx=idx;
 }
 function portNav(dir){renderPort((portIdx+dir+PORT_P.length)%PORT_P.length,true);}
@@ -1804,6 +1812,18 @@ function scalePortFrame(){
   renderPort(0,false);
   scalePortFrame();
   window.addEventListener('resize',scalePortFrame);
+  const iframe=document.getElementById('port-prev-iframe');
+  const portSection=document.querySelector('.port-preview');
+  if(iframe&&portSection){
+    const portObs=new IntersectionObserver(entries=>{
+      if(entries[0].isIntersecting){
+        iframe.src=iframe.dataset.src||PORT_P[0].url;
+        iframe._loaded=true;
+        portObs.disconnect();
+      }
+    },{rootMargin:'200px'});
+    portObs.observe(portSection);
+  }
 })();
 
 
