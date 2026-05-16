@@ -1728,29 +1728,54 @@ getRate();loadRevs();
 
 /* PORTFOLIO SWITCHER */
 const PORT_PROJECTS=[
-  {tags_es:['Construcción','Landing Page','Florida'],tags_en:['Construction','Landing Page','Florida'],title:'CAIBO CONSTRUCTION',desc_es:'Sitio web para empresa de construcción en Florida. Diseño limpio, presentación de servicios y formulario de contacto directo.',desc_en:'Website for a Florida construction company. Clean design, service showcase and direct contact form.',url:'https://caiboconstruction.com/',img:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://caiboconstruction.com/'},
-  {tags_es:['Limpieza','Landing Page','Servicios'],tags_en:['Cleaning','Landing Page','Services'],title:'CLEANING GROUP',desc_es:'Landing page para empresa de limpieza profesional. Enfocada en conversión, captación de clientes y llamadas directas.',desc_en:'Landing page for a professional cleaning company. Focused on conversion, lead capture and direct calls.',url:'https://cleaninggroup.dgp-link.com/',img:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://cleaninggroup.dgp-link.com/'},
-  {tags_es:['E-Commerce','Tienda Online','Retail'],tags_en:['E-Commerce','Online Store','Retail'],title:'THE SWEET ZONE',desc_es:'Tienda online con catálogo de productos, experiencia de compra fluida y diseño orientado a maximizar ventas.',desc_en:'Online store with product catalog, smooth shopping experience and design focused on maximizing sales.',url:'https://buythesweetzone.com/',img:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://buythesweetzone.com/'},
-  {tags_es:['Transporte','Logística','Landing Page'],tags_en:['Transport','Logistics','Landing Page'],title:'VALPA TRUCK',desc_es:'Sitio web para empresa de transporte y logística. Presentación de flota, servicios de carga y cotización integrada.',desc_en:'Website for a transportation and logistics company. Fleet presentation, freight services and integrated quote system.',url:'https://valpatruck.dgp-link.com/',img:'https://image.thum.io/get/width/1280/crop/800/wait/14/https://valpatruck.dgp-link.com/'}
+  {tags_es:['Construcción','Landing Page','Florida'],tags_en:['Construction','Landing Page','Florida'],title:'CAIBO CONSTRUCTION',desc_es:'Sitio web para empresa de construcción en Florida. Diseño limpio, presentación de servicios y formulario de contacto directo.',desc_en:'Website for a Florida construction company. Clean design, service showcase and direct contact form.',url:'https://caiboconstruction.com/'},
+  {tags_es:['Limpieza','Landing Page','Servicios'],tags_en:['Cleaning','Landing Page','Services'],title:'CLEANING GROUP',desc_es:'Landing page para empresa de limpieza profesional. Enfocada en conversión, captación de clientes y llamadas directas.',desc_en:'Landing page for a professional cleaning company. Focused on conversion, lead capture and direct calls.',url:'https://cleaninggroup.dgp-link.com/'},
+  {tags_es:['E-Commerce','Tienda Online','Retail'],tags_en:['E-Commerce','Online Store','Retail'],title:'THE SWEET ZONE',desc_es:'Tienda online con catálogo de productos, experiencia de compra fluida y diseño orientado a maximizar ventas.',desc_en:'Online store with product catalog, smooth shopping experience and design focused on maximizing sales.',url:'https://buythesweetzone.com/'},
+  {tags_es:['Transporte','Logística','Landing Page'],tags_en:['Transport','Logistics','Landing Page'],title:'VALPA TRUCK',desc_es:'Sitio web para empresa de transporte y logística. Presentación de flota, servicios de carga y cotización integrada.',desc_en:'Website for a transportation and logistics company. Fleet presentation, freight services and integrated quote system.',url:'https://valpatruck.dgp-link.com/'}
 ];
 let activeProj=0;
+
+/* Screenshot loader: microlink (full JS render) → thum.io fallback */
+const _ssCache={};
+function _thumbUrl(url){return 'https://image.thum.io/get/width/1280/crop/800/wait/20/'+url+'?_v=2';}
+function _applyImg(ssUrl,projIdx){
+  if(activeProj!==projIdx)return;
+  const img=document.getElementById('pimg-laptop');
+  if(!img||img.getAttribute('data-src')===ssUrl)return;
+  img.classList.add('fade-out');
+  setTimeout(()=>{img.src=ssUrl;img.setAttribute('data-src',ssUrl);img.onload=()=>img.classList.remove('fade-out');img.onerror=()=>img.classList.remove('fade-out');},380);
+}
+function _loadShot(url,projIdx){
+  if(_ssCache[url]){_applyImg(_ssCache[url],projIdx);return;}
+  _ssCache[url]='pending';
+  fetch('https://api.microlink.io/?url='+encodeURIComponent(url)+'&screenshot=true&meta=false')
+    .then(r=>r.json())
+    .then(d=>{
+      const ss=d&&d.data&&d.data.screenshot&&d.data.screenshot.url;
+      _ssCache[url]=ss||null;
+      if(ss)_applyImg(ss,projIdx);
+    })
+    .catch(()=>{_ssCache[url]=null;});
+}
+
 function renderPortProj(idx,animate){
   const p=PORT_PROJECTS[idx];
   const isEn=lang==='en';
   const tags=isEn?p.tags_en:p.tags_es;
   const img=document.getElementById('pimg-laptop');
   const urlBar=document.getElementById('port-url-bar');
+  const initialSrc=_ssCache[p.url]&&_ssCache[p.url]!=='pending'?_ssCache[p.url]:_thumbUrl(p.url);
   if(animate&&img){
     img.classList.add('fade-out');
     if(urlBar)urlBar.style.opacity='0';
     setTimeout(()=>{
-      img.src=p.img;
-      img.onload=()=>{img.classList.remove('fade-out');};
-      img.onerror=()=>{img.classList.remove('fade-out');};
+      img.src=initialSrc;img.setAttribute('data-src',initialSrc);
+      img.onload=()=>img.classList.remove('fade-out');
+      img.onerror=()=>img.classList.remove('fade-out');
       if(urlBar){urlBar.textContent=p.url.replace(/^https?:\/\//,'').replace(/\/$/,'');urlBar.style.opacity='1';}
-    },420);
+    },380);
   }else{
-    if(img)img.src=p.img;
+    if(img){img.src=initialSrc;img.setAttribute('data-src',initialSrc);}
     if(urlBar)urlBar.textContent=p.url.replace(/^https?:\/\//,'').replace(/\/$/,'');
   }
   document.getElementById('port-tags').innerHTML=tags.map(t=>`<span class="port-tag-item">${t}</span>`).join('');
@@ -1760,9 +1785,12 @@ function renderPortProj(idx,animate){
   document.getElementById('port-url').href=p.url;
   document.querySelectorAll('.port-tab').forEach((btn,i)=>btn.classList.toggle('active',i===idx));
   activeProj=idx;
+  _loadShot(p.url,idx);
 }
 function switchProj(idx){if(idx===activeProj)return;renderPortProj(idx,true);}
 renderPortProj(0,false);
+/* Preload all screenshots in background */
+PORT_PROJECTS.forEach((p,i)=>{setTimeout(()=>_loadShot(p.url,i),i*800);});
 
 /* CURSOR GLOW */
 (function(){
