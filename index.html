@@ -151,10 +151,10 @@
 </script>
 
 <!-- FAVICON -->
-<link rel="icon" type="image/png" sizes="32x32" href="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w64">
-<link rel="icon" type="image/png" sizes="16x16" href="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w32">
-<link rel="apple-touch-icon" sizes="180x180" href="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w180">
-<link rel="shortcut icon" href="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w64">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.png">
 
 <!-- DATABUDDY ANALYTICS -->
 <script
@@ -444,6 +444,8 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
 [data-en]{display:none}
 body.en [data-es]{display:none}body.en [data-en]{display:block}
 body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
+.opt-en{display:none}
+body.en .opt-es{display:none}body.en .opt-en{display:block}
 
 /* HERO BG IMAGE */
 #hero{background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1800&auto=format&fit=crop');background-size:cover;background-position:center;background-repeat:no-repeat}
@@ -690,6 +692,70 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 .modal-send-email{background:var(--blue)!important}
 .modal-send-email:hover{background:var(--blue-l)!important}
 @media(max-width:1000px){.grev-wrap{grid-template-columns:1fr}}
+
+/* ── PORTAFOLIO ──────────────────────────────────────────── */
+/* Scene */
+.port-scene{display:flex;align-items:flex-end;justify-content:center;gap:0;margin:56px 0 44px;padding-top:40px}
+/* MacBook */
+.dev-mac{width:500px;flex-shrink:0;position:relative;z-index:2;filter:drop-shadow(0 40px 80px rgba(0,0,0,.22));transform:perspective(1000px) rotateY(-8deg) rotateX(4deg);transition:transform .5s cubic-bezier(.22,1,.36,1),filter .5s}
+.port-scene:hover .dev-mac{transform:perspective(1000px) rotateY(-12deg) rotateX(6deg);filter:drop-shadow(0 50px 100px rgba(20,56,204,.2))}
+.mac-lid{background:linear-gradient(170deg,#5a5a5a 0%,#3d3d3d 100%);border-radius:14px 14px 3px 3px;padding:14px 14px 8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.15),inset 0 0 0 1px rgba(255,255,255,.06),0 0 0 1px #1a1a1a;position:relative}
+.mac-cam{width:6px;height:6px;background:#111;border-radius:50%;margin:0 auto 10px;box-shadow:0 0 0 2px rgba(255,255,255,.06)}
+.mac-screen{background:#000;border-radius:5px;overflow:hidden;aspect-ratio:16/10;position:relative}
+.mac-screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:opacity .35s ease}
+.mac-screen::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.05) 0%,transparent 40%);pointer-events:none;z-index:2}
+.mac-hinge{height:5px;background:linear-gradient(to bottom,#2a2a2a,#222);margin:0 8px}
+.mac-body{background:linear-gradient(170deg,#525252 0%,#404040 100%);border-radius:0 0 14px 14px;padding:16px 24px 20px;box-shadow:0 0 0 1px #1a1a1a,0 24px 60px rgba(0,0,0,.4)}
+.mac-kbd{background:#2e2e2e;border-radius:6px;padding:8px;margin-bottom:10px}
+.mac-kbd-inner{height:60px;background:repeating-linear-gradient(90deg,transparent,transparent 30px,rgba(0,0,0,.4) 30px,rgba(0,0,0,.4) 31px),repeating-linear-gradient(0deg,transparent,transparent 18px,rgba(0,0,0,.4) 18px,rgba(0,0,0,.4) 19px);background-color:#333;border-radius:3px}
+.mac-touchbar{height:6px;background:#1c1c1c;border-radius:3px;margin-bottom:10px}
+.mac-trackpad{width:100px;height:60px;background:linear-gradient(155deg,#3a3a3a,#2e2e2e);border-radius:8px;margin:0 auto;border:1px solid rgba(0,0,0,.5)}
+/* iPad */
+.dev-ipad{width:155px;flex-shrink:0;align-self:flex-start;margin-left:-18px;margin-top:-20px;position:relative;z-index:1;filter:drop-shadow(0 20px 40px rgba(0,0,0,.3));transform:perspective(600px) rotateY(10deg) rotateX(2deg);transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.port-scene:hover .dev-ipad{transform:perspective(600px) rotateY(14deg) rotateX(3deg)}
+.ipad-body{background:linear-gradient(160deg,#4a4a4a,#363636);border-radius:14px;padding:10px 7px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08),0 0 0 1px #1a1a1a}
+.ipad-cam{width:5px;height:5px;background:#111;border-radius:50%;margin:0 auto 7px;box-shadow:0 0 0 1.5px rgba(255,255,255,.05)}
+.ipad-screen{background:#000;border-radius:6px;overflow:hidden;aspect-ratio:3/4}
+.ipad-screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:opacity .35s ease}
+.ipad-homebar{width:36px;height:3px;background:rgba(255,255,255,.15);border-radius:2px;margin:7px auto 0}
+/* iPhone */
+.dev-iphone{width:100px;flex-shrink:0;margin-left:-14px;align-self:flex-end;margin-bottom:20px;position:relative;z-index:3;filter:drop-shadow(0 20px 50px rgba(0,0,0,.35));transform:perspective(400px) rotateY(6deg) rotateX(-2deg);transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.port-scene:hover .dev-iphone{transform:perspective(400px) rotateY(10deg) rotateX(-3deg)}
+.iphone-body{background:linear-gradient(160deg,#2e2e2e,#1a1a1a);border-radius:28px;padding:9px 6px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.1),0 0 0 1px #0a0a0a}
+.iphone-island{width:36px;height:8px;background:#000;border-radius:4px;margin:0 auto 6px}
+.iphone-screen{background:#000;border-radius:18px;overflow:hidden;aspect-ratio:9/19}
+.iphone-screen img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:opacity .35s ease}
+.iphone-homebar{width:28px;height:3px;background:rgba(255,255,255,.15);border-radius:2px;margin:6px auto 0}
+/* Switcher */
+.port-switcher{display:flex;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:36px}
+.port-tab{flex:1;background:#fff;border:none;padding:16px 18px;text-align:left;cursor:pointer;transition:background .2s;display:flex;flex-direction:column;gap:4px}
+.port-tab:hover{background:rgba(20,56,204,.03)}
+.port-tab.active{background:var(--black)}
+.pt-num{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:2px;color:var(--blue)}
+.port-tab.active .pt-num{color:var(--blue-s)}
+.pt-name{font-size:11px;font-weight:500;letter-spacing:.5px;color:var(--soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.port-tab.active .pt-name{color:#fff}
+/* Active info */
+.port-active{text-align:center}
+.port-active-inner{max-width:560px;margin:0 auto}
+.port-tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:14px}
+.port-tag-item{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);background:rgba(20,56,204,.06);border:1px solid rgba(20,56,204,.14);padding:4px 10px}
+.port-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,48px);line-height:.95;color:var(--black);margin-bottom:12px}
+.port-desc{font-size:14px;color:var(--soft);line-height:1.75;font-weight:300;margin-bottom:24px}
+.port-visit{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;background:var(--black);color:#fff;text-decoration:none;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border-radius:100px;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.port-visit:hover{background:var(--blue);transform:translateY(-3px);box-shadow:0 12px 30px rgba(20,56,204,.3)}
+.port-visit i{font-size:10px}
+@media(max-width:1000px){
+  .dev-mac{width:100%;max-width:400px}
+  .dev-ipad,.dev-iphone{display:none}
+  .port-scene{margin:40px 0 32px}
+  .port-tab{flex:1 1 40%}
+}
+@media(max-width:600px){
+  .dev-mac{max-width:300px}
+  .port-tab{flex:1 1 100%;padding:12px 14px}
+  .pt-name{font-size:10px}
+}
 </style>
 </head>
 <body>
@@ -711,6 +777,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <a href="#paquetes" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-box-open"></i><span data-es>Paquetes</span><span data-en>Packages</span></a>
     <a href="#web" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-laptop-code"></i><span data-es>Planes Web</span><span data-en>Web Plans</span></a>
     <a href="#ecommerce" class="drawer-link" onclick="closeDrawer()"><i class="fa-brands fa-amazon"></i><span data-es>E-Commerce</span><span data-en>E-Commerce</span></a>
+    <a href="#portafolio" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-images"></i><span data-es>Portafolio</span><span data-en>Portfolio</span></a>
     <a href="#sistemas" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-sliders"></i><span data-es>Sistemas</span><span data-en>Systems</span></a>
     <div class="drawer-sep"></div>
     <a href="#resenas" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-star"></i><span data-es>Reseñas</span><span data-en>Reviews</span></a>
@@ -1117,6 +1184,90 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 
 <hr class="divider">
 
+<!-- PORTAFOLIO -->
+<div class="section" id="portafolio">
+  <div class="reveal" style="text-align:center">
+    <div class="sec-eyebrow" style="justify-content:center;display:flex" data-es>Algunos ejemplos</div>
+    <div class="sec-eyebrow" style="justify-content:center;display:flex" data-en>Some examples</div>
+    <h2 class="sec-title" style="text-align:center"><span data-es>MIRA LO QUE HEMOS <span class="accent">CREADO</span></span><span data-en>LOOK AT WHAT WE'VE <span class="accent">BUILT</span></span></h2>
+    <p class="sec-sub" style="margin:0 auto" data-es>Una muestra de los sitios que hemos diseñado y desarrollado. Cada proyecto, único y hecho a medida.</p>
+    <p class="sec-sub" style="margin:0 auto" data-en>A sample of the websites we've designed and developed. Each project, unique and tailor-made.</p>
+  </div>
+
+  <!-- 3D Device Scene -->
+  <div class="port-scene reveal" style="transition-delay:.15s">
+    <!-- MacBook -->
+    <div class="dev-mac">
+      <div class="mac-lid">
+        <div class="mac-cam"></div>
+        <div class="mac-screen">
+          <img id="pimg-laptop" src="https://image.thum.io/get/width/1200/crop/750/wait/8/https://caiboconstruction.com/" alt="Portfolio laptop" loading="eager">
+        </div>
+      </div>
+      <div class="mac-hinge"></div>
+      <div class="mac-body">
+        <div class="mac-kbd"><div class="mac-kbd-inner"></div></div>
+        <div class="mac-touchbar"></div>
+        <div class="mac-trackpad"></div>
+      </div>
+    </div>
+    <!-- iPad -->
+    <div class="dev-ipad">
+      <div class="ipad-body">
+        <div class="ipad-cam"></div>
+        <div class="ipad-screen">
+          <img id="pimg-tablet" src="https://image.thum.io/get/width/800/crop/1066/wait/8/https://caiboconstruction.com/" alt="Portfolio tablet" loading="eager">
+        </div>
+        <div class="ipad-homebar"></div>
+      </div>
+    </div>
+    <!-- iPhone -->
+    <div class="dev-iphone">
+      <div class="iphone-body">
+        <div class="iphone-island"></div>
+        <div class="iphone-screen">
+          <img id="pimg-phone" src="https://image.thum.io/get/width/400/crop/855/wait/8/https://caiboconstruction.com/" alt="Portfolio phone" loading="eager">
+        </div>
+        <div class="iphone-homebar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Switcher -->
+  <div class="port-switcher reveal" style="transition-delay:.25s">
+    <button class="port-tab active" onclick="switchProj(0)">
+      <span class="pt-num">01</span>
+      <span class="pt-name">Caibo Construction</span>
+    </button>
+    <button class="port-tab" onclick="switchProj(1)">
+      <span class="pt-num">02</span>
+      <span class="pt-name">Cleaning Group</span>
+    </button>
+    <button class="port-tab" onclick="switchProj(2)">
+      <span class="pt-num">03</span>
+      <span class="pt-name">The Sweet Zone</span>
+    </button>
+    <button class="port-tab" onclick="switchProj(3)">
+      <span class="pt-num">04</span>
+      <span class="pt-name">Valpa Truck</span>
+    </button>
+  </div>
+
+  <!-- Active project info -->
+  <div class="port-active reveal" style="transition-delay:.3s">
+    <div class="port-active-inner">
+      <div id="port-tags" class="port-tags"></div>
+      <h3 id="port-title" class="port-title"></h3>
+      <p id="port-desc-es" class="port-desc" data-es></p>
+      <p id="port-desc-en" class="port-desc" data-en></p>
+      <a id="port-url" href="#" target="_blank" rel="noopener" class="port-visit">
+        <span data-es>Ver sitio</span><span data-en>View site</span>&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
 <!-- SISTEMAS PERSONALIZADOS -->
 <div class="section" id="sistemas">
   <div class="reveal">
@@ -1257,6 +1408,18 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     </div>
   </div>
 
+  <div class="card reveal" style="transition-delay:.2s;margin-top:24px">
+    <div class="panel-head">
+      <span class="panel-title" data-es>OPINIONES</span><span class="panel-title" data-en>REVIEWS</span>
+      <span class="rev-count" id="revCount">...</span>
+    </div>
+    <div class="reviews-scroll" id="revContainer">
+      <div class="shimmer"></div>
+      <div class="shimmer" style="height:70px;opacity:.6"></div>
+      <div class="shimmer" style="height:60px;opacity:.35"></div>
+    </div>
+  </div>
+
   <div class="footer-cta reveal" style="transition-delay:.1s">
     <div>
       <div class="footer-cta-text"><span data-es>CONVERTIMOS TUS IDEAS EN <span>REALIDAD</span></span><span data-en>WE TURN YOUR IDEAS INTO <span>REALITY</span></span></div>
@@ -1301,14 +1464,21 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <div class="modal-field"><input type="text" id="mc-name" data-ph-es="Tu nombre completo" data-ph-en="Your full name" placeholder="Tu nombre completo"></div>
     <div class="modal-field">
       <select id="mc-service">
-        <option value="" disabled selected data-es>¿Qué servicio te interesa?</option>
-        <option data-es value="Marketing en Redes Sociales">Marketing en Redes Sociales</option>
-        <option data-es value="Diseño Gráfico / Identidad">Diseño Gráfico / Identidad</option>
-        <option data-es value="Desarrollo Web">Desarrollo Web</option>
-        <option data-es value="Gestión E-Commerce">Gestión E-Commerce</option>
-        <option data-es value="Sistema Personalizado">Sistema Personalizado (CRM / Admin / Inventario…)</option>
-        <option data-es value="Paquete Completo">Paquete Completo</option>
-        <option data-es value="Otro">Otro / No sé aún</option>
+        <option value="" disabled selected class="opt-es">¿Qué servicio te interesa?</option>
+        <option value="Social Media / Redes Sociales" class="opt-es">Marketing en Redes Sociales</option>
+        <option value="Social Media / Redes Sociales" class="opt-en">Social Media Marketing</option>
+        <option value="Diseño Gráfico / Identidad" class="opt-es">Diseño Gráfico / Identidad</option>
+        <option value="Graphic Design / Identity" class="opt-en">Graphic Design / Identity</option>
+        <option value="Desarrollo Web" class="opt-es">Desarrollo Web</option>
+        <option value="Web Design" class="opt-en">Web Design</option>
+        <option value="Gestión E-Commerce" class="opt-es">Gestión E-Commerce</option>
+        <option value="E-Commerce Management" class="opt-en">E-Commerce Management</option>
+        <option value="Sistema Personalizado" class="opt-es">Sistema Personalizado (CRM / Admin…)</option>
+        <option value="Custom System" class="opt-en">Custom System (CRM / Admin…)</option>
+        <option value="Paquete Completo" class="opt-es">Paquete Completo</option>
+        <option value="Full Package" class="opt-en">Full Package</option>
+        <option value="Otro" class="opt-es">Otro / No sé aún</option>
+        <option value="Other" class="opt-en">Other / Not sure yet</option>
       </select>
     </div>
     <div class="modal-field"><textarea id="mc-msg" data-ph-es="Cuéntanos brevemente tu proyecto o idea..." data-ph-en="Tell us briefly about your project or idea..." placeholder="Cuéntanos brevemente tu proyecto o idea..." rows="3"></textarea></div>
@@ -1354,6 +1524,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
           <a href="#paquetes" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Paquetes</span><span data-en>Packages</span></a>
           <a href="#web" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Planes Web</span><span data-en>Web Plans</span></a>
           <a href="#ecommerce" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Gestión E-Commerce</span><span data-en>E-Commerce Management</span></a>
+          <a href="#portafolio" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Portafolio</span><span data-en>Portfolio</span></a>
           <a href="#sistemas" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Sistemas Personalizados</span><span data-en>Custom Systems</span></a>
           <a href="#servicios" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Redes Sociales</span><span data-en>Social Media</span></a>
         </div>
@@ -1439,7 +1610,19 @@ function setLang(l){
   document.body.classList.toggle('en',l==='en');
   document.documentElement.lang=l==='en'?'en':'es';
   document.querySelectorAll('[data-ph-'+l+']').forEach(el=>el.placeholder=el.getAttribute('data-ph-'+l));
+  updateServiceSelect(l);
   syncBtns();
+}
+function updateServiceSelect(l){
+  const sel=document.getElementById('mc-service');
+  if(!sel)return;
+  const cur=sel.value;
+  Array.from(sel.options).forEach(o=>{
+    const isEn=o.classList.contains('opt-en');
+    const isEs=o.classList.contains('opt-es');
+    o.hidden=(l==='en'&&isEs)||(l==='es'&&isEn);
+  });
+  sel.value='';
 }
 /* CURRENCY */
 function setCurr(c){
@@ -1572,6 +1755,36 @@ function sendContactEmail(){
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeContactModal();});
 
 getRate();loadRevs();
+
+/* PORTFOLIO SWITCHER */
+const PORT_PROJECTS=[
+  {tags_es:['Construcción','Landing Page','Florida'],tags_en:['Construction','Landing Page','Florida'],title:'CAIBO CONSTRUCTION',desc_es:'Sitio web profesional para empresa de construcción en Florida. Diseño limpio, presentación de servicios y formulario de contacto directo.',desc_en:'Professional website for a Florida construction company. Clean design, service showcase and direct contact form.',url:'https://caiboconstruction.com/',img_l:'https://image.thum.io/get/width/1200/crop/750/wait/8/https://caiboconstruction.com/',img_t:'https://image.thum.io/get/width/800/crop/1066/wait/8/https://caiboconstruction.com/',img_p:'https://image.thum.io/get/width/400/crop/855/wait/8/https://caiboconstruction.com/'},
+  {tags_es:['Limpieza','Landing Page','Servicios'],tags_en:['Cleaning','Landing Page','Services'],title:'CLEANING GROUP',desc_es:'Landing page optimizada para empresa de limpieza profesional. Enfocada en conversión, captación de clientes y llamadas directas.',desc_en:'Optimized landing page for a professional cleaning company. Focused on conversion, lead capture and direct calls.',url:'https://cleaninggroup.dgp-link.com/',img_l:'https://image.thum.io/get/width/1200/crop/750/wait/8/https://cleaninggroup.dgp-link.com/',img_t:'https://image.thum.io/get/width/800/crop/1066/wait/8/https://cleaninggroup.dgp-link.com/',img_p:'https://image.thum.io/get/width/400/crop/855/wait/8/https://cleaninggroup.dgp-link.com/'},
+  {tags_es:['E-Commerce','Tienda Online','Retail'],tags_en:['E-Commerce','Online Store','Retail'],title:'THE SWEET ZONE',desc_es:'Tienda online con catálogo de productos, experiencia de compra fluida y diseño atractivo orientado a maximizar conversiones.',desc_en:'Online store with product catalog, smooth shopping experience and attractive design focused on maximizing conversions.',url:'https://buythesweetzone.com/',img_l:'https://image.thum.io/get/width/1200/crop/750/wait/8/https://buythesweetzone.com/',img_t:'https://image.thum.io/get/width/800/crop/1066/wait/8/https://buythesweetzone.com/',img_p:'https://image.thum.io/get/width/400/crop/855/wait/8/https://buythesweetzone.com/'},
+  {tags_es:['Transporte','Logística','Landing Page'],tags_en:['Transport','Logistics','Landing Page'],title:'VALPA TRUCK',desc_es:'Sitio web para empresa de transporte y logística. Presentación de flota, servicios de carga y cotización integrada.',desc_en:'Website for a transportation and logistics company. Fleet, freight services and integrated quote system.',url:'https://valpatruck.dgp-link.com/',img_l:'https://image.thum.io/get/width/1200/crop/750/wait/8/https://valpatruck.dgp-link.com/',img_t:'https://image.thum.io/get/width/800/crop/1066/wait/8/https://valpatruck.dgp-link.com/',img_p:'https://image.thum.io/get/width/400/crop/855/wait/8/https://valpatruck.dgp-link.com/'}
+];
+let activeProj=0;
+function renderPortProj(idx,animate){
+  const p=PORT_PROJECTS[idx];
+  const isEn=lang==='en';
+  const tags=isEn?p.tags_en:p.tags_es;
+  const imgs=[{id:'pimg-laptop',src:p.img_l},{id:'pimg-tablet',src:p.img_t},{id:'pimg-phone',src:p.img_p}];
+  if(animate){
+    imgs.forEach(({id})=>{const el=document.getElementById(id);if(el)el.style.opacity='0';});
+    setTimeout(()=>{imgs.forEach(({id,src})=>{const el=document.getElementById(id);if(el){el.src=src;el.style.opacity='1';}});},350);
+  }else{
+    imgs.forEach(({id,src})=>{const el=document.getElementById(id);if(el)el.src=src;});
+  }
+  document.getElementById('port-tags').innerHTML=tags.map(t=>`<span class="port-tag-item">${t}</span>`).join('');
+  document.getElementById('port-title').textContent=p.title;
+  const des=document.getElementById('port-desc-es'),den=document.getElementById('port-desc-en');
+  if(des)des.textContent=p.desc_es;if(den)den.textContent=p.desc_en;
+  document.getElementById('port-url').href=p.url;
+  document.querySelectorAll('.port-tab').forEach((btn,i)=>btn.classList.toggle('active',i===idx));
+  activeProj=idx;
+}
+function switchProj(idx){if(idx===activeProj)return;renderPortProj(idx,true);}
+renderPortProj(0,false);
 
 /* CURSOR GLOW */
 (function(){
