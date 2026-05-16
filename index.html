@@ -444,6 +444,8 @@ footer::before{content:'';position:absolute;inset:0;background-image:radial-grad
 [data-en]{display:none}
 body.en [data-es]{display:none}body.en [data-en]{display:block}
 body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
+.opt-en{display:none}
+body.en .opt-es{display:none}body.en .opt-en{display:block}
 
 /* HERO BG IMAGE */
 #hero{background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1800&auto=format&fit=crop');background-size:cover;background-position:center;background-repeat:no-repeat}
@@ -690,6 +692,63 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 .modal-send-email{background:var(--blue)!important}
 .modal-send-email:hover{background:var(--blue-l)!important}
 @media(max-width:1000px){.grev-wrap{grid-template-columns:1fr}}
+
+/* ── PORTAFOLIO ──────────────────────────────────────────── */
+.port-grid{display:flex;flex-direction:column;gap:96px;margin-top:64px}
+.port-card{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+.port-card.rev{grid-template-columns:1fr 1.15fr}
+.port-card.rev .port-devices-wrap{order:2}
+.port-card.rev .port-info{order:1}
+.port-devices-wrap{position:relative;padding:32px 56px 56px 12px;transform:perspective(1200px) rotateY(-10deg) rotateX(3deg);transition:transform .65s cubic-bezier(.22,1,.36,1),filter .5s;filter:drop-shadow(0 30px 60px rgba(0,0,0,.16));will-change:transform}
+.port-card:hover .port-devices-wrap{transform:perspective(1200px) rotateY(-16deg) rotateX(5deg) scale(1.03);filter:drop-shadow(0 50px 90px rgba(20,56,204,.22))}
+.port-card.rev .port-devices-wrap{transform:perspective(1200px) rotateY(10deg) rotateX(3deg);padding:32px 12px 56px 56px}
+.port-card.rev:hover .port-devices-wrap{transform:perspective(1200px) rotateY(16deg) rotateX(5deg) scale(1.03)}
+/* Laptop */
+.mockup-laptop{background:#1c1e30;border-radius:12px 12px 0 0;padding:10px 10px 0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.07),0 0 0 1px #0a0b14;position:relative;z-index:1}
+.laptop-cam{width:5px;height:5px;background:#0a0b14;border-radius:50%;margin:0 auto 7px;border:1px solid rgba(255,255,255,.08)}
+.laptop-screen-area{width:100%;aspect-ratio:16/10;background:#050507;border-radius:3px;overflow:hidden;position:relative}
+.laptop-screen-area::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.04) 0%,transparent 50%);pointer-events:none;z-index:2}
+.laptop-screen-area img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:object-position 10s ease}
+.port-card:hover .laptop-screen-area img{object-position:bottom center}
+.laptop-base{width:calc(100% + 20px);margin-left:-10px;height:16px;background:#181a2a;border-radius:0 0 3px 3px}
+.laptop-foot{width:calc(100% + 44px);margin-left:-22px;height:8px;background:#13152096;border-radius:0 0 6px 6px;box-shadow:0 4px 14px rgba(0,0,0,.28)}
+/* Tablet */
+.mockup-tablet{position:absolute;top:-28px;right:-46px;width:128px;z-index:0;background:#1c1e30;border-radius:10px;padding:7px 5px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 0 0 1px #0a0b14,0 12px 40px rgba(0,0,0,.3)}
+.tablet-cam{width:4px;height:4px;background:#0a0b14;border-radius:50%;margin:0 auto 5px;border:1px solid rgba(255,255,255,.07)}
+.tablet-screen-area{width:100%;aspect-ratio:3/4;background:#050507;border-radius:5px;overflow:hidden}
+.tablet-screen-area img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:object-position 10s ease}
+.port-card:hover .tablet-screen-area img{object-position:bottom}
+.tablet-home-bar{width:22px;height:3px;background:rgba(255,255,255,.12);border-radius:2px;margin:5px auto 0}
+/* Phone */
+.mockup-phone{position:absolute;bottom:-44px;right:8px;width:92px;z-index:2;background:#1c1e30;border-radius:16px;padding:7px 5px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 0 0 1px #0a0b14,0 16px 48px rgba(0,0,0,.35)}
+.phone-notch{width:24px;height:4px;background:#0a0b14;border-radius:2px;margin:0 auto 5px}
+.phone-screen-area{width:100%;aspect-ratio:9/19;background:#050507;border-radius:10px;overflow:hidden}
+.phone-screen-area img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:object-position 10s ease}
+.port-card:hover .phone-screen-area img{object-position:bottom}
+.phone-home-bar{width:22px;height:3px;background:rgba(255,255,255,.12);border-radius:2px;margin:5px auto 0}
+/* Info */
+.port-info{max-width:420px}
+.port-num{font-family:'Bebas Neue',sans-serif;font-size:110px;color:rgba(20,56,204,.05);line-height:1;display:block;margin-bottom:-24px;letter-spacing:-3px}
+.port-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.port-tag-item{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);background:rgba(20,56,204,.06);border:1px solid rgba(20,56,204,.14);padding:4px 10px}
+.port-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,52px);line-height:.95;color:var(--black);margin-bottom:14px;letter-spacing:.5px}
+.port-desc{font-size:14px;color:var(--soft);line-height:1.75;font-weight:300;margin-bottom:28px}
+.port-visit{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;background:var(--black);color:#fff;text-decoration:none;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border-radius:100px;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;box-shadow:0 6px 20px rgba(0,0,0,.12)}
+.port-visit:hover{background:var(--blue);transform:translateY(-3px);box-shadow:0 12px 30px rgba(20,56,204,.3)}
+.port-visit i{font-size:10px}
+@media(max-width:1000px){
+  .port-card,.port-card.rev{grid-template-columns:1fr;gap:40px}
+  .port-card.rev .port-devices-wrap,.port-card.rev .port-info{order:unset}
+  .port-devices-wrap,.port-card.rev .port-devices-wrap{transform:perspective(900px) rotateY(-5deg) rotateX(2deg)!important;padding:28px 50px 52px 8px!important}
+  .port-info{max-width:none}
+  .port-num{font-size:80px}
+}
+@media(max-width:600px){
+  .port-grid{gap:64px}
+  .mockup-tablet{width:100px;right:-32px}
+  .mockup-phone{width:76px;right:4px;bottom:-36px}
+  .port-num{display:none}
+}
 </style>
 </head>
 <body>
@@ -711,6 +770,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <a href="#paquetes" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-box-open"></i><span data-es>Paquetes</span><span data-en>Packages</span></a>
     <a href="#web" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-laptop-code"></i><span data-es>Planes Web</span><span data-en>Web Plans</span></a>
     <a href="#ecommerce" class="drawer-link" onclick="closeDrawer()"><i class="fa-brands fa-amazon"></i><span data-es>E-Commerce</span><span data-en>E-Commerce</span></a>
+    <a href="#portafolio" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-images"></i><span data-es>Portafolio</span><span data-en>Portfolio</span></a>
     <a href="#sistemas" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-sliders"></i><span data-es>Sistemas</span><span data-en>Systems</span></a>
     <div class="drawer-sep"></div>
     <a href="#resenas" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-star"></i><span data-es>Reseñas</span><span data-en>Reviews</span></a>
@@ -1117,6 +1177,189 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 
 <hr class="divider">
 
+<!-- PORTAFOLIO -->
+<div class="section" id="portafolio">
+  <div class="reveal">
+    <div class="sec-eyebrow" data-es>Trabajo real</div><div class="sec-eyebrow" data-en>Real work</div>
+    <h2 class="sec-title"><span data-es>NUESTRO <span class="accent">PORTAFOLIO</span></span><span data-en>OUR <span class="accent">PORTFOLIO</span></span></h2>
+    <p class="sec-sub" data-es>Proyectos reales diseñados y desarrollados por DGP Global Group. Cada sitio, único y a medida.</p>
+    <p class="sec-sub" data-en>Real projects designed and built by DGP Global Group. Every site, unique and tailored.</p>
+  </div>
+  <div class="port-grid">
+
+    <!-- 01 · Caibo Construction -->
+    <div class="port-card reveal" style="transition-delay:0s">
+      <div class="port-devices-wrap">
+        <div class="mockup-tablet">
+          <div class="tablet-cam"></div>
+          <div class="tablet-screen-area">
+            <img src="https://image.thum.io/get/width/800/crop/1066/https://caiboconstruction.com/" alt="Caibo Construction tablet" loading="lazy">
+          </div>
+          <div class="tablet-home-bar"></div>
+        </div>
+        <div class="mockup-laptop">
+          <div class="laptop-cam"></div>
+          <div class="laptop-screen-area">
+            <img src="https://image.thum.io/get/width/1200/crop/750/https://caiboconstruction.com/" alt="Caibo Construction" loading="lazy">
+          </div>
+          <div class="laptop-base"></div>
+          <div class="laptop-foot"></div>
+        </div>
+        <div class="mockup-phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen-area">
+            <img src="https://image.thum.io/get/width/400/crop/866/https://caiboconstruction.com/" alt="Caibo Construction mobile" loading="lazy">
+          </div>
+          <div class="phone-home-bar"></div>
+        </div>
+      </div>
+      <div class="port-info">
+        <span class="port-num">01</span>
+        <div class="port-tags">
+          <span class="port-tag-item">Construcción</span>
+          <span class="port-tag-item">Landing Page</span>
+          <span class="port-tag-item">Florida</span>
+        </div>
+        <h3 class="port-title">CAIBO CONSTRUCTION</h3>
+        <p class="port-desc" data-es>Sitio web profesional para empresa de construcción en Florida. Diseño limpio, presentación de servicios y formulario de contacto directo.</p>
+        <p class="port-desc" data-en>Professional website for a Florida construction company. Clean design, service showcase and direct contact form.</p>
+        <a href="https://caiboconstruction.com/" target="_blank" rel="noopener" class="port-visit">
+          <span data-es>Ver sitio</span><span data-en>View site</span>&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- 02 · Cleaning Group -->
+    <div class="port-card rev reveal" style="transition-delay:.1s">
+      <div class="port-info">
+        <span class="port-num">02</span>
+        <div class="port-tags">
+          <span class="port-tag-item">Limpieza</span>
+          <span class="port-tag-item">Landing Page</span>
+          <span class="port-tag-item">Servicios</span>
+        </div>
+        <h3 class="port-title">CLEANING GROUP</h3>
+        <p class="port-desc" data-es>Landing page optimizada para empresa de limpieza profesional. Enfocada en conversión, captación de clientes y llamadas directas.</p>
+        <p class="port-desc" data-en>Optimized landing page for a professional cleaning company. Focused on conversion, lead capture and direct calls.</p>
+        <a href="https://cleaninggroup.dgp-link.com/" target="_blank" rel="noopener" class="port-visit">
+          <span data-es>Ver sitio</span><span data-en>View site</span>&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+      <div class="port-devices-wrap">
+        <div class="mockup-tablet">
+          <div class="tablet-cam"></div>
+          <div class="tablet-screen-area">
+            <img src="https://image.thum.io/get/width/800/crop/1066/https://cleaninggroup.dgp-link.com/" alt="Cleaning Group tablet" loading="lazy">
+          </div>
+          <div class="tablet-home-bar"></div>
+        </div>
+        <div class="mockup-laptop">
+          <div class="laptop-cam"></div>
+          <div class="laptop-screen-area">
+            <img src="https://image.thum.io/get/width/1200/crop/750/https://cleaninggroup.dgp-link.com/" alt="Cleaning Group" loading="lazy">
+          </div>
+          <div class="laptop-base"></div>
+          <div class="laptop-foot"></div>
+        </div>
+        <div class="mockup-phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen-area">
+            <img src="https://image.thum.io/get/width/400/crop/866/https://cleaninggroup.dgp-link.com/" alt="Cleaning Group mobile" loading="lazy">
+          </div>
+          <div class="phone-home-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 · Buy The Sweet Zone -->
+    <div class="port-card reveal" style="transition-delay:0s">
+      <div class="port-devices-wrap">
+        <div class="mockup-tablet">
+          <div class="tablet-cam"></div>
+          <div class="tablet-screen-area">
+            <img src="https://image.thum.io/get/width/800/crop/1066/https://buythesweetzone.com/" alt="Sweet Zone tablet" loading="lazy">
+          </div>
+          <div class="tablet-home-bar"></div>
+        </div>
+        <div class="mockup-laptop">
+          <div class="laptop-cam"></div>
+          <div class="laptop-screen-area">
+            <img src="https://image.thum.io/get/width/1200/crop/750/https://buythesweetzone.com/" alt="Buy The Sweet Zone" loading="lazy">
+          </div>
+          <div class="laptop-base"></div>
+          <div class="laptop-foot"></div>
+        </div>
+        <div class="mockup-phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen-area">
+            <img src="https://image.thum.io/get/width/400/crop/866/https://buythesweetzone.com/" alt="Sweet Zone mobile" loading="lazy">
+          </div>
+          <div class="phone-home-bar"></div>
+        </div>
+      </div>
+      <div class="port-info">
+        <span class="port-num">03</span>
+        <div class="port-tags">
+          <span class="port-tag-item">E-Commerce</span>
+          <span class="port-tag-item">Tienda Online</span>
+          <span class="port-tag-item">Dulces</span>
+        </div>
+        <h3 class="port-title">BUY THE SWEET ZONE</h3>
+        <p class="port-desc" data-es>Tienda online de dulces y snacks. Catálogo de productos, experiencia de compra fluida y diseño apetecible para maximizar ventas.</p>
+        <p class="port-desc" data-en>Online candy and snacks store. Product catalog, smooth shopping experience and eye-catching design to maximize sales.</p>
+        <a href="https://buythesweetzone.com/" target="_blank" rel="noopener" class="port-visit">
+          <span data-es>Ver sitio</span><span data-en>View site</span>&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- 04 · Valpa Truck -->
+    <div class="port-card rev reveal" style="transition-delay:.1s">
+      <div class="port-info">
+        <span class="port-num">04</span>
+        <div class="port-tags">
+          <span class="port-tag-item">Transporte</span>
+          <span class="port-tag-item">Logística</span>
+          <span class="port-tag-item">Landing Page</span>
+        </div>
+        <h3 class="port-title">VALPA TRUCK</h3>
+        <p class="port-desc" data-es>Sitio web para empresa de transporte y logística. Presentación de flota, servicios de carga y sistema de cotización integrado.</p>
+        <p class="port-desc" data-en>Website for a transportation and logistics company. Fleet presentation, freight services and integrated quote system.</p>
+        <a href="https://valpatruck.dgp-link.com/" target="_blank" rel="noopener" class="port-visit">
+          <span data-es>Ver sitio</span><span data-en>View site</span>&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+      <div class="port-devices-wrap">
+        <div class="mockup-tablet">
+          <div class="tablet-cam"></div>
+          <div class="tablet-screen-area">
+            <img src="https://image.thum.io/get/width/800/crop/1066/https://valpatruck.dgp-link.com/" alt="Valpa Truck tablet" loading="lazy">
+          </div>
+          <div class="tablet-home-bar"></div>
+        </div>
+        <div class="mockup-laptop">
+          <div class="laptop-cam"></div>
+          <div class="laptop-screen-area">
+            <img src="https://image.thum.io/get/width/1200/crop/750/https://valpatruck.dgp-link.com/" alt="Valpa Truck" loading="lazy">
+          </div>
+          <div class="laptop-base"></div>
+          <div class="laptop-foot"></div>
+        </div>
+        <div class="mockup-phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen-area">
+            <img src="https://image.thum.io/get/width/400/crop/866/https://valpatruck.dgp-link.com/" alt="Valpa Truck mobile" loading="lazy">
+          </div>
+          <div class="phone-home-bar"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="divider">
+
 <!-- SISTEMAS PERSONALIZADOS -->
 <div class="section" id="sistemas">
   <div class="reveal">
@@ -1313,14 +1556,21 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
     <div class="modal-field"><input type="text" id="mc-name" data-ph-es="Tu nombre completo" data-ph-en="Your full name" placeholder="Tu nombre completo"></div>
     <div class="modal-field">
       <select id="mc-service">
-        <option value="" disabled selected data-es>¿Qué servicio te interesa?</option>
-        <option data-es value="Marketing en Redes Sociales">Marketing en Redes Sociales</option>
-        <option data-es value="Diseño Gráfico / Identidad">Diseño Gráfico / Identidad</option>
-        <option data-es value="Desarrollo Web">Desarrollo Web</option>
-        <option data-es value="Gestión E-Commerce">Gestión E-Commerce</option>
-        <option data-es value="Sistema Personalizado">Sistema Personalizado (CRM / Admin / Inventario…)</option>
-        <option data-es value="Paquete Completo">Paquete Completo</option>
-        <option data-es value="Otro">Otro / No sé aún</option>
+        <option value="" disabled selected class="opt-es">¿Qué servicio te interesa?</option>
+        <option value="Social Media / Redes Sociales" class="opt-es">Marketing en Redes Sociales</option>
+        <option value="Social Media / Redes Sociales" class="opt-en">Social Media Marketing</option>
+        <option value="Diseño Gráfico / Identidad" class="opt-es">Diseño Gráfico / Identidad</option>
+        <option value="Graphic Design / Identity" class="opt-en">Graphic Design / Identity</option>
+        <option value="Desarrollo Web" class="opt-es">Desarrollo Web</option>
+        <option value="Web Design" class="opt-en">Web Design</option>
+        <option value="Gestión E-Commerce" class="opt-es">Gestión E-Commerce</option>
+        <option value="E-Commerce Management" class="opt-en">E-Commerce Management</option>
+        <option value="Sistema Personalizado" class="opt-es">Sistema Personalizado (CRM / Admin…)</option>
+        <option value="Custom System" class="opt-en">Custom System (CRM / Admin…)</option>
+        <option value="Paquete Completo" class="opt-es">Paquete Completo</option>
+        <option value="Full Package" class="opt-en">Full Package</option>
+        <option value="Otro" class="opt-es">Otro / No sé aún</option>
+        <option value="Other" class="opt-en">Other / Not sure yet</option>
       </select>
     </div>
     <div class="modal-field"><textarea id="mc-msg" data-ph-es="Cuéntanos brevemente tu proyecto o idea..." data-ph-en="Tell us briefly about your project or idea..." placeholder="Cuéntanos brevemente tu proyecto o idea..." rows="3"></textarea></div>
@@ -1366,6 +1616,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
           <a href="#paquetes" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Paquetes</span><span data-en>Packages</span></a>
           <a href="#web" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Planes Web</span><span data-en>Web Plans</span></a>
           <a href="#ecommerce" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Gestión E-Commerce</span><span data-en>E-Commerce Management</span></a>
+          <a href="#portafolio" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Portafolio</span><span data-en>Portfolio</span></a>
           <a href="#sistemas" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Sistemas Personalizados</span><span data-en>Custom Systems</span></a>
           <a href="#servicios" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Redes Sociales</span><span data-en>Social Media</span></a>
         </div>
@@ -1451,7 +1702,19 @@ function setLang(l){
   document.body.classList.toggle('en',l==='en');
   document.documentElement.lang=l==='en'?'en':'es';
   document.querySelectorAll('[data-ph-'+l+']').forEach(el=>el.placeholder=el.getAttribute('data-ph-'+l));
+  updateServiceSelect(l);
   syncBtns();
+}
+function updateServiceSelect(l){
+  const sel=document.getElementById('mc-service');
+  if(!sel)return;
+  const cur=sel.value;
+  Array.from(sel.options).forEach(o=>{
+    const isEn=o.classList.contains('opt-en');
+    const isEs=o.classList.contains('opt-es');
+    o.hidden=(l==='en'&&isEs)||(l==='es'&&isEn);
+  });
+  sel.value='';
 }
 /* CURRENCY */
 function setCurr(c){
