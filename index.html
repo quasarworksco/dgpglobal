@@ -663,7 +663,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 .sis-hero-title span{color:var(--blue-s)}
 .sis-hero-sub{font-size:14px;color:rgba(255,255,255,.5);font-weight:300;line-height:1.7;max-width:500px}
 .sis-hero-btn{flex-shrink:0}
-@media(max-width:1000px){.sistemas-grid{grid-template-columns:1fr 1fr}.sis-hero{grid-template-columns:1fr;text-align:center;padding:40px 28px}.sis-hero-sub{margin:0 auto}}
+@media(max-width:1000px){.sistemas-grid{grid-template-columns:1fr 1fr}.sis-hero{grid-template-columns:1fr;text-align:center;padding:40px 28px}.sis-hero-sub{margin:0 auto}.sis-hero-btn{align-items:center;width:100%}}
 @media(max-width:600px){.sistemas-grid{grid-template-columns:1fr}.sis-hero{padding:36px 20px}}
 
 /* ── GOOGLE REVIEWS ─────────────────────────────────────── */
@@ -737,12 +737,14 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 .port-visit i{font-size:10px}
 @media(max-width:900px){
   .port-scene{margin:36px 0 28px}
-  .port-tab{flex:1 1 40%}
+  .port-switcher{flex-wrap:wrap}
+  .port-tab{flex:1 1 calc(50% - 1px);min-width:0}
 }
 @media(max-width:600px){
   .port-card{transform:rotate(0deg)}
-  .port-tab{flex:1 1 100%;padding:12px 14px}
-  .pt-name{font-size:10px}
+  .port-switcher{flex-wrap:wrap}
+  .port-tab{flex:1 1 calc(50% - 1px);min-width:0;padding:12px 14px}
+  .pt-name{font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
 }
 
 /* ── RESPONSIVE GLOBAL ─────────────────────────────────── */
@@ -1354,7 +1356,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
       <p class="sis-hero-sub" data-es>Analizamos tu proceso, diseñamos la solución y la construimos desde cero. Sin plantillas, sin límites. Cada sistema es único, como tu negocio.</p>
       <p class="sis-hero-sub" data-en>We analyze your process, design the solution and build it from scratch. No templates, no limits. Every system is unique, like your business.</p>
     </div>
-    <div class="sis-hero-btn" style="display:flex;flex-direction:column;gap:10px;align-items:flex-end">
+    <div class="sis-hero-btn" style="display:flex;flex-direction:column;gap:10px;align-items:flex-end;width:100%">
       <a href="https://wa.me/12398231738?text=Hola%20DGP%20Global%20Group,%20quiero%20cotizar%20un%20sistema%20personalizado." target="_blank" class="btn-main"><i class="fa-brands fa-whatsapp"></i><span data-es>COTIZAR POR WHATSAPP</span><span data-en>QUOTE VIA WHATSAPP</span><span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
       <a href="mailto:dgpgroup.usa@gmail.com?subject=Cotización%20Sistema%20Personalizado&body=Hola%20DGP%20Global%20Group,%20quiero%20cotizar%20un%20sistema%20personalizado." class="btn-outline-dark"><i class="fa-solid fa-envelope"></i><span data-es>COTIZAR POR EMAIL</span><span data-en>QUOTE VIA EMAIL</span></a>
     </div>
@@ -1792,9 +1794,9 @@ const PORT_PROJECTS=[
 ];
 let activeProj=0;
 
-/* Screenshot loader: microlink (full JS render) → thum.io fallback */
+/* Screenshot loader: microlink (full JS render, no splash) → thum.io fallback */
 const _ssCache={};
-function _thumbUrl(url){return 'https://image.thum.io/get/width/1280/crop/800/wait/20/'+url+'?_v=2';}
+function _thumbUrl(url){return 'https://image.thum.io/get/width/1280/crop/800/wait/20/noanimate/'+url+'?_v=4';}
 function _applyImg(ssUrl,projIdx){
   if(activeProj!==projIdx)return;
   const img=document.getElementById('pimg-laptop');
@@ -1803,12 +1805,14 @@ function _applyImg(ssUrl,projIdx){
   setTimeout(()=>{img.src=ssUrl;img.setAttribute('data-src',ssUrl);img.onload=()=>img.classList.remove('fade-out');img.onerror=()=>img.classList.remove('fade-out');},380);
 }
 function _loadShot(url,projIdx){
-  if(_ssCache[url]){_applyImg(_ssCache[url],projIdx);return;}
+  if(_ssCache[url]&&_ssCache[url]!=='pending'){_applyImg(_ssCache[url],projIdx);return;}
+  if(_ssCache[url]==='pending')return;
   _ssCache[url]='pending';
-  fetch('https://api.microlink.io/?url='+encodeURIComponent(url)+'&screenshot=true&meta=false')
-    .then(r=>r.json())
-    .then(d=>{
-      const ss=d&&d.data&&d.data.screenshot&&d.data.screenshot.url;
+  fetch('https://api.microlink.io/?url='+encodeURIComponent(url)+'&screenshot=true&embed=screenshot.url')
+    .then(r=>r.text())
+    .then(txt=>{
+      /* embed mode returns the CDN url as plain text */
+      const ss=txt&&txt.startsWith('http')?txt.trim():null;
       _ssCache[url]=ss||null;
       if(ss)_applyImg(ss,projIdx);
     })
