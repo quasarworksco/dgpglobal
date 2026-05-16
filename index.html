@@ -1788,8 +1788,8 @@ getRate();loadRevs();
 /* PORTFOLIO SWITCHER */
 const PORT_PROJECTS=[
   {tags_es:['Construcción','Landing Page','Florida'],tags_en:['Construction','Landing Page','Florida'],title:'CAIBO CONSTRUCTION',desc_es:'Sitio web para empresa de construcción en Florida. Diseño limpio, presentación de servicios y formulario de contacto directo.',desc_en:'Website for a Florida construction company. Clean design, service showcase and direct contact form.',url:'https://caiboconstruction.com/'},
-  {tags_es:['Limpieza','Landing Page','Servicios'],tags_en:['Cleaning','Landing Page','Services'],title:'CLEANING GROUP',desc_es:'Landing page para empresa de limpieza profesional. Enfocada en conversión, captación de clientes y llamadas directas.',desc_en:'Landing page for a professional cleaning company. Focused on conversion, lead capture and direct calls.',url:'https://cleaninggroup.dgp-link.com/'},
-  {tags_es:['E-Commerce','Tienda Online','Retail'],tags_en:['E-Commerce','Online Store','Retail'],title:'THE SWEET ZONE',desc_es:'Tienda online con catálogo de productos, experiencia de compra fluida y diseño orientado a maximizar ventas.',desc_en:'Online store with product catalog, smooth shopping experience and design focused on maximizing sales.',url:'https://buythesweetzone.com/'},
+  {tags_es:['Limpieza','Landing Page','Servicios'],tags_en:['Cleaning','Landing Page','Services'],title:'CLEANING GROUP',desc_es:'Landing page para empresa de limpieza profesional. Enfocada en conversión, captación de clientes y llamadas directas.',desc_en:'Landing page for a professional cleaning company. Focused on conversion, lead capture and direct calls.',url:'https://cleaninggroup.dgp-link.com/',imgPos:'center 30%'},
+  {tags_es:['E-Commerce','Tienda Online','Retail'],tags_en:['E-Commerce','Online Store','Retail'],title:'THE SWEET ZONE',desc_es:'Tienda online con catálogo de productos, experiencia de compra fluida y diseño orientado a maximizar ventas.',desc_en:'Online store with product catalog, smooth shopping experience and design focused on maximizing sales.',url:'https://buythesweetzone.com/',imgPos:'center 25%'},
   {tags_es:['Transporte','Logística','Landing Page'],tags_en:['Transport','Logistics','Landing Page'],title:'VALPA TRUCK',desc_es:'Sitio web para empresa de transporte y logística. Presentación de flota, servicios de carga y cotización integrada.',desc_en:'Website for a transportation and logistics company. Fleet presentation, freight services and integrated quote system.',url:'https://valpatruck.dgp-link.com/'}
 ];
 let activeProj=0;
@@ -1826,17 +1826,19 @@ function renderPortProj(idx,animate){
   const img=document.getElementById('pimg-laptop');
   const urlBar=document.getElementById('port-url-bar');
   const initialSrc=_ssCache[p.url]&&_ssCache[p.url]!=='pending'?_ssCache[p.url]:_thumbUrl(p.url);
+  const pos=p.imgPos||'top center';
   if(animate&&img){
     img.classList.add('fade-out');
     if(urlBar)urlBar.style.opacity='0';
     setTimeout(()=>{
       img.src=initialSrc;img.setAttribute('data-src',initialSrc);
+      img.style.objectPosition=pos;
       img.onload=()=>img.classList.remove('fade-out');
       img.onerror=()=>img.classList.remove('fade-out');
       if(urlBar){urlBar.textContent=p.url.replace(/^https?:\/\//,'').replace(/\/$/,'');urlBar.style.opacity='1';}
     },380);
   }else{
-    if(img){img.src=initialSrc;img.setAttribute('data-src',initialSrc);}
+    if(img){img.src=initialSrc;img.setAttribute('data-src',initialSrc);img.style.objectPosition=pos;}
     if(urlBar)urlBar.textContent=p.url.replace(/^https?:\/\//,'').replace(/\/$/,'');
   }
   document.getElementById('port-tags').innerHTML=tags.map(t=>`<span class="port-tag-item">${t}</span>`).join('');
