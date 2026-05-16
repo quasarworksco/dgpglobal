@@ -696,55 +696,23 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 @media(max-width:1000px){.grev-wrap{grid-template-columns:1fr}}
 
 /* ── PORTAFOLIO ──────────────────────────────────────────── */
-@keyframes portFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
-@keyframes portIn{from{opacity:0;transform:translateY(24px) rotate(-1.5deg)}to{opacity:1;transform:translateY(0) rotate(-1.5deg)}}
-.port-scene{position:relative;display:flex;justify-content:center;margin:56px 0 48px;padding-bottom:32px;overflow:hidden}
-.port-glow{position:absolute;width:70%;height:80%;background:radial-gradient(ellipse at 50% 60%,rgba(20,56,204,.1) 0%,transparent 65%);top:10%;left:15%;pointer-events:none;filter:blur(30px);z-index:0}
-.port-float{position:relative;z-index:1;width:100%;max-width:800px;animation:portFloat 7s ease-in-out infinite}
-.port-float:hover{animation-play-state:paused}
-.port-card{background:#17171c;border-radius:16px;overflow:hidden;box-shadow:0 50px 130px rgba(0,0,0,.3),0 20px 50px rgba(0,0,0,.14),0 0 0 1px rgba(255,255,255,.05);transform:rotate(-1.5deg);transition:transform .55s cubic-bezier(.22,1,.36,1),box-shadow .55s;animation:portIn .7s cubic-bezier(.22,1,.36,1) both}
-.port-float:hover .port-card{transform:rotate(0deg) translateY(-10px);box-shadow:0 70px 160px rgba(20,56,204,.2),0 30px 70px rgba(0,0,0,.18),0 0 0 1px rgba(20,56,204,.15)}
-.card-bar{display:flex;align-items:center;gap:10px;padding:11px 16px;background:#1c1c23;border-bottom:1px solid rgba(0,0,0,.4)}
-.card-dots{display:flex;gap:5px;flex-shrink:0}
-.card-dot{width:10px;height:10px;border-radius:50%}
-.card-dot:nth-child(1){background:#ff5f57}
-.card-dot:nth-child(2){background:#febc2e}
-.card-dot:nth-child(3){background:#28c840}
-.card-urlbar{flex:1;height:24px;background:rgba(255,255,255,.07);border-radius:5px;display:flex;align-items:center;padding:0 10px;gap:5px;overflow:hidden;min-width:0}
-.card-lock{color:rgba(255,255,255,.3);font-size:9px;flex-shrink:0}
-.card-url-text{font-size:10px;color:rgba(255,255,255,.38);font-family:monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:opacity .3s}
-.card-screen{aspect-ratio:16/9;overflow:hidden;background:#e5e5e5;position:relative}
-.card-screen img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;transition:opacity .45s ease,transform .45s ease}
-.card-screen img.fade-out{opacity:0;transform:scale(1.015)}
-/* Switcher */
-.port-switcher{display:flex;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:36px}
-.port-tab{flex:1;background:#fff;border:none;padding:16px 18px;text-align:left;cursor:pointer;transition:background .2s;display:flex;flex-direction:column;gap:4px}
-.port-tab:hover{background:rgba(20,56,204,.03)}
-.port-tab.active{background:var(--black)}
-.pt-num{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:2px;color:var(--blue)}
-.port-tab.active .pt-num{color:var(--blue-s)}
-.pt-name{font-size:11px;font-weight:500;letter-spacing:.5px;color:var(--soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.port-tab.active .pt-name{color:#fff}
-/* Active info */
-.port-active{text-align:center}
-.port-active-inner{max-width:560px;margin:0 auto}
-.port-tags{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin-bottom:14px}
-.port-tag-item{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);background:rgba(20,56,204,.06);border:1px solid rgba(20,56,204,.14);padding:4px 10px}
-.port-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,48px);line-height:.95;color:var(--black);margin-bottom:12px}
-.port-desc{font-size:14px;color:var(--soft);line-height:1.75;font-weight:300;margin-bottom:24px}
-.port-visit{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;background:var(--black);color:#fff;text-decoration:none;font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;border-radius:100px;transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .25s;box-shadow:0 6px 20px rgba(0,0,0,.12)}
-.port-visit:hover{background:var(--blue);transform:translateY(-3px);box-shadow:0 12px 30px rgba(20,56,204,.3)}
-.port-visit i{font-size:10px}
-@media(max-width:900px){
-  .port-scene{margin:36px 0 28px}
-  .port-switcher{flex-wrap:wrap}
-  .port-tab{flex:1 1 calc(50% - 1px);min-width:0}
-}
-@media(max-width:600px){
-  .port-card{transform:rotate(0deg)}
-  .port-switcher{flex-wrap:wrap}
-  .port-tab{flex:1 1 calc(50% - 1px);min-width:0;padding:12px 14px}
-  .pt-name{font-size:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.port-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border);margin-top:56px}
+.port-item{position:relative;background:var(--black);overflow:hidden;aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;transition:transform .4s cubic-bezier(.22,1,.36,1)}
+.port-item::before{content:'';position:absolute;inset:0;background:var(--pi-grad,linear-gradient(135deg,#0a0a0a 0%,#1438cc 100%));z-index:0;transition:opacity .4s}
+.port-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.2) 50%,transparent 100%);z-index:1}
+.port-item:hover{transform:scale(1.01)}
+.port-item:hover .pi-arrow{transform:translate(3px,-3px)}
+.pi-num{position:absolute;top:24px;left:28px;font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:3px;color:rgba(255,255,255,.35);z-index:2}
+.pi-body{position:relative;z-index:2;padding:28px}
+.pi-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px}
+.pi-tag{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.5);border:1px solid rgba(255,255,255,.15);padding:3px 8px}
+.pi-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,2.5vw,34px);letter-spacing:1px;color:#fff;line-height:1;margin-bottom:8px}
+.pi-desc{font-size:12px;color:rgba(255,255,255,.5);line-height:1.6;font-weight:300;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pi-footer{display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1)}
+.pi-url{font-size:10px;font-family:monospace;color:rgba(255,255,255,.35);letter-spacing:.5px}
+.pi-arrow{color:rgba(255,255,255,.6);font-size:13px;transition:transform .3s cubic-bezier(.34,1.56,.64,1)}
+@media(max-width:700px){
+  .port-grid{grid-template-columns:1fr}
 }
 
 /* ── RESPONSIVE GLOBAL ─────────────────────────────────── */
@@ -1239,60 +1207,85 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
     <p class="sec-sub" style="margin:0 auto" data-en>Purposeful design, precise code. Every site we build is crafted to stand out, convert visitors, and position your brand.</p>
   </div>
 
-  <!-- Floating Card Scene -->
-  <div class="port-scene reveal" style="transition-delay:.15s">
-    <div class="port-glow"></div>
-    <div class="port-float">
-      <div class="port-card">
-        <div class="card-bar">
-          <div class="card-dots">
-            <div class="card-dot"></div>
-            <div class="card-dot"></div>
-            <div class="card-dot"></div>
-          </div>
-          <div class="card-urlbar">
-            <i class="fa-solid fa-lock card-lock"></i>
-            <span class="card-url-text" id="port-url-bar">caiboconstruction.com</span>
-          </div>
+  <!-- Portfolio Grid -->
+  <div class="port-grid reveal" style="transition-delay:.15s">
+
+    <a class="port-item" href="https://caiboconstruction.com/" target="_blank" rel="noopener"
+       style="--pi-grad:linear-gradient(135deg,#1a1a1a 0%,#2c3e50 100%)">
+      <span class="pi-num">01</span>
+      <div class="pi-body">
+        <div class="pi-tags">
+          <span class="pi-tag" data-es>Construcción</span><span class="pi-tag" data-en>Construction</span>
+          <span class="pi-tag">Florida</span>
+          <span class="pi-tag">Landing Page</span>
         </div>
-        <div class="card-screen">
-          <img id="pimg-laptop" src="https://image.thum.io/get/width/1280/crop/800/wait/14/https://caiboconstruction.com/" alt="Portfolio" loading="eager">
+        <div class="pi-title">CAIBO CONSTRUCTION</div>
+        <p class="pi-desc" data-es>Sitio web para empresa de construcción en Florida. Diseño limpio y formulario de contacto directo.</p>
+        <p class="pi-desc" data-en>Website for a Florida construction company. Clean design and direct contact form.</p>
+        <div class="pi-footer">
+          <span class="pi-url">caiboconstruction.com</span>
+          <i class="fa-solid fa-arrow-up-right-from-square pi-arrow"></i>
         </div>
       </div>
-    </div>
-  </div>
+    </a>
 
-  <!-- Project Switcher -->
-  <div class="port-switcher reveal" style="transition-delay:.25s">
-    <button class="port-tab active" onclick="switchProj(0)">
-      <span class="pt-num">01</span>
-      <span class="pt-name">Caibo Construction</span>
-    </button>
-    <button class="port-tab" onclick="switchProj(1)">
-      <span class="pt-num">02</span>
-      <span class="pt-name">Cleaning Group</span>
-    </button>
-    <button class="port-tab" onclick="switchProj(2)">
-      <span class="pt-num">03</span>
-      <span class="pt-name">The Sweet Zone</span>
-    </button>
-    <button class="port-tab" onclick="switchProj(3)">
-      <span class="pt-num">04</span>
-      <span class="pt-name">Valpa Truck</span>
-    </button>
-  </div>
+    <a class="port-item" href="https://cleaninggroup.dgp-link.com/" target="_blank" rel="noopener"
+       style="--pi-grad:linear-gradient(135deg,#0d2137 0%,#1976d2 100%)">
+      <span class="pi-num">02</span>
+      <div class="pi-body">
+        <div class="pi-tags">
+          <span class="pi-tag" data-es>Limpieza</span><span class="pi-tag" data-en>Cleaning</span>
+          <span class="pi-tag" data-es>Servicios</span><span class="pi-tag" data-en>Services</span>
+          <span class="pi-tag">Landing Page</span>
+        </div>
+        <div class="pi-title">CLEANING GROUP</div>
+        <p class="pi-desc" data-es>Landing page para empresa de limpieza profesional. Enfocada en conversión y captación de clientes.</p>
+        <p class="pi-desc" data-en>Landing page for a professional cleaning company. Focused on conversion and lead capture.</p>
+        <div class="pi-footer">
+          <span class="pi-url">cleaninggroup.dgp-link.com</span>
+          <i class="fa-solid fa-arrow-up-right-from-square pi-arrow"></i>
+        </div>
+      </div>
+    </a>
 
-  <!-- Active project info -->
-  <div class="port-active reveal" style="transition-delay:.3s">
-    <div class="port-active-inner">
-      <div id="port-tags" class="port-tags"></div>
-      <h3 id="port-title" class="port-title"></h3>
-      <p id="port-desc-es" class="port-desc" data-es></p>
-      <p id="port-desc-en" class="port-desc" data-en></p>
-      <a id="port-url" href="#" target="_blank" rel="noopener" class="port-visit">
-        <span data-es>Ver sitio</span><span data-en>View site</span>&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i>
-      </a>
-    </div>
+    <a class="port-item" href="https://buythesweetzone.com/" target="_blank" rel="noopener"
+       style="--pi-grad:linear-gradient(135deg,#1a0a2e 0%,#7b1fa2 100%)">
+      <span class="pi-num">03</span>
+      <div class="pi-body">
+        <div class="pi-tags">
+          <span class="pi-tag">E-Commerce</span>
+          <span class="pi-tag" data-es>Tienda Online</span><span class="pi-tag" data-en>Online Store</span>
+          <span class="pi-tag">Retail</span>
+        </div>
+        <div class="pi-title">THE SWEET ZONE</div>
+        <p class="pi-desc" data-es>Tienda online con catálogo de productos y experiencia de compra fluida orientada a ventas.</p>
+        <p class="pi-desc" data-en>Online store with product catalog and smooth shopping experience focused on sales.</p>
+        <div class="pi-footer">
+          <span class="pi-url">buythesweetzone.com</span>
+          <i class="fa-solid fa-arrow-up-right-from-square pi-arrow"></i>
+        </div>
+      </div>
+    </a>
+
+    <a class="port-item" href="https://valpatruck.dgp-link.com/" target="_blank" rel="noopener"
+       style="--pi-grad:linear-gradient(135deg,#0a1628 0%,#e65100 100%)">
+      <span class="pi-num">04</span>
+      <div class="pi-body">
+        <div class="pi-tags">
+          <span class="pi-tag" data-es>Transporte</span><span class="pi-tag" data-en>Transport</span>
+          <span class="pi-tag" data-es>Logística</span><span class="pi-tag" data-en>Logistics</span>
+          <span class="pi-tag">Landing Page</span>
+        </div>
+        <div class="pi-title">VALPA TRUCK</div>
+        <p class="pi-desc" data-es>Sitio web para empresa de transporte y logística. Flota, servicios de carga y cotización integrada.</p>
+        <p class="pi-desc" data-en>Website for a transportation and logistics company. Fleet, freight services and integrated quotes.</p>
+        <div class="pi-footer">
+          <span class="pi-url">valpatruck.dgp-link.com</span>
+          <i class="fa-solid fa-arrow-up-right-from-square pi-arrow"></i>
+        </div>
+      </div>
+    </a>
+
   </div>
 </div>
 
@@ -1785,75 +1778,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeContactModal();
 
 getRate();loadRevs();
 
-/* PORTFOLIO SWITCHER */
-const PORT_PROJECTS=[
-  {tags_es:['Construcción','Landing Page','Florida'],tags_en:['Construction','Landing Page','Florida'],title:'CAIBO CONSTRUCTION',desc_es:'Sitio web para empresa de construcción en Florida. Diseño limpio, presentación de servicios y formulario de contacto directo.',desc_en:'Website for a Florida construction company. Clean design, service showcase and direct contact form.',url:'https://caiboconstruction.com/'},
-  {tags_es:['Limpieza','Landing Page','Servicios'],tags_en:['Cleaning','Landing Page','Services'],title:'CLEANING GROUP',desc_es:'Landing page para empresa de limpieza profesional. Enfocada en conversión, captación de clientes y llamadas directas.',desc_en:'Landing page for a professional cleaning company. Focused on conversion, lead capture and direct calls.',url:'https://cleaninggroup.dgp-link.com/',imgPos:'center 60%'},
-  {tags_es:['E-Commerce','Tienda Online','Retail'],tags_en:['E-Commerce','Online Store','Retail'],title:'THE SWEET ZONE',desc_es:'Tienda online con catálogo de productos, experiencia de compra fluida y diseño orientado a maximizar ventas.',desc_en:'Online store with product catalog, smooth shopping experience and design focused on maximizing sales.',url:'https://buythesweetzone.com/',imgPos:'center 55%'},
-  {tags_es:['Transporte','Logística','Landing Page'],tags_en:['Transport','Logistics','Landing Page'],title:'VALPA TRUCK',desc_es:'Sitio web para empresa de transporte y logística. Presentación de flota, servicios de carga y cotización integrada.',desc_en:'Website for a transportation and logistics company. Fleet presentation, freight services and integrated quote system.',url:'https://valpatruck.dgp-link.com/'}
-];
-let activeProj=0;
-
-/* Screenshot loader: microlink (full JS render, no splash) → thum.io fallback */
-const _ssCache={};
-function _thumbUrl(url){return 'https://image.thum.io/get/width/1280/crop/800/wait/20/noanimate/'+url+'?_v=4';}
-function _applyImg(ssUrl,projIdx){
-  if(activeProj!==projIdx)return;
-  const img=document.getElementById('pimg-laptop');
-  if(!img||img.getAttribute('data-src')===ssUrl)return;
-  img.classList.add('fade-out');
-  setTimeout(()=>{img.src=ssUrl;img.setAttribute('data-src',ssUrl);img.onload=()=>img.classList.remove('fade-out');img.onerror=()=>img.classList.remove('fade-out');},380);
-}
-function _loadShot(url,projIdx){
-  if(_ssCache[url]&&_ssCache[url]!=='pending'){_applyImg(_ssCache[url],projIdx);return;}
-  if(_ssCache[url]==='pending')return;
-  _ssCache[url]='pending';
-  fetch('https://api.microlink.io/?url='+encodeURIComponent(url)+'&screenshot=true&embed=screenshot.url')
-    .then(r=>r.text())
-    .then(txt=>{
-      /* embed mode returns the CDN url as plain text */
-      const ss=txt&&txt.startsWith('http')?txt.trim():null;
-      _ssCache[url]=ss||null;
-      if(ss)_applyImg(ss,projIdx);
-    })
-    .catch(()=>{_ssCache[url]=null;});
-}
-
-function renderPortProj(idx,animate){
-  const p=PORT_PROJECTS[idx];
-  const isEn=lang==='en';
-  const tags=isEn?p.tags_en:p.tags_es;
-  const img=document.getElementById('pimg-laptop');
-  const urlBar=document.getElementById('port-url-bar');
-  const initialSrc=_ssCache[p.url]&&_ssCache[p.url]!=='pending'?_ssCache[p.url]:_thumbUrl(p.url);
-  const pos=p.imgPos||'top center';
-  if(animate&&img){
-    img.classList.add('fade-out');
-    if(urlBar)urlBar.style.opacity='0';
-    setTimeout(()=>{
-      img.src=initialSrc;img.setAttribute('data-src',initialSrc);
-      img.style.objectPosition=pos;
-      img.onload=()=>img.classList.remove('fade-out');
-      img.onerror=()=>img.classList.remove('fade-out');
-      if(urlBar){urlBar.textContent=p.url.replace(/^https?:\/\//,'').replace(/\/$/,'');urlBar.style.opacity='1';}
-    },380);
-  }else{
-    if(img){img.src=initialSrc;img.setAttribute('data-src',initialSrc);img.style.objectPosition=pos;}
-    if(urlBar)urlBar.textContent=p.url.replace(/^https?:\/\//,'').replace(/\/$/,'');
-  }
-  document.getElementById('port-tags').innerHTML=tags.map(t=>`<span class="port-tag-item">${t}</span>`).join('');
-  document.getElementById('port-title').textContent=p.title;
-  const des=document.getElementById('port-desc-es'),den=document.getElementById('port-desc-en');
-  if(des)des.textContent=p.desc_es;if(den)den.textContent=p.desc_en;
-  document.getElementById('port-url').href=p.url;
-  document.querySelectorAll('.port-tab').forEach((btn,i)=>btn.classList.toggle('active',i===idx));
-  activeProj=idx;
-  _loadShot(p.url,idx);
-}
-function switchProj(idx){if(idx===activeProj)return;renderPortProj(idx,true);}
-renderPortProj(0,false);
-/* Preload all screenshots in background */
-PORT_PROJECTS.forEach((p,i)=>{setTimeout(()=>_loadShot(p.url,i),i*800);});
 
 /* CURSOR GLOW */
 (function(){
