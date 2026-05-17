@@ -787,6 +787,10 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
   .ecom-card-left,.ecom-card-right{padding:28px 20px}
   .design-row{padding:20px 20px}
 }
+/* Contact form grid mobile */
+@media(max-width:560px){
+  #mainContactForm [style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important}
+}
 /* Extra small 360px */
 @media(max-width:360px){
   .hero-title{font-size:40px}
@@ -904,11 +908,11 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
       <span data-en>Real strategies for measurable results. Innovation and technology applied to your growth.</span>
     </p>
     <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a href="https://wa.me/12398231738?text=Hola%20DGP%20Group,%20quiero%20cotizar%20un%20proyecto." class="btn-main" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
+      <button onclick="openHeroForm()" class="btn-main" style="border:none;cursor:pointer">
+        <i class="fa-solid fa-paper-plane"></i>
         <span data-es>COMIENZA TU PROYECTO</span><span data-en>START YOUR PROJECT</span>
         <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
-      </a>
+      </button>
       <a href="mailto:dgpgroup.usa@gmail.com?subject=Cotización%20de%20proyecto&body=Hola%20DGP%20Global%20Group,%20quiero%20cotizar%20un%20proyecto." class="btn-outline-hero">
         <i class="fa-solid fa-envelope"></i>
         <span data-es>ENVIAR EMAIL</span><span data-en>SEND EMAIL</span>
@@ -1287,42 +1291,42 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
     <p class="sec-sub" data-en>We build any management, administration or project system tailored exactly to your business. If you can imagine it, we build it.</p>
   </div>
   <div class="sistemas-grid">
-    <div class="sis-card reveal" onclick="openContactModal()" style="transition-delay:0s">
+    <div class="sis-card reveal" onclick="scrollToContact()" style="transition-delay:0s">
       <div class="sis-icon"><i class="fa-solid fa-sliders"></i></div>
       <div class="sis-name" data-es>PANEL DE ADMINISTRACIÓN</div><div class="sis-name" data-en>ADMIN DASHBOARD</div>
       <p class="sis-desc" data-es>Paneles de control a medida para gestionar tu negocio, empleados, inventario o clientes desde cualquier dispositivo.</p>
       <p class="sis-desc" data-en>Custom control panels to manage your business, employees, inventory or customers from any device.</p>
       <div class="sis-footer"><span class="sis-tag" data-es>A cotización</span><span class="sis-tag" data-en>By quote</span><i class="fa-solid fa-arrow-right sis-arrow"></i></div>
     </div>
-    <div class="sis-card reveal" onclick="openContactModal()" style="transition-delay:.1s">
+    <div class="sis-card reveal" onclick="scrollToContact()" style="transition-delay:.1s">
       <div class="sis-icon"><i class="fa-solid fa-users-gear"></i></div>
       <div class="sis-name">CRM</div>
       <p class="sis-desc" data-es>Sistemas de gestión de clientes, seguimiento de ventas, pipeline de prospectos y automatización de comunicaciones.</p>
       <p class="sis-desc" data-en>Customer management systems, sales tracking, prospect pipeline and communication automation.</p>
       <div class="sis-footer"><span class="sis-tag" data-es>A cotización</span><span class="sis-tag" data-en>By quote</span><i class="fa-solid fa-arrow-right sis-arrow"></i></div>
     </div>
-    <div class="sis-card reveal" onclick="openContactModal()" style="transition-delay:.2s">
+    <div class="sis-card reveal" onclick="scrollToContact()" style="transition-delay:.2s">
       <div class="sis-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
       <div class="sis-name" data-es>INVENTARIO & ALMACÉN</div><div class="sis-name" data-en>INVENTORY & WAREHOUSE</div>
       <p class="sis-desc" data-es>Control de stock, entradas y salidas, alertas automáticas de reposición y reportes en tiempo real.</p>
       <p class="sis-desc" data-en>Stock control, entries and exits, automatic replenishment alerts and real-time reports.</p>
       <div class="sis-footer"><span class="sis-tag" data-es>A cotización</span><span class="sis-tag" data-en>By quote</span><i class="fa-solid fa-arrow-right sis-arrow"></i></div>
     </div>
-    <div class="sis-card reveal" onclick="openContactModal()" style="transition-delay:.1s">
+    <div class="sis-card reveal" onclick="scrollToContact()" style="transition-delay:.1s">
       <div class="sis-icon"><i class="fa-solid fa-diagram-project"></i></div>
       <div class="sis-name" data-es>GESTIÓN DE PROYECTOS</div><div class="sis-name" data-en>PROJECT MANAGEMENT</div>
       <p class="sis-desc" data-es>Plataformas internas para asignar tareas, gestionar equipos, hacer seguimiento de avances y entregar a tiempo.</p>
       <p class="sis-desc" data-en>Internal platforms to assign tasks, manage teams, track progress and deliver on time.</p>
       <div class="sis-footer"><span class="sis-tag" data-es>A cotización</span><span class="sis-tag" data-en>By quote</span><i class="fa-solid fa-arrow-right sis-arrow"></i></div>
     </div>
-    <div class="sis-card reveal" onclick="openContactModal()" style="transition-delay:.2s">
+    <div class="sis-card reveal" onclick="scrollToContact()" style="transition-delay:.2s">
       <div class="sis-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
       <div class="sis-name" data-es>FACTURACIÓN & PAGOS</div><div class="sis-name" data-en>BILLING & PAYMENTS</div>
       <p class="sis-desc" data-es>Sistemas de facturación automatizada, seguimiento de cobros, integración con pasarelas de pago y reportes financieros.</p>
       <p class="sis-desc" data-en>Automated billing systems, payment tracking, payment gateway integration and financial reports.</p>
       <div class="sis-footer"><span class="sis-tag" data-es>A cotización</span><span class="sis-tag" data-en>By quote</span><i class="fa-solid fa-arrow-right sis-arrow"></i></div>
     </div>
-    <div class="sis-card reveal" onclick="openContactModal()" style="transition-delay:.3s">
+    <div class="sis-card reveal" onclick="scrollToContact()" style="transition-delay:.3s">
       <div class="sis-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
       <div class="sis-name" data-es>¿ALGO MÁS?</div><div class="sis-name" data-en>SOMETHING ELSE?</div>
       <p class="sis-desc" data-es>Portales de reservas, apps web, integraciones con APIs, automatizaciones, sistemas de turnos, membresías… todo es posible.</p>
@@ -1440,6 +1444,47 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
   </div>
 </div>
 
+<!-- CONTACT FORM SECTION -->
+<div class="section" id="contacto" style="background:var(--off);max-width:100%;padding:80px 0">
+  <div style="max-width:680px;margin:0 auto;padding:0 24px">
+    <div class="reveal">
+      <div class="sec-eyebrow" data-es>Cotización gratuita</div><div class="sec-eyebrow" data-en>Free quote</div>
+      <h2 class="sec-title"><span data-es>HABLEMOS DE TU <span class="accent">PROYECTO</span></span><span data-en>LET'S TALK ABOUT YOUR <span class="accent">PROJECT</span></span></h2>
+      <p class="sec-sub" data-es>Completa el formulario y te respondemos en menos de 24 horas. Sin compromisos.</p>
+      <p class="sec-sub" data-en>Fill out the form and we'll get back to you in under 24 hours. No commitments.</p>
+    </div>
+    <form action="https://formspree.io/f/xpqnajzo" method="POST" id="mainContactForm" class="reveal" style="margin-top:36px;transition-delay:.1s" novalidate>
+      <input type="hidden" name="_subject" value="Nuevo contacto desde dgpglobalgroup.com">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+        <div class="field" style="margin:0"><input type="text" name="name" data-ph-es="Nombre completo" data-ph-en="Full name" placeholder="Nombre completo" required></div>
+        <div class="field" style="margin:0"><input type="email" name="email" data-ph-es="Correo electrónico" data-ph-en="Email address" placeholder="Correo electrónico" required></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+        <div class="field" style="margin:0"><input type="tel" name="phone" data-ph-es="Teléfono (opcional)" data-ph-en="Phone (optional)" placeholder="Teléfono (opcional)"></div>
+        <div class="field" style="margin:0">
+          <select name="service" style="width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--black);outline:none;transition:border-color .2s;appearance:none">
+            <option value="" disabled selected data-es>¿Qué servicio te interesa?</option>
+            <option value="" disabled selected data-en>Which service interests you?</option>
+            <option data-es>Diseño Web</option><option data-en>Web Design</option>
+            <option data-es>Marketing Digital</option><option data-en>Digital Marketing</option>
+            <option data-es>Diseño Gráfico / Logo</option><option data-en>Graphic Design / Logo</option>
+            <option data-es>Gestión E-Commerce</option><option data-en>E-Commerce Management</option>
+            <option data-es>Sistema Personalizado</option><option data-en>Custom System</option>
+            <option data-es>Paquete Completo</option><option data-en>Full Package</option>
+            <option data-es>Otro</option><option data-en>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><textarea name="message" rows="4" data-ph-es="Cuéntanos brevemente tu proyecto o idea..." data-ph-en="Tell us briefly about your project or idea..." placeholder="Cuéntanos brevemente tu proyecto o idea..." required></textarea></div>
+      <button type="submit" class="submit-btn" id="mainSubmitBtn">
+        <span data-es>ENVIAR MENSAJE</span><span data-en>SEND MESSAGE</span>
+        <span class="barr"><i class="fa-solid fa-arrow-right"></i></span>
+      </button>
+      <div id="mainContactStatus" class="status"></div>
+    </form>
+  </div>
+</div>
+
 <!-- WA FLOAT -->
 <div id="wa-float">
   <div id="wa-popup">
@@ -1502,6 +1547,46 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <span class="barr"><i class="fa-solid fa-envelope"></i></span>
       </button>
     </div>
+  </div>
+</div>
+
+<!-- HERO FORM MODAL -->
+<div id="heroFormModal" class="modal-overlay" style="display:none;position:fixed;inset:0;z-index:9000;align-items:center;justify-content:center;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);padding:20px">
+  <div class="modal-box" style="max-width:520px;width:100%;position:relative">
+    <button class="modal-close" onclick="closeHeroForm()">✕</button>
+    <div class="modal-eyebrow" data-es>Cotización gratuita</div><div class="modal-eyebrow" data-en>Free quote</div>
+    <div class="modal-title" data-es>CUÉNTANOS TU PROYECTO</div><div class="modal-title" data-en>TELL US YOUR PROJECT</div>
+    <p class="modal-sub" data-es>Te respondemos en menos de 24 horas. Sin compromisos.</p>
+    <p class="modal-sub" data-en>We'll get back to you in under 24 hours. No commitments.</p>
+    <form id="heroFormFs" action="https://formspree.io/f/xpqnajzo" method="POST" style="margin-top:4px" novalidate>
+      <input type="hidden" name="_subject" value="Nuevo contacto desde dgpglobalgroup.com">
+      <div class="modal-field"><input type="text" name="name" id="hf-name" data-ph-es="Tu nombre completo" data-ph-en="Your full name" placeholder="Tu nombre completo" required></div>
+      <div class="modal-field"><input type="email" name="email" id="hf-email" data-ph-es="Correo electrónico" data-ph-en="Email address" placeholder="Correo electrónico" required></div>
+      <div class="modal-field"><input type="tel" name="phone" data-ph-es="Teléfono (opcional)" data-ph-en="Phone (optional)" placeholder="Teléfono (opcional)"></div>
+      <div class="modal-field">
+        <select name="service" style="width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--soft);outline:none;transition:border-color .2s">
+          <option value="" disabled selected data-es>¿Qué servicio te interesa?</option>
+          <option value="Diseño Web" data-es>Diseño Web</option>
+          <option value="Web Design" data-en>Web Design</option>
+          <option value="Marketing Digital" data-es>Marketing Digital</option>
+          <option value="Digital Marketing" data-en>Digital Marketing</option>
+          <option value="Diseño Gráfico / Logo" data-es>Diseño Gráfico / Logo</option>
+          <option value="Graphic Design / Logo" data-en>Graphic Design / Logo</option>
+          <option value="E-Commerce" data-es>Gestión E-Commerce</option>
+          <option value="E-Commerce" data-en>E-Commerce Management</option>
+          <option value="Sistema Personalizado" data-es>Sistema Personalizado</option>
+          <option value="Custom System" data-en>Custom System</option>
+          <option value="Otro" data-es>Otro</option>
+          <option value="Other" data-en>Other</option>
+        </select>
+      </div>
+      <div class="modal-field"><textarea name="message" rows="3" data-ph-es="Cuéntanos brevemente tu proyecto..." data-ph-en="Tell us briefly about your project..." placeholder="Cuéntanos brevemente tu proyecto..."></textarea></div>
+      <button type="submit" class="submit-btn" id="hfSubmitBtn" style="margin-top:4px">
+        <span data-es>ENVIAR MENSAJE</span><span data-en>SEND MESSAGE</span>
+        <span class="barr"><i class="fa-solid fa-paper-plane"></i></span>
+      </button>
+      <div id="hfStatus" class="status"></div>
+    </form>
   </div>
 </div>
 
@@ -1762,7 +1847,77 @@ function sendContactEmail(){
   window.location.href=`mailto:dgpgroup.usa@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   closeContactModal();
 }
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeContactModal();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeContactModal();closeHeroForm();}});
+
+/* HERO FORM (Formspree) */
+function openHeroForm(){
+  const m=document.getElementById('heroFormModal');
+  m.style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closeHeroForm(){
+  const m=document.getElementById('heroFormModal');
+  m.style.display='none';
+  document.body.style.overflow='';
+}
+document.getElementById('heroFormModal').addEventListener('click',function(e){if(e.target===this)closeHeroForm();});
+document.getElementById('heroFormFs').addEventListener('submit',async function(e){
+  e.preventDefault();
+  const btn=document.getElementById('hfSubmitBtn');
+  const status=document.getElementById('hfStatus');
+  const isEn=lang==='en';
+  if(!document.getElementById('hf-name').value.trim()||!document.getElementById('hf-email').value.trim()){
+    status.className='status err';status.style.display='block';
+    status.textContent=isEn?'Please fill in your name and email.':'Por favor completa tu nombre y correo.';
+    return;
+  }
+  btn.disabled=true;
+  btn.querySelector('span[data-es]').textContent=isEn?'Sending...':'Enviando...';
+  try{
+    const res=await fetch(this.action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
+    if(res.ok){
+      status.className='status ok';status.style.display='block';
+      status.textContent=isEn?'Message sent! We\'ll reply within 24 hours.':'¡Mensaje enviado! Te respondemos en menos de 24 horas.';
+      this.reset();
+      setTimeout(closeHeroForm,3000);
+    } else {
+      throw new Error();
+    }
+  }catch{
+    status.className='status err';status.style.display='block';
+    status.textContent=isEn?'Error sending. Please try WhatsApp.':'Error al enviar. Intenta por WhatsApp.';
+    btn.disabled=false;
+  }
+});
+
+/* MAIN CONTACT FORM (Formspree) */
+const mainForm=document.getElementById('mainContactForm');
+if(mainForm){
+  mainForm.addEventListener('submit',async function(e){
+    e.preventDefault();
+    const btn=document.getElementById('mainSubmitBtn');
+    const status=document.getElementById('mainContactStatus');
+    const isEn=lang==='en';
+    btn.disabled=true;
+    try{
+      const res=await fetch(this.action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
+      if(res.ok){
+        status.className='status ok';status.style.display='block';
+        status.textContent=isEn?'Message sent! We\'ll reply within 24 hours.':'¡Mensaje enviado! Te respondemos en menos de 24 horas.';
+        this.reset();
+      } else {throw new Error();}
+    }catch{
+      status.className='status err';status.style.display='block';
+      status.textContent=isEn?'Error sending. Please try WhatsApp.':'Error al enviar. Intenta por WhatsApp.';
+      btn.disabled=false;
+    }
+  });
+}
+
+/* SCROLL TO CONTACT */
+function scrollToContact(){
+  document.getElementById('contacto').scrollIntoView({behavior:'smooth',block:'start'});
+}
 
 setTimeout(()=>{getRate();loadRevs();},1500);
 
