@@ -457,7 +457,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 #hero .glow,#hero .bg-word,#hero .hero-content,#hero .hero-bottom{z-index:2}
 
 /* ALTAIR AI CHAT */
-#altair-widget{position:fixed;bottom:24px;left:24px;z-index:1001;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+#altair-widget{position:fixed;bottom:100px;right:28px;z-index:1001;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
 #altair-chat{width:340px;background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 16px 56px rgba(0,0,0,.18);display:none;flex-direction:column;max-height:520px}
 #altair-chat.open{display:flex;animation:altairPop .35s cubic-bezier(.34,1.56,.64,1)}
 @keyframes altairPop{from{opacity:0;transform:scale(.92) translateY(16px)}to{opacity:1;transform:scale(1) translateY(0)}}
@@ -485,7 +485,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 .altair-send:hover{background:var(--blue-l)}
 #altair-fab{width:52px;height:52px;border-radius:50%;background:var(--black);border:2px solid rgba(255,255,255,.08);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.25);transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1)}
 #altair-fab:hover{background:var(--blue);transform:scale(1.08)}
-@media(max-width:480px){#altair-widget{left:12px;bottom:90px}#altair-chat{width:calc(100vw - 24px)}}
+@media(max-width:480px){#altair-widget{right:16px;bottom:148px}#altair-chat{width:calc(100vw - 32px)}}
 
 /* CONTACT MODAL */
 #contactModal{display:none;position:fixed;inset:0;z-index:5000;align-items:center;justify-content:center;padding:20px}
