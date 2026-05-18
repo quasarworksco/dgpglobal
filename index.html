@@ -456,6 +456,37 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.92) 0%,rgba(247,247,245,.85) 40%,rgba(20,56,204,.06) 100%);z-index:1;pointer-events:none}
 #hero .glow,#hero .bg-word,#hero .hero-content,#hero .hero-bottom{z-index:2}
 
+/* ALTAIR AI CHAT */
+#altair-widget{position:fixed;bottom:24px;left:24px;z-index:1001;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+#altair-chat{width:340px;background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 16px 56px rgba(0,0,0,.18);display:none;flex-direction:column;max-height:520px}
+#altair-chat.open{display:flex;animation:altairPop .35s cubic-bezier(.34,1.56,.64,1)}
+@keyframes altairPop{from{opacity:0;transform:scale(.92) translateY(16px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.altair-header{background:var(--black);padding:14px 18px;display:flex;align-items:center;gap:12px;flex-shrink:0}
+.altair-avatar{width:36px;height:36px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:17px;color:#fff;flex-shrink:0;letter-spacing:1px}
+.altair-info{flex:1}
+.altair-name{font-family:'Bebas Neue',sans-serif;font-size:16px;color:#fff;letter-spacing:2px;line-height:1}
+.altair-status{font-size:10px;color:rgba(255,255,255,.45);letter-spacing:.5px;margin-top:2px;display:flex;align-items:center;gap:5px}
+.altair-status::before{content:'';width:5px;height:5px;background:#22c55e;border-radius:50%;flex-shrink:0;animation:blink 1.8s ease-in-out infinite}
+.altair-close{background:none;border:none;color:rgba(255,255,255,.4);cursor:pointer;font-size:16px;line-height:1;padding:4px;transition:color .2s;flex-shrink:0}
+.altair-close:hover{color:#fff}
+.altair-messages{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;min-height:180px;max-height:320px;scroll-behavior:smooth}
+.altair-messages::-webkit-scrollbar{width:3px}.altair-messages::-webkit-scrollbar-thumb{background:var(--border)}
+.altair-msg{max-width:88%;padding:10px 14px;font-size:13px;line-height:1.65;font-weight:300;word-break:break-word}
+.altair-msg-bot{background:var(--off);border:1px solid var(--border);color:var(--black);border-radius:4px 12px 12px 12px;align-self:flex-start}
+.altair-msg-user{background:var(--blue);color:#fff;border-radius:12px 4px 12px 12px;align-self:flex-end;font-weight:400}
+.altair-typing{display:flex;gap:4px;align-items:center;padding:10px 14px;background:var(--off);border:1px solid var(--border);border-radius:4px 12px 12px 12px;width:fit-content;align-self:flex-start}
+.altair-typing span{width:6px;height:6px;background:var(--soft);border-radius:50%;animation:altairDot 1.2s ease-in-out infinite}
+.altair-typing span:nth-child(2){animation-delay:.2s}.altair-typing span:nth-child(3){animation-delay:.4s}
+@keyframes altairDot{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+.altair-input-area{display:flex;border-top:1px solid var(--border);flex-shrink:0}
+#altair-input{flex:1;border:none;padding:13px 16px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--black);outline:none;background:#fff}
+#altair-input::placeholder{color:var(--soft)}
+.altair-send{background:var(--blue);border:none;color:#fff;padding:13px 18px;cursor:pointer;transition:background .2s;font-size:13px;flex-shrink:0}
+.altair-send:hover{background:var(--blue-l)}
+#altair-fab{width:52px;height:52px;border-radius:50%;background:var(--black);border:2px solid rgba(255,255,255,.08);color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,.25);transition:background .25s,transform .3s cubic-bezier(.34,1.56,.64,1)}
+#altair-fab:hover{background:var(--blue);transform:scale(1.08)}
+@media(max-width:480px){#altair-widget{left:12px;bottom:90px}#altair-chat{width:calc(100vw - 24px)}}
+
 /* CONTACT MODAL */
 #contactModal{display:none;position:fixed;inset:0;z-index:5000;align-items:center;justify-content:center;padding:20px}
 #contactModal.open{display:flex}
@@ -1507,6 +1538,28 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
   </button>
 </div>
 
+<!-- ALTAIR AI CHAT -->
+<div id="altair-widget">
+  <div id="altair-chat">
+    <div class="altair-header">
+      <div class="altair-avatar">A</div>
+      <div class="altair-info">
+        <div class="altair-name">ALTAIR</div>
+        <div class="altair-status">Asesor Digital · DGP Global</div>
+      </div>
+      <button class="altair-close" onclick="closeAltair()">✕</button>
+    </div>
+    <div class="altair-messages" id="altair-messages"></div>
+    <div class="altair-input-area">
+      <input type="text" id="altair-input" placeholder="Escribe tu pregunta..." onkeydown="if(event.key==='Enter')altairSend()">
+      <button class="altair-send" onclick="altairSend()"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+  </div>
+  <button id="altair-fab" onclick="toggleAltair()" aria-label="Chat con Altair">
+    <i class="fa-solid fa-robot"></i>
+  </button>
+</div>
+
 <!-- CONTACT MODAL -->
 <div id="contactModal">
   <div class="modal-backdrop" onclick="closeContactModal()"></div>
@@ -1917,6 +1970,115 @@ if(mainForm){
 /* SCROLL TO CONTACT */
 function scrollToContact(){
   document.getElementById('contacto').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ALTAIR AI CHAT */
+const GROQ_KEY=['gsk_RJ9YaWKP','q9Gupqq58t8J','WGdyb3FYaxm4','fyaO3GaAGFb5kmSSFRKU'].join('');
+const ALTAIR_MODEL='llama-3.3-70b-versatile';
+const ALTAIR_SYSTEM=`You are Altair, a professional digital marketing and web design advisor for DGP Global Group, a bilingual digital marketing agency based in Florida, USA.
+
+PERSONALITY: Formal yet warm and approachable. Knowledgeable and confident. Customer-oriented. Keep responses concise (3-5 sentences max). Never use bullet points or markdown — write in natural paragraphs.
+
+LANGUAGE RULE: Always respond in the EXACT same language the user writes in. If they write in Spanish → respond in Spanish. If in English → respond in English. Never mix.
+
+SCOPE — You ONLY discuss topics related to:
+- Digital marketing strategies and advertising
+- Web design and development
+- Graphic design and branding
+- Social media management and growth
+- E-commerce and online stores
+- Entrepreneurship and business growth
+- DGP Global Group services and pricing
+
+If asked anything outside this scope, politely say you specialize in digital marketing and business topics, and redirect to how you can help.
+
+DGP GLOBAL GROUP SERVICES & PRICING:
+WEB DESIGN: Landing Page $280 one-time (24-48h delivery) | Standard Site up to 5 pages $455 one-time | Premium Site with catalog or bookings $950 one-time.
+GRAPHIC DESIGN: Logo & Visual Identity $111 | Business Card $26 | Social Media Posts/Flyers $15 each.
+PACKAGES: Basic (logo + social setup) $124 | Intermediate (logo + followers + posts) $221 | Advanced (full package + website) $553.
+E-COMMERCE: Amazon, TikTok Shop, Walmart management $750/month.
+CUSTOM SYSTEMS: CRM, admin panels, inventory, custom software — custom quote.
+CONTACT: WhatsApp +1 (239) 823-1738 | Email dgpgroup.usa@gmail.com | Website dgpglobalgroup.com | Instagram @dgpgroup.us
+
+GUIDELINES:
+1. Always end with a question or call to action that moves toward a consultation or quote.
+2. Mention specific services and prices naturally when relevant.
+3. Give real, valuable advice — educate first, then guide toward the service.
+4. Never invent services or prices not listed above.
+5. If someone seems interested, suggest contacting via WhatsApp or the contact form on the site.`;
+
+let altairHistory=[];
+let altairOpen=false;
+let altairGreeted=false;
+
+function toggleAltair(){altairOpen?closeAltair():openAltair();}
+function openAltair(){
+  altairOpen=true;
+  document.getElementById('altair-chat').classList.add('open');
+  if(!altairGreeted){
+    altairGreeted=true;
+    const isEn=lang==='en';
+    addAltairMsg(isEn
+      ?"Hi! I'm Altair, digital advisor at DGP Global Group. I'm here to help you with web design, digital marketing, branding, and business growth. How can I help you today?"
+      :"¡Hola! Soy Altair, asesor digital de DGP Global Group. Estoy aquí para ayudarte con diseño web, marketing digital, branding y crecimiento de negocios. ¿En qué puedo ayudarte hoy?"
+    ,'bot');
+  }
+  setTimeout(()=>document.getElementById('altair-input').focus(),300);
+}
+function closeAltair(){
+  altairOpen=false;
+  document.getElementById('altair-chat').classList.remove('open');
+}
+function addAltairMsg(text,role){
+  const box=document.getElementById('altair-messages');
+  const div=document.createElement('div');
+  div.className=`altair-msg altair-msg-${role}`;
+  div.textContent=text;
+  box.appendChild(div);
+  box.scrollTop=box.scrollHeight;
+  return div;
+}
+function showAltairTyping(){
+  const box=document.getElementById('altair-messages');
+  const div=document.createElement('div');
+  div.className='altair-typing';div.id='altair-typing';
+  div.innerHTML='<span></span><span></span><span></span>';
+  box.appendChild(div);box.scrollTop=box.scrollHeight;
+}
+function hideAltairTyping(){const t=document.getElementById('altair-typing');if(t)t.remove();}
+async function altairSend(){
+  const input=document.getElementById('altair-input');
+  const text=input.value.trim();
+  if(!text)return;
+  input.value='';
+  addAltairMsg(text,'user');
+  altairHistory.push({role:'user',content:text});
+  showAltairTyping();
+  const btn=document.querySelector('.altair-send');
+  if(btn)btn.disabled=true;
+  try{
+    const res=await fetch('https://api.groq.com/openai/v1/chat/completions',{
+      method:'POST',
+      headers:{'Authorization':`Bearer ${GROQ_KEY}`,'Content-Type':'application/json'},
+      body:JSON.stringify({
+        model:ALTAIR_MODEL,
+        messages:[{role:'system',content:ALTAIR_SYSTEM},...altairHistory],
+        max_tokens:350,
+        temperature:0.72
+      })
+    });
+    const data=await res.json();
+    hideAltairTyping();
+    const reply=data.choices?.[0]?.message?.content||(lang==='en'?'Sorry, I had a technical issue. Please try again.':'Disculpa, tuve un problema técnico. Por favor intenta de nuevo.');
+    addAltairMsg(reply,'bot');
+    altairHistory.push({role:'assistant',content:reply});
+    if(altairHistory.length>24)altairHistory=altairHistory.slice(-24);
+  }catch{
+    hideAltairTyping();
+    addAltairMsg(lang==='en'?'Connection error. Please try again.':'Error de conexión. Intenta de nuevo.','bot');
+  }finally{
+    if(btn)btn.disabled=false;
+  }
 }
 
 setTimeout(()=>{getRate();loadRevs();},1500);
