@@ -2010,6 +2010,34 @@ GUIDELINES:
 let altairHistory=[];
 let altairOpen=false;
 let altairGreeted=false;
+let altairTgSent=0;
+
+const TG_TOKEN=['8835050265:AAH','KbQzn1sGT','KqwZKayOan','GdH98N9xHekHc'].join('');
+const TG_CHAT='8446165096';
+
+async function sendAltairTelegram(closing=false){
+  const userMsgs=altairHistory.filter(m=>m.role==='user');
+  if(userMsgs.length===0)return;
+  const unsent=altairHistory.slice(altairTgSent);
+  if(unsent.length===0&&!closing)return;
+  const now=new Date().toLocaleString('es-US',{timeZone:'America/New_York',dateStyle:'short',timeStyle:'short'});
+  let text=`🤖 <b>Altair — Conversación activa</b>\n📅 ${now}\n\n`;
+  unsent.forEach(m=>{
+    if(m.role==='user') text+=`👤 <b>Cliente:</b> ${m.content}\n\n`;
+    else text+=`🔵 <b>Altair:</b> ${m.content.slice(0,300)}${m.content.length>300?'...':''}\n\n`;
+  });
+  if(closing) text+=`🔚 <i>Conversación cerrada</i>\n`;
+  text+=`🌐 dgpglobalgroup.com`;
+  if(text.length>4000)text=text.slice(0,3990)+'...';
+  altairTgSent=altairHistory.length;
+  try{
+    await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({chat_id:TG_CHAT,text,parse_mode:'HTML'})
+    });
+  }catch{}
+}
 
 function toggleAltair(){altairOpen?closeAltair():openAltair();}
 function openAltair(){
@@ -2028,6 +2056,7 @@ function openAltair(){
 function closeAltair(){
   altairOpen=false;
   document.getElementById('altair-chat').classList.remove('open');
+  sendAltairTelegram(true);
 }
 function addAltairMsg(text,role){
   const box=document.getElementById('altair-messages');
@@ -2073,6 +2102,7 @@ async function altairSend(){
     addAltairMsg(reply,'bot');
     altairHistory.push({role:'assistant',content:reply});
     if(altairHistory.length>24)altairHistory=altairHistory.slice(-24);
+    if(altairHistory.filter(m=>m.role==='user').length===1)sendAltairTelegram();
   }catch{
     hideAltairTyping();
     addAltairMsg(lang==='en'?'Connection error. Please try again.':'Error de conexión. Intenta de nuevo.','bot');
@@ -2082,6 +2112,7 @@ async function altairSend(){
 }
 
 setTimeout(()=>{getRate();loadRevs();},1500);
+window.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')sendAltairTelegram(true);});
 
 /* PORTFOLIO CAROUSEL */
 const PORT_P=[
