@@ -431,10 +431,15 @@ body.eur .price-usd{display:none}body.eur .price-eur{display:inline}
 .status{margin-top:14px;padding:12px 16px;font-size:13px;display:none;text-align:center}
 .ok{display:block;background:rgba(20,56,204,.05);border-left:3px solid var(--blue);color:var(--blue)}
 .err{display:block;background:rgba(204,20,20,.05);border-left:3px solid #cc1414;color:#cc1414}
-.panel-head{padding:32px 32px 0;display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:24px}
-.panel-title{font-family:'Bebas Neue',sans-serif;font-size:26px;color:var(--black)}
+.panel-head{padding:20px 28px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none;border-radius:8px;transition:background .2s}
+.panel-head:hover{background:rgba(0,0,0,.03)}
+.panel-title{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--black)}
 .rev-count{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);font-weight:300}
-.reviews-scroll{padding:0 32px 32px;display:flex;flex-direction:column;gap:14px;max-height:520px;overflow-y:auto}
+.panel-chevron{font-size:12px;color:var(--soft);transition:transform .3s cubic-bezier(.22,1,.36,1);margin-left:12px}
+.panel-chevron.open{transform:rotate(180deg)}
+.reviews-collapsible{overflow:hidden;max-height:0;transition:max-height .45s cubic-bezier(.22,1,.36,1)}
+.reviews-collapsible.open{max-height:600px}
+.reviews-scroll{padding:0 28px 24px;display:flex;flex-direction:column;gap:14px;max-height:520px;overflow-y:auto}
 .reviews-scroll::-webkit-scrollbar{width:4px}.reviews-scroll::-webkit-scrollbar-thumb{background:var(--border)}
 .rev-item{border:1px solid var(--border);padding:20px;position:relative;transition:border-color .25s,box-shadow .25s,transform .25s}
 .rev-item:hover{border-color:rgba(20,56,204,.25);box-shadow:0 4px 20px rgba(20,56,204,.06);transform:translateX(4px)}
@@ -1470,15 +1475,20 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
     </div>
   </div>
 
-  <div class="card reveal" style="transition-delay:.2s;margin-top:24px">
-    <div class="panel-head">
-      <span class="panel-title" data-es>OPINIONES</span><span class="panel-title" data-en>REVIEWS</span>
-      <span class="rev-count" id="revCount">...</span>
+  <div class="card reveal" style="transition-delay:.2s;margin-top:24px;padding:0">
+    <div class="panel-head" onclick="toggleReviews(this)">
+      <div style="display:flex;align-items:center;gap:12px">
+        <span class="panel-title" data-es>OPINIONES</span><span class="panel-title" data-en>REVIEWS</span>
+        <span class="rev-count" id="revCount">...</span>
+      </div>
+      <i class="fa-solid fa-chevron-down panel-chevron"></i>
     </div>
-    <div class="reviews-scroll" id="revContainer">
-      <div class="shimmer"></div>
-      <div class="shimmer" style="height:70px;opacity:.6"></div>
-      <div class="shimmer" style="height:60px;opacity:.35"></div>
+    <div class="reviews-collapsible" id="revCollapsible">
+      <div class="reviews-scroll" id="revContainer">
+        <div class="shimmer"></div>
+        <div class="shimmer" style="height:70px;opacity:.6"></div>
+        <div class="shimmer" style="height:60px;opacity:.35"></div>
+      </div>
     </div>
   </div>
 
@@ -1976,6 +1986,12 @@ if(mainForm){
 }
 
 /* SCROLL TO CONTACT */
+function toggleReviews(btn){
+  const col=document.getElementById('revCollapsible');
+  const chev=btn.querySelector('.panel-chevron');
+  col.classList.toggle('open');
+  chev.classList.toggle('open');
+}
 function scrollToContact(){
   document.getElementById('contacto').scrollIntoView({behavior:'smooth',block:'start'});
 }
