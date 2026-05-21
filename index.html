@@ -2040,19 +2040,20 @@ SCOPE — You ONLY discuss topics related to:
 If asked anything outside this scope, politely say you specialize in digital marketing and business topics, and redirect to how you can help.
 
 DGP GLOBAL GROUP SERVICES & PRICING:
-WEB DESIGN: Landing Page $280 one-time (24-48h delivery) | Standard Site up to 5 pages $455 one-time | Premium Site with catalog or bookings $950 one-time.
-GRAPHIC DESIGN: Logo & Visual Identity $111 | Business Card $26 | Social Media Posts/Flyers $15 each.
-PACKAGES: Basic (logo + social setup) $124 | Intermediate (logo + followers + posts) $221 | Advanced (full package + website) $553.
-E-COMMERCE: Amazon, TikTok Shop, Walmart management $750/month.
+WEB DESIGN: Landing Page from $280 one-time (24-48h delivery) | Standard Site up to 5 pages from $455 one-time | Premium Site with catalog or bookings from $950 one-time.
+GRAPHIC DESIGN: Logo & Visual Identity from $111 | Business Card from $26 | Social Media Posts/Flyers from $15 each.
+PACKAGES: Basic (logo + social setup) from $124 | Intermediate (logo + followers + posts) from $221 | Advanced (full package + website) from $553.
+E-COMMERCE: Multi-platform management (Amazon, Walmart, TikTok Shop, Shopify, eBay) from $750 — ONE-TIME payment, not monthly.
 CUSTOM SYSTEMS: CRM, admin panels, inventory, custom software — custom quote.
 CONTACT: WhatsApp +1 (239) 823-1738 | Email dgpgroup.usa@gmail.com | Website dgpglobalgroup.com | Instagram @dgpgroup.us
 
 GUIDELINES:
 1. Always end with a question or call to action that moves toward a consultation or quote.
-2. Mention specific services and prices naturally when relevant.
+2. When mentioning prices, ALWAYS say "starting from $X" or "desde $X" — never use "for only" or "por solo". Prices are starting points, not fixed amounts.
 3. Give real, valuable advice — educate first, then guide toward the service.
 4. Never invent services or prices not listed above.
-5. If someone seems interested, suggest contacting via WhatsApp or the contact form on the site.`;
+5. If someone seems interested, suggest contacting via WhatsApp or the contact form on the site.
+6. The e-commerce plan is a ONE-TIME payment, never describe it as monthly or recurring.`;
 
 let altairHistory=[];
 let altairOpen=false;
@@ -2062,28 +2063,33 @@ let altairTgSent=0;
 const TG_TOKEN=['8835050265:AAH','KbQzn1sGT','KqwZKayOan','GdH98N9xHekHc'].join('');
 const TG_CHAT='8446165096';
 
+async function tgSend(text){
+  await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({chat_id:TG_CHAT,text,parse_mode:'HTML'})
+  });
+}
 async function sendAltairTelegram(closing=false){
   const userMsgs=altairHistory.filter(m=>m.role==='user');
   if(userMsgs.length===0)return;
   const unsent=altairHistory.slice(altairTgSent);
   if(unsent.length===0&&!closing)return;
   const now=new Date().toLocaleString('es-US',{timeZone:'America/New_York',dateStyle:'short',timeStyle:'short'});
-  let text=`🤖 <b>Altair — Conversación activa</b>\n📅 ${now}\n\n`;
+  const header=`🤖 <b>Altair — Conversación activa</b>\n📅 ${now}\n\n`;
+  const footer=(closing?`🔚 <i>Conversación cerrada</i>\n`:'')+`🌐 dgpglobalgroup.com`;
+  let chunks=[header];
   unsent.forEach(m=>{
-    if(m.role==='user') text+=`👤 <b>Cliente:</b> ${m.content}\n\n`;
-    else text+=`🔵 <b>Altair:</b> ${m.content.slice(0,300)}${m.content.length>300?'...':''}\n\n`;
+    const line=m.role==='user'
+      ?`👤 <b>Cliente:</b> ${m.content}\n\n`
+      :`🔵 <b>Altair:</b> ${m.content}\n\n`;
+    const last=chunks[chunks.length-1];
+    if((last+line).length>3800)chunks.push(line);
+    else chunks[chunks.length-1]+=line;
   });
-  if(closing) text+=`🔚 <i>Conversación cerrada</i>\n`;
-  text+=`🌐 dgpglobalgroup.com`;
-  if(text.length>4000)text=text.slice(0,3990)+'...';
+  chunks[chunks.length-1]+=footer;
   altairTgSent=altairHistory.length;
-  try{
-    await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({chat_id:TG_CHAT,text,parse_mode:'HTML'})
-    });
-  }catch{}
+  try{for(const c of chunks)await tgSend(c);}catch{}
 }
 
 function toggleAltair(){altairOpen?closeAltair():openAltair();}
