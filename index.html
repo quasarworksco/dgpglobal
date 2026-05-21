@@ -495,7 +495,7 @@ body.en span[data-en]{display:inline}body.en span[data-es]{display:none}
 body.en .opt-es{display:none}body.en .opt-en{display:block}
 
 /* HERO BG IMAGE */
-#hero{background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1800&auto=format&fit=crop');background-size:cover;background-position:center;background-repeat:no-repeat}
+#hero{background-image:url('https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1800&auto=format&fit=crop');background-size:cover;background-position:center;background-repeat:no-repeat}
 #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.92) 0%,rgba(247,247,245,.85) 40%,rgba(20,56,204,.06) 100%);z-index:1;pointer-events:none}
 #hero .glow,#hero .bg-word,#hero .hero-content,#hero .hero-bottom{z-index:2}
 
@@ -948,10 +948,6 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 <!-- TOP CONTROLS -->
 <div class="top-ctrl">
   <div class="ctrl-grp">
-    <button class="ctrl-btn active" onclick="setCurr('usd')">USD</button>
-    <button class="ctrl-btn" onclick="setCurr('eur')">EUR</button>
-  </div>
-  <div class="ctrl-grp">
     <button class="ctrl-btn active" onclick="setLang('es')">ES</button>
     <button class="ctrl-btn" onclick="setLang('en')">EN</button>
   </div>
@@ -1166,21 +1162,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         </div>
       </div>
       <div class="row-right">
-        <div class="row-price"><span class="price-usd"><em>$</em>111</span><span class="price-eur"><em>€</em><span class="ea" data-v="111">100</span></span></div>
         <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20servicio%20de%20Logo" target="_blank" class="btn-sm"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
-      </div>
-    </div>
-    <div class="design-row">
-      <div class="row-left"><i class="fa-solid fa-address-card row-icon"></i>
-        <div class="row-info">
-          <h3 data-es>Tarjeta de Presentación</h3><h3 data-en>Business Card</h3>
-          <p data-es>Código QR, Diseño Adaptado y Entrega en Tiempo Récord.</p>
-          <p data-en>QR Code, Custom Design and Record-Time Delivery.</p>
-        </div>
-      </div>
-      <div class="row-right">
-        <div class="row-price"><span class="price-usd"><em>$</em>26</span><span class="price-eur"><em>€</em><span class="ea" data-v="26">23</span></span></div>
-        <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20diseño%20de%20Tarjeta" target="_blank" class="btn-sm"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
       </div>
     </div>
     <div class="design-row">
@@ -1192,7 +1174,6 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         </div>
       </div>
       <div class="row-right">
-        <div class="row-price"><span class="price-usd"><em>$</em>15</span><span class="price-eur"><em>€</em><span class="ea" data-v="15">14</span></span></div>
         <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20servicio%20de%20Post/Flyers" target="_blank" class="btn-sm"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
       </div>
     </div>
@@ -1212,11 +1193,11 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
       <i class="fa-solid fa-seedling pkg-icon"></i>
       <div class="pkg-name" data-es>PAQUETE BÁSICO</div><div class="pkg-name" data-en>BASIC PACKAGE</div>
       <div class="delivery-badge" style="margin-top:4px"><i class="fa-solid fa-bolt"></i><span data-es>Entrega en 48h</span><span data-en>48h delivery</span></div>
-      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">$</em>124</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">€</em><span class="ea" data-v="124">112</span></span></div>
-      <ul class="feat-list">
+      <ul class="feat-list" style="margin-top:20px">
         <li><i class="fa-solid fa-check ck"></i><span data-es>Logo Profesional</span><span data-en>Professional Logo</span></li>
         <li><i class="fa-solid fa-check ck"></i><span data-es>Creación de RRSS</span><span data-en>Social Media Setup</span></li>
         <li><i class="fa-solid fa-check ck"></i><span data-es>Historias destacadas y Bio</span><span data-en>Story Highlights & Bio</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Tarjeta de Presentación</span><span data-en>Business Card</span></li>
       </ul>
       <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20Paquete%20Básico" target="_blank" class="btn-sm" style="width:100%"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
     </div>
@@ -1224,11 +1205,11 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
       <i class="fa-solid fa-chart-line pkg-icon"></i>
       <div class="pkg-name" data-es>PAQUETE INTERMEDIO</div><div class="pkg-name" data-en>INTERMEDIATE PACKAGE</div>
       <div class="delivery-badge" style="margin-top:4px"><i class="fa-solid fa-bolt"></i><span data-es>Entrega en 48h</span><span data-en>48h delivery</span></div>
-      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">$</em>221</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">€</em><span class="ea" data-v="221">199</span></span></div>
-      <ul class="feat-list">
+      <ul class="feat-list" style="margin-top:20px">
         <li><i class="fa-solid fa-check ck"></i><span data-es>Todo el Básico</span><span data-en>Everything in Basic</span></li>
         <li><i class="fa-solid fa-check ck"></i>2,000 <span data-es>Seguidores</span><span data-en>Followers</span></li>
         <li><i class="fa-solid fa-check ck"></i>5 Posts <span data-es>para Instagram</span><span data-en>for Instagram</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Tarjeta de Presentación</span><span data-en>Business Card</span></li>
       </ul>
       <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20Paquete%20Intermedio" target="_blank" class="btn-sm" style="width:100%"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
     </div>
@@ -1236,11 +1217,11 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
       <i class="fa-solid fa-rocket pkg-icon"></i>
       <div class="pkg-name" data-es>PAQUETE AVANZADO</div><div class="pkg-name" data-en>ADVANCED PACKAGE</div>
       <div class="delivery-badge" style="margin-top:4px"><i class="fa-solid fa-bolt"></i><span data-es>Entrega en 48h</span><span data-en>48h delivery</span></div>
-      <div class="pkg-price"><span class="price-usd"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">$</em>553</span><span class="price-eur"><em style="font-style:normal;font-size:22px;color:rgba(255,255,255,.7)">€</em><span class="ea" data-v="553">498</span></span></div>
-      <ul class="feat-list">
+      <ul class="feat-list" style="margin-top:20px">
         <li><i class="fa-solid fa-check ck"></i><span data-es>Factura y Business Card</span><span data-en>Invoice & Business Card</span></li>
         <li><i class="fa-solid fa-check ck"></i>5,000 <span data-es>Seg. + 10 Posts</span><span data-en>Followers + 10 Posts</span></li>
         <li><i class="fa-solid fa-check ck"></i><span data-es>Web One Page</span><span data-en>One Page Website</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Tarjeta de Presentación</span><span data-en>Business Card</span></li>
       </ul>
       <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20Paquete%20Avanzado" target="_blank" class="btn-sm" style="width:100%"><span data-es>Contratar</span><span data-en>Hire</span><span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
     </div>
@@ -1261,8 +1242,6 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
     <div class="plan-card reveal" style="transition-delay:0s">
       <div class="plan-head h1"><div class="plan-label">Plan 01</div><div class="plan-name" data-es>BÁSICO</div><div class="plan-name" data-en>BASIC</div></div>
       <div class="plan-body">
-        <div class="plan-price"><span class="price-usd"><em style="font-style:normal;font-size:28px;color:var(--blue)">$</em>280</span><span class="price-eur"><em style="font-style:normal;font-size:28px;color:var(--blue)">€</em><span class="ea" data-v="280">252</span></span></div>
-        <div class="plan-note" data-es>Pago único</div><div class="plan-note" data-en>One-time payment</div>
         <div class="delivery-badge"><i class="fa-solid fa-bolt"></i><span data-es>Entrega en 24–48h</span><span data-en>Delivered in 24–48h</span></div>
         <div class="plan-div"></div>
         <ul class="feat-list">
@@ -1276,8 +1255,6 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
     <div class="plan-card pop reveal" style="transition-delay:.12s">
       <div class="plan-head h2"><div class="plan-label">Plan 02</div><div class="plan-name" data-es>ESTÁNDAR</div><div class="plan-name" data-en>STANDARD</div><div class="pop-badge" data-es>Más popular</div><div class="pop-badge" data-en>Most popular</div></div>
       <div class="plan-body">
-        <div class="plan-price"><span class="price-usd"><em style="font-style:normal;font-size:28px;color:var(--blue)">$</em>455</span><span class="price-eur"><em style="font-style:normal;font-size:28px;color:var(--blue)">€</em><span class="ea" data-v="455">410</span></span></div>
-        <div class="plan-note" data-es>Pago único</div><div class="plan-note" data-en>One-time payment</div>
         <div class="delivery-badge"><i class="fa-solid fa-clock"></i><span data-es>Entrega en 2–3 días</span><span data-en>Delivered in 2–3 days</span></div>
         <div class="plan-div"></div>
         <ul class="feat-list">
@@ -1292,8 +1269,6 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
     <div class="plan-card reveal" style="transition-delay:.24s">
       <div class="plan-head h3"><div class="plan-label">Plan 03</div><div class="plan-name">PREMIUM</div></div>
       <div class="plan-body">
-        <div class="plan-price"><span class="price-usd"><em style="font-style:normal;font-size:28px;color:var(--blue)">$</em>950</span><span class="price-eur"><em style="font-style:normal;font-size:28px;color:var(--blue)">€</em><span class="ea" data-v="950">855</span></span></div>
-        <div class="plan-note" data-es>Pago único</div><div class="plan-note" data-en>One-time payment</div>
         <div class="delivery-badge"><i class="fa-solid fa-calendar-check"></i><span data-es>Entrega en 4–5 días</span><span data-en>Delivered in 4–5 days</span></div>
         <div class="plan-div"></div>
         <ul class="feat-list">
@@ -1331,13 +1306,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <p class="ecom-card-sub" data-en>Everything you need to sell on the biggest platforms, hassle-free.</p>
       </div>
       <div class="ecom-card-price-wrap">
-        <div class="ecom-card-price">
-          <span class="price-usd"><em>$</em>750</span>
-          <span class="price-eur"><em>€</em><span class="ea" data-v="750">675</span></span>
-        </div>
-        <div class="ecom-card-note" data-es>Pago único · Sin mensualidades</div>
-        <div class="ecom-card-note" data-en>One-time payment · No monthly fees</div>
-        <div class="ecom-pay" style="margin-top:16px"><i class="fa-brands fa-cc-paypal"></i><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i></div>
+        <div class="ecom-pay"><i class="fa-brands fa-cc-paypal"></i><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i></div>
         <a href="https://wa.me/12398231738?text=Hola!%20Me%20interesa%20el%20Plan%20de%20Gestión%20E-Commerce" target="_blank" class="btn-main" style="margin-top:24px;display:inline-flex"><span data-es>Quiero este plan</span><span data-en>I want this plan</span><span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
       </div>
     </div>
