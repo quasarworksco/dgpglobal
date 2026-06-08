@@ -549,6 +549,18 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 .insta-post-hint{font-size:12px;color:var(--soft);text-align:center;line-height:1.7;border-top:1px solid var(--border);padding-top:16px}
 @media(max-width:768px){.insta-cta-card{grid-template-columns:1fr}}
 
+/* SHARE / REFERRAL */
+.share-bar{background:var(--off);border:1px solid var(--border);padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:48px}
+.share-bar-text{font-size:13px;color:var(--soft);line-height:1.5}
+.share-bar-text strong{display:block;font-size:15px;color:var(--black);font-weight:500;margin-bottom:2px}
+.share-btns{display:flex;gap:8px;flex-wrap:wrap}
+.share-btn{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;font-size:12px;font-weight:500;letter-spacing:.5px;border:1px solid var(--border);background:#fff;color:var(--black);cursor:pointer;transition:background .2s,border-color .2s;text-decoration:none;white-space:nowrap}
+.share-btn:hover{background:var(--black);color:#fff;border-color:var(--black)}
+.share-btn.wa{background:#25d366;color:#fff;border-color:#25d366}
+.share-btn.wa:hover{background:#1da855}
+.share-btn.copy i{transition:transform .3s}
+@media(max-width:600px){.share-bar{flex-direction:column;align-items:flex-start;padding:24px 20px}}
+
 /* TRUST BADGES */
 .trust-badges{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
 .trust-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--soft);letter-spacing:.3px}
@@ -1674,6 +1686,26 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
   </div>
 </div>
 
+<!-- SHARE / REFERRAL BAR -->
+<div style="max-width:680px;margin:0 auto;padding:0 24px 64px">
+  <div class="share-bar reveal">
+    <div class="share-bar-text">
+      <strong data-es>¿Conoces alguien que necesite esto?</strong>
+      <strong data-en>Know someone who needs this?</strong>
+      <span data-es>Comparte DGP Global Group y ayuda a otro negocio a crecer.</span>
+      <span data-en>Share DGP Global Group and help another business grow.</span>
+    </div>
+    <div class="share-btns">
+      <a class="share-btn wa" href="https://wa.me/?text=Mira%20esta%20agencia%20de%20marketing%20digital%20en%20Florida%20%E2%80%94%20diseño%20web%2C%20redes%20sociales%20y%20más%3A%20https%3A%2F%2Fdgpglobalgroup.com" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
+      </a>
+      <button class="share-btn copy" onclick="copyShareLink(this)">
+        <i class="fa-solid fa-link"></i><span data-es>Copiar link</span><span data-en>Copy link</span>
+      </button>
+    </div>
+  </div>
+</div>
+
 <!-- WA FLOAT -->
 <div id="wa-float">
   <div id="wa-popup">
@@ -2125,6 +2157,16 @@ if(mainForm){
 }
 
 /* SCROLL TO CONTACT */
+/* ── SHARE LINK ── */
+function copyShareLink(btn){
+  navigator.clipboard.writeText('https://dgpglobalgroup.com').then(()=>{
+    const icon=btn.querySelector('i');
+    icon.className='fa-solid fa-check';
+    btn.style.background='var(--black)';btn.style.color='#fff';btn.style.borderColor='var(--black)';
+    setTimeout(()=>{icon.className='fa-solid fa-link';btn.style.background='';btn.style.color='';btn.style.borderColor='';},2000);
+  });
+}
+
 /* ── URGENCY BAR ── */
 (function(){
   const week=Math.floor(Date.now()/604800000);
