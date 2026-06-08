@@ -504,6 +504,56 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 #hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.92) 0%,rgba(247,247,245,.85) 40%,rgba(20,56,204,.06) 100%);z-index:1;pointer-events:none}
 #hero .glow,#hero .bg-word,#hero .hero-content,#hero .hero-bottom{z-index:2}
 
+/* STATS COUNTER */
+.stats-section{background:var(--black);padding:56px 48px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;position:relative;overflow:hidden}
+.stats-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(74,120,255,.12) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
+.stat-item{padding:36px 24px;text-align:center;position:relative;z-index:1;background:var(--black)}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,6vw,72px);color:#fff;line-height:1;letter-spacing:1px}
+.stat-num .acc{color:var(--blue-s)}
+.stat-label{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:6px;font-weight:400}
+@media(max-width:768px){.stats-section{grid-template-columns:1fr 1fr;padding:32px 24px}}
+@media(max-width:480px){.stats-section{grid-template-columns:1fr 1fr;gap:0}}
+
+/* URGENCY BAR */
+#urgency-bar{background:var(--blue);padding:10px 24px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:12px;color:#fff;font-weight:500;letter-spacing:.5px;position:relative;z-index:10}
+#urgency-bar i{font-size:11px;animation:blink 1.5s ease-in-out infinite}
+.urgency-spots{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px}
+
+/* EXIT POPUP */
+#exit-popup{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+#exit-popup.show{display:flex;animation:epFadeIn .3s ease}
+@keyframes epFadeIn{from{opacity:0}to{opacity:1}}
+.exit-card{background:#fff;max-width:480px;width:100%;padding:48px 40px;position:relative;text-align:center;animation:epSlideUp .35s cubic-bezier(.34,1.56,.64,1)}
+@keyframes epSlideUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.exit-close{position:absolute;top:16px;right:20px;background:none;border:none;font-size:20px;color:var(--soft);cursor:pointer;line-height:1;transition:color .2s}
+.exit-close:hover{color:var(--black)}
+.exit-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:16px}
+.exit-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,5vw,40px);color:var(--black);line-height:1.1;margin-bottom:12px}
+.exit-sub{font-size:14px;color:var(--soft);line-height:1.6;margin-bottom:28px}
+.exit-actions{display:flex;flex-direction:column;gap:10px}
+@media(max-width:480px){.exit-card{padding:36px 24px}}
+
+/* INSTAGRAM SECTION */
+.insta-cta-card{border:1px solid var(--border);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;margin-top:48px}
+.insta-left{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);padding:48px 40px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.insta-left::after{content:'IG';position:absolute;bottom:-16px;right:-8px;font-family:'Bebas Neue',sans-serif;font-size:110px;color:rgba(255,255,255,.08);pointer-events:none;line-height:1}
+.insta-handle{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3.5vw,36px);color:#fff;letter-spacing:2px;position:relative;z-index:1}
+.insta-sub{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;margin-top:8px;position:relative;z-index:1}
+.insta-follow-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;color:#833ab4;padding:10px 20px;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:100px;margin-top:24px;width:fit-content;transition:transform .2s,box-shadow .2s;position:relative;z-index:1}
+.insta-follow-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.insta-right{background:var(--white);padding:40px;display:flex;flex-direction:column;justify-content:center;gap:20px}
+.insta-stat-row{display:flex;gap:16px}
+.insta-stat{flex:1;text-align:center;padding:16px 8px;border:1px solid var(--border)}
+.insta-stat-num{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--black)}
+.insta-stat-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--soft);margin-top:2px}
+.insta-post-hint{font-size:12px;color:var(--soft);text-align:center;line-height:1.7;border-top:1px solid var(--border);padding-top:16px}
+@media(max-width:768px){.insta-cta-card{grid-template-columns:1fr}}
+
+/* TRUST BADGES */
+.trust-badges{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
+.trust-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:var(--soft);letter-spacing:.3px}
+.trust-badge i{font-size:13px;color:var(--blue)}
+
 /* ALTAIR AI CHAT */
 #altair-widget{position:fixed;bottom:100px;right:28px;z-index:1001;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
 #altair-chat{width:340px;background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 16px 56px rgba(0,0,0,.18);display:none;flex-direction:column;max-height:520px}
@@ -922,6 +972,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
     <a href="#portafolio" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-images"></i><span data-es>Portafolio</span><span data-en>Portfolio</span></a>
     <div class="drawer-sep"></div>
     <a href="#resenas" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-star"></i><span data-es>Reseñas</span><span data-en>Reviews</span></a>
+    <a href="#instagram" class="drawer-link" onclick="closeDrawer()"><i class="fa-brands fa-instagram"></i><span data-es>Instagram</span><span data-en>Instagram</span></a>
   </div>
   <div class="drawer-cta">
     <button onclick="openContactModal();closeDrawer();" class="btn-main" style="border:none;cursor:pointer;width:100%;justify-content:center">
@@ -1042,6 +1093,17 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
   </div>
 </div>
 
+<!-- URGENCY BAR -->
+<div id="urgency-bar">
+  <i class="fa-solid fa-circle-dot"></i>
+  <span data-es>Solo quedan </span><span data-en>Only </span>
+  <span class="urgency-spots" id="urgency-num">3</span>
+  <span data-es> espacios disponibles este mes</span><span data-en> project spots available this month</span>
+  <span style="opacity:.5;margin:0 12px">·</span>
+  <a href="#contacto" style="color:#fff;text-decoration:underline;font-size:11px;letter-spacing:1px" data-es>Reserva el tuyo</a>
+  <a href="#contacto" style="color:#fff;text-decoration:underline;font-size:11px;letter-spacing:1px" data-en>Reserve yours</a>
+</div>
+
 <!-- SERVICIOS -->
 <div class="section section-dark" id="servicios">
   <div class="dark-glow"></div>
@@ -1073,6 +1135,25 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
   </div>
 </div>
 
+<!-- STATS -->
+<div class="stats-section">
+  <div class="stat-item reveal">
+    <div class="stat-num"><span class="count-up" data-target="50">0</span><span class="acc">+</span></div>
+    <div class="stat-label" data-es>Clientes</div><div class="stat-label" data-en>Clients</div>
+  </div>
+  <div class="stat-item reveal" style="transition-delay:.1s">
+    <div class="stat-num"><span class="count-up" data-target="120">0</span><span class="acc">+</span></div>
+    <div class="stat-label" data-es>Proyectos</div><div class="stat-label" data-en>Projects</div>
+  </div>
+  <div class="stat-item reveal" style="transition-delay:.2s">
+    <div class="stat-num"><span class="count-up" data-target="7">0</span><span class="acc">+</span></div>
+    <div class="stat-label" data-es>Años de experiencia</div><div class="stat-label" data-en>Years experience</div>
+  </div>
+  <div class="stat-item reveal" style="transition-delay:.3s">
+    <div class="stat-num"><span class="count-up" data-target="100">0</span><span class="acc">%</span></div>
+    <div class="stat-label" data-es>Satisfacción garantizada</div><div class="stat-label" data-en>Satisfaction guaranteed</div>
+  </div>
+</div>
 
 <!-- PAQUETES (BLUE) -->
 <div class="section section-blue" id="paquetes">
@@ -1531,7 +1612,65 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
         <span class="barr"><i class="fa-solid fa-arrow-right"></i></span>
       </button>
       <div id="mainContactStatus" class="status"></div>
+      <div class="trust-badges">
+        <span class="trust-badge"><i class="fa-solid fa-lock"></i><span>SSL Seguro</span></span>
+        <span class="trust-badge"><i class="fa-solid fa-shield-halved"></i><span data-es>Datos protegidos</span><span data-en>Data protected</span></span>
+        <span class="trust-badge"><i class="fa-brands fa-cc-paypal"></i><span>PayPal</span></span>
+        <span class="trust-badge"><i class="fa-brands fa-cc-visa"></i><span>Visa</span></span>
+        <span class="trust-badge"><i class="fa-brands fa-cc-mastercard"></i><span>Mastercard</span></span>
+      </div>
     </form>
+  </div>
+</div>
+
+<!-- INSTAGRAM CTA -->
+<div class="section" id="instagram" style="padding-top:0">
+  <div class="reveal">
+    <div class="sec-eyebrow" data-es>Síguenos</div><div class="sec-eyebrow" data-en>Follow us</div>
+    <h2 class="sec-title"><span data-es>ESTAMOS EN <span class="accent">INSTAGRAM</span></span><span data-en>FIND US ON <span class="accent">INSTAGRAM</span></span></h2>
+    <p class="sec-sub" data-es>Contenido diario sobre marketing digital, diseño web y consejos para hacer crecer tu negocio.</p>
+    <p class="sec-sub" data-en>Daily content on digital marketing, web design and tips to grow your business.</p>
+  </div>
+  <div class="insta-cta-card reveal" style="transition-delay:.1s">
+    <div class="insta-left">
+      <div>
+        <div style="font-size:32px;color:#fff;margin-bottom:12px;position:relative;z-index:1"><i class="fa-brands fa-instagram"></i></div>
+        <div class="insta-handle">@dgpgroup.us</div>
+        <p class="insta-sub" data-es>Marketing digital · Diseño web · Branding · E-Commerce · Tips de negocios</p>
+        <p class="insta-sub" data-en>Digital marketing · Web design · Branding · E-Commerce · Business tips</p>
+      </div>
+      <a href="https://www.instagram.com/dgpgroup.us/" target="_blank" rel="noopener" class="insta-follow-btn">
+        <i class="fa-brands fa-instagram"></i>
+        <span data-es>Seguir en Instagram</span><span data-en>Follow on Instagram</span>
+      </a>
+    </div>
+    <div class="insta-right">
+      <div class="insta-stat-row">
+        <div class="insta-stat"><div class="insta-stat-num">500<span style="font-size:18px;color:var(--blue-s)">+</span></div><div class="insta-stat-lbl" data-es>Seguidores</div><div class="insta-stat-lbl" data-en>Followers</div></div>
+        <div class="insta-stat"><div class="insta-stat-num">7<span style="font-size:18px;color:var(--blue-s)">+</span></div><div class="insta-stat-lbl" data-es>Años activos</div><div class="insta-stat-lbl" data-en>Years active</div></div>
+        <div class="insta-stat"><div class="insta-stat-num">5<span style="font-size:18px;color:var(--blue-s)">★</span></div><div class="insta-stat-lbl" data-es>Valoración</div><div class="insta-stat-lbl" data-en>Rating</div></div>
+      </div>
+      <p class="insta-post-hint" data-es>Publicamos consejos, casos de éxito y ofertas exclusivas para nuestra comunidad. ¡Síguenos y no te pierdas nada!</p>
+      <p class="insta-post-hint" data-en>We post tips, success stories and exclusive offers for our community. Follow us and don't miss a thing!</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- EXIT POPUP -->
+<div id="exit-popup">
+  <div class="exit-card">
+    <button class="exit-close" onclick="closeExitPopup()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="exit-eyebrow" data-es>Antes de irte</div><div class="exit-eyebrow" data-en>Before you leave</div>
+    <div class="exit-title" data-es>¿COTIZACIÓN GRATIS<br>EN 24 HORAS?</div>
+    <div class="exit-title" data-en>FREE QUOTE<br>IN 24 HOURS?</div>
+    <p class="exit-sub" data-es>Cuéntanos tu idea y te enviamos una propuesta personalizada sin compromiso. Sin costo, sin esperas largas.</p>
+    <p class="exit-sub" data-en>Tell us your idea and we'll send you a custom proposal with no commitment. Free, no long waits.</p>
+    <div class="exit-actions">
+      <a href="https://wa.me/12398231738?text=Hola!%20Vi%20su%20sitio%20web%20y%20me%20interesa%20una%20cotización." target="_blank" class="btn-main" style="justify-content:center;text-decoration:none"><i class="fa-brands fa-whatsapp"></i><span data-es>ESCRÍBENOS POR WHATSAPP</span><span data-en>WRITE US ON WHATSAPP</span></a>
+      <button onclick="closeExitPopup();document.getElementById('contacto').scrollIntoView({behavior:'smooth'})" class="btn-outline-dark" style="border:none;cursor:pointer;width:100%;justify-content:center"><span data-es>VER FORMULARIO DE CONTACTO</span><span data-en>SEE CONTACT FORM</span></button>
+    </div>
   </div>
 </div>
 
@@ -1986,6 +2125,61 @@ if(mainForm){
 }
 
 /* SCROLL TO CONTACT */
+/* ── URGENCY BAR ── */
+(function(){
+  const week=Math.floor(Date.now()/604800000);
+  const spots=[2,3,4,5,3,2,5,4][week%8];
+  document.getElementById('urgency-num').textContent=spots;
+})();
+
+/* ── COUNT-UP ANIMATION ── */
+function animateCount(el){
+  const target=+el.dataset.target;
+  const dur=1800;
+  const step=dur/60;
+  let cur=0;
+  const inc=target/60;
+  const timer=setInterval(()=>{
+    cur=Math.min(cur+inc,target);
+    el.textContent=Math.floor(cur);
+    if(cur>=target)clearInterval(timer);
+  },step);
+}
+const countObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){animateCount(e.target);countObs.unobserve(e.target);}});
+},{threshold:.5});
+document.querySelectorAll('.count-up').forEach(el=>countObs.observe(el));
+
+/* ── EXIT INTENT POPUP ── */
+let exitShown=sessionStorage.getItem('exitShown');
+function closeExitPopup(){document.getElementById('exit-popup').classList.remove('show');sessionStorage.setItem('exitShown','1');}
+if(!exitShown){
+  document.addEventListener('mouseleave',function handler(e){
+    if(e.clientY<10){
+      document.getElementById('exit-popup').classList.add('show');
+      document.removeEventListener('mouseleave',handler);
+    }
+  });
+  setTimeout(()=>{
+    if(!sessionStorage.getItem('exitShown'))document.addEventListener('mouseleave',function h(e){if(e.clientY<10){document.getElementById('exit-popup').classList.add('show');document.removeEventListener('mouseleave',h);}});
+  },8000);
+}
+document.getElementById('exit-popup').addEventListener('click',function(e){if(e.target===this)closeExitPopup();});
+
+/* ── ALTAIR PROACTIVO ── */
+setTimeout(()=>{
+  if(!altairGreeted&&!altairOpen){
+    openAltair();
+    const isEn=lang==='en';
+    setTimeout(()=>{
+      addAltairMsg(isEn
+        ?"👋 Hi! Need help choosing a service or getting a quote? I'm here to help!"
+        :"👋 ¡Hola! ¿Necesitas ayuda para elegir un servicio o recibir una cotización? ¡Estoy aquí!"
+      ,'bot');
+    },600);
+  }
+},20000);
+
 function toggleReviews(btn){
   const col=document.getElementById('revCollapsible');
   const chev=btn.querySelector('.panel-chevron');
