@@ -209,6 +209,17 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://drive.google.com">
+<link rel="preconnect" href="https://lh3.googleusercontent.com">
+<link rel="dns-prefetch" href="https://cdn.simpleicons.org">
+<link rel="dns-prefetch" href="https://docs.google.com">
+<link rel="dns-prefetch" href="https://api.groq.com">
+<link rel="dns-prefetch" href="https://formspree.io">
+<link rel="dns-prefetch" href="https://cdn.databuddy.cc">
+<link rel="preload" as="image" fetchpriority="high" media="(max-width:600px)" href="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=70&w=900&auto=format&fit=crop">
+<link rel="preload" as="image" fetchpriority="high" media="(min-width:601px)" href="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1800&auto=format&fit=crop">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"></noscript>
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
@@ -229,7 +240,7 @@ body{background:var(--white);color:var(--black);font-family:'DM Sans',sans-serif
 body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle,#c8c8c8 1px,transparent 1px);background-size:36px 36px;opacity:.35;pointer-events:none;z-index:0}
 
 /* LOADER */
-#loader{position:fixed;inset:0;background:#fff;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transition:opacity .8s ease,visibility .8s ease}
+#loader{position:fixed;inset:0;background:#fff;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:28px;transition:opacity .45s ease,visibility .45s ease}
 #loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
 .ldr-logo{animation:ldrPop .9s cubic-bezier(.34,1.56,.64,1) both;position:relative;width:220px;height:220px;display:flex;align-items:center;justify-content:center}
 .ldr-ring-wrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
@@ -1040,7 +1051,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 <div class="nav-drawer" id="navDrawer">
   <button onclick="closeDrawer()" style="position:absolute;top:20px;right:20px;background:none;border:none;font-size:20px;color:var(--soft);cursor:pointer;line-height:1;padding:4px;transition:color .2s" onmouseover="this.style.color='#000'" onmouseout="this.style.color=''">✕</button>
   <div class="drawer-logo">
-    <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" alt="DGP">
+    <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" alt="DGP" width="32" height="32" loading="lazy" decoding="async">
     DGP GROUP <span>USA</span>
   </div>
   <div class="drawer-links">
@@ -1471,33 +1482,31 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
   <p class="tools-eyebrow" data-en>Tools & technologies we use</p>
   <div class="tools-track-wrap">
     <div class="tools-track" id="toolsTrack">
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/googledrive" alt="Google Drive"><span>Drive</span></div>
-      <div class="tool-item"><img src="https://www.google.com/s2/favicons?domain=canva.com&sz=64" alt="Canva" style="border-radius:6px"><span>Canva</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/godaddy" alt="GoDaddy"><span>GoDaddy</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/cloudinary" alt="Cloudinary"><span>Cloudinary</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/firebase" alt="Firebase"><span>Firebase</span></div>
-      <div class="tool-item"><img src="https://avatars.githubusercontent.com/u/6799340?s=64" alt="Formspree" style="border-radius:6px"><span>Formspree</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/googlegemini" alt="Gemini"><span>Gemini</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/claude" alt="Claude"><span>Claude</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub"><span>GitHub</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/googledrive" alt="Google Drive" width="28" height="28" loading="lazy" decoding="async"><span>Drive</span></div>
+      <div class="tool-item"><img src="https://www.google.com/s2/favicons?domain=canva.com&sz=64" alt="Canva" width="28" height="28" loading="lazy" decoding="async" style="border-radius:6px"><span>Canva</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/godaddy" alt="GoDaddy" width="28" height="28" loading="lazy" decoding="async"><span>GoDaddy</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/cloudinary" alt="Cloudinary" width="28" height="28" loading="lazy" decoding="async"><span>Cloudinary</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/firebase" alt="Firebase" width="28" height="28" loading="lazy" decoding="async"><span>Firebase</span></div>
+      <div class="tool-item"><img src="https://avatars.githubusercontent.com/u/6799340?s=64" alt="Formspree" width="28" height="28" loading="lazy" decoding="async" style="border-radius:6px"><span>Formspree</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/googlegemini" alt="Gemini" width="28" height="28" loading="lazy" decoding="async"><span>Gemini</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/claude" alt="Claude" width="28" height="28" loading="lazy" decoding="async"><span>Claude</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" width="28" height="28" loading="lazy" decoding="async"><span>GitHub</span></div>
       <div class="tool-item tool-item-fa"><i class="fa-solid fa-chart-line" style="color:#4a78ff"></i><span>Databuddy</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/cloudflare" alt="Cloudflare"><span>Cloudflare</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/expo/ffffff" alt="Expo"><span>Expo</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/cloudflare" alt="Cloudflare" width="28" height="28" loading="lazy" decoding="async"><span>Cloudflare</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/expo/ffffff" alt="Expo" width="28" height="28" loading="lazy" decoding="async"><span>Expo</span></div>
       <!-- duplicate for seamless loop -->
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/googledrive" alt="Google Drive"><span>Drive</span></div>
-      <div class="tool-item"><img src="https://www.google.com/s2/favicons?domain=canva.com&sz=64" alt="Canva" style="border-radius:6px"><span>Canva</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/godaddy" alt="GoDaddy"><span>GoDaddy</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/cloudinary" alt="Cloudinary"><span>Cloudinary</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/firebase" alt="Firebase"><span>Firebase</span></div>
-      <div class="tool-item"><img src="https://avatars.githubusercontent.com/u/6799340?s=64" alt="Formspree" style="border-radius:6px"><span>Formspree</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/googlegemini" alt="Gemini"><span>Gemini</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/claude" alt="Claude"><span>Claude</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub"><span>GitHub</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/googledrive" alt="Google Drive" width="28" height="28" loading="lazy" decoding="async"><span>Drive</span></div>
+      <div class="tool-item"><img src="https://www.google.com/s2/favicons?domain=canva.com&sz=64" alt="Canva" width="28" height="28" loading="lazy" decoding="async" style="border-radius:6px"><span>Canva</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/godaddy" alt="GoDaddy" width="28" height="28" loading="lazy" decoding="async"><span>GoDaddy</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/cloudinary" alt="Cloudinary" width="28" height="28" loading="lazy" decoding="async"><span>Cloudinary</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/firebase" alt="Firebase" width="28" height="28" loading="lazy" decoding="async"><span>Firebase</span></div>
+      <div class="tool-item"><img src="https://avatars.githubusercontent.com/u/6799340?s=64" alt="Formspree" width="28" height="28" loading="lazy" decoding="async" style="border-radius:6px"><span>Formspree</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/googlegemini" alt="Gemini" width="28" height="28" loading="lazy" decoding="async"><span>Gemini</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/claude" alt="Claude" width="28" height="28" loading="lazy" decoding="async"><span>Claude</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" width="28" height="28" loading="lazy" decoding="async"><span>GitHub</span></div>
       <div class="tool-item tool-item-fa"><i class="fa-solid fa-chart-line" style="color:#4a78ff"></i><span>Databuddy</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/cloudflare" alt="Cloudflare"><span>Cloudflare</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/groq" alt="Groq"><span>Groq</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/render/ffffff" alt="Render"><span>Render</span></div>
-      <div class="tool-item"><img src="https://cdn.simpleicons.org/expo/ffffff" alt="Expo"><span>Expo</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/cloudflare" alt="Cloudflare" width="28" height="28" loading="lazy" decoding="async"><span>Cloudflare</span></div>
+      <div class="tool-item"><img src="https://cdn.simpleicons.org/expo/ffffff" alt="Expo" width="28" height="28" loading="lazy" decoding="async"><span>Expo</span></div>
     </div>
   </div>
 </div>
@@ -2022,7 +2031,7 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
       <!-- BRAND -->
       <div class="footer-brand">
         <a href="#" class="footer-brand-logo">
-          <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" alt="DGP">
+          <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" alt="DGP" width="32" height="32" loading="lazy" decoding="async">
           DGP <span>GLOBAL</span> GROUP
         </a>
         <p class="footer-brand-desc" data-es>Agencia de marketing digital especializada en hacer crecer negocios con estrategias reales y resultados medibles.</p>
@@ -2104,24 +2113,27 @@ const phrases={
   es:['Transformamos marcas en movimientos.','Tu negocio, nuestra pasión.','Diseño que convierte visitantes.','Resultados medibles, siempre.'],
   en:['We transform brands into movements.','Your business, our passion.','Design that converts visitors.','Measurable results, always.']
 };
+let loaderStarted=false;
 function runLoader(){
+  if(loaderStarted)return;loaderStarted=true;
+  const loader=document.getElementById('loader');
+  let seen=false;
+  try{seen=sessionStorage.getItem('dgpLoaderSeen')==='1';sessionStorage.setItem('dgpLoaderSeen','1');}catch(e){}
+  if(seen){loader.classList.add('hidden');return;}
   const bar=document.getElementById('ldrBar');
   const ph=document.getElementById('ldrPhrase');
   let p=0,pi=0;
   function setP(i){const l=phrases[lang];ph.innerHTML=`<span class="on">${l[i%l.length]}</span>`}
   setP(0);
   const t=setInterval(()=>{
-    p+=1.8;bar.style.width=p+'%';
-    if(Math.floor(p)%25===0&&Math.floor(p)>0){pi++;setP(pi)}
-    if(p>=100){clearInterval(t);setTimeout(()=>document.getElementById('loader').classList.add('hidden'),500)}
-  },30);
+    p+=2.5;bar.style.width=p+'%';
+    if(p%50===0&&p<100){pi++;setP(pi)}
+    if(p>=100){clearInterval(t);setTimeout(()=>loader.classList.add('hidden'),150)}
+  },20);
 }
 // Arrancar loader inmediatamente al cargar el DOM, sin esperar recursos externos
-document.addEventListener('DOMContentLoaded', () => setTimeout(runLoader, 200));
-// Doble seguro: si DOMContentLoaded ya pasó, ejecutar de una vez
-if(document.readyState === 'interactive' || document.readyState === 'complete') {
-  setTimeout(runLoader, 300);
-}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',runLoader);
+else runLoader();
 
 /* LANG */
 function setLang(l){
