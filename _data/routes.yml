@@ -1,0 +1,8 @@
+# Each page's address in Spanish and English. Internal links read from here.
+home:      {es: "/",                  en: "/en/"}
+web:       {es: "/diseno-web/",       en: "/en/web-design/"}
+packages:  {es: "/paquetes/",         en: "/en/packages/"}
+ecommerce: {es: "/ecommerce/",        en: "/en/ecommerce/"}
+systems:   {es: "/sistemas/",         en: "/en/custom-systems/"}
+portfolio: {es: "/portafolio/",       en: "/en/portfolio/"}
+audit:     {es: "/auditoria-gratis/", en: "/en/free-audit/"}

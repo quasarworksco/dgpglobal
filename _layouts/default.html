@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="{{ page.lang }}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,12 @@
 <meta name="theme-color" content="#1438cc">
 <link rel="canonical" href="{{ canon }}">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+{% assign route = site.data.routes[page.ref] %}{% if route %}
+<!-- HREFLANG (each page has a Spanish and an English version) -->
+<link rel="alternate" hreflang="es" href="{{ site.url }}{{ route.es }}">
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ route.en }}">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ route.es }}">
+{% endif %}
 
 <!-- OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
 <meta property="og:type" content="website">
@@ -23,8 +29,9 @@
 <meta property="og:image" content="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w1200">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:locale" content="es_US">
-<meta property="og:locale:alternate" content="en_US">
+{% if page.lang == 'en' %}<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">{% else %}<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">{% endif %}
 
 <!-- TWITTER CARD -->
 <meta name="twitter:card" content="summary_large_image">
@@ -71,8 +78,8 @@
 <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 <link rel="stylesheet" href="/assets/css/site.css?v={{ site.time | date: '%s' }}">
 </head>
-<body>
-<script>try{if(/[?&]lang=en/.test(location.search)||(!/[?&]lang=es/.test(location.search)&&localStorage.getItem('dgpLang')==='en'))document.body.classList.add('en')}catch(e){}</script>
+<body{% if page.lang == 'en' %} class="en"{% endif %}>
+<script>window.PAGE_LANG="{{ page.lang }}";window.HOME_URL="{{ site.data.routes.home[page.lang] }}";{% if route %}window.ALT_URL="{% if page.lang == 'en' %}{{ route.es }}{% else %}{{ route.en }}{% endif %}";{% endif %}</script>
 
 <div id="scroll-progress"></div>
 

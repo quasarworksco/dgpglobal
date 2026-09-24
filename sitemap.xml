@@ -1,51 +1,19 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://dgpglobalgroup.com/</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% for pair in site.data.routes %}{% assign r = pair[1] %}{% for L in (1..2) %}{% if L == 1 %}{% assign loc = r.es %}{% else %}{% assign loc = r.en %}{% endif %}  <url>
+    <loc>{{ site.url }}{{ loc }}</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ r.es }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ r.en }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ r.es }}"/>
+    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
+    <priority>{% if pair[0] == 'home' %}1.0{% else %}0.8{% endif %}</priority>
   </url>
-  <url>
-    <loc>https://dgpglobalgroup.com/diseno-web/</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dgpglobalgroup.com/ecommerce/</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dgpglobalgroup.com/sistemas/</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dgpglobalgroup.com/paquetes/</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dgpglobalgroup.com/portafolio/</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dgpglobalgroup.com/auditoria-gratis/</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://dgpglobalgroup.com/empleo.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
+{% endfor %}{% endfor %}  <url>
+    <loc>{{ site.url }}/empleo.html</loc>
+    <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
     <priority>0.5</priority>
   </url>
 </urlset>

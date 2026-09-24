@@ -1,11 +1,11 @@
-<!-- FAQ -->
+{% assign d = site.data.content[page.ref] %}<!-- FAQ -->
 <div class="section" id="faq">
   <div class="reveal">
     <div class="sec-eyebrow" data-es>Resolvemos tus dudas</div><div class="sec-eyebrow" data-en>Your questions answered</div>
     <h2 class="sec-title"><span data-es>PREGUNTAS <span class="accent">FRECUENTES</span></span><span data-en>FREQUENTLY ASKED <span class="accent">QUESTIONS</span></span></h2>
   </div>
   <div class="faq-list reveal" style="transition-delay:.1s">
-    {% for f in page.faq %}
+    {% for f in d.faq %}
     <details class="faq-item"{% if forloop.first %} open{% endif %}>
       <summary><span data-es>{{ f.q_es }}</span><span data-en>{{ f.q_en }}</span><i class="fa-solid fa-plus faq-icon"></i></summary>
       <div class="faq-answer">

@@ -1,23 +1,23 @@
-<!-- PAGE HERO -->
+{% assign d = site.data.content[page.ref] %}<!-- PAGE HERO -->
 <section class="page-hero">
   <div class="glow"></div>
-  <div class="bg-word">{{ page.hero.bg_word }}</div>
+  <div class="bg-word">{{ d.hero.bg_word }}</div>
   <div class="page-hero-inner">
     <div class="crumbs" role="navigation" aria-label="Breadcrumb">
-      <a href="/"><span data-es>Inicio</span><span data-en>Home</span></a>
+      <a href="{{ site.data.routes.home[page.lang] }}"><span data-es>Inicio</span><span data-en>Home</span></a>
       <i class="fa-solid fa-chevron-right"></i>
-      <span data-es>{{ page.crumb }}</span><span data-en>{{ page.crumb_en }}</span>
+      <span data-es>{{ d.crumb_es }}</span><span data-en>{{ d.crumb_en }}</span>
     </div>
-    <div class="eyebrow" data-es>{{ page.hero.eyebrow_es }}</div>
-    <div class="eyebrow" data-en>{{ page.hero.eyebrow_en }}</div>
+    <div class="eyebrow" data-es>{{ d.hero.eyebrow_es }}</div>
+    <div class="eyebrow" data-en>{{ d.hero.eyebrow_en }}</div>
     <h1 class="page-hero-title">
-      <span data-es>{{ page.hero.title_es }}</span>
-      <span data-en>{{ page.hero.title_en }}</span>
+      <span data-es>{{ d.hero.title_es }}</span>
+      <span data-en>{{ d.hero.title_en }}</span>
     </h1>
-    <p class="page-hero-sub" data-es>{{ page.hero.sub_es }}</p>
-    <p class="page-hero-sub" data-en>{{ page.hero.sub_en }}</p>
+    <p class="page-hero-sub" data-es>{{ d.hero.sub_es }}</p>
+    <p class="page-hero-sub" data-en>{{ d.hero.sub_en }}</p>
     <div class="page-hero-ctas">
-      {% if page.hero.audit %}
+      {% if d.hero.audit %}
       <a href="#auditoria-form" class="btn-main">
         <i class="fa-solid fa-magnifying-glass-chart"></i>
         <span data-es>PEDIR MI AUDITORÍA GRATIS</span><span data-en>GET MY FREE AUDIT</span>
@@ -35,9 +35,9 @@
       </button>
       {% endif %}
     </div>
-    {% if page.hero.chips %}
+    {% if d.hero.chips %}
     <div class="page-hero-chips">
-      {% for c in page.hero.chips %}<span class="hero-chip"><i class="{{ c.icon }}"></i><span data-es>{{ c.es }}</span><span data-en>{{ c.en }}</span></span>{% endfor %}
+      {% for c in d.hero.chips %}<span class="hero-chip"><i class="{{ c.icon }}"></i><span data-es>{{ c.es }}</span><span data-en>{{ c.en }}</span></span>{% endfor %}
     </div>
     {% endif %}
   </div>

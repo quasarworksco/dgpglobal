@@ -1,0 +1,41 @@
+hero:
+  bg_word: APP
+  eyebrow_es: Software a medida
+  eyebrow_en: Custom software
+  title_es: SISTEMAS HECHOS<span class="accent">PARA TU NEGOCIO</span>
+  title_en: SYSTEMS BUILT<span class="accent">FOR YOUR BUSINESS</span>
+  sub_es: Desarrollamos cualquier sistema de gestión, administración o proyecto adaptado exactamente a tu negocio. Si lo puedes imaginar, lo construimos.
+  sub_en: We build any management, administration or project system tailored exactly to your business. If you can imagine it, we build it.
+  chips:
+  - icon: fa-solid fa-code
+    es: Desde cero, sin plantillas
+    en: From scratch, no templates
+  - icon: fa-solid fa-mobile-screen
+    es: Desde cualquier dispositivo
+    en: From any device
+  - icon: fa-solid fa-headset
+    es: Soporte post-entrega
+    en: Post-delivery support
+faq:
+- q_es: ¿Cuánto cuesta un sistema personalizado?
+  a_es: Cada sistema se cotiza según su alcance. Nos cuentas tu idea y te enviamos una propuesta personalizada con precio, tiempo de entrega y todo lo que incluye, sin letras pequeñas.
+  q_en: How much does a custom system cost?
+  a_en: Each system is quoted based on its scope. Tell us your idea and we'll send you a custom proposal with price, delivery time and everything included, no fine print.
+- q_es: ¿Qué tipo de sistemas desarrollan?
+  a_es: Paneles de administración, facturación y pagos, portales de reservas, apps web, integraciones con APIs, automatizaciones, sistemas de turnos, membresías y más.
+  q_en: What kind of systems do you build?
+  a_en: Admin dashboards, billing and payments, booking portals, web apps, API integrations, automations, scheduling systems, memberships and more.
+- q_es: ¿Usan plantillas?
+  a_es: No. Analizamos tu proceso, diseñamos la solución y la construimos desde cero. Cada sistema es único, como tu negocio.
+  q_en: Do you use templates?
+  a_en: No. We analyze your process, design the solution and build it from scratch. Every system is unique, like your business.
+- q_es: ¿Dan soporte después de entregar el sistema?
+  a_es: Sí. Incluimos soporte post-entrega para ajustes, dudas y cambios.
+  q_en: Do you provide support after delivery?
+  a_en: Yes. We include post-delivery support for adjustments, questions and changes.
+crumb_es: Sistemas
+crumb_en: Systems
+service:
+  name_es: Sistemas Personalizados y Software a Medida
+  name_en: Custom Software & Business Systems
+  type: Custom software development

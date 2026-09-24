@@ -9,15 +9,15 @@
     DGP GROUP <span>USA</span>
   </div>
   <div class="drawer-links">
-    <a href="/" class="drawer-link{% if page.url == '/' %} active{% endif %}"><i class="fa-solid fa-house"></i><span data-es>Inicio</span><span data-en>Home</span></a>
-    <a href="/diseno-web/" class="drawer-link{% if page.url == '/diseno-web/' %} active{% endif %}"><i class="fa-solid fa-laptop-code"></i><span data-es>Diseño Web</span><span data-en>Web Design</span></a>
-    <a href="/paquetes/" class="drawer-link{% if page.url == '/paquetes/' %} active{% endif %}"><i class="fa-solid fa-box-open"></i><span data-es>Paquetes</span><span data-en>Packages</span></a>
-    <a href="/ecommerce/" class="drawer-link{% if page.url == '/ecommerce/' %} active{% endif %}"><i class="fa-brands fa-amazon"></i><span data-es>E-Commerce</span><span data-en>E-Commerce</span></a>
-    <a href="/sistemas/" class="drawer-link{% if page.url == '/sistemas/' %} active{% endif %}"><i class="fa-solid fa-sliders"></i><span data-es>Sistemas</span><span data-en>Systems</span></a>
-    <a href="/portafolio/" class="drawer-link{% if page.url == '/portafolio/' %} active{% endif %}"><i class="fa-solid fa-images"></i><span data-es>Portafolio</span><span data-en>Portfolio</span></a>
+    <a href="{{ site.data.routes.home[page.lang] }}" class="drawer-link{% if page.ref == 'home' %} active{% endif %}"><i class="fa-solid fa-house"></i><span data-es>Inicio</span><span data-en>Home</span></a>
+    <a href="{{ site.data.routes.web[page.lang] }}" class="drawer-link{% if page.ref == 'web' %} active{% endif %}"><i class="fa-solid fa-laptop-code"></i><span data-es>Diseño Web</span><span data-en>Web Design</span></a>
+    <a href="{{ site.data.routes.packages[page.lang] }}" class="drawer-link{% if page.ref == 'packages' %} active{% endif %}"><i class="fa-solid fa-box-open"></i><span data-es>Paquetes</span><span data-en>Packages</span></a>
+    <a href="{{ site.data.routes.ecommerce[page.lang] }}" class="drawer-link{% if page.ref == 'ecommerce' %} active{% endif %}"><i class="fa-brands fa-amazon"></i><span data-es>E-Commerce</span><span data-en>E-Commerce</span></a>
+    <a href="{{ site.data.routes.systems[page.lang] }}" class="drawer-link{% if page.ref == 'systems' %} active{% endif %}"><i class="fa-solid fa-sliders"></i><span data-es>Sistemas</span><span data-en>Systems</span></a>
+    <a href="{{ site.data.routes.portfolio[page.lang] }}" class="drawer-link{% if page.ref == 'portfolio' %} active{% endif %}"><i class="fa-solid fa-images"></i><span data-es>Portafolio</span><span data-en>Portfolio</span></a>
     <div class="drawer-sep"></div>
-    <a href="/auditoria-gratis/" class="drawer-link drawer-link-hot{% if page.url == '/auditoria-gratis/' %} active{% endif %}"><i class="fa-solid fa-magnifying-glass-chart"></i><span data-es>Auditoría Gratis</span><span data-en>Free Audit</span></a>
-    <a href="/#resenas" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-star"></i><span data-es>Reseñas</span><span data-en>Reviews</span></a>
+    <a href="{{ site.data.routes.audit[page.lang] }}" class="drawer-link drawer-link-hot{% if page.ref == 'audit' %} active{% endif %}"><i class="fa-solid fa-magnifying-glass-chart"></i><span data-es>Auditoría Gratis</span><span data-en>Free Audit</span></a>
+    <a href="{{ site.data.routes.home[page.lang] }}#resenas" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-star"></i><span data-es>Reseñas</span><span data-en>Reviews</span></a>
     <a href="#contacto" class="drawer-link" onclick="closeDrawer()"><i class="fa-solid fa-envelope"></i><span data-es>Contacto</span><span data-en>Contact</span></a>
   </div>
   <div class="drawer-cta">
@@ -31,26 +31,26 @@
 <!-- LANGUAGE SWITCH -->
 <div class="top-ctrl">
   <div class="ctrl-grp">
-    <button class="ctrl-btn active" onclick="setLang('es')">ES</button>
-    <button class="ctrl-btn" onclick="setLang('en')">EN</button>
+    {% assign r = site.data.routes[page.ref] | default: site.data.routes.home %}<a class="ctrl-btn{% if page.lang == 'es' %} active{% endif %}" href="{{ r.es }}" hreflang="es" lang="es">ES</a>
+    <a class="ctrl-btn{% if page.lang == 'en' %} active{% endif %}" href="{{ r.en }}" hreflang="en" lang="en">EN</a>
   </div>
 </div>
 
 <!-- NAV -->
 <nav>
-  <a href="/" class="logo">
+  <a href="{{ site.data.routes.home[page.lang] }}" class="logo">
     <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" class="logo-sm" alt="DGP Group USA" width="42" height="42" style="width:42px;height:42px;object-fit:contain;border-radius:4px">
     DGP GROUP <span>USA</span>
   </a>
   <div class="nav-links">
-    <a href="/diseno-web/" class="nav-link{% if page.url == '/diseno-web/' %} active{% endif %}"><span data-es>Diseño Web</span><span data-en>Web Design</span></a>
-    <a href="/paquetes/" class="nav-link{% if page.url == '/paquetes/' %} active{% endif %}"><span data-es>Paquetes</span><span data-en>Packages</span></a>
-    <a href="/ecommerce/" class="nav-link{% if page.url == '/ecommerce/' %} active{% endif %}">E-Commerce</a>
-    <a href="/sistemas/" class="nav-link{% if page.url == '/sistemas/' %} active{% endif %}"><span data-es>Sistemas</span><span data-en>Systems</span></a>
-    <a href="/portafolio/" class="nav-link{% if page.url == '/portafolio/' %} active{% endif %}"><span data-es>Portafolio</span><span data-en>Portfolio</span></a>
+    <a href="{{ site.data.routes.web[page.lang] }}" class="nav-link{% if page.ref == 'web' %} active{% endif %}"><span data-es>Diseño Web</span><span data-en>Web Design</span></a>
+    <a href="{{ site.data.routes.packages[page.lang] }}" class="nav-link{% if page.ref == 'packages' %} active{% endif %}"><span data-es>Paquetes</span><span data-en>Packages</span></a>
+    <a href="{{ site.data.routes.ecommerce[page.lang] }}" class="nav-link{% if page.ref == 'ecommerce' %} active{% endif %}">E-Commerce</a>
+    <a href="{{ site.data.routes.systems[page.lang] }}" class="nav-link{% if page.ref == 'systems' %} active{% endif %}"><span data-es>Sistemas</span><span data-en>Systems</span></a>
+    <a href="{{ site.data.routes.portfolio[page.lang] }}" class="nav-link{% if page.ref == 'portfolio' %} active{% endif %}"><span data-es>Portafolio</span><span data-en>Portfolio</span></a>
   </div>
   <div style="display:flex;align-items:center;gap:16px">
-    <a href="/auditoria-gratis/" class="nav-badge nav-badge-link">
+    <a href="{{ site.data.routes.audit[page.lang] }}" class="nav-badge nav-badge-link">
       <span class="dot"></span>
       <span data-es>Auditoría gratis</span><span data-en>Free audit</span>
     </a>

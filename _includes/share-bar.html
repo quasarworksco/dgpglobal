@@ -8,7 +8,7 @@
       <span data-en>Share DGP Global Group and help another business grow.</span>
     </div>
     <div class="share-btns">
-      <a class="share-btn wa" href="https://wa.me/?text=Mira%20esta%20agencia%20de%20marketing%20digital%20en%20Florida%20%E2%80%94%20diseño%20web%2C%20redes%20sociales%20y%20más%3A%20https%3A%2F%2Fdgpglobalgroup.com" target="_blank" rel="noopener">
+      <a class="share-btn wa" href="{% if page.lang == 'en' %}https://wa.me/?text=Check%20out%20this%20digital%20marketing%20agency%20in%20Florida%20%E2%80%94%20web%20design%2C%20social%20media%20and%20more%3A%20https%3A%2F%2Fdgpglobalgroup.com%2Fen%2F{% else %}https://wa.me/?text=Mira%20esta%20agencia%20de%20marketing%20digital%20en%20Florida%20%E2%80%94%20diseño%20web%2C%20redes%20sociales%20y%20más%3A%20https%3A%2F%2Fdgpglobalgroup.com{% endif %}" target="_blank" rel="noopener">
         <i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span>
       </a>
       <button class="share-btn copy" onclick="copyShareLink(this)">

@@ -100,7 +100,7 @@
         <div class="wa-popup-sub" data-en>Reply in minutes · Online</div>
       </div>
     </div>
-    <textarea id="wa-msg-text" class="wa-popup-msg" rows="3" data-msg-es="Hola DGP Group! 👋 Me interesa conocer más sobre sus servicios. ¿Podrían ayudarme?" data-msg-en="Hi DGP Group! 👋 I'd like to learn more about your services. Could you help me?">Hola DGP Group! 👋 Me interesa conocer más sobre sus servicios. ¿Podrían ayudarme?</textarea>
+    <textarea id="wa-msg-text" class="wa-popup-msg" rows="3" data-msg-es="Hola DGP Group! 👋 Me interesa conocer más sobre sus servicios. ¿Podrían ayudarme?" data-msg-en="Hi DGP Group! 👋 I'd like to learn more about your services. Could you help me?">{% if page.lang == 'en' %}Hi DGP Group! 👋 I'd like to learn more about your services. Could you help me?{% else %}Hola DGP Group! 👋 Me interesa conocer más sobre sus servicios. ¿Podrían ayudarme?{% endif %}</textarea>
     <button class="wa-send-btn" onclick="sendWAFloat()">
       <i class="fa-brands fa-whatsapp"></i>
       <span data-es>Enviar mensaje</span><span data-en>Send message</span>
@@ -146,6 +146,7 @@
     <div class="modal-field">
       <select id="mc-service">
         <option value="" disabled selected class="opt-es">¿Qué servicio te interesa?</option>
+        <option value="" disabled class="opt-en">Which service interests you?</option>
         <option value="Social Media / Redes Sociales" class="opt-es">Marketing en Redes Sociales</option>
         <option value="Social Media / Redes Sociales" class="opt-en">Social Media Marketing</option>
         <option value="Diseño Gráfico / Identidad" class="opt-es">Diseño Gráfico / Identidad</option>

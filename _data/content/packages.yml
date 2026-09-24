@@ -1,0 +1,41 @@
+hero:
+  bg_word: PACK
+  eyebrow_es: Branding · Redes sociales
+  eyebrow_en: Branding · Social media
+  title_es: TU MARCA LISTA<span class="accent">PARA CRECER</span>
+  title_en: YOUR BRAND READY<span class="accent">TO GROW</span>
+  sub_es: Combina servicios y ahorra. Logo profesional, redes sociales configuradas, seguidores y contenido para que tu negocio arranque con todo.
+  sub_en: Bundle services and save. Professional logo, social media setup, followers and content so your business launches with everything it needs.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega en 48h
+    en: 48h delivery
+  - icon: fa-solid fa-pen-nib
+    es: Logo profesional
+    en: Professional logo
+  - icon: fa-brands fa-instagram
+    es: Redes listas para vender
+    en: Social media ready to sell
+faq:
+- q_es: ¿Qué incluye el Paquete Básico?
+  a_es: Logo profesional, creación de tus redes sociales, historias destacadas y bio, y tarjeta de presentación.
+  q_en: What does the Basic Package include?
+  a_en: Professional logo, social media setup, story highlights and bio, and a business card.
+- q_es: ¿Cuál es la diferencia entre los paquetes?
+  a_es: El Intermedio incluye todo el Básico más 2,000 seguidores y 5 posts para Instagram. El Avanzado suma factura y business card, 5,000 seguidores con 10 posts y una web One Page.
+  q_en: What is the difference between the packages?
+  a_en: Intermediate includes everything in Basic plus 2,000 followers and 5 Instagram posts. Advanced adds invoice and business card design, 5,000 followers with 10 posts and a One Page website.
+- q_es: ¿Cuánto cuesta cada paquete?
+  a_es: Usa el cotizador rápido para ver el estimado de cada paquete al instante, o escríbenos por WhatsApp y te asesoramos para elegir el que más te conviene.
+  q_en: How much does each package cost?
+  a_en: Use the quick quote tool to see each package estimate instantly, or message us on WhatsApp and we'll help you choose the right one.
+- q_es: ¿Cómo se hace el pago?
+  a_es: Aceptamos tarjeta de crédito, PayPal y Zelle.
+  q_en: How do I pay?
+  a_en: We accept credit card, PayPal and Zelle.
+crumb_es: Paquetes
+crumb_en: Packages
+service:
+  name_es: Paquetes Profesionales de Branding y Redes Sociales
+  name_en: Branding & Social Media Packages
+  type: Branding and social media

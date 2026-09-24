@@ -1,0 +1,41 @@
+hero:
+  bg_word: SHOP
+  eyebrow_es: Ventas online
+  eyebrow_en: Online sales
+  title_es: VENDE EN LAS PLATAFORMAS<span class="accent">MÁS GRANDES</span>
+  title_en: SELL ON THE WORLD’S<span class="accent">BIGGEST PLATFORMS</span>
+  sub_es: Desde la apertura de tu cuenta hasta tu primera venta en Amazon, Walmart, TikTok Shop, Shopify o eBay. Nosotros nos encargamos de todo el proceso.
+  sub_en: From opening your account to your first sale on Amazon, Walmart, TikTok Shop, Shopify or eBay. We handle the entire process.
+  chips:
+  - icon: fa-solid fa-receipt
+    es: Pago único, sin mensualidad
+    en: One-time payment, no monthly fee
+  - icon: fa-solid fa-file-shield
+    es: Requisitos legales y FDA
+    en: Legal & FDA requirements
+  - icon: fa-solid fa-chart-line
+    es: Asesoría en publicidad
+    en: Advertising advisory
+faq:
+- q_es: ¿El plan de gestión e-commerce es mensual?
+  a_es: No. Es un pago único, sin mensualidades.
+  q_en: Is the e-commerce management plan monthly?
+  a_en: No. It is a one-time payment, with no monthly fees.
+- q_es: ¿En qué plataformas trabajan?
+  a_es: Amazon, Walmart, TikTok Shop, Shopify, eBay y otros marketplaces.
+  q_en: Which platforms do you work with?
+  a_en: Amazon, Walmart, TikTok Shop, Shopify, eBay and other marketplaces.
+- q_es: ¿Qué incluye el servicio?
+  a_es: Apertura y onboarding de tu cuenta, optimización de listings y catálogo, estrategia de precios, gestión de requisitos legales y permisos FDA, asesoría en publicidad (PPC) y acompañamiento estratégico personalizado.
+  q_en: What does the service include?
+  a_en: Account opening and onboarding, listing and catalog optimization, pricing strategy, legal requirements and FDA permit management, advertising (PPC) advisory and personalized strategic support.
+- q_es: ¿Me ayudan con los permisos de la FDA?
+  a_es: Sí. Gestionamos los requisitos legales y permisos FDA que tu producto necesite para venderse en las plataformas.
+  q_en: Do you help with FDA permits?
+  a_en: Yes. We manage the legal requirements and FDA permits your product needs to sell on the platforms.
+crumb_es: E-Commerce
+crumb_en: E-Commerce
+service:
+  name_es: Gestión E-Commerce Multi-Plataforma
+  name_en: Multi-Platform E-Commerce Management
+  type: E-commerce management

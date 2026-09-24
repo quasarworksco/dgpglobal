@@ -1,6 +1,6 @@
 const SCRIPT_URL='https://script.google.com/macros/s/AKfycbypY5TPcjUePxLwplMjyz7lLTAwxF6zDOXR3ub3CVrzraNBi3FViAlIcvxOMgqNy3F6jA/exec';
 const CSV_URL='https://docs.google.com/spreadsheets/d/e/2PACX-1vTPpmwX4hdgbUsrtTk9_-jDaWpqjB-ixIrHfPqDj5y0HqvJ-fEdbj-0B78jgxQ3lXRji9Z9teaRl9O6/pub?output=csv';
-let lang='es', curr='usd', rate=0.90;
+let lang=window.PAGE_LANG||'es', curr='usd', rate=0.90;
 
 /* LIVE RATE */
 async function getRate(){
@@ -41,7 +41,6 @@ else runLoader();
 function setLang(l){
   const prev=lang;
   lang=l;
-  try{localStorage.setItem('dgpLang',l);}catch(e){}
   document.body.classList.toggle('en',l==='en');
   document.documentElement.lang=l==='en'?'en':'es';
   document.querySelectorAll('[data-ph-'+l+']').forEach(el=>el.placeholder=el.getAttribute('data-ph-'+l));
@@ -133,16 +132,6 @@ function closeDrawer(){
   document.getElementById('hamburger').classList.remove('open');
   document.body.style.overflow='';
 }
-/* ECOM COLLAPSIBLE */
-function toggleEcom(btn){
-  const icon=btn.querySelector('.ecom-collapse-icon');
-  const panel=btn.nextElementSibling;
-  const isOpen=panel.classList.contains('open');
-  panel.classList.toggle('open',!isOpen);
-  icon.classList.toggle('open',!isOpen);
-  btn.querySelector('[data-es]').textContent=isOpen?'Ver qué incluye':'Ocultar detalles';
-  btn.querySelector('[data-en]').textContent=isOpen?'See what\'s included':'Hide details';
-}
 
 /* WA FLOAT */
 function toggleWAPopup(){
@@ -218,7 +207,7 @@ document.getElementById('heroFormFs').addEventListener('submit',async function(e
     return;
   }
   btn.disabled=true;
-  btn.querySelector('span[data-es]').textContent=isEn?'Sending...':'Enviando...';
+  btn.querySelector('span').textContent=isEn?'Sending...':'Enviando...';
   try{
     const res=await fetch(this.action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
     if(res.ok){
@@ -385,7 +374,7 @@ function toggleReviews(btn){
 function scrollToContact(){
   const c=document.getElementById('contacto');
   if(c)c.scrollIntoView({behavior:'smooth',block:'start'});
-  else location.href='/#contacto';
+  else location.href=(window.HOME_URL||'/')+'#contacto';
 }
 
 /* ALTAIR AI CHAT */
@@ -673,7 +662,7 @@ if(auditForm){
       const res=await fetch(this.action,{method:'POST',body:fd,headers:{Accept:'application/json'}});
       if(!res.ok)throw new Error();
       const esc=v=>String(v).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
-      tgSend(`🔍 <b>Nueva solicitud de auditoría gratis</b>\n\n👤 ${esc(name)}\n📧 ${esc(email)}\n📱 ${esc(wa)}\n🌐 ${esc(site)}\n🎯 ${esc(fd.get('goal')||'—')}\n💬 ${esc(fd.get('message')||'—')}\n\n⏱ Prometido: informe en 24h`).catch(()=>{});
+      tgSend(`🔍 <b>Nueva solicitud de auditoría gratis</b>\n\n👤 ${esc(name)}\n📧 ${esc(email)}\n📱 ${esc(wa)}\n🌐 ${esc(site)}\n🎯 ${esc(fd.get('goal')||'—')}\n🗣 ${lang==='en'?'Inglés (responder en inglés)':'Español'}\n💬 ${esc(fd.get('message')||'—')}\n\n⏱ Prometido: informe en 24h`).catch(()=>{});
       status.className='status ok';
       status.textContent=isEn?'Done! We\'ll send your audit within 24 hours by email or WhatsApp.':'¡Listo! Te enviamos tu auditoría en menos de 24 horas por correo o WhatsApp.';
       this.reset();
@@ -691,13 +680,13 @@ if(auditForm){
   if(location.pathname==='/'&&moved[location.hash])location.replace(moved[location.hash]);
 })();
 
-/* INIT: saved language + Altair conversation */
+/* INIT: page language + Altair conversation */
 (function(){
-  let l=null;
-  try{
-    const q=new URLSearchParams(location.search).get('lang');
-    l=(q==='en'||q==='es')?q:localStorage.getItem('dgpLang');
-  }catch(e){}
-  if(l==='en'||l==='es')setLang(l);
+  let q=null;
+  try{q=new URLSearchParams(location.search).get('lang');}catch(e){}
+  if((q==='en'||q==='es')&&q!==lang&&window.ALT_URL){location.replace(window.ALT_URL+location.hash);return;}
+  setLang(lang);
   restoreAltair();
+  // Each URL is one language: drop the other language's copy so the page (and Google) only sees this one
+  document.querySelectorAll(lang==='en'?'[data-es],.opt-es':'[data-en],.opt-en').forEach(e=>e.remove());
 })();

@@ -2,3 +2,8 @@ url: "https://dgpglobalgroup.com"
 title: "DGP Global Group"
 exclude:
   - README.md
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: "es"
