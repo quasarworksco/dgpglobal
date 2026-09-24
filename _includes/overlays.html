@@ -1,0 +1,217 @@
+<!-- QUOTE CALCULATOR MODAL -->
+<div id="quote-modal" onclick="if(event.target===this)closeQuote()">
+  <div class="quote-card">
+    <div class="quote-header">
+      <div>
+        <div class="quote-header-title" data-es>COTIZADOR RÁPIDO</div>
+        <div class="quote-header-title" data-en>QUICK QUOTE</div>
+        <div class="quote-header-sub" data-es>Estimado instantáneo · Sin compromiso</div>
+        <div class="quote-header-sub" data-en>Instant estimate · No commitment</div>
+      </div>
+      <button class="quote-close" onclick="closeQuote()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="quote-body">
+
+      <!-- STEP 1: Category -->
+      <div class="quote-step active" id="qstep1">
+        <div class="quote-step-label" data-es>Paso 1 de 2 — ¿Qué servicio necesitas?</div>
+        <div class="quote-step-label" data-en>Step 1 of 2 — What service do you need?</div>
+        <div class="quote-options">
+          <button class="quote-opt" onclick="selectCat('web')">
+            <div class="quote-opt-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="quote-opt-name" data-es>Sitio Web</div><div class="quote-opt-name" data-en>Website</div>
+            <div class="quote-opt-desc" data-es>Landing page, sitio multi-página o tienda online</div><div class="quote-opt-desc" data-en>Landing page, multi-page site or online store</div>
+          </button>
+          <button class="quote-opt" onclick="selectCat('pack')">
+            <div class="quote-opt-icon"><i class="fa-solid fa-box-open"></i></div>
+            <div class="quote-opt-name" data-es>Paquete Profesional</div><div class="quote-opt-name" data-en>Pro Package</div>
+            <div class="quote-opt-desc" data-es>Logo, redes sociales y presencia digital completa</div><div class="quote-opt-desc" data-en>Logo, social media and full digital presence</div>
+          </button>
+          <button class="quote-opt" onclick="selectCat('ecom')">
+            <div class="quote-opt-icon"><i class="fa-brands fa-amazon"></i></div>
+            <div class="quote-opt-name" data-es>Gestión E-Commerce</div><div class="quote-opt-name" data-en>E-Commerce</div>
+            <div class="quote-opt-desc" data-es>Amazon, Walmart, TikTok Shop, Shopify y más</div><div class="quote-opt-desc" data-en>Amazon, Walmart, TikTok Shop, Shopify & more</div>
+          </button>
+          <button class="quote-opt" onclick="selectCat('sys')">
+            <div class="quote-opt-icon"><i class="fa-solid fa-sliders"></i></div>
+            <div class="quote-opt-name" data-es>Sistema Personalizado</div><div class="quote-opt-name" data-en>Custom System</div>
+            <div class="quote-opt-desc" data-es>Panel de administración, facturación, app web</div><div class="quote-opt-desc" data-en>Admin panel, billing system, web app</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- STEP 2: Plan -->
+      <div class="quote-step" id="qstep2">
+        <div class="quote-step-label" data-es>Paso 2 de 2 — Elige tu plan</div>
+        <div class="quote-step-label" data-en>Step 2 of 2 — Choose your plan</div>
+        <div class="quote-options" id="qoptions2"></div>
+        <div class="quote-nav">
+          <button class="quote-back" onclick="goStep(1)"><i class="fa-solid fa-arrow-left"></i> <span data-es>Atrás</span><span data-en>Back</span></button>
+        </div>
+      </div>
+
+      <!-- STEP 3: Result -->
+      <div class="quote-step" id="qstep3">
+        <div class="quote-result">
+          <div class="quote-result-from" data-es>Estimado desde</div><div class="quote-result-from" data-en>Estimated from</div>
+          <div class="quote-result-price"><span id="q-price">$280</span></div>
+          <div class="quote-result-delivery"><i class="fa-solid fa-clock"></i><span id="q-delivery">24–48h</span></div>
+          <div class="quote-result-items" id="q-items"></div>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px">
+            <a id="q-wa" href="#" target="_blank" class="btn-main" style="justify-content:center;text-decoration:none">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span data-es>CONTRATAR POR WHATSAPP</span><span data-en>GET STARTED ON WHATSAPP</span>
+            </a>
+            <button onclick="goStep(1);clearQuote()" class="quote-back" style="width:100%;justify-content:center">
+              <span data-es>Calcular otro servicio</span><span data-en>Calculate another service</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- EXIT POPUP -->
+<div id="exit-popup">
+  <div class="exit-card">
+    <button class="exit-close" onclick="closeExitPopup()"><i class="fa-solid fa-xmark"></i></button>
+    <div class="exit-eyebrow" data-es>Antes de irte</div><div class="exit-eyebrow" data-en>Before you leave</div>
+    <div class="exit-title" data-es>¿COTIZACIÓN GRATIS<br>EN 24 HORAS?</div>
+    <div class="exit-title" data-en>FREE QUOTE<br>IN 24 HOURS?</div>
+    <p class="exit-sub" data-es>Cuéntanos tu idea y te enviamos una propuesta personalizada sin compromiso. Sin costo, sin esperas largas.</p>
+    <p class="exit-sub" data-en>Tell us your idea and we'll send you a custom proposal with no commitment. Free, no long waits.</p>
+    <div class="exit-actions">
+      <a href="https://wa.me/12398231738?text=Hola!%20Vi%20su%20sitio%20web%20y%20me%20interesa%20una%20cotización." target="_blank" class="btn-main" style="justify-content:center;text-decoration:none"><i class="fa-brands fa-whatsapp"></i><span data-es>ESCRÍBENOS POR WHATSAPP</span><span data-en>WRITE US ON WHATSAPP</span></a>
+      <button onclick="closeExitPopup();scrollToContact()" class="btn-outline-dark" style="border:none;cursor:pointer;width:100%;justify-content:center"><span data-es>VER FORMULARIO DE CONTACTO</span><span data-en>SEE CONTACT FORM</span></button>
+    </div>
+  </div>
+</div>
+
+<!-- WA FLOAT -->
+<div id="wa-float">
+  <div id="wa-popup">
+    <div class="wa-popup-head">
+      <div class="wa-popup-icon"><i class="fa-brands fa-whatsapp"></i></div>
+      <div>
+        <div class="wa-popup-title">DGP Group USA</div>
+        <div class="wa-popup-sub" data-es>Respuesta en minutos · En línea</div>
+        <div class="wa-popup-sub" data-en>Reply in minutes · Online</div>
+      </div>
+    </div>
+    <textarea id="wa-msg-text" class="wa-popup-msg" rows="3" data-msg-es="Hola DGP Group! 👋 Me interesa conocer más sobre sus servicios. ¿Podrían ayudarme?" data-msg-en="Hi DGP Group! 👋 I'd like to learn more about your services. Could you help me?">Hola DGP Group! 👋 Me interesa conocer más sobre sus servicios. ¿Podrían ayudarme?</textarea>
+    <button class="wa-send-btn" onclick="sendWAFloat()">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span data-es>Enviar mensaje</span><span data-en>Send message</span>
+    </button>
+  </div>
+  <button id="wa-fab" onclick="toggleWAPopup()" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </button>
+</div>
+
+<!-- ALTAIR AI CHAT -->
+<div id="altair-widget">
+  <div id="altair-chat">
+    <div class="altair-header">
+      <div class="altair-avatar">A</div>
+      <div class="altair-info">
+        <div class="altair-name">ALTAIR</div>
+        <div class="altair-status"><span data-es>Asesor Digital · DGP Global</span><span data-en>Digital Advisor · DGP Global</span></div>
+      </div>
+      <button class="altair-close" onclick="closeAltair()">✕</button>
+    </div>
+    <div class="altair-messages" id="altair-messages"></div>
+    <div class="altair-input-area">
+      <input type="text" id="altair-input" data-ph-es="Escribe tu pregunta..." data-ph-en="Type your question..." placeholder="Escribe tu pregunta..." onkeydown="if(event.key==='Enter')altairSend()">
+      <button class="altair-send" onclick="altairSend()"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+  </div>
+  <button id="altair-fab" onclick="toggleAltair()" aria-label="Chat con Altair">
+    <i class="fa-solid fa-robot"></i>
+  </button>
+</div>
+
+<!-- CONTACT MODAL -->
+<div id="contactModal">
+  <div class="modal-backdrop" onclick="closeContactModal()"></div>
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeContactModal()">✕</button>
+    <div class="modal-eyebrow" data-es>Escribenos</div><div class="modal-eyebrow" data-en>Get in touch</div>
+    <div class="modal-title" data-es>CUÉNTANOS TU PROYECTO</div><div class="modal-title" data-en>TELL US YOUR PROJECT</div>
+    <p class="modal-sub" data-es>Completa el formulario y elige cómo prefieres que te contactemos.</p>
+    <p class="modal-sub" data-en>Fill in the form and choose how you'd like us to contact you.</p>
+    <div class="modal-field"><input type="text" id="mc-name" data-ph-es="Tu nombre completo" data-ph-en="Your full name" placeholder="Tu nombre completo"></div>
+    <div class="modal-field">
+      <select id="mc-service">
+        <option value="" disabled selected class="opt-es">¿Qué servicio te interesa?</option>
+        <option value="Social Media / Redes Sociales" class="opt-es">Marketing en Redes Sociales</option>
+        <option value="Social Media / Redes Sociales" class="opt-en">Social Media Marketing</option>
+        <option value="Diseño Gráfico / Identidad" class="opt-es">Diseño Gráfico / Identidad</option>
+        <option value="Graphic Design / Identity" class="opt-en">Graphic Design / Identity</option>
+        <option value="Desarrollo Web" class="opt-es">Desarrollo Web</option>
+        <option value="Web Design" class="opt-en">Web Design</option>
+        <option value="Gestión E-Commerce" class="opt-es">Gestión E-Commerce</option>
+        <option value="E-Commerce Management" class="opt-en">E-Commerce Management</option>
+        <option value="Sistema Personalizado" class="opt-es">Sistema Personalizado (CRM / Admin…)</option>
+        <option value="Custom System" class="opt-en">Custom System (CRM / Admin…)</option>
+        <option value="Paquete Completo" class="opt-es">Paquete Completo</option>
+        <option value="Full Package" class="opt-en">Full Package</option>
+        <option value="Otro" class="opt-es">Otro / No sé aún</option>
+        <option value="Other" class="opt-en">Other / Not sure yet</option>
+      </select>
+    </div>
+    <div class="modal-field"><textarea id="mc-msg" data-ph-es="Cuéntanos brevemente tu proyecto o idea..." data-ph-en="Tell us briefly about your project or idea..." placeholder="Cuéntanos brevemente tu proyecto o idea..." rows="3"></textarea></div>
+    <div style="display:flex;gap:8px;margin-top:4px">
+      <button class="modal-send" style="flex:1" onclick="sendContactWA()">
+        <span data-es>WHATSAPP</span><span data-en>WHATSAPP</span>
+        <span class="barr"><i class="fa-brands fa-whatsapp"></i></span>
+      </button>
+      <button class="modal-send modal-send-email" style="flex:1" onclick="sendContactEmail()">
+        <span data-es>EMAIL</span><span data-en>EMAIL</span>
+        <span class="barr"><i class="fa-solid fa-envelope"></i></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- HERO FORM MODAL -->
+<div id="heroFormModal" class="modal-overlay" style="display:none;position:fixed;inset:0;z-index:9000;align-items:center;justify-content:center;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);padding:20px">
+  <div class="modal-box" style="max-width:520px;width:100%;position:relative">
+    <button class="modal-close" onclick="closeHeroForm()">✕</button>
+    <div class="modal-eyebrow" data-es>Cotización gratuita</div><div class="modal-eyebrow" data-en>Free quote</div>
+    <div class="modal-title" data-es>CUÉNTANOS TU PROYECTO</div><div class="modal-title" data-en>TELL US YOUR PROJECT</div>
+    <p class="modal-sub" data-es>Te respondemos en menos de 24 horas. Sin compromisos.</p>
+    <p class="modal-sub" data-en>We'll get back to you in under 24 hours. No commitments.</p>
+    <form id="heroFormFs" action="https://formspree.io/f/xpqnajzo" method="POST" style="margin-top:4px" novalidate>
+      <input type="hidden" name="_subject" value="Nuevo contacto desde dgpglobalgroup.com">
+      <div class="modal-field"><input type="text" name="name" id="hf-name" data-ph-es="Tu nombre completo" data-ph-en="Your full name" placeholder="Tu nombre completo" required></div>
+      <div class="modal-field"><input type="email" name="email" id="hf-email" data-ph-es="Correo electrónico" data-ph-en="Email address" placeholder="Correo electrónico" required></div>
+      <div class="modal-field"><input type="tel" name="phone" data-ph-es="Teléfono (opcional)" data-ph-en="Phone (optional)" placeholder="Teléfono (opcional)"></div>
+      <div class="modal-field">
+        <select name="service" style="width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--soft);outline:none;transition:border-color .2s">
+          <option value="" disabled selected data-es>¿Qué servicio te interesa?</option>
+          <option value="Diseño Web" data-es>Diseño Web</option>
+          <option value="Web Design" data-en>Web Design</option>
+          <option value="Marketing Digital" data-es>Marketing Digital</option>
+          <option value="Digital Marketing" data-en>Digital Marketing</option>
+          <option value="Diseño Gráfico / Logo" data-es>Diseño Gráfico / Logo</option>
+          <option value="Graphic Design / Logo" data-en>Graphic Design / Logo</option>
+          <option value="E-Commerce" data-es>Gestión E-Commerce</option>
+          <option value="E-Commerce" data-en>E-Commerce Management</option>
+          <option value="Sistema Personalizado" data-es>Sistema Personalizado</option>
+          <option value="Custom System" data-en>Custom System</option>
+          <option value="Otro" data-es>Otro</option>
+          <option value="Other" data-en>Other</option>
+        </select>
+      </div>
+      <div class="modal-field"><textarea name="message" rows="3" data-ph-es="Cuéntanos brevemente tu proyecto..." data-ph-en="Tell us briefly about your project..." placeholder="Cuéntanos brevemente tu proyecto..."></textarea></div>
+      <button type="submit" class="submit-btn" id="hfSubmitBtn" style="margin-top:4px">
+        <span data-es>ENVIAR MENSAJE</span><span data-en>SEND MESSAGE</span>
+        <span class="barr"><i class="fa-solid fa-paper-plane"></i></span>
+      </button>
+      <div id="hfStatus" class="status"></div>
+    </form>
+  </div>
+</div>

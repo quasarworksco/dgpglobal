@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% assign canon = site.url | append: page.url %}{% assign share_title = page.og_title | default: page.title %}{% assign share_desc = page.og_description | default: page.description %}
+<!-- PRIMARY SEO -->
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">
+{% endif %}<meta name="author" content="DGP Global Group">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#1438cc">
+<link rel="canonical" href="{{ canon }}">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+<!-- OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ canon }}">
+<meta property="og:site_name" content="DGP Global Group">
+<meta property="og:title" content="{{ share_title }}">
+<meta property="og:description" content="{{ share_desc }}">
+<meta property="og:image" content="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w1200">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_US">
+<meta property="og:locale:alternate" content="en_US">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@dgpgroupus">
+<meta name="twitter:title" content="{{ share_title }}">
+<meta name="twitter:description" content="{{ share_desc }}">
+<meta name="twitter:image" content="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w1200">
+
+<!-- GEO TARGETING -->
+<meta name="geo.region" content="US-FL">
+<meta name="geo.placename" content="Florida, United States">
+
+{% include schema.html %}
+<!-- FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- DATABUDDY ANALYTICS -->
+<script
+  src="https://cdn.databuddy.cc/databuddy.js"
+  data-client-id="f3a183a0-2636-4c00-afbe-7e7670e99704"
+  crossorigin="anonymous"
+  async
+></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{% if page.hero_preload %}<link rel="preconnect" href="https://images.unsplash.com">
+{% endif %}<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://drive.google.com">
+<link rel="preconnect" href="https://lh3.googleusercontent.com">
+<link rel="dns-prefetch" href="https://cdn.simpleicons.org">
+<link rel="dns-prefetch" href="https://docs.google.com">
+<link rel="dns-prefetch" href="https://api.groq.com">
+<link rel="dns-prefetch" href="https://formspree.io">
+<link rel="dns-prefetch" href="https://cdn.databuddy.cc">
+{% if page.hero_preload %}<link rel="preload" as="image" fetchpriority="high" media="(max-width:600px)" href="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=70&w=900&auto=format&fit=crop">
+<link rel="preload" as="image" fetchpriority="high" media="(min-width:601px)" href="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1800&auto=format&fit=crop">
+{% endif %}<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"></noscript>
+<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+<link rel="stylesheet" href="/assets/css/site.css?v={{ site.time | date: '%s' }}">
+</head>
+<body>
+<script>try{if(/[?&]lang=en/.test(location.search)||(!/[?&]lang=es/.test(location.search)&&localStorage.getItem('dgpLang')==='en'))document.body.classList.add('en')}catch(e){}</script>
+
+<div id="scroll-progress"></div>
+
+{% include nav.html %}
+{% if page.loader %}{% include loader.html %}{% endif %}
+
+{{ content }}
+
+{% include overlays.html %}
+
+{% include footer.html %}
+
+<script>window.PORT_DATA={{ site.data.portfolio | jsonify }};</script>
+<script src="/assets/js/site.js?v={{ site.time | date: '%s' }}"></script>
+</body>
+</html>

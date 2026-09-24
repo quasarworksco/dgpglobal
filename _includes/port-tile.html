@@ -1,0 +1,13 @@
+<article class="port-tile reveal" style="transition-delay:{{ include.i | times: 0.07 }}s">
+  <div class="port-tile-head">
+    <div class="port-tile-num">{{ include.p.num }}</div>
+    <h3 class="port-tile-title">{{ include.p.title }}</h3>
+    <div class="pc-tags"><span data-es>{% for t in include.p.tags_es %}<span class="pc-tag">{{ t }}</span> {% endfor %}</span><span data-en>{% for t in include.p.tags_en %}<span class="pc-tag">{{ t }}</span> {% endfor %}</span></div>
+    <p class="port-tile-desc" data-es>{{ include.p.desc_es }}</p>
+    <p class="port-tile-desc" data-en>{{ include.p.desc_en }}</p>
+  </div>
+  <div class="port-tile-foot">
+    <span class="port-tile-url">{{ include.p.url | remove: "https://" | remove: "www." | remove: "/" }}</span>
+    <a href="{{ include.p.url }}" target="_blank" rel="noopener" class="port-tile-link"><span data-es>Ver sitio</span><span data-en>Visit</span> <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </div>
+</article>

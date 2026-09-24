@@ -1,0 +1,141 @@
+[
+  {
+    "num": "01",
+    "title": "CAIBO CONSTRUCTION",
+    "tags_es": [
+      "Construcción",
+      "Landing Page",
+      "Florida"
+    ],
+    "tags_en": [
+      "Construction",
+      "Landing Page",
+      "Florida"
+    ],
+    "desc_es": "Sitio web para empresa de construcción en Florida. Diseño limpio, presentación de servicios y formulario de contacto directo.",
+    "desc_en": "Website for a Florida construction company. Clean design, service showcase and direct contact form.",
+    "url": "https://caiboconstruction.com/",
+    "featured": true
+  },
+  {
+    "num": "02",
+    "title": "CLEANING GROUP",
+    "tags_es": [
+      "Limpieza",
+      "Landing Page",
+      "Servicios"
+    ],
+    "tags_en": [
+      "Cleaning",
+      "Landing Page",
+      "Services"
+    ],
+    "desc_es": "Landing page para empresa de limpieza profesional, enfocada en conversión y captación de clientes.",
+    "desc_en": "Landing page for a professional cleaning company focused on conversion and lead capture.",
+    "url": "https://cleaninggroup.dgp-link.com/"
+  },
+  {
+    "num": "03",
+    "title": "THE SWEET ZONE",
+    "tags_es": [
+      "E-Commerce",
+      "Tienda Online",
+      "Retail"
+    ],
+    "tags_en": [
+      "E-Commerce",
+      "Online Store",
+      "Retail"
+    ],
+    "desc_es": "Tienda online con catálogo de productos y experiencia de compra fluida orientada a maximizar ventas.",
+    "desc_en": "Online store with product catalog and smooth shopping experience focused on maximizing sales.",
+    "url": "https://buythesweetzone.com/",
+    "featured": true
+  },
+  {
+    "num": "04",
+    "title": "VALPA TRUCK",
+    "tags_es": [
+      "Transporte",
+      "Logística",
+      "Landing Page"
+    ],
+    "tags_en": [
+      "Transport",
+      "Logistics",
+      "Landing Page"
+    ],
+    "desc_es": "Sitio web para empresa de transporte y logística. Presentación de flota y cotización integrada.",
+    "desc_en": "Website for a transportation and logistics company. Fleet presentation and integrated quote system.",
+    "url": "https://valpatruck.dgp-link.com/"
+  },
+  {
+    "num": "05",
+    "title": "PINA WATER SYSTEM",
+    "tags_es": [
+      "Filtración de Agua",
+      "Multi-Página",
+      "Florida"
+    ],
+    "tags_en": [
+      "Water Filtration",
+      "Multi-Page",
+      "Florida"
+    ],
+    "desc_es": "Sitio multi-página para empresa de sistemas de filtración de agua certificados en Florida. Instalación profesional y garantía total, sin el sobreprecio de las grandes marcas.",
+    "desc_en": "Multi-page website for a certified water filtration systems company in Florida. Professional installation and full guarantee — same results without the big brand markup.",
+    "url": "https://www.pinawatersystem.com/",
+    "featured": true
+  },
+  {
+    "num": "06",
+    "title": "APPLIANCE SOLUTIONS 901",
+    "tags_es": [
+      "Reparación",
+      "Electrodomésticos",
+      "Landing Page"
+    ],
+    "tags_en": [
+      "Repair",
+      "Appliances",
+      "Landing Page"
+    ],
+    "desc_es": "Sitio web para servicio técnico de reparación de electrodomésticos. Presentación clara de servicios y contacto rápido para agendar visitas.",
+    "desc_en": "Website for an appliance repair service. Clear service presentation and quick contact to schedule visits.",
+    "url": "https://appliancesolutions901.dgp-link.com/"
+  },
+  {
+    "num": "07",
+    "title": "MOYA COMPANY",
+    "tags_es": [
+      "Servicios",
+      "Sitio Corporativo",
+      "Landing Page"
+    ],
+    "tags_en": [
+      "Services",
+      "Corporate Site",
+      "Landing Page"
+    ],
+    "desc_es": "Sitio web corporativo con imagen profesional, presentación de servicios y captación directa de clientes.",
+    "desc_en": "Corporate website with a professional image, service showcase and direct lead capture.",
+    "url": "https://moyacompany.dgp-link.com/"
+  },
+  {
+    "num": "08",
+    "title": "SMELLING CLEAN",
+    "tags_es": [
+      "Limpieza",
+      "Landing Page",
+      "Servicios"
+    ],
+    "tags_en": [
+      "Cleaning",
+      "Landing Page",
+      "Services"
+    ],
+    "desc_es": "Landing page para servicio de limpieza residencial y comercial, diseñada para generar confianza y convertir visitas en reservas.",
+    "desc_en": "Landing page for a residential and commercial cleaning service, designed to build trust and turn visits into bookings.",
+    "url": "https://smellingclean.dgp-link.com/"
+  }
+]

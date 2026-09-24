@@ -1,0 +1,47 @@
+<!-- CONTACT FORM SECTION -->
+<div class="section" id="contacto" style="background:var(--off);max-width:100%;padding:80px 0">
+  <div style="max-width:680px;margin:0 auto;padding:0 24px">
+    <div class="reveal">
+      <div class="sec-eyebrow" data-es>Cotización gratuita</div><div class="sec-eyebrow" data-en>Free quote</div>
+      <h2 class="sec-title"><span data-es>HABLEMOS DE TU <span class="accent">PROYECTO</span></span><span data-en>LET'S TALK ABOUT YOUR <span class="accent">PROJECT</span></span></h2>
+      <p class="sec-sub" data-es>Completa el formulario y te respondemos en menos de 24 horas. Sin compromisos.</p>
+      <p class="sec-sub" data-en>Fill out the form and we'll get back to you in under 24 hours. No commitments.</p>
+    </div>
+    <form action="https://formspree.io/f/xpqnajzo" method="POST" id="mainContactForm" class="reveal" style="margin-top:36px;transition-delay:.1s" novalidate>
+      <input type="hidden" name="_subject" value="Nuevo contacto desde dgpglobalgroup.com">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+        <div class="field" style="margin:0"><input type="text" name="name" data-ph-es="Nombre completo" data-ph-en="Full name" placeholder="Nombre completo" required></div>
+        <div class="field" style="margin:0"><input type="email" name="email" data-ph-es="Correo electrónico" data-ph-en="Email address" placeholder="Correo electrónico" required></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
+        <div class="field" style="margin:0"><input type="tel" name="phone" data-ph-es="Teléfono (opcional)" data-ph-en="Phone (optional)" placeholder="Teléfono (opcional)"></div>
+        <div class="field" style="margin:0">
+          <select name="service" style="width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--black);outline:none;transition:border-color .2s;appearance:none">
+            <option value="" disabled selected data-es>¿Qué servicio te interesa?</option>
+            <option value="" disabled selected data-en>Which service interests you?</option>
+            <option data-es>Diseño Web</option><option data-en>Web Design</option>
+            <option data-es>Marketing Digital</option><option data-en>Digital Marketing</option>
+            <option data-es>Diseño Gráfico / Logo</option><option data-en>Graphic Design / Logo</option>
+            <option data-es>Gestión E-Commerce</option><option data-en>E-Commerce Management</option>
+            <option data-es>Sistema Personalizado</option><option data-en>Custom System</option>
+            <option data-es>Paquete Completo</option><option data-en>Full Package</option>
+            <option data-es>Otro</option><option data-en>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><textarea name="message" rows="4" data-ph-es="Cuéntanos brevemente tu proyecto o idea..." data-ph-en="Tell us briefly about your project or idea..." placeholder="Cuéntanos brevemente tu proyecto o idea..." required></textarea></div>
+      <button type="submit" class="submit-btn" id="mainSubmitBtn">
+        <span data-es>ENVIAR MENSAJE</span><span data-en>SEND MESSAGE</span>
+        <span class="barr"><i class="fa-solid fa-arrow-right"></i></span>
+      </button>
+      <div id="mainContactStatus" class="status"></div>
+      <div class="trust-badges">
+        <span class="trust-badge"><i class="fa-solid fa-lock"></i><span>SSL Seguro</span></span>
+        <span class="trust-badge"><i class="fa-solid fa-shield-halved"></i><span data-es>Datos protegidos</span><span data-en>Data protected</span></span>
+        <span class="trust-badge"><i class="fa-brands fa-cc-paypal"></i><span>PayPal</span></span>
+        <span class="trust-badge"><i class="fa-brands fa-cc-visa"></i><span>Visa</span></span>
+        <span class="trust-badge"><i class="fa-brands fa-cc-mastercard"></i><span>Mastercard</span></span>
+      </div>
+    </form>
+  </div>
+</div>
