@@ -138,16 +138,13 @@
   <div class="reveal">
     <div class="sec-eyebrow" data-es>Portafolio</div><div class="sec-eyebrow" data-en>Portfolio</div>
     <h2 class="sec-title"><span data-es>PROYECTOS QUE HABLAN <span class="accent">POR SÍ SOLOS</span></span><span data-en>PROJECTS THAT SPEAK <span class="accent">FOR THEMSELVES</span></span></h2>
-    <p class="sec-sub" data-es>Una muestra de sitios que hemos construido. Cada uno pensado para destacar, convertir y posicionar la marca.</p>
-    <p class="sec-sub" data-en>A sample of sites we've built. Each one crafted to stand out, convert and position the brand.</p>
+    <p class="sec-sub" data-es>Sitios reales que hemos construido, así se ven en computadora y en celular. Toca cada proyecto para verlo.</p>
+    <p class="sec-sub" data-en>Real sites we've built, shown the way they look on desktop and mobile. Tap any project to preview it.</p>
   </div>
-  <div class="port-grid">
-    {% assign featured = site.data.portfolio | where_exp: "p", "p.featured" %}
-    {% for p in featured %}{% include port-tile.html p=p i=forloop.index0 %}{% endfor %}
-  </div>
+  {% include showcase.html %}
   <div class="center-cta reveal">
     <a href="{{ site.data.routes.portfolio[page.lang] }}" class="btn-main">
-      <span data-es>VER LOS {{ site.data.portfolio.size }} PROYECTOS</span><span data-en>SEE ALL {{ site.data.portfolio.size }} PROJECTS</span>
+      <span data-es>VISITA NUESTRO PORTAFOLIO</span><span data-en>VISIT OUR PORTFOLIO</span>
       <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
     </a>
   </div>

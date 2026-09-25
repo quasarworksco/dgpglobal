@@ -1,0 +1,222 @@
+{% include page-hero.html %}
+
+<!-- DOS FORMAS DE TRABAJAR -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow" data-es>Elige cómo trabajar</div><div class="sec-eyebrow" data-en>Choose how to work</div>
+    <h2 class="sec-title"><span data-es>DOS FORMAS DE <span class="accent">GANAR</span></span><span data-en>TWO WAYS TO <span class="accent">EARN</span></span></h2>
+  </div>
+  <div class="mode-grid">
+    <div class="mode-card mode-card-main reveal">
+      <div class="mode-badge"><span data-es>Recomendado</span><span data-en>Recommended</span></div>
+      <div class="mode-icon"><i class="fa-solid fa-store"></i></div>
+      <div class="mode-title" data-es>REVENDE</div><div class="mode-title" data-en>RESELL</div>
+      <p class="mode-desc" data-es>Tú le vendes la página a tu cliente con tu precio. Nosotros la hacemos para ti con 25% de descuento.</p>
+      <p class="mode-desc" data-en>You sell the website to your client at your price. We build it for you at 25% off.</p>
+      <ul class="feat-list">
+        <li><i class="fa-solid fa-check ck"></i><span data-es>25% de descuento en los planes web</span><span data-en>25% off the web plans</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Marca blanca: sin mencionar a DGP</span><span data-en>White label: no mention of DGP</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Tú eliges si hablas tú o nosotros con el cliente</span><span data-en>You choose who talks to the client</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Pagas 50% al pedir y 50% al entregar</span><span data-en>Pay 50% on order, 50% on delivery</span></li>
+      </ul>
+    </div>
+    <div class="mode-card reveal" style="transition-delay:.1s">
+      <div class="mode-icon"><i class="fa-solid fa-share-nodes"></i></div>
+      <div class="mode-title" data-es>REFIERE</div><div class="mode-title" data-en>REFER</div>
+      <p class="mode-desc" data-es>Solo nos recomiendas. Tu cliente nos contrata directo y tú ganas una comisión, sin cobrar ni manejar nada.</p>
+      <p class="mode-desc" data-en>Just recommend us. Your client hires us directly and you earn a commission, without billing or managing anything.</p>
+      <ul class="feat-list">
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Enlace personal con tu código</span><span data-en>Personal link with your code</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Comisión por cada cliente que contrate</span><span data-en>Commission for every client who hires us</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Nosotros atendemos y cobramos</span><span data-en>We handle service and billing</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span data-es>Ideal para agentes de seguros y notarios</span><span data-en>Ideal for insurance agents and notaries</span></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PRECIOS DE ALIADO -->
+<div class="section" id="precios">
+  <div class="reveal">
+    <div class="sec-eyebrow" data-es>Precios de aliado</div><div class="sec-eyebrow" data-en>Partner pricing</div>
+    <h2 class="sec-title"><span data-es>25% MENOS. <span class="accent">TÚ GANAS LA DIFERENCIA.</span></span><span data-en>25% OFF. <span class="accent">YOU KEEP THE DIFFERENCE.</span></span></h2>
+    <p class="sec-sub" data-es>Pago único por proyecto. Tú decides a cuánto se lo vendes a tu cliente.</p>
+    <p class="sec-sub" data-en>One-time payment per project. You decide what to charge your client.</p>
+  </div>
+  <div class="price-table reveal" style="transition-delay:.1s">
+    <div class="price-row price-head">
+      <div data-es>Plan</div><div data-en>Plan</div>
+      <div data-es>Precio normal</div><div data-en>Regular price</div>
+      <div data-es>Tu precio</div><div data-en>Your price</div>
+      <div data-es>Tu ganancia*</div><div data-en>Your profit*</div>
+    </div>
+    {% for p in site.data.content.partners.prices %}
+    <div class="price-row">
+      <div class="price-plan"><strong data-es>{{ p.plan_es }}</strong><strong data-en>{{ p.plan_en }}</strong><span data-es>{{ p.desc_es }}</span><span data-en>{{ p.desc_en }}</span></div>
+      <div class="price-regular"><span class="price-lbl" data-es>Normal</span><span class="price-lbl" data-en>Regular</span><s>{{ p.regular }}</s></div>
+      <div class="price-partner"><span class="price-lbl" data-es>Tu precio</span><span class="price-lbl" data-en>Your price</span>{{ p.partner }}</div>
+      <div class="price-profit"><span class="price-lbl" data-es>Ganas</span><span class="price-lbl" data-en>You earn</span>{{ p.profit }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  <p class="price-note" data-es>* Ganancia si lo vendes a nuestro precio normal. Si cobras más, ganas más. Paquetes de branding, e-commerce y sistemas: precio especial por proyecto.</p>
+  <p class="price-note" data-en>* Profit if you sell at our regular price. Charge more, earn more. Branding packages, e-commerce and systems: special price per project.</p>
+</div>
+
+<hr class="divider">
+
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow" data-es>Para quién es</div><div class="sec-eyebrow" data-en>Who it is for</div>
+    <h2 class="sec-title"><span data-es>HECHO PARA QUIENES YA <span class="accent">ATIENDEN NEGOCIOS</span></span><span data-en>BUILT FOR PEOPLE WHO ALREADY <span class="accent">SERVE BUSINESSES</span></span></h2>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card reveal" style="transition-delay:0.00s">
+      <div class="feat-card-icon"><i class="fa-solid fa-building-columns"></i></div>
+      <div class="feat-card-title" data-es>GESTORES DE LLC</div><div class="feat-card-title" data-en>LLC FORMATION AGENTS</div>
+      <p class="feat-card-desc" data-es>Tus clientes acaban de abrir su negocio y lo siguiente que necesitan es su página web.</p>
+      <p class="feat-card-desc" data-en>Your clients just opened their business, and the next thing they need is a website.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.06s">
+      <div class="feat-card-icon"><i class="fa-solid fa-calculator"></i></div>
+      <div class="feat-card-title" data-es>CONTADORES Y TAXES</div><div class="feat-card-title" data-en>ACCOUNTANTS & TAX PREPARERS</div>
+      <p class="feat-card-desc" data-es>Atiendes a cientos de dueños de negocio cada año. Ofréceles un servicio más.</p>
+      <p class="feat-card-desc" data-en>You serve hundreds of business owners every year. Offer them one more service.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.12s">
+      <div class="feat-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <div class="feat-card-title" data-es>AGENTES DE SEGUROS</div><div class="feat-card-title" data-en>INSURANCE AGENTS</div>
+      <p class="feat-card-desc" data-es>Tus clientes comerciales necesitan presencia en línea para crecer.</p>
+      <p class="feat-card-desc" data-en>Your commercial clients need an online presence to grow.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.18s">
+      <div class="feat-card-icon"><i class="fa-solid fa-stamp"></i></div>
+      <div class="feat-card-title" data-es>NOTARIOS PÚBLICOS</div><div class="feat-card-title" data-en>NOTARIES</div>
+      <p class="feat-card-desc" data-es>La comunidad confía en ti. Recomiéndales un equipo bilingüe de confianza.</p>
+      <p class="feat-card-desc" data-en>Your community trusts you. Recommend a trusted bilingual team.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.24s">
+      <div class="feat-card-icon"><i class="fa-solid fa-id-card"></i></div>
+      <div class="feat-card-title" data-es>INSTRUCTORES DE LICENCIAS</div><div class="feat-card-title" data-en>LICENSE INSTRUCTORS</div>
+      <p class="feat-card-desc" data-es>Contratistas, camioneros y limpieza: tus alumnos salen a buscar clientes.</p>
+      <p class="feat-card-desc" data-en>Contractors, truckers and cleaners: your students go out looking for customers.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.30s">
+      <div class="feat-card-icon"><i class="fa-solid fa-briefcase"></i></div>
+      <div class="feat-card-title" data-es>CONSULTORES Y AGENCIAS</div><div class="feat-card-title" data-en>CONSULTANTS & AGENCIES</div>
+      <p class="feat-card-desc" data-es>Amplía tu catálogo con diseño web sin contratar a un equipo.</p>
+      <p class="feat-card-desc" data-en>Expand your offer with web design without hiring a team.</p>
+    </div>
+  </div>
+</div>
+
+<div class="steps4"><div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow" data-es>Cómo funciona</div><div class="sec-eyebrow" data-en>How it works</div>
+    <h2 class="sec-title"><span data-es>CUATRO PASOS, <span class="accent">CERO COMPLICACIONES</span></span><span data-en>FOUR STEPS, <span class="accent">ZERO HASSLE</span></span></h2>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card reveal" style="transition-delay:0.00s">
+      <div class="feat-card-icon"><i class="fa-solid fa-user-plus"></i></div>
+      <div class="feat-card-title" data-es>1. TE REGISTRAS</div><div class="feat-card-title" data-en>1. SIGN UP</div>
+      <p class="feat-card-desc" data-es>Llenas el formulario de abajo. Sin costo ni mínimo de proyectos.</p>
+      <p class="feat-card-desc" data-en>Fill in the form below. No fee, no minimum.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.06s">
+      <div class="feat-card-icon"><i class="fa-solid fa-handshake"></i></div>
+      <div class="feat-card-title" data-es>2. TE DAMOS LA BIENVENIDA</div><div class="feat-card-title" data-en>2. WE WELCOME YOU</div>
+      <p class="feat-card-desc" data-es>Te escribimos por WhatsApp con tu código y el enlace para hacer pedidos.</p>
+      <p class="feat-card-desc" data-en>We message you on WhatsApp with your code and the order link.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.12s">
+      <div class="feat-card-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+      <div class="feat-card-title" data-es>3. NOS MANDAS EL PROYECTO</div><div class="feat-card-title" data-en>3. SEND US THE PROJECT</div>
+      <p class="feat-card-desc" data-es>Un formulario corto por cliente con lo necesario para empezar.</p>
+      <p class="feat-card-desc" data-en>One short form per client with everything we need to start.</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.18s">
+      <div class="feat-card-icon"><i class="fa-solid fa-rocket"></i></div>
+      <div class="feat-card-title" data-es>4. ENTREGAMOS Y COBRAS</div><div class="feat-card-title" data-en>4. WE DELIVER, YOU GET PAID</div>
+      <p class="feat-card-desc" data-es>Entregamos en tiempo récord y tú le cobras a tu cliente.</p>
+      <p class="feat-card-desc" data-en>We deliver in record time and you bill your client.</p>
+    </div>
+  </div>
+</div></div>
+
+<!-- REGISTRO -->
+<div class="section" id="registro">
+  <div class="audit-wrap">
+    <div class="reveal">
+      <div class="sec-eyebrow" data-es>Únete</div><div class="sec-eyebrow" data-en>Join</div>
+      <h2 class="sec-title"><span data-es>REGÍSTRATE COMO <span class="accent">ALIADO</span></span><span data-en>BECOME A <span class="accent">PARTNER</span></span></h2>
+      <div class="audit-points">
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-solid fa-tags"></i></div><div><div class="audit-point-title" data-es>25% DE DESCUENTO</div><div class="audit-point-title" data-en>25% DISCOUNT</div><p class="audit-point-desc" data-es>En los tres planes de diseño web, en cada proyecto.</p><p class="audit-point-desc" data-en>On all three web design plans, on every project.</p></div></div>
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-solid fa-user-secret"></i></div><div><div class="audit-point-title" data-es>TU MARCA, NO LA NUESTRA</div><div class="audit-point-title" data-en>YOUR BRAND, NOT OURS</div><p class="audit-point-desc" data-es>Entregamos en marca blanca para que tu cliente te vea a ti.</p><p class="audit-point-desc" data-en>We deliver white-label so your client sees you.</p></div></div>
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-solid fa-images"></i></div><div><div class="audit-point-title" data-es>PORTAFOLIO PARA VENDER</div><div class="audit-point-title" data-en>A PORTFOLIO TO SELL WITH</div><p class="audit-point-desc" data-es>Muéstrale a tus clientes sitios reales que ya hicimos.</p><p class="audit-point-desc" data-en>Show your clients real sites we've already built.</p></div></div>
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-solid fa-language"></i></div><div><div class="audit-point-title" data-es>EQUIPO BILINGÜE</div><div class="audit-point-title" data-en>BILINGUAL TEAM</div><p class="audit-point-desc" data-es>Sitios en español, inglés o ambos, para clientes latinos y americanos.</p><p class="audit-point-desc" data-en>Sites in Spanish, English or both, for Latino and American customers.</p></div></div>
+      </div>
+    </div>
+    <div class="card form-card audit-form-card reveal" style="transition-delay:.12s">
+      <div class="card-icon"><i class="fa-solid fa-handshake"></i></div>
+      <h2 class="card-heading" data-es>FORMULARIO DE REGISTRO</h2><h2 class="card-heading" data-en>SIGN-UP FORM</h2>
+      <p class="card-sub" data-es>Te contactamos por WhatsApp para darte la bienvenida y tu código de aliado.</p>
+      <p class="card-sub" data-en>We'll reach out on WhatsApp to welcome you and send your partner code.</p>
+      <form action="https://formspree.io/f/xpqnajzo" method="POST" id="partnerForm" class="lead-form" data-tg-title="🤝 <b>Nuevo registro de aliado</b>" data-required="name,email,whatsapp,business" novalidate>
+        <input type="hidden" name="_subject" value="Nuevo registro de aliado — dgpglobalgroup.com">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="field-row">
+          <div class="field"><input type="text" name="name" data-label="Nombre" autocomplete="name" data-ph-es="Nombre completo" data-ph-en="Full name" placeholder="Nombre completo" required></div>
+          <div class="field"><input type="text" name="business" data-label="Empresa" autocomplete="organization" data-ph-es="Nombre de tu empresa" data-ph-en="Your company name" placeholder="Nombre de tu empresa" required></div>
+        </div>
+        <div class="field"><input type="email" name="email" data-label="Correo" autocomplete="email" data-ph-es="Correo electrónico" data-ph-en="Email address" placeholder="Correo electrónico" required></div>
+        <div class="field"><input type="tel" name="whatsapp" data-label="WhatsApp" autocomplete="tel" data-ph-es="WhatsApp (con código de país)" data-ph-en="WhatsApp (with country code)" placeholder="WhatsApp (con código de país)" required></div>
+        <div class="field-row">
+          <div class="field">
+            <select name="type" data-label="Tipo">
+              <option value="" disabled selected class="opt-es">¿A qué te dedicas?</option>
+              <option value="" disabled class="opt-en">What do you do?</option>
+              <option value="Gestor de LLC" class="opt-es">Gestor de LLC</option><option value="LLC formation" class="opt-en">LLC formation</option>
+              <option value="Contador / Taxes" class="opt-es">Contador / Taxes</option><option value="Accountant / Taxes" class="opt-en">Accountant / Taxes</option>
+              <option value="Agente de seguros" class="opt-es">Agente de seguros</option><option value="Insurance agent" class="opt-en">Insurance agent</option>
+              <option value="Notario" class="opt-es">Notario</option><option value="Notary" class="opt-en">Notary</option>
+              <option value="Consultor / Agencia" class="opt-es">Consultor / Agencia</option><option value="Consultant / Agency" class="opt-en">Consultant / Agency</option>
+              <option value="Otro" class="opt-es">Otro</option><option value="Other" class="opt-en">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <select name="mode" data-label="Modalidad">
+              <option value="" disabled selected class="opt-es">¿Cómo quieres trabajar?</option>
+              <option value="" disabled class="opt-en">How do you want to work?</option>
+              <option value="Revender" class="opt-es">Revender</option><option value="Resell" class="opt-en">Resell</option>
+              <option value="Referir" class="opt-es">Solo referir</option><option value="Refer" class="opt-en">Refer only</option>
+              <option value="Ambas" class="opt-es">Ambas</option><option value="Both" class="opt-en">Both</option>
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field"><input type="text" name="city" data-label="Ciudad" autocomplete="address-level2" data-ph-es="Ciudad y estado" data-ph-en="City and state" placeholder="Ciudad y estado"></div>
+          <div class="field">
+            <select name="volume" data-label="Clientes/mes">
+              <option value="" disabled selected class="opt-es">Clientes nuevos al mes</option>
+              <option value="" disabled class="opt-en">New clients per month</option>
+              <option value="1-5">1–5</option><option value="6-20">6–20</option><option value="20+">20+</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><textarea name="message" rows="3" data-label="Comentario" data-ph-es="¿Algo más que quieras contarnos? (opcional)" data-ph-en="Anything else you'd like to tell us? (optional)" placeholder="¿Algo más que quieras contarnos? (opcional)"></textarea></div>
+        <button type="submit" class="submit-btn">
+          <span data-es>QUIERO SER ALIADO</span><span data-en>BECOME A PARTNER</span>
+          <span class="barr"><i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+        <div class="status lead-status"></div>
+        <p class="form-note" data-es><i class="fa-solid fa-lock"></i> Sin costo de inscripción ni mínimo de proyectos.</p>
+        <p class="form-note" data-en><i class="fa-solid fa-lock"></i> No sign-up fee, no minimum number of projects.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% include faq.html %}
+

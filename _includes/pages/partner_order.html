@@ -1,0 +1,93 @@
+{% include page-hero.html %}
+
+<!-- PEDIDO -->
+<div class="section" id="pedido">
+  <div class="audit-wrap">
+    <div class="reveal">
+      <div class="sec-eyebrow" data-es>Antes de empezar</div><div class="sec-eyebrow" data-en>Before you start</div>
+      <h2 class="sec-title"><span data-es>TEN A MANO <span class="accent">ESTO</span></span><span data-en>HAVE THIS <span class="accent">READY</span></span></h2>
+      <div class="audit-points">
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-solid fa-building"></i></div><div><div class="audit-point-title" data-es>DATOS DEL NEGOCIO</div><div class="audit-point-title" data-en>BUSINESS DETAILS</div><p class="audit-point-desc" data-es>Nombre, industria, ciudad y los servicios que ofrece tu cliente.</p><p class="audit-point-desc" data-en>Name, industry, city and the services your client offers.</p></div></div>
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-brands fa-google-drive"></i></div><div><div class="audit-point-title" data-es>LOGO Y FOTOS</div><div class="audit-point-title" data-en>LOGO & PHOTOS</div><p class="audit-point-desc" data-es>Súbelos a una carpeta de Google Drive y pega el enlace (con acceso para ver).</p><p class="audit-point-desc" data-en>Upload them to a Google Drive folder and paste the link (with view access).</p></div></div>
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-solid fa-palette"></i></div><div><div class="audit-point-title" data-es>ESTILO</div><div class="audit-point-title" data-en>STYLE</div><p class="audit-point-desc" data-es>Colores de la marca y, si tienes, una página que le guste a tu cliente como referencia.</p><p class="audit-point-desc" data-en>Brand colors and, if you have one, a website your client likes as a reference.</p></div></div>
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-solid fa-credit-card"></i></div><div><div class="audit-point-title" data-es>PRIMER PAGO (50%)</div><div class="audit-point-title" data-en>FIRST PAYMENT (50%)</div><p class="audit-point-desc" data-es>Te confirmamos el total por WhatsApp. Aceptamos Zelle y PayPal.</p><p class="audit-point-desc" data-en>We confirm the total on WhatsApp. We accept Zelle and PayPal.</p></div></div>
+      </div>
+      <p class="price-note" data-es>¿Dudas? Escríbenos por <a href="https://wa.me/12398231738?text=Hola%20DGP,%20soy%20aliado%20y%20tengo%20una%20duda%20sobre%20un%20pedido." target="_blank" rel="noopener">WhatsApp</a>.</p>
+      <p class="price-note" data-en>Questions? Message us on <a href="https://wa.me/12398231738?text=Hi%20DGP,%20I'm%20a%20partner%20and%20have%20a%20question%20about%20an%20order." target="_blank" rel="noopener">WhatsApp</a>.</p>
+    </div>
+    <div class="card form-card audit-form-card reveal" style="transition-delay:.12s">
+      <div class="card-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+      <h2 class="card-heading" data-es>FORMULARIO DE PEDIDO</h2><h2 class="card-heading" data-en>ORDER FORM</h2>
+      <p class="card-sub" data-es>Un formulario por cada cliente.</p>
+      <p class="card-sub" data-en>One form per client.</p>
+      <form action="https://formspree.io/f/xpqnajzo" method="POST" id="orderForm" class="lead-form" data-tg-title="📦 <b>Nuevo pedido de aliado</b>" data-required="partner,partner_whatsapp,service,client_business" novalidate>
+        <input type="hidden" name="_subject" value="Nuevo pedido de aliado — dgpglobalgroup.com">
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <p class="form-group-lbl" data-es>Tus datos</p><p class="form-group-lbl" data-en>Your details</p>
+        <div class="field-row">
+          <div class="field"><input type="text" name="partner" data-label="Aliado" data-ph-es="Tu nombre o empresa" data-ph-en="Your name or company" placeholder="Tu nombre o empresa" required></div>
+          <div class="field"><input type="text" name="partner_code" data-label="Código aliado" data-ph-es="Tu código de aliado" data-ph-en="Your partner code" placeholder="Tu código de aliado"></div>
+        </div>
+        <div class="field"><input type="tel" name="partner_whatsapp" data-label="WhatsApp aliado" data-ph-es="Tu WhatsApp" data-ph-en="Your WhatsApp" placeholder="Tu WhatsApp" required></div>
+        <p class="form-group-lbl" data-es>El proyecto</p><p class="form-group-lbl" data-en>The project</p>
+        <div class="field">
+          <select name="service" data-label="Servicio" required>
+            <option value="" disabled selected class="opt-es">¿Qué servicio necesita tu cliente?</option>
+            <option value="" disabled class="opt-en">Which service does your client need?</option>
+            <option value="Web Plan Básico" class="opt-es">Página web — Plan Básico</option><option value="Web Plan Básico" class="opt-en">Website — Basic Plan</option>
+            <option value="Web Plan Estándar" class="opt-es">Página web — Plan Estándar</option><option value="Web Plan Estándar" class="opt-en">Website — Standard Plan</option>
+            <option value="Web Plan Premium" class="opt-es">Página web — Plan Premium</option><option value="Web Plan Premium" class="opt-en">Website — Premium Plan</option>
+            <option value="Paquete de branding" class="opt-es">Paquete de branding</option><option value="Paquete de branding" class="opt-en">Branding package</option>
+            <option value="E-commerce" class="opt-es">Gestión e-commerce</option><option value="E-commerce" class="opt-en">E-commerce management</option>
+            <option value="Sistema a medida" class="opt-es">Sistema a medida</option><option value="Sistema a medida" class="opt-en">Custom system</option>
+          </select>
+        </div>
+        <div class="field-row">
+          <div class="field"><input type="text" name="client_business" data-label="Negocio del cliente" data-ph-es="Nombre del negocio" data-ph-en="Business name" placeholder="Nombre del negocio" required></div>
+          <div class="field"><input type="text" name="industry" data-label="Industria" data-ph-es="Industria (ej: limpieza)" data-ph-en="Industry (e.g. cleaning)" placeholder="Industria (ej: limpieza)"></div>
+        </div>
+        <div class="field-row">
+          <div class="field"><input type="text" name="client_city" data-label="Ciudad" data-ph-es="Ciudad y estado" data-ph-en="City and state" placeholder="Ciudad y estado"></div>
+          <div class="field">
+            <select name="site_language" data-label="Idioma del sitio">
+              <option value="" disabled selected class="opt-es">Idioma del sitio</option>
+              <option value="" disabled class="opt-en">Site language</option>
+              <option value="Español" class="opt-es">Español</option><option value="Spanish" class="opt-en">Spanish</option>
+              <option value="Inglés" class="opt-es">Inglés</option><option value="English" class="opt-en">English</option>
+              <option value="Ambos" class="opt-es">Español e inglés</option><option value="Both" class="opt-en">Spanish & English</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><textarea name="services_offered" rows="2" data-label="Servicios del cliente" data-ph-es="¿Qué servicios o productos ofrece tu cliente?" data-ph-en="What services or products does your client offer?" placeholder="¿Qué servicios o productos ofrece tu cliente?"></textarea></div>
+        <div class="field"><input type="text" name="style" data-label="Colores / estilo" data-ph-es="Colores de marca y estilo (o una web de referencia)" data-ph-en="Brand colors and style (or a reference site)" placeholder="Colores de marca y estilo (o una web de referencia)"></div>
+        <div class="field"><input type="url" name="files" data-label="Drive (logo/fotos)" data-ph-es="Enlace de Google Drive con logo y fotos" data-ph-en="Google Drive link with logo and photos" placeholder="Enlace de Google Drive con logo y fotos"></div>
+        <div class="field-row">
+          <div class="field">
+            <select name="domain" data-label="Dominio">
+              <option value="" disabled selected class="opt-es">¿Tiene dominio?</option>
+              <option value="" disabled class="opt-en">Does the client have a domain?</option>
+              <option value="Sí" class="opt-es">Sí, ya tiene</option><option value="Yes" class="opt-en">Yes</option>
+              <option value="No" class="opt-es">No, necesita uno</option><option value="No" class="opt-en">No, needs one</option>
+            </select>
+          </div>
+          <div class="field">
+            <select name="contact_mode" data-label="Quién habla con el cliente">
+              <option value="" disabled selected class="opt-es">¿Quién habla con el cliente?</option>
+              <option value="" disabled class="opt-en">Who talks to the client?</option>
+              <option value="Solo el aliado" class="opt-es">Yo (el aliado)</option><option value="Solo el aliado" class="opt-en">Me (the partner)</option>
+              <option value="DGP directo (como equipo del aliado)" class="opt-es">DGP, como mi equipo</option><option value="DGP directo (como equipo del aliado)" class="opt-en">DGP, as my team</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><input type="tel" name="client_whatsapp" data-label="WhatsApp del cliente" data-ph-es="WhatsApp del cliente (si hablamos directo)" data-ph-en="Client's WhatsApp (if we talk directly)" placeholder="WhatsApp del cliente (si hablamos directo)"></div>
+        <label class="check-row"><input type="checkbox" name="white_label" value="Sí" data-label="Marca blanca" checked> <span data-es>Entregar en marca blanca (sin mencionar a DGP)</span><span data-en>Deliver white-label (no mention of DGP)</span></label>
+        <div class="field"><textarea name="notes" rows="3" data-label="Notas" data-ph-es="Notas o pedidos especiales (opcional)" data-ph-en="Notes or special requests (optional)" placeholder="Notas o pedidos especiales (opcional)"></textarea></div>
+        <button type="submit" class="submit-btn">
+          <span data-es>ENVIAR PEDIDO</span><span data-en>SUBMIT ORDER</span>
+          <span class="barr"><i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+        <div class="status lead-status"></div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+crumb_es: Programa de Aliados
+crumb_en: Partner Program
+service:
+  name_es: Programa de Aliados — Diseño Web en Marca Blanca
+  name_en: Partner Program — White-Label Web Design
+  type: White-label web design
+hero:
+  bg_word: PARTNER
+  cta: {href: "#registro", icon: "fa-solid fa-handshake", es: "QUIERO SER ALIADO", en: "BECOME A PARTNER"}
+  eyebrow_es: Programa de aliados
+  eyebrow_en: Partner program
+  title_es: 'OFRECE PÁGINAS WEB<span class="accent">CON TU MARCA</span>'
+  title_en: 'OFFER WEBSITES<span class="accent">UNDER YOUR BRAND</span>'
+  sub_es: "Para gestores de LLC, contadores y profesionales que atienden dueños de negocio. Tú le vendes la página a tu cliente con tu precio, nosotros la hacemos con 25% de descuento y tú ganas la diferencia."
+  sub_en: "For LLC formation agents, accountants and professionals who serve business owners. You sell the website to your client at your price, we build it at 25% off, and you keep the difference."
+  chips:
+    - {icon: "fa-solid fa-tags", es: "25% de descuento", en: "25% partner discount"}
+    - {icon: "fa-solid fa-user-secret", es: "Marca blanca", en: "White label"}
+    - {icon: "fa-solid fa-bolt", es: "Entrega desde 24–48h", en: "Delivery from 24–48h"}
+    - {icon: "fa-solid fa-language", es: "Español e inglés", en: "Spanish & English"}
+faq:
+  - q_es: "¿Cuánto gano como aliado?"
+    a_es: "Recibes 25% de descuento sobre nuestros precios en los planes de diseño web. Tú decides cuánto le cobras a tu cliente y la diferencia es tu ganancia. Por ejemplo, si vendes el plan Estándar al precio normal ($455), tú pagas $341.25 y ganas $113.75."
+    q_en: "How much do I earn as a partner?"
+    a_en: "You get 25% off our prices on the web design plans. You decide how much to charge your client and the difference is your profit. For example, if you sell the Standard plan at our regular price ($455), you pay $341.25 and keep $113.75."
+  - q_es: "¿Mi cliente sabrá que DGP hizo su página?"
+    a_es: "No, si no quieres. Trabajamos en marca blanca: entregamos el sitio sin mencionar a DGP, como parte de tus servicios."
+    q_en: "Will my client know DGP built their website?"
+    a_en: "Not unless you want them to. We work white-label: we deliver the site without mentioning DGP, as part of your services."
+  - q_es: "¿Quién habla con el cliente?"
+    a_es: "Tú eliges en cada pedido. Puedes manejar toda la comunicación y nosotros solo trabajamos contigo, o podemos hablar directo con tu cliente presentándonos como tu equipo de diseño."
+    q_en: "Who talks to the client?"
+    a_en: "You choose on every order. You can handle all communication and we only work with you, or we can talk directly to your client as your design team."
+  - q_es: "¿Cómo y cuándo pago?"
+    a_es: "50% al hacer el pedido y 50% al entregar, por Zelle o PayPal. Lo que tú le cobres a tu cliente lo manejas directamente con él."
+    q_en: "How and when do I pay?"
+    a_en: "50% when you place the order and 50% on delivery, via Zelle or PayPal. What you charge your client is handled directly between you and them."
+  - q_es: "¿Qué servicios puedo ofrecer?"
+    a_es: "Los tres planes de diseño web tienen 25% de descuento para aliados. También puedes ofrecer paquetes de branding, gestión e-commerce y sistemas a medida con precio especial por proyecto."
+    q_en: "Which services can I offer?"
+    a_en: "The three web design plans come with the 25% partner discount. You can also offer branding packages, e-commerce management and custom systems at a special price per project."
+  - q_es: "¿Y si solo quiero recomendarlos, sin cobrar yo?"
+    a_es: "Elige la modalidad Refiere: te damos un enlace con tu código y ganas una comisión por cada cliente que contrate a través de ti. No tienes que cobrar ni manejar nada."
+    q_en: "What if I only want to refer clients, without billing them myself?"
+    a_en: "Choose the Refer option: we give you a link with your code and you earn a commission for every client who hires us through you. You don't have to bill or manage anything."
+  - q_es: "¿Tiene algún costo ser aliado?"
+    a_es: "No. No hay costo de inscripción ni mínimo de proyectos."
+    q_en: "Does it cost anything to become a partner?"
+    a_en: "No. There is no sign-up fee and no minimum number of projects."
+prices:
+  - {plan_es: "Plan Básico", plan_en: "Basic Plan", desc_es: "Landing page + código QR · 24–48h", desc_en: "Landing page + QR code · 24–48h", regular: "$280", partner: "$210", profit: "$70"}
+  - {plan_es: "Plan Estándar", plan_en: "Standard Plan", desc_es: "Hasta 5 páginas, WhatsApp, formulario, 6 meses de hosting · 2–3 días", desc_en: "Up to 5 pages, WhatsApp, contact form, 6-month hosting · 2–3 days", regular: "$455", partner: "$341.25", profit: "$113.75"}
+  - {plan_es: "Plan Premium", plan_en: "Premium Plan", desc_es: "Catálogo o reservas, SEO + Analytics, 12 meses de hosting · 4–5 días", desc_en: "Catalog or bookings, SEO + Analytics, 12-month hosting · 4–5 days", regular: "$950", partner: "$712.50", profit: "$237.50"}

@@ -1,0 +1,11 @@
+crumb_es: Pedido de aliado
+crumb_en: Partner order
+hero:
+  bg_word: ORDER
+  cta: {href: "#pedido", icon: "fa-solid fa-clipboard-list", es: "HACER UN PEDIDO", en: "PLACE AN ORDER"}
+  eyebrow_es: Solo para aliados
+  eyebrow_en: Partners only
+  title_es: 'NUEVO PROYECTO<span class="accent">PARA TU CLIENTE</span>'
+  title_en: 'NEW PROJECT<span class="accent">FOR YOUR CLIENT</span>'
+  sub_es: "Completa un formulario por cada cliente. Con esta información empezamos de inmediato y te confirmamos por WhatsApp el total y el primer pago (50%)."
+  sub_en: "Fill in one form per client. With this information we start right away and confirm the total and first payment (50%) on WhatsApp."

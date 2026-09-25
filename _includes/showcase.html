@@ -1,0 +1,41 @@
+{% assign first = site.data.portfolio[0] %}
+<!-- PORTFOLIO SHOWCASE: laptop + phone mockup with live screenshots -->
+<div class="showcase reveal" data-total="{{ site.data.portfolio.size }}">
+  <div class="sc-stage">
+    <div class="sc-glow"></div>
+    <div class="sc-laptop">
+      <div class="sc-laptop-screen">
+        <span class="sc-cam"></span>
+        <div class="sc-viewport" data-title="{{ first.title }}">
+          <img class="sc-shot sc-shot-desktop" data-src="/assets/portfolio/{{ first.slug }}/desktop.webp" alt="{{ first.title }} — {% if page.lang == 'en' %}desktop view{% else %}vista en computadora{% endif %}" width="1280" height="2436">
+        </div>
+      </div>
+      <div class="sc-laptop-base"><span></span></div>
+    </div>
+    <div class="sc-phone">
+      <span class="sc-notch"></span>
+      <div class="sc-viewport" data-title="{{ first.title }}">
+        <img class="sc-shot sc-shot-mobile" data-src="/assets/portfolio/{{ first.slug }}/mobile.webp" alt="{{ first.title }} — {% if page.lang == 'en' %}mobile view{% else %}vista en celular{% endif %}" width="560" height="2728">
+      </div>
+    </div>
+  </div>
+
+  <div class="sc-info">
+    <div class="sc-meta">
+      <span class="sc-num">{{ first.num }} / {% if site.data.portfolio.size < 10 %}0{% endif %}{{ site.data.portfolio.size }}</span>
+      <h3 class="sc-title">{{ first.title }}</h3>
+      <div class="pc-tags sc-tags">{% if page.lang == 'en' %}{% for t in first.tags_en %}<span class="pc-tag">{{ t }}</span>{% endfor %}{% else %}{% for t in first.tags_es %}<span class="pc-tag">{{ t }}</span>{% endfor %}{% endif %}</div>
+      <p class="sc-desc">{% if page.lang == 'en' %}{{ first.desc_en }}{% else %}{{ first.desc_es }}{% endif %}</p>
+    </div>
+    <a class="port-visit sc-link" href="{{ first.url }}" target="_blank" rel="noopener"><span data-es>Ver sitio en vivo</span><span data-en>Visit live site</span>&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </div>
+
+  <div class="sc-thumbs" role="tablist" aria-label="{% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}">
+    {% for p in site.data.portfolio %}
+    <button type="button" class="sc-thumb{% if forloop.first %} active{% endif %}" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-i="{{ forloop.index0 }}" title="{{ p.title }}">
+      <span class="sc-thumb-img" data-title="{{ p.title }}"><img src="/assets/portfolio/{{ p.slug }}/thumb.webp" alt="{{ p.title }}" width="480" height="300" loading="lazy" decoding="async"></span>
+      <span class="sc-thumb-name">{{ p.title }}</span>
+    </button>
+    {% endfor %}
+  </div>
+</div>

@@ -17,7 +17,13 @@
     <p class="page-hero-sub" data-es>{{ d.hero.sub_es }}</p>
     <p class="page-hero-sub" data-en>{{ d.hero.sub_en }}</p>
     <div class="page-hero-ctas">
-      {% if d.hero.audit %}
+      {% if d.hero.cta %}
+      <a href="{{ d.hero.cta.href }}" class="btn-main">
+        <i class="{{ d.hero.cta.icon }}"></i>
+        <span data-es>{{ d.hero.cta.es }}</span><span data-en>{{ d.hero.cta.en }}</span>
+        <span class="arr"><i class="fa-solid fa-arrow-down"></i></span>
+      </a>
+      {% elsif d.hero.audit %}
       <a href="#auditoria-form" class="btn-main">
         <i class="fa-solid fa-magnifying-glass-chart"></i>
         <span data-es>PEDIR MI AUDITORÍA GRATIS</span><span data-en>GET MY FREE AUDIT</span>

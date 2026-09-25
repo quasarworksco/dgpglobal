@@ -1,4 +1,5 @@
 <article class="port-tile reveal" style="transition-delay:{{ include.i | times: 0.07 }}s">
+  <a class="port-tile-shot" href="{{ include.p.url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="/assets/portfolio/{{ include.p.slug }}/thumb.webp" alt="" width="480" height="300" loading="lazy" decoding="async" onerror="this.parentElement.remove()"></a>
   <div class="port-tile-head">
     <div class="port-tile-num">{{ include.p.num }}</div>
     <h3 class="port-tile-title">{{ include.p.title }}</h3>

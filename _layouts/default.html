@@ -9,7 +9,7 @@
 <meta name="description" content="{{ page.description }}">
 {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">
 {% endif %}<meta name="author" content="DGP Global Group">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+{% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% else %}<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">{% endif %}
 <meta name="theme-color" content="#1438cc">
 <link rel="canonical" href="{{ canon }}">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">

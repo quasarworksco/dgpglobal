@@ -3,7 +3,7 @@ layout: null
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-{% for pair in site.data.routes %}{% assign r = pair[1] %}{% for L in (1..2) %}{% if L == 1 %}{% assign loc = r.es %}{% else %}{% assign loc = r.en %}{% endif %}  <url>
+{% for pair in site.data.routes %}{% assign r = pair[1] %}{% unless r.hidden %}{% for L in (1..2) %}{% if L == 1 %}{% assign loc = r.es %}{% else %}{% assign loc = r.en %}{% endif %}  <url>
     <loc>{{ site.url }}{{ loc }}</loc>
     <xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ r.es }}"/>
     <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ r.en }}"/>
@@ -11,7 +11,7 @@ layout: null
     <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
     <priority>{% if pair[0] == 'home' %}1.0{% else %}0.8{% endif %}</priority>
   </url>
-{% endfor %}{% endfor %}  <url>
+{% endfor %}{% endunless %}{% endfor %}  <url>
     <loc>{{ site.url }}/empleo.html</loc>
     <lastmod>{{ site.time | date: '%Y-%m-%d' }}</lastmod>
     <priority>0.5</priority>

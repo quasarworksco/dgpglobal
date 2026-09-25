@@ -6,3 +6,6 @@ ecommerce: {es: "/ecommerce/",        en: "/en/ecommerce/"}
 systems:   {es: "/sistemas/",         en: "/en/custom-systems/"}
 portfolio: {es: "/portafolio/",       en: "/en/portfolio/"}
 audit:     {es: "/auditoria-gratis/", en: "/en/free-audit/"}
+partners:  {es: "/aliados/",          en: "/en/partners/"}
+# Private order page for approved partners: not linked, not in the sitemap, noindex
+partner_order: {es: "/aliados/pedido/", en: "/en/partners/order/", hidden: true}

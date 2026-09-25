@@ -662,7 +662,7 @@ if(auditForm){
       const res=await fetch(this.action,{method:'POST',body:fd,headers:{Accept:'application/json'}});
       if(!res.ok)throw new Error();
       const esc=v=>String(v).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
-      tgSend(`🔍 <b>Nueva solicitud de auditoría gratis</b>\n\n👤 ${esc(name)}\n📧 ${esc(email)}\n📱 ${esc(wa)}\n🌐 ${esc(site)}\n🎯 ${esc(fd.get('goal')||'—')}\n🗣 ${lang==='en'?'Inglés (responder en inglés)':'Español'}\n💬 ${esc(fd.get('message')||'—')}\n\n⏱ Prometido: informe en 24h`).catch(()=>{});
+      tgSend(`🔍 <b>Nueva solicitud de auditoría gratis</b>\n\n👤 ${esc(name)}\n📧 ${esc(email)}\n📱 ${esc(wa)}\n🌐 ${esc(site)}\n🎯 ${esc(fd.get('goal')||'—')}\n🗣 ${lang==='en'?'Inglés (responder en inglés)':'Español'}${REF_CODE?'\n🤝 Referido por: '+esc(REF_CODE):''}\n💬 ${esc(fd.get('message')||'—')}\n\n⏱ Prometido: informe en 24h`).catch(()=>{});
       status.className='status ok';
       status.textContent=isEn?'Done! We\'ll send your audit within 24 hours by email or WhatsApp.':'¡Listo! Te enviamos tu auditoría en menos de 24 horas por correo o WhatsApp.';
       this.reset();
@@ -673,6 +673,127 @@ if(auditForm){
     }
   });
 }
+
+/* PORTFOLIO SHOWCASE (laptop + phone) */
+(function(){
+  const sc=document.querySelector('.showcase');
+  if(!sc||!PORT_P.length)return;
+  const thumbs=[...sc.querySelectorAll('.sc-thumb')];
+  const shots=[...sc.querySelectorAll('.sc-shot')];
+  const q=c=>sc.querySelector(c);
+  let idx=0,timer=null,visible=false,userPicked=false,started=false;
+  const pad=n=>String(n).padStart(2,'0');
+
+  shots.forEach(img=>{
+    img.addEventListener('load',()=>{img.parentElement.classList.remove('missing');img.classList.add('ready');});
+    img.addEventListener('error',()=>{img.classList.remove('ready');img.parentElement.classList.add('missing');});
+  });
+  sc.querySelectorAll('.sc-thumb-img img').forEach(img=>{
+    const mark=()=>img.parentElement.classList.add('missing');
+    img.addEventListener('error',mark);
+    if(img.complete&&!img.naturalWidth)mark();
+  });
+
+  function loadShots(p){
+    const d=q('.sc-shot-desktop'),m=q('.sc-shot-mobile');
+    [[d,'desktop'],[m,'mobile']].forEach(([img,kind])=>{
+      img.classList.remove('ready');
+      img.parentElement.dataset.title=p.title;
+      img.alt=p.title;
+      img.src=`/assets/portfolio/${p.slug}/${kind}.webp`;
+    });
+  }
+  function show(n){
+    idx=(n+PORT_P.length)%PORT_P.length;
+    const p=PORT_P[idx];
+    thumbs.forEach((t,k)=>{t.classList.toggle('active',k===idx);t.setAttribute('aria-selected',k===idx?'true':'false');});
+    sc.classList.add('switching');
+    setTimeout(()=>{
+      loadShots(p);
+      q('.sc-num').textContent=`${p.num} / ${pad(PORT_P.length)}`;
+      q('.sc-title').textContent=p.title;
+      q('.sc-tags').innerHTML=(lang==='en'?p.tags_en:p.tags_es).map(t=>`<span class="pc-tag">${t}</span>`).join('');
+      q('.sc-desc').textContent=lang==='en'?p.desc_en:p.desc_es;
+      q('.sc-link').href=p.url;
+      sc.classList.remove('switching');
+    },280);
+  }
+  function tick(){clearInterval(timer);timer=setInterval(()=>{if(visible&&!userPicked&&!document.hidden)show(idx+1);},8000);}
+  thumbs.forEach((t,k)=>t.addEventListener('click',()=>{userPicked=true;show(k);}));
+  new IntersectionObserver(en=>{
+    visible=en[0].isIntersecting;
+    if(visible&&!started){started=true;shots.forEach(img=>{img.src=img.dataset.src;});tick();}
+  },{rootMargin:'300px'}).observe(sc);
+})();
+
+/* PARTNER REFERRAL CODE: ?ref=CODE is remembered for 90 days and attached to every lead */
+const REF_DAYS=90;
+function getRef(){
+  try{
+    const q=new URLSearchParams(location.search).get('ref');
+    if(q){const code=q.trim().toUpperCase().replace(/[^A-Z0-9_-]/g,'').slice(0,30);if(code)localStorage.setItem('dgpRef',JSON.stringify({code,ts:Date.now()}));}
+    const st=JSON.parse(localStorage.getItem('dgpRef')||'null');
+    if(st&&Date.now()-st.ts<REF_DAYS*864e5)return st.code;
+  }catch(e){}
+  return '';
+}
+const REF_CODE=getRef();
+function withRef(url){
+  if(!REF_CODE)return url;
+  try{
+    const u=new URL(url),t=u.searchParams.get('text')||'';
+    if(t.includes('Ref: '))return url;
+    return u.origin+u.pathname+'?text='+encodeURIComponent(t+(t?'\n\n':'')+'Ref: '+REF_CODE);
+  }catch(e){return url;}
+}
+if(REF_CODE){
+  document.querySelectorAll('form[action*="formspree.io"]').forEach(f=>{
+    if(f.querySelector('input[name="referido"]'))return;
+    const i=document.createElement('input');i.type='hidden';i.name='referido';i.value=REF_CODE;f.appendChild(i);
+  });
+  document.addEventListener('click',e=>{const a=e.target.closest('a[href*="wa.me/12398231738"]');if(a)a.href=withRef(a.href);},true);
+  const _open=window.open;window.open=function(url,...rest){if(typeof url==='string'&&url.includes('wa.me/12398231738'))url=withRef(url);return _open.call(window,url,...rest);};
+}
+
+/* GENERIC LEAD FORMS (partner sign-up, partner orders): Formspree + Telegram */
+document.querySelectorAll('form.lead-form').forEach(form=>{
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();
+    const btn=this.querySelector('button[type=submit]'),status=this.querySelector('.lead-status');
+    const isEn=lang==='en';
+    const missing=(this.dataset.required||'').split(',').filter(n=>n&&!((new FormData(this).get(n)||'').toString().trim()));
+    if(missing.length){
+      status.className='status lead-status err';
+      status.textContent=isEn?'Please fill in the required fields.':'Por favor completa los campos obligatorios.';
+      const first=this.querySelector(`[name="${missing[0]}"]`);if(first)first.focus();
+      return;
+    }
+    btn.disabled=true;
+    const fd=new FormData(this);
+    try{
+      const res=await fetch(this.action,{method:'POST',body:fd,headers:{Accept:'application/json'}});
+      if(!res.ok)throw new Error();
+      const esc=v=>String(v).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
+      const lines=[];
+      this.querySelectorAll('[name][data-label]').forEach(el=>{
+        const v=(el.type==='checkbox')?(el.checked?el.value:''):(fd.get(el.name)||'');
+        if(String(v).trim())lines.push(`<b>${esc(el.dataset.label)}:</b> ${esc(v)}`);
+      });
+      if(REF_CODE)lines.push(`<b>Referido por:</b> ${esc(REF_CODE)}`);
+      lines.push(`<b>Idioma:</b> ${isEn?'Inglés':'Español'}`);
+      tgSend(`${this.dataset.tgTitle||'📩 <b>Nuevo formulario</b>'}\n\n${lines.join('\n')}`).catch(()=>{});
+      status.className='status lead-status ok';
+      status.textContent=this.id==='orderForm'
+        ?(isEn?'Order received! We\'ll confirm the total and first payment on WhatsApp.':'¡Pedido recibido! Te confirmamos el total y el primer pago por WhatsApp.')
+        :(isEn?'Thank you! We\'ll contact you on WhatsApp soon with your partner code.':'¡Gracias! Te contactamos pronto por WhatsApp con tu código de aliado.');
+      this.reset();btn.disabled=false;
+    }catch{
+      status.className='status lead-status err';
+      status.textContent=isEn?'Error sending. Please try WhatsApp.':'Error al enviar. Intenta por WhatsApp.';
+      btn.disabled=false;
+    }
+  });
+});
 
 /* Old one-page anchors now live on their own pages */
 (function(){
