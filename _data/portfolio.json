@@ -23,16 +23,16 @@
     "title": "CLEANING GROUP",
     "tags_es": [
       "Limpieza",
-      "Landing Page",
-      "Servicios"
+      "Personal",
+      "Atlanta"
     ],
     "tags_en": [
       "Cleaning",
-      "Landing Page",
-      "Services"
+      "Staffing",
+      "Atlanta"
     ],
-    "desc_es": "Landing page para empresa de limpieza profesional, enfocada en conversión y captación de clientes.",
-    "desc_en": "Landing page for a professional cleaning company focused on conversion and lead capture.",
+    "desc_es": "Landing page para empresa de limpieza y personal profesional en Atlanta, enfocada en conversión y captación de clientes.",
+    "desc_en": "Landing page for a professional cleaning and staffing company in Atlanta, focused on conversion and lead capture.",
     "url": "https://cleaninggroup.dgp-link.com/",
     "slug": "cleaning-group"
   },
@@ -59,17 +59,17 @@
     "num": "04",
     "title": "VALPA TRUCK",
     "tags_es": [
-      "Transporte",
-      "Logística",
-      "Landing Page"
+      "Maquinaria Pesada",
+      "Capacitación",
+      "Tennessee"
     ],
     "tags_en": [
-      "Transport",
-      "Logistics",
-      "Landing Page"
+      "Heavy Equipment",
+      "Training",
+      "Tennessee"
     ],
-    "desc_es": "Sitio web para empresa de transporte y logística. Presentación de flota y cotización integrada.",
-    "desc_en": "Website for a transportation and logistics company. Fleet presentation and integrated quote system.",
+    "desc_es": "Sitio para escuela de entrenamiento en maquinaria pesada en Murfreesboro, Tennessee: práctica real en excavadoras Caterpillar, paquetes de cursos y certificación.",
+    "desc_en": "Website for a heavy equipment training school in Murfreesboro, Tennessee: hands-on practice on Caterpillar excavators, course packages and certification.",
     "url": "https://valpatruck.dgp-link.com/",
     "slug": "valpa-truck"
   },
@@ -98,15 +98,15 @@
     "tags_es": [
       "Reparación",
       "Electrodomésticos",
-      "Landing Page"
+      "Memphis"
     ],
     "tags_en": [
       "Repair",
       "Appliances",
-      "Landing Page"
+      "Memphis"
     ],
-    "desc_es": "Sitio web para servicio técnico de reparación de electrodomésticos. Presentación clara de servicios y contacto rápido para agendar visitas.",
-    "desc_en": "Website for an appliance repair service. Clear service presentation and quick contact to schedule visits.",
+    "desc_es": "Sitio para servicio de reparación de electrodomésticos en Memphis, Tennessee: solicitud de servicio en línea, llamada directa y contacto rápido.",
+    "desc_en": "Website for an appliance repair service in Memphis, Tennessee: online service requests, click-to-call and quick contact.",
     "url": "https://appliancesolutions901.dgp-link.com/",
     "slug": "appliance-solutions-901"
   },
@@ -114,17 +114,17 @@
     "num": "07",
     "title": "MOYA COMPANY",
     "tags_es": [
-      "Servicios",
-      "Sitio Corporativo",
-      "Landing Page"
+      "Asistencia Virtual",
+      "Bilingüe",
+      "Servicios"
     ],
     "tags_en": [
-      "Services",
-      "Corporate Site",
-      "Landing Page"
+      "Virtual Assistance",
+      "Bilingual",
+      "Services"
     ],
-    "desc_es": "Sitio web corporativo con imagen profesional, presentación de servicios y captación directa de clientes.",
-    "desc_en": "Corporate website with a professional image, service showcase and direct lead capture.",
+    "desc_es": "Sitio bilingüe para empresa de asistencia virtual y soporte digital: servicios por hora para que los negocios ahorren tiempo y se enfoquen en crecer.",
+    "desc_en": "Bilingual website for a virtual assistance and digital support company: hourly services that help businesses save time and focus on growth.",
     "url": "https://moyacompany.dgp-link.com/",
     "slug": "moya-company"
   },
@@ -133,16 +133,16 @@
     "title": "SMELLING CLEAN",
     "tags_es": [
       "Limpieza",
-      "Landing Page",
+      "Florida",
       "Servicios"
     ],
     "tags_en": [
       "Cleaning",
-      "Landing Page",
+      "Florida",
       "Services"
     ],
-    "desc_es": "Landing page para servicio de limpieza residencial y comercial, diseñada para generar confianza y convertir visitas en reservas.",
-    "desc_en": "Landing page for a residential and commercial cleaning service, designed to build trust and turn visits into bookings.",
+    "desc_es": "Sitio para servicio de limpieza residencial y comercial en Riverview, Florida, diseñado para generar confianza y convertir visitas en cotizaciones.",
+    "desc_en": "Website for a residential and commercial cleaning service in Riverview, Florida, designed to build trust and turn visits into quote requests.",
     "url": "https://smellingclean.dgp-link.com/",
     "slug": "smelling-clean"
   }
