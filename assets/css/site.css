@@ -1039,3 +1039,20 @@ a.ctrl-btn{text-decoration:none;display:inline-block}
 .port-tile-shot{display:block;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--border);background:#f3f4f7}
 .port-tile-shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .6s cubic-bezier(.22,1,.36,1)}
 .port-tile:hover .port-tile-shot img{transform:scale(1.04)}
+
+/* Industry pages */
+.ind-needs{grid-template-columns:repeat(4,1fr)}
+.ind-split{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
+.ind-includes{margin-top:28px}
+.ind-includes li{font-size:15px;padding:11px 0}
+.ind-plan .card-sub{font-size:15px;line-height:1.7}
+.ind-plan-ctas{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
+.ind-card{display:flex;align-items:center;gap:14px;padding:18px 20px;border:1px solid var(--border);background:#fff;text-decoration:none;color:var(--black);transition:border-color .25s,transform .3s cubic-bezier(.22,1,.36,1),box-shadow .25s}
+.ind-card:hover{border-color:var(--blue);transform:translateY(-3px);box-shadow:0 12px 28px -14px rgba(20,56,204,.3)}
+.ind-card-icon{width:42px;height:42px;border-radius:50%;background:rgba(20,56,204,.07);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.ind-card-name{flex:1;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.5px;line-height:1.05}
+.ind-card-arrow{color:var(--blue);font-size:12px;transition:transform .3s}
+.ind-card:hover .ind-card-arrow{transform:translateX(4px)}
+@media(max-width:1000px){.ind-needs{grid-template-columns:1fr 1fr}.ind-split{grid-template-columns:1fr;gap:32px}.ind-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.ind-needs{grid-template-columns:1fr}.ind-grid{grid-template-columns:1fr}}

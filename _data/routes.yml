@@ -9,3 +9,10 @@ audit:     {es: "/auditoria-gratis/", en: "/en/free-audit/"}
 partners:  {es: "/aliados/",          en: "/en/partners/"}
 # Private order page for approved partners: not linked, not in the sitemap, noindex
 partner_order: {es: "/aliados/pedido/", en: "/en/partners/order/", hidden: true}
+# Industry landing pages
+ind_cleaning: {es: "/diseno-web/limpieza/", en: "/en/web-design/cleaning-companies/", industry: true}
+ind_construction: {es: "/diseno-web/construccion/", en: "/en/web-design/contractors/", industry: true}
+ind_home: {es: "/diseno-web/servicios-del-hogar/", en: "/en/web-design/home-services/", industry: true}
+ind_retail: {es: "/diseno-web/tiendas-online/", en: "/en/web-design/online-stores/", industry: true}
+ind_professional: {es: "/diseno-web/servicios-profesionales/", en: "/en/web-design/professional-services/", industry: true}
+ind_training: {es: "/diseno-web/escuelas-y-cursos/", en: "/en/web-design/schools-and-training/", industry: true}

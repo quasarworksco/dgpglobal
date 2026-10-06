@@ -1,0 +1,74 @@
+{% assign d = site.data.content[page.ref] %}{% assign t = d[page.lang] %}
+{% include page-hero.html %}
+
+<!-- LO QUE NECESITA TU INDUSTRIA -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'en' %}What your customers look for{% else %}Lo que buscan tus clientes{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'en' %}WHAT A WEBSITE FOR <span class="accent">{{ t.name | upcase }}</span> NEEDS{% else %}LO QUE NECESITA UNA WEB DE <span class="accent">{{ t.name | upcase }}</span>{% endif %}</h2>
+  </div>
+  <div class="feat-grid ind-needs">
+    {% for n in t.needs %}
+    <div class="feat-card reveal" style="transition-delay:{{ forloop.index0 | times: 0.06 }}s">
+      <div class="feat-card-icon"><i class="{{ n.icon }}"></i></div>
+      <h3 class="feat-card-title">{{ n.title }}</h3>
+      <p class="feat-card-desc">{{ n.desc }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- QUÉ INCLUYE + PLAN -->
+<div class="section">
+  <div class="ind-split">
+    <div class="reveal">
+      <div class="sec-eyebrow">{% if page.lang == 'en' %}Included{% else %}Incluido{% endif %}</div>
+      <h2 class="sec-title">{% if page.lang == 'en' %}WHAT YOUR <span class="accent">SITE INCLUDES</span>{% else %}QUÉ INCLUYE <span class="accent">TU SITIO</span>{% endif %}</h2>
+      <ul class="feat-list ind-includes">
+        {% for i in t.includes %}<li><i class="fa-solid fa-check ck"></i>{{ i }}</li>{% endfor %}
+      </ul>
+    </div>
+    <div class="card form-card ind-plan reveal" style="transition-delay:.1s">
+      <div class="card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+      <h3 class="card-heading">{% if page.lang == 'en' %}OUR RECOMMENDATION{% else %}NUESTRA RECOMENDACIÓN{% endif %}</h3>
+      <p class="card-sub">{{ t.plan }}</p>
+      <div class="ind-plan-ctas">
+        <a class="btn-main" href="{{ site.data.routes.web[page.lang] }}#planes">{% if page.lang == 'en' %}SEE THE PLANS{% else %}VER LOS PLANES{% endif %}<span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
+        <button onclick="openQuote()" class="quote-trigger"><i class="fa-solid fa-calculator"></i> {% if page.lang == 'en' %}QUICK QUOTE{% else %}COTIZADOR RÁPIDO{% endif %}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROYECTOS DE ESTA INDUSTRIA -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'en' %}Real work{% else %}Trabajo real{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'en' %}SITES WE BUILT IN <span class="accent">THIS INDUSTRY</span>{% else %}SITIOS QUE HICIMOS EN <span class="accent">ESTA INDUSTRIA</span>{% endif %}</h2>
+  </div>
+  <div class="port-grid">
+    {% for slug in d.projects %}{% assign p = site.data.portfolio | where: "slug", slug | first %}{% if p %}{% include port-tile.html p=p i=forloop.index0 %}{% endif %}{% endfor %}
+  </div>
+  <div class="center-cta reveal">
+    <a href="{{ site.data.routes.portfolio[page.lang] }}" class="btn-main">{% if page.lang == 'en' %}SEE FULL PORTFOLIO{% else %}VER TODO EL PORTAFOLIO{% endif %}<span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
+  </div>
+</div>
+
+{% include process.html %}
+
+{% include audit-cta.html %}
+
+{% include faq.html %}
+
+<!-- OTRAS INDUSTRIAS -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'en' %}Other industries{% else %}Otras industrias{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'en' %}WE ALSO BUILD <span class="accent">WEBSITES FOR</span>{% else %}TAMBIÉN HACEMOS <span class="accent">PÁGINAS PARA</span>{% endif %}</h2>
+  </div>
+  {% include industries-grid.html exclude=page.ref %}
+</div>
+
+{% include contact-section.html %}
+
+{% include share-bar.html %}

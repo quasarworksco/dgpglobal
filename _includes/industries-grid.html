@@ -1,0 +1,10 @@
+{% comment %}Links to every industry page; pass exclude=ref to leave the current one out{% endcomment %}
+<div class="ind-grid">
+  {% for pair in site.data.routes %}{% if pair[1].industry and pair[0] != include.exclude %}{% assign c = site.data.content[pair[0]] %}
+  <a class="ind-card reveal" href="{{ pair[1][page.lang] }}">
+    <span class="ind-card-icon"><i class="{{ c.icon }}"></i></span>
+    <span class="ind-card-name">{{ c[page.lang].name }}</span>
+    <i class="fa-solid fa-arrow-right ind-card-arrow"></i>
+  </a>
+  {% endif %}{% endfor %}
+</div>

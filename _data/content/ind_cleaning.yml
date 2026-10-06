@@ -1,0 +1,88 @@
+crumb_es: Compañías de limpieza
+crumb_en: Cleaning companies
+service:
+  name_es: Diseño web para compañías de limpieza
+  name_en: Web design for cleaning companies
+  type: Web design
+hero:
+  bg_word: CLEAN
+  eyebrow_es: Diseño web para limpieza
+  eyebrow_en: Web design for cleaning
+  title_es: PÁGINAS WEB PARA<span class="accent">COMPAÑÍAS DE LIMPIEZA</span>
+  title_en: WEBSITES FOR<span class="accent">CLEANING COMPANIES</span>
+  sub_es: Tus clientes buscan "limpieza cerca de mí" y contratan al que les da confianza más rápido. Te hacemos una página que muestra tu trabajo, tus zonas y tus reseñas, y que convierte visitas en cotizaciones.
+  sub_en: Your customers search "cleaning near me" and hire whoever earns their trust fastest. We build a site that shows your work, your service areas and your reviews, and turns visits into quote requests.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-mobile-screen
+    es: Pensada para celular
+    en: Built for mobile
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+faq:
+- q_es: ¿Cuánto tarda en estar lista la página de mi compañía de limpieza?
+  a_es: Una landing page se entrega en 24-48 horas y un sitio de varias páginas en 2-3 días, desde que tenemos tu logo, fotos y servicios.
+  q_en: How long does it take to build my cleaning company website?
+  a_en: A landing page is delivered in 24-48 hours and a multi-page site in 2-3 days, once we have your logo, photos and services.
+- q_es: ¿Pueden hacer la página en español e inglés?
+  a_es: Sí. Somos una agencia bilingüe y muchas compañías de limpieza atienden clientes latinos y americanos, así que podemos tener ambas versiones.
+  q_en: Can you build the site in English and Spanish?
+  a_en: Yes. We are a bilingual agency, and many cleaning companies serve both Latino and American customers, so we can include both versions.
+- q_es: ¿Me ayudan a aparecer en Google en mi ciudad?
+  a_es: Construimos la página con tus servicios y zonas de servicio bien estructurados para Google, y te orientamos para completar tu perfil de Google Business, que es clave en búsquedas locales.
+  q_en: Will you help me show up on Google in my city?
+  a_en: We build the site with your services and service areas structured for Google, and we guide you to complete your Google Business Profile, which is key for local searches.
+projects:
+- cleaning-group
+- smelling-clean
+icon: fa-solid fa-broom
+shot: smelling-clean
+es:
+  name: Compañías de limpieza
+  needs:
+  - icon: fa-solid fa-file-invoice-dollar
+    title: COTIZACIÓN EN UN CLIC
+    desc: 'Formulario corto y botón de WhatsApp para pedir precio sin llamar: tipo de limpieza, tamaño y fecha.'
+  - icon: fa-solid fa-location-dot
+    title: ZONAS DE SERVICIO
+    desc: Las ciudades y barrios que cubres, para que Google te muestre a quien busca en tu zona.
+  - icon: fa-solid fa-star
+    title: RESEÑAS Y CONFIANZA
+    desc: 'Reseñas, seguro y licencias visibles: lo primero que revisa alguien antes de dejarte entrar a su casa u oficina.'
+  - icon: fa-solid fa-images
+    title: ANTES Y DESPUÉS
+    desc: Galería de trabajos reales que demuestra la calidad mejor que cualquier texto.
+  includes:
+  - 'Página de servicios: residencial, comercial, mudanzas y limpieza profunda'
+  - Formulario de cotización y botón de WhatsApp
+  - Zonas de servicio y horarios
+  - Sección de reseñas y garantía
+  - Galería de antes y después
+  - Versión en español e inglés si atiendes ambos públicos
+  plan: 'El Plan Estándar (hasta 5 páginas) es el más usado por compañías de limpieza: inicio, servicios, zonas, reseñas y contacto, con WhatsApp y 6 meses de hosting.'
+en:
+  name: Cleaning companies
+  needs:
+  - icon: fa-solid fa-file-invoice-dollar
+    title: ONE-CLICK QUOTES
+    desc: 'A short form and a WhatsApp button to request a price without calling: cleaning type, size and date.'
+  - icon: fa-solid fa-location-dot
+    title: SERVICE AREAS
+    desc: The cities and neighborhoods you cover, so Google shows you to people searching in your area.
+  - icon: fa-solid fa-star
+    title: REVIEWS & TRUST
+    desc: 'Reviews, insurance and licenses up front: the first thing people check before letting you into their home or office.'
+  - icon: fa-solid fa-images
+    title: BEFORE & AFTER
+    desc: A gallery of real jobs that proves your quality better than any copy.
+  includes:
+  - 'Services page: residential, commercial, move-in/out and deep cleaning'
+  - Quote form and WhatsApp button
+  - Service areas and hours
+  - Reviews and guarantee section
+  - Before & after gallery
+  - Spanish and English versions if you serve both audiences
+  plan: 'The Standard Plan (up to 5 pages) is the most popular with cleaning companies: home, services, areas, reviews and contact, with WhatsApp and 6 months of hosting.'

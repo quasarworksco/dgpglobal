@@ -1,0 +1,87 @@
+crumb_es: Escuelas y cursos
+crumb_en: Schools & training
+service:
+  name_es: Diseño web para escuelas y cursos
+  name_en: Web design for schools & training
+  type: Web design
+hero:
+  bg_word: LEARN
+  eyebrow_es: Diseño web para escuelas
+  eyebrow_en: Web design for schools
+  title_es: PÁGINAS WEB PARA<span class="accent">ESCUELAS Y CURSOS</span>
+  title_en: WEBSITES FOR<span class="accent">SCHOOLS & TRAINING</span>
+  sub_es: 'Escuelas de oficios, academias, cursos de licencia o de maquinaria: tus futuros alumnos quieren ver qué aprenden, cuánto cuesta y cuándo empiezan. Te hacemos la página que responde eso y los inscribe.'
+  sub_en: 'Trade schools, academies, licensing or equipment courses: future students want to see what they will learn, what it costs and when it starts. We build the site that answers that and gets them enrolled.'
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-mobile-screen
+    es: Pensada para celular
+    en: Built for mobile
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+faq:
+- q_es: ¿Pueden mostrar los cursos con sus precios y fechas?
+  a_es: Sí. Cada curso puede tener su propia sección o página con precio, duración, horarios y próximas fechas de inicio.
+  q_en: Can you show courses with prices and dates?
+  a_en: Yes. Each course can have its own section or page with price, duration, schedule and upcoming start dates.
+- q_es: ¿Se pueden inscribir los alumnos en línea?
+  a_es: Sí. Agregamos un formulario de inscripción o reserva de cupo que te llega por correo, y un botón de WhatsApp para dudas.
+  q_en: Can students enroll online?
+  a_en: Yes. We add an enrollment or seat-reservation form that reaches you by email, plus a WhatsApp button for questions.
+- q_es: ¿Sirve para escuelas de manejo, CDL o maquinaria pesada?
+  a_es: 'Sí. Ya hicimos sitios para capacitación en maquinaria pesada y conocemos lo que buscan esos alumnos: práctica real, certificación y precios claros.'
+  q_en: Does it work for driving, CDL or heavy equipment schools?
+  a_en: 'Yes. We have built sites for heavy equipment training and know what those students look for: hands-on practice, certification and clear pricing.'
+projects:
+- valpa-truck
+icon: fa-solid fa-graduation-cap
+shot: valpa-truck
+es:
+  name: Escuelas y cursos
+  needs:
+  - icon: fa-solid fa-book-open
+    title: PROGRAMAS CLAROS
+    desc: Cada curso con temario, duración, requisitos y certificación.
+  - icon: fa-solid fa-tags
+    title: PAQUETES Y PRECIOS
+    desc: Planes de estudio o paquetes comparados lado a lado para decidir rápido.
+  - icon: fa-solid fa-calendar-check
+    title: INSCRIPCIÓN
+    desc: Formulario de inscripción o reserva de cupo, conectado a WhatsApp.
+  - icon: fa-solid fa-video
+    title: PRÁCTICA REAL
+    desc: Fotos y videos de clases y prácticas, que es lo que más convence.
+  includes:
+  - Página por curso o programa
+  - Paquetes y precios comparados
+  - Formulario de inscripción y WhatsApp
+  - Galería de clases y prácticas
+  - Testimonios de alumnos
+  - Versión en español e inglés
+  plan: El Plan Estándar funciona para la mayoría de escuelas. Si manejas muchos cursos o reservas de cupo, el Premium incluye catálogo o sistema de reservas.
+en:
+  name: Schools & training
+  needs:
+  - icon: fa-solid fa-book-open
+    title: CLEAR PROGRAMS
+    desc: Each course with curriculum, duration, requirements and certification.
+  - icon: fa-solid fa-tags
+    title: PACKAGES & PRICING
+    desc: Course packages compared side by side to decide fast.
+  - icon: fa-solid fa-calendar-check
+    title: ENROLLMENT
+    desc: An enrollment or seat-reservation form connected to WhatsApp.
+  - icon: fa-solid fa-video
+    title: HANDS-ON PROOF
+    desc: Photos and videos of classes and practice, which convince the most.
+  includes:
+  - A page per course or program
+  - Packages and pricing compared
+  - Enrollment form and WhatsApp
+  - Gallery of classes and practice
+  - Student testimonials
+  - Spanish and English versions
+  plan: The Standard Plan works for most schools. If you run many courses or seat reservations, Premium includes a catalog or booking system.

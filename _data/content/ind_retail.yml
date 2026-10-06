@@ -1,0 +1,87 @@
+crumb_es: Tiendas y e-commerce
+crumb_en: Online stores
+service:
+  name_es: Diseño web para tiendas y e-commerce
+  name_en: Web design for online stores
+  type: Web design
+hero:
+  bg_word: STORE
+  eyebrow_es: Tiendas online
+  eyebrow_en: Online stores
+  title_es: TU TIENDA ONLINE<span class="accent">VENDIENDO 24/7</span>
+  title_en: YOUR ONLINE STORE<span class="accent">SELLING 24/7</span>
+  sub_es: 'Un catálogo bonito no basta: tu tienda tiene que cargar rápido en el celular, mostrar bien cada producto y hacer que comprar o pedir por WhatsApp sea fácil.'
+  sub_en: 'A pretty catalog is not enough: your store has to load fast on mobile, showcase each product and make buying or ordering on WhatsApp effortless.'
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-mobile-screen
+    es: Pensada para celular
+    en: Built for mobile
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+faq:
+- q_es: ¿Puedo recibir pedidos por WhatsApp en vez de pagos en línea?
+  a_es: 'Sí. Muchas tiendas empiezan así: el cliente arma su pedido y te llega por WhatsApp con los productos, y tú confirmas el pago.'
+  q_en: Can I take orders on WhatsApp instead of online payments?
+  a_en: 'Yes. Many stores start that way: customers build their order and it reaches you on WhatsApp with the products, and you confirm payment.'
+- q_es: ¿Me ayudan también a vender en Amazon o TikTok Shop?
+  a_es: Sí. Tenemos un servicio de gestión e-commerce para abrir y optimizar tu cuenta en Amazon, Walmart, TikTok Shop, Shopify y eBay.
+  q_en: Can you also help me sell on Amazon or TikTok Shop?
+  a_en: Yes. Our e-commerce management service opens and optimizes your account on Amazon, Walmart, TikTok Shop, Shopify and eBay.
+- q_es: ¿Cuántos productos puedo tener?
+  a_es: Depende del plan y de cómo quieras administrarlos. Cuéntanos cuántos productos manejas y te recomendamos la mejor opción.
+  q_en: How many products can I have?
+  a_en: It depends on the plan and how you want to manage them. Tell us how many products you carry and we will recommend the best option.
+projects:
+- the-sweet-zone
+icon: fa-solid fa-bag-shopping
+shot: the-sweet-zone
+es:
+  name: Tiendas y e-commerce
+  needs:
+  - icon: fa-solid fa-store
+    title: CATÁLOGO ORDENADO
+    desc: Categorías, fotos y precios claros para que el cliente encuentre lo que busca en segundos.
+  - icon: fa-brands fa-whatsapp
+    title: PEDIDOS FÁCILES
+    desc: Carrito o pedido directo por WhatsApp, según cómo vendas hoy.
+  - icon: fa-brands fa-amazon
+    title: MARKETPLACES
+    desc: Si también vendes en Amazon, Walmart o TikTok Shop, tu tienda y tus canales trabajan juntos.
+  - icon: fa-solid fa-bolt
+    title: RÁPIDA EN EL CELULAR
+    desc: La mayoría de las compras empiezan en el teléfono; cada segundo de carga cuenta.
+  includes:
+  - Catálogo por categorías con fotos y precios
+  - Pedidos por carrito o WhatsApp
+  - Páginas de producto optimizadas para Google
+  - Promociones y productos destacados
+  - Enlaces a tus tiendas en marketplaces
+  - Versión en español e inglés
+  plan: El Plan Premium incluye catálogo, SEO y Google Analytics. Si además quieres vender en Amazon, Walmart o TikTok Shop, combínalo con nuestra gestión e-commerce.
+en:
+  name: Online stores
+  needs:
+  - icon: fa-solid fa-store
+    title: ORGANIZED CATALOG
+    desc: Categories, photos and clear prices so customers find what they want in seconds.
+  - icon: fa-brands fa-whatsapp
+    title: EASY ORDERING
+    desc: A cart or direct WhatsApp ordering, depending on how you sell today.
+  - icon: fa-brands fa-amazon
+    title: MARKETPLACES
+    desc: If you also sell on Amazon, Walmart or TikTok Shop, your store and channels work together.
+  - icon: fa-solid fa-bolt
+    title: FAST ON MOBILE
+    desc: Most purchases start on a phone; every second of load time matters.
+  includes:
+  - Catalog by category with photos and prices
+  - Orders via cart or WhatsApp
+  - Product pages optimized for Google
+  - Promotions and featured products
+  - Links to your marketplace stores
+  - Spanish and English versions
+  plan: The Premium Plan includes a catalog, SEO and Google Analytics. If you also want to sell on Amazon, Walmart or TikTok Shop, pair it with our e-commerce management.

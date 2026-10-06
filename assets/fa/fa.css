@@ -18,6 +18,7 @@
 .fa-box-open::before{content:"\f49e"}
 .fa-brain::before{content:"\f5dc"}
 .fa-briefcase::before{content:"\f0b1"}
+.fa-broom::before{content:"\f51a"}
 .fa-building::before{content:"\f1ad"}
 .fa-building-columns::before{content:"\f19c"}
 .fa-calculator::before{content:"\f1ec"}
@@ -57,7 +58,9 @@
 .fa-hand-pointer::before{content:"\f25a"}
 .fa-handshake::before{content:"\f2b5"}
 .fa-headset::before{content:"\f590"}
+.fa-helmet-safety::before{content:"\f807"}
 .fa-house::before{content:"\f015"}
+.fa-id-badge::before{content:"\f2c1"}
 .fa-id-card::before{content:"\f2c2"}
 .fa-images::before{content:"\f302"}
 .fa-instagram::before{content:"\f16d"}
@@ -66,6 +69,7 @@
 .fa-laptop::before{content:"\f109"}
 .fa-laptop-code::before{content:"\f5fc"}
 .fa-laptop-house::before{content:"\e066"}
+.fa-lightbulb::before{content:"\f0eb"}
 .fa-link::before{content:"\f0c1"}
 .fa-list-check::before{content:"\f0ae"}
 .fa-location-dot::before{content:"\f3c5"}
@@ -78,11 +82,13 @@
 .fa-pen::before{content:"\f304"}
 .fa-pen-nib::before{content:"\f5ad"}
 .fa-percent::before{content:"\25"}
+.fa-phone::before{content:"\f095"}
 .fa-plug::before{content:"\f1e6"}
 .fa-plus::before{content:"\2b"}
 .fa-receipt::before{content:"\f543"}
 .fa-robot::before{content:"\f544"}
 .fa-rocket::before{content:"\f135"}
+.fa-screwdriver-wrench::before{content:"\f7d9"}
 .fa-seedling::before{content:"\f4d8"}
 .fa-server::before{content:"\f233"}
 .fa-share-nodes::before{content:"\f1e0"}
@@ -98,8 +104,10 @@
 .fa-user::before{content:"\f007"}
 .fa-user-plus::before{content:"\f234"}
 .fa-user-secret::before{content:"\f21b"}
+.fa-user-tie::before{content:"\f508"}
 .fa-users::before{content:"\f0c0"}
 .fa-users-gear::before{content:"\f509"}
+.fa-video::before{content:"\f03d"}
 .fa-wand-magic-sparkles::before{content:"\e2ca"}
 .fa-whatsapp::before{content:"\f232"}
 .fa-wifi::before{content:"\f1eb"}

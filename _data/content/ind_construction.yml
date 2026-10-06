@@ -1,0 +1,87 @@
+crumb_es: Construcción y remodelación
+crumb_en: Contractors & remodeling
+service:
+  name_es: Diseño web para construcción y remodelación
+  name_en: Web design for contractors & remodeling
+  type: Web design
+hero:
+  bg_word: BUILD
+  eyebrow_es: Diseño web para construcción
+  eyebrow_en: Web design for contractors
+  title_es: PÁGINAS WEB PARA<span class="accent">CONSTRUCTORAS</span>
+  title_en: WEBSITES FOR<span class="accent">CONTRACTORS</span>
+  sub_es: Un proyecto de construcción o remodelación cuesta miles de dólares, y el cliente quiere ver tu trabajo y saber que eres serio antes de llamarte. Tu página tiene que demostrarlo en segundos.
+  sub_en: A construction or remodeling project costs thousands, and homeowners want to see your work and know you are legit before they call. Your website has to prove it in seconds.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-mobile-screen
+    es: Pensada para celular
+    en: Built for mobile
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+faq:
+- q_es: ¿Qué necesito para empezar la página de mi constructora?
+  a_es: Tu logo, fotos de proyectos terminados, la lista de servicios, las ciudades donde trabajas y tu número de licencia si lo quieres mostrar. Si no tienes buenas fotos, te orientamos para tomarlas.
+  q_en: What do I need to start my contractor website?
+  a_en: Your logo, photos of finished projects, your list of services, the cities you work in and your license number if you want to show it. If you lack good photos, we guide you on taking them.
+- q_es: ¿La página sirve para conseguir proyectos comerciales?
+  a_es: Sí. Podemos separar servicios residenciales y comerciales, con un formulario para cada tipo de cliente.
+  q_en: Does the site work for commercial projects too?
+  a_en: Yes. We can separate residential and commercial services, with a form for each type of client.
+- q_es: ¿Puedo actualizar la galería con obras nuevas?
+  a_es: Sí. Nos mandas las fotos y las agregamos durante tu periodo de mantenimiento.
+  q_en: Can I add new projects to the gallery?
+  a_en: Yes. Send us the photos and we add them during your maintenance period.
+projects:
+- caibo-construction
+icon: fa-solid fa-helmet-safety
+shot: caibo-construction
+es:
+  name: Construcción y remodelación
+  needs:
+  - icon: fa-solid fa-images
+    title: PORTAFOLIO DE OBRAS
+    desc: 'Fotos de proyectos terminados por tipo: cocinas, baños, ampliaciones, techos o comercial.'
+  - icon: fa-solid fa-id-badge
+    title: LICENCIAS Y SEGURO
+    desc: Tu licencia, seguro y años de experiencia a la vista, que es lo que más pesa en la decisión.
+  - icon: fa-solid fa-clipboard-list
+    title: ESTIMADO GRATIS
+    desc: Formulario de estimado con tipo de proyecto, ciudad y fotos, para llegar a la visita con información.
+  - icon: fa-solid fa-list-check
+    title: PROCESO CLARO
+    desc: Explica cómo trabajas, de la visita al cierre de obra. Eso reduce dudas y llamadas innecesarias.
+  includes:
+  - Servicios por tipo de obra
+  - Galería de proyectos terminados
+  - Licencias, seguro y garantía
+  - Formulario de estimado gratis y WhatsApp
+  - Zonas donde trabajas
+  - Versión en español e inglés
+  plan: Recomendamos el Plan Estándar para empezar o el Premium si quieres una galería grande por categorías, SEO y Google Analytics desde el primer día.
+en:
+  name: Contractors & remodeling
+  needs:
+  - icon: fa-solid fa-images
+    title: PROJECT GALLERY
+    desc: 'Photos of finished projects by type: kitchens, bathrooms, additions, roofing or commercial.'
+  - icon: fa-solid fa-id-badge
+    title: LICENSES & INSURANCE
+    desc: Your license, insurance and years of experience in plain sight, which weighs most in the decision.
+  - icon: fa-solid fa-clipboard-list
+    title: FREE ESTIMATE
+    desc: An estimate form with project type, city and photos, so you arrive at the site visit informed.
+  - icon: fa-solid fa-list-check
+    title: CLEAR PROCESS
+    desc: Explain how you work, from the site visit to project close-out. It removes doubts and unnecessary calls.
+  includes:
+  - Services by project type
+  - Gallery of finished projects
+  - Licenses, insurance and warranty
+  - Free estimate form and WhatsApp
+  - Areas you serve
+  - Spanish and English versions
+  plan: We recommend the Standard Plan to start, or Premium if you want a large gallery by category, SEO and Google Analytics from day one.

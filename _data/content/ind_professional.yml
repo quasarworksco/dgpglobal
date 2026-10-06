@@ -1,0 +1,87 @@
+crumb_es: Servicios profesionales
+crumb_en: Professional services
+service:
+  name_es: Diseño web para servicios profesionales
+  name_en: Web design for professional services
+  type: Web design
+hero:
+  bg_word: PRO
+  eyebrow_es: Diseño web profesional
+  eyebrow_en: Web design for professionals
+  title_es: PÁGINAS WEB PARA<span class="accent">PROFESIONALES</span>
+  title_en: WEBSITES FOR<span class="accent">PROFESSIONALS</span>
+  sub_es: 'Contadores, gestores de LLC, agentes de seguros, notarios y consultores: tus clientes te confían su dinero y sus trámites. Tu página tiene que transmitir esa seriedad desde el primer vistazo.'
+  sub_en: 'Accountants, LLC agents, insurance agents, notaries and consultants: clients trust you with their money and paperwork. Your website must convey that from the first glance.'
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-mobile-screen
+    es: Pensada para celular
+    en: Built for mobile
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+faq:
+- q_es: ¿Pueden agregar un sistema de citas?
+  a_es: Sí. Podemos integrar un formulario de citas o un sistema de reservas, según cuántas citas manejes al mes.
+  q_en: Can you add an appointment system?
+  a_en: Yes. We can integrate an appointment form or a booking system, depending on how many appointments you handle per month.
+- q_es: Soy gestor de LLC o contador, ¿puedo ofrecer páginas web a mis clientes?
+  a_es: Sí. Con nuestro programa de aliados revendes páginas web con tu marca y 25% de descuento, o solo nos recomiendas y ganas comisión.
+  q_en: I'm an LLC agent or accountant. Can I offer websites to my clients?
+  a_en: Yes. With our partner program you resell websites under your brand at 25% off, or simply refer clients and earn a commission.
+- q_es: ¿La página puede estar en español y en inglés?
+  a_es: 'Sí. Es una de nuestras especialidades: un mismo sitio con ambas versiones para llegar a todos tus clientes.'
+  q_en: Can the site be in both Spanish and English?
+  a_en: 'Yes. It is one of our specialties: one site with both versions to reach all your clients.'
+projects:
+- moya-company
+icon: fa-solid fa-briefcase
+shot: moya-company
+es:
+  name: Servicios profesionales
+  needs:
+  - icon: fa-solid fa-user-tie
+    title: IMAGEN SERIA
+    desc: Diseño limpio, tu foto o equipo y tus credenciales, para que el cliente confíe antes de llamar.
+  - icon: fa-solid fa-list-check
+    title: SERVICIOS CLAROS
+    desc: 'Cada servicio explicado en palabras simples: impuestos, LLC, seguros, traducciones o asesoría.'
+  - icon: fa-solid fa-calendar-check
+    title: CITAS EN LÍNEA
+    desc: Formulario o enlace para agendar, sobre todo en temporada alta.
+  - icon: fa-solid fa-language
+    title: BILINGÜE
+    desc: Muchos de tus clientes prefieren español; otros, inglés. Tu página puede atender a los dos.
+  includes:
+  - Página de servicios con explicación simple
+  - Perfil profesional y credenciales
+  - Formulario de cita y WhatsApp
+  - Preguntas frecuentes de tus clientes
+  - Dirección, horarios y mapa
+  - Versión en español e inglés
+  plan: El Plan Estándar cubre inicio, servicios, sobre ti, preguntas frecuentes y contacto. Si quieres ofrecer páginas web a tus propios clientes, mira también nuestro programa de aliados.
+en:
+  name: Professional services
+  needs:
+  - icon: fa-solid fa-user-tie
+    title: A PROFESSIONAL IMAGE
+    desc: Clean design, your photo or team and your credentials, so clients trust you before they call.
+  - icon: fa-solid fa-list-check
+    title: CLEAR SERVICES
+    desc: 'Each service explained in plain words: taxes, LLC, insurance, translations or advisory.'
+  - icon: fa-solid fa-calendar-check
+    title: ONLINE APPOINTMENTS
+    desc: A form or link to book appointments, especially during busy season.
+  - icon: fa-solid fa-language
+    title: BILINGUAL
+    desc: Many clients prefer Spanish; others, English. Your site can serve both.
+  includes:
+  - Services page in plain language
+  - Professional profile and credentials
+  - Appointment form and WhatsApp
+  - Your clients' frequently asked questions
+  - Address, hours and map
+  - Spanish and English versions
+  plan: The Standard Plan covers home, services, about, FAQ and contact. If you want to offer websites to your own clients, also check out our partner program.

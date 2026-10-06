@@ -102,6 +102,16 @@
   </div>
 </div>
 
+<!-- POR INDUSTRIA -->
+<div class="section" id="industrias">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'en' %}By industry{% else %}Por industria{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'en' %}WEBSITES FOR <span class="accent">YOUR INDUSTRY</span>{% else %}PÁGINAS WEB PARA <span class="accent">TU INDUSTRIA</span>{% endif %}</h2>
+    <p class="sec-sub">{% if page.lang == 'en' %}Each industry needs different things from its website. See what we build for yours.{% else %}Cada industria necesita cosas distintas en su página. Mira lo que hacemos para la tuya.{% endif %}</p>
+  </div>
+  {% include industries-grid.html %}
+</div>
+
 {% include process.html %}
 
 <!-- PORTAFOLIO WEB -->

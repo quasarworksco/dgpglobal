@@ -1,0 +1,88 @@
+crumb_es: Servicios para el hogar
+crumb_en: Home services
+service:
+  name_es: Diseño web para servicios para el hogar
+  name_en: Web design for home services
+  type: Web design
+hero:
+  bg_word: HOME
+  eyebrow_es: Diseño web para técnicos
+  eyebrow_en: Web design for home services
+  title_es: PÁGINAS WEB PARA<span class="accent">SERVICIOS DEL HOGAR</span>
+  title_en: WEBSITES FOR<span class="accent">HOME SERVICES</span>
+  sub_es: Cuando algo se daña en casa, la gente busca en el celular y llama al primero que inspira confianza. Te hacemos una página rápida, con llamada directa y citas en línea.
+  sub_en: When something breaks at home, people search on their phone and call the first business they trust. We build a fast site with click-to-call and online booking requests.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-mobile-screen
+    es: Pensada para celular
+    en: Built for mobile
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+faq:
+- q_es: ¿La página funciona bien en el celular?
+  a_es: Sí. Está pensada primero para el celular, con el botón de llamada siempre a la mano, porque ahí llegan la mayoría de las búsquedas urgentes.
+  q_en: Does the site work well on mobile?
+  a_en: Yes. It is designed mobile-first with the call button always at hand, because that is where most urgent searches come from.
+- q_es: ¿Puedo recibir las solicitudes de servicio por WhatsApp?
+  a_es: Sí. Los formularios pueden llegarte por correo y además tienes el botón de WhatsApp con un mensaje listo para que el cliente te escriba.
+  q_en: Can I receive service requests on WhatsApp?
+  a_en: Yes. Forms can reach you by email, and you also get a WhatsApp button with a ready-made message for customers.
+- q_es: ¿Sirve para varios servicios, por ejemplo reparación y aire acondicionado?
+  a_es: Sí. Con el Plan Estándar cada servicio puede tener su propia página, lo que también ayuda a aparecer en Google para cada uno.
+  q_en: Does it work for several services, like repair and AC?
+  a_en: Yes. With the Standard Plan each service can have its own page, which also helps you rank on Google for each one.
+projects:
+- appliance-solutions-901
+- pina-water-system
+icon: fa-solid fa-screwdriver-wrench
+shot: appliance-solutions-901
+es:
+  name: Servicios para el hogar
+  needs:
+  - icon: fa-solid fa-phone
+    title: LLAMADA EN UN TOQUE
+    desc: Botón de llamada y WhatsApp siempre visible en el celular, que es desde donde llegan las emergencias.
+  - icon: fa-solid fa-calendar-check
+    title: SOLICITUD DE CITA
+    desc: Formulario con el equipo o problema, la dirección y el horario preferido.
+  - icon: fa-solid fa-location-dot
+    title: ÁREA DE SERVICIO
+    desc: Tus ciudades y códigos postales, para aparecer en búsquedas "cerca de mí".
+  - icon: fa-solid fa-shield-halved
+    title: GARANTÍA Y CONFIANZA
+    desc: 'Garantía, marcas que reparas y reseñas: lo que separa a un técnico serio de uno improvisado.'
+  includes:
+  - Servicios y marcas que atiendes
+  - Botón de llamada y WhatsApp fijo en el celular
+  - Formulario de cita o servicio
+  - Zonas y códigos postales
+  - Reseñas y garantía
+  - Versión en español e inglés
+  plan: Para un técnico que empieza, la landing page del Plan Básico funciona muy bien. Si ofreces varios servicios o atiendes varias ciudades, el Plan Estándar te da una página para cada uno.
+en:
+  name: Home services
+  needs:
+  - icon: fa-solid fa-phone
+    title: ONE-TAP CALLING
+    desc: A call and WhatsApp button always visible on mobile, where emergency searches come from.
+  - icon: fa-solid fa-calendar-check
+    title: BOOKING REQUESTS
+    desc: A form with the appliance or issue, the address and the preferred time slot.
+  - icon: fa-solid fa-location-dot
+    title: SERVICE AREA
+    desc: Your cities and ZIP codes, to show up in "near me" searches.
+  - icon: fa-solid fa-shield-halved
+    title: WARRANTY & TRUST
+    desc: 'Warranty, brands you service and reviews: what sets a pro apart from a guy with a van.'
+  includes:
+  - Services and brands you work on
+  - Sticky call and WhatsApp button on mobile
+  - Service or appointment request form
+  - Areas and ZIP codes
+  - Reviews and warranty
+  - Spanish and English versions
+  plan: For a technician just starting out, the Basic Plan landing page works great. If you offer several services or cover several cities, the Standard Plan gives each one its own page.
