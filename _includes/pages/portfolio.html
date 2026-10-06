@@ -3,9 +3,9 @@
 <!-- PORTAFOLIO -->
 <div class="section" id="portafolio">
   <div class="reveal" style="text-align:center">
-    <div class="sec-eyebrow" style="justify-content:center;display:flex" data-es>Vista en computadora y celular</div>
-    <div class="sec-eyebrow" style="justify-content:center;display:flex" data-en>Desktop and mobile view</div>
-    <h2 class="sec-title" style="text-align:center"><span data-es>EXPLORA CADA <span class="accent">PROYECTO</span></span><span data-en>EXPLORE EACH <span class="accent">PROJECT</span></span></h2>
+    {% if page.lang == 'es' %}<div class="sec-eyebrow" style="justify-content:center;display:flex" data-es>Vista en computadora y celular</div>{% endif %}
+    {% if page.lang == 'en' %}<div class="sec-eyebrow" style="justify-content:center;display:flex" data-en>Desktop and mobile view</div>{% endif %}
+    <h2 class="sec-title" style="text-align:center">{% if page.lang == 'es' %}<span data-es>EXPLORA CADA <span class="accent">PROYECTO</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>EXPLORE EACH <span class="accent">PROJECT</span></span>{% endif %}</h2>
   </div>
   {% include showcase.html %}
 </div>
@@ -15,8 +15,8 @@
 <!-- TODOS LOS PROYECTOS -->
 <div class="section" id="proyectos">
   <div class="reveal">
-    <div class="sec-eyebrow" data-es>Todos los proyectos</div><div class="sec-eyebrow" data-en>All projects</div>
-    <h2 class="sec-title"><span data-es>{{ site.data.portfolio.size }} NEGOCIOS QUE YA <span class="accent">CRECEN ONLINE</span></span><span data-en>{{ site.data.portfolio.size }} BUSINESSES ALREADY <span class="accent">GROWING ONLINE</span></span></h2>
+    {% if page.lang == 'es' %}<div class="sec-eyebrow" data-es>Todos los proyectos</div>{% endif %}{% if page.lang == 'en' %}<div class="sec-eyebrow" data-en>All projects</div>{% endif %}
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>{{ site.data.portfolio.size }} NEGOCIOS QUE YA <span class="accent">CRECEN ONLINE</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ site.data.portfolio.size }} BUSINESSES ALREADY <span class="accent">GROWING ONLINE</span></span>{% endif %}</h2>
   </div>
   <div class="port-grid">
     {% for p in site.data.portfolio %}{% include port-tile.html p=p i=forloop.index0 %}{% endfor %}

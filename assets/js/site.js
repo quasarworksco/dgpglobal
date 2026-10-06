@@ -18,10 +18,8 @@ let loaderStarted=false;
 function runLoader(){
   if(loaderStarted)return;loaderStarted=true;
   const loader=document.getElementById('loader');
-  if(!loader)return;
-  let seen=false;
-  try{seen=sessionStorage.getItem('dgpLoaderSeen')==='1';sessionStorage.setItem('dgpLoaderSeen','1');}catch(e){}
-  if(seen){loader.classList.add('hidden');return;}
+  if(!loader||loader.dataset.show!=='1')return;
+  try{sessionStorage.setItem('dgpLoaderSeen','1');}catch(e){}
   const bar=document.getElementById('ldrBar');
   const ph=document.getElementById('ldrPhrase');
   let p=0,pi=0;

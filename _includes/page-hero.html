@@ -4,46 +4,46 @@
   <div class="bg-word">{{ d.hero.bg_word }}</div>
   <div class="page-hero-inner">
     <div class="crumbs" role="navigation" aria-label="Breadcrumb">
-      <a href="{{ site.data.routes.home[page.lang] }}"><span data-es>Inicio</span><span data-en>Home</span></a>
+      <a href="{{ site.data.routes.home[page.lang] }}">{% if page.lang == 'es' %}<span data-es>Inicio</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Home</span>{% endif %}</a>
       <i class="fa-solid fa-chevron-right"></i>
-      <span data-es>{{ d.crumb_es }}</span><span data-en>{{ d.crumb_en }}</span>
+      {% if page.lang == 'es' %}<span data-es>{{ d.crumb_es }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ d.crumb_en }}</span>{% endif %}
     </div>
-    <div class="eyebrow" data-es>{{ d.hero.eyebrow_es }}</div>
-    <div class="eyebrow" data-en>{{ d.hero.eyebrow_en }}</div>
+    {% if page.lang == 'es' %}<div class="eyebrow" data-es>{{ d.hero.eyebrow_es }}</div>{% endif %}
+    {% if page.lang == 'en' %}<div class="eyebrow" data-en>{{ d.hero.eyebrow_en }}</div>{% endif %}
     <h1 class="page-hero-title">
-      <span data-es>{{ d.hero.title_es }}</span>
-      <span data-en>{{ d.hero.title_en }}</span>
+      {% if page.lang == 'es' %}<span data-es>{{ d.hero.title_es }}</span>{% endif %}
+      {% if page.lang == 'en' %}<span data-en>{{ d.hero.title_en }}</span>{% endif %}
     </h1>
-    <p class="page-hero-sub" data-es>{{ d.hero.sub_es }}</p>
-    <p class="page-hero-sub" data-en>{{ d.hero.sub_en }}</p>
+    {% if page.lang == 'es' %}<p class="page-hero-sub" data-es>{{ d.hero.sub_es }}</p>{% endif %}
+    {% if page.lang == 'en' %}<p class="page-hero-sub" data-en>{{ d.hero.sub_en }}</p>{% endif %}
     <div class="page-hero-ctas">
       {% if d.hero.cta %}
       <a href="{{ d.hero.cta.href }}" class="btn-main">
         <i class="{{ d.hero.cta.icon }}"></i>
-        <span data-es>{{ d.hero.cta.es }}</span><span data-en>{{ d.hero.cta.en }}</span>
+        {% if page.lang == 'es' %}<span data-es>{{ d.hero.cta.es }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ d.hero.cta.en }}</span>{% endif %}
         <span class="arr"><i class="fa-solid fa-arrow-down"></i></span>
       </a>
       {% elsif d.hero.audit %}
       <a href="#auditoria-form" class="btn-main">
         <i class="fa-solid fa-magnifying-glass-chart"></i>
-        <span data-es>PEDIR MI AUDITORÍA GRATIS</span><span data-en>GET MY FREE AUDIT</span>
+        {% if page.lang == 'es' %}<span data-es>PEDIR MI AUDITORÍA GRATIS</span>{% endif %}{% if page.lang == 'en' %}<span data-en>GET MY FREE AUDIT</span>{% endif %}
         <span class="arr"><i class="fa-solid fa-arrow-down"></i></span>
       </a>
       {% else %}
       <button onclick="openHeroForm()" class="btn-main" style="border:none;cursor:pointer">
         <i class="fa-solid fa-paper-plane"></i>
-        <span data-es>COTIZACIÓN GRATIS</span><span data-en>FREE QUOTE</span>
+        {% if page.lang == 'es' %}<span data-es>COTIZACIÓN GRATIS</span>{% endif %}{% if page.lang == 'en' %}<span data-en>FREE QUOTE</span>{% endif %}
         <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
       </button>
       <button onclick="openQuote()" class="quote-trigger">
         <i class="fa-solid fa-calculator"></i>
-        <span data-es>COTIZADOR RÁPIDO</span><span data-en>QUICK QUOTE</span>
+        {% if page.lang == 'es' %}<span data-es>COTIZADOR RÁPIDO</span>{% endif %}{% if page.lang == 'en' %}<span data-en>QUICK QUOTE</span>{% endif %}
       </button>
       {% endif %}
     </div>
     {% if d.hero.chips %}
     <div class="page-hero-chips">
-      {% for c in d.hero.chips %}<span class="hero-chip"><i class="{{ c.icon }}"></i><span data-es>{{ c.es }}</span><span data-en>{{ c.en }}</span></span>{% endfor %}
+      {% for c in d.hero.chips %}<span class="hero-chip"><i class="{{ c.icon }}"></i>{% if page.lang == 'es' %}<span data-es>{{ c.es }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ c.en }}</span>{% endif %}</span>{% endfor %}
     </div>
     {% endif %}
   </div>

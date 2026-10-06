@@ -66,10 +66,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 {% if page.hero_preload %}<link rel="preconnect" href="https://images.unsplash.com">
-{% endif %}<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-<link rel="preconnect" href="https://drive.google.com">
-<link rel="preconnect" href="https://lh3.googleusercontent.com">
-<link rel="dns-prefetch" href="https://cdn.simpleicons.org">
+{% endif %}<link rel="dns-prefetch" href="https://cdn.simpleicons.org">
 <link rel="dns-prefetch" href="https://docs.google.com">
 <link rel="dns-prefetch" href="https://api.groq.com">
 <link rel="dns-prefetch" href="https://formspree.io">
@@ -78,8 +75,8 @@
 <link rel="preload" as="image" fetchpriority="high" media="(min-width:601px)" href="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1800&auto=format&fit=crop">
 {% endif %}<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"></noscript>
-<link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fa/fa-solid-900.woff2" crossorigin>
+<link rel="stylesheet" href="/assets/fa/fa.css?v={{ site.time | date: '%s' }}">
 <link rel="stylesheet" href="/assets/css/site.css?v={{ site.time | date: '%s' }}">
 </head>
 <body{% if page.lang == 'en' %} class="en"{% endif %}>

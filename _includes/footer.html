@@ -5,11 +5,11 @@
       <!-- BRAND -->
       <div class="footer-brand">
         <a href="{{ site.data.routes.home[page.lang] }}" class="footer-brand-logo">
-          <img src="https://drive.google.com/thumbnail?id=1ttCWtKOBYkVC8C7b70BFiWdJtD2RcP_9&sz=w200" alt="DGP" width="32" height="32" loading="lazy" decoding="async">
+          <img src="/assets/img/logo-mark.png" alt="DGP" width="32" height="32" loading="lazy" decoding="async">
           DGP <span>GLOBAL</span> GROUP
         </a>
-        <p class="footer-brand-desc" data-es>Agencia de marketing digital especializada en hacer crecer negocios con estrategias reales y resultados medibles.</p>
-        <p class="footer-brand-desc" data-en>Digital marketing agency specialized in growing businesses with real strategies and measurable results.</p>
+        {% if page.lang == 'es' %}<p class="footer-brand-desc" data-es>Agencia de marketing digital especializada en hacer crecer negocios con estrategias reales y resultados medibles.</p>{% endif %}
+        {% if page.lang == 'en' %}<p class="footer-brand-desc" data-en>Digital marketing agency specialized in growing businesses with real strategies and measurable results.</p>{% endif %}
         <div class="footer-social">
           <a href="https://instagram.com/dgpgroup.us" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
           <a href="https://facebook.com/dgpgroupusa" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -20,34 +20,34 @@
 
       <!-- SERVICIOS -->
       <div>
-        <div class="footer-col-title" data-es>SERVICIOS</div>
-        <div class="footer-col-title" data-en>SERVICES</div>
+        {% if page.lang == 'es' %}<div class="footer-col-title" data-es>SERVICIOS</div>{% endif %}
+        {% if page.lang == 'en' %}<div class="footer-col-title" data-en>SERVICES</div>{% endif %}
         <div class="footer-links">
-          <a href="{{ site.data.routes.packages[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Paquetes</span><span data-en>Packages</span></a>
-          <a href="{{ site.data.routes.web[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Diseño Web</span><span data-en>Web Design</span></a>
-          <a href="{{ site.data.routes.ecommerce[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Gestión E-Commerce</span><span data-en>E-Commerce Management</span></a>
-          <a href="{{ site.data.routes.portfolio[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Portafolio</span><span data-en>Portfolio</span></a>
-          <a href="{{ site.data.routes.systems[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Sistemas Personalizados</span><span data-en>Custom Systems</span></a>
-          <a href="{{ site.data.routes.audit[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Auditoría Web Gratis</span><span data-en>Free Website Audit</span></a>
+          <a href="{{ site.data.routes.packages[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Paquetes</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Packages</span>{% endif %}</a>
+          <a href="{{ site.data.routes.web[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Diseño Web</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Web Design</span>{% endif %}</a>
+          <a href="{{ site.data.routes.ecommerce[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Gestión E-Commerce</span>{% endif %}{% if page.lang == 'en' %}<span data-en>E-Commerce Management</span>{% endif %}</a>
+          <a href="{{ site.data.routes.portfolio[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Portafolio</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Portfolio</span>{% endif %}</a>
+          <a href="{{ site.data.routes.systems[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Sistemas Personalizados</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Custom Systems</span>{% endif %}</a>
+          <a href="{{ site.data.routes.audit[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Auditoría Web Gratis</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Free Website Audit</span>{% endif %}</a>
         </div>
       </div>
 
       <!-- COMPAÑÍA -->
       <div>
-        <div class="footer-col-title" data-es>COMPAÑÍA</div>
-        <div class="footer-col-title" data-en>COMPANY</div>
+        {% if page.lang == 'es' %}<div class="footer-col-title" data-es>COMPAÑÍA</div>{% endif %}
+        {% if page.lang == 'en' %}<div class="footer-col-title" data-en>COMPANY</div>{% endif %}
         <div class="footer-links">
-          <a href="{{ site.data.routes.web[page.lang] }}#proceso" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Cómo Trabajamos</span><span data-en>How We Work</span></a>
-          <a href="{{ site.data.routes.partners[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Programa de Aliados</span><span data-en>Partner Program</span></a>
-          <a href="{{ site.data.routes.home[page.lang] }}#resenas" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Reseñas</span><span data-en>Reviews</span></a>
-          <a href="javascript:openContactModal()" class="footer-link"><i class="fa-solid fa-chevron-right"></i><span data-es>Contacto</span><span data-en>Contact</span></a>
+          <a href="{{ site.data.routes.web[page.lang] }}#proceso" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Cómo Trabajamos</span>{% endif %}{% if page.lang == 'en' %}<span data-en>How We Work</span>{% endif %}</a>
+          <a href="{{ site.data.routes.partners[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Programa de Aliados</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Partner Program</span>{% endif %}</a>
+          <a href="{{ site.data.routes.home[page.lang] }}#resenas" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Reseñas</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Reviews</span>{% endif %}</a>
+          <a href="javascript:openContactModal()" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Contacto</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Contact</span>{% endif %}</a>
         </div>
       </div>
 
       <!-- CONTACTO -->
       <div>
-        <div class="footer-col-title" data-es>CONTACTO</div>
-        <div class="footer-col-title" data-en>CONTACT</div>
+        {% if page.lang == 'es' %}<div class="footer-col-title" data-es>CONTACTO</div>{% endif %}
+        {% if page.lang == 'en' %}<div class="footer-col-title" data-en>CONTACT</div>{% endif %}
         <div class="footer-contact-item"><i class="fa-brands fa-whatsapp"></i><a href="https://wa.me/12398231738" target="_blank">+1 (239) 823-1738</a></div>
         <div class="footer-contact-item"><i class="fa-solid fa-envelope"></i><a href="mailto:dgpgroup.usa@gmail.com">dgpgroup.usa@gmail.com</a></div>
         <div class="footer-contact-item"><i class="fa-solid fa-globe"></i><a href="https://dgpgroup.us" target="_blank">dgpgroup.us</a></div>
@@ -58,13 +58,13 @@
 
     <div class="footer-bottom">
       <div class="footer-copy">
-        © 2026 <span>DGP Global Group</span> · <span data-es>Todos los derechos reservados</span><span data-en>All rights reserved</span>
+        © 2026 <span>DGP Global Group</span> · {% if page.lang == 'es' %}<span data-es>Todos los derechos reservados</span>{% endif %}{% if page.lang == 'en' %}<span data-en>All rights reserved</span>{% endif %}
       </div>
       <div class="footer-bottom-links">
-        <a href="#" class="footer-bottom-link" data-es>Política de Privacidad</a>
-        <a href="#" class="footer-bottom-link" data-en>Privacy Policy</a>
-        <a href="#" class="footer-bottom-link" data-es>Términos de Uso</a>
-        <a href="#" class="footer-bottom-link" data-en>Terms of Use</a>
+        {% if page.lang == 'es' %}<a href="#" class="footer-bottom-link" data-es>Política de Privacidad</a>{% endif %}
+        {% if page.lang == 'en' %}<a href="#" class="footer-bottom-link" data-en>Privacy Policy</a>{% endif %}
+        {% if page.lang == 'es' %}<a href="#" class="footer-bottom-link" data-es>Términos de Uso</a>{% endif %}
+        {% if page.lang == 'en' %}<a href="#" class="footer-bottom-link" data-en>Terms of Use</a>{% endif %}
         <a href="#" class="footer-bottom-link">@dgpgroup.us</a>
       </div>
     </div>

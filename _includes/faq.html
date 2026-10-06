@@ -1,16 +1,16 @@
 {% assign d = site.data.content[page.ref] %}<!-- FAQ -->
 <div class="section" id="faq">
   <div class="reveal">
-    <div class="sec-eyebrow" data-es>Resolvemos tus dudas</div><div class="sec-eyebrow" data-en>Your questions answered</div>
-    <h2 class="sec-title"><span data-es>PREGUNTAS <span class="accent">FRECUENTES</span></span><span data-en>FREQUENTLY ASKED <span class="accent">QUESTIONS</span></span></h2>
+    {% if page.lang == 'es' %}<div class="sec-eyebrow" data-es>Resolvemos tus dudas</div>{% endif %}{% if page.lang == 'en' %}<div class="sec-eyebrow" data-en>Your questions answered</div>{% endif %}
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>PREGUNTAS <span class="accent">FRECUENTES</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>FREQUENTLY ASKED <span class="accent">QUESTIONS</span></span>{% endif %}</h2>
   </div>
   <div class="faq-list reveal" style="transition-delay:.1s">
     {% for f in d.faq %}
     <details class="faq-item"{% if forloop.first %} open{% endif %}>
-      <summary><span data-es>{{ f.q_es }}</span><span data-en>{{ f.q_en }}</span><i class="fa-solid fa-plus faq-icon"></i></summary>
+      <summary>{% if page.lang == 'es' %}<span data-es>{{ f.q_es }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ f.q_en }}</span>{% endif %}<i class="fa-solid fa-plus faq-icon"></i></summary>
       <div class="faq-answer">
-        <p data-es>{{ f.a_es }}</p>
-        <p data-en>{{ f.a_en }}</p>
+        {% if page.lang == 'es' %}<p data-es>{{ f.a_es }}</p>{% endif %}
+        {% if page.lang == 'en' %}<p data-en>{{ f.a_en }}</p>{% endif %}
       </div>
     </details>
     {% endfor %}

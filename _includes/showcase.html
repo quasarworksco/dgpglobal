@@ -27,7 +27,7 @@
       <div class="pc-tags sc-tags">{% if page.lang == 'en' %}{% for t in first.tags_en %}<span class="pc-tag">{{ t }}</span>{% endfor %}{% else %}{% for t in first.tags_es %}<span class="pc-tag">{{ t }}</span>{% endfor %}{% endif %}</div>
       <p class="sc-desc">{% if page.lang == 'en' %}{{ first.desc_en }}{% else %}{{ first.desc_es }}{% endif %}</p>
     </div>
-    <a class="port-visit sc-link" href="{{ first.url }}" target="_blank" rel="noopener"><span data-es>Ver sitio en vivo</span><span data-en>Visit live site</span>&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    <a class="port-visit sc-link" href="{{ first.url }}" target="_blank" rel="noopener">{% if page.lang == 'es' %}<span data-es>Ver sitio en vivo</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Visit live site</span>{% endif %}&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
   </div>
 
   <div class="sc-thumbs" role="tablist" aria-label="{% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}">

@@ -1,0 +1,29 @@
+name: IndexNow (Bing, Yandex, ChatGPT search)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - assets/portfolio/**
+      - scripts/**
+      - .github/workflows/portfolio-screenshots.yml
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      # Give GitHub Pages time to publish before search engines come to read
+      - run: sleep 120
+      - name: Submit every URL in the sitemap
+        env:
+          KEY: 9f72134e205bb87fc44d823e76377d1d
+        run: |
+          urls=$(curl -fsSL https://dgpglobalgroup.com/sitemap.xml | grep -oE '<loc>[^<]+</loc>' | sed -E 's#</?loc>##g' | jq -R . | jq -s -c .)
+          echo "Submitting: $urls"
+          curl -sS -o /dev/null -w "IndexNow HTTP %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
+            -H 'Content-Type: application/json; charset=utf-8' \
+            -d "{\"host\":\"dgpglobalgroup.com\",\"key\":\"$KEY\",\"keyLocation\":\"https://dgpglobalgroup.com/$KEY.txt\",\"urlList\":$urls}"
