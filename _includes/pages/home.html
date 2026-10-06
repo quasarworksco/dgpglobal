@@ -296,37 +296,12 @@
 
 {% include contact-section.html %}
 
-<!-- INSTAGRAM CTA -->
-<div class="section" id="instagram" style="padding-top:0">
-  <div class="reveal">
-    {% if page.lang == 'es' %}<div class="sec-eyebrow" data-es>Síguenos</div>{% endif %}{% if page.lang == 'en' %}<div class="sec-eyebrow" data-en>Follow us</div>{% endif %}
-    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>ESTAMOS EN <span class="accent">INSTAGRAM</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>FIND US ON <span class="accent">INSTAGRAM</span></span>{% endif %}</h2>
-    {% if page.lang == 'es' %}<p class="sec-sub" data-es>Contenido diario sobre marketing digital, diseño web y consejos para hacer crecer tu negocio.</p>{% endif %}
-    {% if page.lang == 'en' %}<p class="sec-sub" data-en>Daily content on digital marketing, web design and tips to grow your business.</p>{% endif %}
-  </div>
-  <div class="insta-cta-card reveal" style="transition-delay:.1s">
-    <div class="insta-left">
-      <div>
-        <div style="font-size:32px;color:#fff;margin-bottom:12px;position:relative;z-index:1"><i class="fa-brands fa-instagram"></i></div>
-        <div class="insta-handle">@dgpgroup.us</div>
-        {% if page.lang == 'es' %}<p class="insta-sub" data-es>Marketing digital · Diseño web · Branding · E-Commerce · Tips de negocios</p>{% endif %}
-        {% if page.lang == 'en' %}<p class="insta-sub" data-en>Digital marketing · Web design · Branding · E-Commerce · Business tips</p>{% endif %}
-      </div>
-      <a href="https://www.instagram.com/dgpgroup.us/" target="_blank" rel="noopener" class="insta-follow-btn">
-        <i class="fa-brands fa-instagram"></i>
-        {% if page.lang == 'es' %}<span data-es>Seguir en Instagram</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Follow on Instagram</span>{% endif %}
-      </a>
-    </div>
-    <div class="insta-right">
-      <div class="insta-stat-row">
-        <div class="insta-stat"><div class="insta-stat-num">7K<span style="font-size:18px;color:var(--blue-s)">+</span></div>{% if page.lang == 'es' %}<div class="insta-stat-lbl" data-es>Seguidores</div>{% endif %}{% if page.lang == 'en' %}<div class="insta-stat-lbl" data-en>Followers</div>{% endif %}</div>
-        <div class="insta-stat"><div class="insta-stat-num">7<span style="font-size:18px;color:var(--blue-s)">+</span></div>{% if page.lang == 'es' %}<div class="insta-stat-lbl" data-es>Años activos</div>{% endif %}{% if page.lang == 'en' %}<div class="insta-stat-lbl" data-en>Years active</div>{% endif %}</div>
-        <div class="insta-stat"><div class="insta-stat-num">5<span style="font-size:18px;color:var(--blue-s)">★</span></div>{% if page.lang == 'es' %}<div class="insta-stat-lbl" data-es>Valoración</div>{% endif %}{% if page.lang == 'en' %}<div class="insta-stat-lbl" data-en>Rating</div>{% endif %}</div>
-      </div>
-      {% if page.lang == 'es' %}<p class="insta-post-hint" data-es>Publicamos consejos, casos de éxito y ofertas exclusivas para nuestra comunidad. ¡Síguenos y no te pierdas nada!</p>{% endif %}
-      {% if page.lang == 'en' %}<p class="insta-post-hint" data-en>We post tips, success stories and exclusive offers for our community. Follow us and don't miss a thing!</p>{% endif %}
-    </div>
-  </div>
+<!-- INSTAGRAM -->
+<div class="insta-btn-wrap" id="instagram">
+  <a href="https://www.instagram.com/dgpgroup.us/" target="_blank" rel="noopener" class="insta-btn">
+    <i class="fa-brands fa-instagram"></i>
+    {% if page.lang == 'en' %}Follow us on Instagram{% else %}Síguenos en Instagram{% endif %} <span>@dgpgroup.us</span>
+  </a>
 </div>
 
 {% include share-bar.html %}
