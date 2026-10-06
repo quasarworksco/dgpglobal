@@ -1,0 +1,13 @@
+{% assign guides = site.pages | where: "lang", page.lang | where_exp: "g", "g.layout == 'article'" | sort: "date" | reverse %}
+<div class="guide-grid">
+  {% for g in guides %}{% if g.ref != include.exclude %}
+  <a class="guide-card reveal" href="{{ g.url }}">
+    <img src="/assets/og/{{ g.ref }}-{{ g.lang }}.jpg" alt="" width="1200" height="630" loading="lazy" decoding="async">
+    <span class="guide-card-body">
+      <span class="guide-card-cat">{{ g.category }}</span>
+      <span class="guide-card-title">{{ g.heading | default: g.title }}</span>
+      <span class="guide-card-lead">{{ g.lead }}</span>
+    </span>
+  </a>
+  {% endif %}{% endfor %}
+</div>

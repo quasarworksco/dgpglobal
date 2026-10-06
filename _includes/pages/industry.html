@@ -58,6 +58,19 @@
 
 {% include audit-cta.html %}
 
+{% if d.guide %}{% assign gurl = site.data.routes[d.guide][page.lang] %}{% assign g = site.pages | where: "url", gurl | first %}{% if g %}
+<div class="section" style="padding-top:0;padding-bottom:0">
+  <a class="guide-card guide-card-inline reveal" href="{{ g.url }}">
+    <img src="/assets/og/{{ g.ref }}-{{ g.lang }}.jpg" alt="" width="1200" height="630" loading="lazy" decoding="async">
+    <span class="guide-card-body">
+      <span class="guide-card-cat">{% if page.lang == 'en' %}Recommended guide{% else %}Guía recomendada{% endif %}</span>
+      <span class="guide-card-title">{{ g.heading }}</span>
+      <span class="guide-card-lead">{{ g.lead }}</span>
+    </span>
+  </a>
+</div>
+{% endif %}{% endif %}
+
 {% include faq.html %}
 
 <!-- OTRAS INDUSTRIAS -->

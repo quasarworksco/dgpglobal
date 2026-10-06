@@ -38,6 +38,7 @@
         {% if page.lang == 'en' %}<div class="footer-col-title" data-en>COMPANY</div>{% endif %}
         <div class="footer-links">
           <a href="{{ site.data.routes.web[page.lang] }}#proceso" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Cómo Trabajamos</span>{% endif %}{% if page.lang == 'en' %}<span data-en>How We Work</span>{% endif %}</a>
+          <a href="{{ site.data.routes.guides[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Guías y consejos</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Guides & tips</span>{% endif %}</a>
           <a href="{{ site.data.routes.partners[page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Programa de Aliados</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Partner Program</span>{% endif %}</a>
           <a href="{{ site.data.routes.home[page.lang] }}#resenas" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Reseñas</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Reviews</span>{% endif %}</a>
           <a href="javascript:openContactModal()" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{% if page.lang == 'es' %}<span data-es>Contacto</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Contact</span>{% endif %}</a>

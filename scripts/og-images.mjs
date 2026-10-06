@@ -53,6 +53,15 @@ const PAGES = {
   ind_training:     { shot: 'valpa-truck',
                es: ['Diseño web por industria', 'PÁGINAS WEB PARA', 'ESCUELAS Y CURSOS', 'Programas, precios e inscripción en línea.'],
                en: ['Web design by industry', 'WEBSITES FOR', 'SCHOOLS & TRAINING', 'Programs, pricing and online enrollment.'] },
+  guides:           { shot: 'pina-water-system',
+               es: ['Blog', 'GUÍAS PARA HACER', 'CRECER TU NEGOCIO', 'Páginas web, Google y marketing digital sin tecnicismos.'],
+               en: ['Blog', 'GUIDES TO GROW', 'YOUR BUSINESS', 'Websites, Google and digital marketing without the jargon.'] },
+  guide_cleaning_site: { shot: 'cleaning-group',
+               es: ['Guía · Limpieza', 'QUÉ DEBE TENER LA WEB', 'DE TU COMPAÑÍA DE LIMPIEZA', 'Checklist 2026: 10 puntos que revisa un cliente antes de cotizar.'],
+               en: ['Guide · Cleaning', 'WHAT YOUR CLEANING', 'WEBSITE NEEDS', 'The 2026 checklist: 10 things customers check before asking for a quote.'] },
+  guide_new_llc:    { shot: 'moya-company',
+               es: ['Guía · Negocios nuevos', 'YA ABRÍ MI LLC:', '7 PASOS PARA VENDER', 'Cómo conseguir tus primeros clientes en Florida.'],
+               en: ['Guide · New businesses', 'JUST FORMED AN LLC?', '7 STEPS TO SELL', 'How to land your first customers in Florida.'] },
 };
 
 const fonts = {

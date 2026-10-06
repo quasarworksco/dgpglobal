@@ -1,0 +1,46 @@
+---
+layout: default
+---
+{% assign L = page.lang %}
+<article class="article">
+  <header class="article-head">
+    <div class="glow"></div>
+    <div class="article-head-inner">
+      <div class="crumbs" role="navigation" aria-label="Breadcrumb">
+        <a href="{{ site.data.routes.home[L] }}">{% if L == 'en' %}Home{% else %}Inicio{% endif %}</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="{{ site.data.routes.guides[L] }}">{% if L == 'en' %}Guides{% else %}Guías{% endif %}</a>
+      </div>
+      <div class="eyebrow">{{ page.category }}</div>
+      <h1 class="article-title">{{ page.heading | default: page.title }}</h1>
+      <p class="article-lead">{{ page.lead }}</p>
+      <div class="article-meta">
+        <span><i class="fa-solid fa-calendar-check"></i> {{ page.date | date: "%d/%m/%Y" }}</span>
+        <span><i class="fa-solid fa-clock"></i> {{ content | number_of_words | divided_by: 200 | plus: 1 }} min</span>
+        <span><i class="fa-solid fa-user-tie"></i> DGP Global Group</span>
+      </div>
+    </div>
+  </header>
+  <div class="article-body">
+    {{ content }}
+    <aside class="article-cta">
+      <div class="article-cta-title">{% if L == 'en' %}WANT US TO REVIEW YOUR WEBSITE?{% else %}¿QUIERES QUE REVISEMOS TU PÁGINA?{% endif %}</div>
+      <p>{% if L == 'en' %}Get a free audit with concrete improvements in 24 hours, or a quote for a new site.{% else %}Recibe una auditoría gratis con mejoras concretas en 24 horas, o cotiza tu página nueva.{% endif %}</p>
+      <div class="article-cta-btns">
+        <a class="btn-main" href="{{ site.data.routes.audit[L] }}">{% if L == 'en' %}FREE AUDIT{% else %}AUDITORÍA GRATIS{% endif %}<span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
+        <button onclick="openQuote()" class="quote-trigger"><i class="fa-solid fa-calculator"></i> {% if L == 'en' %}QUICK QUOTE{% else %}COTIZADOR RÁPIDO{% endif %}</button>
+      </div>
+    </aside>
+  </div>
+</article>
+
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if L == 'en' %}Keep reading{% else %}Sigue leyendo{% endif %}</div>
+    <h2 class="sec-title">{% if L == 'en' %}MORE <span class="accent">GUIDES</span>{% else %}MÁS <span class="accent">GUÍAS</span>{% endif %}</h2>
+  </div>
+  {% include guide-list.html exclude=page.ref %}
+</div>
+
+{% include contact-section.html %}
+{% include share-bar.html %}

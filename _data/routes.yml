@@ -16,3 +16,7 @@ ind_home: {es: "/diseno-web/servicios-del-hogar/", en: "/en/web-design/home-serv
 ind_retail: {es: "/diseno-web/tiendas-online/", en: "/en/web-design/online-stores/", industry: true}
 ind_professional: {es: "/diseno-web/servicios-profesionales/", en: "/en/web-design/professional-services/", industry: true}
 ind_training: {es: "/diseno-web/escuelas-y-cursos/", en: "/en/web-design/schools-and-training/", industry: true}
+# Guides (blog)
+guides: {es: "/guias/", en: "/en/guides/"}
+guide_cleaning_site: {es: "/guias/pagina-web-compania-de-limpieza/", en: "/en/guides/cleaning-company-website-checklist/", guide: true}
+guide_new_llc: {es: "/guias/abri-mi-llc-como-conseguir-clientes/", en: "/en/guides/new-llc-how-to-get-customers/", guide: true}

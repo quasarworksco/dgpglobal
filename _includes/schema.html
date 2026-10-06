@@ -121,7 +121,34 @@
 }
 </script>
 {% endif %}
-{% if page.ref != 'home' %}
+{% if page.layout == 'article' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.heading | default: page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "inLanguage": "{{ page.lang }}",
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified | default: page.date | date_to_xmlschema }}",
+  "mainEntityOfPage": "{{ site.url }}{{ page.url }}",
+  "image": "{{ site.url }}/assets/og/{{ page.ref }}-{{ page.lang }}.jpg",
+  "author": {"@type": "Organization", "name": "DGP Global Group", "url": "https://dgpglobalgroup.com"},
+  "publisher": {"@type": "Organization", "name": "DGP Global Group", "logo": {"@type": "ImageObject", "url": "https://dgpglobalgroup.com/assets/img/logo-512.png"}}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "{% if L == 'en' %}Home{% else %}Inicio{% endif %}", "item": "{{ site.url }}{{ site.data.routes.home[L] }}"},
+    {"@type": "ListItem", "position": 2, "name": "{% if L == 'en' %}Guides{% else %}Guías{% endif %}", "item": "{{ site.url }}{{ site.data.routes.guides[L] }}"},
+    {"@type": "ListItem", "position": 3, "name": {{ page.heading | default: page.title | jsonify }}, "item": "{{ site.url }}{{ page.url }}"}
+  ]
+}
+</script>
+{% elsif page.ref != 'home' %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
