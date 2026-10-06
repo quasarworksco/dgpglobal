@@ -20,7 +20,7 @@
       {% if page.lang == 'es' %}<h2 class="card-heading" data-es>FORMULARIO DE PEDIDO</h2>{% endif %}{% if page.lang == 'en' %}<h2 class="card-heading" data-en>ORDER FORM</h2>{% endif %}
       {% if page.lang == 'es' %}<p class="card-sub" data-es>Un formulario por cada cliente.</p>{% endif %}
       {% if page.lang == 'en' %}<p class="card-sub" data-en>One form per client.</p>{% endif %}
-      <form action="https://formspree.io/f/xpqnajzo" method="POST" id="orderForm" class="lead-form" data-tg-title="📦 <b>Nuevo pedido de aliado</b>" data-required="partner,partner_whatsapp,service,client_business" novalidate>
+      <form action="https://formspree.io/f/xpqnajzo" method="POST" id="orderForm" class="lead-form" data-dgp-ignorar data-tg-title="📦 <b>Nuevo pedido de aliado</b>" data-required="partner,partner_whatsapp,service,client_business" novalidate>
         <input type="hidden" name="_subject" value="Nuevo pedido de aliado — dgpglobalgroup.com">
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
         {% if page.lang == 'es' %}<p class="form-group-lbl" data-es>Tus datos</p>{% endif %}{% if page.lang == 'en' %}<p class="form-group-lbl" data-en>Your details</p>{% endif %}
