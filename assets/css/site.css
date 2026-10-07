@@ -1213,3 +1213,16 @@ nav{padding:18px 52px}
 @media(max-width:600px){nav{padding:14px 20px}.logo{font-size:17px;letter-spacing:3px}}
 @media(max-width:360px){.logo{font-size:15px;letter-spacing:2px}}
 @media(max-width:1000px){.hero2::before{mask-image:none;-webkit-mask-image:none;opacity:.5}}
+/* Hero v2 on mobile: centered buttons stacked, tidy 2x2 stats */
+@media(max-width:600px){
+  .hero2-text{text-align:center}
+  .hero2-pill{margin-left:auto;margin-right:auto}
+  .hero2-sub{margin-left:auto;margin-right:auto}
+  .hero2-ctas{flex-direction:column;align-items:center;gap:12px}
+  .hero2-ctas .btn-main,.hero2-ctas .quote-trigger{width:100%;max-width:320px;justify-content:center}
+  .hero2-ctas .quote-trigger{padding:14px 20px}
+  .hero2-link{padding:6px}
+  .hero2-trust{display:grid;grid-template-columns:1fr 1fr;gap:16px 12px;justify-items:center;margin-top:28px}
+  .hero2-trust li{flex-direction:column;align-items:center;gap:2px}
+  .hero2-trust b{font-size:28px;line-height:1}
+}
