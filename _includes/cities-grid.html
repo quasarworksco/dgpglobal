@@ -1,0 +1,10 @@
+{% comment %}Links to every city page; pass exclude=ref to leave the current one out{% endcomment %}
+<div class="ind-grid">
+  {% for pair in site.data.routes %}{% if pair[1].city and pair[0] != include.exclude %}{% assign key = pair[0] %}{% assign c = site.data.content[key] %}{% assign lang = page.lang %}{% assign t = c[lang] %}
+  <a class="ind-card reveal" href="{{ pair[1][page.lang] }}">
+    <span class="ind-card-icon"><i class="fa-solid fa-location-dot"></i></span>
+    <span class="ind-card-name">{% if key == 'city_usa' %}{{ t.name }}{% else %}{% if page.lang == 'en' %}Web design in {% else %}Diseño web en {% endif %}{{ t.name }}{% endif %}</span>
+    <i class="fa-solid fa-arrow-right ind-card-arrow"></i>
+  </a>
+  {% endif %}{% endfor %}
+</div>

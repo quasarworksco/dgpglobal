@@ -1,0 +1,75 @@
+crumb_es: Diseño web en todo USA
+crumb_en: Web design nationwide
+service:
+  name_es: Diseño web en Todo Estados Unidos
+  name_en: Web design in Nationwide (USA)
+  type: Web design
+hero:
+  bg_word: USA
+  eyebrow_es: Diseño web · Todo Estados Unidos
+  eyebrow_en: Web design · Nationwide (USA)
+  title_es: DISEÑO WEB PARA<span class="accent">TODO USA</span>
+  title_en: WEB DESIGN<span class="accent">NATIONWIDE</span>
+  sub_es: 'Estamos en Florida, pero trabajamos con negocios de todo el país. Todo el proceso es en línea: nos escribes, te enviamos la propuesta y entregamos tu página sin que importe en qué estado estés.'
+  sub_en: 'We are based in Florida but work with businesses nationwide. The whole process is online: you reach out, we send the proposal and deliver your website no matter which state you are in.'
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Trabajan con negocios fuera de Florida?
+  a_es: 'Sí. Trabajamos con negocios de cualquier estado; por ejemplo, ya hicimos sitios para empresas en Georgia y Tennessee. Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia, sin que tengas que desplazarte.'
+  q_en: Do you work with businesses outside Florida?
+  a_en: 'Yes. We work with businesses in any state; for example, we have built sites for companies in Georgia and Tennessee. We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely, so you never have to drive anywhere.'
+- q_es: ¿Cómo es el proceso a distancia?
+  a_es: Nos escribes por WhatsApp o el formulario, te enviamos una propuesta con precio y tiempo, pagas el 50% para empezar y te entregamos la página en el plazo acordado.
+  q_en: How does the remote process work?
+  a_en: You reach out on WhatsApp or the form, we send a proposal with price and timeline, you pay 50% to start and we deliver the site on the agreed date.
+- q_es: ¿Atienden negocios latinos en otros estados?
+  a_es: Sí. Somos una agencia bilingüe y muchos de nuestros clientes son negocios latinos que también quieren llegar a clientes americanos.
+  q_en: Do you serve Latino businesses in other states?
+  a_en: Yes. We are a bilingual agency and many of our clients are Latino-owned businesses that also want to reach American customers.
+projects:
+- cleaning-group
+- appliance-solutions-901
+- valpa-truck
+areas:
+- Texas
+- Georgia
+- Tennessee
+- New York
+- New Jersey
+- California
+- Illinois
+- North Carolina
+city: true
+es:
+  name: Todo Estados Unidos
+  points:
+  - icon: fa-solid fa-earth-americas
+    title: SIN IMPORTAR EL ESTADO
+    desc: Ya trabajamos con negocios en Florida, Georgia y Tennessee. Tu ubicación no es un problema.
+  - icon: fa-solid fa-language
+    title: BILINGÜE PARA TODO USA
+    desc: Si tu negocio atiende a la comunidad latina en cualquier ciudad, te hacemos la página en español, inglés o ambos.
+  - icon: fa-solid fa-video
+    title: TODO EN LÍNEA
+    desc: Videollamada o WhatsApp para la reunión, propuesta por escrito y entrega a distancia. Rápido y sin complicaciones.
+en:
+  name: Nationwide (USA)
+  points:
+  - icon: fa-solid fa-earth-americas
+    title: ANY STATE
+    desc: We already work with businesses in Florida, Georgia and Tennessee. Your location is not a problem.
+  - icon: fa-solid fa-language
+    title: BILINGUAL NATIONWIDE
+    desc: If your business serves the Latino community anywhere, we build your site in Spanish, English or both.
+  - icon: fa-solid fa-video
+    title: FULLY ONLINE
+    desc: Video call or WhatsApp to meet, a written proposal and remote delivery. Fast and hassle-free.

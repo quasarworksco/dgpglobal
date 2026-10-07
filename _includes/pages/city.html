@@ -1,0 +1,92 @@
+{% assign d = site.data.content[page.ref] %}{% assign lang = page.lang %}{% assign t = d[lang] %}
+{% include page-hero.html %}
+
+<!-- POR QUÉ AQUÍ -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'en' %}Why it matters here{% else %}Lo que importa aquí{% endif %}</div>
+    <h2 class="sec-title">{% if page.ref == 'city_usa' %}{% if page.lang == 'en' %}A WEBSITE THAT WORKS <span class="accent">IN ANY STATE</span>{% else %}UNA PÁGINA QUE FUNCIONA <span class="accent">EN CUALQUIER ESTADO</span>{% endif %}{% else %}{% if page.lang == 'en' %}WHAT A WEBSITE IN <span class="accent">{{ t.name | upcase }}</span> NEEDS{% else %}LO QUE NECESITA UNA WEB EN <span class="accent">{{ t.name | upcase }}</span>{% endif %}{% endif %}</h2>
+  </div>
+  <div class="feat-grid">
+    {% for n in t.points %}
+    <div class="feat-card reveal" style="transition-delay:{{ forloop.index0 | times: 0.06 }}s">
+      <div class="feat-card-icon"><i class="{{ n.icon }}"></i></div>
+      <h3 class="feat-card-title">{{ n.title }}</h3>
+      <p class="feat-card-desc">{{ n.desc }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- ZONAS -->
+<div class="section" style="padding-top:0">
+  <div class="city-areas reveal">
+    <div class="city-areas-title"><i class="fa-solid fa-map-location-dot"></i> {% if page.lang == 'en' %}Areas we serve{% else %}Zonas que atendemos{% endif %}</div>
+    <div class="gsa-pills">{% for a in d.areas %}<span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> {{ a }}</span>{% endfor %}</div>
+    <p class="city-areas-note">{% if page.lang == 'en' %}100% online service: we meet by video call or WhatsApp and deliver remotely.{% else %}Servicio 100% en línea: nos reunimos por videollamada o WhatsApp y entregamos a distancia.{% endif %}</p>
+  </div>
+</div>
+
+<!-- PLANES -->
+<div class="section" style="padding-top:0">
+  <div class="ind-split">
+    <div class="reveal">
+      <div class="sec-eyebrow">{% if page.lang == 'en' %}Plans{% else %}Planes{% endif %}</div>
+      <h2 class="sec-title">{% if page.lang == 'en' %}CHOOSE YOUR <span class="accent">WEBSITE</span>{% else %}ELIGE TU <span class="accent">PÁGINA WEB</span>{% endif %}</h2>
+      <ul class="feat-list ind-includes">
+        <li><i class="fa-solid fa-check ck"></i><span>{% if page.lang == 'en' %}<strong>Basic:</strong> landing page + QR code, delivered in 24–48h{% else %}<strong>Básico:</strong> landing page + código QR, entrega en 24–48h{% endif %}</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span>{% if page.lang == 'en' %}<strong>Standard:</strong> up to 5 pages, WhatsApp, contact form, 6 months of hosting{% else %}<strong>Estándar:</strong> hasta 5 páginas, WhatsApp, formulario y 6 meses de hosting{% endif %}</span></li>
+        <li><i class="fa-solid fa-check ck"></i><span>{% if page.lang == 'en' %}<strong>Premium:</strong> catalog or bookings, SEO + Google Analytics, 12 months of hosting{% else %}<strong>Premium:</strong> catálogo o reservas, SEO + Google Analytics y 12 meses de hosting{% endif %}</span></li>
+        <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'en' %}One-time payment, Spanish and/or English{% else %}Pago único, en español y/o inglés{% endif %}</li>
+      </ul>
+    </div>
+    <div class="card form-card ind-plan reveal" style="transition-delay:.1s">
+      <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
+      <h3 class="card-heading">{% if page.lang == 'en' %}GET YOUR PRICE NOW{% else %}CONOCE TU PRECIO YA{% endif %}</h3>
+      <p class="card-sub">{% if page.lang == 'en' %}Use the quick quote tool for an instant estimate, or write to us and we send a custom proposal within 24 hours.{% else %}Usa el cotizador rápido para un estimado al instante, o escríbenos y te enviamos una propuesta personalizada en menos de 24 horas.{% endif %}</p>
+      <div class="ind-plan-ctas">
+        <button onclick="openQuote()" class="btn-main" style="border:none;cursor:pointer">{% if page.lang == 'en' %}QUICK QUOTE{% else %}COTIZADOR RÁPIDO{% endif %}<span class="arr"><i class="fa-solid fa-arrow-right"></i></span></button>
+        <a class="quote-trigger" style="text-decoration:none" href="{{ site.data.routes.web[page.lang] }}#planes">{% if page.lang == 'en' %}SEE THE PLANS{% else %}VER LOS PLANES{% endif %}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROYECTOS -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'en' %}Real work{% else %}Trabajo real{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'en' %}SITES WE <span class="accent">HAVE BUILT</span>{% else %}SITIOS QUE <span class="accent">HEMOS HECHO</span>{% endif %}</h2>
+  </div>
+  <div class="port-grid">
+    {% for slug in d.projects %}{% assign p = site.data.portfolio | where: "slug", slug | first %}{% if p %}{% include port-tile.html p=p i=forloop.index0 %}{% endif %}{% endfor %}
+  </div>
+</div>
+
+<!-- POR INDUSTRIA -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'en' %}By industry{% else %}Por industria{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'en' %}WEBSITES FOR <span class="accent">YOUR INDUSTRY</span>{% else %}PÁGINAS PARA <span class="accent">TU INDUSTRIA</span>{% endif %}</h2>
+  </div>
+  {% include industries-grid.html %}
+</div>
+
+{% include process.html %}
+
+{% include audit-cta.html %}
+
+{% include faq.html %}
+
+<!-- OTRAS ZONAS -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'en' %}Other areas{% else %}Otras zonas{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'en' %}WE ALSO <span class="accent">WORK IN</span>{% else %}TAMBIÉN <span class="accent">TRABAJAMOS EN</span>{% endif %}</h2>
+  </div>
+  {% include cities-grid.html exclude=page.ref %}
+</div>
+
+{% include contact-section.html %}
+
+{% include share-bar.html %}

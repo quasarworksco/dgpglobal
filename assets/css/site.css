@@ -1142,3 +1142,10 @@ nav{animation-delay:0s!important;animation-duration:.4s!important}
 .exit-title span{color:#8fb0ff}
 .exit-spots{color:#dbe5ff;background:rgba(77,120,255,.16);border-color:rgba(143,176,255,.4)}
 .exit-spots i{color:#8fb0ff}
+.city-areas{border:1px solid var(--border);background:#fff;padding:26px 28px}
+.city-areas-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:1px;color:var(--black);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.city-areas-title i{color:var(--blue);font-size:18px}
+.city-areas-note{font-size:13px;color:var(--soft);margin-top:14px}
+.footer-top{grid-template-columns:1.3fr repeat(4,1fr)}
+@media(max-width:1000px){.footer-top{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.footer-top{grid-template-columns:1fr}}

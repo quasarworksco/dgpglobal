@@ -1,0 +1,73 @@
+crumb_es: Diseño web en Fort Myers
+crumb_en: Web design in Fort Myers
+service:
+  name_es: Diseño web en Fort Myers
+  name_en: Web design in Fort Myers
+  type: Web design
+hero:
+  bg_word: SWFL
+  eyebrow_es: Diseño web · Fort Myers
+  eyebrow_en: Web design · Fort Myers
+  title_es: DISEÑO WEB EN<span class="accent">FORT MYERS</span>
+  title_en: WEB DESIGN IN<span class="accent">FORT MYERS</span>
+  sub_es: El suroeste de Florida es nuestra casa. Hacemos páginas web para negocios de Fort Myers, Cape Coral, Naples y alrededores, sobre todo de construcción, servicios del hogar y negocios locales que crecen con la región.
+  sub_en: Southwest Florida is home for us. We build websites for businesses in Fort Myers, Cape Coral, Naples and nearby, especially construction, home services and local businesses growing with the region.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Atienden negocios de Naples y Cape Coral?
+  a_es: 'Sí. Trabajamos con negocios de todo el suroeste de Florida: Fort Myers, Cape Coral, Naples, Bonita Springs, Estero y Lehigh Acres.'
+  q_en: Do you work with businesses in Naples and Cape Coral?
+  a_en: 'Yes. We work with businesses across Southwest Florida: Fort Myers, Cape Coral, Naples, Bonita Springs, Estero and Lehigh Acres.'
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia, sin que tengas que desplazarte. Si lo prefieres, coordinamos una llamada para ver tu proyecto con calma.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely, so you never have to drive anywhere. If you prefer, we set up a call to go over your project in detail.'
+- q_es: ¿Hacen páginas para contratistas y servicios del hogar?
+  a_es: 'Sí, es uno de nuestros fuertes: galería de obras, licencias, zonas de servicio y formulario de estimado.'
+  q_en: Do you build sites for contractors and home services?
+  a_en: 'Yes, it is one of our strengths: project gallery, licenses, service areas and an estimate form.'
+projects:
+- caibo-construction
+- pina-water-system
+areas:
+- Cape Coral
+- Naples
+- Bonita Springs
+- Estero
+- Lehigh Acres
+- Lee County
+- Collier County
+city: true
+es:
+  name: Fort Myers
+  points:
+  - icon: fa-solid fa-helmet-safety
+    title: CONSTRUCCIÓN Y HOGAR
+    desc: La región no para de construir y remodelar. Hacemos sitios que muestran obras terminadas, licencias y estimados en línea.
+  - icon: fa-solid fa-sun
+    title: TEMPORADA ALTA
+    desc: En temporada llegan más clientes y residentes de invierno. Tu página tiene que estar lista antes de que te busquen.
+  - icon: fa-solid fa-location-dot
+    title: ZONAS DE SERVICIO
+    desc: Lee y Collier son amplios. Mostramos exactamente qué ciudades cubres para que Google te muestre a quien busca cerca.
+en:
+  name: Fort Myers
+  points:
+  - icon: fa-solid fa-helmet-safety
+    title: CONSTRUCTION & HOME
+    desc: The region keeps building and remodeling. We build sites that show finished projects, licenses and online estimates.
+  - icon: fa-solid fa-sun
+    title: PEAK SEASON
+    desc: Peak season brings more customers and winter residents. Your site needs to be ready before they start searching.
+  - icon: fa-solid fa-location-dot
+    title: SERVICE AREAS
+    desc: Lee and Collier counties are big. We show exactly which cities you cover so Google shows you to nearby searchers.

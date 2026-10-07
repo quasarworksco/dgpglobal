@@ -1,0 +1,72 @@
+crumb_es: Diseño web en Orlando
+crumb_en: Web design in Orlando
+service:
+  name_es: Diseño web en Orlando
+  name_en: Web design in Orlando
+  type: Web design
+hero:
+  bg_word: ORLANDO
+  eyebrow_es: Diseño web · Orlando
+  eyebrow_en: Web design · Orlando
+  title_es: DISEÑO WEB EN<span class="accent">ORLANDO</span>
+  title_en: WEB DESIGN IN<span class="accent">ORLANDO</span>
+  sub_es: Orlando y Kissimmee tienen una comunidad hispana muy grande y un mercado de servicios y turismo que no para. Te hacemos una página bilingüe para captar a residentes y visitantes.
+  sub_en: Orlando and Kissimmee have a large Hispanic community and a nonstop services and tourism market. We build a bilingual website to capture both residents and visitors.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Trabajan con negocios de Kissimmee y Central Florida?
+  a_es: 'Sí: Orlando, Kissimmee, Winter Park, Sanford, Lake Nona, Clermont y alrededores. Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia, sin que tengas que desplazarte.'
+  q_en: Do you work with businesses in Kissimmee and Central Florida?
+  a_en: 'Yes: Orlando, Kissimmee, Winter Park, Sanford, Lake Nona, Clermont and nearby. We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely, so you never have to drive anywhere.'
+- q_es: ¿Pueden agregar reservas en línea?
+  a_es: Sí. El plan Premium incluye catálogo o sistema de reservas, ideal para servicios con cita.
+  q_en: Can you add online booking?
+  a_en: Yes. The Premium plan includes a catalog or booking system, ideal for appointment-based services.
+- q_es: ¿La página puede estar en español y en inglés?
+  a_es: Sí. En Orlando y Kissimmee lo recomendamos para llegar a toda la comunidad.
+  q_en: Can the site be in Spanish and English?
+  a_en: Yes. In Orlando and Kissimmee we recommend it to reach the whole community.
+projects:
+- pina-water-system
+- caibo-construction
+areas:
+- Kissimmee
+- Winter Park
+- Sanford
+- Lake Nona
+- Clermont
+- Apopka
+city: true
+es:
+  name: Orlando
+  points:
+  - icon: fa-solid fa-plane-arrival
+    title: RESIDENTES Y VISITANTES
+    desc: 'Desde servicios para casas hasta negocios que atienden turistas: tu página tiene que hablarle a cada uno.'
+  - icon: fa-solid fa-language
+    title: COMUNIDAD HISPANA
+    desc: Kissimmee y Orlando tienen muchos clientes que prefieren español. Una versión en su idioma genera más confianza.
+  - icon: fa-solid fa-calendar-check
+    title: RESERVAS Y CITAS
+    desc: Para servicios con cita o reserva, el plan Premium permite sistema de reservas en línea.
+en:
+  name: Orlando
+  points:
+  - icon: fa-solid fa-plane-arrival
+    title: RESIDENTS & VISITORS
+    desc: 'From home services to tourist-facing businesses: your site needs to speak to each audience.'
+  - icon: fa-solid fa-language
+    title: HISPANIC COMMUNITY
+    desc: Kissimmee and Orlando have many customers who prefer Spanish. A version in their language builds more trust.
+  - icon: fa-solid fa-calendar-check
+    title: BOOKINGS & APPOINTMENTS
+    desc: For appointment-based services, the Premium plan supports an online booking system.

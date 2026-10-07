@@ -109,7 +109,7 @@
   "description": {{ page.description | jsonify }},
   "url": "{{ site.url }}{{ page.url }}",
   "inLanguage": "{{ L }}",
-  "areaServed": [{"@type": "State", "name": "Florida"}, {"@type": "Country", "name": "United States"}],
+  "areaServed": [{% if d.city and page.ref != 'city_usa' and page.ref != 'city_florida' %}{"@type": "City", "name": {{ d.en.name | jsonify }}},{% for ar in d.areas %}{"@type": "Place", "name": {{ ar | jsonify }}},{% endfor %}{% endif %}{"@type": "State", "name": "Florida"}, {"@type": "Country", "name": "United States"}],
   "availableLanguage": ["es", "en"],
   "provider": {
     "@type": "ProfessionalService",

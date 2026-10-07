@@ -1,0 +1,72 @@
+crumb_es: Diseño web en Tampa
+crumb_en: Web design in Tampa
+service:
+  name_es: Diseño web en Tampa
+  name_en: Web design in Tampa
+  type: Web design
+hero:
+  bg_word: TAMPA
+  eyebrow_es: Diseño web · Tampa
+  eyebrow_en: Web design · Tampa
+  title_es: DISEÑO WEB EN<span class="accent">TAMPA</span>
+  title_en: WEB DESIGN IN<span class="accent">TAMPA</span>
+  sub_es: Tampa Bay sigue creciendo y cada vez hay más negocios compitiendo en Google. Ya trabajamos con negocios de la zona, como Smelling Clean en Riverview, y sabemos lo que funciona aquí.
+  sub_en: Tampa Bay keeps growing, and more businesses compete on Google every year. We already work with local businesses like Smelling Clean in Riverview, and we know what works here.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Tienen clientes en Tampa Bay?
+  a_es: 'Sí. Por ejemplo, hicimos la página de Smelling Clean, una compañía de limpieza en Riverview. Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia, sin que tengas que desplazarte.'
+  q_en: Do you have clients in Tampa Bay?
+  a_en: 'Yes. For example, we built the website for Smelling Clean, a cleaning company in Riverview. We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely, so you never have to drive anywhere.'
+- q_es: ¿Trabajan con negocios de St. Pete y Clearwater?
+  a_es: 'Sí, con negocios de toda la bahía: Tampa, St. Petersburg, Clearwater, Brandon, Riverview y Wesley Chapel.'
+  q_en: Do you work with businesses in St. Pete and Clearwater?
+  a_en: 'Yes, with businesses across the bay: Tampa, St. Petersburg, Clearwater, Brandon, Riverview and Wesley Chapel.'
+- q_es: ¿Cuánto tarda la página?
+  a_es: Una landing page en 24-48 horas; un sitio de varias páginas en 2-3 días.
+  q_en: How long does the website take?
+  a_en: A landing page in 24-48 hours; a multi-page site in 2-3 days.
+projects:
+- smelling-clean
+- pina-water-system
+areas:
+- St. Petersburg
+- Clearwater
+- Brandon
+- Riverview
+- Wesley Chapel
+- Hillsborough County
+city: true
+es:
+  name: Tampa
+  points:
+  - icon: fa-solid fa-broom
+    title: SERVICIOS QUE CRECEN
+    desc: 'Limpieza, construcción, técnicos y servicios para casas nuevas: los negocios que más buscan los nuevos vecinos.'
+  - icon: fa-solid fa-map-location-dot
+    title: TODA LA BAHÍA
+    desc: Tampa, St. Pete, Clearwater y Brandon son mercados distintos. Mostramos en tu página cada zona que cubres.
+  - icon: fa-solid fa-file-invoice-dollar
+    title: COTIZACIÓN RÁPIDA
+    desc: Formulario y WhatsApp para que te pidan precio sin llamar, que es como prefiere contactar mucha gente hoy.
+en:
+  name: Tampa
+  points:
+  - icon: fa-solid fa-broom
+    title: GROWING SERVICES
+    desc: 'Cleaning, construction, technicians and services for new homes: what new neighbors search for most.'
+  - icon: fa-solid fa-map-location-dot
+    title: THE WHOLE BAY
+    desc: Tampa, St. Pete, Clearwater and Brandon are different markets. Your site shows every area you cover.
+  - icon: fa-solid fa-file-invoice-dollar
+    title: FAST QUOTES
+    desc: A form and WhatsApp so people can ask for a price without calling, which is how many prefer to reach out today.

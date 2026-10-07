@@ -1,0 +1,73 @@
+crumb_es: Diseño web en Miami
+crumb_en: Web design in Miami
+service:
+  name_es: Diseño web en Miami
+  name_en: Web design in Miami
+  type: Web design
+hero:
+  bg_word: MIAMI
+  eyebrow_es: Diseño web · Miami
+  eyebrow_en: Web design · Miami
+  title_es: DISEÑO WEB EN<span class="accent">MIAMI</span>
+  title_en: WEB DESIGN IN<span class="accent">MIAMI</span>
+  sub_es: En Miami se compite en dos idiomas. Te hacemos una página bilingüe que destaca entre cientos de negocios parecidos y convierte visitas en llamadas, cotizaciones y mensajes de WhatsApp.
+  sub_en: In Miami, businesses compete in two languages. We build a bilingual website that stands out among hundreds of similar businesses and turns visits into calls, quotes and WhatsApp messages.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Tienen oficina en Miami?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia, sin que tengas que desplazarte. Atendemos negocios de todo Miami-Dade.'
+  q_en: Do you have an office in Miami?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely, so you never have to drive anywhere. We serve businesses across Miami-Dade.'
+- q_es: ¿La página puede estar en español y en inglés?
+  a_es: Sí, es nuestra especialidad. En Miami recomendamos tener ambas versiones para llegar a todos tus clientes.
+  q_en: Can the site be in Spanish and English?
+  a_en: Yes, that is our specialty. In Miami we recommend both versions to reach all your customers.
+- q_es: ¿Hacen páginas para negocios de Hialeah, Doral o Kendall?
+  a_es: Sí. Trabajamos con negocios de todo el condado y podemos destacar en tu página las zonas exactas donde das servicio.
+  q_en: Do you build sites for businesses in Hialeah, Doral or Kendall?
+  a_en: Yes. We work with businesses across the county and can highlight on your site the exact areas you serve.
+projects:
+- pina-water-system
+- caibo-construction
+areas:
+- Miami-Dade
+- Hialeah
+- Doral
+- Kendall
+- Miami Beach
+- Homestead
+- Coral Gables
+city: true
+es:
+  name: Miami
+  points:
+  - icon: fa-solid fa-language
+    title: ESPAÑOL E INGLÉS DE VERDAD
+    desc: Gran parte de Miami habla español. Una página solo en inglés, o mal traducida, te deja fuera de muchos clientes.
+  - icon: fa-solid fa-ranking-star
+    title: DESTACAR ENTRE MUCHOS
+    desc: En Miami hay mucha competencia en casi cualquier rubro. Un diseño profesional y reseñas visibles marcan la diferencia.
+  - icon: fa-brands fa-whatsapp
+    title: WHATSAPP PRIMERO
+    desc: Muchos clientes en Miami prefieren escribir por WhatsApp antes que llamar. Tu página lo pone a un toque.
+en:
+  name: Miami
+  points:
+  - icon: fa-solid fa-language
+    title: TRULY BILINGUAL
+    desc: A large part of Miami speaks Spanish. An English-only or poorly translated site leaves out many customers.
+  - icon: fa-solid fa-ranking-star
+    title: STAND OUT IN A CROWD
+    desc: Miami is competitive in almost every industry. A professional design and visible reviews make the difference.
+  - icon: fa-brands fa-whatsapp
+    title: WHATSAPP FIRST
+    desc: Many Miami customers prefer to text on WhatsApp rather than call. Your site puts it one tap away.

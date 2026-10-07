@@ -22,3 +22,11 @@ guide_cleaning_site: {es: "/guias/pagina-web-compania-de-limpieza/", en: "/en/gu
 guide_new_llc: {es: "/guias/abri-mi-llc-como-conseguir-clientes/", en: "/en/guides/new-llc-how-to-get-customers/", guide: true}
 guide_website_cost: {es: "/guias/cuanto-cuesta-una-pagina-web/", en: "/en/guides/how-much-does-a-website-cost/", guide: true}
 guide_google_maps: {es: "/guias/como-aparecer-en-google-maps/", en: "/en/guides/how-to-show-up-on-google-maps/", guide: true}
+# City landing pages
+city_florida: {es: "/diseno-web/florida/", en: "/en/web-design/florida/", city: true}
+city_miami: {es: "/diseno-web/miami/", en: "/en/web-design/miami/", city: true}
+city_fortmyers: {es: "/diseno-web/fort-myers/", en: "/en/web-design/fort-myers/", city: true}
+city_ocala: {es: "/diseno-web/ocala/", en: "/en/web-design/ocala/", city: true}
+city_orlando: {es: "/diseno-web/orlando/", en: "/en/web-design/orlando/", city: true}
+city_tampa: {es: "/diseno-web/tampa/", en: "/en/web-design/tampa/", city: true}
+city_usa: {es: "/diseno-web/estados-unidos/", en: "/en/web-design/usa/", city: true}

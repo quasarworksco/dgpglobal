@@ -61,6 +61,7 @@
 .fa-headset::before{content:"\f590"}
 .fa-helmet-safety::before{content:"\f807"}
 .fa-house::before{content:"\f015"}
+.fa-house-chimney::before{content:"\e3af"}
 .fa-id-badge::before{content:"\f2c1"}
 .fa-id-card::before{content:"\f2c2"}
 .fa-images::before{content:"\f302"}
@@ -77,6 +78,7 @@
 .fa-lock::before{content:"\f023"}
 .fa-magnifying-glass::before{content:"\f002"}
 .fa-magnifying-glass-chart::before{content:"\e522"}
+.fa-map-location-dot::before{content:"\f5a0"}
 .fa-mobile-screen::before{content:"\f3cf"}
 .fa-palette::before{content:"\f53f"}
 .fa-paper-plane::before{content:"\f1d8"}
@@ -84,8 +86,10 @@
 .fa-pen-nib::before{content:"\f5ad"}
 .fa-percent::before{content:"\25"}
 .fa-phone::before{content:"\f095"}
+.fa-plane-arrival::before{content:"\f5af"}
 .fa-plug::before{content:"\f1e6"}
 .fa-plus::before{content:"\2b"}
+.fa-ranking-star::before{content:"\e561"}
 .fa-receipt::before{content:"\f543"}
 .fa-robot::before{content:"\f544"}
 .fa-rocket::before{content:"\f135"}
@@ -99,6 +103,7 @@
 .fa-stamp::before{content:"\f5bf"}
 .fa-star::before{content:"\f005"}
 .fa-store::before{content:"\f54e"}
+.fa-sun::before{content:"\f185"}
 .fa-tags::before{content:"\f02c"}
 .fa-tiktok::before{content:"\e07b"}
 .fa-triangle-exclamation::before{content:"\f071"}

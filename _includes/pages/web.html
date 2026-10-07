@@ -112,6 +112,16 @@
   {% include industries-grid.html %}
 </div>
 
+<!-- DÓNDE TRABAJAMOS -->
+<div class="section" id="zonas">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'en' %}Where we work{% else %}Dónde trabajamos{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'en' %}WEB DESIGN IN <span class="accent">YOUR CITY</span>{% else %}DISEÑO WEB EN <span class="accent">TU CIUDAD</span>{% endif %}</h2>
+    <p class="sec-sub">{% if page.lang == 'en' %}Based in Florida and serving businesses across the state and the whole country, 100% online.{% else %}Estamos en Florida y atendemos negocios de todo el estado y del país, 100% en línea.{% endif %}</p>
+  </div>
+  {% include cities-grid.html %}
+</div>
+
 {% include process.html %}
 
 <!-- PORTAFOLIO WEB -->

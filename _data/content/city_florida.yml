@@ -1,0 +1,75 @@
+crumb_es: Diseño web en Florida
+crumb_en: Web design in Florida
+service:
+  name_es: Diseño web en Florida
+  name_en: Web design in Florida
+  type: Web design
+hero:
+  bg_word: FLORIDA
+  eyebrow_es: Diseño web · Florida
+  eyebrow_en: Web design · Florida
+  title_es: DISEÑO WEB EN<span class="accent">FLORIDA</span>
+  title_en: WEB DESIGN IN<span class="accent">FLORIDA</span>
+  sub_es: 'Somos una agencia de Florida que hace páginas web para negocios de todo el estado. Conocemos el mercado local: clientes latinos y americanos, mucha competencia en Google Maps y gente que busca todo desde el celular.'
+  sub_en: 'We are a Florida agency building websites for businesses across the state. We know the local market: Latino and American customers, heavy competition on Google Maps and people who search everything from their phone.'
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿En qué ciudades de Florida trabajan?
+  a_es: 'En todo el estado: Miami, Orlando, Tampa, Fort Myers, Naples, Cape Coral, Ocala, Jacksonville y cualquier otra ciudad. Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia, sin que tengas que desplazarte.'
+  q_en: Which Florida cities do you work in?
+  a_en: 'All over the state: Miami, Orlando, Tampa, Fort Myers, Naples, Cape Coral, Ocala, Jacksonville and any other city. We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely, so you never have to drive anywhere.'
+- q_es: ¿Cuánto tarda una página web?
+  a_es: La landing page se entrega en 24-48 horas, el sitio Estándar en 2-3 días y el Premium en 4-5 días.
+  q_en: How long does a website take?
+  a_en: A landing page is delivered in 24-48 hours, a Standard site in 2-3 days and Premium in 4-5 days.
+- q_es: ¿Me ayudan a aparecer en Google en mi ciudad?
+  a_es: Sí. Estructuramos tu página con tus servicios y tus zonas para Google y te guiamos con tu perfil de Google Business, que es clave para salir en el mapa.
+  q_en: Will you help me show up on Google in my city?
+  a_en: Yes. We structure your site with your services and service areas for Google and guide you on your Google Business Profile, which is key to showing up on the map.
+projects:
+- caibo-construction
+- pina-water-system
+- smelling-clean
+areas:
+- Miami
+- Orlando
+- Tampa
+- Fort Myers
+- Naples
+- Cape Coral
+- Ocala
+- Jacksonville
+city: true
+es:
+  name: Florida
+  points:
+  - icon: fa-solid fa-language
+    title: UN MERCADO BILINGÜE
+    desc: En Florida tus clientes buscan en español y en inglés. Tu página puede atender a los dos con una versión en cada idioma.
+  - icon: fa-solid fa-map-location-dot
+    title: GOOGLE MAPS MANDA
+    desc: Para servicios locales, el mapa de Google decide a quién llaman. Tu página y tu perfil de Google Business tienen que trabajar juntos.
+  - icon: fa-solid fa-mobile-screen
+    title: TODO DESDE EL CELULAR
+    desc: La mayoría de tus clientes te encuentra desde el teléfono. Hacemos sitios rápidos, con llamada y WhatsApp a un toque.
+en:
+  name: Florida
+  points:
+  - icon: fa-solid fa-language
+    title: A BILINGUAL MARKET
+    desc: In Florida your customers search in Spanish and English. Your site can serve both with a version in each language.
+  - icon: fa-solid fa-map-location-dot
+    title: GOOGLE MAPS RULES
+    desc: For local services, the Google map decides who gets the call. Your website and Google Business Profile must work together.
+  - icon: fa-solid fa-mobile-screen
+    title: EVERYTHING ON MOBILE
+    desc: Most of your customers find you on their phone. We build fast sites with one-tap calling and WhatsApp.

@@ -1,0 +1,72 @@
+crumb_es: Diseño web en Ocala
+crumb_en: Web design in Ocala
+service:
+  name_es: Diseño web en Ocala
+  name_en: Web design in Ocala
+  type: Web design
+hero:
+  bg_word: OCALA
+  eyebrow_es: Diseño web · Ocala
+  eyebrow_en: Web design · Ocala
+  title_es: DISEÑO WEB EN<span class="accent">OCALA</span>
+  title_en: WEB DESIGN IN<span class="accent">OCALA</span>
+  sub_es: Ocala y Marion County crecen rápido y llegan nuevos residentes y negocios todos los años. Te hacemos una página que te ayude a ganar esos clientes nuevos antes que tu competencia.
+  sub_en: Ocala and Marion County are growing fast, with new residents and businesses every year. We build a website that helps you win those new customers before your competitors do.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Trabajan con negocios de Ocala y The Villages?
+  a_es: 'Sí. Trabajamos con negocios de Ocala, The Villages, Belleview, Dunnellon y todo Marion County. Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia, sin que tengas que desplazarte.'
+  q_en: Do you work with businesses in Ocala and The Villages?
+  a_en: 'Yes. We work with businesses in Ocala, The Villages, Belleview, Dunnellon and all of Marion County. We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely, so you never have to drive anywhere.'
+- q_es: ¿Mi página puede estar solo en inglés?
+  a_es: 'Claro. Hacemos la página en el idioma de tus clientes: solo inglés, solo español o ambos.'
+  q_en: Can my site be English only?
+  a_en: 'Of course. We build the site in your customers'' language: English only, Spanish only or both.'
+- q_es: ¿Cuánto tarda?
+  a_es: Una landing page en 24-48 horas y un sitio de varias páginas en 2-3 días.
+  q_en: How long does it take?
+  a_en: A landing page in 24-48 hours and a multi-page site in 2-3 days.
+projects:
+- caibo-construction
+- pina-water-system
+areas:
+- Marion County
+- The Villages
+- Belleview
+- Dunnellon
+- Silver Springs
+- Summerfield
+city: true
+es:
+  name: Ocala
+  points:
+  - icon: fa-solid fa-house-chimney
+    title: NUEVOS RESIDENTES
+    desc: Quien acaba de mudarse no conoce a nadie y busca todo en Google. Tu página tiene que aparecer y dar confianza.
+  - icon: fa-solid fa-screwdriver-wrench
+    title: SERVICIOS LOCALES
+    desc: Contratistas, técnicos, limpieza y servicios para casas y comunidades como The Villages.
+  - icon: fa-solid fa-star
+    title: RESEÑAS Y CERCANÍA
+    desc: En comunidades más pequeñas pesa mucho la reputación. Mostramos tus reseñas y tu trato cercano.
+en:
+  name: Ocala
+  points:
+  - icon: fa-solid fa-house-chimney
+    title: NEW RESIDENTS
+    desc: New residents don't know anyone yet and search everything on Google. Your site has to show up and earn trust.
+  - icon: fa-solid fa-screwdriver-wrench
+    title: LOCAL SERVICES
+    desc: Contractors, technicians, cleaning and services for homes and communities like The Villages.
+  - icon: fa-solid fa-star
+    title: REVIEWS & CLOSENESS
+    desc: In smaller communities reputation matters a lot. We showcase your reviews and personal service.
