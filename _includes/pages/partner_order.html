@@ -31,7 +31,7 @@
         <div class="field"><input type="tel" name="partner_whatsapp" data-label="WhatsApp aliado" data-ph-es="Tu WhatsApp" data-ph-en="Your WhatsApp" placeholder="Tu WhatsApp" required></div>
         {% if page.lang == 'es' %}<p class="form-group-lbl" data-es>El proyecto</p>{% endif %}{% if page.lang == 'en' %}<p class="form-group-lbl" data-en>The project</p>{% endif %}
         <div class="field">
-          <select name="service" data-label="Servicio" required>
+          <select aria-label="{% if page.lang == 'en' %}Service{% else %}Servicio{% endif %}" name="service" data-label="Servicio" required>
             {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">¿Qué servicio necesita tu cliente?</option>{% endif %}
             {% if page.lang == 'en' %}<option value="" disabled class="opt-en">Which service does your client need?</option>{% endif %}
             {% if page.lang == 'es' %}<option value="Web Plan Básico" class="opt-es">Página web — Plan Básico</option>{% endif %}{% if page.lang == 'en' %}<option value="Web Plan Básico" class="opt-en">Website — Basic Plan</option>{% endif %}
@@ -49,7 +49,7 @@
         <div class="field-row">
           <div class="field"><input type="text" name="client_city" data-label="Ciudad" data-ph-es="Ciudad y estado" data-ph-en="City and state" placeholder="Ciudad y estado"></div>
           <div class="field">
-            <select name="site_language" data-label="Idioma del sitio">
+            <select aria-label="{% if page.lang == 'en' %}Site language{% else %}Idioma del sitio{% endif %}" name="site_language" data-label="Idioma del sitio">
               {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">Idioma del sitio</option>{% endif %}
               {% if page.lang == 'en' %}<option value="" disabled class="opt-en">Site language</option>{% endif %}
               {% if page.lang == 'es' %}<option value="Español" class="opt-es">Español</option>{% endif %}{% if page.lang == 'en' %}<option value="Spanish" class="opt-en">Spanish</option>{% endif %}
@@ -63,7 +63,7 @@
         <div class="field"><input type="url" name="files" data-label="Drive (logo/fotos)" data-ph-es="Enlace de Google Drive con logo y fotos" data-ph-en="Google Drive link with logo and photos" placeholder="Enlace de Google Drive con logo y fotos"></div>
         <div class="field-row">
           <div class="field">
-            <select name="domain" data-label="Dominio">
+            <select aria-label="{% if page.lang == 'en' %}Does the client have a domain?{% else %}¿Tiene dominio?{% endif %}" name="domain" data-label="Dominio">
               {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">¿Tiene dominio?</option>{% endif %}
               {% if page.lang == 'en' %}<option value="" disabled class="opt-en">Does the client have a domain?</option>{% endif %}
               {% if page.lang == 'es' %}<option value="Sí" class="opt-es">Sí, ya tiene</option>{% endif %}{% if page.lang == 'en' %}<option value="Yes" class="opt-en">Yes</option>{% endif %}
@@ -71,7 +71,7 @@
             </select>
           </div>
           <div class="field">
-            <select name="contact_mode" data-label="Quién habla con el cliente">
+            <select aria-label="{% if page.lang == 'en' %}Who talks to the client?{% else %}¿Quién habla con el cliente?{% endif %}" name="contact_mode" data-label="Quién habla con el cliente">
               {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">¿Quién habla con el cliente?</option>{% endif %}
               {% if page.lang == 'en' %}<option value="" disabled class="opt-en">Who talks to the client?</option>{% endif %}
               {% if page.lang == 'es' %}<option value="Solo el aliado" class="opt-es">Yo (el aliado)</option>{% endif %}{% if page.lang == 'en' %}<option value="Solo el aliado" class="opt-en">Me (the partner)</option>{% endif %}

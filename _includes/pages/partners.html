@@ -174,7 +174,7 @@
         <div class="field"><input type="tel" name="whatsapp" data-label="WhatsApp" autocomplete="tel" data-ph-es="WhatsApp (con código de país)" data-ph-en="WhatsApp (with country code)" placeholder="WhatsApp (con código de país)" required></div>
         <div class="field-row">
           <div class="field">
-            <select name="type" data-label="Tipo">
+            <select aria-label="{% if page.lang == 'en' %}What do you do?{% else %}¿A qué te dedicas?{% endif %}" name="type" data-label="Tipo">
               {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">¿A qué te dedicas?</option>{% endif %}
               {% if page.lang == 'en' %}<option value="" disabled class="opt-en">What do you do?</option>{% endif %}
               {% if page.lang == 'es' %}<option value="Gestor de LLC" class="opt-es">Gestor de LLC</option>{% endif %}{% if page.lang == 'en' %}<option value="LLC formation" class="opt-en">LLC formation</option>{% endif %}
@@ -186,7 +186,7 @@
             </select>
           </div>
           <div class="field">
-            <select name="mode" data-label="Modalidad">
+            <select aria-label="{% if page.lang == 'en' %}How do you want to work?{% else %}¿Cómo quieres trabajar?{% endif %}" name="mode" data-label="Modalidad">
               {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">¿Cómo quieres trabajar?</option>{% endif %}
               {% if page.lang == 'en' %}<option value="" disabled class="opt-en">How do you want to work?</option>{% endif %}
               {% if page.lang == 'es' %}<option value="Revender" class="opt-es">Revender</option>{% endif %}{% if page.lang == 'en' %}<option value="Resell" class="opt-en">Resell</option>{% endif %}
@@ -198,7 +198,7 @@
         <div class="field-row">
           <div class="field"><input type="text" name="city" data-label="Ciudad" autocomplete="address-level2" data-ph-es="Ciudad y estado" data-ph-en="City and state" placeholder="Ciudad y estado"></div>
           <div class="field">
-            <select name="volume" data-label="Clientes/mes">
+            <select aria-label="{% if page.lang == 'en' %}New clients per month{% else %}Clientes nuevos al mes{% endif %}" name="volume" data-label="Clientes/mes">
               {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">Clientes nuevos al mes</option>{% endif %}
               {% if page.lang == 'en' %}<option value="" disabled class="opt-en">New clients per month</option>{% endif %}
               <option value="1-5">1–5</option><option value="6-20">6–20</option><option value="20+">20+</option>

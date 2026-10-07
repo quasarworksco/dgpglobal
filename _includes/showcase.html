@@ -33,7 +33,7 @@
   <div class="sc-thumbs" role="tablist" aria-label="{% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}">
     {% for p in site.data.portfolio %}
     <button type="button" class="sc-thumb{% if forloop.first %} active{% endif %}" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-i="{{ forloop.index0 }}" title="{{ p.title }}">
-      <span class="sc-thumb-img" data-title="{{ p.title }}"><img src="/assets/portfolio/{{ p.slug }}/thumb.webp" alt="{{ p.title }}" width="480" height="300" loading="lazy" decoding="async"></span>
+      <span class="sc-thumb-img" data-title="{{ p.title }}"><img src="/assets/portfolio/{{ p.slug }}/thumb.webp" alt="" width="480" height="300" loading="lazy" decoding="async"></span>
       <span class="sc-thumb-name">{{ p.title }}</span>
     </button>
     {% endfor %}

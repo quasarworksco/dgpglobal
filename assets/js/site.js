@@ -311,6 +311,7 @@ function copyShareLink(btn){
   const spots=[2,3,4,5,3,2,5,4][week%8];
   const el=document.getElementById('urgency-num');
   if(el)el.textContent=spots;
+  document.querySelectorAll('.js-spots').forEach(s=>s.textContent=spots);
 })();
 
 /* ── COUNT-UP ANIMATION ── */
@@ -534,7 +535,7 @@ async function altairSend(){
   }
 }
 
-setTimeout(()=>{getRate();loadRevs();},1500);
+setTimeout(loadRevs,1500);
 window.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')sendAltairTelegram(true);});
 
 /* PORTFOLIO CAROUSEL */

@@ -62,6 +62,12 @@ const PAGES = {
   guide_new_llc:    { shot: 'moya-company',
                es: ['Guía · Negocios nuevos', 'YA ABRÍ MI LLC:', '7 PASOS PARA VENDER', 'Cómo conseguir tus primeros clientes en Florida.'],
                en: ['Guide · New businesses', 'JUST FORMED AN LLC?', '7 STEPS TO SELL', 'How to land your first customers in Florida.'] },
+  guide_website_cost: { shot: 'caibo-construction',
+               es: ['Guía · Precios', '¿CUÁNTO CUESTA', 'UNA PÁGINA WEB?', 'Qué define el precio y cómo elegir sin pagar de más.'],
+               en: ['Guide · Pricing', 'HOW MUCH DOES', 'A WEBSITE COST?', 'What drives the price and how to choose without overpaying.'] },
+  guide_google_maps: { shot: 'appliance-solutions-901',
+               es: ['Guía · SEO local', 'CÓMO APARECER', 'EN GOOGLE MAPS', 'Configura tu perfil de Google Business paso a paso.'],
+               en: ['Guide · Local SEO', 'HOW TO SHOW UP', 'ON GOOGLE MAPS', 'Set up your Google Business Profile step by step.'] },
 };
 
 const fonts = {

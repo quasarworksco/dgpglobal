@@ -64,7 +64,7 @@
         <div class="field"><input type="tel" name="whatsapp" autocomplete="tel" data-ph-es="WhatsApp (con código de país)" data-ph-en="WhatsApp (with country code)" placeholder="WhatsApp (con código de país)" required></div>
         <div class="field"><input type="text" name="website" inputmode="url" data-ph-es="Tu página web (ej: minegocio.com)" data-ph-en="Your website (e.g. mybusiness.com)" placeholder="Tu página web (ej: minegocio.com)" required></div>
         <div class="field">
-          <select name="goal">
+          <select aria-label="{% if page.lang == 'en' %}What do you want to improve?{% else %}¿Qué quieres mejorar?{% endif %}" name="goal">
             {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">¿Qué quieres mejorar?</option>{% endif %}
             {% if page.lang == 'en' %}<option value="" disabled class="opt-en">What do you want to improve?</option>{% endif %}
             {% if page.lang == 'es' %}<option value="Más clientes / contactos" class="opt-es">Conseguir más clientes o contactos</option>{% endif %}

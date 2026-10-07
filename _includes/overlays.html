@@ -74,17 +74,22 @@
 </div>
 
 <!-- EXIT POPUP -->
-<div id="exit-popup">
+<div id="exit-popup" role="dialog" aria-modal="true" aria-labelledby="exit-title">
   <div class="exit-card">
-    <button class="exit-close" onclick="closeExitPopup()"><i class="fa-solid fa-xmark"></i></button>
-    {% if page.lang == 'es' %}<div class="exit-eyebrow" data-es>Antes de irte</div>{% endif %}{% if page.lang == 'en' %}<div class="exit-eyebrow" data-en>Before you leave</div>{% endif %}
-    {% if page.lang == 'es' %}<div class="exit-title" data-es>¿COTIZACIÓN GRATIS<br>EN 24 HORAS?</div>{% endif %}
-    {% if page.lang == 'en' %}<div class="exit-title" data-en>FREE QUOTE<br>IN 24 HOURS?</div>{% endif %}
-    {% if page.lang == 'es' %}<p class="exit-sub" data-es>Cuéntanos tu idea y te enviamos una propuesta personalizada sin compromiso. Sin costo, sin esperas largas.</p>{% endif %}
-    {% if page.lang == 'en' %}<p class="exit-sub" data-en>Tell us your idea and we'll send you a custom proposal with no commitment. Free, no long waits.</p>{% endif %}
+    <button class="exit-close" onclick="closeExitPopup()" aria-label="{% if page.lang == 'en' %}Close{% else %}Cerrar{% endif %}"><i class="fa-solid fa-xmark"></i></button>
+    <div class="exit-badge"><i class="fa-solid fa-bolt"></i> {% if page.lang == 'en' %}WAIT!{% else %}¡ESPERA!{% endif %}</div>
+    <div class="exit-title" id="exit-title">{% if page.lang == 'en' %}YOUR COMPETITORS ARE ALREADY ON GOOGLE.<span>ARE YOU?</span>{% else %}TU COMPETENCIA YA ESTÁ EN GOOGLE.<span>¿Y TÚ?</span>{% endif %}</div>
+    <p class="exit-sub">{% if page.lang == 'en' %}Get a <strong>free quote in 24 hours</strong> or a <strong>free audit</strong> of your current website. No commitment, no fine print.{% else %}Recibe una <strong>cotización gratis en 24 horas</strong> o una <strong>auditoría gratis</strong> de tu página actual. Sin compromiso, sin letra pequeña.{% endif %}</p>
+    <ul class="exit-perks">
+      <li><i class="fa-solid fa-check"></i>{% if page.lang == 'en' %}Websites ready in 24–48h{% else %}Páginas listas en 24–48h{% endif %}</li>
+      <li><i class="fa-solid fa-check"></i>{% if page.lang == 'en' %}Spanish & English{% else %}Español e inglés{% endif %}</li>
+      <li><i class="fa-solid fa-check"></i>{% if page.lang == 'en' %}One-time payment{% else %}Pago único{% endif %}</li>
+    </ul>
+    <div class="exit-spots"><i class="fa-solid fa-fire"></i> {% if page.lang == 'en' %}Only <b class="js-spots">3</b> project spots left this month{% else %}Solo quedan <b class="js-spots">3</b> espacios este mes{% endif %}</div>
     <div class="exit-actions">
-      <a href="https://wa.me/12398231738?text=Hola!%20Vi%20su%20sitio%20web%20y%20me%20interesa%20una%20cotización." target="_blank" class="btn-main" style="justify-content:center;text-decoration:none"><i class="fa-brands fa-whatsapp"></i>{% if page.lang == 'es' %}<span data-es>ESCRÍBENOS POR WHATSAPP</span>{% endif %}{% if page.lang == 'en' %}<span data-en>WRITE US ON WHATSAPP</span>{% endif %}</a>
-      <button onclick="closeExitPopup();scrollToContact()" class="btn-outline-dark" style="border:none;cursor:pointer;width:100%;justify-content:center">{% if page.lang == 'es' %}<span data-es>VER FORMULARIO DE CONTACTO</span>{% endif %}{% if page.lang == 'en' %}<span data-en>SEE CONTACT FORM</span>{% endif %}</button>
+      <a href="https://wa.me/12398231738?text={% if page.lang == 'en' %}Hi!%20I%20saw%20your%20website%20and%20I%27d%20like%20a%20free%20quote.{% else %}Hola!%20Vi%20su%20sitio%20web%20y%20me%20interesa%20una%20cotización%20gratis.{% endif %}" target="_blank" rel="noopener" class="exit-btn exit-btn-wa" onclick="closeExitPopup()"><i class="fa-brands fa-whatsapp"></i>{% if page.lang == 'en' %}GET MY FREE QUOTE{% else %}QUIERO MI COTIZACIÓN GRATIS{% endif %}</a>
+      <a href="{{ site.data.routes.audit[page.lang] }}" class="exit-btn exit-btn-light" onclick="closeExitPopup()"><i class="fa-solid fa-magnifying-glass-chart"></i>{% if page.lang == 'en' %}AUDIT MY WEBSITE FOR FREE{% else %}REVISEN MI PÁGINA GRATIS{% endif %}</a>
+      <button type="button" class="exit-skip" onclick="closeExitPopup()">{% if page.lang == 'en' %}Not now{% else %}Ahora no{% endif %}</button>
     </div>
   </div>
 </div>
@@ -144,7 +149,7 @@
     {% if page.lang == 'en' %}<p class="modal-sub" data-en>Fill in the form and choose how you'd like us to contact you.</p>{% endif %}
     <div class="modal-field"><input type="text" id="mc-name" data-ph-es="Tu nombre completo" data-ph-en="Your full name" placeholder="Tu nombre completo"></div>
     <div class="modal-field">
-      <select id="mc-service">
+      <select aria-label="{% if page.lang == 'en' %}Which service interests you?{% else %}¿Qué servicio te interesa?{% endif %}" id="mc-service">
         {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">¿Qué servicio te interesa?</option>{% endif %}
         {% if page.lang == 'en' %}<option value="" disabled class="opt-en">Which service interests you?</option>{% endif %}
         {% if page.lang == 'es' %}<option value="Social Media / Redes Sociales" class="opt-es">Marketing en Redes Sociales</option>{% endif %}
@@ -191,7 +196,7 @@
       <div class="modal-field"><input type="email" name="email" id="hf-email" data-ph-es="Correo electrónico" data-ph-en="Email address" placeholder="Correo electrónico" required></div>
       <div class="modal-field"><input type="tel" name="phone" data-ph-es="Teléfono (opcional)" data-ph-en="Phone (optional)" placeholder="Teléfono (opcional)"></div>
       <div class="modal-field">
-        <select name="service" style="width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--soft);outline:none;transition:border-color .2s">
+        <select aria-label="{% if page.lang == 'en' %}Service{% else %}Servicio{% endif %}" name="service" style="width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--soft);outline:none;transition:border-color .2s">
           {% if page.lang == 'es' %}<option value="" disabled selected data-es>¿Qué servicio te interesa?</option>{% endif %}
           {% if page.lang == 'es' %}<option value="Diseño Web" data-es>Diseño Web</option>{% endif %}
           {% if page.lang == 'en' %}<option value="Web Design" data-en>Web Design</option>{% endif %}

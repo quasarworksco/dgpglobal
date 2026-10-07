@@ -16,7 +16,7 @@
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
         <div class="field" style="margin:0"><input type="tel" name="phone" data-ph-es="Teléfono (opcional)" data-ph-en="Phone (optional)" placeholder="Teléfono (opcional)"></div>
         <div class="field" style="margin:0">
-          <select name="service" style="width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--black);outline:none;transition:border-color .2s;appearance:none">
+          <select aria-label="{% if page.lang == 'en' %}Service{% else %}Servicio{% endif %}" name="service" style="width:100%;padding:13px 16px;border:1px solid var(--border);background:var(--white);font-family:'DM Sans',sans-serif;font-size:13px;color:var(--black);outline:none;transition:border-color .2s;appearance:none">
             {% if page.lang == 'es' %}<option value="" disabled selected data-es>¿Qué servicio te interesa?</option>{% endif %}
             {% if page.lang == 'en' %}<option value="" disabled selected data-en>Which service interests you?</option>{% endif %}
             {% if page.lang == 'es' %}<option data-es>Diseño Web</option>{% endif %}{% if page.lang == 'en' %}<option data-en>Web Design</option>{% endif %}

@@ -20,3 +20,5 @@ ind_training: {es: "/diseno-web/escuelas-y-cursos/", en: "/en/web-design/schools
 guides: {es: "/guias/", en: "/en/guides/"}
 guide_cleaning_site: {es: "/guias/pagina-web-compania-de-limpieza/", en: "/en/guides/cleaning-company-website-checklist/", guide: true}
 guide_new_llc: {es: "/guias/abri-mi-llc-como-conseguir-clientes/", en: "/en/guides/new-llc-how-to-get-customers/", guide: true}
+guide_website_cost: {es: "/guias/cuanto-cuesta-una-pagina-web/", en: "/en/guides/how-much-does-a-website-cost/", guide: true}
+guide_google_maps: {es: "/guias/como-aparecer-en-google-maps/", en: "/en/guides/how-to-show-up-on-google-maps/", guide: true}
