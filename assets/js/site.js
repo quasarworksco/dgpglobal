@@ -160,7 +160,7 @@ function sendContactWA(){
   const svc=document.getElementById('mc-service').value||'';
   const msg=(document.getElementById('mc-msg').value||'').trim();
   if(!name){document.getElementById('mc-name').focus();return;}
-  let txt=`Hola DGP Group! 👋\n\n*Nombre:* ${name}`;
+  let txt=`Hola DGP Global Group! 👋\n\n*Nombre:* ${name}`;
   if(svc) txt+=`\n*Servicio de interés:* ${svc}`;
   if(msg) txt+=`\n*Mensaje:* ${msg}`;
   txt+='\n\nMe gustaría recibir más información.';

@@ -1201,3 +1201,15 @@ nav{animation-delay:0s!important;animation-duration:.4s!important}
 .hero2{padding-top:56px}
 @media(max-width:1000px){.hero2{padding-top:40px}}
 @media(max-width:600px){.hero2{padding-top:28px}}
+/* Hero v2: show the top of the project (no scrolling), compact trust row */
+.hero2-shot{animation:none!important;object-position:50% 0%}
+.hero2-trust{gap:10px 22px}
+.hero2-trust li{font-size:11px;letter-spacing:1.2px}
+.hero2-trust b{font-size:26px}
+@media(min-width:1001px) and (max-width:1200px){.hero2-trust{flex-wrap:nowrap;gap:16px}.hero2-trust b{font-size:22px}.hero2-trust li{font-size:10px}}
+/* Top bar: vertically centered, even spacing above and below */
+nav{padding:18px 52px}
+@media(max-width:1000px){nav{padding:16px 28px}}
+@media(max-width:600px){nav{padding:14px 20px}.logo{font-size:17px;letter-spacing:3px}}
+@media(max-width:360px){.logo{font-size:15px;letter-spacing:2px}}
+@media(max-width:1000px){.hero2::before{mask-image:none;-webkit-mask-image:none;opacity:.5}}
