@@ -1,44 +1,39 @@
 <!-- HERO -->
-<section id="hero">
-  <div class="glow"></div>
-  <div class="bg-word">DGP</div>
-  <div class="hero-orb hero-orb-1"></div>
-  <div class="hero-orb hero-orb-2"></div>
-  <div class="hero-orb hero-orb-3"></div>
-  <div class="hero-orb hero-orb-4"></div>
-  <div class="hero-orb hero-orb-5"></div>
-  <div class="hero-content">
-    {% if page.lang == 'es' %}<div class="eyebrow" data-es>Marketing · Diseño · Crecimiento</div>{% endif %}
-    {% if page.lang == 'en' %}<div class="eyebrow" data-en>Marketing · Design · Growth</div>{% endif %}
-    <h1 class="hero-title">
-      {% if page.lang == 'es' %}<span data-es>AGENCIA DE<br><span class="shine">MARKETING</span>DIGITAL</span>{% endif %}
-      {% if page.lang == 'en' %}<span data-en>DIGITAL<br><span class="shine">MARKETING</span>AGENCY</span>{% endif %}
-    </h1>
-  </div>
-  <div class="hero-bottom">
-    <p class="hero-desc">
-      {% if page.lang == 'es' %}<span data-es>Estrategias reales para resultados medibles. Innovación y tecnología aplicadas a tu crecimiento.</span>{% endif %}
-      {% if page.lang == 'en' %}<span data-en>Real strategies for measurable results. Innovation and technology applied to your growth.</span>{% endif %}
-    </p>
-    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <button onclick="openHeroForm()" class="btn-main" style="border:none;cursor:pointer">
-        <i class="fa-solid fa-paper-plane"></i>
-        {% if page.lang == 'es' %}<span data-es>COMIENZA TU PROYECTO</span>{% endif %}{% if page.lang == 'en' %}<span data-en>START YOUR PROJECT</span>{% endif %}
-        <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
-      </button>
-      <button onclick="openQuote()" class="quote-trigger">
-        <i class="fa-solid fa-calculator"></i>
-        {% if page.lang == 'es' %}<span data-es>COTIZADOR RÁPIDO</span>{% endif %}{% if page.lang == 'en' %}<span data-en>QUICK QUOTE</span>{% endif %}
-      </button>
-    </div>
-    <div class="stats">
-      <div class="stat">
-        <span class="stat-num">100<em>+</em></span>
-        {% if page.lang == 'es' %}<span class="stat-lbl" data-es>Clientes</span>{% endif %}{% if page.lang == 'en' %}<span class="stat-lbl" data-en>Clients</span>{% endif %}
+<section class="hero2" id="hero">
+  <div class="hero2-glow"></div>
+  <div class="hero2-inner">
+    <div class="hero2-text">
+      <div class="eyebrow">{% if page.lang == 'en' %}Web design · Custom systems · Marketing{% else %}Diseño web · Sistemas a medida · Marketing{% endif %}</div>
+      <h1 class="hero2-title">{% if page.lang == 'en' %}WEBSITES &amp; SYSTEMS<span class="accent">THAT GROW YOUR BUSINESS</span>{% else %}SITIOS WEB Y SISTEMAS<span class="accent">QUE HACEN CRECER TU NEGOCIO</span>{% endif %}</h1>
+      <p class="hero2-sub">{% if page.lang == 'en' %}Professional websites delivered in 24–48h and custom systems that help you sell more and work less. In English and Spanish, for businesses in Florida and across the USA.{% else %}Páginas web profesionales en 24–48h y sistemas a medida para que vendas más y trabajes menos. En español e inglés, para negocios en Florida y todo USA.{% endif %}</p>
+      <div class="hero2-ctas">
+        <button onclick="openHeroForm()" class="btn-main" style="border:none;cursor:pointer">
+          <i class="fa-solid fa-paper-plane"></i>{% if page.lang == 'en' %}START YOUR PROJECT{% else %}COMIENZA TU PROYECTO{% endif %}
+          <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+        <button onclick="openQuote()" class="quote-trigger"><i class="fa-solid fa-calculator"></i>{% if page.lang == 'en' %}QUICK QUOTE{% else %}COTIZADOR RÁPIDO{% endif %}</button>
+        <a class="hero2-link" href="{{ site.data.routes.portfolio[page.lang] }}">{% if page.lang == 'en' %}See our work{% else %}Ver portafolio{% endif %} <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <div class="stat">
-        <span class="stat-num">3<em>x</em></span>
-        {% if page.lang == 'es' %}<span class="stat-lbl" data-es>ROI Promedio</span>{% endif %}{% if page.lang == 'en' %}<span class="stat-lbl" data-en>Avg. ROI</span>{% endif %}
+      <ul class="hero2-trust">
+        <li><b>50+</b>{% if page.lang == 'en' %}clients{% else %}clientes{% endif %}</li>
+        <li><b>120+</b>{% if page.lang == 'en' %}projects{% else %}proyectos{% endif %}</li>
+        <li><b>7</b>{% if page.lang == 'en' %}years{% else %}años{% endif %}</li>
+        <li><b>24–48h</b>{% if page.lang == 'en' %}delivery{% else %}entrega{% endif %}</li>
+      </ul>
+    </div>
+    <div class="hero2-visual" aria-hidden="true">
+      <div class="hero2-stage">
+        <div class="sc-laptop">
+          <div class="sc-laptop-screen"><span class="sc-cam"></span>
+            <div class="sc-viewport"><img class="hero2-shot" src="/assets/portfolio/pina-water-system/desktop.webp" alt="" width="1280" height="2436" fetchpriority="high"></div>
+          </div>
+          <div class="sc-laptop-base"><span></span></div>
+        </div>
+        <div class="sc-phone"><span class="sc-notch"></span>
+          <div class="sc-viewport"><img class="hero2-shot hero2-shot-m" src="/assets/portfolio/pina-water-system/mobile.webp" alt="" width="560" height="2728"></div>
+        </div>
+        <div class="hero2-chip hero2-chip-a"><i class="fa-solid fa-bolt"></i>{% if page.lang == 'en' %}Live in 24–48h{% else %}Lista en 24–48h{% endif %}</div>
+        <div class="hero2-chip hero2-chip-b"><i class="fa-solid fa-sliders"></i>{% if page.lang == 'en' %}Custom systems{% else %}Sistemas a medida{% endif %}</div>
       </div>
     </div>
   </div>
@@ -85,12 +80,12 @@
       {% if page.lang == 'en' %}<p class="svc-desc" data-en>Modern, optimized websites that turn visitors into customers. Delivery from 24–48h.</p>{% endif %}
       <span class="svc-more">{% if page.lang == 'es' %}<span data-es>Ver planes</span>{% endif %}{% if page.lang == 'en' %}<span data-en>See plans</span>{% endif %}<i class="fa-solid fa-arrow-right"></i></span>
     </a>
-    <a href="{{ site.data.routes.packages[page.lang] }}" class="svc-card reveal" style="transition-delay:.12s">
-      <i class="fa-solid fa-palette svc-icon"></i>
-      {% if page.lang == 'es' %}<h3 class="svc-name" data-es>Paquetes Profesionales</h3>{% endif %}{% if page.lang == 'en' %}<h3 class="svc-name" data-en>Pro Packages</h3>{% endif %}
-      {% if page.lang == 'es' %}<p class="svc-desc" data-es>Logo, redes sociales, seguidores y posts: tu identidad visual completa en un solo paquete.</p>{% endif %}
-      {% if page.lang == 'en' %}<p class="svc-desc" data-en>Logo, social media, followers and posts: your full visual identity in one package.</p>{% endif %}
-      <span class="svc-more">{% if page.lang == 'es' %}<span data-es>Ver paquetes</span>{% endif %}{% if page.lang == 'en' %}<span data-en>See packages</span>{% endif %}<i class="fa-solid fa-arrow-right"></i></span>
+    <a href="{{ site.data.routes.systems[page.lang] }}" class="svc-card reveal" style="transition-delay:.26s">
+      <i class="fa-solid fa-sliders svc-icon"></i>
+      {% if page.lang == 'es' %}<h3 class="svc-name" data-es>Sistemas a Medida</h3>{% endif %}{% if page.lang == 'en' %}<h3 class="svc-name" data-en>Custom Systems</h3>{% endif %}
+      {% if page.lang == 'es' %}<p class="svc-desc" data-es>Paneles de administración, facturación, reservas y apps web hechas desde cero para tu negocio.</p>{% endif %}
+      {% if page.lang == 'en' %}<p class="svc-desc" data-en>Admin dashboards, billing, bookings and web apps built from scratch for your business.</p>{% endif %}
+      <span class="svc-more">{% if page.lang == 'es' %}<span data-es>Ver sistemas</span>{% endif %}{% if page.lang == 'en' %}<span data-en>See systems</span>{% endif %}<i class="fa-solid fa-arrow-right"></i></span>
     </a>
     <a href="{{ site.data.routes.ecommerce[page.lang] }}" class="svc-card reveal" style="transition-delay:.19s">
       <i class="fa-brands fa-amazon svc-icon"></i>
@@ -99,12 +94,12 @@
       {% if page.lang == 'en' %}<p class="svc-desc" data-en>Sell on Amazon, Walmart, TikTok Shop, Shopify and eBay. We handle the entire process.</p>{% endif %}
       <span class="svc-more">{% if page.lang == 'es' %}<span data-es>Ver cómo funciona</span>{% endif %}{% if page.lang == 'en' %}<span data-en>See how it works</span>{% endif %}<i class="fa-solid fa-arrow-right"></i></span>
     </a>
-    <a href="{{ site.data.routes.systems[page.lang] }}" class="svc-card reveal" style="transition-delay:.26s">
-      <i class="fa-solid fa-sliders svc-icon"></i>
-      {% if page.lang == 'es' %}<h3 class="svc-name" data-es>Sistemas a Medida</h3>{% endif %}{% if page.lang == 'en' %}<h3 class="svc-name" data-en>Custom Systems</h3>{% endif %}
-      {% if page.lang == 'es' %}<p class="svc-desc" data-es>Paneles de administración, facturación, reservas y apps web hechas desde cero para tu negocio.</p>{% endif %}
-      {% if page.lang == 'en' %}<p class="svc-desc" data-en>Admin dashboards, billing, bookings and web apps built from scratch for your business.</p>{% endif %}
-      <span class="svc-more">{% if page.lang == 'es' %}<span data-es>Ver sistemas</span>{% endif %}{% if page.lang == 'en' %}<span data-en>See systems</span>{% endif %}<i class="fa-solid fa-arrow-right"></i></span>
+    <a href="{{ site.data.routes.packages[page.lang] }}" class="svc-card reveal" style="transition-delay:.12s">
+      <i class="fa-solid fa-palette svc-icon"></i>
+      {% if page.lang == 'es' %}<h3 class="svc-name" data-es>Paquetes Profesionales</h3>{% endif %}{% if page.lang == 'en' %}<h3 class="svc-name" data-en>Pro Packages</h3>{% endif %}
+      {% if page.lang == 'es' %}<p class="svc-desc" data-es>Logo, redes sociales, seguidores y posts: tu identidad visual completa en un solo paquete.</p>{% endif %}
+      {% if page.lang == 'en' %}<p class="svc-desc" data-en>Logo, social media, followers and posts: your full visual identity in one package.</p>{% endif %}
+      <span class="svc-more">{% if page.lang == 'es' %}<span data-es>Ver paquetes</span>{% endif %}{% if page.lang == 'en' %}<span data-en>See packages</span>{% endif %}<i class="fa-solid fa-arrow-right"></i></span>
     </a>
   </div>
 </div>

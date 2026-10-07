@@ -12,8 +12,8 @@ const dataUri = async (file, type) => `data:${type};base64,${(await fs.readFile(
 
 const PAGES = {
   home:      { shot: 'pina-water-system',
-               es: ['Agencia bilingüe · Florida', 'DISEÑO WEB Y', 'MARKETING DIGITAL', 'Sitios que venden, listos en 24–48h. En español e inglés.'],
-               en: ['Bilingual agency · Florida', 'WEB DESIGN &', 'DIGITAL MARKETING', 'Websites that sell, ready in 24–48h. In English and Spanish.'] },
+               es: ['Diseño web · Sistemas a medida', 'SITIOS WEB Y SISTEMAS', 'QUE HACEN CRECER TU NEGOCIO', 'Páginas web en 24–48h y sistemas a medida. En español e inglés.'],
+               en: ['Web design · Custom systems', 'WEBSITES & SYSTEMS', 'THAT GROW YOUR BUSINESS', 'Websites in 24–48h and custom systems. In English and Spanish.'] },
   web:       { shot: 'caibo-construction',
                es: ['Diseño web profesional', 'PÁGINAS WEB', 'QUE VENDEN', 'Landing pages en 24–48h, sitios multi-página y premium.'],
                en: ['Professional web design', 'WEBSITES', 'THAT SELL', 'Landing pages in 24–48h, multi-page and premium sites.'] },
