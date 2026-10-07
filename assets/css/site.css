@@ -1137,3 +1137,8 @@ nav{animation-delay:0s!important;animation-duration:.4s!important}
 .exit-skip:hover{color:#fff}
 @media(max-width:480px){.exit-card{padding:38px 22px 24px}.exit-btn{font-size:12px;padding:15px 14px}}
 .exit-card>.exit-close{position:absolute;top:16px;right:18px}
+/* Exit popup: brand colors only */
+.exit-badge{background:#fff;color:var(--blue)}
+.exit-title span{color:#8fb0ff}
+.exit-spots{color:#dbe5ff;background:rgba(77,120,255,.16);border-color:rgba(143,176,255,.4)}
+.exit-spots i{color:#8fb0ff}
