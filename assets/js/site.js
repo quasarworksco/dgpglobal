@@ -80,6 +80,8 @@ const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersect
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
 /* REVIEWS */
+function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function parseCSV(txt){const out=[];let row=[],f='',q=false;for(let i=0;i<txt.length;i++){const ch=txt[i];if(q){if(ch==='"'){if(txt[i+1]==='"'){f+='"';i++}else q=false}else f+=ch}else if(ch==='"')q=true;else if(ch===','){row.push(f);f=''}else if(ch==='\n'||ch==='\r'){if(ch==='\r'&&txt[i+1]==='\n')i++;row.push(f);out.push(row);row=[];f=''}else f+=ch}if(f||row.length){row.push(f);out.push(row)}return out}
 function ini(n){return n.trim().split(' ').slice(0,2).map(w=>w[0]||'').join('').toUpperCase()||'?'}
 function sts(n){return'★'.repeat(n)+'☆'.repeat(5-n)}
 async function loadRevs(){
@@ -87,14 +89,12 @@ async function loadRevs(){
   if(!c||!cnt)return;
   try{
     const txt=await(await fetch(CSV_URL)).text();
-    const rows=txt.split('\n').slice(1).filter(r=>r.trim());
+    const rows=parseCSV(txt).slice(1).filter(r=>r.length>=5&&r[1].trim()&&r[4].trim());
     c.innerHTML='';
     if(!rows.length){cnt.textContent='0';c.innerHTML=`<div class="empty-state"><i class="fa-regular fa-star"></i><p>${lang==='es'?'Aún no hay reseñas.':'No reviews yet.'}</p></div>`;return}
     cnt.textContent=rows.length+(lang==='es'?' reseña'+(rows.length>1?'s':''):(rows.length>1?' reviews':' review'));
     [...rows].reverse().forEach((row,i)=>{
-      const cols=row.split(',');if(cols.length<5)return;
-      const n=(cols[1]||'').replace(/"/g,'').trim(),v=parseInt(cols[3])||0,t=(cols[4]||'').replace(/"/g,'').trim();
-      if(!n||!t)return;
+      const n=esc(row[1].trim()),v=Math.min(5,Math.max(0,parseInt(row[3])||0)),t=esc(row[4].trim()).replace(/\n+/g,'<br>');
       const d=document.createElement('div');d.className='rev-item';d.style.animationDelay=`${i*.06}s`;
       d.innerHTML=`<div class="rev-top"><div class="rev-avatar">${ini(n)}</div><div><div class="rev-name">${n}</div><div class="rev-stars">${sts(v)}</div></div></div><p class="rev-text">${t}</p>`;
       c.appendChild(d);
