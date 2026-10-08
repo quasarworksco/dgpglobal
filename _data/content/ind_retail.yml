@@ -36,6 +36,7 @@ faq:
   q_en: How many products can I have?
   a_en: It depends on the plan and how you want to manage them. Tell us how many products you carry and we will recommend the best option.
 projects:
+- mq-store
 - the-sweet-zone
 icon: fa-solid fa-bag-shopping
 shot: the-sweet-zone

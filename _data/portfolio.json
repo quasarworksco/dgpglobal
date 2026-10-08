@@ -181,5 +181,23 @@
     "desc_en": "Ultrasound for everyone: quality ultrasound studies at affordable prices, with warm and professional care in Orlando, FL.",
     "url": "https://orangeultrasound.dgp-link.com/",
     "slug": "orange-ultrasound"
+  },
+  {
+    "num": "11",
+    "title": "MQ STORE",
+    "tags_es": [
+      "Tienda",
+      "Catálogo",
+      "Orlando"
+    ],
+    "tags_en": [
+      "Store",
+      "Catalog",
+      "Orlando"
+    ],
+    "desc_es": "Tienda de agua pura, bienestar y tecnología para el hogar en The Florida Mall, Orlando: catálogo por categorías, buscador y solicitudes de demostración.",
+    "desc_en": "Store for pure water, wellness and home technology at The Florida Mall, Orlando: catalog by category, product search and demo requests.",
+    "url": "https://mqstore.dgp-link.com/",
+    "slug": "mq-store"
   }
 ]
