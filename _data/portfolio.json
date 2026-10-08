@@ -163,5 +163,23 @@
     "desc_en": "Immigration paperwork, taxes, LLC formation, notary and credit repair. We guide you every step of the way, in Spanish and with total clarity.",
     "url": "https://avamultiservices.dgp-link.com/",
     "slug": "ava-multiservices"
+  },
+  {
+    "num": "10",
+    "title": "ORANGE ULTRASOUND",
+    "tags_es": [
+      "Salud",
+      "Orlando",
+      "Bilingüe"
+    ],
+    "tags_en": [
+      "Healthcare",
+      "Orlando",
+      "Bilingual"
+    ],
+    "desc_es": "Ultrasound for everyone: estudios de ultrasonido de calidad a precios accesibles, con atención cálida y profesional en Orlando, FL.",
+    "desc_en": "Ultrasound for everyone: quality ultrasound studies at affordable prices, with warm and professional care in Orlando, FL.",
+    "url": "https://orangeultrasound.dgp-link.com/",
+    "slug": "orange-ultrasound"
   }
 ]
