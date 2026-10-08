@@ -79,6 +79,18 @@ function syncBtns(){
 const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.07});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
+/* SPAM GUARD: hidden _gotcha field filled or form sent within 3s of load → drop silently */
+const PAGE_T0=Date.now();
+document.addEventListener('submit',function(e){
+  const f=e.target,hp=f.querySelector&&f.querySelector('[name="_gotcha"]');
+  if(!hp)return;
+  if(hp.value||Date.now()-PAGE_T0<3000){
+    e.preventDefault();e.stopImmediatePropagation();
+    const st=f.querySelector('.status');
+    if(st){st.className=st.className.replace(/\berr\b/,'')+' ok';st.style.display='block';st.textContent=lang==='en'?'✓ Sent.':'✓ Enviado.';}
+    f.reset();
+  }
+},true);
 /* REVIEWS */
 function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function parseCSV(txt){const out=[];let row=[],f='',q=false;for(let i=0;i<txt.length;i++){const ch=txt[i];if(q){if(ch==='"'){if(txt[i+1]==='"'){f+='"';i++}else q=false}else f+=ch}else if(ch==='"')q=true;else if(ch===','){row.push(f);f=''}else if(ch==='\n'||ch==='\r'){if(ch==='\r'&&txt[i+1]==='\n')i++;row.push(f);out.push(row);row=[];f=''}else f+=ch}if(f||row.length){row.push(f);out.push(row)}return out}

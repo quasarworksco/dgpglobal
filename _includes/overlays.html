@@ -191,6 +191,7 @@
     {% if page.lang == 'es' %}<p class="modal-sub" data-es>Te respondemos en menos de 24 horas. Sin compromisos.</p>{% endif %}
     {% if page.lang == 'en' %}<p class="modal-sub" data-en>We'll get back to you in under 24 hours. No commitments.</p>{% endif %}
     <form id="heroFormFs" action="https://formspree.io/f/xpqnajzo" method="POST" style="margin-top:4px" novalidate>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
       <input type="hidden" name="_subject" value="Nuevo contacto desde dgpglobalgroup.com">
       <div class="modal-field"><input type="text" name="name" id="hf-name" data-ph-es="Tu nombre completo" data-ph-en="Your full name" placeholder="Tu nombre completo" required></div>
       <div class="modal-field"><input type="email" name="email" id="hf-email" data-ph-es="Correo electrónico" data-ph-en="Email address" placeholder="Correo electrónico" required></div>
