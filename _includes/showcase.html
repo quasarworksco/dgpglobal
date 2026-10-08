@@ -7,7 +7,7 @@
       <div class="sc-laptop-screen">
         <span class="sc-cam"></span>
         <div class="sc-viewport" data-title="{{ first.title }}">
-          <img class="sc-shot sc-shot-desktop" data-src="/assets/portfolio/{{ first.slug }}/desktop.webp" alt="{{ first.title }} — {% if page.lang == 'en' %}desktop view{% else %}vista en computadora{% endif %}" width="1280" height="2436">
+          <img class="sc-shot sc-shot-desktop" data-src="/assets/portfolio/{{ first.slug }}/desktop.webp?v={{ site.time | date: '%s' }}" alt="{{ first.title }} — {% if page.lang == 'en' %}desktop view{% else %}vista en computadora{% endif %}" width="1280" height="2436">
         </div>
       </div>
       <div class="sc-laptop-base"><span></span></div>
@@ -15,7 +15,7 @@
     <div class="sc-phone">
       <span class="sc-notch"></span>
       <div class="sc-viewport" data-title="{{ first.title }}">
-        <img class="sc-shot sc-shot-mobile" data-src="/assets/portfolio/{{ first.slug }}/mobile.webp" alt="{{ first.title }} — {% if page.lang == 'en' %}mobile view{% else %}vista en celular{% endif %}" width="560" height="2728">
+        <img class="sc-shot sc-shot-mobile" data-src="/assets/portfolio/{{ first.slug }}/mobile.webp?v={{ site.time | date: '%s' }}" alt="{{ first.title }} — {% if page.lang == 'en' %}mobile view{% else %}vista en celular{% endif %}" width="560" height="2728">
       </div>
     </div>
   </div>
@@ -33,7 +33,7 @@
   <div class="sc-thumbs" role="tablist" aria-label="{% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}">
     {% for p in site.data.portfolio %}
     <button type="button" class="sc-thumb{% if forloop.first %} active{% endif %}" role="tab" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" data-i="{{ forloop.index0 }}" title="{{ p.title }}">
-      <span class="sc-thumb-img" data-title="{{ p.title }}"><img src="/assets/portfolio/{{ p.slug }}/thumb.webp" alt="" width="480" height="300" loading="lazy" decoding="async"></span>
+      <span class="sc-thumb-img" data-title="{{ p.title }}"><img src="/assets/portfolio/{{ p.slug }}/thumb.webp?v={{ site.time | date: '%s' }}" alt="" width="480" height="300" loading="lazy" decoding="async"></span>
       <span class="sc-thumb-name">{{ p.title }}</span>
     </button>
     {% endfor %}

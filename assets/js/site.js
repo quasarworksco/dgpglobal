@@ -699,7 +699,7 @@ if(auditForm){
       img.classList.remove('ready');
       img.parentElement.dataset.title=p.title;
       img.alt=p.title;
-      img.src=`/assets/portfolio/${p.slug}/${kind}.webp`;
+      img.src=`/assets/portfolio/${p.slug}/${kind}.webp?v=${window.SHOT_V||""}`;
     });
   }
   function show(n){

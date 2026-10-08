@@ -70,7 +70,7 @@
 <link rel="dns-prefetch" href="https://api.groq.com">
 <link rel="dns-prefetch" href="https://formspree.io">
 <link rel="dns-prefetch" href="https://cdn.databuddy.cc">
-{% if page.hero_preload %}<link rel="preload" as="image" fetchpriority="high" href="/assets/portfolio/appliance-solutions-901/desktop.webp">
+{% if page.hero_preload %}<link rel="preload" as="image" fetchpriority="high" href="/assets/portfolio/appliance-solutions-901/desktop.webp?v={{ site.time | date: '%s' }}">
 {% endif %}<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"></noscript>
 <link rel="preload" as="font" type="font/woff2" href="/assets/fa/fa-solid-900.woff2" crossorigin>
@@ -79,7 +79,7 @@
 <link rel="stylesheet" href="/assets/css/site.css?v={{ site.time | date: '%s' }}">
 </head>
 <body{% if page.lang == 'en' %} class="en"{% endif %}>
-<script>window.PAGE_LANG="{{ page.lang }}";window.HOME_URL="{{ site.data.routes.home[page.lang] }}";{% if route %}window.ALT_URL="{% if page.lang == 'en' %}{{ route.es }}{% else %}{{ route.en }}{% endif %}";{% endif %}</script>
+<script>window.PAGE_LANG="{{ page.lang }}";window.SHOT_V="{{ site.time | date: '%s' }}";window.HOME_URL="{{ site.data.routes.home[page.lang] }}";{% if route %}window.ALT_URL="{% if page.lang == 'en' %}{{ route.es }}{% else %}{{ route.en }}{% endif %}";{% endif %}</script>
 
 <div id="scroll-progress"></div>
 
