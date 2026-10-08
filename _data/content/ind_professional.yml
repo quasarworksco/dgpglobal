@@ -36,6 +36,7 @@ faq:
   q_en: Can the site be in both Spanish and English?
   a_en: 'Yes. It is one of our specialties: one site with both versions to reach all your clients.'
 projects:
+- ava-multiservices
 - moya-company
 icon: fa-solid fa-briefcase
 shot: moya-company
