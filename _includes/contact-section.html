@@ -36,6 +36,7 @@
         <span class="barr"><i class="fa-solid fa-arrow-right"></i></span>
       </button>
       <div id="mainContactStatus" class="status"></div>
+      <p class="form-privacy">{% if page.lang == 'en' %}By sending this form you accept our <a href="{{ site.data.routes.privacy.en }}">Privacy Policy</a>.{% else %}Al enviar este formulario aceptas nuestra <a href="{{ site.data.routes.privacy.es }}">Política de Privacidad</a>.{% endif %}</p>
       <div class="trust-badges">
         <span class="trust-badge"><i class="fa-solid fa-lock"></i><span>SSL Seguro</span></span>
         <span class="trust-badge"><i class="fa-solid fa-shield-halved"></i>{% if page.lang == 'es' %}<span data-es>Datos protegidos</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Data protected</span>{% endif %}</span>

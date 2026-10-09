@@ -1229,3 +1229,8 @@ nav{padding:18px 52px}
 /* Google review nudge after manual review */
 .status-greview{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;padding:12px 16px;border-radius:6px;background:var(--blue,#1438cc);color:#fff!important;font-weight:500;text-decoration:none;line-height:1.4;text-align:center}
 .status-greview:hover{filter:brightness(1.1)}
+/* Legal pages + form privacy note */
+.form-privacy{font-size:12px;color:var(--soft);margin:12px 0 0;text-align:center}
+.form-privacy a{color:var(--blue);text-decoration:underline}
+.legal .article-body ul{padding-left:22px}
+.legal .article-body li{margin-bottom:8px}

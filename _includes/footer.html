@@ -71,10 +71,10 @@
         © 2026 <span>DGP Global Group</span> · {% if page.lang == 'es' %}<span data-es>Todos los derechos reservados</span>{% endif %}{% if page.lang == 'en' %}<span data-en>All rights reserved</span>{% endif %}
       </div>
       <div class="footer-bottom-links">
-        {% if page.lang == 'es' %}<a href="#" class="footer-bottom-link" data-es>Política de Privacidad</a>{% endif %}
-        {% if page.lang == 'en' %}<a href="#" class="footer-bottom-link" data-en>Privacy Policy</a>{% endif %}
-        {% if page.lang == 'es' %}<a href="#" class="footer-bottom-link" data-es>Términos de Uso</a>{% endif %}
-        {% if page.lang == 'en' %}<a href="#" class="footer-bottom-link" data-en>Terms of Use</a>{% endif %}
+        {% if page.lang == 'es' %}<a href="{{ site.data.routes.privacy.es }}" class="footer-bottom-link" data-es>Política de Privacidad</a>{% endif %}
+        {% if page.lang == 'en' %}<a href="{{ site.data.routes.privacy.en }}" class="footer-bottom-link" data-en>Privacy Policy</a>{% endif %}
+        {% if page.lang == 'es' %}<a href="{{ site.data.routes.terms.es }}" class="footer-bottom-link" data-es>Términos de Uso</a>{% endif %}
+        {% if page.lang == 'en' %}<a href="{{ site.data.routes.terms.en }}" class="footer-bottom-link" data-en>Terms of Use</a>{% endif %}
         <a href="#" class="footer-bottom-link">@dgpgroup.us</a>
       </div>
     </div>

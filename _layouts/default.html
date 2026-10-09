@@ -21,7 +21,7 @@
 {% endif %}
 
 <!-- OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
-{% assign og_ref = page.ref | default: 'home' %}{% if og_ref == 'partner_order' %}{% assign og_ref = 'partners' %}{% endif %}{% assign og_image = site.url | append: '/assets/og/' | append: og_ref | append: '-' | append: page.lang | append: '.jpg' %}{% assign og_alt = 'DGP Global Group — ' | append: share_title %}
+{% assign og_ref = page.og_ref | default: page.ref | default: 'home' %}{% if og_ref == 'partner_order' %}{% assign og_ref = 'partners' %}{% endif %}{% assign og_image = site.url | append: '/assets/og/' | append: og_ref | append: '-' | append: page.lang | append: '.jpg' %}{% assign og_alt = 'DGP Global Group — ' | append: share_title %}
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ canon }}">
 <meta property="og:site_name" content="DGP Global Group">

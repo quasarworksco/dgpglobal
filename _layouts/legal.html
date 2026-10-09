@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% assign L = page.lang %}{% assign d = site.data.content[page.ref] %}
+<article class="article legal">
+  <header class="article-head">
+    <div class="glow"></div>
+    <div class="article-head-inner">
+      <div class="crumbs" role="navigation" aria-label="Breadcrumb">
+        <a href="{{ site.data.routes.home[L] }}">{% if L == 'en' %}Home{% else %}Inicio{% endif %}</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span>{% if L == 'en' %}{{ d.crumb_en }}{% else %}{{ d.crumb_es }}{% endif %}</span>
+      </div>
+      <div class="eyebrow">{% if L == 'en' %}Legal{% else %}Legal{% endif %}</div>
+      <h1 class="article-title">{{ page.heading }}</h1>
+      <p class="article-lead">{% if L == 'en' %}Last updated: {{ page.updated }}{% else %}Última actualización: {{ page.updated }}{% endif %}</p>
+    </div>
+  </header>
+  <div class="article-body">
+    {{ content }}
+  </div>
+</article>
