@@ -1241,3 +1241,6 @@ nav{padding:18px 52px}
 .pkg-pop{position:absolute;top:16px;right:16px;font:600 10px 'DM Sans',sans-serif;letter-spacing:1.4px;text-transform:uppercase;background:#fff;color:var(--blue);padding:5px 10px;border-radius:999px}
 .plan-price{display:flex;align-items:baseline;gap:8px;margin-bottom:12px}
 .plan-price em{font:400 13px 'DM Sans',sans-serif;font-style:normal;letter-spacing:.5px;color:var(--soft)}
+/* Rendimiento: títulos con degradado fijo (sin animar el fondo, que obliga a repintar en cada cuadro) */
+.hero-title .shine,.sec-title .accent,.page-hero-title .accent,.hero2-title .accent{animation:none!important;background-position:0% center!important}
+.card::before{animation:none!important}
