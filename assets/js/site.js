@@ -1,4 +1,5 @@
 const SCRIPT_URL='https://script.google.com/macros/s/AKfycbypY5TPcjUePxLwplMjyz7lLTAwxF6zDOXR3ub3CVrzraNBi3FViAlIcvxOMgqNy3F6jA/exec';
+const GREVIEW_URL='https://g.page/r/CbcyuFX7hqvuEAE/review';
 const CSV_URL='https://docs.google.com/spreadsheets/d/e/2PACX-1vTPpmwX4hdgbUsrtTk9_-jDaWpqjB-ixIrHfPqDj5y0HqvJ-fEdbj-0B78jgxQ3lXRji9Z9teaRl9O6/pub?output=csv';
 let lang=window.PAGE_LANG||'es', curr='usd', rate=0.90;
 
@@ -122,7 +123,7 @@ document.getElementById('reviewForm')?.addEventListener('submit',function(e){
   btn.disabled=true;btn.querySelector('span').textContent=lang==='es'?'ENVIANDO...':'SENDING...';st.className='status';
   fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:JSON.stringify({nombre:n,correo:em,valoracion:si.value,comentario:com})})
   .then(()=>{
-    st.className='status ok';st.textContent=lang==='es'?'✓ ¡Gracias! Reseña registrada.':'✓ Thank you! Review submitted.';
+    st.className='status ok';st.innerHTML=(lang==='es'?'✓ ¡Gracias! Reseña registrada.':'✓ Thank you! Review submitted.')+' <a href="'+GREVIEW_URL+'" target="_blank" rel="noopener" class="status-greview"><i class="fa-brands fa-google"></i> '+(lang==='es'?'¿Nos ayudas publicándola también en Google? Solo toma 30 segundos.':'Could you also post it on Google? It only takes 30 seconds.')+'</a>';
     this.reset();btn.disabled=false;btn.querySelector('span').textContent=lang==='es'?'ENVIAR RESEÑA':'SEND REVIEW';
     setTimeout(loadRevs,2500);
   }).catch(()=>{st.className='status err';st.textContent=lang==='es'?'Error. Intenta de nuevo.':'Error. Try again.';btn.disabled=false;btn.querySelector('span').textContent=lang==='es'?'ENVIAR RESEÑA':'SEND REVIEW'});
