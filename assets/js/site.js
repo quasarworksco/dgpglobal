@@ -194,7 +194,7 @@ function sendContactEmail(){
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeContactModal();closeHeroForm();}});
 
-/* HERO FORM (Formspree) */
+/* HERO FORM (al panel + Telegram) */
 function openHeroForm(){
   const m=document.getElementById('heroFormModal');
   m.style.display='flex';
@@ -219,14 +219,12 @@ document.getElementById('heroFormFs').addEventListener('submit',async function(e
   btn.disabled=true;
   btn.querySelector('span').textContent=isEn?'Sending...':'Enviando...';
   try{
-    const res=await fetch(this.action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
-    if(res.ok){
+    await enviarAlPanel(this,'Contacto (formulario rápido)');
+    {
       status.className='status ok';status.style.display='block';
       status.textContent=isEn?'Message sent! We\'ll reply within 24 hours.':'¡Mensaje enviado! Te respondemos en menos de 24 horas.';
       this.reset();
       setTimeout(closeHeroForm,3000);
-    } else {
-      throw new Error();
     }
   }catch{
     status.className='status err';status.style.display='block';
@@ -235,7 +233,7 @@ document.getElementById('heroFormFs').addEventListener('submit',async function(e
   }
 });
 
-/* MAIN CONTACT FORM (Formspree) */
+/* MAIN CONTACT FORM (al panel + Telegram) */
 const mainForm=document.getElementById('mainContactForm');
 if(mainForm){
   mainForm.addEventListener('submit',async function(e){
@@ -245,12 +243,12 @@ if(mainForm){
     const isEn=lang==='en';
     btn.disabled=true;
     try{
-      const res=await fetch(this.action,{method:'POST',body:new FormData(this),headers:{Accept:'application/json'}});
-      if(res.ok){
+      await enviarAlPanel(this,'Contacto');
+      {
         status.className='status ok';status.style.display='block';
         status.textContent=isEn?'Message sent! We\'ll reply within 24 hours.':'¡Mensaje enviado! Te respondemos en menos de 24 horas.';
         this.reset();
-      } else {throw new Error();}
+      }
     }catch{
       status.className='status err';status.style.display='block';
       status.textContent=isEn?'Error sending. Please try WhatsApp.':'Error al enviar. Intenta por WhatsApp.';
@@ -436,37 +434,30 @@ function restoreAltair(){
   }catch(e){}
 }
 
-const TG_TOKEN=['8835050265:AAH','KbQzn1sGT','KqwZKayOan','GdH98N9xHekHc'].join('');
-const TG_CHAT='8446165096';
-
-async function tgSend(text){
-  await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({chat_id:TG_CHAT,text,parse_mode:'HTML'})
-  });
+const PANEL_API='https://ayudante-dgp-bot.dgpgroupusa-llc.workers.dev';
+/* Formularios: van al panel (Clientes) y a Telegram a la vez, a través del bot de DGP */
+async function enviarAlPanel(form,servicio){
+  const fd=new FormData(form),o={};
+  for(const [k,v] of fd.entries()){
+    if(k==='_gotcha'||k==='_subject'||typeof v!=='string'||!v.trim())continue;
+    const el=form.querySelector(`[name="${k}"]`);const key=(el&&el.dataset.label)||k;
+    o[key]=o[key]?o[key]+', '+v.trim():v.trim();
+  }
+  if(servicio&&!o.service&&!o.servicio)o.servicio=servicio;
+  o.pagina=location.href;o.idioma=lang==='en'?'Inglés':'Español';
+  if(typeof REF_CODE!=='undefined'&&REF_CODE)o.referido=REF_CODE;
+  o.t=Date.now()-PAGE_T0;o._hp_dgp=(fd.get('_gotcha')||'').toString();
+  const r=await fetch(PANEL_API+'/contacto',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(o)});
+  if(!r.ok)throw new Error();
+  return r.json();
 }
 async function sendAltairTelegram(closing=false){
-  const userMsgs=altairHistory.filter(m=>m.role==='user');
-  if(userMsgs.length===0)return;
+  if(!altairHistory.some(m=>m.role==='user'))return;
   const unsent=altairHistory.slice(altairTgSent);
-  if(unsent.length===0)return;
-  const now=new Date().toLocaleString('es-US',{timeZone:'America/New_York',dateStyle:'short',timeStyle:'short'});
-  const header=`🤖 <b>Altair — Conversación activa</b>\n📅 ${now}\n\n`;
-  const footer=(closing?`🔚 <i>Conversación cerrada</i>\n`:'')+`🌐 dgpglobalgroup.com`;
-  let chunks=[header];
-  unsent.forEach(m=>{
-    const line=m.role==='user'
-      ?`👤 <b>Cliente:</b> ${m.content}\n\n`
-      :`🔵 <b>Altair:</b> ${m.content}\n\n`;
-    const last=chunks[chunks.length-1];
-    if((last+line).length>3800)chunks.push(line);
-    else chunks[chunks.length-1]+=line;
-  });
-  chunks[chunks.length-1]+=footer;
-  altairTgSent=altairHistory.length;
-  saveAltair();
-  try{for(const c of chunks)await tgSend(c);}catch{}
+  if(!unsent.length)return;
+  altairTgSent=altairHistory.length;saveAltair();
+  try{await fetch(PANEL_API+'/chat-web',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,
+    body:JSON.stringify({cerrado:closing,mensajes:unsent.map(m=>({rol:m.role,texto:m.content}))})});}catch(e){}
 }
 
 function toggleAltair(){altairOpen?closeAltair():openAltair();}
@@ -649,7 +640,7 @@ function scalePortFrame(){
   },{passive:true});
 })();
 
-/* FREE AUDIT FORM (Formspree + Telegram) */
+/* FREE AUDIT FORM (al panel + Telegram) */
 const auditForm=document.getElementById('auditForm');
 if(auditForm){
   auditForm.addEventListener('submit',async function(e){
@@ -666,10 +657,7 @@ if(auditForm){
     }
     btn.disabled=true;
     try{
-      const res=await fetch(this.action,{method:'POST',body:fd,headers:{Accept:'application/json'}});
-      if(!res.ok)throw new Error();
-      const esc=v=>String(v).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
-      tgSend(`🔍 <b>Nueva solicitud de auditoría gratis</b>\n\n👤 ${esc(name)}\n📧 ${esc(email)}\n📱 ${esc(wa)}\n🌐 ${esc(site)}\n🎯 ${esc(fd.get('goal')||'—')}\n🗣 ${lang==='en'?'Inglés (responder en inglés)':'Español'}${REF_CODE?'\n🤝 Referido por: '+esc(REF_CODE):''}\n💬 ${esc(fd.get('message')||'—')}\n\n⏱ Prometido: informe en 24h`).catch(()=>{});
+      await enviarAlPanel(this,'Auditoría web gratis');
       status.className='status ok';
       status.textContent=isEn?'Done! We\'ll send your audit within 24 hours by email or WhatsApp.':'¡Listo! Te enviamos tu auditoría en menos de 24 horas por correo o WhatsApp.';
       this.reset();
@@ -754,7 +742,7 @@ function withRef(url){
   }catch(e){return url;}
 }
 if(REF_CODE){
-  document.querySelectorAll('form[action*="formspree.io"]').forEach(f=>{
+  document.querySelectorAll('form.lead-form, #mainContactForm, #heroFormFs, #auditForm').forEach(f=>{
     if(f.querySelector('input[name="referido"]'))return;
     const i=document.createElement('input');i.type='hidden';i.name='referido';i.value=REF_CODE;f.appendChild(i);
   });
@@ -762,7 +750,7 @@ if(REF_CODE){
   const _open=window.open;window.open=function(url,...rest){if(typeof url==='string'&&url.includes('wa.me/12398231738'))url=withRef(url);return _open.call(window,url,...rest);};
 }
 
-/* GENERIC LEAD FORMS (partner sign-up, partner orders): Formspree + Telegram */
+/* GENERIC LEAD FORMS (partner sign-up, partner orders): to the DGP panel + Telegram */
 document.querySelectorAll('form.lead-form').forEach(form=>{
   form.addEventListener('submit',async function(e){
     e.preventDefault();
@@ -778,17 +766,7 @@ document.querySelectorAll('form.lead-form').forEach(form=>{
     btn.disabled=true;
     const fd=new FormData(this);
     try{
-      const res=await fetch(this.action,{method:'POST',body:fd,headers:{Accept:'application/json'}});
-      if(!res.ok)throw new Error();
-      const esc=v=>String(v).replace(/[<>&]/g,c=>({'<':'&lt;','>':'&gt;','&':'&amp;'}[c]));
-      const lines=[];
-      this.querySelectorAll('[name][data-label]').forEach(el=>{
-        const v=(el.type==='checkbox')?(el.checked?el.value:''):(fd.get(el.name)||'');
-        if(String(v).trim())lines.push(`<b>${esc(el.dataset.label)}:</b> ${esc(v)}`);
-      });
-      if(REF_CODE)lines.push(`<b>Referido por:</b> ${esc(REF_CODE)}`);
-      lines.push(`<b>Idioma:</b> ${isEn?'Inglés':'Español'}`);
-      tgSend(`${this.dataset.tgTitle||'📩 <b>Nuevo formulario</b>'}\n\n${lines.join('\n')}`).catch(()=>{});
+      await enviarAlPanel(this,this.id==='orderForm'?'Pedido de aliado':'Registro de aliado');
       status.className='status lead-status ok';
       status.textContent=this.id==='orderForm'
         ?(isEn?'Order received! We\'ll confirm the total and first payment on WhatsApp.':'¡Pedido recibido! Te confirmamos el total y el primer pago por WhatsApp.')

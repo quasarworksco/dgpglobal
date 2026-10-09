@@ -7,9 +7,8 @@
       {% if page.lang == 'es' %}<p class="sec-sub" data-es>Completa el formulario y te respondemos en menos de 24 horas. Sin compromisos.</p>{% endif %}
       {% if page.lang == 'en' %}<p class="sec-sub" data-en>Fill out the form and we'll get back to you in under 24 hours. No commitments.</p>{% endif %}
     </div>
-    <form action="https://formspree.io/f/xpqnajzo" method="POST" id="mainContactForm" class="reveal" style="margin-top:36px;transition-delay:.1s" novalidate>
+    <form action="https://ayudante-dgp-bot.dgpgroupusa-llc.workers.dev/contacto" method="POST" id="mainContactForm" class="reveal" style="margin-top:36px;transition-delay:.1s" novalidate>
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <input type="hidden" name="_subject" value="Nuevo contacto desde dgpglobalgroup.com">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px">
         <div class="field" style="margin:0"><input type="text" name="name" data-ph-es="Nombre completo" data-ph-en="Full name" placeholder="Nombre completo" required></div>
         <div class="field" style="margin:0"><input type="email" name="email" data-ph-es="Correo electrónico" data-ph-en="Email address" placeholder="Correo electrónico" required></div>
