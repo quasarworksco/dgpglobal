@@ -1,6 +1,5 @@
-const SCRIPT_URL='https://script.google.com/macros/s/AKfycbypY5TPcjUePxLwplMjyz7lLTAwxF6zDOXR3ub3CVrzraNBi3FViAlIcvxOMgqNy3F6jA/exec';
 const GREVIEW_URL='https://g.page/r/CbcyuFX7hqvuEAE/review';
-const CSV_URL='https://docs.google.com/spreadsheets/d/e/2PACX-1vTPpmwX4hdgbUsrtTk9_-jDaWpqjB-ixIrHfPqDj5y0HqvJ-fEdbj-0B78jgxQ3lXRji9Z9teaRl9O6/pub?output=csv';
+const REV_API='https://ayudante-dgp-bot.dgpgroupusa-llc.workers.dev/resenas-web';
 let lang=window.PAGE_LANG||'es', curr='usd', rate=0.90;
 
 /* LIVE RATE */
@@ -94,20 +93,20 @@ document.addEventListener('submit',function(e){
 },true);
 /* REVIEWS */
 function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function parseCSV(txt){const out=[];let row=[],f='',q=false;for(let i=0;i<txt.length;i++){const ch=txt[i];if(q){if(ch==='"'){if(txt[i+1]==='"'){f+='"';i++}else q=false}else f+=ch}else if(ch==='"')q=true;else if(ch===','){row.push(f);f=''}else if(ch==='\n'||ch==='\r'){if(ch==='\r'&&txt[i+1]==='\n')i++;row.push(f);out.push(row);row=[];f=''}else f+=ch}if(f||row.length){row.push(f);out.push(row)}return out}
 function ini(n){return n.trim().split(' ').slice(0,2).map(w=>w[0]||'').join('').toUpperCase()||'?'}
 function sts(n){return'★'.repeat(n)+'☆'.repeat(5-n)}
 async function loadRevs(){
   const c=document.getElementById('revContainer'),cnt=document.getElementById('revCount');
   if(!c||!cnt)return;
   try{
-    const txt=await(await fetch(CSV_URL)).text();
-    const rows=parseCSV(txt).slice(1).filter(r=>r.length>=5&&r[1].trim()&&r[4].trim());
+    // Solo llegan las reseñas aprobadas desde el panel (más nuevas primero)
+    const data=await(await fetch(REV_API)).json();
+    const rows=(data.resenas||[]).filter(r=>r.nombre&&r.comentario);
     c.innerHTML='';
     if(!rows.length){cnt.textContent='0';c.innerHTML=`<div class="empty-state"><i class="fa-regular fa-star"></i><p>${lang==='es'?'Aún no hay reseñas.':'No reviews yet.'}</p></div>`;return}
     cnt.textContent=rows.length+(lang==='es'?' reseña'+(rows.length>1?'s':''):(rows.length>1?' reviews':' review'));
-    [...rows].reverse().forEach((row,i)=>{
-      const n=esc(row[1].trim()),v=Math.min(5,Math.max(0,parseInt(row[3])||0)),t=esc(row[4].trim()).replace(/\n+/g,'<br>');
+    rows.forEach((row,i)=>{
+      const n=esc(String(row.nombre).trim()),v=Math.min(5,Math.max(0,parseInt(row.valoracion)||0)),t=esc(String(row.comentario).trim()).replace(/\n+/g,'<br>');
       const d=document.createElement('div');d.className='rev-item';d.style.animationDelay=`${i*.06}s`;
       d.innerHTML=`<div class="rev-top"><div class="rev-avatar">${ini(n)}</div><div><div class="rev-name">${n}</div><div class="rev-stars">${sts(v)}</div></div></div><p class="rev-text">${t}</p>`;
       c.appendChild(d);
@@ -121,11 +120,11 @@ document.getElementById('reviewForm')?.addEventListener('submit',function(e){
   const btn=document.getElementById('submitBtn'),st=document.getElementById('statusMsg');
   if(!n||!em||!si||!com){st.className='status err';st.textContent=lang==='es'?'Por favor completa todos los campos.':'Please complete all fields.';return}
   btn.disabled=true;btn.querySelector('span').textContent=lang==='es'?'ENVIANDO...':'SENDING...';st.className='status';
-  fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',body:JSON.stringify({nombre:n,correo:em,valoracion:si.value,comentario:com})})
-  .then(()=>{
-    st.className='status ok';st.innerHTML=(lang==='es'?'✓ ¡Gracias! Reseña registrada.':'✓ Thank you! Review submitted.')+' <a href="'+GREVIEW_URL+'" target="_blank" rel="noopener" class="status-greview"><i class="fa-brands fa-google"></i> '+(lang==='es'?'¿Nos ayudas publicándola también en Google? Solo toma 30 segundos.':'Could you also post it on Google? It only takes 30 seconds.')+'</a>';
+  fetch(REV_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nombre:n,correo:em,valoracion:si.value,comentario:com,idioma:lang,t:Date.now()-PAGE_T0})})
+  .then(async r=>{
+    if(!r.ok){const d=await r.json().catch(()=>({}));throw new Error(d.error||'')}
+    st.className='status ok';st.innerHTML=(lang==='es'?'✓ ¡Gracias! Recibimos tu reseña y aparecerá aquí en cuanto la revisemos.':'✓ Thank you! We received your review and it will appear here once we check it.')+' <a href="'+GREVIEW_URL+'" target="_blank" rel="noopener" class="status-greview"><i class="fa-brands fa-google"></i> '+(lang==='es'?'¿Nos ayudas publicándola también en Google? Solo toma 30 segundos.':'Could you also post it on Google? It only takes 30 seconds.')+'</a>';
     this.reset();btn.disabled=false;btn.querySelector('span').textContent=lang==='es'?'ENVIAR RESEÑA':'SEND REVIEW';
-    setTimeout(loadRevs,2500);
   }).catch(()=>{st.className='status err';st.textContent=lang==='es'?'Error. Intenta de nuevo.':'Error. Try again.';btn.disabled=false;btn.querySelector('span').textContent=lang==='es'?'ENVIAR RESEÑA':'SEND REVIEW'});
 });
 /* DRAWER */
