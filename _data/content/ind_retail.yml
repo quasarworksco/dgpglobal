@@ -27,10 +27,10 @@ faq:
   a_es: 'Sí. Muchas tiendas empiezan así: el cliente arma su pedido y te llega por WhatsApp con los productos, y tú confirmas el pago.'
   q_en: Can I take orders on WhatsApp instead of online payments?
   a_en: 'Yes. Many stores start that way: customers build their order and it reaches you on WhatsApp with the products, and you confirm payment.'
-- q_es: ¿Me ayudan también a vender en Amazon o TikTok Shop?
-  a_es: Sí. Tenemos un servicio de gestión e-commerce para abrir y optimizar tu cuenta en Amazon, Walmart, TikTok Shop, Shopify y eBay.
-  q_en: Can you also help me sell on Amazon or TikTok Shop?
-  a_en: Yes. Our e-commerce management service opens and optimizes your account on Amazon, Walmart, TikTok Shop, Shopify and eBay.
+- q_es: ¿Pueden darme también un panel para manejar pedidos y clientes?
+  a_es: Sí. Hacemos sistemas a medida con panel de administración, inventario y CRM para que controles pedidos, clientes y ventas desde un solo lugar.
+  q_en: Can you also give me a panel to manage orders and customers?
+  a_en: Yes. We build custom systems with an admin panel, inventory and CRM so you can manage orders, customers and sales from one place.
 - q_es: ¿Cuántos productos puedo tener?
   a_es: Depende del plan y de cómo quieras administrarlos. Cuéntanos cuántos productos manejas y te recomendamos la mejor opción.
   q_en: How many products can I have?
@@ -49,9 +49,9 @@ es:
   - icon: fa-brands fa-whatsapp
     title: PEDIDOS FÁCILES
     desc: Carrito o pedido directo por WhatsApp, según cómo vendas hoy.
-  - icon: fa-brands fa-amazon
-    title: MARKETPLACES
-    desc: Si también vendes en Amazon, Walmart o TikTok Shop, tu tienda y tus canales trabajan juntos.
+  - icon: fa-solid fa-sliders
+    title: PANEL DE PEDIDOS
+    desc: Con un sistema a medida controlas pedidos, inventario y clientes desde un solo panel.
   - icon: fa-solid fa-bolt
     title: RÁPIDA EN EL CELULAR
     desc: La mayoría de las compras empiezan en el teléfono; cada segundo de carga cuenta.
@@ -62,7 +62,7 @@ es:
   - Promociones y productos destacados
   - Enlaces a tus tiendas en marketplaces
   - Versión en español e inglés
-  plan: El Plan Premium incluye catálogo, SEO y Google Analytics. Si además quieres vender en Amazon, Walmart o TikTok Shop, combínalo con nuestra gestión e-commerce.
+  plan: El Plan Premium incluye catálogo, SEO y Google Analytics. Si además quieres controlar pedidos e inventario, combínalo con un sistema a medida.
 en:
   name: Online stores
   needs:
@@ -72,9 +72,9 @@ en:
   - icon: fa-brands fa-whatsapp
     title: EASY ORDERING
     desc: A cart or direct WhatsApp ordering, depending on how you sell today.
-  - icon: fa-brands fa-amazon
-    title: MARKETPLACES
-    desc: If you also sell on Amazon, Walmart or TikTok Shop, your store and channels work together.
+  - icon: fa-solid fa-sliders
+    title: ORDER PANEL
+    desc: With a custom system you manage orders, inventory and customers from one panel.
   - icon: fa-solid fa-bolt
     title: FAST ON MOBILE
     desc: Most purchases start on a phone; every second of load time matters.
@@ -85,5 +85,5 @@ en:
   - Promotions and featured products
   - Links to your marketplace stores
   - Spanish and English versions
-  plan: The Premium Plan includes a catalog, SEO and Google Analytics. If you also want to sell on Amazon, Walmart or TikTok Shop, pair it with our e-commerce management.
+  plan: The Premium Plan includes a catalog, SEO and Google Analytics. If you also want to manage orders and inventory, pair it with a custom system.
 guide: guide_website_cost

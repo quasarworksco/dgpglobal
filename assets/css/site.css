@@ -1234,3 +1234,10 @@ nav{padding:18px 52px}
 .form-privacy a{color:var(--blue);text-decoration:underline}
 .legal .article-body ul{padding-left:22px}
 .legal .article-body li{margin-bottom:8px}
+/* Paquetes: precio visible y el Intermedio destacado */
+.pkg-card .pkg-price{margin:6px 0 12px}
+.pkg-card .pkg-price em{font:400 13px 'DM Sans',sans-serif;font-style:normal;letter-spacing:.5px;margin-left:4px}
+.pkg-featured{outline:2px solid rgba(255,255,255,.55);outline-offset:-2px}
+.pkg-pop{position:absolute;top:16px;right:16px;font:600 10px 'DM Sans',sans-serif;letter-spacing:1.4px;text-transform:uppercase;background:#fff;color:var(--blue);padding:5px 10px;border-radius:999px}
+.plan-price{display:flex;align-items:baseline;gap:8px;margin-bottom:12px}
+.plan-price em{font:400 13px 'DM Sans',sans-serif;font-style:normal;letter-spacing:.5px;color:var(--soft)}

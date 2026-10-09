@@ -268,12 +268,9 @@ const QUOTE_DATA={
     {name_es:'Plan Premium',name_en:'Premium Plan',desc_es:'Catálogo/Reservas + Hosting 12 meses',desc_en:'Catalog/Bookings + 12-month hosting',price:'$950',delivery_es:'Entrega en 4–5 días',delivery_en:'Delivered in 4–5 days',items_es:['Sitio completo con catálogo','Kit Social Premium','SEO Optimizado + Analytics','Mantenimiento 12 meses'],items_en:['Full site with catalog','Premium Social Kit','SEO + Analytics','12-month maintenance'],wa:'Plan Premium de Sitio Web'},
   ],
   pack:[
-    {name_es:'Paquete Básico',name_en:'Basic Package',desc_es:'Logo + Redes Sociales',desc_en:'Logo + Social Media',price:'$124',delivery_es:'Entrega en 48h',delivery_en:'Delivered in 48h',items_es:['Logo profesional','Creación de RRSS','Bio + Highlights','Tarjeta de presentación'],items_en:['Professional logo','Social media setup','Bio + Highlights','Business card'],wa:'Paquete Básico Profesional'},
-    {name_es:'Paquete Intermedio',name_en:'Intermediate Package',desc_es:'Logo + 2K seguidores + 5 posts',desc_en:'Logo + 2K followers + 5 posts',price:'$221',delivery_es:'Entrega en 3–4 días',delivery_en:'Delivered in 3–4 days',items_es:['Todo el Básico','2,000 seguidores','5 posts diseñados','Tarjeta de presentación'],items_en:['Everything in Basic','2,000 followers','5 designed posts','Business card'],wa:'Paquete Intermedio Profesional'},
-    {name_es:'Paquete Avanzado',name_en:'Advanced Package',desc_es:'Paquete completo + Web One Page',desc_en:'Full package + One Page website',price:'$553',delivery_es:'Entrega en 5–7 días',delivery_en:'Delivered in 5–7 days',items_es:['Factura + Tarjeta de negocio','5,000 seguidores + 10 posts','Web One Page','Tarjeta de presentación'],items_en:['Invoice + Business card','5,000 followers + 10 posts','One Page website','Business card'],wa:'Paquete Avanzado Profesional'},
-  ],
-  ecom:[
-    {name_es:'Gestión Multi-Plataforma',name_en:'Multi-Platform Management',desc_es:'Amazon, Walmart, TikTok, Shopify, eBay',desc_en:'Amazon, Walmart, TikTok, Shopify, eBay',price:'$750',delivery_es:'Pago único — sin mensualidad',delivery_en:'One-time payment — no monthly fee',items_es:['Apertura y onboarding en plataformas','Optimización de listings','Estrategia de precios','Asesoría PPC','Gestión de requisitos legales/FDA'],items_en:['Platform opening & onboarding','Listing optimization','Pricing strategy','PPC advisory','Legal/FDA requirement management'],wa:'Plan de Gestión E-Commerce'},
+    {name_es:'Paquete Básico',name_en:'Basic Package',desc_es:'Logo + Manual de marca + 1K seguidores',desc_en:'Logo + Brand guidelines + 1K followers',price:'$320',delivery_es:'Entrega en 48h',delivery_en:'Delivered in 48h',items_es:['Logo profesional','Manual de marca','Revisión de redes sociales','1,000 seguidores','Tarjeta de presentación'],items_en:['Professional logo','Brand guidelines','Social media review','1,000 followers','Business card'],wa:'Paquete Básico Profesional'},
+    {name_es:'Paquete Intermedio',name_en:'Intermediate Package',desc_es:'Logo + 3K seguidores + 10 posts',desc_en:'Logo + 3K followers + 10 posts',price:'$480',delivery_es:'Entrega en 72h',delivery_en:'Delivered in 72h',items_es:['Logo y manual de marca','Revisión de redes sociales','3,000 seguidores','10 posts para Instagram','Tarjeta de presentación'],items_en:['Logo and brand guidelines','Social media review','3,000 followers','10 Instagram posts','Business card'],wa:'Paquete Intermedio Profesional'},
+    {name_es:'Paquete Avanzado',name_en:'Advanced Package',desc_es:'Marca completa + Web One Page + CRM',desc_en:'Full brand + One Page site + CRM',price:'$840',delivery_es:'Entrega en 72h',delivery_en:'Delivered in 72h',items_es:['Logo y manual de marca','5,000 seguidores + 10 posts','Factura y business card','Web One Page','Panel admin con CRM'],items_en:['Logo and brand guidelines','5,000 followers + 10 posts','Invoice and business card','One Page website','Admin panel with CRM'],wa:'Paquete Avanzado Profesional'},
   ],
   sys:[
     {name_es:'Sistema a Medida',name_en:'Custom System',desc_es:'Panel admin, facturación, app web...',desc_en:'Admin panel, billing, web app...',price:'A consultar',delivery_es:'Plazo según proyecto',delivery_en:'Timeline per project',items_es:['Análisis de requerimientos','Diseño de solución','Desarrollo personalizado','Soporte post-entrega'],items_en:['Requirements analysis','Solution design','Custom development','Post-delivery support'],wa:'Sistema Personalizado'},
@@ -402,7 +399,7 @@ SCOPE — You ONLY discuss topics related to:
 - Web design and development
 - Graphic design and branding
 - Social media management and growth
-- E-commerce and online stores
+- Websites and online stores (built by DGP)
 - Entrepreneurship and business growth
 - DGP Global Group services and pricing
 
@@ -411,8 +408,7 @@ If asked anything outside this scope, politely say you specialize in digital mar
 DGP GLOBAL GROUP SERVICES & PRICING:
 WEB DESIGN: Landing Page from $280 one-time (24-48h delivery) | Standard Site up to 5 pages from $455 one-time | Premium Site with catalog or bookings from $950 one-time.
 GRAPHIC DESIGN: Logo & Visual Identity from $111 | Business Card from $26 | Social Media Posts/Flyers from $15 each.
-PACKAGES: Basic (logo + social setup) from $124 | Intermediate (logo + followers + posts) from $221 | Advanced (full package + website) from $553.
-E-COMMERCE: Multi-platform management (Amazon, Walmart, TikTok Shop, Shopify, eBay) from $750 — ONE-TIME payment, not monthly.
+PACKAGES (one-time): Basic $320 (logo, brand guidelines, social media review, 1,000 followers, business card; 48h) | Intermediate $480 (adds 3,000 followers and 10 Instagram posts; 72h) | Advanced $840 (5,000 followers, 10 posts, invoice and business card design, One Page website, admin panel with CRM; 72h).
 CUSTOM SYSTEMS: CRM, admin panels, inventory, custom software — custom quote.
 CONTACT: WhatsApp +1 (239) 823-1738 | Email dgpgroup.usa@gmail.com | Website dgpglobalgroup.com | Instagram @dgpgroup.us
 
@@ -422,7 +418,7 @@ GUIDELINES:
 3. Give real, valuable advice — educate first, then guide toward the service.
 4. Never invent services or prices not listed above.
 5. If someone seems interested, suggest contacting via WhatsApp or the contact form on the site.
-6. The e-commerce plan is a ONE-TIME payment, never describe it as monthly or recurring.`;
+6. DGP no longer offers marketplace management (Amazon, Walmart, TikTok Shop, eBay). If asked, explain that we focus on websites, custom systems and branding packages, and offer a website with an online store instead.`;
 
 let altairHistory=[];
 let altairOpen=false;
@@ -808,7 +804,7 @@ document.querySelectorAll('form.lead-form').forEach(form=>{
 
 /* Old one-page anchors now live on their own pages */
 (function(){
-  const moved={'#web':'/diseno-web/','#paquetes':'/paquetes/','#ecommerce':'/ecommerce/','#sistemas':'/sistemas/'};
+  const moved={'#web':'/diseno-web/','#paquetes':'/paquetes/','#ecommerce':'/paquetes/','#sistemas':'/sistemas/'};
   if(location.pathname==='/'&&moved[location.hash])location.replace(moved[location.hash]);
 })();
 

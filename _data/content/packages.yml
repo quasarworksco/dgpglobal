@@ -4,12 +4,12 @@ hero:
   eyebrow_en: Branding · Social media
   title_es: TU MARCA LISTA<span class="accent">PARA CRECER</span>
   title_en: YOUR BRAND READY<span class="accent">TO GROW</span>
-  sub_es: Combina servicios y ahorra. Logo profesional, redes sociales configuradas, seguidores y contenido para que tu negocio arranque con todo.
-  sub_en: Bundle services and save. Professional logo, social media setup, followers and content so your business launches with everything it needs.
+  sub_es: Logo profesional, manual de marca, redes sociales revisadas, seguidores y contenido para que tu negocio arranque con todo. Desde $320.
+  sub_en: Professional logo, brand guidelines, social media review, followers and content so your business launches with everything it needs. From $320.
   chips:
   - icon: fa-solid fa-bolt
-    es: Entrega en 48h
-    en: 48h delivery
+    es: Entrega en 48–72h
+    en: 48–72h delivery
   - icon: fa-solid fa-pen-nib
     es: Logo profesional
     en: Professional logo
@@ -18,17 +18,17 @@ hero:
     en: Social media ready to sell
 faq:
 - q_es: ¿Qué incluye el Paquete Básico?
-  a_es: Logo profesional, creación de tus redes sociales, historias destacadas y bio, y tarjeta de presentación.
+  a_es: Logo profesional, manual de marca, revisión de tus redes sociales, 1,000 seguidores y tarjeta de presentación, por $320 con entrega en 48 horas.
   q_en: What does the Basic Package include?
-  a_en: Professional logo, social media setup, story highlights and bio, and a business card.
+  a_en: Professional logo, brand guidelines, social media review, 1,000 followers and a business card, for $320 delivered in 48 hours.
 - q_es: ¿Cuál es la diferencia entre los paquetes?
-  a_es: El Intermedio incluye todo el Básico más 2,000 seguidores y 5 posts para Instagram. El Avanzado suma factura y business card, 5,000 seguidores con 10 posts y una web One Page.
+  a_es: El Intermedio ($480) incluye lo del Básico con 3,000 seguidores y 10 posts para Instagram. El Avanzado ($840) suma 5,000 seguidores, diseño de factura y business card, una web One Page y un panel de administración con CRM.
   q_en: What is the difference between the packages?
-  a_en: Intermediate includes everything in Basic plus 2,000 followers and 5 Instagram posts. Advanced adds invoice and business card design, 5,000 followers with 10 posts and a One Page website.
+  a_en: Intermediate ($480) includes everything in Basic with 3,000 followers and 10 Instagram posts. Advanced ($840) adds 5,000 followers, invoice and business card design, a One Page website and an admin panel with CRM.
 - q_es: ¿Cuánto cuesta cada paquete?
-  a_es: Usa el cotizador rápido para ver el estimado de cada paquete al instante, o escríbenos por WhatsApp y te asesoramos para elegir el que más te conviene.
+  a_es: 'Básico: $320. Intermedio: $480. Avanzado: $840. Es un pago único; escríbenos por WhatsApp y te ayudamos a elegir el que más te conviene.'
   q_en: How much does each package cost?
-  a_en: Use the quick quote tool to see each package estimate instantly, or message us on WhatsApp and we'll help you choose the right one.
+  a_en: 'Basic: $320. Intermediate: $480. Advanced: $840. One-time payment; message us on WhatsApp and we will help you choose the right one.'
 - q_es: ¿Cómo se hace el pago?
   a_es: Aceptamos tarjeta de crédito, PayPal y Zelle.
   q_en: How do I pay?
