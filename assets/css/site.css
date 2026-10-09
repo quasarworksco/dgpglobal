@@ -1244,3 +1244,12 @@ nav{padding:18px 52px}
 /* Rendimiento: títulos con degradado fijo (sin animar el fondo, que obliga a repintar en cada cuadro) */
 .hero-title .shine,.sec-title .accent,.page-hero-title .accent,.hero2-title .accent{animation:none!important;background-position:0% center!important}
 .card::before{animation:none!important}
+/* Página de aterrizaje de anuncios: botones fijos en celular */
+.lp-sticky{display:none}
+@media(max-width:760px){
+  .lp-sticky{display:flex;gap:8px;position:fixed;left:12px;right:12px;bottom:12px;z-index:120}
+  .lp-sticky a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;border-radius:12px;font:600 14px 'DM Sans',sans-serif;color:#fff;text-decoration:none;box-shadow:0 10px 24px rgba(0,0,0,.18)}
+  .lp-wa{background:#25d366}.lp-ms{background:#0866ff}
+  body:has(.lp-sticky) #wa-fab,body:has(.lp-sticky) #altair-fab,body:has(.lp-sticky) .top-ctrl{display:none}
+  body:has(.lp-sticky) footer{padding-bottom:90px}
+}

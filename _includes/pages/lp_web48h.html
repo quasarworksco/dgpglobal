@@ -1,0 +1,38 @@
+{% include page-hero.html %}
+
+<!-- PORTAFOLIO: prueba real primero -->
+<div class="section">
+  <div class="reveal">
+    {% if page.lang == 'es' %}<div class="sec-eyebrow" data-es>Trabajo real</div>{% endif %}{% if page.lang == 'en' %}<div class="sec-eyebrow" data-en>Real work</div>{% endif %}
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>NEGOCIOS QUE YA <span class="accent">VENDEN CON SU WEB</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>BUSINESSES ALREADY <span class="accent">SELLING ONLINE</span></span>{% endif %}</h2>
+  </div>
+  <div class="port-grid">
+    {% assign i = 0 %}{% for p in site.data.portfolio %}{% if p.slug == 'appliance-solutions-901' or p.slug == 'mq-store' or p.slug == 'ava-multiservices' or p.slug == 'caibo-construction' %}{% include port-tile.html p=p i=i %}{% assign i = i | plus: 1 %}{% endif %}{% endfor %}
+  </div>
+</div>
+
+{% include web-plans.html %}
+
+{% include process.html %}
+
+<!-- RESEÑAS -->
+<div class="section" id="resenas">
+  <div class="reveal" style="text-align:center;margin-bottom:28px">
+    {% if page.lang == 'es' %}<div class="sec-eyebrow" style="justify-content:center;display:flex" data-es>Clientes reales</div>{% endif %}{% if page.lang == 'en' %}<div class="sec-eyebrow" style="justify-content:center;display:flex" data-en>Real clients</div>{% endif %}
+    <h2 class="sec-title" style="text-align:center">{% if page.lang == 'es' %}<span data-es>LO QUE DICEN DE <span class="accent">NOSOTROS</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>WHAT CLIENTS <span class="accent">SAY</span></span>{% endif %}</h2>
+  </div>
+  <div class="card reveal" style="padding:0">
+    <div class="panel-head"><div style="display:flex;align-items:center;gap:12px">{% if page.lang == 'es' %}<span class="panel-title" data-es>OPINIONES</span>{% endif %}{% if page.lang == 'en' %}<span class="panel-title" data-en>REVIEWS</span>{% endif %}<span class="rev-count" id="revCount">...</span></div></div>
+    <div class="reviews-collapsible open" id="revCollapsible"><div class="reviews-scroll" id="revContainer"><div class="shimmer"></div></div></div>
+  </div>
+</div>
+
+{% include faq.html %}
+
+{% if page.lang == 'en' %}{% include contact-section.html campana="Meta ad · Website in 48h" %}{% else %}{% include contact-section.html campana="Anuncio Meta · Web en 48h" %}{% endif %}
+
+<!-- Botones fijos en celular: escribir sin buscar -->
+<div class="lp-sticky">
+  <a href="https://wa.me/12398231738?text={% if page.lang == 'en' %}Hi%20DGP!%20I%20saw%20your%20ad%20and%20I%20want%20my%20website%20in%2048%20hours.{% else %}Hola%20DGP!%20Vi%20su%20anuncio%20y%20quiero%20mi%20p%C3%A1gina%20web%20en%2048%20horas.{% endif %}" target="_blank" rel="noopener" class="lp-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+  <a href="https://m.me/823496920849508" target="_blank" rel="noopener" class="lp-ms"><i class="fa-brands fa-facebook-messenger"></i> Messenger</a>
+</div>

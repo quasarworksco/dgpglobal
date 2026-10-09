@@ -1,0 +1,45 @@
+hero:
+  bg_word: 48H
+  eyebrow_es: Diseño web profesional · Florida
+  eyebrow_en: Professional web design · Florida
+  title_es: TU PÁGINA WEB<span class="accent">LISTA EN 48 HORAS</span>
+  title_en: YOUR WEBSITE<span class="accent">LIVE IN 48 HOURS</span>
+  sub_es: Profesional, en español e inglés y pensada para que tus clientes te escriban. Desde $280 en un solo pago, sin mensualidades obligatorias.
+  sub_en: Professional, in English and Spanish, and built so customers reach out to you. From $280 one-time, no required monthly fees.
+  cta:
+    href: '#contacto'
+    icon: fa-solid fa-paper-plane
+    es: QUIERO MI PÁGINA WEB
+    en: I WANT MY WEBSITE
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24–48h
+    en: Live in 24–48h
+  - icon: fa-solid fa-tag
+    es: Desde $280 pago único
+    en: From $280 one-time
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: English & Spanish
+  - icon: fa-brands fa-whatsapp
+    es: WhatsApp incluido
+    en: WhatsApp included
+faq:
+- q_es: ¿De verdad está lista en 48 horas?
+  a_es: Sí. El Plan Básico (landing page) se entrega en 24–48 horas desde que recibimos el anticipo y tu información (logo, textos, fotos y datos del negocio). Los planes con más páginas toman de 2 a 5 días.
+  q_en: Is it really live in 48 hours?
+  a_en: Yes. The Basic Plan (landing page) is delivered in 24–48 hours once we receive the deposit and your information (logo, copy, photos and business details). Plans with more pages take 2 to 5 days.
+- q_es: ¿Cómo se paga?
+  a_es: 50% para empezar y 50% al terminar, antes de publicar. Aceptamos tarjeta, PayPal y Zelle.
+  q_en: How do I pay?
+  a_en: 50% to start and 50% when it's finished, before going live. We accept card, PayPal and Zelle.
+- q_es: ¿Y si no tengo logo ni textos?
+  a_es: Te ayudamos. Podemos escribir los textos contigo y, si lo necesitas, crear tu identidad visual (logo y manual de marca) desde $185.
+  q_en: What if I don't have a logo or copy?
+  a_en: We help you. We can write the copy with you and, if you need it, create your visual identity (logo and brand guidelines) from $185.
+- q_es: ¿Puedo ver trabajos reales?
+  a_es: Sí, más abajo tienes páginas que ya hicimos para negocios en Florida y otros estados. Todas están en línea.
+  q_en: Can I see real work?
+  a_en: Yes, below you'll find websites we've built for businesses in Florida and other states. They're all live.
+crumb_es: Página web en 48 horas
+crumb_en: Website in 48 hours

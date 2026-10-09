@@ -9,6 +9,8 @@ partners:  {es: "/aliados/",          en: "/en/partners/"}
 # Legal pages
 privacy: {es: "/privacidad/", en: "/en/privacy/", legal: true}
 terms: {es: "/terminos/", en: "/en/terms/", legal: true}
+# Ads landing page (not linked, not in the sitemap, noindex)
+lp_web48h: {es: "/web-48h/", en: "/en/website-48h/", hidden: true}
 # Private order page for approved partners: not linked, not in the sitemap, noindex
 partner_order: {es: "/aliados/pedido/", en: "/en/partners/order/", hidden: true}
 # Industry landing pages
