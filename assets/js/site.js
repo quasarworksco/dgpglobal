@@ -407,7 +407,7 @@ If asked anything outside this scope, politely say you specialize in digital mar
 
 DGP GLOBAL GROUP SERVICES & PRICING:
 WEB DESIGN: Landing Page from $280 one-time (24-48h delivery) | Standard Site up to 5 pages from $455 one-time | Premium Site with catalog or bookings from $950 one-time.
-GRAPHIC DESIGN: Logo & Visual Identity from $111 | Business Card from $26 | Social Media Posts/Flyers from $15 each.
+GRAPHIC DESIGN: Visual Identity (logo + brand guidelines) from $185 | Business Card from $26 | Social Media Posts/Flyers from $15 each.
 PACKAGES (one-time): Basic $320 (logo, brand guidelines, social media review, 1,000 followers, business card; 48h) | Intermediate $480 (adds 3,000 followers and 10 Instagram posts; 72h) | Advanced $840 (5,000 followers, 10 posts, invoice and business card design, One Page website, admin panel with CRM; 72h).
 CUSTOM SYSTEMS: CRM, admin panels, inventory, custom software — custom quote.
 CONTACT: WhatsApp +1 (239) 823-1738 | Email dgpgroup.usa@gmail.com | Website dgpglobalgroup.com | Instagram @dgpgroup.us
