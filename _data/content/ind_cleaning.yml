@@ -62,7 +62,7 @@ es:
   - Sección de reseñas y garantía
   - Galería de antes y después
   - Versión en español e inglés si atiendes ambos públicos
-  plan: 'El Plan Estándar (hasta 5 páginas) es el más usado por compañías de limpieza: inicio, servicios, zonas, reseñas y contacto, con WhatsApp y 6 meses de hosting.'
+  plan: 'El Plan Estándar (hasta 5 páginas) es el más usado por compañías de limpieza: inicio, servicios, zonas, reseñas y contacto, con WhatsApp y formulario.'
 en:
   name: Cleaning companies
   needs:
@@ -85,5 +85,5 @@ en:
   - Reviews and guarantee section
   - Before & after gallery
   - Spanish and English versions if you serve both audiences
-  plan: 'The Standard Plan (up to 5 pages) is the most popular with cleaning companies: home, services, areas, reviews and contact, with WhatsApp and 6 months of hosting.'
+  plan: 'The Standard Plan (up to 5 pages) is the most popular with cleaning companies: home, services, areas, reviews and contact, with WhatsApp and a contact form.'
 guide: guide_cleaning_site

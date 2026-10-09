@@ -49,5 +49,5 @@ faq:
     a_en: "No. There is no sign-up fee and no minimum number of projects."
 prices:
   - {plan_es: "Plan Básico", plan_en: "Basic Plan", desc_es: "Landing page + código QR · 24–48h", desc_en: "Landing page + QR code · 24–48h", regular: "$280", partner: "$210", profit: "$70"}
-  - {plan_es: "Plan Estándar", plan_en: "Standard Plan", desc_es: "Hasta 5 páginas, WhatsApp, formulario, 6 meses de hosting · 2–3 días", desc_en: "Up to 5 pages, WhatsApp, contact form, 6-month hosting · 2–3 days", regular: "$455", partner: "$341.25", profit: "$113.75"}
+  - {plan_es: "Plan Estándar", plan_en: "Standard Plan", desc_es: "Hasta 5 páginas, WhatsApp, formulario · 2–3 días", desc_en: "Up to 5 pages, WhatsApp, contact form · 2–3 days", regular: "$455", partner: "$341.25", profit: "$113.75"}
   - {plan_es: "Plan Premium", plan_en: "Premium Plan", desc_es: "Catálogo o reservas, SEO + Analytics, 12 meses de hosting · 4–5 días", desc_en: "Catalog or bookings, SEO + Analytics, 12-month hosting · 4–5 days", regular: "$950", partner: "$712.50", profit: "$237.50"}

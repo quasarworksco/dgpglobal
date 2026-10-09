@@ -261,8 +261,8 @@ if(mainForm){
 /* ── QUOTE CALCULATOR ── */
 const QUOTE_DATA={
   web:[
-    {name_es:'Plan Básico',name_en:'Basic Plan',desc_es:'Landing Page + QR Code',desc_en:'Landing Page + QR Code',price:'$280',delivery_es:'Entrega en 24–48h',delivery_en:'Delivered in 24–48h',items_es:['Landing Page profesional','Código QR a tu sitio','Diseño responsive'],items_en:['Professional landing page','QR Code to your site','Responsive design'],wa:'Plan Básico de Sitio Web'},
-    {name_es:'Plan Estándar',name_en:'Standard Plan',desc_es:'Hasta 5 páginas + Hosting 6 meses',desc_en:'Up to 5 pages + 6-month hosting',price:'$455',delivery_es:'Entrega en 2–3 días',delivery_en:'Delivered in 2–3 days',items_es:['Sitio multi-página (hasta 5)','Botón de WhatsApp','Formulario de contacto','Mantenimiento 6 meses'],items_en:['Multi-page site (up to 5)','WhatsApp button','Contact form','6-month maintenance'],wa:'Plan Estándar de Sitio Web'},
+    {name_es:'Plan Básico',name_en:'Basic Plan',desc_es:'Landing Page + QR Code',desc_en:'Landing Page + QR Code',price:'$280',delivery_es:'Entrega en 24–48h',delivery_en:'Delivered in 24–48h',items_es:['Landing Page profesional','Código QR a tu sitio','Diseño responsive','Dominio .dgp-link.com gratis'],items_en:['Professional landing page','QR Code to your site','Responsive design','Free .dgp-link.com domain'],wa:'Plan Básico de Sitio Web'},
+    {name_es:'Plan Estándar',name_en:'Standard Plan',desc_es:'Hasta 5 páginas + Dominio gratis',desc_en:'Up to 5 pages + Free domain',price:'$455',delivery_es:'Entrega en 2–3 días',delivery_en:'Delivered in 2–3 days',items_es:['Sitio multi-página (hasta 5)','Botón de WhatsApp','Formulario de contacto','Dominio .dgp-link.com gratis'],items_en:['Multi-page site (up to 5)','WhatsApp button','Contact form','Free .dgp-link.com domain'],wa:'Plan Estándar de Sitio Web'},
     {name_es:'Plan Premium',name_en:'Premium Plan',desc_es:'Catálogo/Reservas + Hosting 12 meses',desc_en:'Catalog/Bookings + 12-month hosting',price:'$950',delivery_es:'Entrega en 4–5 días',delivery_en:'Delivered in 4–5 days',items_es:['Sitio completo con catálogo','Kit Social Premium','SEO Optimizado + Analytics','Mantenimiento 12 meses'],items_en:['Full site with catalog','Premium Social Kit','SEO + Analytics','12-month maintenance'],wa:'Plan Premium de Sitio Web'},
   ],
   pack:[
@@ -404,7 +404,7 @@ SCOPE — You ONLY discuss topics related to:
 If asked anything outside this scope, politely say you specialize in digital marketing and business topics, and redirect to how you can help.
 
 DGP GLOBAL GROUP SERVICES & PRICING:
-WEB DESIGN: Landing Page from $280 one-time (24-48h delivery) | Standard Site up to 5 pages from $455 one-time | Premium Site with catalog or bookings from $950 one-time.
+WEB DESIGN: Landing Page from $280 one-time (24-48h delivery) | Standard Site up to 5 pages from $455 one-time (hosting billed separately, from $25/month) | Premium Site with catalog or bookings from $950 one-time (includes 12 months of hosting). Every plan includes a free subdomain like yourbusiness.dgp-link.com.
 GRAPHIC DESIGN: Visual Identity (logo + brand guidelines) from $185 | Business Card from $26 | Social Media Posts/Flyers from $15 each.
 PACKAGES (one-time): Basic $320 (logo, brand guidelines, social media review, 1,000 followers, business card; 48h) | Intermediate $480 (adds 3,000 followers and 10 Instagram posts; 72h) | Advanced $840 (5,000 followers, 10 posts, invoice and business card design, One Page website, admin panel with CRM; 72h).
 CUSTOM SYSTEMS: CRM, admin panels, inventory, custom software — custom quote.
