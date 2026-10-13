@@ -51,6 +51,9 @@ for (const p of projects) {
     const dMeta = await sharp(desktop).metadata(), mMeta = await sharp(mobile).metadata();
     await sharp(desktop).extract({ left: 0, top: 0, width: dMeta.width, height: Math.min(dMeta.height, Math.round(dMeta.width * 0.625)) }).resize({ width: 960 }).webp({ quality: 70 }).toFile(`${dir}/desktop-hero.webp`);
     await sharp(mobile).extract({ left: 0, top: 0, width: mMeta.width, height: Math.min(mMeta.height, Math.round(mMeta.width * 19.5 / 9)) }).resize({ width: 360 }).webp({ quality: 72 }).toFile(`${dir}/mobile-hero.webp`);
+    // Versiones pequeñas para celulares (srcset del inicio)
+    await sharp(`${dir}/desktop-hero.webp`).resize({ width: 480 }).webp({ quality: 70 }).toFile(`${dir}/desktop-hero-480.webp`);
+    await sharp(`${dir}/mobile-hero.webp`).resize({ width: 180 }).webp({ quality: 72 }).toFile(`${dir}/mobile-hero-180.webp`);
     console.log(`ok   ${p.slug}`);
   } catch (err) {
     failures++;
