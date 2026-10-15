@@ -6,6 +6,7 @@ systems:   {es: "/sistemas/",         en: "/en/custom-systems/"}
 portfolio: {es: "/portafolio/",       en: "/en/portfolio/"}
 audit:     {es: "/auditoria-gratis/", en: "/en/free-audit/"}
 partners:  {es: "/aliados/",          en: "/en/partners/"}
+llc:       {es: "/registro-de-empresas/", en: "/en/business-registration/"}
 # Legal pages
 privacy: {es: "/privacidad/", en: "/en/privacy/", legal: true}
 terms: {es: "/terminos/", en: "/en/terms/", legal: true}

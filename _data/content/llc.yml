@@ -1,0 +1,44 @@
+crumb_es: Registro de Empresas
+crumb_en: Business Registration
+service:
+  name_es: Registro de Empresas (LLC), EIN y Perfil Empresarial
+  name_en: Business Registration (LLC), EIN and Business Profile
+  type: Business formation and web presence
+hero:
+  bg_word: LLC
+  eyebrow_es: Registro de empresas · Todo EE. UU.
+  eyebrow_en: Business registration · All U.S. states
+  title_es: ABRE TU EMPRESA<span class="accent">Y SAL A VENDER</span>
+  title_en: START YOUR COMPANY<span class="accent">AND START SELLING</span>
+  sub_es: Registramos tu LLC y tu EIN en cualquier estado de la mano de aliados especializados, y te entregamos la página web y el perfil de Google para que consigas clientes desde el primer día.
+  sub_en: We register your LLC and EIN in any state with specialized partners, and deliver your website and Google profile so you can land customers from day one.
+  cta:
+    href: '#paquetes'
+    icon: fa-solid fa-building-circle-check
+    es: VER PAQUETES
+    en: SEE PACKAGES
+faq:
+  - q_es: ¿En qué estado puedo registrar mi empresa?
+    a_es: En cualquier estado de EE. UU. Nuestros aliados especializados hacen el trámite a distancia. Si no sabes cuál te conviene, te orientamos antes de empezar.
+    q_en: In which state can I register my company?
+    a_en: In any U.S. state. Our specialized partners handle the filing remotely. If you are not sure which state is best for you, we guide you before starting.
+  - q_es: ¿Por qué los aranceles del estado van aparte?
+    a_es: Cada estado cobra su propia tarifa de registro y es distinta en cada uno. Te la decimos antes de empezar, sin sorpresas, y se paga antes de presentar el trámite.
+    q_en: Why are state fees charged separately?
+    a_en: Each state charges its own filing fee, and it differs from state to state. We tell you the exact amount before starting, with no surprises, and it is paid before the filing.
+  - q_es: ¿Necesito número de Seguro Social para el EIN?
+    a_es: Con número de Seguro Social el EIN suele salir rápido. Con ITIN o sin número también se puede solicitar, pero el IRS tarda más. Te explicamos el caso tuyo al cotizar.
+    q_en: Do I need a Social Security number for the EIN?
+    a_en: With a Social Security number the EIN is usually issued quickly. With an ITIN or no number it can still be requested, but the IRS takes longer. We explain your case when quoting.
+  - q_es: ¿Qué incluye el paquete Despegue Total?
+    a_es: El registro de tu LLC, el EIN, una página web profesional (landing page), dominio .com por un año, hosting por un año y la configuración de tu perfil de Google Business. Es todo lo que necesitas para abrir y empezar a vender.
+    q_en: What does the Despegue Total package include?
+    a_en: Your LLC registration, EIN, a professional website (landing page), a .com domain for one year, one year of hosting and your Google Business Profile setup. It is everything you need to open and start selling.
+  - q_es: ¿Qué es el perfil empresarial?
+    a_es: Es la preparación inicial de tu empresa ante los burós de crédito comerciales (Dun & Bradstreet y Experian Business), con orientación para empezar con proveedores que reportan crédito. Es una base para construir crédito de empresa; no se garantiza puntuación ni aprobación.
+    q_en: What is the business profile?
+    a_en: It is the initial setup of your company with the business credit bureaus (Dun & Bradstreet and Experian Business), with guidance to start with vendors that report credit. It is a foundation to build business credit; no score or approval is guaranteed.
+  - q_es: ¿Ustedes dan asesoría legal o fiscal?
+    a_es: No. El registro lo realizan aliados especializados y nosotros nos encargamos de tu página web y presencia en Google. Para asesoría legal o de impuestos te recomendamos consultar con un profesional.
+    q_en: Do you provide legal or tax advice?
+    a_en: No. The registration is handled by specialized partners and we take care of your website and Google presence. For legal or tax advice, we recommend consulting a professional.
