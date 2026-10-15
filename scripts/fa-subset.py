@@ -33,7 +33,9 @@ base = '''.fa,.fa-solid,.fa-regular,.fa-brands{-moz-osx-font-smoothing:grayscale
 @font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:block;src:url(fa-brands-400.woff2) format("woff2")}
 '''
 rules = ''.join(f'.fa-{n}::before{{content:"\\{icon_rules[n]}"}}\n' for n in found)
-(out / 'fa.css').write_text('/* Font Awesome Free 6.5.1 subset — https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1) */\n' + base + rules)
+# Jekyll procesa este archivo para poner la versión del sitio en las fuentes: si cambian los íconos, el navegador baja la fuente nueva
+base = base.replace('.woff2)', '.woff2?v={{ site.time | date: "%s" }})')
+(out / 'fa.css').write_text('---\n---\n/* Font Awesome Free 6.5.1 subset — https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1) */\n' + base + rules)
 
 for font in ('fa-solid-900', 'fa-regular-400', 'fa-brands-400'):
     opts = subset.Options(); opts.flavor = 'woff2'; opts.layout_features = []; opts.notdef_outline = True
