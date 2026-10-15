@@ -14,7 +14,7 @@ const views = [
 ];
 
 async function capture(url, view) {
-  const ctx = await browser.newContext({ ...view.context, locale: 'es-US' });
+  const ctx = await browser.newContext({ ...view.context, locale: 'es-US', ignoreHTTPSErrors: true });   // sitios recién conectados pueden tardar en tener su certificado
   const page = await ctx.newPage();
   try {
     await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 }).catch(() => {});

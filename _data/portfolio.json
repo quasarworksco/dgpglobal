@@ -199,5 +199,23 @@
     "desc_en": "Store for pure water, wellness and home technology at The Florida Mall, Orlando: catalog by category, product search and demo requests.",
     "url": "https://mqstore.dgp-link.com/",
     "slug": "mq-store"
+  },
+  {
+    "num": "12",
+    "title": "CASANOVA CAR CARE",
+    "tags_es": [
+      "Taller Mecánico",
+      "Automotriz",
+      "Landing Page"
+    ],
+    "tags_en": [
+      "Auto Repair",
+      "Automotive",
+      "Landing Page"
+    ],
+    "desc_es": "Sitio web para taller mecánico: mecánica general, aire acondicionado, frenos y electricidad automotriz, con proceso claro, presupuesto antes de reparar y citas por WhatsApp.",
+    "desc_en": "Website for an auto repair shop: general mechanics, A/C, brakes and auto electrical, with a clear process, estimates before any repair and WhatsApp booking.",
+    "url": "https://casanovacarcare.com/",
+    "slug": "casanova-car-care"
   }
 ]
