@@ -7,7 +7,6 @@
 @font-face{font-family:"Font Awesome 6 Free";font-style:normal;font-weight:400;font-display:block;src:url(fa-regular-400.woff2) format("woff2")}
 @font-face{font-family:"Font Awesome 6 Brands";font-style:normal;font-weight:400;font-display:block;src:url(fa-brands-400.woff2) format("woff2")}
 .fa-address-card::before{content:"\f2bb"}
-.fa-amazon::before{content:"\f270"}
 .fa-arrow-down::before{content:"\f063"}
 .fa-arrow-left::before{content:"\f060"}
 .fa-arrow-right::before{content:"\f061"}
@@ -20,6 +19,7 @@
 .fa-briefcase::before{content:"\f0b1"}
 .fa-broom::before{content:"\f51a"}
 .fa-building::before{content:"\f1ad"}
+.fa-building-circle-check::before{content:"\e4d2"}
 .fa-building-columns::before{content:"\f19c"}
 .fa-calculator::before{content:"\f1ec"}
 .fa-calendar-check::before{content:"\f274"}
@@ -39,13 +39,13 @@
 .fa-comments::before{content:"\f086"}
 .fa-credit-card::before{content:"\f09d"}
 .fa-earth-americas::before{content:"\f57d"}
-.fa-ebay::before{content:"\f4f4"}
 .fa-envelope::before{content:"\f0e0"}
 .fa-facebook-f::before{content:"\f39e"}
+.fa-facebook-messenger::before{content:"\f39f"}
 .fa-file-circle-check::before{content:"\e5a0"}
 .fa-file-invoice-dollar::before{content:"\f571"}
 .fa-file-pen::before{content:"\f31c"}
-.fa-file-shield::before{content:"\e4f0"}
+.fa-file-signature::before{content:"\f573"}
 .fa-fire::before{content:"\f06d"}
 .fa-flag-usa::before{content:"\f74d"}
 .fa-gauge-high::before{content:"\f625"}
@@ -66,7 +66,7 @@
 .fa-id-card::before{content:"\f2c2"}
 .fa-images::before{content:"\f302"}
 .fa-instagram::before{content:"\f16d"}
-.fa-key::before{content:"\f084"}
+.fa-landmark::before{content:"\f66f"}
 .fa-language::before{content:"\f1ab"}
 .fa-laptop::before{content:"\f109"}
 .fa-laptop-code::before{content:"\f5fc"}
@@ -84,6 +84,7 @@
 .fa-paper-plane::before{content:"\f1d8"}
 .fa-pen::before{content:"\f304"}
 .fa-pen-nib::before{content:"\f5ad"}
+.fa-pen-ruler::before{content:"\f5ae"}
 .fa-percent::before{content:"\25"}
 .fa-phone::before{content:"\f095"}
 .fa-plane-arrival::before{content:"\f5af"}
@@ -93,17 +94,18 @@
 .fa-receipt::before{content:"\f543"}
 .fa-robot::before{content:"\f544"}
 .fa-rocket::before{content:"\f135"}
+.fa-scale-balanced::before{content:"\f24e"}
 .fa-screwdriver-wrench::before{content:"\f7d9"}
 .fa-seedling::before{content:"\f4d8"}
 .fa-server::before{content:"\f233"}
 .fa-share-nodes::before{content:"\f1e0"}
 .fa-shield-halved::before{content:"\f3ed"}
-.fa-shopify::before{content:"\e057"}
 .fa-sliders::before{content:"\f1de"}
 .fa-stamp::before{content:"\f5bf"}
 .fa-star::before{content:"\f005"}
 .fa-store::before{content:"\f54e"}
 .fa-sun::before{content:"\f185"}
+.fa-tag::before{content:"\f02b"}
 .fa-tags::before{content:"\f02c"}
 .fa-tiktok::before{content:"\e07b"}
 .fa-triangle-exclamation::before{content:"\f071"}
