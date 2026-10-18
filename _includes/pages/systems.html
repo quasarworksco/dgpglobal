@@ -8,12 +8,12 @@
   </div>
   {% include crm-banner.html %}
   <div class="sistemas-grid">
-    <div class="sis-card reveal" onclick="scrollToContact()" style="transition-delay:0s">
+    <div class="sis-card reveal" onclick="location.href='{{ site.data.routes.crm[page.lang] }}'" style="transition-delay:0s">
       <div class="sis-icon"><i class="fa-solid fa-sliders"></i></div>
-      {% if page.lang == 'es' %}<div class="sis-name" data-es>PANEL DE ADMINISTRACIÓN</div>{% endif %}{% if page.lang == 'en' %}<div class="sis-name" data-en>ADMIN DASHBOARD</div>{% endif %}
-      {% if page.lang == 'es' %}<p class="sis-desc" data-es>Paneles de control a medida para gestionar tu negocio, empleados, inventario o clientes desde cualquier dispositivo.</p>{% endif %}
-      {% if page.lang == 'en' %}<p class="sis-desc" data-en>Custom control panels to manage your business, employees, inventory or customers from any device.</p>{% endif %}
-      <div class="sis-footer">{% if page.lang == 'es' %}<span class="sis-tag" data-es>A cotización</span>{% endif %}{% if page.lang == 'en' %}<span class="sis-tag" data-en>By quote</span>{% endif %}<i class="fa-solid fa-arrow-right sis-arrow"></i></div>
+      {% if page.lang == 'es' %}<div class="sis-name" data-es>PANEL DE ADMINISTRACIÓN Y CRM</div>{% endif %}{% if page.lang == 'en' %}<div class="sis-name" data-en>ADMIN DASHBOARD & CRM</div>{% endif %}
+      {% if page.lang == 'es' %}<p class="sis-desc" data-es>Gestiona clientes, ventas, cobros, tareas y tu equipo desde un solo panel, en computadora o celular.</p>{% endif %}
+      {% if page.lang == 'en' %}<p class="sis-desc" data-en>Manage customers, sales, payments, tasks and your team from one dashboard, on desktop or phone.</p>{% endif %}
+      <div class="sis-footer">{% if page.lang == 'es' %}<span class="sis-tag" data-es>CRM desde $997</span>{% endif %}{% if page.lang == 'en' %}<span class="sis-tag" data-en>CRM from $997</span>{% endif %}<i class="fa-solid fa-arrow-right sis-arrow"></i></div>
     </div>
     <div class="sis-card reveal" onclick="scrollToContact()" style="transition-delay:.2s">
       <div class="sis-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>

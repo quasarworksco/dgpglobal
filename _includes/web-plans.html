@@ -6,7 +6,7 @@
     {% if page.lang == 'es' %}<p class="sec-sub" data-es>Elige el plan que mejor se adapta a tu negocio. Todos incluyen soporte y entrega en tiempo récord.</p>{% endif %}
     {% if page.lang == 'en' %}<p class="sec-sub" data-en>Choose the plan that best fits your business. All include support and record-time delivery.</p>{% endif %}
   </div>
-  <div class="web-plans" style="margin-top:48px">
+  <div class="web-plans{% if include.crm %} plans-4{% endif %}" style="margin-top:48px">
     <div class="plan-card reveal" style="transition-delay:0s">
       <div class="plan-head h1"><div class="plan-label">Plan 01</div>{% if page.lang == 'es' %}<div class="plan-name" data-es>BÁSICO</div>{% endif %}{% if page.lang == 'en' %}<div class="plan-name" data-en>BASIC</div>{% endif %}</div>
       <div class="plan-body">
@@ -52,6 +52,22 @@
         <a href="https://wa.me/12398231738?text=Hola%20DGP%20Group,%20quiero%20el%20Plan%20Premium." target="_blank" class="btn-sm" style="width:100%;justify-content:space-between">{% if page.lang == 'es' %}<span data-es>Contratar plan</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Get this plan</span>{% endif %}<span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
       </div>
     </div>
+    {% if include.crm %}<div class="plan-card reveal" style="transition-delay:.36s">
+      <div class="plan-head h4"><div class="plan-label">Plan 04 · {% if page.lang == 'es' %}<span data-es>Software</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Software</span>{% endif %}</div><div class="plan-name">{% if page.lang == 'es' %}<span data-es>CRM A MEDIDA</span>{% endif %}{% if page.lang == 'en' %}<span data-en>CUSTOM CRM</span>{% endif %}</div></div>
+      <div class="plan-body">
+        <div class="plan-price">${{ site.data.content.crm.service.price }}<em>{% if page.lang == 'es' %}<span data-es>pago único</span>{% endif %}{% if page.lang == 'en' %}<span data-en>one-time</span>{% endif %}</em></div>
+        <div class="delivery-badge"><i class="fa-solid fa-table-columns"></i>{% if page.lang == 'es' %}<span data-es>Entrega en 5–7 días</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Delivered in 5–7 days</span>{% endif %}</div>
+        <div class="plan-div"></div>
+        <ul class="feat-list">
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Clientes, prospectos y embudo de ventas</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Customers, leads and sales pipeline</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Agenda, tareas y cobros con recibos</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Calendar, tasks and payments with receipts</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Equipo con roles y permisos</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Team with roles and permissions</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Formularios de tu web conectados</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Your website forms connected</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>WhatsApp, llamadas y SMS (opcional)</span>{% endif %}{% if page.lang == 'en' %}<span data-en>WhatsApp, calls and SMS (optional)</span>{% endif %}</li>
+        </ul>
+        <a href="{{ site.data.routes.crm[page.lang] }}" class="btn-sm" style="width:100%;justify-content:space-between">{% if page.lang == 'es' %}<span data-es>Ver el CRM</span>{% endif %}{% if page.lang == 'en' %}<span data-en>See the CRM</span>{% endif %}<span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>{% endif %}
   </div>
 </div>
 
