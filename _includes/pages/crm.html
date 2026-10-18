@@ -32,6 +32,45 @@
 
 <hr class="divider">
 
+<!-- ASÍ SE VE -->
+{% assign m = d.mock[page.lang] %}<div class="section" id="demo">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Así se ve</span>{% endif %}{% if page.lang == 'en' %}<span data-en>What it looks like</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>TU TABLERO <span class="accent">CADA MAÑANA</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>YOUR DASHBOARD <span class="accent">EVERY MORNING</span></span>{% endif %}</h2>
+    <p class="sec-sub">{% if page.lang == 'es' %}<span data-es>Al entrar ves cómo va tu negocio, en qué etapa está cada cliente y qué tienes pendiente hoy.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>As soon as you log in you see how the business is doing, where each customer stands and what is due today.</span>{% endif %}</p>
+  </div>
+  <div class="crm-mock reveal" aria-label="{{ m.note }}">
+    <div class="mk-bar"><span class="mk-dots"><i></i><i></i><i></i></span><span class="mk-url"><i class="fa-solid fa-shield-halved"></i>{{ m.url }}</span></div>
+    <div class="mk-app">
+      <div class="mk-side">
+        <div class="mk-logo"><span>TN</span></div>
+        {% for item in m.menu %}<div class="mk-nav{% if forloop.first %} on{% endif %}">{{ item }}</div>{% endfor %}
+      </div>
+      <div class="mk-main">
+        <div class="mk-head"><div><div class="mk-hello">{{ m.hello }}</div><div class="mk-sub">{{ m.sub }}</div></div><div class="mk-search"><i class="fa-solid fa-magnifying-glass"></i>Ctrl + K</div></div>
+        <div class="mk-kpis">
+          {% for k in m.kpis %}<div class="mk-kpi"><div class="mk-kl">{{ k[0] }}</div><div class="mk-kv">{{ k[1] }}</div><div class="mk-kd">{{ k[2] }}</div></div>{% endfor %}
+        </div>
+        <div class="mk-grid">
+          <div class="mk-panel">
+            <div class="mk-pt">{{ m.pipe_title }}</div>
+            <div class="mk-cols">
+              {% for c in m.cols %}<div class="mk-col c{{ forloop.index }}"><div class="mk-ch">{{ c.name }}<span>{{ c.cards | size }}</span></div>{% for card in c.cards %}<div class="mk-card"><b>{{ card[0] }}</b><small>{{ card[1] }}</small></div>{% endfor %}</div>{% endfor %}
+            </div>
+          </div>
+          <div class="mk-panel">
+            <div class="mk-pt">{{ m.today_title }}</div>
+            {% for t in m.today %}<div class="mk-task"><span class="mk-check"></span><span class="mk-tt">{{ t[0] }}</span><span class="mk-tag">{{ t[1] }}</span></div>{% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="crm-mock-note reveal">{{ m.note }}</p>
+</div>
+
+<hr class="divider">
+
 <!-- MÓDULOS INCLUIDOS -->
 <div class="section" id="modulos">
   <div class="reveal">

@@ -203,3 +203,58 @@ cases:
   t_en: SERVICE OFFICE
   es: Crédito, taxes, LLC e inmigración, cada uno con sus etapas y plazos; bandeja de WhatsApp, Instagram y Facebook, citas en línea, contratos con firma, portal del cliente y cobros con tarjeta.
   en: Credit repair, taxes, LLCs and immigration, each with its own stages and deadlines; WhatsApp, Instagram and Facebook inbox, online booking, e-signed contracts, a client portal and card payments.
+mock:
+  es:
+    url: tunegocio.com/panel
+    menu: [Inicio, Clientes, Embudo, Agenda, Cobros, Reportes, Equipo]
+    hello: Buenos días, Laura
+    sub: Lunes · datos de ejemplo
+    kpis:
+    - [Clientes activos, '128', +14 este mes]
+    - [Cobrado este mes, '$8,450', '$1,900 por cobrar']
+    - [Citas esta semana, '23', 6 para hoy]
+    - [Cierre de ventas, 32%, +5% vs. mes pasado]
+    pipe_title: Embudo de ventas
+    cols:
+    - name: Nuevo
+      cards: [[María G., Llamar hoy 10:30], [Carlos R., Formulario web]]
+    - name: Contactado
+      cards: [[José P., 'Intento 3/12'], [Ana T., WhatsApp]]
+    - name: Cita
+      cards: [[Luis M., Mié 3:00 p. m.]]
+    - name: Venta
+      cards: [[Sofía V., '$650 · pagado']]
+    today_title: Para hoy
+    today:
+    - [Llamar a María G. para confirmar cita, '10:30']
+    - [Cobrar segunda cuota a Luis M., '$150']
+    - [Enviar contrato a José P. por WhatsApp, Equipo]
+    - [Seguimiento a 4 prospectos vencidos, Alta]
+    note: Vista ilustrativa con datos de ejemplo. Tu CRM lleva tus colores, tu logo y tus servicios.
+  en:
+    url: yourbusiness.com/panel
+    menu: [Home, Customers, Pipeline, Calendar, Payments, Reports, Team]
+    hello: Good morning, Laura
+    sub: Monday · sample data
+    kpis:
+    - [Active customers, '128', +14 this month]
+    - [Collected this month, '$8,450', '$1,900 outstanding']
+    - [Appointments this week, '23', 6 today]
+    - [Close rate, 32%, +5% vs. last month]
+    pipe_title: Sales pipeline
+    cols:
+    - name: New
+      cards: [[Maria G., Call today 10:30], [Carlos R., Website form]]
+    - name: Contacted
+      cards: [[Jose P., 'Attempt 3/12'], [Ana T., WhatsApp]]
+    - name: Appointment
+      cards: [[Luis M., Wed 3:00 PM]]
+    - name: Sold
+      cards: [[Sofia V., '$650 · paid']]
+    today_title: Today
+    today:
+    - [Call Maria G. to confirm appointment, '10:30']
+    - [Collect second installment from Luis M., '$150']
+    - [Send contract to Jose P. via WhatsApp, Team]
+    - [Follow up on 4 overdue leads, High]
+    note: Illustrative view with sample data. Your CRM carries your colors, logo and services.
