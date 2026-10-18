@@ -1,0 +1,12 @@
+<!-- CRM A MEDIDA -->
+<a href="{{ site.data.routes.crm[page.lang] }}" class="sis-hero crm-banner reveal">
+  <div class="sis-hero-text">
+    <div class="sis-hero-eyebrow">{% if page.lang == 'es' %}<span data-es>Nuevo · Software a medida</span>{% endif %}{% if page.lang == 'en' %}<span data-en>New · Custom software</span>{% endif %}</div>
+    <div class="sis-hero-title">{% if page.lang == 'es' %}<span data-es>CRM A MEDIDA<br><span>TODO TU NEGOCIO EN UN PANEL</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>CUSTOM CRM<br><span>YOUR WHOLE BUSINESS IN ONE DASHBOARD</span></span>{% endif %}</div>
+    <p class="sis-hero-sub">{% if page.lang == 'es' %}<span data-es>Clientes, embudo de ventas, cobros, tareas y equipo con permisos. Se conecta con WhatsApp, Instagram, Twilio, Square y Stripe.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Customers, sales pipeline, payments, tasks and team permissions. Connects with WhatsApp, Instagram, Twilio, Square and Stripe.</span>{% endif %}</p>
+  </div>
+  <div class="crm-banner-price">
+    <div class="plan-price">${{ site.data.content.crm.service.price }}<em>{% if page.lang == 'es' %}<span data-es>pago único</span>{% endif %}{% if page.lang == 'en' %}<span data-en>one-time</span>{% endif %}</em></div>
+    <span class="btn-main">{% if page.lang == 'es' %}<span data-es>VER EL CRM</span>{% endif %}{% if page.lang == 'en' %}<span data-en>SEE THE CRM</span>{% endif %}<span class="arr"><i class="fa-solid fa-arrow-right"></i></span></span>
+  </div>
+</a>

@@ -6,6 +6,7 @@
     {% if page.lang == 'es' %}<div class="sec-eyebrow" data-es>Lo más pedido</div>{% endif %}{% if page.lang == 'en' %}<div class="sec-eyebrow" data-en>Most requested</div>{% endif %}
     <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>SISTEMAS <span class="accent">PERSONALIZADOS</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>CUSTOM <span class="accent">SYSTEMS</span></span>{% endif %}</h2>
   </div>
+  {% include crm-banner.html %}
   <div class="sistemas-grid">
     <div class="sis-card reveal" onclick="scrollToContact()" style="transition-delay:0s">
       <div class="sis-icon"><i class="fa-solid fa-sliders"></i></div>

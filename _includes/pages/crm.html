@@ -1,0 +1,172 @@
+{% assign d = site.data.content.crm %}{% include page-hero.html %}
+
+<!-- PRECIO -->
+<div class="section" id="precio">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Un solo precio</span>{% endif %}{% if page.lang == 'en' %}<span data-en>One price</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>TU CRM, <span class="accent">SIN MENSUALIDADES</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>YOUR CRM, <span class="accent">NO SUBSCRIPTIONS</span></span>{% endif %}</h2>
+    <p class="sec-sub">{% if page.lang == 'es' %}<span data-es>Lo construimos para tu negocio con módulos que ya funcionan en empresas reales. Pagas una vez y el sistema es tuyo.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>We build it for your business with modules already running in real companies. You pay once and the system is yours.</span>{% endif %}</p>
+  </div>
+  <div class="crm-price" style="margin-top:48px">
+    <div class="plan-card pop reveal">
+      <div class="plan-head h2"><div class="plan-label">{% if page.lang == 'es' %}<span data-es>Software a medida</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Custom software</span>{% endif %}</div><div class="plan-name">{% if page.lang == 'es' %}<span data-es>CRM A MEDIDA</span>{% endif %}{% if page.lang == 'en' %}<span data-en>CUSTOM CRM</span>{% endif %}</div></div>
+      <div class="plan-body">
+        <div class="plan-price">${{ d.service.price }}<em>{% if page.lang == 'es' %}<span data-es>pago único</span>{% endif %}{% if page.lang == 'en' %}<span data-en>one-time</span>{% endif %}</em></div>
+        <div class="delivery-badge"><i class="fa-solid fa-calendar-check"></i>{% if page.lang == 'es' %}<span data-es>Entrega en 5–7 días</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Delivered in 5–7 days</span>{% endif %}</div>
+        <div class="plan-div"></div>
+        <ul class="feat-list">
+          {% for f in d.plan[page.lang] %}<li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>{{ f }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ f }}</span>{% endif %}</li>
+          {% endfor %}
+        </ul>
+        <a href="{% if page.lang == 'es' %}https://wa.me/12398231738?text=Hola%20DGP%20Global%20Group%2C%20quiero%20el%20CRM%20a%20medida%20de%20%24997.{% else %}https://wa.me/12398231738?text=Hi%20DGP%20Global%20Group%2C%20I%20want%20the%20%24997%20custom%20CRM.{% endif %}" target="_blank" rel="noopener" class="btn-sm" style="width:100%;justify-content:space-between">{% if page.lang == 'es' %}<span data-es>Quiero mi CRM</span>{% endif %}{% if page.lang == 'en' %}<span data-en>I want my CRM</span>{% endif %}<span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+    <div class="crm-demo reveal" style="transition-delay:.12s">
+      <div class="sis-hero-eyebrow">{% if page.lang == 'es' %}<span data-es>Antes de decidir</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Before you decide</span>{% endif %}</div>
+      <div class="sis-hero-title">{% if page.lang == 'es' %}<span data-es>MIRA UNA DEMO<br><span>EN VIDEOLLAMADA</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>SEE A DEMO<br><span>ON A VIDEO CALL</span></span>{% endif %}</div>
+      <p class="sis-hero-sub">{% if page.lang == 'es' %}<span data-es>Los CRM que hacemos guardan información privada de cada negocio, así que no los publicamos. Te mostramos uno con datos de ejemplo y te decimos cómo quedaría el tuyo.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>The CRMs we build hold each business's private data, so we don't publish them. We show you one with sample data and explain how yours would look.</span>{% endif %}</p>
+      <a href="{% if page.lang == 'es' %}https://wa.me/12398231738?text=Hola%20DGP%20Global%20Group%2C%20quiero%20ver%20una%20demo%20del%20CRM.{% else %}https://wa.me/12398231738?text=Hi%20DGP%20Global%20Group%2C%20I%27d%20like%20to%20see%20a%20CRM%20demo.{% endif %}" target="_blank" rel="noopener" class="btn-main"><i class="fa-brands fa-whatsapp"></i>{% if page.lang == 'es' %}<span data-es>PEDIR UNA DEMO</span>{% endif %}{% if page.lang == 'en' %}<span data-en>BOOK A DEMO</span>{% endif %}<span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- MÓDULOS INCLUIDOS -->
+<div class="section" id="modulos">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Incluido en los ${{ d.service.price }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Included in the ${{ d.service.price }}</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>12 MÓDULOS <span class="accent">LISTOS PARA TRABAJAR</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>12 MODULES <span class="accent">READY TO WORK</span></span>{% endif %}</h2>
+  </div>
+  <div class="feat-grid">
+    {% for m in d.modules %}<div class="feat-card reveal" style="transition-delay:{{ forloop.index0 | modulo: 6 | times: 0.06 }}s">
+      <div class="feat-card-icon"><i class="{{ m.icon }}"></i></div>
+      <div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>{{ m.t_es }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ m.t_en }}</span>{% endif %}</div>
+      <p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>{{ m.es }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ m.en }}</span>{% endif %}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- MÓDULOS AVANZADOS E INTEGRACIONES -->
+<div class="section" id="integraciones">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Se agregan según tu negocio</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Added to fit your business</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>MÓDULOS AVANZADOS <span class="accent">E INTEGRACIONES</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>ADVANCED MODULES <span class="accent">& INTEGRATIONS</span></span>{% endif %}</h2>
+    <p class="sec-sub">{% if page.lang == 'es' %}<span data-es>Todo esto ya lo hemos construido y conectado. Se cotiza aparte según lo que necesites, y el uso de cada servicio externo se paga directamente al proveedor.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>We have already built and connected all of this. It is quoted separately based on what you need, and each third-party service's usage is paid directly to the provider.</span>{% endif %}</p>
+  </div>
+  <div class="feat-grid">
+    {% for m in d.addons %}<div class="feat-card reveal" style="transition-delay:{{ forloop.index0 | modulo: 6 | times: 0.06 }}s">
+      <div class="feat-card-icon"><i class="{{ m.icon }}"></i></div>
+      <div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>{{ m.t_es }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ m.t_en }}</span>{% endif %}</div>
+      <p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>{{ m.es }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ m.en }}</span>{% endif %}</p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="crm-logos reveal">
+    <span>WhatsApp Business</span><span>Messenger</span><span>Instagram</span><span>Meta Ads</span><span>Twilio</span><span>Square</span><span>Stripe</span><span>Google Calendar</span><span>Supabase</span><span>Firebase</span><span>Cloudinary</span>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- YA FUNCIONA EN -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Probado en negocios reales</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Proven in real businesses</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>YA LO USAN <span class="accent">TODOS LOS DÍAS</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>ALREADY IN <span class="accent">DAILY USE</span></span>{% endif %}</h2>
+    <p class="sec-sub">{% if page.lang == 'es' %}<span data-es>Dos ejemplos de CRM que hemos entregado. Por privacidad no mostramos nombres ni pantallas.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Two examples of CRMs we have delivered. For privacy we don't show names or screens.</span>{% endif %}</p>
+  </div>
+  <div class="sistemas-grid crm-cases">
+    {% for c in d.cases %}<div class="sis-card reveal" style="cursor:default;transition-delay:{{ forloop.index0 | times: 0.12 }}s">
+      <div class="sis-icon"><i class="{{ c.icon }}"></i></div>
+      <div class="sis-name">{% if page.lang == 'es' %}<span data-es>{{ c.t_es }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ c.t_en }}</span>{% endif %}</div>
+      <p class="sis-desc">{% if page.lang == 'es' %}<span data-es>{{ c.es }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ c.en }}</span>{% endif %}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- PROCESO -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Así trabajamos</span>{% endif %}{% if page.lang == 'en' %}<span data-en>How we work</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>DE TU EXCEL <span class="accent">A TU CRM</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>FROM SPREADSHEET <span class="accent">TO CRM</span></span>{% endif %}</h2>
+  </div>
+  <div class="process-steps llc-steps" style="margin-top:40px">
+    <div class="process-step reveal" style="transition-delay:0.00s">
+      <div class="step-num">01</div>
+      <div class="step-icon"><i class="fa-solid fa-comments"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>CUÉNTANOS</span>{% endif %}{% if page.lang == 'en' %}<span data-en>TELL US</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>Nos explicas tus servicios, cómo vendes, cómo cobras y quién hace qué en tu equipo.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Walk us through your services, how you sell, how you get paid and who does what on your team.</span>{% endif %}</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.12s">
+      <div class="step-num">02</div>
+      <div class="step-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>LO ARMAMOS</span>{% endif %}{% if page.lang == 'en' %}<span data-en>WE BUILD IT</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>Adaptamos etapas, campos y permisos a tu negocio, con tus colores y tu logo.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>We tailor stages, fields and permissions to your business, with your colors and logo.</span>{% endif %}</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.24s">
+      <div class="step-num">03</div>
+      <div class="step-icon"><i class="fa-solid fa-file-import"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>MIGRAMOS</span>{% endif %}{% if page.lang == 'en' %}<span data-en>WE MIGRATE</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>Pasamos tus clientes desde Excel o CSV y conectamos los formularios de tu sitio.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>We move your customers over from Excel or CSV and connect your website forms.</span>{% endif %}</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.36s">
+      <div class="step-num">04</div>
+      <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>A TRABAJAR</span>{% endif %}{% if page.lang == 'en' %}<span data-en>GO LIVE</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>Te capacitamos a ti y a tu equipo, y ajustamos lo que haga falta durante 30 días.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>We train you and your team, and adjust whatever is needed for 30 days.</span>{% endif %}</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- DETALLES -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Sin sorpresas</span>{% endif %}{% if page.lang == 'en' %}<span data-en>No surprises</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>DETALLES <span class="accent">IMPORTANTES</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>IMPORTANT <span class="accent">DETAILS</span></span>{% endif %}</h2>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card reveal" style="transition-delay:0.00s">
+      <div class="feat-card-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+      <div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>FORMA DE PAGO</span>{% endif %}{% if page.lang == 'en' %}<span data-en>PAYMENT</span>{% endif %}</div>
+      <p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>50% para comenzar y 50% al entregarte el CRM funcionando.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>50% to start and 50% when your CRM is delivered and working.</span>{% endif %}</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.06s">
+      <div class="feat-card-icon"><i class="fa-solid fa-database"></i></div>
+      <div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>TU BASE DE DATOS</span>{% endif %}{% if page.lang == 'en' %}<span data-en>YOUR DATABASE</span>{% endif %}</div>
+      <p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>Queda a tu nombre. El plan gratis sirve para empezar; el profesional, con respaldos diarios, cuesta unos $25 al mes y lo pagas al proveedor.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>It is in your name. The free plan works to start; the professional plan, with daily backups, runs about $25 a month, paid to the provider.</span>{% endif %}</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.12s">
+      <div class="feat-card-icon"><i class="fa-solid fa-receipt"></i></div>
+      <div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>SERVICIOS EXTERNOS</span>{% endif %}{% if page.lang == 'en' %}<span data-en>THIRD-PARTY SERVICES</span>{% endif %}</div>
+      <p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>Minutos de llamadas, mensajes de WhatsApp y comisiones de pago se pagan por uso a cada proveedor. Te los explicamos antes de conectarlos.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Call minutes, WhatsApp messages and payment fees are paid per use to each provider. We explain them before connecting anything.</span>{% endif %}</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.18s">
+      <div class="feat-card-icon"><i class="fa-solid fa-user-plus"></i></div>
+      <div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>MÁS USUARIOS</span>{% endif %}{% if page.lang == 'en' %}<span data-en>MORE USERS</span>{% endif %}</div>
+      <p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>Incluye hasta 3 usuarios. Si tu equipo es más grande, sumamos los que necesites con sus propios permisos.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Up to 3 users are included. If your team is bigger, we add as many as you need, each with their own permissions.</span>{% endif %}</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.24s">
+      <div class="feat-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+      <div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>SEGURIDAD</span>{% endif %}{% if page.lang == 'en' %}<span data-en>SECURITY</span>{% endif %}</div>
+      <p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>Conexión segura, permisos revisados en la base de datos y ninguna contraseña ni clave en el código.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Secure connection, permissions enforced in the database, and no passwords or keys in the code.</span>{% endif %}</p>
+    </div>
+    <div class="feat-card reveal" style="transition-delay:0.30s">
+      <div class="feat-card-icon"><i class="fa-solid fa-layer-group"></i></div>
+      <div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>CRECE CONTIGO</span>{% endif %}{% if page.lang == 'en' %}<span data-en>GROWS WITH YOU</span>{% endif %}</div>
+      <p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>Puedes sumar módulos avanzados e integraciones después, sin rehacer nada.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>You can add advanced modules and integrations later without rebuilding anything.</span>{% endif %}</p>
+    </div>
+  </div>
+</div>
+
+{% include faq.html %}
+
+{% include contact-section.html campana="CRM a medida" servicio="crm" %}

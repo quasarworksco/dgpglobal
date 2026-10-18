@@ -23,6 +23,7 @@
             {% if page.lang == 'es' %}<option data-es>Diseño Web</option>{% endif %}{% if page.lang == 'en' %}<option data-en>Web Design</option>{% endif %}
             {% if page.lang == 'es' %}<option data-es>Marketing Digital</option>{% endif %}{% if page.lang == 'en' %}<option data-en>Digital Marketing</option>{% endif %}
             {% if page.lang == 'es' %}<option data-es>Diseño Gráfico / Logo</option>{% endif %}{% if page.lang == 'en' %}<option data-en>Graphic Design / Logo</option>{% endif %}
+            {% if page.lang == 'es' %}<option data-es{% if include.servicio == 'crm' %} selected{% endif %}>CRM a Medida</option>{% endif %}{% if page.lang == 'en' %}<option data-en{% if include.servicio == 'crm' %} selected{% endif %}>Custom CRM</option>{% endif %}
             {% if page.lang == 'es' %}<option data-es>Sistema Personalizado</option>{% endif %}{% if page.lang == 'en' %}<option data-en>Custom System</option>{% endif %}
             {% if page.lang == 'es' %}<option data-es>Paquete Completo</option>{% endif %}{% if page.lang == 'en' %}<option data-en>Full Package</option>{% endif %}
             {% if page.lang == 'es' %}<option data-es{% if include.servicio == 'llc' %} selected{% endif %}>Registro de Empresa (LLC)</option>{% endif %}{% if page.lang == 'en' %}<option data-en{% if include.servicio == 'llc' %} selected{% endif %}>Business Registration (LLC)</option>{% endif %}

@@ -1,0 +1,205 @@
+crumb_es: CRM a Medida
+crumb_en: Custom CRM
+service:
+  name_es: CRM a Medida para Negocios
+  name_en: Custom CRM for Businesses
+  type: Custom CRM software development
+  price: 997
+hero:
+  bg_word: CRM
+  eyebrow_es: CRM a medida · $997 pago único
+  eyebrow_en: Custom CRM · $997 one-time
+  title_es: TODO TU NEGOCIO<span class="accent">EN UN SOLO PANEL</span>
+  title_en: YOUR WHOLE BUSINESS<span class="accent">IN ONE DASHBOARD</span>
+  sub_es: Clientes, prospectos, ventas, cobros, tareas y tu equipo, organizados en un CRM hecho para tu forma de trabajar. Sin mensualidades de programas de terceros y con tus datos en tu propia base de datos.
+  sub_en: Customers, leads, sales, payments, tasks and your team, organized in a CRM built around the way you work. No third-party software subscriptions, and your data lives in your own database.
+  cta:
+    href: '#precio'
+    icon: fa-solid fa-table-columns
+    es: VER QUÉ INCLUYE
+    en: SEE WHAT'S INCLUDED
+  chips:
+  - icon: fa-solid fa-code
+    es: Hecho a tu medida
+    en: Built for your business
+  - icon: fa-solid fa-mobile-screen
+    es: Computadora y celular
+    en: Desktop and mobile
+  - icon: fa-solid fa-shield-halved
+    es: Tus datos son tuyos
+    en: Your data is yours
+faq:
+- q_es: ¿Qué incluye el CRM de $997?
+  a_es: El tablero de inicio, clientes y prospectos, embudo de ventas, etapas por servicio, agenda y tareas con avisos, cobros con recibos en PDF, documentos privados, reportes, usuarios con roles y permisos, los formularios de tu sitio web conectados y la búsqueda rápida. También la migración de tu Excel, hasta 3 usuarios, la capacitación y 30 días de ajustes.
+  q_en: What does the $997 CRM include?
+  a_en: The home dashboard, customers and leads, sales pipeline, stages per service, calendar and tasks with reminders, payments with PDF receipts, private documents, reports, users with roles and permissions, your website forms connected and quick search. It also includes importing your spreadsheet, up to 3 users, training and 30 days of adjustments.
+- q_es: ¿Es un programa con mensualidad, como HubSpot o GoHighLevel?
+  a_es: No. Es tu propio sistema, hecho a medida y con pago único. La base de datos queda a tu nombre; sus planes empiezan gratis y los profesionales cuestan unos $25 al mes, que pagas directamente al proveedor.
+  q_en: Is it a subscription software like HubSpot or GoHighLevel?
+  a_en: No. It is your own system, custom-built with a one-time payment. The database is in your name; plans start free and professional plans run about $25 a month, paid directly to the provider.
+- q_es: ¿Se puede conectar con WhatsApp, Instagram o un teléfono?
+  a_es: Sí. Ya lo hemos conectado con WhatsApp Business, Messenger, Instagram, leads de Meta Ads, llamadas con Twilio, pagos con Square y Stripe, Google Calendar y un asistente con IA. Cada integración se cotiza según tu negocio, y el uso (mensajes, minutos o comisiones) se paga directamente a cada proveedor.
+  q_en: Can it connect to WhatsApp, Instagram or a phone line?
+  a_en: Yes. We have already connected it to WhatsApp Business, Messenger, Instagram, Meta Ads leads, Twilio calling, Square and Stripe payments, Google Calendar and an AI assistant. Each integration is quoted for your business, and usage (messages, minutes or fees) is paid directly to each provider.
+- q_es: ¿Por qué no muestran ejemplos de clientes?
+  a_es: Porque cada CRM guarda información privada de los clientes de cada negocio. En una videollamada te mostramos una demo con datos de ejemplo para que veas cómo funciona.
+  q_en: Why don't you show client examples?
+  a_en: Because every CRM holds private data about each business's customers. On a video call we show you a demo with sample data so you can see how it works.
+- q_es: ¿Cuánto tarda y cómo se paga?
+  a_es: Lo entregamos en 5 a 7 días desde que recibimos tu información. Se paga 50% para comenzar y 50% al entregarlo funcionando.
+  q_en: How long does it take and how do I pay?
+  a_en: We deliver it in 5 to 7 days after we receive your information. You pay 50% to start and 50% when it is delivered and working.
+- q_es: ¿Mi equipo puede usarlo con permisos distintos?
+  a_es: Sí. Cada persona entra con su propio correo y contraseña, y tú decides qué ve y qué puede hacer. Por ejemplo, un agente solo ve sus clientes y no ve montos. Los permisos se revisan en la base de datos, no solo en la pantalla.
+  q_en: Can my team use it with different permissions?
+  a_en: Yes. Each person signs in with their own email and password, and you decide what they see and do. For example, an agent sees only their own customers and no amounts. Permissions are enforced in the database, not just on screen.
+plan:
+  es:
+  - Tablero, clientes, embudo y cobros (los 12 módulos de abajo)
+  - Etapas y campos adaptados a tus servicios
+  - Hasta 3 usuarios con roles y permisos
+  - Formularios de tu sitio web conectados al CRM
+  - Migración de tus clientes desde Excel o CSV
+  - Capacitación por videollamada y guía de uso
+  - 30 días de ajustes sin costo
+  en:
+  - Dashboard, customers, pipeline and payments (the 12 modules below)
+  - Stages and fields tailored to your services
+  - Up to 3 users with roles and permissions
+  - Your website forms connected to the CRM
+  - Import of your customers from Excel or CSV
+  - Training by video call and user guide
+  - 30 days of free adjustments
+modules:
+- icon: fa-solid fa-gauge-high
+  t_es: TABLERO DE INICIO
+  t_en: HOME DASHBOARD
+  es: Ventas, cobros, saldos pendientes, meta del mes y la lista «Para hoy» con tareas y vencimientos.
+  en: Sales, payments, pending balances, monthly goal and a "Today" list with tasks and deadlines.
+- icon: fa-solid fa-address-book
+  t_es: CLIENTES Y PROSPECTOS
+  t_en: CUSTOMERS & LEADS
+  es: Una ficha por cliente con todo su historial, notas, etiquetas, fuente y quién lo refirió. Aviso si ya existe.
+  en: One profile per customer with full history, notes, tags, source and referrer. Warns you about duplicates.
+- icon: fa-solid fa-table-columns
+  t_es: EMBUDO DE VENTAS
+  t_en: SALES PIPELINE
+  es: Tablero por etapas donde arrastras cada tarjeta, con su último contacto, intentos y próximo seguimiento.
+  en: Drag-and-drop board by stage, showing the last contact, attempts and next follow-up on each card.
+- icon: fa-solid fa-diagram-project
+  t_es: ETAPAS POR SERVICIO
+  t_en: STAGES PER SERVICE
+  es: Cada servicio con su propio camino, responsable y fecha de entrega. Lo armamos con tu forma de trabajar.
+  en: Each service with its own path, owner and due date. We set it up around the way you work.
+- icon: fa-solid fa-calendar-check
+  t_es: AGENDA Y TAREAS
+  t_en: CALENDAR & TASKS
+  es: Citas, seguimientos y tareas asignadas a tu equipo, con avisos a la hora y etiqueta de vencidas.
+  en: Appointments, follow-ups and tasks assigned to your team, with on-time reminders and overdue labels.
+- icon: fa-solid fa-file-invoice-dollar
+  t_es: COBROS Y RECIBOS
+  t_en: PAYMENTS & RECEIPTS
+  es: Pagos por método, abonos, saldos por antigüedad y recibos en PDF listos para enviar.
+  en: Payments by method, installments, aging balances and PDF receipts ready to send.
+- icon: fa-solid fa-folder-open
+  t_es: DOCUMENTOS PRIVADOS
+  t_en: PRIVATE DOCUMENTS
+  es: Archivos de cada cliente en carpetas privadas que se abren con un enlace temporal.
+  en: Each customer's files in private storage, opened through a link that expires.
+- icon: fa-solid fa-users-gear
+  t_es: EQUIPO Y PERMISOS
+  t_en: TEAM & PERMISSIONS
+  es: Roles como administrador, supervisor o agente; tú decides quién ve montos y datos sensibles.
+  en: Roles such as admin, supervisor or agent; you decide who sees amounts and sensitive data.
+- icon: fa-solid fa-chart-line
+  t_es: REPORTES
+  t_en: REPORTS
+  es: Rendimiento por vendedor, fuentes que más venden, motivos de pérdida e ingresos por servicio.
+  en: Performance per salesperson, best-selling sources, loss reasons and revenue per service.
+- icon: fa-solid fa-globe
+  t_es: TU SITIO WEB CONECTADO
+  t_en: YOUR WEBSITE CONNECTED
+  es: Cada formulario de tu página entra solo como prospecto y te llega un aviso por correo.
+  en: Every form on your website comes in as a new lead and you get an email alert.
+- icon: fa-solid fa-magnifying-glass
+  t_es: BÚSQUEDA RÁPIDA
+  t_en: QUICK SEARCH
+  es: Encuentra cualquier cliente, teléfono o recibo en un segundo, e importa o exporta a Excel.
+  en: Find any customer, phone number or receipt in a second, and import or export to Excel.
+- icon: fa-solid fa-clock-rotate-left
+  t_es: REGISTRO DE ACTIVIDAD
+  t_en: ACTIVITY LOG
+  es: Sabes quién creó, editó o eliminó cada cosa y cuándo. Funciona en computadora, tablet y celular.
+  en: See who created, edited or deleted each record and when. Works on desktop, tablet and phone.
+addons:
+- icon: fa-brands fa-whatsapp
+  t_es: BANDEJA ÚNICA
+  t_en: UNIFIED INBOX
+  es: WhatsApp Business, Messenger e Instagram en un solo lugar, con aviso de mensaje nuevo y filtro «Sin responder».
+  en: WhatsApp Business, Messenger and Instagram in one place, with new-message alerts and an "Unanswered" filter.
+- icon: fa-brands fa-meta
+  t_es: LEADS DE META ADS
+  t_en: META ADS LEADS
+  es: Los formularios de tus anuncios de Facebook e Instagram entran solos al CRM como prospectos.
+  en: Lead forms from your Facebook and Instagram ads flow straight into the CRM.
+- icon: fa-solid fa-headset
+  t_es: TELÉFONO Y MODO LLAMADAS
+  t_en: PHONE & CALL MODE
+  es: Llama desde el computador con Twilio, cola de marcación, guion, resultado de cada llamada y productividad por agente.
+  en: Call from your computer with Twilio, with a dial queue, script, call outcomes and productivity per agent.
+- icon: fa-solid fa-credit-card
+  t_es: PAGOS EN LÍNEA
+  t_en: ONLINE PAYMENTS
+  es: Enlaces de pago con Square o Stripe y mensualidades; cada pago se registra solo en Cobros.
+  en: Square or Stripe payment links and monthly plans; every payment is logged automatically.
+- icon: fa-solid fa-calendar-days
+  t_es: CITAS EN LÍNEA
+  t_en: ONLINE BOOKING
+  es: Tus clientes reservan solos desde tu sitio y tú ves la agenda en el CRM y en Google Calendar.
+  en: Customers book on their own from your website and you see the calendar in the CRM and Google Calendar.
+- icon: fa-solid fa-file-signature
+  t_es: CONTRATOS CON FIRMA
+  t_en: E-SIGNED CONTRACTS
+  es: Envías el contrato por WhatsApp y el cliente lo firma desde su celular.
+  en: Send the contract over WhatsApp and the customer signs it from their phone.
+- icon: fa-solid fa-user-lock
+  t_es: PORTAL DEL CLIENTE
+  t_en: CLIENT PORTAL
+  es: Tu cliente entra a ver el avance de su caso y su saldo, paga, firma y te sube documentos.
+  en: Your customer logs in to check their case and balance, pay, sign and upload documents.
+- icon: fa-solid fa-bullhorn
+  t_es: CAMPAÑAS Y AVISOS
+  t_en: CAMPAIGNS & ALERTS
+  es: Mensajes por grupo y avisos automáticos de recordatorio, cambio de etapa y pedido de reseña.
+  en: Group messages and automatic reminders, stage-change notices and review requests.
+- icon: fa-solid fa-robot
+  t_es: ASISTENTE CON IA
+  t_en: AI ASSISTANT
+  es: Lee la conversación, detecta qué servicio busca el cliente y te sugiere una respuesta. Nunca envía nada solo.
+  en: Reads the conversation, detects which service the customer wants and suggests a reply. It never sends on its own.
+- icon: fa-solid fa-boxes-stacked
+  t_es: PRODUCTOS Y COMISIONES
+  t_en: PRODUCTS & COMMISSIONS
+  es: Catálogo con stock y alertas, pedidos con descuento e impuesto, y comisión automática por venta.
+  en: Catalog with stock alerts, orders with discounts and tax, and automatic commission per sale.
+- icon: fa-solid fa-user-plus
+  t_es: RECLUTAMIENTO
+  t_en: RECRUITING
+  es: Candidatos con etapas, entrevistas y seguimientos, separados de tus clientes. Importa desde Indeed.
+  en: Candidates with stages, interviews and follow-ups, kept apart from customers. Imports from Indeed.
+- icon: fa-solid fa-store
+  t_es: SITIO Y TIENDA EDITABLES
+  t_en: EDITABLE SITE & STORE
+  es: Cambia precios, productos, anuncios, testimonios y preguntas de tu página desde el mismo panel.
+  en: Change prices, products, announcements, testimonials and FAQs on your website from the same dashboard.
+cases:
+- icon: fa-solid fa-headset
+  t_es: EQUIPO DE VENTAS POR TELÉFONO
+  t_en: PHONE SALES TEAM
+  es: Agentes que llaman todo el día con teléfono integrado, cola de marcación priorizada, hasta 12 intentos por prospecto, citas y demostraciones, ventas con comisión, cartera y productividad hora por hora.
+  en: Agents calling all day with a built-in phone, a prioritized dial queue, up to 12 attempts per lead, appointments and demos, sales with commission, collections and hour-by-hour productivity.
+- icon: fa-solid fa-briefcase
+  t_es: OFICINA DE SERVICIOS
+  t_en: SERVICE OFFICE
+  es: Crédito, taxes, LLC e inmigración, cada uno con sus etapas y plazos; bandeja de WhatsApp, Messenger e Instagram, citas en línea, contratos con firma, portal del cliente y cobros con tarjeta.
+  en: Credit repair, taxes, LLCs and immigration, each with its own stages and deadlines; WhatsApp, Messenger and Instagram inbox, online booking, e-signed contracts, a client portal and card payments.

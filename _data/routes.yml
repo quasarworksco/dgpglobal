@@ -3,6 +3,7 @@ home:      {es: "/",                  en: "/en/"}
 web:       {es: "/diseno-web/",       en: "/en/web-design/"}
 packages:  {es: "/paquetes/",         en: "/en/packages/"}
 systems:   {es: "/sistemas/",         en: "/en/custom-systems/"}
+crm:       {es: "/sistemas/crm/",     en: "/en/custom-systems/crm/"}
 portfolio: {es: "/portafolio/",       en: "/en/portfolio/"}
 audit:     {es: "/auditoria-gratis/", en: "/en/free-audit/"}
 partners:  {es: "/aliados/",          en: "/en/partners/"}

@@ -1,6 +1,7 @@
 // Renders the social share images (1200x630) for every page and language into assets/og/<ref>-<lang>.jpg.
 // Run from the repo root after `npm install --no-save playwright sharp @fontsource/bebas-neue @fontsource/dm-sans`:
-//   node scripts/og-images.mjs
+//   node scripts/og-images.mjs            (every page)
+//   node scripts/og-images.mjs crm llc    (only those pages)
 import { chromium } from 'playwright';
 import fs from 'node:fs/promises';
 import path from 'node:path';
@@ -68,6 +69,9 @@ const PAGES = {
   llc: { shot: 'casanova-car-care',
                es: ['Registro de empresas', 'ABRE TU EMPRESA', 'Y SAL A VENDER', 'LLC, EIN, página web y Google en un solo paquete.'],
                en: ['Business registration', 'START YOUR COMPANY', 'AND START SELLING', 'LLC, EIN, website and Google in one package.'] },
+  crm: { shot: 'moya-company',
+               es: ['CRM a medida · $997', 'TODO TU NEGOCIO', 'EN UN SOLO PANEL', 'Clientes, ventas, cobros y equipo. Pago único, sin mensualidades.'],
+               en: ['Custom CRM · $997', 'YOUR WHOLE BUSINESS', 'IN ONE DASHBOARD', 'Customers, sales, payments and team. One-time, no subscriptions.'] },
   guide_logo_cost: { shot: 'the-sweet-zone',
                es: ['Guía · Branding', '¿CUÁNTO CUESTA', 'UN LOGO PRO?', 'Precios reales, qué debe incluir y cómo elegir bien.'],
                en: ['Guide · Branding', 'HOW MUCH DOES', 'A LOGO COST?', 'Real prices, what it should include and how to choose.'] },
@@ -150,7 +154,8 @@ p{font-weight:300;font-size:24px;line-height:1.4;color:rgba(255,255,255,.82);mar
 await fs.mkdir('assets/og', { recursive: true });
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
-for (const ref of Object.keys(PAGES)) {
+const only = process.argv.slice(2);
+for (const ref of Object.keys(PAGES).filter(r => !only.length || only.includes(r))) {
   for (const lang of ['es', 'en']) {
     await page.setContent(await html(ref, lang), { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);

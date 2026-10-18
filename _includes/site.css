@@ -1264,3 +1264,20 @@ nav{padding:18px 52px}
 @media(max-width:1200px){.llc-plans{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:1000px){.llc-steps{grid-template-columns:1fr}}
 @media(max-width:700px){.llc-plans{grid-template-columns:1fr}}
+
+/* CRM a medida */
+.crm-price{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:stretch}
+.crm-demo{background:linear-gradient(135deg,var(--black) 0%,#0f1f6b 100%);padding:48px 44px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:8px}
+.crm-demo .btn-main{margin-top:20px;background:var(--blue)}
+.crm-demo .btn-main:hover{background:#fff;color:var(--black)}
+.crm-logos{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:40px}
+.crm-logos span{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--soft);border:1px solid var(--border);border-radius:100px;padding:7px 14px;background:var(--white)}
+.crm-cases{grid-template-columns:repeat(2,1fr)}
+.crm-banner{text-decoration:none;margin-top:40px;margin-bottom:0;transition:transform .3s,box-shadow .3s}
+.crm-banner:hover{transform:translateY(-4px);box-shadow:0 20px 56px rgba(20,56,204,.25)}
+.crm-banner-price{display:flex;flex-direction:column;align-items:flex-end;gap:14px}
+.crm-banner .plan-price{color:#fff;margin:0}
+.crm-banner .plan-price em{color:rgba(255,255,255,.55)}
+.crm-banner .btn-main{background:var(--blue)}
+.crm-banner:hover .btn-main{background:#fff;color:var(--black)}
+@media(max-width:900px){.crm-price,.crm-cases{grid-template-columns:1fr}.crm-demo{padding:40px 28px;align-items:center;text-align:center}.crm-banner-price{align-items:center}}
