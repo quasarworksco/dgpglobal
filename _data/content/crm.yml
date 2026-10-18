@@ -33,14 +33,14 @@ faq:
   a_es: El tablero de inicio, clientes y prospectos, embudo de ventas, etapas por servicio, agenda y tareas con avisos, cobros con recibos en PDF, documentos privados, reportes, usuarios con roles y permisos, los formularios de tu sitio web conectados y la búsqueda rápida. También la migración de tu Excel, hasta 3 usuarios, la capacitación y 30 días de ajustes.
   q_en: What does the $997 CRM include?
   a_en: The home dashboard, customers and leads, sales pipeline, stages per service, calendar and tasks with reminders, payments with PDF receipts, private documents, reports, users with roles and permissions, your website forms connected and quick search. It also includes importing your spreadsheet, up to 3 users, training and 30 days of adjustments.
-- q_es: ¿Es un programa con mensualidad, como HubSpot o GoHighLevel?
+- q_es: ¿Tengo que pagar una mensualidad por el programa?
   a_es: No. Es tu propio sistema, hecho a medida y con pago único. La base de datos queda a tu nombre; sus planes empiezan gratis y los profesionales cuestan unos $25 al mes, que pagas directamente al proveedor.
-  q_en: Is it a subscription software like HubSpot or GoHighLevel?
+  q_en: Do I have to pay a monthly fee for the software?
   a_en: No. It is your own system, custom-built with a one-time payment. The database is in your name; plans start free and professional plans run about $25 a month, paid directly to the provider.
-- q_es: ¿Se puede conectar con WhatsApp, Instagram o un teléfono?
-  a_es: Sí. Ya lo hemos conectado con WhatsApp Business, Messenger, Instagram, leads de Meta Ads, llamadas con Twilio, pagos con Square y Stripe, Google Calendar y un asistente con IA. Cada integración se cotiza según tu negocio, y el uso (mensajes, minutos o comisiones) se paga directamente a cada proveedor.
-  q_en: Can it connect to WhatsApp, Instagram or a phone line?
-  a_en: Yes. We have already connected it to WhatsApp Business, Messenger, Instagram, Meta Ads leads, Twilio calling, Square and Stripe payments, Google Calendar and an AI assistant. Each integration is quoted for your business, and usage (messages, minutes or fees) is paid directly to each provider.
+- q_es: ¿Se puede conectar con WhatsApp, Instagram o con llamadas?
+  a_es: Sí. Ya lo hemos conectado con WhatsApp, Instagram y Facebook, los anuncios de Facebook e Instagram, llamadas y SMS, pagos con tarjeta, Google Calendar y un asistente con IA. Cada integración se cotiza según tu negocio, y el uso (mensajes, minutos o comisiones) se paga directamente a cada proveedor.
+  q_en: Can it connect to WhatsApp, Instagram or phone calls?
+  a_en: Yes. We have already connected it to WhatsApp, Instagram and Facebook, Facebook and Instagram ads, calls and text messages, card payments, Google Calendar and an AI assistant. Each integration is quoted for your business, and usage (messages, minutes or fees) is paid directly to each provider.
 - q_es: ¿Por qué no muestran ejemplos de clientes?
   a_es: Porque cada CRM guarda información privada de los clientes de cada negocio. En una videollamada te mostramos una demo con datos de ejemplo para que veas cómo funciona.
   q_en: Why don't you show client examples?
@@ -135,23 +135,23 @@ addons:
 - icon: fa-brands fa-whatsapp
   t_es: BANDEJA ÚNICA
   t_en: UNIFIED INBOX
-  es: WhatsApp Business, Messenger e Instagram en un solo lugar, con aviso de mensaje nuevo y filtro «Sin responder».
-  en: WhatsApp Business, Messenger and Instagram in one place, with new-message alerts and an "Unanswered" filter.
+  es: WhatsApp, Instagram y Facebook en un solo lugar, con aviso de mensaje nuevo y filtro «Sin responder».
+  en: WhatsApp, Instagram and Facebook in one place, with new-message alerts and an "Unanswered" filter.
 - icon: fa-brands fa-meta
-  t_es: LEADS DE META ADS
-  t_en: META ADS LEADS
+  t_es: CLIENTES DE TUS ANUNCIOS
+  t_en: LEADS FROM YOUR ADS
   es: Los formularios de tus anuncios de Facebook e Instagram entran solos al CRM como prospectos.
   en: Lead forms from your Facebook and Instagram ads flow straight into the CRM.
 - icon: fa-solid fa-headset
-  t_es: TELÉFONO Y MODO LLAMADAS
-  t_en: PHONE & CALL MODE
-  es: Llama desde el computador con Twilio, cola de marcación, guion, resultado de cada llamada y productividad por agente.
-  en: Call from your computer with Twilio, with a dial queue, script, call outcomes and productivity per agent.
+  t_es: LLAMADAS Y SMS INTEGRADOS
+  t_en: BUILT-IN CALLS & SMS
+  es: Llama y envía SMS desde el computador, con cola de marcación, guion, buzón de voz, resultado de cada llamada y productividad por agente.
+  en: Call and text from your computer, with a dial queue, script, voicemail, call outcomes and productivity per agent.
 - icon: fa-solid fa-credit-card
   t_es: PAGOS EN LÍNEA
   t_en: ONLINE PAYMENTS
-  es: Enlaces de pago con Square o Stripe y mensualidades; cada pago se registra solo en Cobros.
-  en: Square or Stripe payment links and monthly plans; every payment is logged automatically.
+  es: Cobra con tarjeta por enlace de pago, también mensualidades; cada pago se registra solo en Cobros.
+  en: Get paid by card through payment links, including monthly plans; every payment is logged automatically.
 - icon: fa-solid fa-calendar-days
   t_es: CITAS EN LÍNEA
   t_en: ONLINE BOOKING
@@ -185,8 +185,8 @@ addons:
 - icon: fa-solid fa-user-plus
   t_es: RECLUTAMIENTO
   t_en: RECRUITING
-  es: Candidatos con etapas, entrevistas y seguimientos, separados de tus clientes. Importa desde Indeed.
-  en: Candidates with stages, interviews and follow-ups, kept apart from customers. Imports from Indeed.
+  es: Candidatos con etapas, entrevistas y seguimientos, separados de tus clientes. Importa desde Excel.
+  en: Candidates with stages, interviews and follow-ups, kept apart from customers. Imports from Excel.
 - icon: fa-solid fa-store
   t_es: SITIO Y TIENDA EDITABLES
   t_en: EDITABLE SITE & STORE
@@ -201,5 +201,5 @@ cases:
 - icon: fa-solid fa-briefcase
   t_es: OFICINA DE SERVICIOS
   t_en: SERVICE OFFICE
-  es: Crédito, taxes, LLC e inmigración, cada uno con sus etapas y plazos; bandeja de WhatsApp, Messenger e Instagram, citas en línea, contratos con firma, portal del cliente y cobros con tarjeta.
-  en: Credit repair, taxes, LLCs and immigration, each with its own stages and deadlines; WhatsApp, Messenger and Instagram inbox, online booking, e-signed contracts, a client portal and card payments.
+  es: Crédito, taxes, LLC e inmigración, cada uno con sus etapas y plazos; bandeja de WhatsApp, Instagram y Facebook, citas en línea, contratos con firma, portal del cliente y cobros con tarjeta.
+  en: Credit repair, taxes, LLCs and immigration, each with its own stages and deadlines; WhatsApp, Instagram and Facebook inbox, online booking, e-signed contracts, a client portal and card payments.

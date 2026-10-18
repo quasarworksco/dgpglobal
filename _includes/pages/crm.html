@@ -66,7 +66,7 @@
     {% endfor %}
   </div>
   <div class="crm-logos reveal">
-    <span>WhatsApp Business</span><span>Messenger</span><span>Instagram</span><span>Meta Ads</span><span>Twilio</span><span>Square</span><span>Stripe</span><span>Google Calendar</span><span>Supabase</span><span>Firebase</span><span>Cloudinary</span>
+    {% if page.lang == 'es' %}<span>Llamadas y SMS</span><span>WhatsApp</span><span>Instagram</span><span>Facebook</span><span>Pagos con tarjeta</span><span>Google Calendar</span><span>Correos automáticos</span><span>Firma digital</span><span>Asistente con IA</span>{% endif %}{% if page.lang == 'en' %}<span>Calls & SMS</span><span>WhatsApp</span><span>Instagram</span><span>Facebook</span><span>Card payments</span><span>Google Calendar</span><span>Automatic emails</span><span>E-signature</span><span>AI assistant</span>{% endif %}
   </div>
 </div>
 
