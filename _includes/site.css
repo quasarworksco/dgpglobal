@@ -440,6 +440,15 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 .altair-typing span{width:6px;height:6px;background:var(--soft);border-radius:50%;animation:altairDot 1.2s ease-in-out infinite}
 .altair-typing span:nth-child(2){animation-delay:.2s}.altair-typing span:nth-child(3){animation-delay:.4s}
 @keyframes altairDot{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-6px)}}
+.altair-card{align-self:stretch;background:#fff;border:1px solid var(--border);border-left:3px solid var(--blue);border-radius:4px 12px 12px 12px;padding:12px;display:flex;flex-direction:column;gap:8px}
+.altair-card-t{font-size:12.5px;line-height:1.5;color:var(--black)}
+.altair-card input{border:1px solid var(--border);border-radius:8px;padding:9px 11px;font:inherit;font-size:16px;background:#fff;color:var(--black);width:100%;box-sizing:border-box}
+.altair-card input:focus{outline:none;border-color:var(--blue)}
+.altair-card .altair-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.altair-card-err{font-size:11.5px;color:#dc2626;min-height:0}
+.altair-card-err:empty{display:none}
+.altair-card button{background:var(--blue);color:#fff;border:none;border-radius:8px;padding:10px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.altair-card button:disabled{opacity:.6}
 .altair-input-area{display:flex;border-top:1px solid var(--border);flex-shrink:0}
 #altair-input{flex:1;border:none;padding:13px 16px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--black);outline:none;background:#fff}
 #altair-input::placeholder{color:var(--soft)}

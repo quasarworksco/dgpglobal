@@ -390,14 +390,15 @@ let altairHistory=[];
 let altairOpen=false;
 let altairGreeted=false;
 let altairTgSent=0;
+let altairContacto=null;
 function saveAltair(){
-  try{sessionStorage.setItem('altairState',JSON.stringify({h:altairHistory,s:altairTgSent,g:altairGreeted}));}catch(e){}
+  try{sessionStorage.setItem('altairState',JSON.stringify({h:altairHistory,s:altairTgSent,g:altairGreeted,c:altairContacto}));}catch(e){}
 }
 function restoreAltair(){
   try{
     const st=JSON.parse(sessionStorage.getItem('altairState')||'null');
     if(!st)return;
-    altairHistory=st.h||[];altairTgSent=st.s||0;altairGreeted=!!st.g;
+    altairHistory=st.h||[];altairTgSent=st.s||0;altairGreeted=!!st.g;altairContacto=st.c||null;
     altairHistory.forEach(m=>addAltairMsg(m.content,m.role==='user'?'user':'bot'));
   }catch(e){}
 }
@@ -425,7 +426,7 @@ async function sendAltairTelegram(closing=false){
   if(!unsent.length)return;
   altairTgSent=altairHistory.length;saveAltair();
   try{await fetch(PANEL_API+'/chat-web',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,
-    body:JSON.stringify({cerrado:closing,mensajes:unsent.map(m=>({rol:m.role,texto:m.content}))})});}catch(e){}
+    body:JSON.stringify({cerrado:closing,contacto:altairContacto,mensajes:unsent.map(m=>({rol:m.role,texto:m.content}))})});}catch(e){}
 }
 
 function toggleAltair(){altairOpen?closeAltair():openAltair();}
@@ -465,6 +466,43 @@ function showAltairTyping(){
   box.appendChild(div);box.scrollTop=box.scrollHeight;
 }
 function hideAltairTyping(){const t=document.getElementById('altair-typing');if(t)t.remove();}
+/* Tarjeta para dejar nombre y WhatsApp dentro del chat (va al CRM como prospecto) */
+function showAltairContactCard(){
+  const box=document.getElementById('altair-messages');
+  if(!box||document.getElementById('altair-card'))return;
+  const en=lang==='en';
+  const card=document.createElement('form');
+  card.id='altair-card';card.className='altair-card';card.noValidate=true;
+  card.innerHTML=`<div class="altair-card-t">${en?'So a specialist can send you a quote, leave your name and WhatsApp:':'Para que un asesor te envíe una propuesta, déjanos tu nombre y WhatsApp:'}</div>
+    <input name="nombre" autocomplete="name" maxlength="80" placeholder="${en?'Your name':'Tu nombre'}">
+    <input name="telefono" type="tel" autocomplete="tel" maxlength="30" placeholder="${en?'WhatsApp / phone':'WhatsApp / teléfono'}">
+    <input name="empresa_web" tabindex="-1" autocomplete="off" class="altair-hp" aria-hidden="true">
+    <div class="altair-card-err"></div>
+    <button type="submit">${en?'Send':'Enviar'}</button>`;
+  card.addEventListener('submit',enviarContactoAltair);
+  box.appendChild(card);box.scrollTop=box.scrollHeight;
+}
+async function enviarContactoAltair(e){
+  e.preventDefault();
+  const f=e.target,en=lang==='en',err=f.querySelector('.altair-card-err'),btn=f.querySelector('button');
+  const nombre=f.nombre.value.trim(),telefono=f.telefono.value.trim();
+  if(nombre.length<2){err.textContent=en?'Please write your name.':'Escribe tu nombre.';return;}
+  if(telefono.replace(/\D/g,'').length<7){err.textContent=en?'Please write a valid phone number.':'Escribe un número válido.';return;}
+  err.textContent='';btn.disabled=true;
+  try{
+    const preguntas=altairHistory.filter(m=>m.role==='user').map(m=>m.content).join(' | ').slice(0,1200);
+    const r=await fetch(PANEL_API+'/contacto',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+      nombre,telefono,servicio:'Chat con Altair',mensaje:preguntas,pagina:location.href,idioma:en?'Inglés':'Español',
+      t:Date.now()-PAGE_T0,_hp_dgp:f.empresa_web.value})});
+    if(!r.ok&&r.status!==429)throw new Error();
+    altairContacto={nombre,telefono,enviado:true};
+    f.remove();
+    const gracias=en?`Thank you, ${nombre.split(' ')[0]}! A specialist will message you on WhatsApp very soon. Meanwhile, I'm here for any other question.`
+      :`¡Gracias, ${nombre.split(' ')[0]}! Un asesor te escribirá por WhatsApp muy pronto. Mientras tanto, sigo aquí para cualquier otra pregunta.`;
+    addAltairMsg(gracias,'bot');altairHistory.push({role:'assistant',content:gracias});saveAltair();
+    sendAltairTelegram();
+  }catch(x){err.textContent=en?'Could not send. Please try again.':'No se pudo enviar. Intenta de nuevo.';btn.disabled=false;}
+}
 async function altairSend(){
   const input=document.getElementById('altair-input');
   const text=input.value.trim();
@@ -477,7 +515,7 @@ async function altairSend(){
   if(btn)btn.disabled=true;
   try{
     const res=await fetch(PANEL_API+'/chat-ia',{method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({idioma:lang,mensajes:altairHistory.map(m=>({rol:m.role,texto:m.content}))})});
+      body:JSON.stringify({idioma:lang,contacto:altairContacto,mensajes:altairHistory.map(m=>({rol:m.role,texto:m.content}))})});
     const data=await res.json().catch(()=>({}));
     hideAltairTyping();
     const reply=data.respuesta||(lang==='en'?'Sorry, I had a technical issue. Please try again.':'Disculpa, tuve un problema técnico. Por favor intenta de nuevo.');
@@ -485,7 +523,9 @@ async function altairSend(){
     altairHistory.push({role:'assistant',content:reply});
     if(altairHistory.length>24){const cut=altairHistory.length-24;altairHistory=altairHistory.slice(cut);altairTgSent=Math.max(0,altairTgSent-cut);}
     saveAltair();
-    if(altairHistory.filter(m=>m.role==='user').length===1)sendAltairTelegram();
+    const nPreg=altairHistory.filter(m=>m.role==='user').length;
+    if(!altairContacto&&(nPreg===1||nPreg===3))showAltairContactCard();
+    if(nPreg===1)sendAltairTelegram();
   }catch{
     hideAltairTyping();
     addAltairMsg(lang==='en'?'Connection error. Please try again.':'Error de conexión. Intenta de nuevo.','bot');
