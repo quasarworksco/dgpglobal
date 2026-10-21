@@ -385,40 +385,7 @@ function scrollToContact(){
 }
 
 /* ALTAIR AI CHAT */
-const GROQ_KEY=['gsk_RJ9YaWKP','q9Gupqq58t8J','WGdyb3FYaxm4','fyaO3GaAGFb5kmSSFRKU'].join('');
-const ALTAIR_MODEL='llama-3.3-70b-versatile';
-const ALTAIR_SYSTEM=`You are Altair, a professional digital marketing and web design advisor for DGP Global Group, a bilingual digital marketing agency based in Florida, USA.
-
-PERSONALITY: Formal yet warm and approachable. Knowledgeable and confident. Customer-oriented. Keep responses concise (3-5 sentences max). Never use bullet points or markdown — write in natural paragraphs.
-
-LANGUAGE RULE: Always respond in the EXACT same language the user writes in. If they write in Spanish → respond in Spanish. If in English → respond in English. Never mix.
-
-SCOPE — You ONLY discuss topics related to:
-- Digital marketing strategies and advertising
-- Web design and development
-- Graphic design and branding
-- Social media management and growth
-- Websites and online stores (built by DGP)
-- Entrepreneurship and business growth
-- DGP Global Group services and pricing
-
-If asked anything outside this scope, politely say you specialize in digital marketing and business topics, and redirect to how you can help.
-
-DGP GLOBAL GROUP SERVICES & PRICING:
-WEB DESIGN: Landing Page from $280 one-time (24-48h delivery) | Standard Site up to 5 pages from $455 one-time (hosting billed separately, from $25/month) | Premium Site with catalog or bookings from $950 one-time (includes 12 months of hosting). Every plan includes a free subdomain like yourbusiness.dgp-link.com.
-GRAPHIC DESIGN: Visual Identity (logo + brand guidelines) from $185 | Business Card from $26 | Social Media Posts/Flyers from $15 each.
-PACKAGES (one-time): Basic $320 (logo, brand guidelines, social media review, 1,000 followers, business card; 48h) | Intermediate $480 (adds 3,000 followers and 10 Instagram posts; 72h) | Advanced $840 (5,000 followers, 10 posts, invoice and business card design, One Page website, admin panel with CRM; 72h).
-CUSTOM SYSTEMS: CRM, admin panels, inventory, custom software — custom quote.
-CONTACT: WhatsApp +1 (239) 823-1738 | Email dgpgroup.usa@gmail.com | Website dgpglobalgroup.com | Instagram @dgpgroup.us
-
-GUIDELINES:
-1. Always end with a question or call to action that moves toward a consultation or quote.
-2. When mentioning prices, ALWAYS say "starting from $X" or "desde $X" — never use "for only" or "por solo". Prices are starting points, not fixed amounts.
-3. Give real, valuable advice — educate first, then guide toward the service.
-4. Never invent services or prices not listed above.
-5. If someone seems interested, suggest contacting via WhatsApp or the contact form on the site.
-6. DGP no longer offers marketplace management (Amazon, Walmart, TikTok Shop, eBay). If asked, explain that we focus on websites, custom systems and branding packages, and offer a website with an online store instead.`;
-
+/* La IA responde desde el servidor de DGP (la llave nunca está en la web) */
 let altairHistory=[];
 let altairOpen=false;
 let altairGreeted=false;
@@ -509,19 +476,11 @@ async function altairSend(){
   const btn=document.querySelector('.altair-send');
   if(btn)btn.disabled=true;
   try{
-    const res=await fetch('https://api.groq.com/openai/v1/chat/completions',{
-      method:'POST',
-      headers:{'Authorization':`Bearer ${GROQ_KEY}`,'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:ALTAIR_MODEL,
-        messages:[{role:'system',content:ALTAIR_SYSTEM},...altairHistory],
-        max_tokens:350,
-        temperature:0.72
-      })
-    });
-    const data=await res.json();
+    const res=await fetch(PANEL_API+'/chat-ia',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({idioma:lang,mensajes:altairHistory.map(m=>({rol:m.role,texto:m.content}))})});
+    const data=await res.json().catch(()=>({}));
     hideAltairTyping();
-    const reply=data.choices?.[0]?.message?.content||(lang==='en'?'Sorry, I had a technical issue. Please try again.':'Disculpa, tuve un problema técnico. Por favor intenta de nuevo.');
+    const reply=data.respuesta||(lang==='en'?'Sorry, I had a technical issue. Please try again.':'Disculpa, tuve un problema técnico. Por favor intenta de nuevo.');
     addAltairMsg(reply,'bot');
     altairHistory.push({role:'assistant',content:reply});
     if(altairHistory.length>24){const cut=altairHistory.length-24;altairHistory=altairHistory.slice(cut);altairTgSent=Math.max(0,altairTgSent-cut);}
