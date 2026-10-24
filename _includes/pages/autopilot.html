@@ -1,0 +1,95 @@
+{% include page-hero.html %}
+
+<!-- PLAN + EJEMPLOS -->
+<div class="section" id="plan">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Un solo plan, todo incluido</span>{% endif %}{% if page.lang == 'en' %}<span data-en>One plan, everything included</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>CONTENIDO CONSTANTE <span class="accent">SIN CONTRATAR A NADIE</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>CONSISTENT CONTENT <span class="accent">WITHOUT HIRING ANYONE</span></span>{% endif %}</h2>
+    <p class="sec-sub">{% if page.lang == 'es' %}<span data-es>Mantener tus redes activas cuesta tiempo o un sueldo. Con Social Media Autopilot recibes contenido profesional cada mes y se publica solo, por mucho menos.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Keeping your social media active takes time or a salary. With Social Media Autopilot you get professional content every month and it posts itself, for much less.</span>{% endif %}</p>
+  </div>
+  <div class="ap-wrap" style="margin-top:44px">
+    <div class="plan-card pop ap-card reveal">
+      <div class="plan-head h2"><div class="plan-label">{% if page.lang == 'es' %}<span data-es>Plan mensual</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Monthly plan</span>{% endif %}</div><div class="plan-name">SOCIAL MEDIA AUTOPILOT</div></div>
+      <div class="plan-body">
+        <div class="plan-price">$155<em>{% if page.lang == 'es' %}<span data-es>al mes</span>{% endif %}{% if page.lang == 'en' %}<span data-en>per month</span>{% endif %}</em></div>
+        <div class="delivery-badge"><i class="fa-solid fa-laptop-code"></i>{% if page.lang == 'es' %}<span data-es>Para clientes con página web DGP</span>{% endif %}{% if page.lang == 'en' %}<span data-en>For DGP website clients</span>{% endif %}</div>
+        <div class="plan-div"></div>
+        <ul class="feat-list">
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>20 publicaciones al mes con tu marca</span>{% endif %}{% if page.lang == 'en' %}<span data-en>20 branded posts a month</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Carruseles en español e inglés</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Carousels in English and Spanish</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Textos con hashtags y enlace a tu web</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Captions with hashtags and a link to your site</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Se publican solos en Facebook e Instagram</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Auto-posted to Facebook and Instagram</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>5 días por semana, a la hora que elijas</span>{% endif %}{% if page.lang == 'en' %}<span data-en>5 days a week, at the time you choose</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Calendario dentro del panel de tu web</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Calendar inside your website dashboard</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Pausa y reanuda cuando quieras</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Pause and resume anytime</span>{% endif %}</li>
+        </ul>
+        <a href="{% if page.lang == 'es' %}https://wa.me/12398231738?text=Hola%20DGP%20Global%20Group%2C%20quiero%20Social%20Media%20Autopilot%20para%20mis%20redes.{% else %}https://wa.me/12398231738?text=Hi%20DGP%20Global%20Group%2C%20I%20want%20Social%20Media%20Autopilot%20for%20my%20social%20media.{% endif %}" target="_blank" rel="noopener" class="btn-sm" style="width:100%;justify-content:space-between">{% if page.lang == 'es' %}<span data-es>Lo quiero</span>{% endif %}{% if page.lang == 'en' %}<span data-en>I want it</span>{% endif %}<span class="a"><i class="fa-solid fa-arrow-right"></i></span></a>
+      </div>
+    </div>
+    <div class="ap-ejemplos reveal" style="transition-delay:.1s">
+      <div class="ap-ej-t">{% if page.lang == 'es' %}<span data-es>Así se ven las publicaciones</span>{% endif %}{% if page.lang == 'en' %}<span data-en>What the posts look like</span>{% endif %}</div>
+      <div class="ap-shots">
+        {% for n in (1..3) %}<img src="/assets/autopilot/ejemplo-{{ n }}-{{ page.lang }}.jpg" width="600" height="750" loading="lazy" alt="{% if page.lang == 'es' %}Ejemplo de publicación {{ n }}{% else %}Sample post {{ n }}{% endif %}">{% endfor %}
+      </div>
+      <p class="ap-ej-n">{% if page.lang == 'es' %}<span data-es>Ejemplos con la marca de DGP. Los tuyos llevan tu logo, tus colores y tus servicios.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Samples with DGP's brand. Yours carry your logo, colors and services.</span>{% endif %}</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- CÓMO FUNCIONA -->
+<div class="section" id="como-funciona">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Cómo funciona</span>{% endif %}{% if page.lang == 'en' %}<span data-en>How it works</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>LO ACTIVAS UNA VEZ <span class="accent">Y SE MANTIENE SOLO</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>SET IT UP ONCE <span class="accent">AND IT RUNS ITSELF</span></span>{% endif %}</h2>
+  </div>
+  <div class="process-steps llc-steps" style="margin-top:40px">
+    <div class="process-step reveal" style="transition-delay:0.00s">
+      <div class="step-num">01</div>
+      <div class="step-icon"><i class="fa-solid fa-link"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>CONECTA</span>{% endif %}{% if page.lang == 'en' %}<span data-en>CONNECT</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>Nos das acceso a tu página de Facebook desde Meta Business Suite. Sin contraseñas.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Give us access to your Facebook Page from Meta Business Suite. No passwords.</span>{% endif %}</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.12s">
+      <div class="step-num">02</div>
+      <div class="step-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>CREAMOS</span>{% endif %}{% if page.lang == 'en' %}<span data-en>WE CREATE</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>Diseñamos las 20 publicaciones del mes con tu marca, tus servicios y lo que ya muestras en tu perfil.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>We design the month's 20 posts with your brand, your services and what your profile already shows.</span>{% endif %}</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.24s">
+      <div class="step-num">03</div>
+      <div class="step-icon"><i class="fa-solid fa-robot"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>SE PUBLICA SOLO</span>{% endif %}{% if page.lang == 'en' %}<span data-en>IT POSTS ITSELF</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>Lunes, martes, jueves, viernes y sábado salen en tu Facebook e Instagram a la hora elegida.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Monday, Tuesday, Thursday, Friday and Saturday they go out on Facebook and Instagram at your chosen time.</span>{% endif %}</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.36s">
+      <div class="step-num">04</div>
+      <div class="step-icon"><i class="fa-solid fa-gauge-high"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>LO VES EN TU PANEL</span>{% endif %}{% if page.lang == 'en' %}<span data-en>TRACK IT</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>En el panel de tu web ves el calendario, lo publicado y lo que sigue, y puedes pausarlo.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Your website dashboard shows the calendar, what's published and what's next, and lets you pause it.</span>{% endif %}</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- POR QUÉ -->
+<div class="section">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Por qué funciona</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Why it works</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>REDES ACTIVAS <span class="accent">QUE GENERAN CONFIANZA</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>ACTIVE SOCIAL MEDIA <span class="accent">THAT BUILDS TRUST</span></span>{% endif %}</h2>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card reveal"><div class="feat-card-icon"><i class="fa-solid fa-calendar-check"></i></div><div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>CONSTANCIA</span>{% endif %}{% if page.lang == 'en' %}<span data-en>CONSISTENCY</span>{% endif %}</div><p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>Un perfil que publica seguido se ve activo y confiable. Ya no depende de que tengas tiempo.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>A profile that posts often looks active and trustworthy. It no longer depends on having time.</span>{% endif %}</p></div>
+    <div class="feat-card reveal" style="transition-delay:.06s"><div class="feat-card-icon"><i class="fa-solid fa-palette"></i></div><div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>TU MARCA EN CADA POST</span>{% endif %}{% if page.lang == 'en' %}<span data-en>YOUR BRAND IN EVERY POST</span>{% endif %}</div><p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>Logo, colores y estilo coherentes con tu página web, para que te reconozcan.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Logo, colors and style consistent with your website, so people recognize you.</span>{% endif %}</p></div>
+    <div class="feat-card reveal" style="transition-delay:.12s"><div class="feat-card-icon"><i class="fa-solid fa-language"></i></div><div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>BILINGÜE</span>{% endif %}{% if page.lang == 'en' %}<span data-en>BILINGUAL</span>{% endif %}</div><p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>Cada carrusel tiene una lámina en español y otra en inglés: llegas a toda tu clientela.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Each carousel has a Spanish slide and an English slide, so you reach all your customers.</span>{% endif %}</p></div>
+    <div class="feat-card reveal" style="transition-delay:.18s"><div class="feat-card-icon"><i class="fa-solid fa-arrow-pointer"></i></div><div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>MÁS VISITAS A TU WEB</span>{% endif %}{% if page.lang == 'en' %}<span data-en>MORE WEBSITE VISITS</span>{% endif %}</div><p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>Cada publicación lleva el enlace a tu página, donde el cliente te escribe por WhatsApp.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Every post links to your website, where customers message you on WhatsApp.</span>{% endif %}</p></div>
+    <div class="feat-card reveal" style="transition-delay:.24s"><div class="feat-card-icon"><i class="fa-solid fa-piggy-bank"></i></div><div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>CUESTA MENOS</span>{% endif %}{% if page.lang == 'en' %}<span data-en>COSTS LESS</span>{% endif %}</div><p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>$155 al mes por 20 publicaciones diseñadas y publicadas, sin contratar a un community manager.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>$155 a month for 20 designed and published posts, without hiring a social media manager.</span>{% endif %}</p></div>
+    <div class="feat-card reveal" style="transition-delay:.30s"><div class="feat-card-icon"><i class="fa-solid fa-shield-halved"></i></div><div class="feat-card-title">{% if page.lang == 'es' %}<span data-es>TÚ TIENES EL CONTROL</span>{% endif %}{% if page.lang == 'en' %}<span data-en>YOU'RE IN CONTROL</span>{% endif %}</div><p class="feat-card-desc">{% if page.lang == 'es' %}<span data-es>Sin contraseñas: nos das acceso desde Meta y lo quitas cuando quieras. Pausa desde tu panel.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>No passwords: you grant access from Meta and remove it anytime. Pause from your dashboard.</span>{% endif %}</p></div>
+  </div>
+</div>
+
+{% include faq.html %}
+
+{% include contact-section.html campana="Social Media Autopilot" servicio="autopilot" %}

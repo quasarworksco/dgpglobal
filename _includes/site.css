@@ -1336,3 +1336,14 @@ nav{padding:18px 52px}
 @media(max-width:1200px){.web-plans.plans-4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.web-plans.plans-4{grid-template-columns:1fr}}
 .plans-4 .btn-sm{font-size:11px;padding:12px 16px}
+
+/* Social Media Autopilot */
+.ap-wrap{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:36px;align-items:start}
+.ap-card .plan-name{font-size:30px;overflow-wrap:anywhere}
+.ap-ejemplos{display:flex;flex-direction:column;gap:14px}
+.ap-ej-t{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:1px;color:var(--black)}
+.ap-shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ap-shots img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:14px;box-shadow:0 18px 40px rgba(11,22,64,.16)}
+.ap-shots img:nth-child(2){transform:translateY(22px)}
+.ap-ej-n{font-size:13px;color:var(--muted);margin-top:22px}
+@media(max-width:900px){.ap-wrap{grid-template-columns:1fr}.ap-shots img:nth-child(2){transform:none}}

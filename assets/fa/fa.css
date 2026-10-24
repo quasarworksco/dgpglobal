@@ -12,6 +12,7 @@
 .fa-address-card::before{content:"\f2bb"}
 .fa-arrow-down::before{content:"\f063"}
 .fa-arrow-left::before{content:"\f060"}
+.fa-arrow-pointer::before{content:"\f245"}
 .fa-arrow-right::before{content:"\f061"}
 .fa-arrow-up-right-from-square::before{content:"\f08e"}
 .fa-bag-shopping::before{content:"\f290"}
@@ -100,6 +101,7 @@
 .fa-pen-ruler::before{content:"\f5ae"}
 .fa-percent::before{content:"\25"}
 .fa-phone::before{content:"\f095"}
+.fa-piggy-bank::before{content:"\f4d3"}
 .fa-plane-arrival::before{content:"\f5af"}
 .fa-plug::before{content:"\f1e6"}
 .fa-plus::before{content:"\2b"}

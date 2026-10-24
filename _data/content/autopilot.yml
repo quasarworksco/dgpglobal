@@ -1,0 +1,55 @@
+crumb_es: Social Media Autopilot
+crumb_en: Social Media Autopilot
+service:
+  name_es: DGP Social Media Autopilot
+  name_en: DGP Social Media Autopilot
+  type: Automated social media management
+  price: 155
+hero:
+  bg_word: AUTO
+  eyebrow_es: Social Media Autopilot · $155 al mes
+  eyebrow_en: Social Media Autopilot · $155 a month
+  title_es: TUS REDES SOCIALES<span class="accent">EN PILOTO AUTOMÁTICO</span>
+  title_en: YOUR SOCIAL MEDIA<span class="accent">ON AUTOPILOT</span>
+  sub_es: Creamos 20 publicaciones al mes con tu marca y se publican solas en tu Facebook e Instagram. Tú atiendes a tus clientes; tus redes se mantienen activas.
+  sub_en: We create 20 branded posts a month and they publish themselves on your Facebook and Instagram. You serve your customers; your social media stays active.
+  cta:
+    href: '#plan'
+    icon: fa-solid fa-robot
+    es: VER QUÉ INCLUYE
+    en: SEE WHAT'S INCLUDED
+  chips:
+  - icon: fa-solid fa-calendar-check
+    es: 20 posts al mes
+    en: 20 posts a month
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: English and Spanish
+  - icon: fa-solid fa-gauge-high
+    es: Lo ves en tu panel
+    en: See it in your dashboard
+faq:
+  - q_es: ¿Qué necesito para contratar Social Media Autopilot?
+    a_es: Tener tu página web con DGP Global Group, una página de Facebook y una cuenta de Instagram profesional conectada a esa página. Si aún no tienes página web, te la hacemos primero.
+    q_en: What do I need to sign up for Social Media Autopilot?
+    a_en: Your website built by DGP Global Group, a Facebook Page and a professional Instagram account connected to that Page. If you don't have a website yet, we build it first.
+  - q_es: ¿Tengo que darles mi contraseña?
+    a_es: No. Desde tu Meta Business Suite nos das acceso a tu página con permiso de contenido. Nunca pedimos tu contraseña y puedes quitar el acceso cuando quieras.
+    q_en: Do I have to give you my password?
+    a_en: No. From your Meta Business Suite you give us access to your Page with content permission. We never ask for your password, and you can remove access anytime.
+  - q_es: ¿Qué tipo de publicaciones hacen?
+    a_es: Carruseles y posts con tu logo, tus colores y tus servicios, en español y en inglés, con su texto, hashtags y enlace a tu página web. Los preparamos cada mes con la información de tu negocio y de tu perfil.
+    q_en: What kind of posts do you create?
+    a_en: Carousels and posts with your logo, colors and services, in English and Spanish, with captions, hashtags and a link to your website. We prepare them every month using your business and profile information.
+  - q_es: ¿Cuándo se publican?
+    a_es: Cinco días por semana (lunes, martes, jueves, viernes y sábado) a la hora que elijas. Desde el panel de tu web ves el calendario, lo que ya se publicó y lo que sigue.
+    q_en: When are they published?
+    a_en: Five days a week (Monday, Tuesday, Thursday, Friday and Saturday) at the time you choose. From your website dashboard you see the calendar, what has been published and what's next.
+  - q_es: ¿Puedo pausar las publicaciones?
+    a_es: Sí. En el panel de tu web tienes un botón para pausar y reanudar cuando lo necesites, por ejemplo si cierras por vacaciones.
+    q_en: Can I pause the posts?
+    a_en: Yes. Your website dashboard has a button to pause and resume whenever you need, for example if you close for vacation.
+  - q_es: ¿Responden los mensajes y comentarios?
+    a_es: Social Media Autopilot se encarga de crear y publicar tu contenido. Los mensajes y comentarios los respondes tú, así hablas directo con tus clientes.
+    q_en: Do you reply to messages and comments?
+    a_en: Social Media Autopilot creates and publishes your content. You reply to messages and comments, so you talk directly with your customers.

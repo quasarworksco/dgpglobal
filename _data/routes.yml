@@ -8,6 +8,7 @@ portfolio: {es: "/portafolio/",       en: "/en/portfolio/"}
 audit:     {es: "/auditoria-gratis/", en: "/en/free-audit/"}
 partners:  {es: "/aliados/",          en: "/en/partners/"}
 llc:       {es: "/registro-de-empresas/", en: "/en/business-registration/"}
+autopilot: {es: "/social-media-autopilot/", en: "/en/social-media-autopilot/"}
 # Legal pages
 privacy: {es: "/privacidad/", en: "/en/privacy/", legal: true}
 terms: {es: "/terminos/", en: "/en/terms/", legal: true}

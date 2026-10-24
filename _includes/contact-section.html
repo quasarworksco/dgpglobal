@@ -27,6 +27,7 @@
             {% if page.lang == 'es' %}<option data-es>Sistema Personalizado</option>{% endif %}{% if page.lang == 'en' %}<option data-en>Custom System</option>{% endif %}
             {% if page.lang == 'es' %}<option data-es>Paquete Completo</option>{% endif %}{% if page.lang == 'en' %}<option data-en>Full Package</option>{% endif %}
             {% if page.lang == 'es' %}<option data-es{% if include.servicio == 'llc' %} selected{% endif %}>Registro de Empresa (LLC)</option>{% endif %}{% if page.lang == 'en' %}<option data-en{% if include.servicio == 'llc' %} selected{% endif %}>Business Registration (LLC)</option>{% endif %}
+            {% if page.lang == 'es' %}<option data-es{% if include.servicio == 'autopilot' %} selected{% endif %}>Social Media Autopilot (redes automáticas)</option>{% endif %}{% if page.lang == 'en' %}<option data-en{% if include.servicio == 'autopilot' %} selected{% endif %}>Social Media Autopilot</option>{% endif %}
             {% if page.lang == 'es' %}<option data-es>Otro</option>{% endif %}{% if page.lang == 'en' %}<option data-en>Other</option>{% endif %}
           </select>
         </div>
