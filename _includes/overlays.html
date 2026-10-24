@@ -143,6 +143,7 @@
     {% if page.lang == 'es' %}<p class="modal-sub" data-es>Completa el formulario y elige cómo prefieres que te contactemos.</p>{% endif %}
     {% if page.lang == 'en' %}<p class="modal-sub" data-en>Fill in the form and choose how you'd like us to contact you.</p>{% endif %}
     <div class="modal-field"><input type="text" id="mc-name" data-ph-es="Tu nombre completo" data-ph-en="Your full name" placeholder="Tu nombre completo"></div>
+    <div class="modal-field"><input type="text" id="mc-contact" autocomplete="email" maxlength="120" data-ph-es="Tu WhatsApp o correo" data-ph-en="Your WhatsApp or email" placeholder="Tu WhatsApp o correo"></div>
     <div class="modal-field">
       <select aria-label="{% if page.lang == 'en' %}Which service interests you?{% else %}¿Qué servicio te interesa?{% endif %}" id="mc-service">
         {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">¿Qué servicio te interesa?</option>{% endif %}

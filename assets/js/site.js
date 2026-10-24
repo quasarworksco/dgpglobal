@@ -167,11 +167,27 @@ function closeContactModal(){
   document.getElementById('contactModal').classList.remove('open');
   document.body.style.overflow='';
 }
+/* Copia del mensaje de la ventana "Contacto" al panel (Prospectos) y a Telegram, sin esperar respuesta */
+function contactoModalAlPanel(name,svc,msg){
+  const c=(document.getElementById('mc-contact').value||'').trim();
+  const o={nombre:name,servicio:svc||'Contacto (ventana)',mensaje:msg,pagina:location.href,idioma:lang==='en'?'Inglés':'Español',t:Date.now()-PAGE_T0};
+  if(c.includes('@'))o.correo=c;else o.telefono=c;
+  if(typeof REF_CODE!=='undefined'&&REF_CODE)o.referido=REF_CODE;
+  try{fetch(PANEL_API+'/contacto',{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify(o)}).catch(()=>{});}catch(e){}
+}
+function contactoModalValido(){
+  const name=(document.getElementById('mc-name').value||'').trim();
+  if(!name){document.getElementById('mc-name').focus();return false;}
+  const c=(document.getElementById('mc-contact').value||'').trim();
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(c)&&c.replace(/\D/g,'').length<7){document.getElementById('mc-contact').focus();return false;}
+  return true;
+}
 function sendContactWA(){
   const name=(document.getElementById('mc-name').value||'').trim();
   const svc=document.getElementById('mc-service').value||'';
   const msg=(document.getElementById('mc-msg').value||'').trim();
-  if(!name){document.getElementById('mc-name').focus();return;}
+  if(!contactoModalValido())return;
+  contactoModalAlPanel(name,svc,msg);
   let txt=`Hola DGP Global Group! 👋\n\n*Nombre:* ${name}`;
   if(svc) txt+=`\n*Servicio de interés:* ${svc}`;
   if(msg) txt+=`\n*Mensaje:* ${msg}`;
@@ -183,7 +199,8 @@ function sendContactEmail(){
   const name=(document.getElementById('mc-name').value||'').trim();
   const svc=document.getElementById('mc-service').value||'';
   const msg=(document.getElementById('mc-msg').value||'').trim();
-  if(!name){document.getElementById('mc-name').focus();return;}
+  if(!contactoModalValido())return;
+  contactoModalAlPanel(name,svc,msg);
   const subject=svc?`Consulta: ${svc}`:'Consulta desde dgpglobalgroup.com';
   let body=`Hola DGP Global Group,\n\nNombre: ${name}`;
   if(svc) body+=`\nServicio de interés: ${svc}`;
