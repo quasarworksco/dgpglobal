@@ -1,0 +1,57 @@
+crumb_es: Negocio Hispano Digital
+crumb_en: Hispanic Business Digital
+hero:
+  bg_word: GRATIS
+  eyebrow_es: Programa comunitario · Postulaciones hasta el 15 de diciembre de 2026
+  eyebrow_en: Community program · Applications open until December 15, 2026
+  title_es: 10 PÁGINAS WEB GRATIS<span class="accent">PARA NEGOCIOS HISPANOS</span>
+  title_en: 10 FREE WEBSITES<span class="accent">FOR HISPANIC BUSINESSES</span>
+  sub_es: Con el programa Negocio Hispano Digital regalamos 10 páginas web profesionales a emprendedores hispanos de Miami, Tampa, Orlando, Ocala, Houston y Dallas. Cuéntanos tu historia y postula tu negocio.
+  sub_en: Through the Hispanic Business Digital program we're giving away 10 professional websites to Hispanic entrepreneurs in Miami, Tampa, Orlando, Ocala, Houston and Dallas. Tell us your story and apply.
+  cta:
+    href: '#postular'
+    icon: fa-solid fa-hand-holding-heart
+    es: POSTULAR MI NEGOCIO
+    en: APPLY NOW
+  chips:
+  - icon: fa-solid fa-gift
+    es: 10 webs gratis
+    en: 10 free websites
+  - icon: fa-solid fa-location-dot
+    es: Florida y Texas
+    en: Florida and Texas
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: English and Spanish
+faq:
+  - q_es: ¿De verdad es gratis?
+    a_es: Sí. Los 10 negocios seleccionados reciben el Plan Estándar de página web (valor de $455) sin costo. No pedimos tarjeta ni pagos para postular. Si después quieres un dominio .com propio u otros servicios, se cotizan aparte y solo si tú quieres.
+    q_en: Is it really free?
+    a_en: Yes. The 10 selected businesses get our Standard website plan ($455 value) at no cost. We don't ask for a card or any payment to apply. If you later want your own .com domain or other services, they're quoted separately and only if you want them.
+  - q_es: ¿Quién puede postular?
+    a_es: Negocios con dueño hispano que ya estén operando en Miami, Tampa, Orlando, Ocala, Houston o Dallas (o sus alrededores) y que no tengan página web, o que tengan una que no les funciona.
+    q_en: Who can apply?
+    a_en: Hispanic-owned businesses already operating in or around Miami, Tampa, Orlando, Ocala, Houston or Dallas that don't have a website, or have one that isn't working for them.
+  - q_es: ¿Cómo eligen a los ganadores?
+    a_es: Un equipo de DGP Global Group revisa cada postulación y toma en cuenta la historia del negocio, el impacto que tendría la página web en sus ventas y su compromiso con la comunidad. Elegimos al menos un negocio por ciudad.
+    q_en: How are the winners chosen?
+    a_en: A DGP Global Group team reviews every application, looking at the business's story, the impact a website would have on its sales and its commitment to the community. We pick at least one business per city.
+  - q_es: ¿Cuándo anuncian a los ganadores?
+    a_es: Las postulaciones cierran el 15 de diciembre de 2026. Contactamos a los ganadores por WhatsApp y los anunciamos el 8 de enero de 2027. Las páginas se entregan entre enero y febrero de 2027.
+    q_en: When are the winners announced?
+    a_en: Applications close on December 15, 2026. We contact winners on WhatsApp and announce them on January 8, 2027. Websites are delivered in January and February 2027.
+  - q_es: ¿Qué tengo que hacer si gano?
+    a_es: Enviarnos tu logo, fotos y la información de tus servicios, y permitirnos contar tu historia en nuestras redes y con la prensa, con tu testimonio en video o por escrito.
+    q_en: What do I need to do if I win?
+    a_en: Send us your logo, photos and service information, and let us share your story on our social media and with the press, with a video or written testimonial.
+  - q_es: ¿Piden documentos o datos personales?
+    a_es: No. Solo pedimos tu nombre, tu WhatsApp, tu correo y los datos de tu negocio. Nunca pedimos Seguro Social, ITIN ni documentos de identidad.
+    q_en: Do you ask for documents or personal data?
+    a_en: No. We only ask for your name, WhatsApp, email and business details. We never ask for a Social Security number, ITIN or ID documents.
+cities:
+  - {city: Miami, state: FL, n: 2}
+  - {city: Orlando, state: FL, n: 2}
+  - {city: Tampa, state: FL, n: 1}
+  - {city: Ocala, state: FL, n: 1}
+  - {city: Houston, state: TX, n: 2}
+  - {city: Dallas, state: TX, n: 2}

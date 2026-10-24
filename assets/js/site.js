@@ -785,7 +785,9 @@ document.querySelectorAll('form.lead-form').forEach(form=>{
     try{
       await enviarAlPanel(this,this.id==='orderForm'?'Pedido de aliado':'Registro de aliado');
       status.className='status lead-status ok';
-      status.textContent=this.id==='orderForm'
+      status.textContent=this.id==='nhdForm'
+        ?(isEn?'Application received! Winners will be contacted on WhatsApp and announced on January 8, 2027. Good luck!':'¡Postulación recibida! Contactamos a los ganadores por WhatsApp y los anunciamos el 8 de enero de 2027. ¡Mucha suerte!')
+        :this.id==='orderForm'
         ?(isEn?'Order received! We\'ll confirm the total and first payment on WhatsApp.':'¡Pedido recibido! Te confirmamos el total y el primer pago por WhatsApp.')
         :(isEn?'Thank you! We\'ll contact you on WhatsApp soon with your partner code.':'¡Gracias! Te contactamos pronto por WhatsApp con tu código de aliado.');
       this.reset();btn.disabled=false;

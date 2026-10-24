@@ -68,9 +68,11 @@
 .fa-google-drive::before{content:"\f3aa"}
 .fa-graduation-cap::before{content:"\f19d"}
 .fa-hand-holding-dollar::before{content:"\f4c0"}
+.fa-hand-holding-heart::before{content:"\f4be"}
 .fa-hand-pointer::before{content:"\f25a"}
 .fa-handshake::before{content:"\f2b5"}
 .fa-headset::before{content:"\f590"}
+.fa-heart::before{content:"\f004"}
 .fa-helmet-safety::before{content:"\f807"}
 .fa-house::before{content:"\f015"}
 .fa-house-chimney::before{content:"\e3af"}
@@ -125,6 +127,7 @@
 .fa-tags::before{content:"\f02c"}
 .fa-tiktok::before{content:"\e07b"}
 .fa-triangle-exclamation::before{content:"\f071"}
+.fa-trophy::before{content:"\f091"}
 .fa-user::before{content:"\f007"}
 .fa-user-lock::before{content:"\f502"}
 .fa-user-plus::before{content:"\f234"}

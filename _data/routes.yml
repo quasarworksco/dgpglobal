@@ -9,6 +9,7 @@ audit:     {es: "/auditoria-gratis/", en: "/en/free-audit/"}
 partners:  {es: "/aliados/",          en: "/en/partners/"}
 llc:       {es: "/registro-de-empresas/", en: "/en/business-registration/"}
 autopilot: {es: "/social-media-autopilot/", en: "/en/social-media-autopilot/"}
+nhd:       {es: "/negocio-hispano-digital/", en: "/en/hispanic-business-digital/"}
 # Legal pages
 privacy: {es: "/privacidad/", en: "/en/privacy/", legal: true}
 terms: {es: "/terminos/", en: "/en/terms/", legal: true}

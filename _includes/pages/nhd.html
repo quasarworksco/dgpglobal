@@ -1,0 +1,150 @@
+{% include page-hero.html %}
+
+<!-- EL PREMIO -->
+<div class="section" id="premio">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>El premio</span>{% endif %}{% if page.lang == 'en' %}<span data-en>The prize</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>UNA PÁGINA WEB PROFESIONAL <span class="accent">SIN COSTO</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>A PROFESSIONAL WEBSITE <span class="accent">AT NO COST</span></span>{% endif %}</h2>
+    <p class="sec-sub">{% if page.lang == 'es' %}<span data-es>Desde 2019 ayudamos a negocios hispanos a vender más con su página web. Este año queremos devolverle a la comunidad: 10 negocios recibirán su web lista para atraer clientes.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Since 2019 we've helped Hispanic businesses sell more with their websites. This year we want to give back: 10 businesses will get a website ready to bring in customers.</span>{% endif %}</p>
+  </div>
+  <div class="ap-wrap" style="margin-top:44px">
+    <div class="plan-card pop ap-card reveal">
+      <div class="plan-head h2"><div class="plan-label">{% if page.lang == 'es' %}<span data-es>Para cada ganador</span>{% endif %}{% if page.lang == 'en' %}<span data-en>For each winner</span>{% endif %}</div><div class="plan-name">{% if page.lang == 'es' %}<span data-es>PLAN ESTÁNDAR</span>{% endif %}{% if page.lang == 'en' %}<span data-en>STANDARD PLAN</span>{% endif %}</div></div>
+      <div class="plan-body">
+        <div class="plan-price">$0<em>{% if page.lang == 'es' %}<span data-es>valor $455</span>{% endif %}{% if page.lang == 'en' %}<span data-en>$455 value</span>{% endif %}</em></div>
+        <div class="delivery-badge"><i class="fa-solid fa-gift"></i>{% if page.lang == 'es' %}<span data-es>10 ganadores en total</span>{% endif %}{% if page.lang == 'en' %}<span data-en>10 winners in total</span>{% endif %}</div>
+        <div class="plan-div"></div>
+        <ul class="feat-list">
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Sitio de hasta 5 páginas</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Website with up to 5 pages</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Diseño profesional adaptado al celular</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Professional, mobile-friendly design</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Botón de WhatsApp y formulario de contacto</span>{% endif %}{% if page.lang == 'en' %}<span data-en>WhatsApp button and contact form</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>En español, inglés o ambos</span>{% endif %}{% if page.lang == 'en' %}<span data-en>In Spanish, English or both</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Lista para aparecer en Google</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Ready to show up on Google</span>{% endif %}</li>
+          <li><i class="fa-solid fa-check ck"></i>{% if page.lang == 'es' %}<span data-es>Dominio gratis (tunegocio.dgp-link.com)</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Free domain (yourbusiness.dgp-link.com)</span>{% endif %}</li>
+        </ul>
+        <a href="#postular" class="btn-sm" style="width:100%;justify-content:space-between">{% if page.lang == 'es' %}<span data-es>Postular mi negocio</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Apply now</span>{% endif %}<span class="a"><i class="fa-solid fa-arrow-down"></i></span></a>
+      </div>
+    </div>
+    <div class="reveal" style="transition-delay:.1s">
+      <div class="ap-ej-t">{% if page.lang == 'es' %}<span data-es>Ganadores por ciudad</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Winners by city</span>{% endif %}</div>
+      <div class="nhd-cities">
+        {% for c in site.data.content.nhd.cities %}<div class="nhd-city"><i class="fa-solid fa-location-dot"></i><div><strong>{{ c.city }}</strong><span>{{ c.state }}</span></div><b>{{ c.n }}</b></div>{% endfor %}
+      </div>
+      <p class="ap-ej-n">{% if page.lang == 'es' %}<span data-es>Incluye las ciudades y los alrededores de cada área.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Includes each city and its surrounding area.</span>{% endif %}</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- FECHAS -->
+<div class="section" id="fechas">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Fechas importantes</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Key dates</span>{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>ASÍ FUNCIONA <span class="accent">EL PROGRAMA</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>HOW THE PROGRAM <span class="accent">WORKS</span></span>{% endif %}</h2>
+  </div>
+  <div class="process-steps llc-steps" style="margin-top:40px">
+    <div class="process-step reveal" style="transition-delay:0.00s">
+      <div class="step-num">01</div>
+      <div class="step-icon"><i class="fa-solid fa-clipboard-list"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>POSTULA</span>{% endif %}{% if page.lang == 'en' %}<span data-en>APPLY</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>Hasta el 15 de diciembre de 2026. Llenas el formulario y nos cuentas tu historia.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Until December 15, 2026. Fill in the form and tell us your story.</span>{% endif %}</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.12s">
+      <div class="step-num">02</div>
+      <div class="step-icon"><i class="fa-solid fa-users"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>SELECCIÓN</span>{% endif %}{% if page.lang == 'en' %}<span data-en>SELECTION</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>Revisamos cada postulación y elegimos al menos un negocio por ciudad.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>We review every application and pick at least one business per city.</span>{% endif %}</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.24s">
+      <div class="step-num">03</div>
+      <div class="step-icon"><i class="fa-solid fa-trophy"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>GANADORES</span>{% endif %}{% if page.lang == 'en' %}<span data-en>WINNERS</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>El 8 de enero de 2027 los anunciamos y les escribimos por WhatsApp.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>On January 8, 2027 we announce them and reach out on WhatsApp.</span>{% endif %}</p>
+    </div>
+    <div class="process-step reveal" style="transition-delay:0.36s">
+      <div class="step-num">04</div>
+      <div class="step-icon"><i class="fa-solid fa-rocket"></i></div>
+      <div class="step-title">{% if page.lang == 'es' %}<span data-es>TU WEB AL AIRE</span>{% endif %}{% if page.lang == 'en' %}<span data-en>YOUR SITE GOES LIVE</span>{% endif %}</div>
+      <p class="step-desc">{% if page.lang == 'es' %}<span data-es>Entre enero y febrero de 2027 entregamos las 10 páginas web.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>We deliver all 10 websites in January and February 2027.</span>{% endif %}</p>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- POSTULACIÓN -->
+<div class="section" id="postular">
+  <div class="audit-wrap">
+    <div class="reveal">
+      <div class="sec-eyebrow">{% if page.lang == 'es' %}<span data-es>Requisitos</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Requirements</span>{% endif %}</div>
+      <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>¿QUIÉN PUEDE <span class="accent">POSTULAR?</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>WHO CAN <span class="accent">APPLY?</span></span>{% endif %}</h2>
+      <div class="audit-points">
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-solid fa-store"></i></div><div>{% if page.lang == 'es' %}<div class="audit-point-title" data-es>NEGOCIO HISPANO</div><p class="audit-point-desc" data-es>Con dueño o dueña hispana y ya en funcionamiento, aunque sea pequeño o desde casa.</p>{% endif %}{% if page.lang == 'en' %}<div class="audit-point-title" data-en>HISPANIC-OWNED</div><p class="audit-point-desc" data-en>Hispanic-owned and already operating, even if it's small or home-based.</p>{% endif %}</div></div>
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-solid fa-location-dot"></i></div><div>{% if page.lang == 'es' %}<div class="audit-point-title" data-es>EN UNA DE LAS 6 CIUDADES</div><p class="audit-point-desc" data-es>Miami, Tampa, Orlando, Ocala, Houston o Dallas, o sus alrededores.</p>{% endif %}{% if page.lang == 'en' %}<div class="audit-point-title" data-en>IN ONE OF THE 6 CITIES</div><p class="audit-point-desc" data-en>Miami, Tampa, Orlando, Ocala, Houston or Dallas, or nearby.</p>{% endif %}</div></div>
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-solid fa-laptop-code"></i></div><div>{% if page.lang == 'es' %}<div class="audit-point-title" data-es>SIN PÁGINA WEB</div><p class="audit-point-desc" data-es>Que todavía no tenga página web, o que la que tiene no le esté trayendo clientes.</p>{% endif %}{% if page.lang == 'en' %}<div class="audit-point-title" data-en>NO WEBSITE YET</div><p class="audit-point-desc" data-en>No website yet, or one that isn't bringing in customers.</p>{% endif %}</div></div>
+        <div class="audit-point"><div class="audit-point-icon"><i class="fa-solid fa-heart"></i></div><div>{% if page.lang == 'es' %}<div class="audit-point-title" data-es>GANAS DE COMPARTIR</div><p class="audit-point-desc" data-es>Que nos permita contar su historia en redes y con la prensa si resulta ganador.</p>{% endif %}{% if page.lang == 'en' %}<div class="audit-point-title" data-en>WILLING TO SHARE</div><p class="audit-point-desc" data-en>Willing to let us share their story on social media and with the press if selected.</p>{% endif %}</div></div>
+      </div>
+      {% if page.lang == 'es' %}<p class="price-note" data-es>Postular es gratis. Nunca pedimos pagos, tarjetas, Seguro Social, ITIN ni documentos de identidad.</p>{% endif %}
+      {% if page.lang == 'en' %}<p class="price-note" data-en>Applying is free. We never ask for payments, cards, Social Security numbers, ITINs or ID documents.</p>{% endif %}
+    </div>
+    <div class="card form-card audit-form-card reveal" style="transition-delay:.12s">
+      <div class="card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+      {% if page.lang == 'es' %}<h2 class="card-heading" data-es>POSTULA TU NEGOCIO</h2>{% endif %}{% if page.lang == 'en' %}<h2 class="card-heading" data-en>APPLY FOR YOUR BUSINESS</h2>{% endif %}
+      {% if page.lang == 'es' %}<p class="card-sub" data-es>Toma 3 minutos. Te avisamos por WhatsApp si eres seleccionado.</p>{% endif %}
+      {% if page.lang == 'en' %}<p class="card-sub" data-en>It takes 3 minutes. We'll let you know on WhatsApp if you're selected.</p>{% endif %}
+      <form action="https://ayudante-dgp-bot.dgpgroupusa-llc.workers.dev/contacto" method="POST" id="nhdForm" class="lead-form" data-dgp-ignorar data-required="nombre,whatsapp,negocio,ciudad,historia" novalidate>
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="servicio" data-label="servicio" value="Negocio Hispano Digital (postulación)">
+        <div class="field-row">
+          <div class="field"><input type="text" name="nombre" data-label="nombre" maxlength="80" data-ph-es="Tu nombre" data-ph-en="Your name" placeholder="{% if page.lang == 'en' %}Your name{% else %}Tu nombre{% endif %}" required></div>
+          <div class="field"><input type="tel" name="whatsapp" data-label="WhatsApp" maxlength="30" data-ph-es="Tu WhatsApp" data-ph-en="Your WhatsApp" placeholder="{% if page.lang == 'en' %}Your WhatsApp{% else %}Tu WhatsApp{% endif %}" required></div>
+        </div>
+        <div class="field"><input type="email" name="correo" data-label="correo" maxlength="120" data-ph-es="Tu correo (opcional)" data-ph-en="Your email (optional)" placeholder="{% if page.lang == 'en' %}Your email (optional){% else %}Tu correo (opcional){% endif %}"></div>
+        <div class="field-row">
+          <div class="field"><input type="text" name="negocio" data-label="negocio" maxlength="100" data-ph-es="Nombre del negocio" data-ph-en="Business name" placeholder="{% if page.lang == 'en' %}Business name{% else %}Nombre del negocio{% endif %}" required></div>
+          <div class="field"><input type="text" name="industria" data-label="Industria" maxlength="80" data-ph-es="Industria (ej: limpieza)" data-ph-en="Industry (e.g. cleaning)" placeholder="{% if page.lang == 'en' %}Industry (e.g. cleaning){% else %}Industria (ej: limpieza){% endif %}"></div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <select aria-label="{% if page.lang == 'en' %}City{% else %}Ciudad{% endif %}" name="ciudad" data-label="Ciudad" required>
+              {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">¿En qué ciudad está?</option>{% endif %}
+              {% if page.lang == 'en' %}<option value="" disabled selected class="opt-en">Which city?</option>{% endif %}
+              {% for c in site.data.content.nhd.cities %}<option value="{{ c.city }}, {{ c.state }}">{{ c.city }}, {{ c.state }}</option>{% endfor %}
+            </select>
+          </div>
+          <div class="field">
+            <select aria-label="{% if page.lang == 'en' %}How long have you been open?{% else %}¿Cuánto tiempo lleva abierto?{% endif %}" name="tiempo" data-label="Tiempo abierto">
+              {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">¿Hace cuánto abrió?</option>{% endif %}
+              {% if page.lang == 'en' %}<option value="" disabled selected class="opt-en">Years open?</option>{% endif %}
+              {% if page.lang == 'es' %}<option value="Menos de 1 año" class="opt-es">Menos de 1 año</option><option value="1 a 3 años" class="opt-es">1 a 3 años</option><option value="Más de 3 años" class="opt-es">Más de 3 años</option>{% endif %}
+              {% if page.lang == 'en' %}<option value="Menos de 1 año" class="opt-en">Less than 1 year</option><option value="1 a 3 años" class="opt-en">1 to 3 years</option><option value="Más de 3 años" class="opt-en">More than 3 years</option>{% endif %}
+            </select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <select aria-label="{% if page.lang == 'en' %}Do you have a website?{% else %}¿Tiene página web?{% endif %}" name="web_actual" data-label="Web actual">
+              {% if page.lang == 'es' %}<option value="" disabled selected class="opt-es">¿Tiene página web?</option>{% endif %}
+              {% if page.lang == 'en' %}<option value="" disabled selected class="opt-en">Do you have a website?</option>{% endif %}
+              {% if page.lang == 'es' %}<option value="No" class="opt-es">No, todavía no</option><option value="Sí, pero no funciona" class="opt-es">Sí, pero no me trae clientes</option>{% endif %}
+              {% if page.lang == 'en' %}<option value="No" class="opt-en">Not yet</option><option value="Sí, pero no funciona" class="opt-en">Yes, but it doesn't bring customers</option>{% endif %}
+            </select>
+          </div>
+          <div class="field"><input type="text" name="redes" data-label="Redes" maxlength="150" data-ph-es="Instagram o Facebook" data-ph-en="Instagram or Facebook" placeholder="{% if page.lang == 'en' %}Instagram or Facebook{% else %}Instagram o Facebook{% endif %}"></div>
+        </div>
+        <div class="field"><textarea name="historia" data-label="mensaje" rows="5" maxlength="1200" data-ph-es="Cuéntanos tu historia: cómo empezaste tu negocio y cómo te ayudaría tener tu página web" data-ph-en="Tell us your story: how you started your business and how a website would help you" placeholder="{% if page.lang == 'en' %}Tell us your story: how you started your business and how a website would help you{% else %}Cuéntanos tu historia: cómo empezaste tu negocio y cómo te ayudaría tener tu página web{% endif %}" required></textarea></div>
+        <label class="check-row"><input type="checkbox" name="acepta" value="Sí" data-label="Acepta compartir su historia" checked> {% if page.lang == 'es' %}<span data-es>Si gano, acepto que DGP cuente mi historia en redes y con la prensa</span>{% endif %}{% if page.lang == 'en' %}<span data-en>If I win, I agree that DGP may share my story on social media and with the press</span>{% endif %}</label>
+        <button type="submit" class="submit-btn">
+          {% if page.lang == 'es' %}<span data-es>ENVIAR POSTULACIÓN</span>{% endif %}{% if page.lang == 'en' %}<span data-en>SUBMIT APPLICATION</span>{% endif %}
+          <span class="barr"><i class="fa-solid fa-arrow-right"></i></span>
+        </button>
+        <div class="status lead-status"></div>
+        {% if page.lang == 'es' %}<p class="form-note" data-es><i class="fa-solid fa-lock"></i> Tus datos solo se usan para este programa.</p>{% endif %}
+        {% if page.lang == 'en' %}<p class="form-note" data-en><i class="fa-solid fa-lock"></i> Your data is only used for this program.</p>{% endif %}
+      </form>
+    </div>
+  </div>
+</div>
+
+{% include faq.html %}
