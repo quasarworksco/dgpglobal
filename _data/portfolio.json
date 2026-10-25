@@ -1,6 +1,25 @@
 [
   {
     "num": "01",
+    "title": "TECMECA",
+    "tags_es": [
+      "Electricidad Automotriz",
+      "Servicio Móvil",
+      "Texas"
+    ],
+    "tags_en": [
+      "Auto Electrical",
+      "Mobile Service",
+      "Texas"
+    ],
+    "desc_es": "Sitio bilingüe para taller eléctrico automotriz móvil en Arlington, Texas. Diseño oscuro de alto impacto, servicios con agenda directa por WhatsApp y el proceso de diagnóstico explicado paso a paso.",
+    "desc_en": "Bilingual website for a mobile auto electrical shop in Arlington, Texas. High-impact dark design, services with direct WhatsApp booking and the diagnostic process explained step by step.",
+    "url": "https://tecmecatx.com/",
+    "featured": true,
+    "slug": "tecmeca"
+  },
+  {
+    "num": "02",
     "title": "CAIBO CONSTRUCTION",
     "tags_es": [
       "Construcción",
@@ -19,7 +38,7 @@
     "slug": "caibo-construction"
   },
   {
-    "num": "02",
+    "num": "03",
     "title": "CLEANING GROUP",
     "tags_es": [
       "Limpieza",
@@ -37,7 +56,7 @@
     "slug": "cleaning-group"
   },
   {
-    "num": "03",
+    "num": "04",
     "title": "THE SWEET ZONE",
     "tags_es": [
       "E-Commerce",
@@ -56,7 +75,7 @@
     "slug": "the-sweet-zone"
   },
   {
-    "num": "04",
+    "num": "05",
     "title": "VALPA TRUCK",
     "tags_es": [
       "Maquinaria Pesada",
@@ -74,7 +93,7 @@
     "slug": "valpa-truck"
   },
   {
-    "num": "05",
+    "num": "06",
     "title": "PINA WATER SYSTEM",
     "tags_es": [
       "Filtración de Agua",
@@ -93,7 +112,7 @@
     "slug": "pina-water-system"
   },
   {
-    "num": "06",
+    "num": "07",
     "title": "APPLIANCE SOLUTIONS 901",
     "tags_es": [
       "Reparación",
@@ -111,7 +130,7 @@
     "slug": "appliance-solutions-901"
   },
   {
-    "num": "07",
+    "num": "08",
     "title": "MOYA COMPANY",
     "tags_es": [
       "Asistencia Virtual",
@@ -129,7 +148,7 @@
     "slug": "moya-company"
   },
   {
-    "num": "08",
+    "num": "09",
     "title": "SMELLING CLEAN",
     "tags_es": [
       "Limpieza",
@@ -147,7 +166,7 @@
     "slug": "smelling-clean"
   },
   {
-    "num": "09",
+    "num": "10",
     "title": "AVA MULTISERVICES",
     "tags_es": [
       "Servicios Profesionales",
@@ -165,7 +184,7 @@
     "slug": "ava-multiservices"
   },
   {
-    "num": "10",
+    "num": "11",
     "title": "ORANGE ULTRASOUND",
     "tags_es": [
       "Salud",
@@ -183,7 +202,7 @@
     "slug": "orange-ultrasound"
   },
   {
-    "num": "11",
+    "num": "12",
     "title": "MQ STORE",
     "tags_es": [
       "Tienda",
@@ -201,7 +220,7 @@
     "slug": "mq-store"
   },
   {
-    "num": "12",
+    "num": "13",
     "title": "CASANOVA CAR CARE",
     "tags_es": [
       "Taller Mecánico",
