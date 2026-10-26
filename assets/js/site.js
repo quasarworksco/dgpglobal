@@ -206,7 +206,7 @@ function sendContactEmail(){
   if(svc) body+=`\nServicio de interés: ${svc}`;
   if(msg) body+=`\nMensaje: ${msg}`;
   body+='\n\nQuedo en espera de su respuesta.';
-  window.location.href=`mailto:dgpgroup.usa@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href=`mailto:info@dgpglobalgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   closeContactModal();
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeContactModal();closeHeroForm();}});
