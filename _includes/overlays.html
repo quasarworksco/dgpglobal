@@ -70,21 +70,32 @@
 
 <!-- EXIT POPUP -->
 <div id="exit-popup" role="dialog" aria-modal="true" aria-labelledby="exit-title">
-  <div class="exit-card">
-    <button class="exit-close" onclick="closeExitPopup()" aria-label="{% if page.lang == 'en' %}Close{% else %}Cerrar{% endif %}"><i class="fa-solid fa-xmark"></i></button>
-    <div class="exit-badge"><i class="fa-solid fa-bolt"></i> {% if page.lang == 'en' %}WAIT!{% else %}¡ESPERA!{% endif %}</div>
-    <div class="exit-title" id="exit-title">{% if page.lang == 'en' %}YOUR COMPETITORS ARE ALREADY ON GOOGLE.<span>ARE YOU?</span>{% else %}TU COMPETENCIA YA ESTÁ EN GOOGLE.<span>¿Y TÚ?</span>{% endif %}</div>
-    <p class="exit-sub">{% if page.lang == 'en' %}Get a <strong>free quote in 24 hours</strong> or a <strong>free audit</strong> of your current website. No commitment, no fine print.{% else %}Recibe una <strong>cotización gratis en 24 horas</strong> o una <strong>auditoría gratis</strong> de tu página actual. Sin compromiso, sin letra pequeña.{% endif %}</p>
-    <ul class="exit-perks">
-      <li><i class="fa-solid fa-check"></i>{% if page.lang == 'en' %}Websites ready in 24–48h{% else %}Páginas listas en 24–48h{% endif %}</li>
-      <li><i class="fa-solid fa-check"></i>{% if page.lang == 'en' %}Spanish & English{% else %}Español e inglés{% endif %}</li>
-      <li><i class="fa-solid fa-check"></i>{% if page.lang == 'en' %}One-time payment{% else %}Pago único{% endif %}</li>
-    </ul>
-    <div class="exit-spots"><i class="fa-solid fa-fire"></i> {% if page.lang == 'en' %}Only <b class="js-spots">3</b> project spots left this month{% else %}Solo quedan <b class="js-spots">3</b> espacios este mes{% endif %}</div>
-    <div class="exit-actions">
-      <a href="https://wa.me/12398231738?text={% if page.lang == 'en' %}Hi!%20I%20saw%20your%20website%20and%20I%27d%20like%20a%20free%20quote.{% else %}Hola!%20Vi%20su%20sitio%20web%20y%20me%20interesa%20una%20cotización%20gratis.{% endif %}" target="_blank" rel="noopener" class="exit-btn exit-btn-wa" onclick="closeExitPopup()"><i class="fa-brands fa-whatsapp"></i>{% if page.lang == 'en' %}GET MY FREE QUOTE{% else %}QUIERO MI COTIZACIÓN GRATIS{% endif %}</a>
-      <a href="{{ site.data.routes.audit[page.lang] }}" class="exit-btn exit-btn-light" onclick="closeExitPopup()"><i class="fa-solid fa-magnifying-glass-chart"></i>{% if page.lang == 'en' %}AUDIT MY WEBSITE FOR FREE{% else %}REVISEN MI PÁGINA GRATIS{% endif %}</a>
-      <button type="button" class="exit-skip" onclick="closeExitPopup()">{% if page.lang == 'en' %}Not now{% else %}Ahora no{% endif %}</button>
+  <div class="exit-card xp">
+    <div class="xp-visual" aria-hidden="true">
+      <div class="xp-rating"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>{% if page.lang == 'en' %}Reviews on Google{% else %}Reseñas en Google{% endif %}</div>
+      <div class="xp-device">
+        <img src="/assets/portfolio/appliance-solutions-901/desktop-hero-480.webp" alt="" width="480" height="300" loading="lazy" decoding="async">
+        <span class="xp-chip xp-chip-2"><i class="fa-solid fa-bolt"></i>{% if page.lang == 'en' %}Live in 48h{% else %}Lista en 48h{% endif %}</span>
+        <span class="xp-chip xp-chip-1"><i class="fa-solid fa-check"></i>{% if page.lang == 'en' %}Optimized for Google{% else %}Optimizada para Google{% endif %}</span>
+      </div>
+      <p class="xp-quote">{% if page.lang == 'en' %}120+ projects delivered for businesses in the USA and Latin America.{% else %}+120 proyectos entregados para negocios en USA y Latinoamérica.{% endif %}</p>
+    </div>
+    <div class="xp-body">
+      <button class="exit-close" onclick="closeExitPopup()" aria-label="{% if page.lang == 'en' %}Close{% else %}Cerrar{% endif %}"><i class="fa-solid fa-xmark"></i></button>
+      <div class="exit-badge"><i class="fa-solid fa-bolt"></i> {% if page.lang == 'en' %}BEFORE YOU GO{% else %}ANTES DE IRTE{% endif %}</div>
+      <div class="exit-title" id="exit-title">{% if page.lang == 'en' %}YOUR COMPETITORS ARE ALREADY ON GOOGLE.<span>ARE YOU?</span>{% else %}TU COMPETENCIA YA ESTÁ EN GOOGLE.<span>¿Y TÚ?</span>{% endif %}</div>
+      <p class="exit-sub">{% if page.lang == 'en' %}Get a <strong>free quote in 24 hours</strong> or a <strong>free audit</strong> of your current website. No commitment, no fine print.{% else %}Recibe una <strong>cotización gratis en 24 horas</strong> o una <strong>auditoría gratis</strong> de tu página actual. Sin compromiso, sin letra pequeña.{% endif %}</p>
+      <ul class="exit-perks">
+        <li><i class="fa-solid fa-check"></i>{% if page.lang == 'en' %}Websites ready in 24–48h{% else %}Páginas listas en 24–48h{% endif %}</li>
+        <li><i class="fa-solid fa-check"></i>{% if page.lang == 'en' %}Spanish & English{% else %}Español e inglés{% endif %}</li>
+        <li><i class="fa-solid fa-check"></i>{% if page.lang == 'en' %}One-time payment{% else %}Pago único{% endif %}</li>
+      </ul>
+      <div class="exit-spots"><i class="fa-solid fa-fire"></i> {% if page.lang == 'en' %}Only <b class="js-spots">3</b> project spots left this month{% else %}Solo quedan <b class="js-spots">3</b> espacios este mes{% endif %}</div>
+      <div class="exit-actions">
+        <a href="https://wa.me/12398231738?text={% if page.lang == 'en' %}Hi!%20I%20saw%20your%20website%20and%20I%27d%20like%20a%20free%20quote.{% else %}Hola!%20Vi%20su%20sitio%20web%20y%20me%20interesa%20una%20cotización%20gratis.{% endif %}" target="_blank" rel="noopener" class="exit-btn exit-btn-wa" onclick="closeExitPopup()"><i class="fa-brands fa-whatsapp"></i>{% if page.lang == 'en' %}GET MY FREE QUOTE{% else %}QUIERO MI COTIZACIÓN GRATIS{% endif %}</a>
+        <a href="{{ site.data.routes.audit[page.lang] }}" class="exit-btn exit-btn-light" onclick="closeExitPopup()"><i class="fa-solid fa-magnifying-glass-chart"></i>{% if page.lang == 'en' %}AUDIT MY WEBSITE FOR FREE{% else %}REVISEN MI PÁGINA GRATIS{% endif %}</a>
+        <button type="button" class="exit-skip" onclick="closeExitPopup()">{% if page.lang == 'en' %}Not now{% else %}Ahora no{% endif %}</button>
+      </div>
     </div>
   </div>
 </div>
@@ -120,14 +131,16 @@
         <div class="altair-name">ALTAIR</div>
         <div class="altair-status">{% if page.lang == 'es' %}<span data-es>Asesor Digital · DGP Global</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Digital Advisor · DGP Global</span>{% endif %}</div>
       </div>
-      <button class="altair-close" onclick="closeAltair()">✕</button>
+      <button class="altair-close" onclick="closeAltair()" aria-label="{% if page.lang == 'en' %}Close{% else %}Cerrar{% endif %}"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="altair-messages" id="altair-messages"></div>
     <div class="altair-input-area">
       <input type="text" id="altair-input" data-ph-es="Escribe tu pregunta..." data-ph-en="Type your question..." placeholder="Escribe tu pregunta..." onkeydown="if(event.key==='Enter')altairSend()">
-      <button class="altair-send" onclick="altairSend()"><i class="fa-solid fa-paper-plane"></i></button>
+      <button class="altair-send" onclick="altairSend()" aria-label="{% if page.lang == 'en' %}Send{% else %}Enviar{% endif %}"><i class="fa-solid fa-paper-plane"></i></button>
     </div>
+    <div class="altair-foot">{% if page.lang == 'en' %}AI assistant · a person from our team follows up{% else %}Asistente con IA · una persona del equipo te da seguimiento{% endif %}</div>
   </div>
+  <div class="altair-hint" id="altair-hint">{% if page.lang == 'en' %}Questions? Ask Altair 👋{% else %}¿Dudas? Pregúntale a Altair 👋{% endif %}</div>
   <button id="altair-fab" onclick="toggleAltair()" aria-label="Chat con Altair">
     <i class="fa-solid fa-robot"></i>
   </button>

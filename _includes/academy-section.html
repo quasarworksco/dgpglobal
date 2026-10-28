@@ -1,0 +1,79 @@
+<!-- DGP ACADEMY -->
+{% if page.lang == 'en' %}{% assign acad_url = 'https://academy.dgpglobalgroup.com/?lang=en' %}{% else %}{% assign acad_url = 'https://academy.dgpglobalgroup.com/?lang=es' %}{% endif %}
+<section class="acad" id="academy" aria-labelledby="acad-title">
+  <div class="acad-bg" aria-hidden="true"><span class="acad-orb acad-orb-1"></span><span class="acad-orb acad-orb-2"></span></div>
+  <div class="acad-inner">
+
+    <div class="acad-head reveal">
+      <div class="acad-brand">
+        <img src="/assets/academy/isotipo-light.svg" alt="" width="44" height="45">
+        <span>DGP <b>ACADEMY</b></span>
+        <em class="acad-new">{% if page.lang == 'en' %}New{% else %}Nuevo{% endif %}</em>
+      </div>
+      <h2 class="sec-title acad-title" id="acad-title">{% if page.lang == 'en' %}LEARN TO BUILD YOUR <span class="accent">DIGITAL PRESENCE</span> WITH AI{% else %}APRENDE A CREAR TU <span class="accent">PRESENCIA DIGITAL</span> CON IA{% endif %}</h2>
+      <p class="acad-sub">{% if page.lang == 'en' %}Our learning platform: hands-on programs in web development, applied AI and digital marketing, made by the same team that builds our clients’ projects.{% else %}Nuestra plataforma educativa: programas prácticos de desarrollo web, IA aplicada y marketing digital, creados por el mismo equipo que construye los proyectos de nuestros clientes.{% endif %}</p>
+    </div>
+
+    <div class="acad-grid">
+      <!-- Programa principal -->
+      <a href="{{ acad_url }}" class="acad-feature reveal" target="_blank" rel="noopener">
+        <div class="acad-feature-img">
+          <img src="/assets/academy/curso-web.webp" alt="{% if page.lang == 'en' %}Web Design & Development with AI program{% else %}Programa Diseño y Desarrollo Web con IA{% endif %}" width="900" height="600" loading="lazy" decoding="async">
+          <span class="acad-live"><i></i>{% if page.lang == 'en' %}Enrollment open{% else %}Inscripciones abiertas{% endif %}</span>
+          <div class="acad-progress" aria-hidden="true">
+            <div class="acad-progress-top"><span>{% if page.lang == 'en' %}Module 3 · APIs{% else %}Módulo 3 · APIs{% endif %}</span><b>56%</b></div>
+            <div class="acad-progress-bar"><span></span></div>
+          </div>
+        </div>
+        <div class="acad-feature-body">
+          <div class="acad-kicker">{% if page.lang == 'en' %}Flagship program{% else %}Programa principal{% endif %}</div>
+          <h3>{% if page.lang == 'en' %}Web Design & Development with AI{% else %}Diseño y Desarrollo Web con IA{% endif %}</h3>
+          <p>{% if page.lang == 'en' %}HTML, CSS, JavaScript, GitHub Pages and Claude Code to create and publish professional websites, from zero to live.{% else %}HTML, CSS, JavaScript, GitHub Pages y Claude Code para crear y publicar sitios profesionales, de cero a publicado.{% endif %}</p>
+          <ul class="acad-meta">
+            <li><i class="fa-solid fa-book-open"></i>{% if page.lang == 'en' %}16 lessons{% else %}16 lecciones{% endif %}</li>
+            <li><i class="fa-solid fa-layer-group"></i>{% if page.lang == 'en' %}5 modules{% else %}5 módulos{% endif %}</li>
+            <li><i class="fa-solid fa-award"></i>{% if page.lang == 'en' %}Certificate{% else %}Certificado{% endif %}</li>
+          </ul>
+          <div class="acad-price">
+            <div><span class="acad-price-now">$97</span><s>$147</s></div>
+            <span class="acad-price-note">{% if page.lang == 'en' %}Launch price · one-time payment{% else %}Precio de lanzamiento · pago único{% endif %}</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Resto de la oferta -->
+      <div class="acad-side">
+        <a href="{{ acad_url }}" class="acad-item reveal" target="_blank" rel="noopener" style="transition-delay:.08s">
+          <img src="/assets/academy/curso-ia.webp" alt="" width="900" height="600" loading="lazy" decoding="async">
+          <div><h4>{% if page.lang == 'en' %}AI for Business{% else %}IA aplicada a los negocios{% endif %}</h4><p>{% if page.lang == 'en' %}Automate tasks and sell more with AI tools.{% else %}Automatiza tareas y vende más con herramientas de IA.{% endif %}</p></div>
+          <span class="acad-tag">{% if page.lang == 'en' %}Soon{% else %}Pronto{% endif %}</span>
+        </a>
+        <a href="{{ acad_url }}" class="acad-item reveal" target="_blank" rel="noopener" style="transition-delay:.16s">
+          <img src="/assets/academy/curso-marketing.webp" alt="" width="900" height="600" loading="lazy" decoding="async">
+          <div><h4>{% if page.lang == 'en' %}Digital Marketing{% else %}Marketing digital{% endif %}</h4><p>{% if page.lang == 'en' %}Content, ads and a sales system for your business.{% else %}Contenido, anuncios y un sistema de ventas para tu negocio.{% endif %}</p></div>
+          <span class="acad-tag">{% if page.lang == 'en' %}Soon{% else %}Pronto{% endif %}</span>
+        </a>
+        <a href="{{ acad_url }}" class="acad-item reveal" target="_blank" rel="noopener" style="transition-delay:.24s">
+          <img src="/assets/academy/biblioteca.webp" alt="" width="900" height="600" loading="lazy" decoding="async">
+          <div><h4>{% if page.lang == 'en' %}Digital library{% else %}Biblioteca digital{% endif %}</h4><p>{% if page.lang == 'en' %}7ST Vol. 1 and From Seed to Tree, with a reading certificate.{% else %}7ST Vol. 1 y De la Semilla al Árbol, con certificado de lectura.{% endif %}</p></div>
+          <span class="acad-tag acad-tag-on">{% if page.lang == 'en' %}Available{% else %}Disponible{% endif %}</span>
+        </a>
+
+        <ul class="acad-perks reveal" style="transition-delay:.3s">
+          <li><i class="fa-solid fa-language"></i>{% if page.lang == 'en' %}Spanish & English{% else %}Español e inglés{% endif %}</li>
+          <li><i class="fa-solid fa-cloud"></i>{% if page.lang == 'en' %}Progress saved{% else %}Avance guardado{% endif %}</li>
+          <li><i class="fa-solid fa-certificate"></i>{% if page.lang == 'en' %}Verifiable certificate{% else %}Certificado verificable{% endif %}</li>
+          <li><i class="fa-solid fa-user-tie"></i>{% if page.lang == 'en' %}2 private mentoring sessions{% else %}2 asesorías privadas{% endif %}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="acad-cta reveal">
+      <a href="{{ acad_url }}" class="btn-main acad-btn" target="_blank" rel="noopener">
+        {% if page.lang == 'en' %}GO TO THE ACADEMY{% else %}ENTRAR A LA ACADEMIA{% endif %}
+        <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <span class="acad-cta-note"><i class="fa-solid fa-fire"></i>{% if page.lang == 'en' %}Only the first 20 students get the launch price{% else %}Solo los primeros 20 estudiantes tienen el precio de lanzamiento{% endif %}</span>
+    </div>
+  </div>
+</section>

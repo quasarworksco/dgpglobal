@@ -450,6 +450,8 @@ function toggleAltair(){altairOpen?closeAltair():openAltair();}
 function openAltair(){
   altairOpen=true;
   document.getElementById('altair-chat').classList.add('open');
+  document.getElementById('altair-widget').classList.add('is-open');
+  hideAltairHint();
   if(!altairGreeted){
     altairGreeted=true;
     saveAltair();
@@ -459,11 +461,13 @@ function openAltair(){
       :"¡Hola! Soy Altair, asesor digital de DGP Global Group. Estoy aquí para ayudarte con diseño web, marketing digital, branding y crecimiento de negocios. ¿En qué puedo ayudarte hoy?"
     ,'bot');
   }
+  if(!altairHistory.some(m=>m.role==='user'))showAltairChips();
   setTimeout(()=>document.getElementById('altair-input').focus(),300);
 }
 function closeAltair(){
   altairOpen=false;
   document.getElementById('altair-chat').classList.remove('open');
+  document.getElementById('altair-widget').classList.remove('is-open');
   sendAltairTelegram(true);
 }
 function addAltairMsg(text,role){
@@ -475,6 +479,30 @@ function addAltairMsg(text,role){
   box.scrollTop=box.scrollHeight;
   return div;
 }
+/* Respuestas rápidas para empezar la conversación con un toque */
+function showAltairChips(){
+  const box=document.getElementById('altair-messages');
+  if(!box||document.getElementById('altair-chips'))return;
+  const opts=lang==='en'
+    ?['💻 I need a website','⚙️ Custom system / CRM','💲 How much does it cost?','🎓 DGP Academy']
+    :['💻 Quiero una página web','⚙️ Sistema / CRM a medida','💲 ¿Cuánto cuesta?','🎓 DGP Academy'];
+  const wrap=document.createElement('div');
+  wrap.id='altair-chips';wrap.className='altair-chips';
+  opts.forEach(o=>{
+    const b=document.createElement('button');
+    b.type='button';b.className='altair-chip';b.textContent=o;
+    b.onclick=()=>{document.getElementById('altair-input').value=o.replace(/^\S+\s/,'');altairSend();};
+    wrap.appendChild(b);
+  });
+  box.appendChild(wrap);box.scrollTop=box.scrollHeight;
+}
+function hideAltairHint(){const h=document.getElementById('altair-hint');if(h)h.classList.remove('show');}
+setTimeout(()=>{
+  let seen=false;try{seen=sessionStorage.getItem('altairHint')==='1';sessionStorage.setItem('altairHint','1');}catch(e){}
+  const h=document.getElementById('altair-hint');
+  if(seen||!h||altairOpen)return;
+  h.classList.add('show');setTimeout(hideAltairHint,7000);
+},7000);
 function showAltairTyping(){
   const box=document.getElementById('altair-messages');
   const div=document.createElement('div');
@@ -525,6 +553,7 @@ async function altairSend(){
   const text=input.value.trim();
   if(!text)return;
   input.value='';
+  const chips=document.getElementById('altair-chips');if(chips)chips.remove();
   addAltairMsg(text,'user');
   altairHistory.push({role:'user',content:text});
   showAltairTyping();
