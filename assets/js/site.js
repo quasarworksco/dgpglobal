@@ -799,7 +799,7 @@ document.querySelectorAll('form.lead-form').forEach(form=>{
   });
 });
 
-/* Portfolio: CRM mockup tabs */
+/* Portfolio: CRM tabs and screenshot gallery */
 (function(){
   const tabs=[...document.querySelectorAll('.crm-tab')];
   tabs.forEach(t=>t.addEventListener('click',()=>{
@@ -810,6 +810,13 @@ document.querySelectorAll('form.lead-form').forEach(form=>{
       document.getElementById(o.getAttribute('aria-controls')).hidden=!on;
     });
   }));
+  document.querySelectorAll('.crm-case').forEach(c=>{
+    const img=c.querySelector('.crm-shot-img'),label=c.querySelector('.crm-shot-label'),title=img.alt.split(':')[0];
+    c.querySelectorAll('.crm-thumb').forEach(b=>b.addEventListener('click',()=>{
+      c.querySelectorAll('.crm-thumb').forEach(o=>o.classList.toggle('on',o===b));
+      img.src=b.dataset.src;img.alt=`${title}: ${b.dataset.label}`;label.textContent=b.dataset.label;
+    }));
+  });
 })();
 
 /* Old one-page anchors now live on their own pages */

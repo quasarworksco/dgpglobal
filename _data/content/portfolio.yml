@@ -8,197 +8,51 @@ hero:
   sub_en: Purposeful design, precise code. Every site we build is crafted to stand out, convert visitors and position our clients' brands.
 crumb_es: Portafolio
 crumb_en: Portfolio
-# CRM a medida: maquetas con datos inventados. Nunca poner nombres, datos ni capturas reales de clientes.
+# CRM a medida: capturas reales de cada sistema cargado con datos de ejemplo.
+# Nunca subir capturas con nombres, teléfonos ni datos reales de los clientes de cada negocio.
 crm:
-- icon: fa-solid fa-file-signature
-  t_es: SERVICIOS PROFESIONALES
-  t_en: PROFESSIONAL SERVICES
-  tags_es: [Taxes, Trámites, LLC]
-  tags_en: [Taxes, Paperwork, LLC]
-  es: Oficina de taxes, trámites y formación de empresas. Cada servicio sigue su propio camino, con documentos privados por cliente, cobros en cuotas y recordatorios de citas.
-  en: Tax, paperwork and business formation office. Each service follows its own path, with private documents per customer, installment payments and appointment reminders.
-  mock:
-    es:
-      logo: OF
-      url: tuoficina.com/panel
-      menu: [Inicio, Clientes, Casos, Agenda, Documentos, Cobros, Reportes]
-      hello: Buenos días, Daniela
-      sub: Martes · datos de ejemplo
-      kpis:
-      - [Casos abiertos, '64', +9 esta semana]
-      - [Cobrado este mes, '$6,120', '$2,340 en cuotas']
-      - [Citas hoy, '7', 2 por videollamada]
-      - [Por vencer, '5', Fechas límite]
-      pipe_title: Casos por etapa
-      cols:
-      - name: Consulta
-        cards: [[Rosa M., Declaración personal], [Pedro L., Abrir LLC]]
-      - name: Documentos
-        cards: [[Elena C., Faltan 2 archivos], [Mario D., ITIN]]
-      - name: En trámite
-        cards: [[Jorge S., Enviado 12 oct.]]
-      - name: Entregado
-        cards: [[Carla B., '$350 · pagado']]
-      today_title: Para hoy
-      today:
-      - [Pedir comprobantes a Elena C., WhatsApp]
-      - [Cita con Rosa M. para revisar taxes, '11:00']
-      - [Cobrar cuota 2 de 3 a Mario D., '$120']
-      - [Revisar 5 casos con fecha límite, Alta]
-      note: Maqueta con datos inventados. Por privacidad no mostramos el sistema real del cliente.
-    en:
-      logo: OF
-      url: youroffice.com/panel
-      menu: [Home, Customers, Cases, Calendar, Documents, Payments, Reports]
-      hello: Good morning, Daniela
-      sub: Tuesday · sample data
-      kpis:
-      - [Open cases, '64', +9 this week]
-      - [Collected this month, '$6,120', '$2,340 in installments']
-      - [Appointments today, '7', 2 by video call]
-      - [Due soon, '5', Deadlines]
-      pipe_title: Cases by stage
-      cols:
-      - name: Consultation
-        cards: [[Rosa M., Personal tax return], [Pedro L., Form an LLC]]
-      - name: Documents
-        cards: [[Elena C., 2 files missing], [Mario D., ITIN]]
-      - name: In process
-        cards: [[Jorge S., Filed Oct 12]]
-      - name: Delivered
-        cards: [[Carla B., '$350 · paid']]
-      today_title: Today
-      today:
-      - [Request receipts from Elena C., WhatsApp]
-      - [Meet Rosa M. to review taxes, '11:00']
-      - [Collect installment 2 of 3 from Mario D., '$120']
-      - [Review 5 cases with deadlines, High]
-      note: Mockup with made-up data. For privacy we don't show the client's real system.
-- icon: fa-solid fa-store
-  t_es: TIENDA Y VENTAS CON DEMOSTRACIÓN
-  t_en: RETAIL & IN-HOME DEMOS
-  tags_es: [Tienda, Demostraciones, Financiamiento]
-  tags_en: [Store, Demos, Financing]
-  es: Tienda de productos para el hogar que vende con demostraciones. El CRM agenda las demos, sigue cada venta hasta la instalación y controla pagos y financiamiento.
-  en: Home products store that sells through demonstrations. The CRM books demos, follows each sale through installation and tracks payments and financing.
-  mock:
-    es:
-      logo: TD
-      url: tutienda.com/panel
-      menu: [Inicio, Prospectos, Ventas, Demos, Instalaciones, Cobros, Equipo]
-      hello: Buenos días, Andrés
-      sub: Jueves · datos de ejemplo
-      kpis:
-      - [Ventas del mes, '$18,900', +22% vs. mes pasado]
-      - [Demos esta semana, '15', 4 para hoy]
-      - [Instalaciones, '9', 3 pendientes]
-      - [Por cobrar, '$4,700', 6 financiados]
-      pipe_title: Embudo de ventas
-      cols:
-      - name: Interesado
-        cards: [[Familia Ortiz, Visitó la tienda], [Laura P., Formulario web]]
-      - name: Demo
-        cards: [[Raúl G., Sáb 10:00 a. m.], [Nora V., En casa]]
-      - name: Aprobado
-        cards: [[Familia Ruiz, Financiamiento OK]]
-      - name: Instalado
-        cards: [[Tomás H., '$1,450 · pagado']]
-      today_title: Para hoy
-      today:
-      - [Confirmar demo con Raúl G., '9:30']
-      - [Enviar cotización a Laura P., Correo]
-      - [Agendar instalación de Familia Ruiz, Equipo]
-      - [Llamar a 3 clientes para mantenimiento, Media]
-      note: Maqueta con datos inventados. Por privacidad no mostramos el sistema real del cliente.
-    en:
-      logo: TD
-      url: yourstore.com/panel
-      menu: [Home, Leads, Sales, Demos, Installs, Payments, Team]
-      hello: Good morning, Andrés
-      sub: Thursday · sample data
-      kpis:
-      - [Sales this month, '$18,900', +22% vs. last month]
-      - [Demos this week, '15', 4 today]
-      - [Installations, '9', 3 pending]
-      - [Outstanding, '$4,700', 6 financed]
-      pipe_title: Sales pipeline
-      cols:
-      - name: Interested
-        cards: [[Ortiz family, Visited the store], [Laura P., Website form]]
-      - name: Demo
-        cards: [[Raul G., Sat 10:00 AM], [Nora V., At home]]
-      - name: Approved
-        cards: [[Ruiz family, Financing OK]]
-      - name: Installed
-        cards: [[Tomas H., '$1,450 · paid']]
-      today_title: Today
-      today:
-      - [Confirm demo with Raul G., '9:30']
-      - [Send quote to Laura P., Email]
-      - [Schedule the Ruiz family install, Team]
-      - [Call 3 customers for maintenance, Medium]
-      note: Mockup with made-up data. For privacy we don't show the client's real system.
-- icon: fa-solid fa-laptop-house
-  t_es: SERVICIOS POR HORA
-  t_en: HOURLY SERVICES
-  tags_es: [Asistencia virtual, Horas, Equipo]
-  tags_en: [Virtual assistance, Hours, Team]
-  es: Agencia que vende servicios por hora a otros negocios. El CRM controla las horas de cada cliente, reparte el trabajo entre el equipo y avisa cuándo renovar.
-  en: Agency selling hourly services to other businesses. The CRM tracks each client's hours, splits the work across the team and flags when to renew.
-  mock:
-    es:
-      logo: AG
-      url: tuagencia.com/panel
-      menu: [Inicio, Clientes, Propuestas, Horas, Tareas, Facturas, Equipo]
-      hello: Buenos días, Valeria
-      sub: Lunes · datos de ejemplo
-      kpis:
-      - [Clientes activos, '22', +3 este mes]
-      - [Horas este mes, '318', 82% del plan]
-      - [Facturado, '$9,540', '$1,200 por cobrar']
-      - [Tareas abiertas, '41', 6 vencen hoy]
-      pipe_title: Clientes por etapa
-      cols:
-      - name: Prospecto
-        cards: [[Estudio Norte, Llamada de 15 min], [Café Brisa, Instagram]]
-      - name: Propuesta
-        cards: [[Clínica Sol, Plan 20 h]]
-      - name: Activo
-        cards: [[Taller Ríos, '14 de 20 h'], [Grupo Luna, '30 de 40 h']]
-      - name: Renovar
-        cards: [[Bufete Mar, Quedan 2 h]]
-      today_title: Para hoy
-      today:
-      - [Enviar reporte semanal a Taller Ríos, '10:00']
-      - [Asignar 8 h nuevas de Grupo Luna, Equipo]
-      - [Proponer renovación a Bufete Mar, Alta]
-      - [Facturar horas extra de Clínica Sol, '$240']
-      note: Maqueta con datos inventados. Por privacidad no mostramos el sistema real del cliente.
-    en:
-      logo: AG
-      url: youragency.com/panel
-      menu: [Home, Clients, Proposals, Hours, Tasks, Invoices, Team]
-      hello: Good morning, Valeria
-      sub: Monday · sample data
-      kpis:
-      - [Active clients, '22', +3 this month]
-      - [Hours this month, '318', 82% of plan]
-      - [Invoiced, '$9,540', '$1,200 outstanding']
-      - [Open tasks, '41', 6 due today]
-      pipe_title: Clients by stage
-      cols:
-      - name: Lead
-        cards: [[North Studio, 15-min call], [Breeze Cafe, Instagram]]
-      - name: Proposal
-        cards: [[Sun Clinic, 20 h plan]]
-      - name: Active
-        cards: [[Rios Garage, '14 of 20 h'], [Luna Group, '30 of 40 h']]
-      - name: Renew
-        cards: [[Sea Law Firm, 2 h left]]
-      today_title: Today
-      today:
-      - [Send weekly report to Rios Garage, '10:00']
-      - [Assign 8 new hours for Luna Group, Team]
-      - [Propose renewal to Sea Law Firm, High]
-      - [Invoice Sun Clinic overtime, '$240']
-      note: Mockup with made-up data. For privacy we don't show the client's real system.
+- slug: ava-multiservices
+  title: AVA MULTISERVICES
+  logo: logo.svg
+  brand: '#736251'
+  ink: '#2a2a2a'
+  tags_es: [Taxes, Inmigración, LLC, Crédito]
+  tags_en: [Taxes, Immigration, LLC, Credit]
+  es: CRM para una oficina de taxes, trámites migratorios, LLC y reparación de crédito en Dallas. Cada servicio tiene su tablero de casos con su lista de documentos, y los mensajes de WhatsApp, Messenger e Instagram llegan a una sola bandeja.
+  en: CRM for a Dallas tax, immigration, LLC and credit repair office. Each service has its own case board with its document checklist, and WhatsApp, Messenger and Instagram messages land in a single inbox.
+  modules_es: [Casos por etapa, Bandeja de mensajes, Portal del cliente, Contratos con firma, Cobros y recibos, Documentos, Agenda y tareas, Campañas]
+  modules_en: [Case boards, Unified inbox, Client portal, E-signed contracts, Payments & receipts, Documents, Calendar & tasks, Campaigns]
+  shots:
+  - [Inicio, Home]
+  - [Ficha del cliente, Client profile]
+  - [Bandeja de mensajes, Message inbox]
+- slug: mq
+  title: MQ · MARIA QUINTERO
+  logo: logo.svg
+  brand: '#1a4fd6'
+  ink: '#0b2a5c'
+  tags_es: [Call center, Ventas, Reclutamiento]
+  tags_en: [Call center, Sales, Recruiting]
+  es: CRM de ventas para un equipo de agentes que vende filtros de aire, purificadores y sistemas de agua. Llaman desde el computador con una cola de marcación priorizada, y cada venta calcula la comisión y queda conectada a la tienda MQ Store.
+  en: Sales CRM for a team of agents selling air filters, purifiers and water systems. They call from the computer with a prioritized dial queue, and every sale calculates its commission and connects to the MQ Store shop.
+  modules_es: [Modo llamadas, Teléfono integrado, Embudo de ventas, Productividad por agente, Reclutamiento, Ventas y comisiones, Recaudo y cartera, Tienda conectada]
+  modules_en: [Call mode, Built-in phone, Sales pipeline, Agent productivity, Recruiting, Sales & commissions, Collections, Connected store]
+  shots:
+  - [Inicio, Home]
+  - [Embudo de ventas, Sales pipeline]
+  - [Clientes y prospectos, Customers & leads]
+- slug: moya-company
+  title: MOYA & COMPANY
+  logo: logo.png
+  brand: '#0930b9'
+  ink: '#00227c'
+  tags_es: [Asistencia virtual, Llamadas, Contenido]
+  tags_en: [Virtual assistance, Calls, Content]
+  es: Panel para una agencia de asistencia virtual. Reúne las visitas del sitio, las llamadas grabadas con resumen hecho por IA, la cartera de clientes y postulantes, y los diseños de redes que la clienta aprueba antes de publicar.
+  en: Dashboard for a virtual assistance agency. It brings together website visits, recorded calls with AI summaries, the client and applicant pipeline, and the social media designs the owner approves before they go live.
+  modules_es: [Resumen del día, Llamadas y SMS, Resumen con IA, Contactos y postulantes, Aprobación de diseños, Métricas del sitio, Redes sociales]
+  modules_en: [Daily overview, Calls & SMS, AI call summaries, Contacts & applicants, Design approvals, Website analytics, Social media]
+  shots:
+  - [Resumen, Overview]
+  - [Contactos, Contacts]
+  - [Llamadas, Calls]
