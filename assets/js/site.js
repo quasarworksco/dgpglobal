@@ -799,6 +799,19 @@ document.querySelectorAll('form.lead-form').forEach(form=>{
   });
 });
 
+/* Portfolio: CRM mockup tabs */
+(function(){
+  const tabs=[...document.querySelectorAll('.crm-tab')];
+  tabs.forEach(t=>t.addEventListener('click',()=>{
+    tabs.forEach(o=>{
+      const on=o===t;
+      o.classList.toggle('on',on);
+      o.setAttribute('aria-selected',on?'true':'false');
+      document.getElementById(o.getAttribute('aria-controls')).hidden=!on;
+    });
+  }));
+})();
+
 /* Old one-page anchors now live on their own pages */
 (function(){
   const moved={'#web':'/diseno-web/','#paquetes':'/paquetes/','#ecommerce':'/paquetes/','#sistemas':'/sistemas/'};

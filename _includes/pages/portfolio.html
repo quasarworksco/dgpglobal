@@ -23,6 +23,33 @@
   </div>
 </div>
 
+<hr class="divider">
+
+<!-- CRM A MEDIDA: solo maquetas con datos inventados, nunca pantallas reales de clientes -->
+{% assign crm = site.data.content.portfolio.crm %}<div class="section" id="crm">
+  <div class="reveal">
+    {% if page.lang == 'es' %}<div class="sec-eyebrow" data-es>Sistemas a medida</div>{% endif %}{% if page.lang == 'en' %}<div class="sec-eyebrow" data-en>Custom systems</div>{% endif %}
+    <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>CRM QUE YA <span class="accent">USAN NUESTROS CLIENTES</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>CRMS OUR CLIENTS <span class="accent">USE EVERY DAY</span></span>{% endif %}</h2>
+    <p class="sec-sub">{% if page.lang == 'es' %}<span data-es>Estos sistemas guardan información privada de cada negocio, así que los mostramos como maquetas con datos inventados. Así se organiza cada uno.</span>{% endif %}{% if page.lang == 'en' %}<span data-en>These systems hold each business's private data, so we show them as mockups with made-up data. Here is how each one is organized.</span>{% endif %}</p>
+  </div>
+  <div class="crm-tabs reveal" role="tablist">
+    {% for c in crm %}<button type="button" class="crm-tab{% if forloop.first %} on{% endif %}" role="tab" id="crm-tab-{{ forloop.index }}" aria-controls="crm-case-{{ forloop.index }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"><i class="{{ c.icon }}"></i>{% if page.lang == 'es' %}<span data-es>{{ c.t_es }}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{{ c.t_en }}</span>{% endif %}</button>
+    {% endfor %}
+  </div>
+  {% for c in crm %}<div class="crm-case" role="tabpanel" id="crm-case-{{ forloop.index }}" aria-labelledby="crm-tab-{{ forloop.index }}"{% unless forloop.first %} hidden{% endunless %}>
+    <div class="crm-case-info">
+      <div class="pc-tags">{% if page.lang == 'es' %}<span data-es>{% for t in c.tags_es %}<span class="pc-tag">{{ t }}</span> {% endfor %}</span>{% endif %}{% if page.lang == 'en' %}<span data-en>{% for t in c.tags_en %}<span class="pc-tag">{{ t }}</span> {% endfor %}</span>{% endif %}</div>
+      {% if page.lang == 'es' %}<p data-es>{{ c.es }}</p>{% endif %}{% if page.lang == 'en' %}<p data-en>{{ c.en }}</p>{% endif %}
+    </div>
+    {% assign cm = c.mock[page.lang] %}{% include crm-mock.html m=cm %}
+    <p class="crm-mock-note">{{ cm.note }}</p>
+  </div>
+  {% endfor %}
+  <div class="crm-cta reveal">
+    <a href="{{ site.data.routes.crm[page.lang] }}" class="btn-main">{% if page.lang == 'es' %}<span data-es>QUIERO UN CRM ASÍ</span>{% endif %}{% if page.lang == 'en' %}<span data-en>I WANT A CRM LIKE THIS</span>{% endif %}<span class="arr"><i class="fa-solid fa-arrow-right"></i></span></a>
+  </div>
+</div>
+
 {% include audit-cta.html %}
 
 {% include contact-section.html %}
