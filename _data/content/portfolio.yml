@@ -24,10 +24,10 @@ crm:
   modules_en: [Case boards, Unified inbox, Client portal, E-signed contracts, Payments & receipts, Documents, Calendar & tasks, Campaigns]
   shots:
   - [Inicio, Home]
-  - [Ficha del cliente, Client profile]
-  - [Bandeja de mensajes, Message inbox]
+  - [Casos por etapa, Case board]
+  - [Clientes, Clients]
 - slug: mq
-  title: MQ · MARIA QUINTERO
+  title: MQ STORE
   logo: logo.svg
   brand: '#1a4fd6'
   ink: '#0b2a5c'
