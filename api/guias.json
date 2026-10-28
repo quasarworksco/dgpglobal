@@ -1,0 +1,12 @@
+---
+layout: null
+permalink: /api/guias.json
+---
+{% assign guides = site.pages | where_exp: "g", "g.layout == 'article'" | sort: "date" | reverse %}[{% for g in guides %}
+  {"ref": {{ g.ref | jsonify }}, "lang": {{ g.lang | jsonify }}, "url": {{ site.url | append: g.url | jsonify }},
+   "date": {{ g.date | date: "%Y-%m-%d" | jsonify }}, "category": {{ g.category | jsonify }},
+   "title": {{ g.heading | default: g.title | jsonify }}, "lead": {{ g.lead | jsonify }},
+   "image": {{ site.url | append: "/assets/og/" | append: g.ref | append: "-" | append: g.lang | append: ".jpg" | jsonify }},
+   "minutes": {{ g.content | number_of_words | divided_by: 200 | plus: 1 }},
+   "html": {{ g.content | markdownify | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}
+]
