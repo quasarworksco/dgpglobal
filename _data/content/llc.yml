@@ -1,17 +1,17 @@
 crumb_es: Registro de Empresas
 crumb_en: Business Registration
 service:
-  name_es: Registro de Empresas (LLC), EIN y Perfil Empresarial
-  name_en: Business Registration (LLC), EIN and Business Profile
+  name_es: Registro de Empresas (LLC), EIN y Acuerdo Operativo
+  name_en: Business Registration (LLC), EIN and Operating Agreement
   type: Business formation and web presence
 hero:
   bg_word: LLC
-  eyebrow_es: Registro de empresas · Texas y todo EE. UU.
-  eyebrow_en: Business registration · Texas and all U.S. states
+  eyebrow_es: Registro de empresas · Todo EE. UU.
+  eyebrow_en: Business registration · All U.S. states
   title_es: ABRE TU EMPRESA<span class="accent">Y SAL A VENDER</span>
   title_en: START YOUR COMPANY<span class="accent">AND START SELLING</span>
-  sub_es: Formamos tu LLC en Texas desde $600 con los fees del Estado incluidos, de la mano de aliados especializados. Registro, EIN y Acuerdo Operativo notariado, y en el Premium también tu página web y tu perfil de Google.
-  sub_en: We form your Texas LLC from $600 with state fees included, through specialized partners. Filing, EIN and a notarized Operating Agreement, plus your website and Google profile with Premium.
+  sub_es: Registramos tu LLC en cualquier estado desde $600 con los fees del Estado incluidos, de la mano de aliados especializados. Registro, EIN y Acuerdo Operativo notariado, y en el Premium también tu página web y tu perfil de Google.
+  sub_en: We register your LLC in any state from $600 with state fees included, through specialized partners. Filing, EIN and a notarized Operating Agreement, plus your website and Google profile with Premium.
   cta:
     href: '#paquetes'
     icon: fa-solid fa-building-circle-check
@@ -19,30 +19,26 @@ hero:
     en: SEE PACKAGES
 faq:
   - q_es: ¿En qué estado puedo registrar mi empresa?
-    a_es: Nuestros paquetes Básico y Premium son para Texas, con los fees del Estado incluidos. También podemos registrarla en otro estado de EE. UU.; escríbenos y te cotizamos el total antes de empezar.
+    a_es: En cualquier estado de EE. UU. Nuestros aliados especializados hacen el trámite a distancia y los fees del Estado ya están incluidos en el precio. Si no sabes cuál te conviene, te orientamos antes de empezar.
     q_en: In which state can I register my company?
-    a_en: Our Basic and Premium packages are for Texas, with state fees included. We can also register it in another U.S. state; message us and we quote the total before starting.
+    a_en: In any U.S. state. Our specialized partners handle the filing remotely and state fees are already included in the price. If you are not sure which state is best for you, we guide you before starting.
   - q_es: ¿El precio incluye los fees del Estado?
-    a_es: Sí. En Texas, el Paquete Básico ($600) y el Premium ($950) ya incluyen los fees del Estado. No hay costos escondidos. El branding (logo) es adicional.
+    a_es: Sí. En cualquier estado, el Paquete Básico ($600) y el Premium ($950) ya incluyen los fees del Estado. No hay costos escondidos. El branding (logo) es adicional.
     q_en: Does the price include state fees?
-    a_en: Yes. In Texas, the Basic package ($600) and the Premium package ($950) already include the state fees. No hidden costs. Branding (logo) is extra.
+    a_en: Yes. In any state, the Basic package ($600) and the Premium package ($950) already include the state fees. No hidden costs. Branding (logo) is extra.
   - q_es: ¿Puedo abrir una cuenta bancaria con estos documentos?
-    a_es: Sí. Con el Certificate of Formation, el EIN y el Acuerdo Operativo notariado puedes abrir la cuenta bancaria de tu negocio.
+    a_es: Sí. Con el documento de formación de la empresa, el EIN y el Acuerdo Operativo notariado puedes abrir la cuenta bancaria de tu negocio.
     q_en: Can I open a bank account with these documents?
-    a_en: Yes. With the Certificate of Formation, the EIN and the notarized Operating Agreement you can open your business bank account.
+    a_en: Yes. With the company formation document, the EIN and the notarized Operating Agreement you can open your business bank account.
   - q_es: ¿Necesito número de Seguro Social para el EIN?
     a_es: Con número de Seguro Social el EIN suele salir rápido. Con ITIN o sin número también se puede solicitar, pero el IRS tarda más. Te explicamos el caso tuyo al cotizar.
     q_en: Do I need a Social Security number for the EIN?
     a_en: With a Social Security number the EIN is usually issued quickly. With an ITIN or no number it can still be requested, but the IRS takes longer. We explain your case when quoting.
   - q_es: ¿Qué diferencia hay entre el Paquete Básico y el Premium?
-    a_es: El Básico ($600) incluye el registro de la empresa ante el Estado de Texas (Certificate of Formation), el EIN ante el IRS y el Acuerdo Operativo completo y notariado. El Premium ($950) incluye todo eso más dominio empresarial, página web, hosting por 1 año, dirección virtual y perfil de Google Business para que tu negocio aparezca en Google y Google Maps.
+    a_es: El Básico ($600) incluye el registro de la empresa ante el Estado, el EIN ante el IRS y el Acuerdo Operativo completo y notariado. El Premium ($950) incluye todo eso más dominio empresarial, página web, hosting por 1 año, dirección virtual y perfil de Google Business para que tu negocio aparezca en Google y Google Maps.
     q_en: What is the difference between the Basic and Premium packages?
-    a_en: Basic ($600) includes your company registration with the State of Texas (Certificate of Formation), the EIN from the IRS and a complete, notarized Operating Agreement. Premium ($950) includes all of that plus a business domain, website, 1 year of hosting, a virtual address and a Google Business Profile so your business shows up on Google and Google Maps.
-  - q_es: ¿Qué es el perfil empresarial?
-    a_es: Es la preparación inicial de tu empresa ante los burós de crédito comerciales (Dun & Bradstreet y Experian Business), con orientación para empezar con proveedores que reportan crédito. Es una base para construir crédito de empresa; no se garantiza puntuación ni aprobación.
-    q_en: What is the business profile?
-    a_en: It is the initial setup of your company with the business credit bureaus (Dun & Bradstreet and Experian Business), with guidance to start with vendors that report credit. It is a foundation to build business credit; no score or approval is guaranteed.
+    a_en: Basic ($600) includes your company registration with the state, the EIN from the IRS and a complete, notarized Operating Agreement. Premium ($950) includes all of that plus a business domain, website, 1 year of hosting, a virtual address and a Google Business Profile so your business shows up on Google and Google Maps.
   - q_es: ¿Ustedes dan asesoría legal o fiscal?
-    a_es: No. El registro lo realizan aliados especializados y nosotros nos encargamos de tu página web y presencia en Google. Para asesoría legal o de impuestos te recomendamos consultar con un profesional.
+    a_es: No. El registro lo realizan aliados especializados y nosotros te acompañamos en todo el proceso, además de tu página web y presencia en Google. Para asesoría legal o de impuestos te recomendamos consultar con un profesional.
     q_en: Do you provide legal or tax advice?
     a_en: No. The registration is handled by specialized partners and we take care of your website and Google presence. For legal or tax advice, we recommend consulting a professional.
