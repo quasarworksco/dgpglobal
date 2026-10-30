@@ -1267,14 +1267,14 @@ nav{padding:18px 52px}
   body:has(.lp-sticky) footer{padding-bottom:90px}
 }
 
-/* Registro de empresas: 4 paquetes */
-.llc-plans{grid-template-columns:repeat(4,1fr);gap:18px}
+/* Registro de empresas: 3 paquetes */
+.llc-plans{grid-template-columns:repeat(3,1fr);gap:18px}
 .plan-head.h4{background:linear-gradient(120deg,#080f3d,#050817)}
 .llc-card .plan-price{font-size:46px}
 .llc-card .plan-name{font-size:29px;overflow-wrap:anywhere}
 .llc-card .feat-list li{font-size:12.5px}
 .llc-steps{grid-template-columns:repeat(4,1fr)}
-@media(max-width:1200px){.llc-plans{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1000px){.llc-plans{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}
 @media(max-width:1000px){.llc-steps{grid-template-columns:1fr}}
 @media(max-width:700px){.llc-plans{grid-template-columns:1fr}}
 
