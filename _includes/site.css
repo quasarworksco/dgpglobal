@@ -451,6 +451,9 @@ body.en .opt-es{display:none}body.en .opt-en{display:block}
 .altair-card .altair-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .altair-card-err{font-size:11.5px;color:#dc2626;min-height:0}
 .altair-card-err:empty{display:none}
+.altair-card-wa{font-size:12px;text-align:center;color:#128c7e;font-weight:600;text-decoration:none}
+.altair-card-wa:hover{text-decoration:underline}
+#altair-input:disabled{opacity:.6;cursor:not-allowed}
 .altair-card button{background:var(--blue);color:#fff;border:none;border-radius:8px;padding:10px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
 .altair-card button:disabled{opacity:.6}
 .altair-input-area{display:flex;border-top:1px solid var(--border);flex-shrink:0}

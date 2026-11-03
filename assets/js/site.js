@@ -408,6 +408,15 @@ let altairOpen=false;
 let altairGreeted=false;
 let altairTgSent=0;
 let altairContacto=null;
+let altairLang=null;   // idioma en que escribe el cliente (manda sobre el idioma de la página)
+function idiomaDe(t){
+  t=' '+String(t||'').toLowerCase()+' ';
+  if(/[ñ¿¡áéíóú]/.test(t))return 'es';
+  const en=(t.match(/\b(the|and|you|your|is|are|i|i'm|my|need|want|how|much|website|do|does|have|can|for|with|what|hi|hello|please|thanks|thank|price|cost|business|would|like|about|get|make)\b/g)||[]).length;
+  const es=(t.match(/\b(el|la|los|las|que|de|y|quiero|necesito|cuanto|pagina|hola|gracias|por|para|con|mi|tu|es|un|una|como|precio|negocio|tienen|hacen|quisiera|buenas|buenos)\b/g)||[]).length;
+  return en>es?'en':es>en?'es':null;
+}
+const altEn=()=>(altairLang||lang)==='en';
 function saveAltair(){
   try{sessionStorage.setItem('altairState',JSON.stringify({h:altairHistory,s:altairTgSent,g:altairGreeted,c:altairContacto}));}catch(e){}
 }
@@ -461,8 +470,15 @@ function openAltair(){
       :"¡Hola! Soy Altair, asesor digital de DGP Global Group. Estoy aquí para ayudarte con diseño web, marketing digital, branding y crecimiento de negocios. ¿En qué puedo ayudarte hoy?"
     ,'bot');
   }
+  // Antes de conversar, nombre y WhatsApp (así ningún cliente se pierde si se corta el chat)
+  if(!altairContacto){showAltairContactCard(true);bloquearAltair(true);return;}
   if(!altairHistory.some(m=>m.role==='user'))showAltairChips();
   setTimeout(()=>document.getElementById('altair-input').focus(),300);
+}
+function bloquearAltair(si){
+  const i=document.getElementById('altair-input'),b=document.querySelector('.altair-send');
+  if(i){i.disabled=si;i.placeholder=si?(altEn()?'First, your name and WhatsApp ↑':'Primero tu nombre y WhatsApp ↑'):(i.getAttribute(altEn()?'data-ph-en':'data-ph-es')||'');}
+  if(b)b.disabled=si;
 }
 function closeAltair(){
   altairOpen=false;
@@ -483,7 +499,7 @@ function addAltairMsg(text,role){
 function showAltairChips(){
   const box=document.getElementById('altair-messages');
   if(!box||document.getElementById('altair-chips'))return;
-  const opts=lang==='en'
+  const opts=altEn()
     ?['💻 I need a website','⚙️ Custom system / CRM','💲 How much does it cost?','🎓 DGP Academy']
     :['💻 Quiero una página web','⚙️ Sistema / CRM a medida','💲 ¿Cuánto cuesta?','🎓 DGP Academy'];
   const wrap=document.createElement('div');
@@ -512,24 +528,25 @@ function showAltairTyping(){
 }
 function hideAltairTyping(){const t=document.getElementById('altair-typing');if(t)t.remove();}
 /* Tarjeta para dejar nombre y WhatsApp dentro del chat (va al CRM como prospecto) */
-function showAltairContactCard(){
+function showAltairContactCard(inicio){
   const box=document.getElementById('altair-messages');
   if(!box||document.getElementById('altair-card'))return;
-  const en=lang==='en';
+  const en=altEn();
   const card=document.createElement('form');
   card.id='altair-card';card.className='altair-card';card.noValidate=true;
-  card.innerHTML=`<div class="altair-card-t">${en?'So a specialist can send you a quote, leave your name and WhatsApp:':'Para que un asesor te envíe una propuesta, déjanos tu nombre y WhatsApp:'}</div>
+  card.innerHTML=`<div class="altair-card-t">${inicio?(en?'Before we start, what is your name and WhatsApp? That way a specialist can follow up with you if the chat gets cut off.':'Antes de empezar, ¿cuál es tu nombre y tu WhatsApp? Así un asesor puede seguir contigo si se corta el chat.'):(en?'So a specialist can send you a quote, leave your name and WhatsApp:':'Para que un asesor te envíe una propuesta, déjanos tu nombre y WhatsApp:')}</div>
     <input name="nombre" autocomplete="name" maxlength="80" placeholder="${en?'Your name':'Tu nombre'}">
     <input name="telefono" type="tel" autocomplete="tel" maxlength="30" placeholder="${en?'WhatsApp / phone':'WhatsApp / teléfono'}">
     <input name="empresa_web" tabindex="-1" autocomplete="off" class="altair-hp" aria-hidden="true">
     <div class="altair-card-err"></div>
-    <button type="submit">${en?'Send':'Enviar'}</button>`;
+    <button type="submit">${en?(inicio?'Start chat':'Send'):(inicio?'Empezar a chatear':'Enviar')}</button>
+    ${inicio?`<a class="altair-card-wa" href="https://wa.me/12398231738" target="_blank" rel="noopener">${en?'Or message us directly on WhatsApp':'O escríbenos directo por WhatsApp'}</a>`:''}`;
   card.addEventListener('submit',enviarContactoAltair);
   box.appendChild(card);box.scrollTop=box.scrollHeight;
 }
 async function enviarContactoAltair(e){
   e.preventDefault();
-  const f=e.target,en=lang==='en',err=f.querySelector('.altair-card-err'),btn=f.querySelector('button');
+  const f=e.target,en=altEn(),err=f.querySelector('.altair-card-err'),btn=f.querySelector('button');
   const nombre=f.nombre.value.trim(),telefono=f.telefono.value.trim();
   if(nombre.length<2){err.textContent=en?'Please write your name.':'Escribe tu nombre.';return;}
   if(telefono.replace(/\D/g,'').length<7){err.textContent=en?'Please write a valid phone number.':'Escribe un número válido.';return;}
@@ -542,10 +559,16 @@ async function enviarContactoAltair(e){
     if(!r.ok&&r.status!==429)throw new Error();
     altairContacto={nombre,telefono,enviado:true};
     f.remove();
-    const gracias=en?`Thank you, ${nombre.split(' ')[0]}! A specialist will message you on WhatsApp very soon. Meanwhile, I'm here for any other question.`
-      :`¡Gracias, ${nombre.split(' ')[0]}! Un asesor te escribirá por WhatsApp muy pronto. Mientras tanto, sigo aquí para cualquier otra pregunta.`;
+    const primera=!altairHistory.some(m=>m.role==='user');
+    const gracias=primera
+      ?(en?`Nice to meet you, ${nombre.split(' ')[0]}! Tell me, how can I help you today?`:`¡Mucho gusto, ${nombre.split(' ')[0]}! Cuéntame, ¿en qué te puedo ayudar hoy?`)
+      :(en?`Thank you, ${nombre.split(' ')[0]}! A specialist will message you on WhatsApp very soon. Meanwhile, I'm here for any other question.`
+      :`¡Gracias, ${nombre.split(' ')[0]}! Un asesor te escribirá por WhatsApp muy pronto. Mientras tanto, sigo aquí para cualquier otra pregunta.`);
     addAltairMsg(gracias,'bot');altairHistory.push({role:'assistant',content:gracias});saveAltair();
-    sendAltairTelegram();
+    bloquearAltair(false);
+    if(primera)showAltairChips();
+    setTimeout(()=>document.getElementById('altair-input')?.focus(),100);
+    if(!primera)sendAltairTelegram();
   }catch(x){err.textContent=en?'Could not send. Please try again.':'No se pudo enviar. Intenta de nuevo.';btn.disabled=false;}
 }
 async function altairSend(){
@@ -556,15 +579,16 @@ async function altairSend(){
   const chips=document.getElementById('altair-chips');if(chips)chips.remove();
   addAltairMsg(text,'user');
   altairHistory.push({role:'user',content:text});
+  altairLang=idiomaDe(text)||altairLang;
   showAltairTyping();
   const btn=document.querySelector('.altair-send');
   if(btn)btn.disabled=true;
   try{
     const res=await fetch(PANEL_API+'/chat-ia',{method:'POST',headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({idioma:lang,contacto:altairContacto,mensajes:altairHistory.map(m=>({rol:m.role,texto:m.content}))})});
+      body:JSON.stringify({idioma:altairLang||lang,contacto:altairContacto,mensajes:altairHistory.map(m=>({rol:m.role,texto:m.content}))})});
     const data=await res.json().catch(()=>({}));
     hideAltairTyping();
-    const reply=data.respuesta||(lang==='en'?'Sorry, I had a technical issue. Please try again.':'Disculpa, tuve un problema técnico. Por favor intenta de nuevo.');
+    const reply=data.respuesta||(altEn()?'Sorry, I had a technical issue. Please try again.':'Disculpa, tuve un problema técnico. Por favor intenta de nuevo.');
     addAltairMsg(reply,'bot');
     altairHistory.push({role:'assistant',content:reply});
     if(altairHistory.length>24){const cut=altairHistory.length-24;altairHistory=altairHistory.slice(cut);altairTgSent=Math.max(0,altairTgSent-cut);}
@@ -574,7 +598,7 @@ async function altairSend(){
     if(nPreg===1)sendAltairTelegram();
   }catch{
     hideAltairTyping();
-    addAltairMsg(lang==='en'?'Connection error. Please try again.':'Error de conexión. Intenta de nuevo.','bot');
+    addAltairMsg(altEn()?'Connection error. Please try again.':'Error de conexión. Intenta de nuevo.','bot');
   }finally{
     if(btn)btn.disabled=false;
   }
