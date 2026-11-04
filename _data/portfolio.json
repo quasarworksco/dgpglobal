@@ -236,5 +236,23 @@
     "desc_en": "Website for an auto repair shop: general mechanics, A/C, brakes and auto electrical, with a clear process, estimates before any repair and WhatsApp booking.",
     "url": "https://casanovacarcare.com/",
     "slug": "casanova-car-care"
+  },
+  {
+    "num": "14",
+    "title": "JF NETWORK SOLUTIONS",
+    "tags_es": [
+      "Fibra Óptica",
+      "Redes y Data Center",
+      "Bilingüe"
+    ],
+    "tags_en": [
+      "Fiber Optics",
+      "Networks & Data Center",
+      "Bilingual"
+    ],
+    "desc_es": "Sitio bilingüe para empresa de infraestructura de red: fibra óptica, cableado estructurado Cat6/Cat6A, data centers, cámaras y Wi‑Fi empresarial. Diseño tecnológico oscuro, servicios con sus especialidades, proceso de trabajo en 5 pasos y cotización directa por WhatsApp.",
+    "desc_en": "Bilingual website for a network infrastructure company: fiber optics, Cat6/Cat6A structured cabling, data centers, security cameras and business Wi‑Fi. Dark tech design, services with their specialties, a 5-step work process and direct WhatsApp quotes.",
+    "url": "https://jfnetworksolutions.com/",
+    "slug": "jf-network-solutions"
   }
 ]
