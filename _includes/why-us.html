@@ -32,4 +32,10 @@
       <span class="why-badge"><i class="fa-solid fa-headset"></i> {% if page.lang == 'es' %}<span data-es>Siempre disponibles</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Always available</span>{% endif %}</span>
     </div>
   </div>
+  {% if include.industries %}
+  <div class="why-ind reveal">
+    <p class="why-ind-t">{% if page.lang == 'en' %}Websites built for your industry{% else %}Páginas web pensadas para tu industria{% endif %}</p>
+    {% include industries-grid.html compact=true %}
+  </div>
+  {% endif %}
 </div>
