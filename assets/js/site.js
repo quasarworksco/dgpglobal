@@ -785,6 +785,13 @@ if(auditForm){
   }
   function tick(){clearInterval(timer);timer=setInterval(()=>{if(visible&&!userPicked&&!document.hidden)show(idx+1);},8000);}
   thumbs.forEach((t,k)=>t.addEventListener('click',()=>{userPicked=true;show(k);}));
+  const prev=q('.sc-prev'),next=q('.sc-next');
+  if(prev)prev.addEventListener('click',()=>{userPicked=true;show(idx-1);});
+  if(next)next.addEventListener('click',()=>{userPicked=true;show(idx+1);});
+  /* deslizar en el teléfono: basta un gesto rápido, no hace falta recorrer mucho */
+  const stage=q('.sc-stage');let sx=0,sy=0,st=0;
+  stage.addEventListener('touchstart',e=>{const t=e.touches[0];sx=t.clientX;sy=t.clientY;st=Date.now();},{passive:true});
+  stage.addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-sx,dy=t.clientY-sy;if(Math.abs(dx)<Math.abs(dy))return;const v=Math.abs(dx)/Math.max(1,Date.now()-st);if(Math.abs(dx)>50||v>0.3){userPicked=true;show(idx+(dx<0?1:-1));}},{passive:true});
   new IntersectionObserver(en=>{
     visible=en[0].isIntersecting;
     if(visible&&!started){started=true;shots.forEach(img=>{img.src=img.dataset.src;});tick();}

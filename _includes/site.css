@@ -1892,3 +1892,27 @@ body.home #servicios{padding-top:88px}
 .ind-grid--chips .ind-card:active{transform:scale(.97)}
 @media(max-width:600px){.ind-grid--chips{display:grid;grid-template-columns:1fr}.ind-grid--chips .ind-card{border-radius:14px}.ind-grid--chips .ind-card-name{flex:1}}
 @media(max-width:600px){.ind-grid--chips{grid-template-columns:1fr 1fr;gap:8px}.ind-grid--chips .ind-card{padding:8px 10px 8px 8px;gap:8px}.ind-grid--chips .ind-card-name{font-size:13px}.ind-grid--chips .ind-card-arrow{display:none}.ind-grid--chips .ind-card-icon{width:28px;height:28px;font-size:12px}}
+
+/* Portafolio del inicio: flechas en lugar de la lista de miniaturas */
+.sc-actions{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.sc-nav{display:flex;gap:8px}
+.sc-arrow{width:46px;height:46px;border-radius:50%;border:1.5px solid #d7dbe6;background:#fff;color:#0a1430;display:grid;place-items:center;cursor:pointer;transition:border-color .2s ease,background .2s ease,color .2s ease,transform .16s ease-out}
+@media(hover:hover) and (pointer:fine){.sc-arrow:hover{border-color:var(--blue);color:var(--blue)}}
+.sc-arrow:active{transform:scale(.94)}
+.sc-arrow:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.showcase .sc-link{border-radius:100px;height:46px;padding:0 22px}
+.sc-stage{touch-action:pan-y}
+.showcase .sc-shot{transition:opacity .28s ease,filter .28s ease}
+.showcase.switching .sc-shot{filter:blur(3px)}
+@media(max-width:1000px){.sc-actions{width:100%;justify-content:space-between}}
+/* Reseñas: todas del mismo alto, con "Ver más" si el texto es largo */
+.gr-card{align-items:flex-start}
+.gr-ct{-webkit-line-clamp:4;flex:none;min-height:calc(1.55em * 4)}
+.gr-card.is-open .gr-ct{-webkit-line-clamp:unset;display:block}
+.gr-more{background:none;border:0;padding:0;font:600 13px 'DM Sans',sans-serif;color:var(--blue);cursor:pointer;margin-top:-2px}
+.gr-more:focus-visible{outline:2px solid var(--blue);outline-offset:2px;border-radius:4px}
+.gr-cg{margin-top:auto;padding-top:6px;text-decoration:none}
+@media(hover:hover) and (pointer:fine){.gr-cg:hover{color:var(--blue)}}
+.gr-card{position:relative}
+.gr-cgg{position:absolute;top:20px;right:20px;width:18px;height:18px}
+.gr-cards{align-items:start}
