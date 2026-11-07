@@ -45,7 +45,7 @@
 <nav>
   <a href="{{ site.data.routes.home[page.lang] }}" class="logo">
     <img src="/assets/img/logo-mark-48.webp" srcset="/assets/img/logo-mark-48.webp 1x, /assets/img/logo-mark-96.webp 2x" class="logo-sm" alt="" width="42" height="42" style="width:42px;height:42px;object-fit:contain;border-radius:4px">
-    DGP <span>GLOBAL</span> GROUP
+    <span class="lg-w" aria-label="DGP Global Group"><b>DGP</b><span class="lg-s" aria-hidden="true"><span>Global</span><span>Group</span></span></span>
   </a>
   <div class="nav-links">
     <a href="{{ site.data.routes.web[page.lang] }}" class="nav-link{% if page.ref == 'web' %} active{% endif %}">{% if page.lang == 'es' %}<span data-es>Diseño Web</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Web Design</span>{% endif %}</a>
@@ -56,9 +56,9 @@
     <a href="https://academy.dgpglobalgroup.com/?lang={{ page.lang }}" class="nav-link nav-link-academy" target="_blank" rel="noopener"><i class="fa-solid fa-graduation-cap"></i>Academy</a>
   </div>
   <div style="display:flex;align-items:center;gap:16px">
-    <a href="{{ site.data.routes.audit[page.lang] }}" class="nav-badge nav-badge-link">
-      <span class="dot"></span>
-      {% if page.lang == 'es' %}<span data-es>Auditoría gratis</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Free audit</span>{% endif %}
+    <a href="{{ site.data.routes.audit[page.lang] }}" class="nav-cta">
+      <span>{% if page.lang == 'es' %}Auditoría gratis{% else %}Free audit{% endif %}</span>
+      <span class="nav-cta-ic" aria-hidden="true"><svg viewBox="0 0 16 16" width="12" height="12"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
     </a>
     <button class="hamburger" id="hamburger" onclick="toggleDrawer()" aria-label="Menú">
       <span></span><span></span><span></span>

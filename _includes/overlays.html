@@ -71,14 +71,15 @@
 <!-- EXIT POPUP -->
 <div id="exit-popup" role="dialog" aria-modal="true" aria-labelledby="exit-title">
   <div class="exit-card xp">
-    <div class="xp-visual" aria-hidden="true">
-      <div class="xp-rating"><svg viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg><span><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>{% if page.lang == 'en' %}Reviews on Google{% else %}Reseñas en Google{% endif %}</div>
-      <div class="xp-device">
-        <img src="/assets/portfolio/appliance-solutions-901/desktop-hero-480.webp" alt="" width="480" height="300" loading="lazy" decoding="async">
-        <span class="xp-chip xp-chip-2"><i class="fa-solid fa-bolt"></i>{% if page.lang == 'en' %}Live in 48h{% else %}Lista en 48h{% endif %}</span>
-        <span class="xp-chip xp-chip-1"><i class="fa-solid fa-check"></i>{% if page.lang == 'en' %}Optimized for Google{% else %}Optimizada para Google{% endif %}</span>
+    <div class="xp-visual xs" aria-hidden="true">
+      <div class="xs-box">
+        <div class="xs-q"><svg viewBox="0 0 16 16" width="14" height="14"><circle cx="7" cy="7" r="4.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m10.5 10.5 3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>{% if page.lang == 'en' %}business near me{% else %}negocio cerca de mí{% endif %}</div>
+        <ol class="xs-list">
+          <li class="xs-r"><span class="xs-n">{% if page.lang == 'en' %}Your competitor{% else %}Tu competencia{% endif %}</span><span class="xs-l"></span><span class="xs-l xs-l2"></span></li>
+          <li class="xs-r"><span class="xs-n">{% if page.lang == 'en' %}Your competitor{% else %}Tu competencia{% endif %}</span><span class="xs-l"></span><span class="xs-l xs-l2"></span></li>
+          <li class="xs-r xs-you"><span class="xs-n">{% if page.lang == 'en' %}Your business{% else %}Tu negocio{% endif %}<b class="xs-st"><svg viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg></b></span><span class="xs-l"></span><span class="xs-acts"><i>{% if page.lang == 'en' %}Website{% else %}Sitio web{% endif %}</i><i>WhatsApp</i><i>{% if page.lang == 'en' %}Directions{% else %}Cómo llegar{% endif %}</i></span></li>
+        </ol>
       </div>
-      <p class="xp-quote">{% if page.lang == 'en' %}120+ projects delivered for businesses in the USA and Latin America.{% else %}+120 proyectos entregados para negocios en USA y Latinoamérica.{% endif %}</p>
     </div>
     <div class="xp-body">
       <button class="exit-close" onclick="closeExitPopup()" aria-label="{% if page.lang == 'en' %}Close{% else %}Cerrar{% endif %}"><i class="fa-solid fa-xmark"></i></button>
@@ -140,7 +141,7 @@
     </div>
     <div class="altair-foot">{% if page.lang == 'en' %}AI assistant · a person from our team follows up{% else %}Asistente con IA · una persona del equipo te da seguimiento{% endif %}</div>
   </div>
-  <div class="altair-hint" id="altair-hint">{% if page.lang == 'en' %}Questions? Ask Altair 👋{% else %}¿Dudas? Pregúntale a Altair 👋{% endif %}</div>
+  <div class="altair-hint" id="altair-hint">{% if page.lang == 'en' %}Questions? Ask Altair{% else %}¿Dudas? Pregúntale a Altair{% endif %}</div>
   <button id="altair-fab" onclick="toggleAltair()" aria-label="Chat con Altair">
     <i class="fa-solid fa-robot"></i>
   </button>

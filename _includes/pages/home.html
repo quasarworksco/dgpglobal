@@ -11,7 +11,6 @@
           <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
         </button>
         <button onclick="openQuote()" class="quote-trigger hero2-sec"><i class="fa-solid fa-calculator"></i>{% if page.lang == 'en' %}QUICK QUOTE{% else %}COTIZADOR RÁPIDO{% endif %}</button>
-        <a class="hero2-link" href="{{ site.data.routes.portfolio[page.lang] }}">{% if page.lang == 'en' %}See our work{% else %}Ver portafolio{% endif %} <i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <dl class="hero2-proof">
         <div><dt>48<small>h</small></dt><dd>{% if page.lang == 'en' %}your website live{% else %}tu web publicada{% endif %}</dd></div>
@@ -19,22 +18,112 @@
         <div><dt><small>$</small>280</dt><dd>{% if page.lang == 'en' %}one-time, from{% else %}pago único, desde{% endif %}</dd></div>
       </dl>
     </div>
-    <div class="hero2-visual" aria-hidden="true">
-      <div class="hero2-stage">
-        <div class="sc-laptop">
-          <div class="sc-laptop-screen"><span class="sc-cam"></span>
-            <div class="sc-viewport"><img class="hero2-shot" src="/assets/portfolio/appliance-solutions-901/desktop-hero.webp?v={{ site.time | date: '%s' }}" srcset="/assets/portfolio/appliance-solutions-901/desktop-hero-480.webp?v={{ site.time | date: '%s' }} 480w, /assets/portfolio/appliance-solutions-901/desktop-hero.webp?v={{ site.time | date: '%s' }} 960w" sizes="(max-width: 900px) 82vw, 540px" alt="" width="960" height="600" fetchpriority="high" decoding="async"></div>
+    <div class="hero2-visual">
+      {%- assign hx = "tecmeca|tecmecatx.com|TECMECA,casanova-car-care|casanovacarcare.com|CASANOVA CAR CARE,appliance-solutions-901|appliancesolution901.com|APPLIANCE SOLUTIONS 901,mq-store|mqstore.dgp-link.com|MQ STORE,jf-network-solutions|jfnetworksolutions.com|JF NETWORK SOLUTIONS,orange-ultrasound|orangeultrasound.dgp-link.com|ORANGE ULTRASOUND,smelling-clean|smellingcleanfl.com|SMELLING CLEAN,caibo-construction|caiboconstruction.com|CAIBO CONSTRUCTION" | split: "," -%}
+      {%- assign h0 = hx[0] | split: "|" -%}
+      <div class="hx-stage" id="hxStage" aria-hidden="true" data-v="{{ site.time | date: '%s' }}" data-items="{{ hx | join: ',' }}">
+        <div class="hx-laptop">
+          <div class="hx-lid"><span class="hx-cam"></span>
+            <div class="hx-screen"><img class="hx-img is-on" src="/assets/portfolio/{{ h0[0] }}/desktop-hero.webp?v={{ site.time | date: '%s' }}" srcset="/assets/portfolio/{{ h0[0] }}/desktop-hero-480.webp?v={{ site.time | date: '%s' }} 480w, /assets/portfolio/{{ h0[0] }}/desktop-hero.webp?v={{ site.time | date: '%s' }} 960w" sizes="(max-width: 1000px) 86vw, 600px" alt="" width="960" height="600" fetchpriority="high" decoding="async"></div>
           </div>
-          <div class="sc-laptop-base"><span></span></div>
+          <div class="hx-base"><span></span></div>
         </div>
-        <div class="sc-phone"><span class="sc-notch"></span>
-          <div class="sc-viewport"><img class="hero2-shot hero2-shot-m" src="/assets/portfolio/appliance-solutions-901/mobile-hero.webp?v={{ site.time | date: '%s' }}" srcset="/assets/portfolio/appliance-solutions-901/mobile-hero-180.webp?v={{ site.time | date: '%s' }} 180w, /assets/portfolio/appliance-solutions-901/mobile-hero.webp?v={{ site.time | date: '%s' }} 360w" sizes="(max-width: 900px) 20vw, 140px" alt="" width="360" height="780" decoding="async"></div>
+        <div class="hx-phone"><span class="hx-island"></span>
+          <div class="hx-screen"><img class="hx-img is-on" src="/assets/portfolio/{{ h0[0] }}/mobile-hero.webp?v={{ site.time | date: '%s' }}" srcset="/assets/portfolio/{{ h0[0] }}/mobile-hero-180.webp?v={{ site.time | date: '%s' }} 180w, /assets/portfolio/{{ h0[0] }}/mobile-hero.webp?v={{ site.time | date: '%s' }} 360w" sizes="(max-width: 1000px) 24vw, 150px" alt="" width="360" height="780" decoding="async"></div>
         </div>
       </div>
-      <p class="hero2-cap">{% if page.lang == 'en' %}Real project · Appliance Solutions 901{% else %}Proyecto real · Appliance Solutions 901{% endif %}</p>
+      <div class="hx-meta">
+        <a class="hx-name" href="{{ site.data.routes.portfolio[page.lang] }}"><span class="hx-k">{% if page.lang == 'en' %}Real project{% else %}Proyecto real{% endif %}</span><span class="hx-t" id="hxTitle">{{ h0[2] }}</span><span class="hx-d" id="hxDomain">{{ h0[1] }}</span></a>
+        <div class="hx-bars" id="hxBars" role="group" aria-label="{% if page.lang == 'en' %}Projects{% else %}Proyectos{% endif %}">{% for x in hx %}{% assign hp = x | split: "|" %}<button type="button" class="hx-bar{% if forloop.first %} is-on{% endif %}" aria-label="{{ hp[2] }}"><i></i></button>{% endfor %}</div>
+      </div>
     </div>
   </div>
 </section>
+<script>
+(function(){
+  var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* Título: cada letra "decodifica" de izquierda a derecha */
+  var h=document.querySelector('.hero2-title');
+  if(h&&!RM&&'animate' in Element.prototype){
+    h.setAttribute('aria-label',h.textContent.replace(/\s+/g,' ').trim());
+    var G='ABCDEFGHJKLMNPRSTUVWXYZ0123456789/<>#*';
+    var cells=[];
+    h.querySelectorAll('.h2l>span').forEach(function(line){
+      var t=line.textContent;line.textContent='';line.setAttribute('aria-hidden','true');
+      for(var i=0;i<t.length;i++){
+        var c=t[i];
+        if(c===' '){line.appendChild(document.createTextNode(' '));continue}
+        var w=document.createElement('span');w.className='hdc';
+        var b=document.createElement('b');b.textContent=c;
+        var g=document.createElement('i');g.textContent=G[(Math.random()*G.length)|0];
+        w.appendChild(b);w.appendChild(g);line.appendChild(w);cells.push(w);
+      }
+    });
+    h.classList.add('is-decoding');
+    var t0=performance.now(),STEP=34,RUN=420;
+    (function tick(now){
+      var done=0;
+      for(var k=0;k<cells.length;k++){
+        var c=cells[k],start=k*STEP,el=now-t0;
+        if(c._d){done++;continue}
+        if(el<start)continue;
+        if(el>start+RUN){c._d=1;c.classList.add('hd-ok');done++;continue}
+        c.classList.add('hd-on');
+        if(((el/45)|0)!==c._f){c._f=(el/45)|0;c.lastChild.textContent=G[(Math.random()*G.length)|0]}
+      }
+      if(done<cells.length)requestAnimationFrame(tick);else h.classList.remove('is-decoding');
+    })(t0);
+  }
+
+  /* Vitrina: rota proyectos reales cada 3 s */
+  var st=document.getElementById('hxStage');if(!st)return;
+  var v=st.dataset.v,items=st.dataset.items.split(',').map(function(x){x=x.split('|');return{s:x[0],d:x[1],t:x[2]}});
+  var bars=[].slice.call(document.querySelectorAll('#hxBars .hx-bar'));
+  var tEl=document.getElementById('hxTitle'),dEl=document.getElementById('hxDomain'),nm=tEl.parentNode;
+  var scr=[st.querySelector('.hx-lid .hx-screen'),st.querySelector('.hx-phone .hx-screen')];
+  var EASE='cubic-bezier(.77,0,.175,1)',DUR=3000,idx=0,timer=null,busy=false,visible=true,hover=false;
+  function src(it,m){var b='/assets/portfolio/'+it.s+'/'+(m?'mobile':'desktop')+'-hero';return{src:b+'.webp?v='+v,srcset:b+(m?'-180':'-480')+'.webp?v='+v+(m?' 180w, ':' 480w, ')+b+'.webp?v='+v+(m?' 360w':' 960w')}}
+  var cache={};
+  function pre(i){var it=items[i];if(cache[i])return cache[i];
+    cache[i]=Promise.all([0,1].map(function(m){var im=new Image(),o=src(it,m);im.sizes=m?'150px':'600px';im.srcset=o.srcset;im.src=o.src;return im.decode?im.decode().catch(function(){}):Promise.resolve()}));return cache[i]}
+  function setBars(i){bars.forEach(function(b,k){b.classList.toggle('is-on',k===i);b.classList.toggle('is-past',k<i);b.setAttribute('aria-current',k===i?'true':'false')})}
+  function go(n){
+    if(busy||n===idx)return;busy=true;
+    var it=items[n];
+    pre(n).then(function(){
+      scr.forEach(function(box,m){
+        var old=box.querySelector('.hx-img.is-on'),im=document.createElement('img'),o=src(it,m);
+        im.className='hx-img';im.alt='';im.decoding='async';im.sizes=m?'150px':'600px';im.srcset=o.srcset;im.src=o.src;
+        box.appendChild(im);
+        var delay=m?90:0;
+        var a=RM?im.animate([{opacity:0},{opacity:1}],{duration:400,easing:'ease',fill:'both'})
+          :im.animate([{clipPath:'inset(100% 0 0 0)',transform:'translateY(6%) scale(1.04)'},{clipPath:'inset(0% 0 0 0)',transform:'none'}],{duration:760,delay:delay,easing:EASE,fill:'both'});
+        if(!RM&&old)old.animate([{transform:'none',opacity:1},{transform:'translateY(-4%) scale(.98)',opacity:.35}],{duration:760,delay:delay,easing:EASE,fill:'both'});
+        a.onfinish=function(){if(old)old.remove();im.classList.add('is-on');a.cancel();im.style.opacity=1;if(m){busy=false}};
+      });
+      /* nombre y dominio: cambio con desenfoque breve */
+      nm.animate([{opacity:1,filter:'blur(0)',transform:'none'},{opacity:0,filter:'blur(4px)',transform:'translateY(-4px)'}],{duration:180,easing:'ease-in-out'}).onfinish=function(){
+        tEl.textContent=it.t;dEl.textContent=it.d;
+        nm.animate([{opacity:0,filter:'blur(4px)',transform:'translateY(4px)'},{opacity:1,filter:'blur(0)',transform:'none'}],{duration:260,easing:'cubic-bezier(.23,1,.32,1)'});
+      };
+      idx=n;setBars(n);pre((n+1)%items.length);
+    });
+  }
+  function schedule(){
+    clearTimeout(timer);var run=visible&&!hover&&!document.hidden;
+    st.parentNode.classList.toggle('is-paused',!run);
+    var f=bars[idx]&&bars[idx].firstChild;if(f){f.style.animation='none';void f.offsetWidth;f.style.animation=''}
+    if(run)timer=setTimeout(function(){go((idx+1)%items.length);schedule()},DUR);
+  }
+  bars.forEach(function(b,k){b.addEventListener('click',function(){go(k);schedule()})});
+  var vis=st.parentNode;
+  if(matchMedia('(hover: hover) and (pointer: fine)').matches){vis.addEventListener('mouseenter',function(){hover=true;schedule()});vis.addEventListener('mouseleave',function(){hover=false;schedule()})}
+  document.addEventListener('visibilitychange',schedule);
+  if('IntersectionObserver' in window)new IntersectionObserver(function(e){visible=e[0].isIntersecting;schedule()},{threshold:.2}).observe(st);
+  addEventListener('load',function(){pre(1);schedule()});
+})();
+</script>
+
 
 <!-- TICKER -->
 <div class="ticker-strip">
@@ -168,99 +257,24 @@
 
 {% include process.html %}
 
-<!-- RESEÑAS -->
-<div class="band-blue band-blue--deep rev-band">
-<div class="section" id="resenas">
-  <div class="reveal" style="text-align:center;margin-bottom:56px">
-    {% if page.lang == 'es' %}<div class="sec-eyebrow" style="justify-content:center;display:flex" data-es>Comunidad</div>{% endif %}
-    {% if page.lang == 'en' %}<div class="sec-eyebrow" style="justify-content:center;display:flex" data-en>Community</div>{% endif %}
-    <h2 class="sec-title" style="text-align:center">{% if page.lang == 'es' %}<span data-es>LO QUE DICEN DE <span class="accent">NOSOTROS</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>WHAT THEY SAY <span class="accent">ABOUT US</span></span>{% endif %}</h2>
-    {% if page.lang == 'es' %}<p class="sec-sub" style="margin:0 auto" data-es>Las experiencias reales de quienes ya confían en DGP Global Group.</p>{% endif %}
-    {% if page.lang == 'en' %}<p class="sec-sub" style="margin:0 auto" data-en>Real experiences from those who already trust DGP Global Group.</p>{% endif %}
-  </div>
-  <div class="grev-wrap">
-    <div class="reveal" style="transition-delay:0s">
-      <div class="grev-badge">
-        <svg class="grev-badge-logo" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/><path fill="none" d="M0 0h48v48H0z"/></svg>
-        <div class="grev-badge-info">
-          <div class="grev-badge-name">DGP Global Group</div>
-          <div class="grev-stars">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            {% if page.lang == 'es' %}<span data-es>en Google</span>{% endif %}{% if page.lang == 'en' %}<span data-en>on Google</span>{% endif %}
-          </div>
-        </div>
-      </div>
-      <a href="https://www.google.com/maps?cid=17197988016077419191" target="_blank" rel="noopener" class="grev-btn-google">
-        <i class="fa-brands fa-google"></i>
-        {% if page.lang == 'es' %}<span data-es>VER RESEÑAS EN GOOGLE</span>{% endif %}{% if page.lang == 'en' %}<span data-en>VIEW GOOGLE REVIEWS</span>{% endif %}
-      </a>
-      <a href="https://g.page/r/CbcyuFX7hqvuEAE/review" target="_blank" rel="noopener" class="grev-btn-write">
-        <i class="fa-solid fa-pen"></i>
-        {% if page.lang == 'es' %}<span data-es>DEJAR RESEÑA EN GOOGLE</span>{% endif %}{% if page.lang == 'en' %}<span data-en>WRITE A GOOGLE REVIEW</span>{% endif %}
-      </a>
-      <div class="grev-service-area">
-        {% if page.lang == 'es' %}<div class="gsa-title" data-es><i class="fa-solid fa-earth-americas"></i> ÁREA DE SERVICIO</div>{% endif %}
-        {% if page.lang == 'en' %}<div class="gsa-title" data-en><i class="fa-solid fa-earth-americas"></i> SERVICE AREA</div>{% endif %}
-        {% if page.lang == 'es' %}<p class="gsa-sub" data-es>Servicio 100% remoto — atendemos a clientes en:</p>{% endif %}
-        {% if page.lang == 'en' %}<p class="gsa-sub" data-en>100% remote service — we serve clients in:</p>{% endif %}
-        <div class="gsa-pills">
-          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> Florida, USA</span>
-          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> {% if page.lang == 'es' %}<span data-es>Todo USA</span>{% endif %}{% if page.lang == 'en' %}<span data-en>All USA</span>{% endif %}</span>
-          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> {% if page.lang == 'es' %}<span data-es>España</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Spain</span>{% endif %}</span>
-          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> Venezuela</span>
-          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> {% if page.lang == 'es' %}<span data-es>Europa</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Europe</span>{% endif %}</span>
-          <span class="gsa-pill"><i class="fa-solid fa-location-dot"></i> {% if page.lang == 'es' %}<span data-es>Latinoamérica</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Latin America</span>{% endif %}</span>
-        </div>
+<!-- RESEÑAS EN GOOGLE -->
+<section class="gr-band" id="resenas">
+  <div class="gr-in reveal">
+    <div class="gr-id">
+      <svg class="gr-g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+      <div>
+        <h2 class="gr-t">{% if page.lang == 'en' %}Our reviews live on Google{% else %}Nuestras reseñas están en Google{% endif %}</h2>
+        <div class="gr-stars" role="img" aria-label="{% if page.lang == 'en' %}5 stars{% else %}5 estrellas{% endif %}"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L10 14.9l-5.2 2.8 1-5.9L1.5 7.7l5.9-.8z"/></svg><span>DGP Global Group</span></div>
+        <p class="gr-s">{% if page.lang == 'en' %}Read what real clients say, verified by Google. 100% remote service across the USA, Spain and Latin America.{% else %}Lee lo que dicen clientes reales, verificado por Google. Servicio 100% remoto en todo USA, España y Latinoamérica.{% endif %}</p>
       </div>
     </div>
-    <div class="card form-card reveal" style="transition-delay:.15s">
-      <div class="card-icon"><i class="fa-solid fa-pen-nib"></i></div>
-      {% if page.lang == 'es' %}<h2 class="card-heading" data-es>DÉJANOS TU OPINIÓN</h2>{% endif %}{% if page.lang == 'en' %}<h2 class="card-heading" data-en>LEAVE YOUR REVIEW</h2>{% endif %}
-      {% if page.lang == 'es' %}<p class="card-sub" data-es>Tu valoración nos ayuda a seguir creciendo y servir mejor a nuestra comunidad.</p>{% endif %}
-      {% if page.lang == 'en' %}<p class="card-sub" data-en>Your rating helps us keep growing and serve our community better.</p>{% endif %}
-      <form id="reviewForm" data-dgp-ignorar novalidate>
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="field"><input type="text" id="nombre" data-ph-es="Nombre completo" data-ph-en="Full name" placeholder="Nombre completo" required></div>
-        <div class="field"><input type="email" id="correo" data-ph-es="Correo electrónico" data-ph-en="Email address" placeholder="Correo electrónico" required></div>
-        <div class="rating-row">
-          {% if page.lang == 'es' %}<span class="rating-label" data-es>Tu valoración</span>{% endif %}{% if page.lang == 'en' %}<span class="rating-label" data-en>Your rating</span>{% endif %}
-          <div class="star-input">
-            <input type="radio" name="stars" id="s5" value="5" required><label for="s5">★</label>
-            <input type="radio" name="stars" id="s4" value="4"><label for="s4">★</label>
-            <input type="radio" name="stars" id="s3" value="3"><label for="s3">★</label>
-            <input type="radio" name="stars" id="s2" value="2"><label for="s2">★</label>
-            <input type="radio" name="stars" id="s1" value="1"><label for="s1">★</label>
-          </div>
-        </div>
-        <div class="field"><textarea id="comentario" rows="4" data-ph-es="Escribe tu experiencia con DGP Global Group..." data-ph-en="Write about your experience with DGP Global Group..." placeholder="Escribe tu experiencia con DGP Global Group..." required></textarea></div>
-        <button type="submit" class="submit-btn" id="submitBtn">
-          {% if page.lang == 'es' %}<span id="btnTxt" data-es>ENVIAR RESEÑA</span>{% endif %}{% if page.lang == 'en' %}<span id="btnTxt" data-en>SEND REVIEW</span>{% endif %}
-          <span class="barr"><i class="fa-solid fa-arrow-right"></i></span>
-        </button>
-      </form>
-      <div id="statusMsg" class="status"></div>
+    <div class="gr-map"><iframe title="{% if page.lang == 'en' %}DGP Global Group on Google Maps{% else %}DGP Global Group en Google Maps{% endif %}" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607931.5244378676!2d-84.8562892326723!3d27.982554967956766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe54450b15b7c5f7%3A0xeeab86fb55b832b7!2sDGP%20Global%20Group!5e0!3m2!1s{% if page.lang == 'en' %}en{% else %}es-419{% endif %}!2sus!4v1794038012855!5m2!1s{% if page.lang == 'en' %}en{% else %}es-419{% endif %}!2sus" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+    <div class="gr-ctas">
+      <a class="gr-btn gr-btn--main" href="https://www.google.com/maps?cid=17197988016077419191" target="_blank" rel="noopener">{% if page.lang == 'en' %}See reviews on Google{% else %}Ver reseñas en Google{% endif %}<svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="gr-btn" href="https://g.page/r/CbcyuFX7hqvuEAE/review" target="_blank" rel="noopener">{% if page.lang == 'en' %}Leave a review{% else %}Dejar una reseña{% endif %}</a>
     </div>
   </div>
-
-  <div class="card reveal" style="transition-delay:.2s;margin-top:24px;padding:0">
-    <div class="panel-head" onclick="toggleReviews(this)">
-      <div style="display:flex;align-items:center;gap:12px">
-        {% if page.lang == 'es' %}<span class="panel-title" data-es>OPINIONES</span>{% endif %}{% if page.lang == 'en' %}<span class="panel-title" data-en>REVIEWS</span>{% endif %}
-        <span class="rev-count" id="revCount">...</span>
-      </div>
-      <i class="fa-solid fa-chevron-down panel-chevron"></i>
-    </div>
-    <div class="reviews-collapsible" id="revCollapsible">
-      <div class="reviews-scroll" id="revContainer">
-        <div class="shimmer"></div>
-        <div class="shimmer" style="height:70px;opacity:.6"></div>
-        <div class="shimmer" style="height:60px;opacity:.35"></div>
-      </div>
-    </div>
-  </div>
-
-</div>
-</div>
+</section>
 
 {% include faq.html %}
 
