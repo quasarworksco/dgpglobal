@@ -6,11 +6,21 @@
       <div class="audit-band-title">{% if page.lang == 'es' %}<span data-es>¿YA TIENES PÁGINA WEB?<br><span>TE LA REVISAMOS GRATIS EN 24H.</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>ALREADY HAVE A WEBSITE?<br><span>WE'LL REVIEW IT FREE IN 24H.</span></span>{% endif %}</div>
       {% if page.lang == 'es' %}<p class="audit-band-sub" data-es>Analizamos velocidad, versión móvil, Google y qué tan bien convierte visitas en clientes. Te enviamos un informe con mejoras concretas.</p>{% endif %}
       {% if page.lang == 'en' %}<p class="audit-band-sub" data-en>We analyze speed, mobile experience, Google visibility and how well it turns visitors into customers. You get a report with concrete improvements.</p>{% endif %}
+      <a href="{{ site.data.routes.audit[page.lang] }}" class="btn-main audit-band-btn">
+        <i class="fa-solid fa-magnifying-glass-chart"></i>
+        {% if page.lang == 'es' %}<span data-es>PEDIR MI AUDITORÍA</span>{% endif %}{% if page.lang == 'en' %}<span data-en>GET MY AUDIT</span>{% endif %}
+        <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
     </div>
-    <a href="{{ site.data.routes.audit[page.lang] }}" class="btn-main audit-band-btn">
-      <i class="fa-solid fa-magnifying-glass-chart"></i>
-      {% if page.lang == 'es' %}<span data-es>PEDIR MI AUDITORÍA</span>{% endif %}{% if page.lang == 'en' %}<span data-en>GET MY AUDIT</span>{% endif %}
-      <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
-    </a>
+    <div class="ab-report" aria-hidden="true">
+      <div class="ab-r-head"><span class="ab-r-dot"></span>{% if page.lang == 'en' %}Your website report{% else %}Informe de tu web{% endif %}<em>24h</em></div>
+      <ul>
+        <li><i class="fa-solid fa-gauge-high"></i><span>{% if page.lang == 'en' %}Loading speed{% else %}Velocidad de carga{% endif %}</span><b class="ab-ok"><svg viewBox="0 0 16 16" width="12" height="12"><path d="M3.5 8.3 6.6 11.2 12.5 4.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></b></li>
+        <li><i class="fa-solid fa-mobile-screen"></i><span>{% if page.lang == 'en' %}Mobile version{% else %}Versión en celular{% endif %}</span><b class="ab-ok"><svg viewBox="0 0 16 16" width="12" height="12"><path d="M3.5 8.3 6.6 11.2 12.5 4.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></b></li>
+        <li><i class="fa-solid fa-magnifying-glass"></i><span>{% if page.lang == 'en' %}How you show up on Google{% else %}Cómo apareces en Google{% endif %}</span><b class="ab-ok"><svg viewBox="0 0 16 16" width="12" height="12"><path d="M3.5 8.3 6.6 11.2 12.5 4.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></b></li>
+        <li><i class="fa-brands fa-whatsapp"></i><span>{% if page.lang == 'en' %}WhatsApp and contact forms{% else %}WhatsApp y formularios{% endif %}</span><b class="ab-ok"><svg viewBox="0 0 16 16" width="12" height="12"><path d="M3.5 8.3 6.6 11.2 12.5 4.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></b></li>
+      </ul>
+      <div class="ab-r-foot">{% if page.lang == 'en' %}+ concrete improvements, in plain language{% else %}+ mejoras concretas, explicadas sin tecnicismos{% endif %}</div>
+    </div>
   </div>
 </div>
