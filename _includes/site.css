@@ -1845,3 +1845,23 @@ body.home .hero2-visual{animation:h2Device 1s .15s cubic-bezier(.23,1,.32,1) bot
 body.home .hero2-title{font-size:clamp(40px,15.9cqi,100px)}
 body.home.en .hero2-title{font-size:clamp(34px,12.6cqi,84px)}
 @media(max-width:600px){body.home .hero2-title{font-size:15.9cqi}body.home.en .hero2-title{font-size:12.6cqi}}
+
+/* Encabezado: botón de auditoría v2 (claro, con lupa) */
+.nav-cta{height:42px;padding:0 18px 0 6px;gap:10px;background:#fff;color:#0a1430;border:1px solid #dde2ec;border-radius:100px;font-size:13.5px;font-weight:500;box-shadow:0 6px 18px -12px rgba(10,20,48,.35);transition:border-color .2s ease,box-shadow .2s ease,transform .16s ease-out}
+.nav-cta-ic{width:30px;height:30px;border-radius:50%;background:#1438cc;color:#fff;transition:transform .25s cubic-bezier(.23,1,.32,1)}
+.nav-cta-t b{font-weight:700;color:#1438cc}
+@media(hover:hover) and (pointer:fine){.nav-cta:hover{background:#fff;border-color:#1438cc;box-shadow:0 10px 24px -14px rgba(20,56,204,.55)}.nav-cta:hover .nav-cta-ic{transform:rotate(-12deg) scale(1.06)}}
+.nav-cta:active{transform:scale(.97)}
+
+/* Reseñas de Google: tarjetas */
+.gr-cards{max-width:1100px;margin:20px auto 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.gr-card{display:flex;flex-direction:column;gap:8px;padding:20px;background:#fff;border:1px solid #e3e7f0;border-radius:18px;text-decoration:none;color:#0a1430;transition:border-color .2s ease,transform .2s cubic-bezier(.23,1,.32,1)}
+@media(hover:hover) and (pointer:fine){.gr-card:hover{border-color:#c4cde3;transform:translateY(-2px)}}
+.gr-cav{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:600;font-size:15px}
+.gr-cn{font-weight:600;font-size:14.5px}
+.gr-cs{display:flex;gap:1px}
+.gr-cs svg{width:13px;height:13px;fill:#fbbc05}
+.gr-ct{font-size:13.5px;line-height:1.55;color:#4a5573;display:-webkit-box;-webkit-line-clamp:7;-webkit-box-orient:vertical;overflow:hidden;flex:1}
+.gr-cg{font-size:11.5px;color:#7a849e;letter-spacing:.3px;margin-top:4px}
+@media(max-width:1000px){.gr-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.gr-cards{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:16px -24px 0;padding:0 24px 6px;scrollbar-width:none}.gr-cards::-webkit-scrollbar{display:none}.gr-card{flex:0 0 78%;scroll-snap-align:center}}
