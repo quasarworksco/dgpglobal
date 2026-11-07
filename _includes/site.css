@@ -1957,3 +1957,14 @@ body.home #servicios{padding-top:88px}
 @media(max-width:600px){.audit-band-wrap{padding:8px 16px 48px}.audit-band{padding:28px 20px;border-radius:20px}}
 @media(prefers-reduced-motion:reduce){.ab-ok{transition:none}}
 @media(max-width:600px){.ab-report{display:none}}
+
+/* Segundo puente: portafolio (claro) → Cómo trabajamos (azul noche) */
+body.home .hv-bridge--navy{padding-top:32px}
+body.home .hv-bridge--navy::before{background:transparent;box-shadow:none}
+body.home .hv-bridge--navy::after{background:#070e26;box-shadow:0 0 0 100vmax #070e26}
+body.home .hv-bridge--navy+#proceso{padding-top:72px!important}
+body.home .hv-bridge--navy+#proceso::after{top:-260px}
+/* Título del hero: Bebas engrosada (opción A) */
+body.home .hero2-title{-webkit-text-stroke:.035em currentColor;paint-order:stroke fill;letter-spacing:.012em;font-size:clamp(40px,15.4cqi,100px)}
+body.home.en .hero2-title{font-size:clamp(34px,12.2cqi,84px)}
+@media(max-width:600px){body.home .hero2-title{font-size:15.4cqi}body.home.en .hero2-title{font-size:12.2cqi}}
