@@ -75,7 +75,7 @@
 <noscript><link rel="stylesheet" href="/assets/fa/fa.css"></noscript>
 <style>{% include site.css %}</style>
 </head>
-<body{% if page.lang == 'en' %} class="en"{% endif %}>
+<body class="{% if page.lang == 'en' %}en{% endif %}{% if page.ref == 'home' %} home{% endif %}">
 <script>window.PAGE_LANG="{{ page.lang }}";window.SHOT_V="{{ site.time | date: '%s' }}";window.HOME_URL="{{ site.data.routes.home[page.lang] }}";{% if route %}window.ALT_URL="{% if page.lang == 'en' %}{{ route.es }}{% else %}{{ route.en }}{% endif %}";{% endif %}</script>
 
 <div id="scroll-progress"></div>

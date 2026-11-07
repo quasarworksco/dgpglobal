@@ -3,23 +3,21 @@
   <div class="hero2-glow"></div>
   <div class="hero2-inner">
     <div class="hero2-text">
-      <div class="hero2-pill"><i class="fa-solid fa-bolt"></i>{% if page.lang == 'en' %}Your website live in 48 hours{% else %}Tu página web lista en 48 horas{% endif %}</div>
-      <h1 class="hero2-title">{% if page.lang == 'en' %}YOUR BUSINESS DESERVES<span class="accent">A WEBSITE THAT SELLS</span>{% else %}TU NEGOCIO MERECE<span class="accent">UNA WEB QUE VENDA</span>{% endif %}</h1>
+      <h1 class="hero2-title">{% if page.lang == 'en' %}<span class="h2l"><span>YOUR BUSINESS DESERVES</span></span><span class="h2l accent"><span>A WEBSITE THAT SELLS</span></span>{% else %}<span class="h2l"><span>TU NEGOCIO MERECE</span></span><span class="h2l accent"><span>UNA WEB QUE VENDA</span></span>{% endif %}</h1>
       <p class="hero2-sub">{% if page.lang == 'en' %}Professional websites and custom systems that bring you customers and save you time. In English and Spanish, for businesses in Florida and across the USA.{% else %}Páginas web profesionales y sistemas a medida que te traen clientes y te ahorran tiempo. En español e inglés, para negocios en Florida y todo USA.{% endif %}</p>
       <div class="hero2-ctas">
         <button onclick="openHeroForm()" class="btn-main" style="border:none;cursor:pointer">
           <i class="fa-solid fa-paper-plane"></i>{% if page.lang == 'en' %}START YOUR PROJECT{% else %}COMIENZA TU PROYECTO{% endif %}
           <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
         </button>
-        <button onclick="openQuote()" class="quote-trigger"><i class="fa-solid fa-calculator"></i>{% if page.lang == 'en' %}QUICK QUOTE{% else %}COTIZADOR RÁPIDO{% endif %}</button>
+        <button onclick="openQuote()" class="quote-trigger hero2-sec"><i class="fa-solid fa-calculator"></i>{% if page.lang == 'en' %}QUICK QUOTE{% else %}COTIZADOR RÁPIDO{% endif %}</button>
         <a class="hero2-link" href="{{ site.data.routes.portfolio[page.lang] }}">{% if page.lang == 'en' %}See our work{% else %}Ver portafolio{% endif %} <i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <ul class="hero2-trust">
-        <li><b>50+</b>{% if page.lang == 'en' %}clients{% else %}clientes{% endif %}</li>
-        <li><b>120+</b>{% if page.lang == 'en' %}projects{% else %}proyectos{% endif %}</li>
-        <li><b>7</b>{% if page.lang == 'en' %}years{% else %}años{% endif %}</li>
-        <li><b>24–48h</b>{% if page.lang == 'en' %}delivery{% else %}entrega{% endif %}</li>
-      </ul>
+      <dl class="hero2-proof">
+        <div><dt>48<small>h</small></dt><dd>{% if page.lang == 'en' %}your website live{% else %}tu web publicada{% endif %}</dd></div>
+        <div><dt>ES<small>/</small>EN</dt><dd>{% if page.lang == 'en' %}fully bilingual{% else %}100% bilingüe{% endif %}</dd></div>
+        <div><dt><small>$</small>280</dt><dd>{% if page.lang == 'en' %}one-time, from{% else %}pago único, desde{% endif %}</dd></div>
+      </dl>
     </div>
     <div class="hero2-visual" aria-hidden="true">
       <div class="hero2-stage">
@@ -33,6 +31,7 @@
           <div class="sc-viewport"><img class="hero2-shot hero2-shot-m" src="/assets/portfolio/appliance-solutions-901/mobile-hero.webp?v={{ site.time | date: '%s' }}" srcset="/assets/portfolio/appliance-solutions-901/mobile-hero-180.webp?v={{ site.time | date: '%s' }} 180w, /assets/portfolio/appliance-solutions-901/mobile-hero.webp?v={{ site.time | date: '%s' }} 360w" sizes="(max-width: 900px) 20vw, 140px" alt="" width="360" height="780" decoding="async"></div>
         </div>
       </div>
+      <p class="hero2-cap">{% if page.lang == 'en' %}Real project · Appliance Solutions 901{% else %}Proyecto real · Appliance Solutions 901{% endif %}</p>
     </div>
   </div>
 </section>
@@ -60,6 +59,16 @@
     <span class="ticker-item">Estrategia Digital</span>
   </div>
 </div>
+
+<!-- VIDEO: DGP en 15 segundos (sin sonido) -->
+<div class="hv-wrap reveal">
+  <div class="hv-frame">
+    <video class="hv-video" muted loop playsinline preload="none" poster="/assets/video/dgp-15s-poster.jpg" aria-label="{% if page.lang == 'es' %}Video: DGP Global Group en 15 segundos{% else %}Video: DGP Global Group in 15 seconds{% endif %}">
+      <source src="/assets/video/dgp-15s.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<script>document.addEventListener('DOMContentLoaded',function(){if(!('IntersectionObserver' in window))return;var r=matchMedia('(prefers-reduced-motion: reduce)').matches;var io=new IntersectionObserver(function(e){e.forEach(function(x){var v=x.target;if(x.isIntersecting&&!r){v.preload='auto';v.play().catch(function(){})}else{v.pause()}})},{threshold:.35});document.querySelectorAll('.hv-video').forEach(function(v){io.observe(v)})});</script>
 
 {% include urgency-bar.html %}
 
@@ -145,6 +154,15 @@
       {% if page.lang == 'es' %}<span data-es>VISITA NUESTRO PORTAFOLIO</span>{% endif %}{% if page.lang == 'en' %}<span data-en>VISIT OUR PORTFOLIO</span>{% endif %}
       <span class="arr"><i class="fa-solid fa-arrow-right"></i></span>
     </a>
+  </div>
+</div>
+
+<!-- VIDEO 2: sitios web y sistemas a medida -->
+<div class="hv-wrap reveal" style="padding-top:24px;padding-bottom:56px">
+  <div class="hv-frame">
+    <video class="hv-video" muted loop playsinline preload="none" poster="/assets/video/dgp-sistemas-poster.jpg" aria-label="{% if page.lang == 'es' %}Video: sitios web y sistemas a medida de DGP{% else %}Video: DGP websites and custom systems{% endif %}">
+      <source src="/assets/video/dgp-sistemas.mp4" type="video/mp4">
+    </video>
   </div>
 </div>
 
