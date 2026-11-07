@@ -6,7 +6,7 @@
   <button onclick="closeDrawer()" aria-label="Cerrar menú" style="position:absolute;top:20px;right:20px;background:none;border:none;font-size:20px;color:var(--soft);cursor:pointer;line-height:1;padding:4px;transition:color .2s" onmouseover="this.style.color='#000'" onmouseout="this.style.color=''">✕</button>
   <div class="drawer-logo">
     <img src="/assets/img/logo-mark-48.webp" srcset="/assets/img/logo-mark-48.webp 1x, /assets/img/logo-mark-96.webp 2x" alt="" width="32" height="32" loading="lazy" decoding="async">
-    DGP <span>GLOBAL</span> GROUP
+    <span class="lg-w" aria-label="DGP Global Group"><b>DGP</b><span class="lg-s" aria-hidden="true"><span>Global</span><span>Group</span></span></span>
   </div>
   <div class="drawer-links">
     <a href="{{ site.data.routes.home[page.lang] }}" class="drawer-link{% if page.ref == 'home' %} active{% endif %}"><i class="fa-solid fa-house"></i>{% if page.lang == 'es' %}<span data-es>Inicio</span>{% endif %}{% if page.lang == 'en' %}<span data-en>Home</span>{% endif %}</a>

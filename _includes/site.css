@@ -1,6 +1,7 @@
 @font-face{font-family:'Bebas Neue';font-style:normal;font-weight:400;font-display:block;src:url(/assets/fonts/bebas-neue-latin.woff2) format('woff2')}
 @font-face{font-family:'DM Sans';font-style:normal;font-weight:100 1000;font-display:swap;src:url(/assets/fonts/dm-sans-latin.woff2) format('woff2')}
 @font-face{font-family:'DM Sans';font-style:italic;font-weight:300;font-display:swap;src:url(/assets/fonts/dm-sans-italic-latin.woff2) format('woff2')}
+@font-face{font-family:'Archivo Black DGP';font-style:normal;font-weight:400;font-display:block;src:url(/assets/fonts/archivo-black-dgp.woff2) format('woff2')}
 @font-face{font-family:'DM Sans Fallback';src:local('Arial'),local('Helvetica');size-adjust:98%;ascent-override:99%;descent-override:31%;line-gap-override:0%}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{--white:#ffffff;--off:#f7f7f5;--black:#0a0a0a;--blue:#1438cc;--blue-l:#2a52e0;--blue-s:#4d78ff;--muted:#2a3f7e;--border:#e8e8e4;--soft:#64748b;--gold:#d4af37}
@@ -1991,3 +1992,18 @@ body.home #portafolio{padding-top:64px}
 @media(max-width:600px){.faq-contact{padding:52px 16px}.cs-card{padding:26px 18px 22px;border-radius:20px}.cs-card #mainContactForm>div[style*="grid-template-columns"]{grid-template-columns:1fr!important}}
 .cs-card input,.cs-card select,.cs-card textarea{border-radius:12px!important}
 .cs-card .submit-btn{border-radius:100px}
+
+/* Marca: DGP en Archivo Black (encabezado y pie de página) */
+.lg-w b{font-family:'Archivo Black DGP','Arial Black',sans-serif;font-size:27px;letter-spacing:-.5px;line-height:.85;padding-top:0}
+.footer-brand-logo .lg-w b{color:#fff;font-size:24px}
+.footer-brand-logo .lg-s{border-left-color:rgba(255,255,255,.25)}
+.footer-brand-logo .lg-s span{color:#fff;font-size:9px}
+.footer-brand-logo .lg-s span:first-child{color:#8fa8ff}
+.footer-brand-logo{letter-spacing:0}
+@media(max-width:600px){.lg-w b{font-size:24px}.lg-s span{font-size:8.5px;letter-spacing:2.2px}}
+.drawer-logo,.ldr-wm{letter-spacing:0}
+.drawer-logo .lg-s span:last-child,.ldr-wm .lg-s span:last-child{color:#0a1430}
+.drawer-logo .lg-s span:first-child,.ldr-wm .lg-s span:first-child{color:var(--blue)}
+.ldr-wm .lg-w{justify-content:center}
+.ldr-wm .lg-w b{font-size:34px}
+.ldr-wm .lg-s span{font-size:11px}
