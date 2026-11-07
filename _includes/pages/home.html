@@ -149,8 +149,8 @@
   </div>
 </div>
 
-<!-- VIDEO: DGP en 15 segundos (sin sonido) -->
-<div class="hv-wrap reveal">
+<!-- VIDEO: DGP en 15 segundos (sin sonido) — puente entre el hero y los servicios -->
+<div class="hv-wrap hv-bridge">
   <div class="hv-frame">
     <video class="hv-video" muted loop playsinline preload="none" poster="/assets/video/dgp-15s-poster.jpg" aria-label="{% if page.lang == 'es' %}Video: DGP Global Group en 15 segundos{% else %}Video: DGP Global Group in 15 seconds{% endif %}">
       <source src="/assets/video/dgp-15s.mp4" type="video/mp4">
@@ -159,7 +159,6 @@
 </div>
 <script>document.addEventListener('DOMContentLoaded',function(){if(!('IntersectionObserver' in window))return;var r=matchMedia('(prefers-reduced-motion: reduce)').matches;var io=new IntersectionObserver(function(e){e.forEach(function(x){var v=x.target;if(x.isIntersecting&&!r){v.preload='auto';v.play().catch(function(){})}else{v.pause()}})},{threshold:.35});document.querySelectorAll('.hv-video').forEach(function(v){io.observe(v)})});</script>
 
-{% include urgency-bar.html %}
 
 <!-- SERVICIOS (HUB) -->
 <div class="section section-dark" id="servicios">
