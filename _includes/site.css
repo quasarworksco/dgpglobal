@@ -1968,3 +1968,8 @@ body.home .hv-bridge--navy+#proceso::after{top:-260px}
 body.home .hero2-title{-webkit-text-stroke:.035em currentColor;paint-order:stroke fill;letter-spacing:.012em;font-size:clamp(40px,15.4cqi,100px)}
 body.home.en .hero2-title{font-size:clamp(34px,12.2cqi,84px)}
 @media(max-width:600px){body.home .hero2-title{font-size:15.4cqi}body.home.en .hero2-title{font-size:12.2cqi}}
+/* Menos aire alrededor de la banda de auditoría en el inicio */
+body.home #why-us{padding-bottom:40px}
+body.home .audit-band-wrap{padding-top:8px;padding-bottom:16px}
+body.home #portafolio{padding-top:64px}
+@media(max-width:600px){body.home #why-us{padding-bottom:28px}body.home #portafolio{padding-top:48px}}
