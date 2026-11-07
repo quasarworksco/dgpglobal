@@ -1973,3 +1973,21 @@ body.home #why-us{padding-bottom:40px}
 body.home .audit-band-wrap{padding-top:8px;padding-bottom:16px}
 body.home #portafolio{padding-top:64px}
 @media(max-width:600px){body.home #why-us{padding-bottom:28px}body.home #portafolio{padding-top:48px}}
+
+/* Inicio: preguntas frecuentes + formulario en una sola sección */
+.faq-contact{max-width:1240px;margin:0 auto;padding:88px 52px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,520px);gap:56px;align-items:start}
+.faq-contact::before{content:'';position:absolute}
+.faq-in .sec-title{font-size:clamp(40px,4.4vw,60px)}
+.faq-in .faq-list{margin-top:28px}
+.faq-in .faq-item summary{padding:17px 4px;font-size:15.5px}
+.faq-in .faq-answer{padding-bottom:18px}
+.faq-in .faq-answer p{font-weight:400;color:#4a5573;line-height:1.7}
+.cs-card{background:#fff;border:1px solid #e3e7f0;border-radius:24px;padding:36px 34px 30px;box-shadow:0 30px 70px -40px rgba(10,20,48,.35);position:sticky;top:100px}
+.cs-card .sec-title{font-size:clamp(34px,3.4vw,46px)}
+.cs-card .sec-sub{font-size:14.5px;margin-top:8px}
+.cs-card #mainContactForm{margin-top:24px!important}
+.cs-card .trust-badges{justify-content:flex-start}
+@media(max-width:1000px){.faq-contact{grid-template-columns:1fr;padding:64px 24px;gap:40px}.cs-card{position:static}}
+@media(max-width:600px){.faq-contact{padding:52px 16px}.cs-card{padding:26px 18px 22px;border-radius:20px}.cs-card #mainContactForm>div[style*="grid-template-columns"]{grid-template-columns:1fr!important}}
+.cs-card input,.cs-card select,.cs-card textarea{border-radius:12px!important}
+.cs-card .submit-btn{border-radius:100px}

@@ -1,6 +1,7 @@
 <!-- CONTACT FORM SECTION -->
-<div class="section" id="contacto" style="background:var(--off);max-width:100%;padding:80px 0">
-  <div style="max-width:680px;margin:0 auto;padding:0 24px">
+{% if include.card %}<div class="cs-card" id="contacto">
+  <div>{% else %}<div class="section" id="contacto" style="background:var(--off);max-width:100%;padding:80px 0">
+  <div style="max-width:680px;margin:0 auto;padding:0 24px">{% endif %}
     <div class="reveal">
       {% if page.lang == 'es' %}<div class="sec-eyebrow" data-es>Cotización gratuita</div>{% endif %}{% if page.lang == 'en' %}<div class="sec-eyebrow" data-en>Free quote</div>{% endif %}
       <h2 class="sec-title">{% if page.lang == 'es' %}<span data-es>HABLEMOS DE TU <span class="accent">PROYECTO</span></span>{% endif %}{% if page.lang == 'en' %}<span data-en>LET'S TALK ABOUT YOUR <span class="accent">PROJECT</span></span>{% endif %}</h2>
