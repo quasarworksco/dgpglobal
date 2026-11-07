@@ -1916,3 +1916,18 @@ body.home #servicios{padding-top:88px}
 .gr-card{position:relative}
 .gr-cgg{position:absolute;top:20px;right:20px;width:18px;height:18px}
 .gr-cards{align-items:start}
+
+/* Preguntas frecuentes compactas (inicio): título a la izquierda, preguntas a la derecha */
+.faq-2col{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:24px 72px;align-items:start}
+.faq-2col>.reveal:first-child{position:sticky;top:110px}
+.faq-2col .sec-title{font-size:clamp(40px,4.4vw,64px)}
+.faq-side-t{margin:14px 0 24px;font-size:15px;line-height:1.6;color:#5b6684;max-width:34ch}
+.faq-side-btn{display:inline-flex;align-items:center;gap:10px;height:48px;padding:0 22px;border-radius:100px;background:#0a1430;color:#fff;text-decoration:none;font-size:14px;font-weight:600;transition:background .2s ease,transform .16s ease-out}
+.faq-side-btn i{color:#25d366;font-size:17px}
+@media(hover:hover) and (pointer:fine){.faq-side-btn:hover{background:#13214f}}
+.faq-side-btn:active{transform:scale(.97)}
+.faq-2col .faq-list{margin-top:0}
+.faq-2col .faq-item summary{padding:18px 4px;font-size:15.5px}
+.faq-2col .faq-answer{padding-bottom:18px}
+.faq-2col .faq-answer p{font-weight:400;color:#4a5573;line-height:1.7}
+@media(max-width:900px){.faq-2col{grid-template-columns:1fr;gap:28px}.faq-2col>.reveal:first-child{position:static}}

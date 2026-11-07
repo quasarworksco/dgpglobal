@@ -300,7 +300,7 @@
   <script>(function(){var M={es:['Ver más','Ver menos'],en:['See more','See less']}[document.documentElement.lang==='en'?'en':'es'];document.querySelectorAll('.gr-card').forEach(function(c){var t=c.querySelector('.gr-ct'),b=c.querySelector('.gr-more');function chk(){if(!c.classList.contains('is-open'))b.hidden=t.scrollHeight<=t.clientHeight+2}chk();addEventListener('resize',chk);b.addEventListener('click',function(){var o=c.classList.toggle('is-open');b.textContent=o?M[1]:M[0];b.setAttribute('aria-expanded',o)})})})();</script>
 </section>
 
-{% include faq.html %}
+{% include faq.html compact=true %}
 
 {% include contact-section.html %}
 
