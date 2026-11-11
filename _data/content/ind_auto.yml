@@ -1,0 +1,88 @@
+crumb_es: Talleres mecánicos
+crumb_en: Auto repair shops
+service:
+  name_es: Diseño web para talleres mecánicos
+  name_en: Web design for auto repair shops
+  type: Web design
+hero:
+  bg_word: AUTO
+  eyebrow_es: Diseño web para talleres
+  eyebrow_en: Web design for auto shops
+  title_es: PÁGINAS WEB PARA<span class="accent">TALLERES MECÁNICOS</span>
+  title_en: WEBSITES FOR<span class="accent">AUTO REPAIR SHOPS</span>
+  sub_es: Cuando el carro falla, la gente busca "mecánico cerca de mí" y llama al primero que le da confianza. Te hacemos una página que muestra tus servicios, tu ubicación y tus reseñas, y que convierte esa búsqueda en una cita.
+  sub_en: When a car breaks down, people search "mechanic near me" and call the first shop they trust. We build a site that shows your services, your location and your reviews, and turns that search into a booked appointment.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Entrega desde 24–48h
+    en: Delivery from 24–48h
+  - icon: fa-solid fa-mobile-screen
+    es: Pensada para celular
+    en: Built for mobile
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+faq:
+- q_es: ¿Cuánto tarda en estar lista la página de mi taller?
+  a_es: Una landing page se entrega en 24-48 horas y un sitio de varias páginas en 2-3 días, desde que tenemos tu logo, fotos del taller y la lista de servicios.
+  q_en: How long does it take to build my shop's website?
+  a_en: A landing page is delivered in 24-48 hours and a multi-page site in 2-3 days, once we have your logo, photos of the shop and your list of services.
+- q_es: Soy mecánico móvil y no tengo local, ¿me sirve una página web?
+  a_es: Sí. En lugar de una dirección mostramos las zonas donde atiendes y un botón para pedir el servicio por WhatsApp o llamada. Así hicimos la página de TECMECA, un taller eléctrico automotriz móvil en Texas.
+  q_en: I'm a mobile mechanic with no shop. Is a website still worth it?
+  a_en: Yes. Instead of an address we show the areas you cover and a button to request service by WhatsApp or phone. That is how we built the site for TECMECA, a mobile auto electrical shop in Texas.
+- q_es: ¿Los clientes pueden pedir cita desde la página?
+  a_es: Sí. Ponemos botones de WhatsApp y llamada en toda la página, y un formulario corto para que el cliente indique el vehículo y la falla antes de llegar.
+  q_en: Can customers book an appointment from the site?
+  a_en: Yes. We place WhatsApp and call buttons across the site, plus a short form where the customer describes the vehicle and the problem before coming in.
+projects:
+- tecmeca
+- casanova-car-care
+icon: fa-solid fa-car
+shot: casanova-car-care
+es:
+  name: Talleres mecánicos
+  needs:
+  - icon: fa-brands fa-whatsapp
+    title: CITA EN UN TOQUE
+    desc: 'Botón de WhatsApp y de llamada siempre visibles: quien tiene el carro parado no quiere llenar formularios largos.'
+  - icon: fa-solid fa-screwdriver-wrench
+    title: SERVICIOS CLAROS
+    desc: 'Frenos, aire acondicionado, diagnóstico, electricidad: cada servicio explicado para que el cliente sepa que sí lo haces.'
+  - icon: fa-solid fa-location-dot
+    title: UBICACIÓN Y HORARIO
+    desc: Dirección con mapa, horario y zonas que cubres si das servicio móvil, para que Google te muestre a quien busca cerca.
+  - icon: fa-solid fa-star
+    title: RESEÑAS Y CONFIANZA
+    desc: 'Reseñas, fotos del taller y tu forma de trabajar: presupuesto antes de reparar y sin sorpresas en la cuenta.'
+  includes:
+  - 'Página de servicios: mecánica general, frenos, A/C, diagnóstico y electricidad'
+  - Botones de WhatsApp y llamada en toda la página
+  - Ubicación con mapa, horario y zonas de servicio
+  - Sección de reseñas y fotos del taller
+  - Proceso de trabajo explicado paso a paso
+  - Versión en español e inglés si atiendes ambos públicos
+  plan: 'Una landing page es suficiente para empezar: servicios, ubicación, reseñas y botón de cita. Si ofreces muchos servicios o varias sedes, el Plan Estándar (hasta 5 páginas) te da una página por servicio.'
+en:
+  name: Auto repair shops
+  needs:
+  - icon: fa-brands fa-whatsapp
+    title: ONE-TAP BOOKING
+    desc: 'WhatsApp and call buttons always in view: someone with a car that won''t start does not want to fill out long forms.'
+  - icon: fa-solid fa-screwdriver-wrench
+    title: CLEAR SERVICES
+    desc: 'Brakes, A/C, diagnostics, electrical: each service explained so customers know you handle it.'
+  - icon: fa-solid fa-location-dot
+    title: LOCATION & HOURS
+    desc: Address with a map, hours and the areas you cover if you offer mobile service, so Google shows you to people searching nearby.
+  - icon: fa-solid fa-star
+    title: REVIEWS & TRUST
+    desc: 'Reviews, photos of the shop and how you work: an estimate before any repair and no surprises on the bill.'
+  includes:
+  - 'Services page: general repair, brakes, A/C, diagnostics and electrical'
+  - WhatsApp and call buttons across the site
+  - Location with a map, hours and service areas
+  - Reviews section and photos of the shop
+  - Your work process explained step by step
+  - Spanish and English versions if you serve both audiences
+  plan: 'A landing page is enough to start: services, location, reviews and a booking button. If you offer many services or have several locations, the Standard Plan (up to 5 pages) gives each service its own page.'
