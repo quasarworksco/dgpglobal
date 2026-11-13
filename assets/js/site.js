@@ -151,7 +151,7 @@ function toggleWAPopup(){
 function sendWAFloat(){
   const msg=document.getElementById('wa-msg-text').value.trim();
   if(!msg)return;
-  window.open('https://wa.me/13465372353?text='+encodeURIComponent(msg),'_blank');
+  window.open('https://wa.me/12398231738?text='+encodeURIComponent(msg),'_blank');
   document.getElementById('wa-popup').classList.remove('open');
 }
 document.addEventListener('click',e=>{
@@ -192,7 +192,7 @@ function sendContactWA(){
   if(svc) txt+=`\n*Servicio de interés:* ${svc}`;
   if(msg) txt+=`\n*Mensaje:* ${msg}`;
   txt+='\n\nMe gustaría recibir más información.';
-  window.open(`https://wa.me/13465372353?text=${encodeURIComponent(txt)}`,'_blank');
+  window.open(`https://wa.me/12398231738?text=${encodeURIComponent(txt)}`,'_blank');
   closeContactModal();
 }
 function sendContactEmail(){
@@ -316,7 +316,7 @@ function selectPlan(i){
   document.getElementById('q-delivery').textContent=isEn?o.delivery_en:o.delivery_es;
   const items=isEn?o.items_en:o.items_es;
   document.getElementById('q-items').innerHTML=items.map(it=>`<div class="quote-result-item"><i class="fa-solid fa-check"></i>${it}</div>`).join('');
-  document.getElementById('q-wa').href=`https://wa.me/13465372353?text=Hola%20DGP%20Global%20Group!%20Usé%20el%20cotizador%20y%20me%20interesa%20el%20${encodeURIComponent(o.wa)}.%20¿Podemos%20hablar?`;
+  document.getElementById('q-wa').href=`https://wa.me/12398231738?text=Hola%20DGP%20Global%20Group!%20Usé%20el%20cotizador%20y%20me%20interesa%20el%20${encodeURIComponent(o.wa)}.%20¿Podemos%20hablar?`;
   goStep(3);
 }
 
@@ -540,7 +540,7 @@ function showAltairContactCard(inicio){
     <input name="empresa_web" tabindex="-1" autocomplete="off" class="altair-hp" aria-hidden="true">
     <div class="altair-card-err"></div>
     <button type="submit">${en?(inicio?'Start chat':'Send'):(inicio?'Empezar a chatear':'Enviar')}</button>
-    ${inicio?`<a class="altair-card-wa" href="https://wa.me/13465372353" target="_blank" rel="noopener">${en?'Or message us directly on WhatsApp':'O escríbenos directo por WhatsApp'}</a>`:''}`;
+    ${inicio?`<a class="altair-card-wa" href="https://wa.me/12398231738" target="_blank" rel="noopener">${en?'Or message us directly on WhatsApp':'O escríbenos directo por WhatsApp'}</a>`:''}`;
   card.addEventListener('submit',enviarContactoAltair);
   box.appendChild(card);box.scrollTop=box.scrollHeight;
 }
@@ -823,8 +823,8 @@ if(REF_CODE){
     if(f.querySelector('input[name="referido"]'))return;
     const i=document.createElement('input');i.type='hidden';i.name='referido';i.value=REF_CODE;f.appendChild(i);
   });
-  document.addEventListener('click',e=>{const a=e.target.closest('a[href*="wa.me/13465372353"]');if(a)a.href=withRef(a.href);},true);
-  const _open=window.open;window.open=function(url,...rest){if(typeof url==='string'&&url.includes('wa.me/13465372353'))url=withRef(url);return _open.call(window,url,...rest);};
+  document.addEventListener('click',e=>{const a=e.target.closest('a[href*="wa.me/12398231738"]');if(a)a.href=withRef(a.href);},true);
+  const _open=window.open;window.open=function(url,...rest){if(typeof url==='string'&&url.includes('wa.me/12398231738'))url=withRef(url);return _open.call(window,url,...rest);};
 }
 
 /* GENERIC LEAD FORMS (partner sign-up, partner orders): to the DGP panel + Telegram */
