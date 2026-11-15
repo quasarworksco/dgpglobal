@@ -370,24 +370,27 @@ def osm(cfg):
     for z in dict.fromkeys(elegidas):
         s, w, n, e = ZONAS_OSM[z]
         bb = f'({s},{w},{n},{e})'
-        filtro = '["name"][~"^(shop|craft|office|amenity|healthcare|leisure)$"~"."]'
-        q = f"""[out:json][timeout:90];
-(
- nwr["name"]["email"]["shop"]{bb}; nwr["name"]["email"]["craft"]{bb}; nwr["name"]["email"]["office"]{bb};
- nwr["name"]["contact:email"]{bb};
- nwr["name"]["email"]["amenity"~"restaurant|cafe|fast_food|bar|dentist|doctors|clinic|veterinary|childcare|car_wash|car_repair"]{bb};
- nwr["name"]["shop"~"hairdresser|beauty|bakery|clothes|boutique|car_repair|tyres|florist|pet|pet_grooming|tattoo|massage|jewelry|furniture|gift"][!"website"][!"contact:website"]["phone"]{bb};
- nwr["name"]["craft"][!"website"][!"contact:website"]["phone"]{bb};
-);
-out tags center 400;"""
-        datos = None
-        for host in ('https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter'):
-            try:
-                _, _, b = http(host, data='data=' + urllib.parse.quote(q), headers={'Content-Type': 'application/x-www-form-urlencoded'}, timeout=120)
-                datos = json.loads(b)
-                break
-            except Exception:
-                continue
+        tipos = 'shop|craft|office|amenity|healthcare'
+        partes = [
+            f'nwr["name"]["email"][~"^({tipos})$"~"."]{bb};',
+            f'nwr["name"]["contact:email"]{bb};',
+            f'nwr["name"]["website"][!"email"][~"^(shop|craft|office|healthcare)$"~"."]{bb};',
+            f'nwr["name"]["website"][!"email"]["amenity"~"^(restaurant|cafe|dentist|doctors|clinic|veterinary|car_wash|car_repair|childcare)$"]{bb};',
+        ]
+        datos = {'elements': []}
+        for parte in partes:
+            q = f"[out:json][timeout:60];({parte});out tags center 250;"
+            for host in ('https://overpass-api.de/api/interpreter', 'https://overpass.private.coffee/api/interpreter', 'https://overpass.kumi.systems/api/interpreter'):
+                try:
+                    _, _, b2 = http(host, data='data=' + urllib.parse.quote(q), headers={'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': 'DGP-Prospeccion/1.0 (+https://dgpglobalgroup.com)'}, timeout=90)
+                    datos['elements'] += json.loads(b2).get('elements', [])
+                    break
+                except Exception as e:
+                    log('osm_falla_' + type(e).__name__)
+                    continue
+            time.sleep(2)
+        if not datos['elements']:
+            datos = None
         if not datos:
             log('osm_error')
             continue
@@ -473,10 +476,11 @@ def adivinar_web(p):
     """Para empresas sin web conocida: prueba nombre.com / nombre.net y confirma que la página sea de ese negocio."""
     base = slug(p['nombre'])
     completo = slug(p['nombre'], quitar=False)
-    candidatos = [c for c in dict.fromkeys([base, completo]) if 4 <= len(c) <= 40]
+    est = (p.get('estado') or '').lower()
+    candidatos = [c for c in dict.fromkeys([base, completo, base + est, base + 'llc', base + 'co', base + 'usa']) if 4 <= len(c) <= 40]
     palabras = [w for w in re.findall(r'[a-z]{4,}', sin_tildes(p['nombre']).lower()) if not re.fullmatch(SUFIJOS.strip(r'\b()'), w)][:3]
     for c in candidatos:
-        for tld in ('.com', '.net'):
+        for tld in ('.com', '.net', '.co', '.us'):
             d = c + tld
             a = dns(d)
             if not a:
@@ -601,11 +605,20 @@ def main():
     grupos = {f: [p for p in con if p['fuente'] == f] for f in orden}
     peso = {'sunbiz': 3, 'texas': 3, 'osm': 2, 'fmcsa': 1, 'connecticut': 1}
     elegidos = []
+    tope_cat = lambda c: max(3, int(por_dia * (0.12 if c == 'transporte' else 0.2)))
+    por_cat = {}
     while len(elegidos) < por_dia and any(grupos.values()):
         for f in orden:
             for _ in range(peso[f]):
-                if grupos[f] and len(elegidos) < por_dia:
-                    elegidos.append(grupos[f].pop(0))
+                while grupos[f] and len(elegidos) < por_dia:
+                    p = grupos[f].pop(0)
+                    if por_cat.get(p['categoria'], 0) >= tope_cat(p['categoria']):
+                        continue   # ya hay muchos de este tipo hoy: se guarda para otro día
+                    por_cat[p['categoria']] = por_cat.get(p['categoria'], 0) + 1
+                    elegidos.append(p)
+                    break
+    for c, n in sorted(por_cat.items(), key=lambda x: -x[1]):
+        log('tipo_' + c, n)
     for f in orden:
         log('correo_' + f, len([p for p in elegidos if p['fuente'] == f]))
     # Los que no tienen correo no sirven: no se guardan (solo se marcan como vistos)

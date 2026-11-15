@@ -1,0 +1,36 @@
+---
+layout: null
+sitemap: false
+permalink: /ver/
+---
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>DGP Global Group</title>
+<style>
+  html,body{height:100%;margin:0}
+  body{display:grid;place-items:center;font:600 15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#0b1220;background:#fff}
+  .c{display:flex;flex-direction:column;align-items:center;gap:14px}
+  .s{width:26px;height:26px;border-radius:50%;border:3px solid #e5e9f2;border-top-color:#1438cc;animation:g .8s linear infinite}
+  @keyframes g{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion:reduce){.s{animation:none}}
+  @media (prefers-color-scheme:dark){body{background:#0b1220;color:#e8ecf5}.s{border-color:#1e2a44;border-top-color:#8fa8ff}}
+</style>
+</head>
+<body>
+<div class="c"><div class="s"></div><div>DGP Global Group</div></div>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), ir = function (u) { location.replace(u); };
+  var reserva = setTimeout(function () { ir('/portafolio/'); }, 3500);
+  fetch('https://ayudante-dgp-bot.dgpgroupusa-llc.workers.dev/ver?k=' + encodeURIComponent(q.get('k') || '') + '&f=' + encodeURIComponent(q.get('f') || ''), { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (d) { clearTimeout(reserva); ir(d && /^https:\/\//.test(d.url) ? d.url : '/portafolio/'); })
+    .catch(function () { clearTimeout(reserva); ir('/portafolio/'); });
+})();
+</script>
+</body>
+</html>
