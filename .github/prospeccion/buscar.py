@@ -598,8 +598,7 @@ def main():
                     elegidos.append(grupos[f].pop(0))
     for f in orden:
         log('correo_' + f, len([p for p in elegidos if p['fuente'] == f]))
-    falta = max(int(cfg.get('sinCorreo') or 25), por_dia - len(elegidos))
-    elegidos += sin[:falta]
+    # Los que no tienen correo no sirven: no se guardan (solo se marcan como vistos)
     log('elegidos_con_correo', len([p for p in elegidos if p.get('email')]))
     log('elegidos', len(elegidos))
 
