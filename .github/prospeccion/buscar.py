@@ -350,6 +350,79 @@ def connecticut(cfg):
     return out
 
 
+
+# Directorios de miembros de cámaras de comercio (plataforma GrowthZone): nombre, teléfono y web de cada miembro.
+# Se respeta robots.txt (no se usa /list/search) y se va despacio. Cada día se rotan algunas categorías.
+CAMARAS = [
+    ('business.miamibeachchamber.com', 'Miami Beach', 'FL'), ('business.gaybizmiami.com', 'Miami', 'FL'),
+    ('business.charlottecountychamber.org', 'Port Charlotte', 'FL'), ('business.puntagordachamber.com', 'Punta Gorda', 'FL'),
+    ('business.kissimmeechamber.com', 'Kissimmee', 'FL'), ('business.seminolebusiness.org', 'Sanford', 'FL'),
+    ('members.houstonnwchamber.org', 'Houston', 'TX'), ('business.pearlandchamber.org', 'Pearland', 'TX'),
+    ('business.tomballchamber.org', 'Tomball', 'TX'), ('business.woodlandschamber.org', 'The Woodlands', 'TX'),
+    ('business.richardsonchamber.com', 'Richardson', 'TX'), ('business.grandprairiechamber.org', 'Grand Prairie', 'TX'),
+    ('business.dentonchamber.org', 'Denton', 'TX'),
+]
+
+
+def camaras(cfg):
+    if cfg.get('camaras') is False:
+        return []
+    out, hoy = [], HOY.toordinal()
+    por_camara = int(cfg.get('camaraMiembros') or 30)
+
+    def una(item):
+        host, ciudad, est = item
+        res = []
+        try:
+            _, _, h = http(f'https://{host}/list', timeout=25)
+        except Exception:
+            log('camara_error')
+            return res
+        cats = list(dict.fromkeys(re.findall(r'href="(https?://' + re.escape(host) + r'/list/ql/[^"#?]+)"', h)))
+        if not cats:
+            return res
+        elegidas = [cats[(hoy * 2 + i) % len(cats)] for i in range(min(2, len(cats)))]
+        for cat in dict.fromkeys(elegidas):
+            try:
+                _, _, c = http(cat, timeout=25)
+            except Exception:
+                continue
+            c = re.sub(r'\s+', ' ', c)
+            nombre_cat = re.sub(r'-\d+$', '', cat.rsplit('/', 1)[-1]).replace('-', ' ')
+            for bloque in c.split('gz-card-title')[1:]:
+                m = re.search(r'href="([^"]+/list/member/[^"]+-(\d+))"[^>]*>([^<]+)</a>', bloque[:600])
+                if not m:
+                    continue
+                url, mid, nombre = m.group(1), m.group(2), html.unescape(m.group(3)).strip()
+                tel = re.search(r'gz-card-phone.{0,120}?href="tel:([^"]+)"', bloque[:2500])
+                web = re.search(r'gz-card-website.{0,60}?href="\s*([^"\s]+)\s*"', bloque[:2500])
+                res.append({'clave': f'cc-{host.split(".")[1][:12]}{mid}', 'fuente': 'camara', 'nombre': nombre, 'estado': est, 'ciudad': ciudad,
+                            'zip': '', 'direccion': '', 'contacto': '', 'registro': '', 'telefono': tel.group(1) if tel else '',
+                            'web': web.group(1) if web else '', '_ficha': url, 'categoria': categoria(nombre, nombre_cat)})
+                if len(res) >= por_camara:
+                    break
+            time.sleep(1.5)
+            if len(res) >= por_camara:
+                break
+        # Si la web no sale en la tarjeta, se busca en la ficha del miembro
+        for r in res:
+            if not r['web']:
+                try:
+                    _, _, f = http(r['_ficha'], timeout=20)
+                    w = re.search(r'gz-card-website.{0,80}?href="\s*([^"\s]+)\s*"', re.sub(r'\s+', ' ', f))
+                    r['web'] = w.group(1) if w else ''
+                except Exception:
+                    pass
+                time.sleep(1)
+            r.pop('_ficha', None)
+        return [r for r in res if r['web']]
+
+    with cf.ThreadPoolExecutor(6) as ex:
+        for L in ex.map(una, CAMARAS):
+            out += L
+    log('camara_registros', len(out))
+    return out
+
 # Zonas para OpenStreetMap (sur, oeste, norte, este). Se rota una parte cada día.
 ZONAS_OSM = {
     'Miami': (25.55, -80.50, 25.98, -80.12), 'Fort Lauderdale': (25.98, -80.35, 26.35, -80.06), 'West Palm Beach': (26.35, -80.25, 26.95, -80.03),
@@ -578,7 +651,8 @@ def main():
     om = osm(cfg)
     fm = fmcsa(cfg)
     ct = connecticut(cfg)
-    todos = fl + tx + om + fm + ct
+    cc = camaras(cfg)
+    todos = fl + tx + om + fm + ct + cc
     log('candidatos', len(todos))
 
     # Quitar los que ya vimos (el bot lleva la cuenta)
@@ -591,7 +665,7 @@ def main():
 
     # Enriquecer: primero los que más prometen, con un tope para no tardar horas
     def pre(p):
-        return (bool(p.get('email')) * 3 + bool(p.get('web')) * 2 + (p['fuente'] != 'osm') + (p['categoria'] != 'general'))
+        return (bool(p.get('email')) * 3 + bool(p.get('web')) * 2 + (p['fuente'] not in ('osm',)) + (p['categoria'] != 'general'))
     todos.sort(key=pre, reverse=True)
     tope = int(cfg.get('maxRevisar') or 900)
     lote = todos[:tope]
@@ -601,9 +675,9 @@ def main():
     con = sorted([p for p in lote if p.get('email')], key=lambda p: -p['puntaje'])
     sin = sorted([p for p in lote if not p.get('email')], key=lambda p: -p['puntaje'])
     # Mezclar fuentes (Florida y Texas primero) para que no salgan solo camioneros o Connecticut
-    orden = ['sunbiz', 'texas', 'osm', 'fmcsa', 'connecticut']
+    orden = ['sunbiz', 'texas', 'camara', 'osm', 'fmcsa', 'connecticut']
     grupos = {f: [p for p in con if p['fuente'] == f] for f in orden}
-    peso = {'sunbiz': 3, 'texas': 3, 'osm': 2, 'fmcsa': 1, 'connecticut': 1}
+    peso = {'sunbiz': 3, 'texas': 3, 'camara': 2, 'osm': 2, 'fmcsa': 1, 'connecticut': 1}
     elegidos = []
     tope_cat = lambda c: max(3, int(por_dia * (0.12 if c == 'transporte' else 0.2)))
     por_cat = {}
