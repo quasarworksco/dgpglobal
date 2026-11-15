@@ -672,7 +672,15 @@ def main():
     with cf.ThreadPoolExecutor(24) as ex:
         lote = list(ex.map(enriquecer, lote))
 
-    con = sorted([p for p in lote if p.get('email')], key=lambda p: -p['puntaje'])
+    # Posibles ALIADOS: contadores, preparadores de impuestos y agentes de seguros de Florida y Texas.
+    # A ellos no se les ofrece una web: se les invita a revender (paquetes de aliado). Van aparte, hasta N por día.
+    SEG_ALIADO = ('contabilidad', 'seguros')
+    aliados = sorted([p for p in lote if p.get('email') and p['categoria'] in SEG_ALIADO and p.get('estado') in ('FL', 'TX')], key=lambda p: -p['puntaje'])
+    aliados = aliados[:int(cfg.get('aliadosPorDia') or 10)]
+    for p in aliados:
+        p['segmento'] = 'aliado'
+    log('aliados', len(aliados))
+    con = sorted([p for p in lote if p.get('email') and p.get('segmento') != 'aliado' and p['categoria'] not in SEG_ALIADO], key=lambda p: -p['puntaje'])
     sin = sorted([p for p in lote if not p.get('email')], key=lambda p: -p['puntaje'])
     # Mezclar fuentes (Florida y Texas primero) para que no salgan solo camioneros o Connecticut
     orden = ['sunbiz', 'texas', 'camara', 'osm', 'fmcsa', 'connecticut']
@@ -696,6 +704,7 @@ def main():
     for f in orden:
         log('correo_' + f, len([p for p in elegidos if p['fuente'] == f]))
     # Los que no tienen correo no sirven: no se guardan (solo se marcan como vistos)
+    elegidos += aliados
     log('elegidos_con_correo', len([p for p in elegidos if p.get('email')]))
     log('elegidos', len(elegidos))
 
