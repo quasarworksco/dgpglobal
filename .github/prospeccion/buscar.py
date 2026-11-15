@@ -32,6 +32,7 @@ import time
 import unicodedata
 import urllib.parse
 import urllib.request
+import urllib.error
 
 BOT = 'https://ayudante-dgp-bot.dgpgroupusa-llc.workers.dev/prospeccion'
 UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36'
@@ -74,6 +75,11 @@ def bot(cuerpo):
         try:
             _, _, b = http(BOT, data=cuerpo, headers={'Authorization': 'Bearer ' + TOKEN}, timeout=60)
             return json.loads(b)
+        except urllib.error.HTTPError as e:
+            if intento == 2 or e.code in (400, 401, 403):
+                sys.exit(f'Bot respondió {e.code}: ' + e.read().decode('utf-8', 'replace')[:200])
+            time.sleep(4 * (intento + 1))
+            continue
         except Exception as e:
             if intento == 2:
                 raise
