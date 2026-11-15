@@ -1,0 +1,73 @@
+crumb_es: Diseño web en Lakeland
+crumb_en: Web design in Lakeland
+service:
+  name_es: Diseño web en Lakeland
+  name_en: Web design in Lakeland
+  type: Web design
+hero:
+  bg_word: LAKELAND
+  eyebrow_es: Diseño web · Lakeland
+  eyebrow_en: Web design · Lakeland
+  title_es: PÁGINAS WEB EN<span class="accent">LAKELAND</span>
+  title_en: WEB DESIGN IN<span class="accent">LAKELAND</span>
+  sub_es: Lakeland y el condado de Polk están entre las zonas que más crecen de Florida. Hacemos páginas web para negocios de Lakeland, listas en 24 horas y con pago único.
+  sub_en: Lakeland and Polk County are among the fastest-growing areas in Florida. We build websites for Lakeland businesses, ready in 24 hours with a one-time payment.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Atienden negocios de todo el condado de Polk?
+  a_es: 'Sí: Lakeland, Winter Haven, Bartow, Auburndale, Haines City y alrededores.'
+  q_en: Do you serve businesses across Polk County?
+  a_en: 'Yes: Lakeland, Winter Haven, Bartow, Auburndale, Haines City and nearby.'
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, hacemos tus cambios y la publicamos.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- caibo-construction
+- smelling-clean
+areas:
+- Lakeland
+- Winter Haven
+- Bartow
+- Auburndale
+- Haines City
+- Plant City
+- Polk County
+city: true
+es:
+  name: Lakeland
+  points:
+  - icon: fa-solid fa-road
+    title: ENTRE TAMPA Y ORLANDO
+    desc: Muchos negocios de Polk atienden las dos ciudades. Mostramos bien tu área de servicio.
+  - icon: fa-solid fa-truck-fast
+    title: LOGÍSTICA Y OFICIOS
+    desc: Transporte, construcción, aire acondicionado y servicios para el hogar con cotización en línea.
+  - icon: fa-solid fa-house
+    title: NUEVOS VECINOS
+    desc: Llegan familias nuevas cada mes buscando servicios en Google. Que te encuentren a ti.
+en:
+  name: Lakeland
+  points:
+  - icon: fa-solid fa-road
+    title: BETWEEN TAMPA AND ORLANDO
+    desc: Many Polk businesses serve both cities. We show your service area clearly.
+  - icon: fa-solid fa-truck-fast
+    title: LOGISTICS & TRADES
+    desc: Trucking, construction, A/C and home services with online quotes.
+  - icon: fa-solid fa-house
+    title: NEW NEIGHBORS
+    desc: New families arrive every month searching for services on Google. Make sure they find you.

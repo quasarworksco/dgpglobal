@@ -1,0 +1,72 @@
+crumb_es: Diseño web en Kissimmee
+crumb_en: Web design in Kissimmee
+service:
+  name_es: Diseño web en Kissimmee
+  name_en: Web design in Kissimmee
+  type: Web design
+hero:
+  bg_word: KISS
+  eyebrow_es: Diseño web · Kissimmee
+  eyebrow_en: Web design · Kissimmee
+  title_es: PÁGINAS WEB EN<span class="accent">KISSIMMEE</span>
+  title_en: WEB DESIGN IN<span class="accent">KISSIMMEE</span>
+  sub_es: Kissimmee y el condado de Osceola crecen sin parar, con muchísimos negocios latinos. Hacemos páginas web bilingües para negocios de Kissimmee, listas en 24 horas.
+  sub_en: Kissimmee and Osceola County keep growing, with a large Latino business community. We build bilingual websites for Kissimmee businesses, ready in 24 hours.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Hacen páginas para negocios de alquiler vacacional y limpieza?
+  a_es: Sí. Mostramos tus servicios, fotos y zonas, con formulario para reservas o cotizaciones.
+  q_en: Do you build sites for vacation rental and cleaning businesses?
+  a_en: Yes. We show your services, photos and service areas, with a form for bookings or quotes.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, hacemos tus cambios y la publicamos.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- orange-ultrasound
+- mq-store
+areas:
+- Kissimmee
+- St. Cloud
+- Celebration
+- Poinciana
+- Buenaventura Lakes
+- Osceola County
+city: true
+es:
+  name: Kissimmee
+  points:
+  - icon: fa-solid fa-plane-arrival
+    title: TURISMO Y SERVICIOS
+    desc: 'Cerca de los parques, muchos negocios atienden turistas: transporte, alquileres, limpieza y comida.'
+  - icon: fa-solid fa-people-group
+    title: COMUNIDAD LATINA
+    desc: Páginas en español e inglés para llegar a todos tus clientes en Osceola.
+  - icon: fa-solid fa-calendar-check
+    title: RESERVAS Y CITAS
+    desc: Botones para reservar, pedir cotización o escribir por WhatsApp en un toque.
+en:
+  name: Kissimmee
+  points:
+  - icon: fa-solid fa-plane-arrival
+    title: TOURISM & SERVICES
+    desc: 'Near the parks, many businesses serve tourists: transportation, rentals, cleaning and food.'
+  - icon: fa-solid fa-people-group
+    title: LATINO COMMUNITY
+    desc: Sites in English and Spanish to reach all your customers in Osceola.
+  - icon: fa-solid fa-calendar-check
+    title: BOOKINGS & APPOINTMENTS
+    desc: Buttons to book, request a quote or message you on WhatsApp in one tap.

@@ -1,0 +1,73 @@
+crumb_es: Diseño web en St. Petersburg
+crumb_en: Web design in St. Petersburg
+service:
+  name_es: Diseño web en St. Petersburg
+  name_en: Web design in St. Petersburg
+  type: Web design
+hero:
+  bg_word: ST PETE
+  eyebrow_es: Diseño web · St. Petersburg
+  eyebrow_en: Web design · St. Petersburg
+  title_es: PÁGINAS WEB EN<span class="accent">ST. PETERSBURG</span>
+  title_en: WEB DESIGN IN<span class="accent">ST. PETERSBURG</span>
+  sub_es: St. Petersburg tiene una escena de negocios locales muy activa. Hacemos páginas web modernas para negocios de St. Pete y el condado de Pinellas, listas en 24 horas.
+  sub_en: St. Petersburg has a vibrant local business scene. We build modern websites for businesses in St. Pete and Pinellas County, ready in 24 hours.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Pueden respetar el estilo de mi marca?
+  a_es: Sí. Usamos tus colores, tu logo y tu tono. Si no tienes logo, también te lo podemos hacer.
+  q_en: Can you match my brand style?
+  a_en: Yes. We use your colors, logo and tone. If you don't have a logo, we can design one too.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, hacemos tus cambios y la publicamos.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- smelling-clean
+- the-sweet-zone
+areas:
+- St. Petersburg
+- Clearwater
+- Largo
+- Pinellas Park
+- Dunedin
+- Seminole
+- Pinellas County
+city: true
+es:
+  name: St. Petersburg
+  points:
+  - icon: fa-solid fa-palette
+    title: MARCAS CON PERSONALIDAD
+    desc: Cafés, estudios, tiendas y restaurantes con estilo propio. Tu página refleja quién eres.
+  - icon: fa-solid fa-umbrella-beach
+    title: CLIENTES DE LA PLAYA
+    desc: Turismo y servicios en Clearwater y las playas, con información clara y fácil de encontrar.
+  - icon: fa-solid fa-gauge-high
+    title: RÁPIDA Y LIGERA
+    desc: Páginas que cargan al instante en el celular, algo que Google premia.
+en:
+  name: St. Petersburg
+  points:
+  - icon: fa-solid fa-palette
+    title: BRANDS WITH PERSONALITY
+    desc: Cafés, studios, shops and restaurants with their own style. Your site reflects who you are.
+  - icon: fa-solid fa-umbrella-beach
+    title: BEACH CUSTOMERS
+    desc: Tourism and services in Clearwater and the beaches, with clear, easy-to-find information.
+  - icon: fa-solid fa-gauge-high
+    title: FAST AND LIGHT
+    desc: Sites that load instantly on mobile, which Google rewards.

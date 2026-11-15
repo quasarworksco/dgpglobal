@@ -1,0 +1,73 @@
+crumb_es: Diseño web en Hialeah
+crumb_en: Web design in Hialeah
+service:
+  name_es: Diseño web en Hialeah
+  name_en: Web design in Hialeah
+  type: Web design
+hero:
+  bg_word: HIALEAH
+  eyebrow_es: Diseño web · Hialeah
+  eyebrow_en: Web design · Hialeah
+  title_es: PÁGINAS WEB EN<span class="accent">HIALEAH</span>
+  title_en: WEB DESIGN IN<span class="accent">HIALEAH</span>
+  sub_es: Hialeah es el corazón latino de Miami-Dade. Hacemos páginas web en español e inglés para los negocios de Hialeah, listas en 24 horas y con pago único.
+  sub_en: Hialeah is the Latino heart of Miami-Dade. We build websites in Spanish and English for Hialeah businesses, ready in 24 hours with a one-time payment.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Me pueden atender completamente en español?
+  a_es: 'Sí. Todo el proceso es en español: la conversación, el diseño y la entrega. Si quieres, tu página también puede tener versión en inglés.'
+  q_en: Can you work with me entirely in Spanish?
+  a_en: 'Yes. The whole process can be in Spanish: the conversation, the design and the delivery. Your site can also have an English version.'
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, hacemos tus cambios y la publicamos.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- mq-store
+- casanova-car-care
+areas:
+- Hialeah
+- Hialeah Gardens
+- Miami Lakes
+- Medley
+- Doral
+- Miami Springs
+- Miami-Dade
+city: true
+es:
+  name: Hialeah
+  points:
+  - icon: fa-solid fa-comments
+    title: EN TU IDIOMA
+    desc: Te atendemos en español de principio a fin, y tu página puede estar en los dos idiomas.
+  - icon: fa-solid fa-store
+    title: NEGOCIOS DE BARRIO
+    desc: Talleres, cafeterías, tiendas, salones de belleza y servicios. Páginas simples que hacen sonar el teléfono.
+  - icon: fa-brands fa-whatsapp
+    title: PEDIDOS POR WHATSAPP
+    desc: Un botón para que tus clientes te escriban directo, como ya están acostumbrados.
+en:
+  name: Hialeah
+  points:
+  - icon: fa-solid fa-comments
+    title: IN YOUR LANGUAGE
+    desc: We work with you in Spanish from start to finish, and your site can be in both languages.
+  - icon: fa-solid fa-store
+    title: NEIGHBORHOOD BUSINESSES
+    desc: Auto shops, cafés, stores, beauty salons and services. Simple sites that make the phone ring.
+  - icon: fa-brands fa-whatsapp
+    title: WHATSAPP ORDERS
+    desc: A button so customers message you directly, the way they already do.

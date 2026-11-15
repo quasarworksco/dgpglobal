@@ -41,3 +41,16 @@ city_ocala: {es: "/diseno-web/ocala/", en: "/en/web-design/ocala/", city: true}
 city_orlando: {es: "/diseno-web/orlando/", en: "/en/web-design/orlando/", city: true}
 city_tampa: {es: "/diseno-web/tampa/", en: "/en/web-design/tampa/", city: true}
 city_usa: {es: "/diseno-web/estados-unidos/", en: "/en/web-design/usa/", city: true}
+city_capecoral: {es: "/diseno-web/cape-coral/", en: "/en/web-design/cape-coral/", city: true, nofooter: true}
+city_houston: {es: "/diseno-web/houston/", en: "/en/web-design/houston/", city: true, nofooter: true}
+city_naples: {es: "/diseno-web/naples/", en: "/en/web-design/naples/", city: true, nofooter: true}
+city_fortlauderdale: {es: "/diseno-web/fort-lauderdale/", en: "/en/web-design/fort-lauderdale/", city: true, nofooter: true}
+city_westpalm: {es: "/diseno-web/west-palm-beach/", en: "/en/web-design/west-palm-beach/", city: true, nofooter: true}
+city_hialeah: {es: "/diseno-web/hialeah/", en: "/en/web-design/hialeah/", city: true, nofooter: true}
+city_kissimmee: {es: "/diseno-web/kissimmee/", en: "/en/web-design/kissimmee/", city: true, nofooter: true}
+city_lakeland: {es: "/diseno-web/lakeland/", en: "/en/web-design/lakeland/", city: true, nofooter: true}
+city_stpete: {es: "/diseno-web/st-petersburg/", en: "/en/web-design/st-petersburg/", city: true, nofooter: true}
+city_sarasota: {es: "/diseno-web/sarasota/", en: "/en/web-design/sarasota/", city: true, nofooter: true}
+city_portstlucie: {es: "/diseno-web/port-st-lucie/", en: "/en/web-design/port-st-lucie/", city: true, nofooter: true}
+city_portcharlotte: {es: "/diseno-web/port-charlotte/", en: "/en/web-design/port-charlotte/", city: true, nofooter: true}
+city_dallas: {es: "/diseno-web/dallas/", en: "/en/web-design/dallas/", city: true, nofooter: true}

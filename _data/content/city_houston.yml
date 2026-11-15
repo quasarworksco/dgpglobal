@@ -1,0 +1,74 @@
+crumb_es: Diseño web en Houston
+crumb_en: Web design in Houston
+service:
+  name_es: Diseño web en Houston
+  name_en: Web design in Houston
+  type: Web design
+hero:
+  bg_word: HTX
+  eyebrow_es: Diseño web · Houston
+  eyebrow_en: Web design · Houston
+  title_es: PÁGINAS WEB EN<span class="accent">HOUSTON</span>
+  title_en: WEB DESIGN IN<span class="accent">HOUSTON</span>
+  sub_es: Houston es una de las ciudades con más negocios latinos de Estados Unidos. Hacemos páginas web bilingües para negocios de Houston y alrededores, listas en 24 horas y con pago único.
+  sub_en: Houston has one of the largest Latino business communities in the country. We build bilingual websites for businesses in Houston and nearby, ready in 24 hours with a one-time payment.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Trabajan con negocios de Texas si están en Florida?
+  a_es: 'Sí. Trabajamos 100% en línea con negocios de todo Estados Unidos, y tenemos clientes en Texas. Nos reunimos por videollamada o WhatsApp.'
+  q_en: Do you work with Texas businesses if you are in Florida?
+  a_en: 'Yes. We work 100% online with businesses across the US, and we have clients in Texas. We meet by video call or WhatsApp.'
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: 'La tenemos lista para revisar en 24 horas desde que recibimos tu información.'
+  q_en: How long does my website take?
+  a_en: 'It is ready to review 24 hours after we receive your information.'
+- q_es: ¿La página puede estar en español y en inglés?
+  a_es: 'Sí. Todas nuestras páginas pueden ser bilingües, para que te encuentren clientes latinos y americanos.'
+  q_en: Can my website be in English and Spanish?
+  a_en: 'Yes. All our websites can be bilingual, so both Latino and American customers can find you.'
+projects:
+- tecmeca
+- valpa-truck
+areas:
+- Houston
+- Katy
+- Sugar Land
+- Pasadena
+- Pearland
+- Spring
+- Humble
+- Harris County
+city: true
+es:
+  name: Houston
+  points:
+  - icon: fa-solid fa-language
+    title: BILINGÜE DE VERDAD
+    desc: En Houston tus clientes hablan español e inglés. Tu página también, escrita por personas, no por traductor automático.
+  - icon: fa-solid fa-truck
+    title: SERVICIOS Y OFICIOS
+    desc: Talleres, transporte, construcción, limpieza y comida. Páginas pensadas para que te llamen o te escriban por WhatsApp.
+  - icon: fa-solid fa-location-dot
+    title: TODA EL ÁREA
+    desc: Katy, Sugar Land, Pearland, Spring… Mostramos tus zonas para que Google te muestre a quien busca cerca.
+en:
+  name: Houston
+  points:
+  - icon: fa-solid fa-language
+    title: TRULY BILINGUAL
+    desc: In Houston your customers speak English and Spanish. So does your website, written by people, not machine translation.
+  - icon: fa-solid fa-truck
+    title: SERVICES & TRADES
+    desc: Auto shops, trucking, construction, cleaning and food. Websites built so customers call you or message you on WhatsApp.
+  - icon: fa-solid fa-location-dot
+    title: THE WHOLE AREA
+    desc: Katy, Sugar Land, Pearland, Spring… We show your service areas so Google shows you to nearby searchers.

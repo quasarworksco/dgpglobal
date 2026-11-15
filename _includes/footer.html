@@ -53,7 +53,7 @@
       <div>
         <div class="footer-col-title">{% if page.lang == 'en' %}AREAS{% else %}ZONAS{% endif %}</div>
         <div class="footer-links">
-          {% for pair in site.data.routes %}{% if pair[1].city %}{% assign key = pair[0] %}{% assign c = site.data.content[key] %}{% assign lang = page.lang %}{% assign t = c[lang] %}<a href="{{ pair[1][page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{{ t.name }}</a>
+          {% for pair in site.data.routes %}{% if pair[1].city and pair[1].nofooter != true %}{% assign key = pair[0] %}{% assign c = site.data.content[key] %}{% assign lang = page.lang %}{% assign t = c[lang] %}<a href="{{ pair[1][page.lang] }}" class="footer-link"><i class="fa-solid fa-chevron-right"></i>{{ t.name }}</a>
           {% endif %}{% endfor %}
         </div>
       </div>

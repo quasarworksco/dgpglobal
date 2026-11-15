@@ -1,0 +1,73 @@
+crumb_es: Diseño web en Port St. Lucie
+crumb_en: Web design in Port St. Lucie
+service:
+  name_es: Diseño web en Port St. Lucie
+  name_en: Web design in Port St. Lucie
+  type: Web design
+hero:
+  bg_word: PSL
+  eyebrow_es: Diseño web · Port St. Lucie
+  eyebrow_en: Web design · Port St. Lucie
+  title_es: PÁGINAS WEB EN<span class="accent">PORT ST. LUCIE</span>
+  title_en: WEB DESIGN IN<span class="accent">PORT ST. LUCIE</span>
+  sub_es: Port St. Lucie es una de las ciudades que más crece en Estados Unidos. Hacemos páginas web para negocios de la Treasure Coast, listas en 24 horas y con pago único.
+  sub_en: Port St. Lucie is one of the fastest-growing cities in the US. We build websites for Treasure Coast businesses, ready in 24 hours with a one-time payment.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: Mi negocio es nuevo, ¿me conviene tener página web ya?
+  a_es: 'Sí. Es el mejor momento: cuando la gente busca tu servicio en Google desde el primer día, te encuentra a ti y no solo a la competencia.'
+  q_en: My business is new. Should I get a website now?
+  a_en: 'Yes. It is the best time: when people search for your service on Google from day one, they find you, not just the competition.'
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, hacemos tus cambios y la publicamos.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- caibo-construction
+- smelling-clean
+areas:
+- Port St. Lucie
+- Fort Pierce
+- Stuart
+- Jensen Beach
+- Tradition
+- Palm City
+- St. Lucie County
+city: true
+es:
+  name: Port St. Lucie
+  points:
+  - icon: fa-solid fa-arrow-trend-up
+    title: CRECIMIENTO RÉCORD
+    desc: Barrios nuevos cada año y miles de familias buscando servicios. Que te encuentren primero.
+  - icon: fa-solid fa-hammer
+    title: CONSTRUCCIÓN Y HOGAR
+    desc: Contratistas, jardinería, limpieza, pintura y aire acondicionado con galería y cotización.
+  - icon: fa-solid fa-location-dot
+    title: TODA LA TREASURE COAST
+    desc: Port St. Lucie, Fort Pierce, Stuart y alrededores, bien señalados para Google.
+en:
+  name: Port St. Lucie
+  points:
+  - icon: fa-solid fa-arrow-trend-up
+    title: RECORD GROWTH
+    desc: New neighborhoods every year and thousands of families looking for services. Be the first they find.
+  - icon: fa-solid fa-hammer
+    title: CONSTRUCTION & HOME
+    desc: Contractors, landscaping, cleaning, painting and A/C with a gallery and quotes.
+  - icon: fa-solid fa-location-dot
+    title: THE WHOLE TREASURE COAST
+    desc: Port St. Lucie, Fort Pierce, Stuart and nearby, clearly shown for Google.

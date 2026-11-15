@@ -1,0 +1,73 @@
+crumb_es: Diseño web en Sarasota
+crumb_en: Web design in Sarasota
+service:
+  name_es: Diseño web en Sarasota
+  name_en: Web design in Sarasota
+  type: Web design
+hero:
+  bg_word: SRQ
+  eyebrow_es: Diseño web · Sarasota
+  eyebrow_en: Web design · Sarasota
+  title_es: PÁGINAS WEB EN<span class="accent">SARASOTA</span>
+  title_en: WEB DESIGN IN<span class="accent">SARASOTA</span>
+  sub_es: 'Hacemos páginas web para negocios de Sarasota, Bradenton y Venice: elegantes, rápidas y listas en 24 horas, con pago único.'
+  sub_en: 'We build websites for businesses in Sarasota, Bradenton and Venice: elegant, fast and ready in 24 hours, with a one-time payment.'
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Pueden mostrar mis reseñas de Google en la página?
+  a_es: Sí. Destacamos tus mejores reseñas para que los nuevos clientes confíen en ti más rápido.
+  q_en: Can you show my Google reviews on the site?
+  a_en: Yes. We highlight your best reviews so new customers trust you faster.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, hacemos tus cambios y la publicamos.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- pina-water-system
+- caibo-construction
+areas:
+- Sarasota
+- Bradenton
+- Venice
+- Lakewood Ranch
+- North Port
+- Osprey
+- Manatee County
+city: true
+es:
+  name: Sarasota
+  points:
+  - icon: fa-solid fa-star
+    title: CALIDAD QUE SE NOTA
+    desc: Clientes exigentes buscan negocios serios. Tu página transmite profesionalismo desde el primer vistazo.
+  - icon: fa-solid fa-house-chimney-window
+    title: HOGAR Y BIENESTAR
+    desc: Remodelación, piscinas, limpieza, salud y bienestar, con reseñas y formulario de contacto.
+  - icon: fa-solid fa-location-dot
+    title: DE BRADENTON A NORTH PORT
+    desc: Mostramos tus zonas de servicio para que Google te muestre a quien busca cerca.
+en:
+  name: Sarasota
+  points:
+  - icon: fa-solid fa-star
+    title: QUALITY THAT SHOWS
+    desc: Discerning customers look for serious businesses. Your site shows professionalism at first glance.
+  - icon: fa-solid fa-house-chimney-window
+    title: HOME & WELLNESS
+    desc: Remodeling, pools, cleaning, health and wellness, with reviews and a contact form.
+  - icon: fa-solid fa-location-dot
+    title: FROM BRADENTON TO NORTH PORT
+    desc: We show your service areas so Google shows you to nearby searchers.

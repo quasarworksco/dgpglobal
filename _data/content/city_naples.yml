@@ -1,0 +1,73 @@
+crumb_es: Diseño web en Naples
+crumb_en: Web design in Naples
+service:
+  name_es: Diseño web en Naples
+  name_en: Web design in Naples
+  type: Web design
+hero:
+  bg_word: NAPLES
+  eyebrow_es: Diseño web · Naples
+  eyebrow_en: Web design · Naples
+  title_es: PÁGINAS WEB EN<span class="accent">NAPLES</span>
+  title_en: WEB DESIGN IN<span class="accent">NAPLES</span>
+  sub_es: 'Naples es un mercado exigente: los clientes esperan calidad. Hacemos páginas web elegantes para negocios de Naples y el condado de Collier, listas en 24 horas y en español e inglés.'
+  sub_en: Naples is a demanding market where customers expect quality. We build elegant websites for businesses in Naples and Collier County, ready in 24 hours, in English and Spanish.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Hacen páginas para negocios que atienden casas de temporada?
+  a_es: Sí. Mostramos tus servicios de mantenimiento y vigilancia de propiedades, con formulario para que los dueños te contacten aunque estén fuera de Florida.
+  q_en: Do you build sites for businesses serving seasonal homes?
+  a_en: Yes. We show your maintenance and home-watch services, with a form so owners can reach you even when they are out of state.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, hacemos tus cambios y la publicamos.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- caibo-construction
+- pina-water-system
+areas:
+- Naples
+- Marco Island
+- Bonita Springs
+- Estero
+- Golden Gate
+- Immokalee
+- Collier County
+city: true
+es:
+  name: Naples
+  points:
+  - icon: fa-solid fa-gem
+    title: IMAGEN PREMIUM
+    desc: En Naples la primera impresión lo es todo. Diseños limpios y profesionales que transmiten confianza.
+  - icon: fa-solid fa-house-chimney
+    title: SERVICIOS DE ALTO NIVEL
+    desc: Piscinas, jardinería, remodelación, limpieza residencial y servicios para propiedades de temporada.
+  - icon: fa-solid fa-mobile-screen
+    title: PERFECTA EN EL CELULAR
+    desc: La mayoría de tus clientes te buscará desde el teléfono. Tu página se verá impecable ahí.
+en:
+  name: Naples
+  points:
+  - icon: fa-solid fa-gem
+    title: PREMIUM IMAGE
+    desc: In Naples first impressions are everything. Clean, professional designs that build trust.
+  - icon: fa-solid fa-house-chimney
+    title: HIGH-END SERVICES
+    desc: Pools, landscaping, remodeling, residential cleaning and services for seasonal homes.
+  - icon: fa-solid fa-mobile-screen
+    title: PERFECT ON MOBILE
+    desc: Most of your customers will find you on their phone. Your site will look flawless there.

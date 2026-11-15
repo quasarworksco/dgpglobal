@@ -1,0 +1,74 @@
+crumb_es: Diseño web en Fort Lauderdale
+crumb_en: Web design in Fort Lauderdale
+service:
+  name_es: Diseño web en Fort Lauderdale
+  name_en: Web design in Fort Lauderdale
+  type: Web design
+hero:
+  bg_word: FTL
+  eyebrow_es: Diseño web · Fort Lauderdale
+  eyebrow_en: Web design · Fort Lauderdale
+  title_es: PÁGINAS WEB EN<span class="accent">FORT LAUDERDALE</span>
+  title_en: WEB DESIGN IN<span class="accent">FORT LAUDERDALE</span>
+  sub_es: Fort Lauderdale y todo Broward tienen miles de negocios compitiendo en Google. Hacemos páginas web rápidas y bilingües que te ayudan a destacar, listas en 24 horas.
+  sub_en: Fort Lauderdale and all of Broward have thousands of businesses competing on Google. We build fast, bilingual websites that help you stand out, ready in 24 hours.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Atienden todo el condado de Broward?
+  a_es: 'Sí: Fort Lauderdale, Hollywood, Pembroke Pines, Miramar, Coral Springs, Plantation y Davie, entre otras.'
+  q_en: Do you serve all of Broward County?
+  a_en: 'Yes: Fort Lauderdale, Hollywood, Pembroke Pines, Miramar, Coral Springs, Plantation and Davie, among others.'
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, hacemos tus cambios y la publicamos.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- smelling-clean
+- pina-water-system
+areas:
+- Fort Lauderdale
+- Hollywood
+- Pembroke Pines
+- Miramar
+- Coral Springs
+- Plantation
+- Davie
+- Broward County
+city: true
+es:
+  name: Fort Lauderdale
+  points:
+  - icon: fa-solid fa-ranking-star
+    title: DESTACA EN GOOGLE
+    desc: Hay mucha competencia en Broward. Tu página se hace rápida y con la información que Google necesita para mostrarte.
+  - icon: fa-solid fa-anchor
+    title: NEGOCIOS DE LA COSTA
+    desc: Servicios marinos, turismo, restaurantes, belleza y servicios profesionales.
+  - icon: fa-solid fa-language
+    title: CLIENTES DE TODO EL MUNDO
+    desc: Broward es muy diverso. Páginas en español e inglés para que nadie se quede sin entenderte.
+en:
+  name: Fort Lauderdale
+  points:
+  - icon: fa-solid fa-ranking-star
+    title: STAND OUT ON GOOGLE
+    desc: Broward is competitive. Your site is built fast and with the information Google needs to show you.
+  - icon: fa-solid fa-anchor
+    title: COASTAL BUSINESSES
+    desc: Marine services, tourism, restaurants, beauty and professional services.
+  - icon: fa-solid fa-language
+    title: CUSTOMERS FROM EVERYWHERE
+    desc: Broward is very diverse. Sites in English and Spanish so every customer understands you.

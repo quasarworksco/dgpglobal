@@ -1,0 +1,74 @@
+crumb_es: Diseño web en Dallas
+crumb_en: Web design in Dallas
+service:
+  name_es: Diseño web en Dallas
+  name_en: Web design in Dallas
+  type: Web design
+hero:
+  bg_word: DFW
+  eyebrow_es: Diseño web · Dallas
+  eyebrow_en: Web design · Dallas
+  title_es: PÁGINAS WEB EN<span class="accent">DALLAS</span>
+  title_en: WEB DESIGN IN<span class="accent">DALLAS</span>
+  sub_es: 'Hacemos páginas web bilingües para negocios de Dallas y todo el Metroplex: listas en 24 horas, con pago único y pensadas para que te llamen.'
+  sub_en: 'We build bilingual websites for businesses in Dallas and the whole Metroplex: ready in 24 hours, with a one-time payment and built to make your phone ring.'
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Trabajan con negocios de Texas si están en Florida?
+  a_es: Sí. Trabajamos 100% en línea con negocios de todo Estados Unidos, y ya tenemos clientes en Texas.
+  q_en: Do you work with Texas businesses if you are in Florida?
+  a_en: Yes. We work 100% online with businesses across the US, and we already have clients in Texas.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, hacemos tus cambios y la publicamos.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- tecmeca
+- jf-network-solutions
+areas:
+- Dallas
+- Irving
+- Garland
+- Grand Prairie
+- Arlington
+- Mesquite
+- Richardson
+- Dallas County
+city: true
+es:
+  name: Dallas
+  points:
+  - icon: fa-solid fa-city
+    title: TODO EL METROPLEX
+    desc: Dallas, Irving, Garland, Grand Prairie, Arlington y más. Mostramos tus zonas para que te encuentren.
+  - icon: fa-solid fa-wrench
+    title: OFICIOS Y SERVICIOS
+    desc: Talleres, construcción, limpieza, transporte y comida, con botón de llamada y WhatsApp.
+  - icon: fa-solid fa-language
+    title: CLIENTES EN DOS IDIOMAS
+    desc: Tu página en español e inglés para llegar a toda la comunidad de Dallas.
+en:
+  name: Dallas
+  points:
+  - icon: fa-solid fa-city
+    title: THE WHOLE METROPLEX
+    desc: Dallas, Irving, Garland, Grand Prairie, Arlington and more. We show your service areas so customers find you.
+  - icon: fa-solid fa-wrench
+    title: TRADES & SERVICES
+    desc: Auto shops, construction, cleaning, trucking and food, with call and WhatsApp buttons.
+  - icon: fa-solid fa-language
+    title: CUSTOMERS IN TWO LANGUAGES
+    desc: Your site in English and Spanish to reach the whole Dallas community.

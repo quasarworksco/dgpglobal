@@ -1,0 +1,72 @@
+crumb_es: Diseño web en Cape Coral
+crumb_en: Web design in Cape Coral
+service:
+  name_es: Diseño web en Cape Coral
+  name_en: Web design in Cape Coral
+  type: Web design
+hero:
+  bg_word: CAPE
+  eyebrow_es: Diseño web · Cape Coral
+  eyebrow_en: Web design · Cape Coral
+  title_es: PÁGINAS WEB EN<span class="accent">CAPE CORAL</span>
+  title_en: WEB DESIGN IN<span class="accent">CAPE CORAL</span>
+  sub_es: Cape Coral es una de las ciudades que más crece en Florida. Hacemos páginas web para negocios nuevos y establecidos de Cape Coral y el suroeste de Florida, listas en 24 horas, en español e inglés.
+  sub_en: Cape Coral is one of the fastest-growing cities in Florida. We build websites for new and established businesses in Cape Coral and Southwest Florida, ready in 24 hours, in English and Spanish.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: 'La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, pedimos tus cambios y la publicamos.'
+  q_en: How long does my website take?
+  a_en: 'It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.'
+- q_es: ¿Trabajan con negocios de construcción y servicios del hogar en Cape Coral?
+  a_es: 'Sí. Es uno de nuestros fuertes: galería de obras, licencias, zonas de servicio y formulario de estimado.'
+  q_en: Do you work with construction and home service businesses in Cape Coral?
+  a_en: 'Yes. It is one of our strengths: project gallery, licenses, service areas and an estimate form.'
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- caibo-construction
+- smelling-clean
+areas:
+- Cape Coral
+- North Fort Myers
+- Pine Island
+- Matlacha
+- Fort Myers
+- Lee County
+city: true
+es:
+  name: Cape Coral
+  points:
+  - icon: fa-solid fa-arrow-trend-up
+    title: CIUDAD QUE CRECE
+    desc: Cada mes abren negocios nuevos en Cape Coral. Una buena página web te pone por delante desde el primer día.
+  - icon: fa-solid fa-helmet-safety
+    title: OBRAS Y HOGAR
+    desc: Construcción, piscinas, jardinería, limpieza y remodelación. Mostramos tus trabajos para que te elijan a ti.
+  - icon: fa-solid fa-location-dot
+    title: TE ENCUENTRAN CERCA
+    desc: Mostramos tu zona de servicio para que Google te muestre a quien busca en Cape Coral y alrededores.
+en:
+  name: Cape Coral
+  points:
+  - icon: fa-solid fa-arrow-trend-up
+    title: A GROWING CITY
+    desc: New businesses open in Cape Coral every month. A great website puts you ahead from day one.
+  - icon: fa-solid fa-helmet-safety
+    title: CONSTRUCTION & HOME
+    desc: Construction, pools, landscaping, cleaning and remodeling. We show your work so customers choose you.
+  - icon: fa-solid fa-location-dot
+    title: FOUND NEARBY
+    desc: We show your service area so Google shows you to people searching in Cape Coral and nearby.

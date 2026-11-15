@@ -1,0 +1,74 @@
+crumb_es: Diseño web en West Palm Beach
+crumb_en: Web design in West Palm Beach
+service:
+  name_es: Diseño web en West Palm Beach
+  name_en: Web design in West Palm Beach
+  type: Web design
+hero:
+  bg_word: WPB
+  eyebrow_es: Diseño web · West Palm Beach
+  eyebrow_en: Web design · West Palm Beach
+  title_es: PÁGINAS WEB EN<span class="accent">WEST PALM BEACH</span>
+  title_en: WEB DESIGN IN<span class="accent">WEST PALM BEACH</span>
+  sub_es: 'Hacemos páginas web para negocios de West Palm Beach y todo el condado de Palm Beach: profesionales, bilingües y listas en 24 horas, con pago único.'
+  sub_en: 'We build websites for businesses in West Palm Beach and all of Palm Beach County: professional, bilingual and ready in 24 hours, with a one-time payment.'
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Pueden hacer una página para mi consultorio u oficina profesional?
+  a_es: Sí. Incluimos tus servicios, tu equipo, preguntas frecuentes y un formulario para pedir cita o consulta.
+  q_en: Can you build a site for my practice or professional office?
+  a_en: Yes. We include your services, your team, FAQs and a form to request an appointment or consultation.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, hacemos tus cambios y la publicamos.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- pina-water-system
+- smelling-clean
+areas:
+- West Palm Beach
+- Boca Raton
+- Delray Beach
+- Boynton Beach
+- Lake Worth
+- Wellington
+- Jupiter
+- Palm Beach County
+city: true
+es:
+  name: West Palm Beach
+  points:
+  - icon: fa-solid fa-briefcase
+    title: SERVICIOS PROFESIONALES
+    desc: Contadores, seguros, bienes raíces, salud y consultoría. Páginas serias que generan confianza.
+  - icon: fa-solid fa-screwdriver-wrench
+    title: OFICIOS Y HOGAR
+    desc: Aire acondicionado, plomería, techos y jardinería, con botón de llamada y formulario de cotización.
+  - icon: fa-solid fa-location-dot
+    title: TODO PALM BEACH
+    desc: Desde Jupiter hasta Boca Raton, mostramos tus zonas de servicio para que te encuentren cerca.
+en:
+  name: West Palm Beach
+  points:
+  - icon: fa-solid fa-briefcase
+    title: PROFESSIONAL SERVICES
+    desc: Accountants, insurance, real estate, healthcare and consulting. Serious sites that build trust.
+  - icon: fa-solid fa-screwdriver-wrench
+    title: TRADES & HOME
+    desc: A/C, plumbing, roofing and landscaping, with a call button and a quote form.
+  - icon: fa-solid fa-location-dot
+    title: ALL OF PALM BEACH
+    desc: From Jupiter to Boca Raton, we show your service areas so nearby customers find you.

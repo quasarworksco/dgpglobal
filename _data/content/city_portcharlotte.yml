@@ -1,0 +1,72 @@
+crumb_es: Diseño web en Port Charlotte
+crumb_en: Web design in Port Charlotte
+service:
+  name_es: Diseño web en Port Charlotte
+  name_en: Web design in Port Charlotte
+  type: Web design
+hero:
+  bg_word: CHARLOTTE
+  eyebrow_es: Diseño web · Port Charlotte
+  eyebrow_en: Web design · Port Charlotte
+  title_es: PÁGINAS WEB EN<span class="accent">PORT CHARLOTTE</span>
+  title_en: WEB DESIGN IN<span class="accent">PORT CHARLOTTE</span>
+  sub_es: 'Hacemos páginas web para negocios de Port Charlotte, Punta Gorda y North Port: claras, rápidas y listas en 24 horas, con pago único.'
+  sub_en: 'We build websites for businesses in Port Charlotte, Punta Gorda and North Port: clear, fast and ready in 24 hours, with a one-time payment.'
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Pueden poner mis licencias y seguros en la página?
+  a_es: Sí. Mostrar licencias y seguros da confianza, sobre todo en construcción y reparaciones.
+  q_en: Can you show my licenses and insurance on the site?
+  a_en: Yes. Showing licenses and insurance builds trust, especially in construction and repairs.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información. Tú la revisas, hacemos tus cambios y la publicamos.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information. You review it, we make your changes and we publish it.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- caibo-construction
+- pina-water-system
+areas:
+- Port Charlotte
+- Punta Gorda
+- North Port
+- Englewood
+- Rotonda West
+- Charlotte County
+city: true
+es:
+  name: Port Charlotte
+  points:
+  - icon: fa-solid fa-house-flood-water
+    title: RECONSTRUCCIÓN Y HOGAR
+    desc: Techos, ventanas, remodelación y limpieza. Mostramos tus trabajos y tus licencias.
+  - icon: fa-solid fa-user-clock
+    title: CLIENTES DE TODAS LAS EDADES
+    desc: Páginas fáciles de leer, con botón grande para llamar, pensadas para cualquier cliente.
+  - icon: fa-solid fa-location-dot
+    title: CHARLOTTE COUNTY
+    desc: Port Charlotte, Punta Gorda, Englewood y North Port, bien señalados para Google.
+en:
+  name: Port Charlotte
+  points:
+  - icon: fa-solid fa-house-flood-water
+    title: REBUILDING & HOME
+    desc: Roofing, windows, remodeling and cleaning. We show your work and your licenses.
+  - icon: fa-solid fa-user-clock
+    title: CUSTOMERS OF ALL AGES
+    desc: Easy-to-read sites with a big call button, designed for every customer.
+  - icon: fa-solid fa-location-dot
+    title: CHARLOTTE COUNTY
+    desc: Port Charlotte, Punta Gorda, Englewood and North Port, clearly shown for Google.
