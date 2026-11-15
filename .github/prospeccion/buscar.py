@@ -704,7 +704,9 @@ def main():
         r = bot({'accion': 'guardar', 'items': elegidos[i:i + 25]})
         guardados += r.get('guardados', 0)
     # Los revisados que no entraron se marcan como vistos para no repetirlos mañana
-    descartados = [p['clave'] for p in lote if p not in elegidos]
+    # Solo se descartan los que no tienen correo; los que sí tienen y no entraron hoy quedan para los próximos días
+    descartados = [p['clave'] for p in lote if not p.get('email')]
+    log('guardados_para_otro_dia', len([p for p in lote if p.get('email') and p not in elegidos]))
     for i in range(0, len(descartados), 500):
         bot({'accion': 'vistos', 'claves': descartados[i:i + 500]})
     bot({'accion': 'fin', 'ultimoSunbiz': ultimo, 'resumen': {**LOG, 'guardados': guardados}})
