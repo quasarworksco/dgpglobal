@@ -586,7 +586,18 @@ def main():
 
     con = sorted([p for p in lote if p.get('email')], key=lambda p: -p['puntaje'])
     sin = sorted([p for p in lote if not p.get('email')], key=lambda p: -p['puntaje'])
-    elegidos = con[:por_dia]
+    # Mezclar fuentes (Florida y Texas primero) para que no salgan solo camioneros o Connecticut
+    orden = ['sunbiz', 'texas', 'osm', 'fmcsa', 'connecticut']
+    grupos = {f: [p for p in con if p['fuente'] == f] for f in orden}
+    peso = {'sunbiz': 3, 'texas': 3, 'osm': 2, 'fmcsa': 1, 'connecticut': 1}
+    elegidos = []
+    while len(elegidos) < por_dia and any(grupos.values()):
+        for f in orden:
+            for _ in range(peso[f]):
+                if grupos[f] and len(elegidos) < por_dia:
+                    elegidos.append(grupos[f].pop(0))
+    for f in orden:
+        log('correo_' + f, len([p for p in elegidos if p['fuente'] == f]))
     falta = max(int(cfg.get('sinCorreo') or 25), por_dia - len(elegidos))
     elegidos += sin[:falta]
     log('elegidos_con_correo', len([p for p in elegidos if p.get('email')]))
