@@ -73,7 +73,7 @@ TOKEN = None
 def bot(cuerpo):
     for intento in range(3):
         try:
-            _, _, b = http(BOT, data=cuerpo, headers={'Authorization': 'Bearer ' + TOKEN}, timeout=60)
+            _, _, b = http(BOT, data=cuerpo, headers={'Authorization': 'Bearer ' + oidc()}, timeout=60)
             return json.loads(b)
         except urllib.error.HTTPError as e:
             if intento == 2 or e.code in (400, 401, 403):
