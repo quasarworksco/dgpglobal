@@ -553,6 +553,16 @@ def enriquecer(p):
 def main():
     global TOKEN
     TOKEN = oidc()
+    # Primero: dejar al día los correos ya guardados (textos nuevos)
+    for _ in range(30):
+        r = bot({'accion': 'rehacer'})
+        log('rehechos', r.get('rehechos', 0))
+        if not r.get('quedan'):
+            LOG['listos_para_enviar'] = r.get('listos', 0)
+            break
+    if os.environ.get('SOLO_REHACER'):
+        print(json.dumps(LOG))
+        return
     cfg = bot({'accion': 'config'}).get('config', {})
     if cfg.get('pausado'):
         print('Prospección en pausa desde el panel')

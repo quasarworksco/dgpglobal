@@ -3,6 +3,10 @@ on:
   schedule:
     - cron: '17 10 * * *'   # 6:17 am Florida
   workflow_dispatch:
+    inputs:
+      solo_rehacer:
+        description: 'Solo rehacer los correos guardados (no buscar)'
+        default: ''
 permissions:
   id-token: write   # token para que el bot sepa que es esta tarea (sin claves guardadas)
   contents: read
@@ -16,3 +20,5 @@ jobs:
         with: { sparse-checkout: .github/prospeccion }
       - run: sudo apt-get -qq install -y lftp >/dev/null
       - run: python3 .github/prospeccion/buscar.py
+        env:
+          SOLO_REHACER: ${{ inputs.solo_rehacer }}
