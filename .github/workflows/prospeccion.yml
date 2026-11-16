@@ -7,6 +7,9 @@ on:
       solo_rehacer:
         description: 'Solo rehacer los correos guardados (no buscar)'
         default: ''
+      diag:
+        description: 'Diagnóstico del envío (1 = ver, forzar = enviar ahora)'
+        default: ''
 permissions:
   id-token: write   # token para que el bot sepa que es esta tarea (sin claves guardadas)
   contents: read
@@ -22,3 +25,4 @@ jobs:
       - run: python3 .github/prospeccion/buscar.py
         env:
           SOLO_REHACER: ${{ inputs.solo_rehacer }}
+          DIAG: ${{ inputs.diag }}

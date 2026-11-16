@@ -630,6 +630,9 @@ def enriquecer(p):
 def main():
     global TOKEN
     TOKEN = oidc()
+    if os.environ.get('DIAG'):
+        print(json.dumps(bot({'accion': 'diag', 'forzar': os.environ.get('DIAG') == 'forzar'}), indent=1, ensure_ascii=False))
+        return
     # Primero: dejar al día los correos ya guardados (textos nuevos)
     for _ in range(30):
         r = bot({'accion': 'rehacer'})
