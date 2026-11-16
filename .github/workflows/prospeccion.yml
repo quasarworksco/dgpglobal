@@ -17,7 +17,7 @@ concurrency: prospeccion
 jobs:
   buscar:
     runs-on: ubuntu-latest
-    timeout-minutes: 50
+    timeout-minutes: 80
     steps:
       - uses: actions/checkout@v4
         with: { sparse-checkout: .github/prospeccion }

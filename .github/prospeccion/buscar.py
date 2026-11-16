@@ -45,7 +45,7 @@ def log(k, n=1):
 
 
 # ───────────────────────── utilidades ─────────────────────────
-def http(url, data=None, headers=None, timeout=12, metodo=None):
+def http(url, data=None, headers=None, timeout=12, metodo=None, maxbytes=1_500_000):
     h = {'User-Agent': UA, 'Accept-Language': 'en-US,en;q=0.8'}
     h.update(headers or {})
     if isinstance(data, (dict, list)):
@@ -55,7 +55,7 @@ def http(url, data=None, headers=None, timeout=12, metodo=None):
         data = data.encode()
     req = urllib.request.Request(url, data=data, headers=h, method=metodo)
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        cuerpo = r.read(1_500_000)
+        cuerpo = r.read(maxbytes)
         return r.status, r.geturl(), cuerpo.decode(r.headers.get_content_charset() or 'utf-8', 'replace')
 
 
@@ -423,6 +423,110 @@ def camaras(cfg):
     log('camara_registros', len(out))
     return out
 
+
+# ── Restaurantes nuevos de Florida (DBPR, archivo semanal oficial) ──
+def fl_restaurantes(cfg):
+    if cfg.get('restaurantesFL') is False:
+        return []
+    import csv, io
+    zips = tuple(cfg.get('zipsFL') or [])
+    try:
+        _, _, b = http('https://www2.myfloridalicense.com/sto/file_download/extracts/newfood.csv', timeout=120, maxbytes=50_000_000)
+    except Exception:
+        log('restaurantes_error')
+        return []
+    out, desde = [], HOY - dt.timedelta(days=int(cfg.get('diasLicencias') or 14))
+    for r in csv.DictReader(io.StringIO(b)):
+        r = {k.strip(): (v or '').strip() for k, v in r.items() if k}
+        try:
+            m, d, y = r.get('Application Approval Date', '').split('/')
+            f = dt.date(int(y), int(m), int(d))
+        except Exception:
+            continue
+        z = r.get('Location Zip Code', '')[:5]
+        if f < desde or (zips and not z.startswith(zips)):
+            continue
+        nombre = r.get('Business Name') or r.get('Licensee Name')
+        if not nombre:
+            continue
+        out.append({'clave': 'rf-' + re.sub(r'[^A-Za-z0-9]', '', r.get('License Number', ''))[:30], 'fuente': 'restaurantefl', 'nombre': titulo(nombre), 'estado': 'FL',
+                    'ciudad': titulo(r.get('Location City', '')), 'zip': z, 'direccion': titulo(r.get('Location Street Address', '')), 'contacto': '',
+                    'razonSocial': titulo(r.get('Licensee Name', '')) if r.get('Licensee Name') != nombre else '', 'telefono': r.get('Primary Phone Number', ''),
+                    'registro': f.isoformat(), 'categoria': 'restaurante'})
+    log('restaurantes_registros', len(out))
+    return out
+
+
+# ── Contratistas con licencia nueva en Florida (DBPR: construcción y electricistas) ──
+OCUP_CAT = {'CGC': 'construccion', 'CBC': 'construccion', 'CRC': 'construccion', 'CCC': 'construccion', 'RG': 'construccion', 'RB': 'construccion', 'RR': 'construccion', 'RC': 'construccion',
+            'CAC': 'aire', 'CMC': 'aire', 'RA': 'aire', 'RM': 'aire', 'CPC': 'plomeria', 'RF': 'plomeria', 'CPO': 'piscinas', 'RP': 'piscinas', 'CSC': 'construccion', 'EC': 'electricidad', 'ER': 'electricidad'}
+
+
+def fl_contratistas(cfg):
+    if cfg.get('contratistasFL') is False:
+        return []
+    import csv, io
+    zips = tuple(cfg.get('zipsFL') or [])
+    desde = HOY - dt.timedelta(days=int(cfg.get('diasLicencias') or 14))
+    out, vistos = [], set()
+    for url in ('https://www2.myfloridalicense.com/sto/file_download/extracts/lic08el.csv',
+                'https://www2.myfloridalicense.com/sto/file_download/extracts/CONSTRUCTIONLICENSE_1.csv'):
+        try:
+            _, _, b = http(url, timeout=300, maxbytes=200_000_000)
+        except Exception:
+            log('contratistas_error')
+            continue
+        for c in csv.reader(io.StringIO(b)):
+            if len(c) < 17:
+                continue
+            try:
+                m, d, y = c[15].strip().split('/')
+                f = dt.date(int(y), int(m), int(d))
+            except Exception:
+                continue
+            z = c[10].strip()[:5]
+            if f < desde or (zips and not z.startswith(zips)) or not c[13].strip().upper().startswith('C'):   # solo licencias vigentes (Current)
+                continue
+            nombre = (c[3].strip() or c[2].strip())
+            k = re.sub(r'[^a-z0-9]', '', nombre.lower())
+            if not nombre or k in vistos:
+                continue
+            vistos.add(k)
+            ocup = c[1].strip().upper()
+            out.append({'clave': 'lf-' + re.sub(r'[^A-Za-z0-9]', '', c[12])[:30], 'fuente': 'contratistafl', 'nombre': titulo(nombre), 'estado': 'FL',
+                        'ciudad': titulo(c[8].strip()), 'zip': z, 'direccion': titulo(c[5].strip()), 'contacto': titulo(c[2].strip()) if c[3].strip() else '',
+                        'registro': f.isoformat(), 'categoria': OCUP_CAT.get(ocup) or categoria(nombre)})
+    log('contratistas_registros', len(out))
+    return out
+
+
+# ── Texas: electricistas y aire acondicionado (TDLR). Sin fecha de emisión: se usan las licencias que vencen
+#    dentro de ~1 año (recién emitidas o renovadas) y el bot ya recuerda las que vio otros días. ──
+def tx_licencias(cfg):
+    condados = [c.upper() for c in (cfg.get('condadosTX') or ['HARRIS', 'DALLAS', 'FORT BEND', 'MONTGOMERY', 'COLLIN', 'DENTON', 'TARRANT'])]
+    if not condados or cfg.get('licenciasTX') is False:
+        return []
+    fechas = ','.join("'" + (HOY + dt.timedelta(days=365 - i)).strftime('%m/%d/%Y') + "'" for i in range(int(cfg.get('diasLicencias') or 14)))
+    filas = socrata('https://data.texas.gov/resource/7358-krk7.json', {
+        '$where': f"license_type in('Electrical Contractor','A/C Contractor') and license_expiration_date_mmddccyy in({fechas}) and business_county in({','.join(repr(c) for c in condados)})",
+        '$limit': 3000})
+    if filas is None:
+        log('tdlr_error')
+        return []
+    out = []
+    for r in filas:
+        nombre = r.get('business_name') or r.get('owner_name') or ''
+        if not nombre:
+            continue
+        csz = r.get('business_city_state_zip', '')
+        m = re.match(r'\s*(.*?)\s+TX\s+(\d{5})', csz)
+        out.append({'clave': 'td-' + re.sub(r'[^A-Za-z0-9]', '', r.get('license_number', ''))[:30], 'fuente': 'tdlr', 'nombre': titulo(nombre), 'estado': 'TX',
+                    'ciudad': titulo(m.group(1)) if m else '', 'zip': m.group(2) if m else '', 'direccion': titulo(r.get('business_address_line1', '')),
+                    'contacto': titulo(r.get('owner_name', '')) if r.get('business_name') else '', 'telefono': r.get('business_telephone') or '',
+                    'registro': '', 'categoria': 'electricidad' if 'Electrical' in r.get('license_type', '') else 'aire'})
+    log('tdlr_registros', len(out))
+    return out
+
 # Zonas para OpenStreetMap (sur, oeste, norte, este). Se rota una parte cada día.
 ZONAS_OSM = {
     'Miami': (25.55, -80.50, 25.98, -80.12), 'Fort Lauderdale': (25.98, -80.35, 26.35, -80.06), 'West Palm Beach': (26.35, -80.25, 26.95, -80.03),
@@ -630,7 +734,7 @@ def enriquecer(p):
             p['webSocial'], p['web'] = p['web'], ''
         if p.get('web'):
             web = revisar_web(p['web'])
-        elif p['fuente'] in ('sunbiz', 'texas'):
+        elif p['fuente'] in ('sunbiz', 'texas', 'restaurantefl', 'contratistafl', 'tdlr'):
             web = adivinar_web(p)
         correos = []
         if p.get('email'):
@@ -703,7 +807,10 @@ def main():
     fm = fmcsa(cfg)
     ct = connecticut(cfg)
     cc = camaras(cfg)
-    todos = fl + tx + om + fm + ct + cc
+    rf = fl_restaurantes(cfg)
+    lf = fl_contratistas(cfg)
+    td = tx_licencias(cfg)
+    todos = fl + tx + om + fm + ct + cc + rf + lf + td
     log('candidatos', len(todos))
 
     # Quitar los que ya vimos (el bot lleva la cuenta)
@@ -718,7 +825,7 @@ def main():
     def pre(p):
         return (bool(p.get('email')) * 3 + bool(p.get('web')) * 2 + (p['fuente'] not in ('osm',)) + (p['categoria'] != 'general'))
     todos.sort(key=pre, reverse=True)
-    tope = int(cfg.get('maxRevisar') or 900)
+    tope = int(cfg.get('maxRevisar') or 1500)
     lote = todos[:tope]
     with cf.ThreadPoolExecutor(24) as ex:
         lote = list(ex.map(enriquecer, lote))
@@ -738,9 +845,9 @@ def main():
     con = sorted([p for p in lote if p.get('email') and p.get('segmento') != 'aliado' and not tipo_aliado(p)], key=lambda p: -p['puntaje'])
     sin = sorted([p for p in lote if not p.get('email')], key=lambda p: -p['puntaje'])
     # Mezclar fuentes (Florida y Texas primero) para que no salgan solo camioneros o Connecticut
-    orden = ['sunbiz', 'texas', 'camara', 'osm', 'fmcsa', 'connecticut']
+    orden = ['sunbiz', 'texas', 'contratistafl', 'restaurantefl', 'tdlr', 'camara', 'osm', 'fmcsa', 'connecticut']
     grupos = {f: [p for p in con if p['fuente'] == f] for f in orden}
-    peso = {'sunbiz': 3, 'texas': 3, 'camara': 2, 'osm': 2, 'fmcsa': 1, 'connecticut': 1}
+    peso = {'sunbiz': 3, 'texas': 3, 'contratistafl': 3, 'restaurantefl': 2, 'tdlr': 2, 'camara': 2, 'osm': 2, 'fmcsa': 1, 'connecticut': 1}
     elegidos = []
     tope_cat = lambda c: max(3, int(por_dia * (0.12 if c == 'transporte' else 0.2)))
     por_cat = {}
