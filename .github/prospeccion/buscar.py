@@ -478,7 +478,7 @@ def osm(cfg):
                 'clave': f"osm-{el['type'][0]}{el['id']}", 'fuente': 'osm', 'nombre': t.get('name', '').strip(), 'estado': t.get('addr:state', 'FL' if z not in ('Houston', 'Dallas') else 'TX'),
                 'ciudad': t.get('addr:city') or z, 'zip': (t.get('addr:postcode') or '')[:5],
                 'direccion': ' '.join(x for x in (t.get('addr:housenumber'), t.get('addr:street')) if x),
-                'contacto': '', 'registro': '', 'categoria': OSM_CAT.get(tipo) or categoria(t.get('name', ''), tipo),
+                'contacto': '', 'registro': '', 'categoria': OSM_CAT.get(tipo) or categoria(t.get('name', ''), tipo), 'tipoOSM': tipo,
                 'email': correo, 'web': web, 'telefono': (t.get('phone') or t.get('contact:phone') or '').split(';')[0].strip(),
                 'facebook': t.get('contact:facebook', ''), 'instagram': t.get('contact:instagram', ''),
             })
@@ -579,9 +579,55 @@ def sub_libre(p):
     return base
 
 
+
+# "Web" que en realidad es una red social, y webs gratuitas o de plantilla sin dominio propio
+RX_SOCIAL = re.compile(r'(^|[/.])(facebook\.com|fb\.com|fb\.me|instagram\.com|linktr\.ee|tiktok\.com|yelp\.com|business\.site|g\.page|maps\.app\.goo\.gl|wa\.me|whatsapp\.com|nextdoor\.com|linkedin\.com|twitter\.com|x\.com)(/|$)', re.I)
+RX_GRATIS = re.compile(r'\.(wixsite\.com|godaddysites\.com|weebly\.com|square\.site|webnode\.\w+|jimdosite\.com|jimdofree\.com|carrd\.co|mystrikingly\.com|wordpress\.com|blogspot\.com|site123\.me|mobirisesite\.com|ueniweb\.com|webflow\.io|squarespace\.com|my\.canva\.site|hostinger(site)?\.com)(/|$)|//sites\.google\.com/', re.I)
+
+
+def tipo_web(url):
+    u = (url or '').strip().lower()
+    if not u:
+        return ''
+    if not re.match(r'https?://', u):
+        u = 'https://' + u
+    if RX_SOCIAL.search(u):
+        return 'social'
+    if RX_GRATIS.search(u):
+        return 'gratis'
+    return 'propia'
+
+
+# Posibles aliados: quienes atienden a dueños de negocios todos los días
+ALIADO_TIPOS = [
+    ('imprenta', r'print|printing|imprenta|copy ?shop|copyshop|copias', 'imprenta', 'print shop'),
+    ('rotulos', r'\bsigns?\b|sign ?shop|signmaker|rotul|letreros|wraps?\b|vinyl', 'empresa de rótulos', 'sign company'),
+    ('fotografia', r'photo|fotograf|photographer', 'estudio de fotografía', 'photography business'),
+    ('registro', r'formation|incorporat|registered agent|business services|notar|notary|servicios para empresas|tramites|trámites', 'oficina de servicios para empresas', 'business services office'),
+    ('contador', r'\btax(es)?\b|tax_advisor|account|bookkeep|\bcpa\b|payroll|contab|impuestos', 'oficina de impuestos y contabilidad', 'tax and accounting office'),
+    ('seguros', r'insurance|seguros', 'agencia de seguros', 'insurance agency'),
+]
+
+
+def tipo_aliado(p):
+    t = sin_tildes(f"{p.get('nombre', '')} {p.get('tipoOSM', '')}").lower()
+    for k, rx, es, en in ALIADO_TIPOS:
+        if re.search(rx, t):
+            return k, es, en
+    if p.get('categoria') == 'contabilidad':
+        return 'contador', ALIADO_TIPOS[4][2], ALIADO_TIPOS[4][3]
+    if p.get('categoria') == 'seguros':
+        return 'seguros', ALIADO_TIPOS[5][2], ALIADO_TIPOS[5][3]
+    return None
+
+
 def enriquecer(p):
     try:
         web = None
+        p['webTipo'] = tipo_web(p.get('web'))
+        if p['webTipo'] == 'social':
+            # Su "web" es Facebook/Instagram: para nosotros no tiene página (y esas redes no dejan leer el correo)
+            p['webSocial'], p['web'] = p['web'], ''
         if p.get('web'):
             web = revisar_web(p['web'])
         elif p['fuente'] in ('sunbiz', 'texas'):
@@ -603,7 +649,9 @@ def enriquecer(p):
         pts = 0
         if p['email']:
             pts += 50
-        if not p.get('web') or (web and not web.get('ok')):
+        if p.get('webTipo') in ('social', 'gratis'):
+            pts += 25   # cree que tiene web, pero no es una web propia: cliente ideal
+        elif not p.get('web') or (web and not web.get('ok')):
             pts += 20
         elif web:
             malas = (not web.get('https')) + (not web.get('celular')) + bool(web.get('anio') and web['anio'] < HOY.year - 3) + bool(web.get('constructor') in ('Wix', 'GoDaddy'))
@@ -677,13 +725,17 @@ def main():
 
     # Posibles ALIADOS: contadores, preparadores de impuestos y agentes de seguros de Florida y Texas.
     # A ellos no se les ofrece una web: se les invita a revender (paquetes de aliado). Van aparte, hasta N por día.
-    SEG_ALIADO = ('contabilidad', 'seguros')
-    aliados = sorted([p for p in lote if p.get('email') and p['categoria'] in SEG_ALIADO and p.get('estado') in ('FL', 'TX')], key=lambda p: -p['puntaje'])
-    aliados = aliados[:int(cfg.get('aliadosPorDia') or 10)]
+    for p in lote:
+        ta = tipo_aliado(p) if p.get('email') and p.get('estado') in ('FL', 'TX') else None
+        if ta:
+            p['_ali'] = ta
+    aliados = sorted([p for p in lote if p.get('_ali')], key=lambda p: -p['puntaje'])[:int(cfg.get('aliadosPorDia') or 15)]
     for p in aliados:
-        p['segmento'] = 'aliado'
+        p['segmento'], p['aliadoTipo'] = 'aliado', {'k': p['_ali'][0], 'es': p['_ali'][1], 'en': p['_ali'][2]}
     log('aliados', len(aliados))
-    con = sorted([p for p in lote if p.get('email') and p.get('segmento') != 'aliado' and p['categoria'] not in SEG_ALIADO], key=lambda p: -p['puntaje'])
+    for p in lote:
+        p.pop('_ali', None)
+    con = sorted([p for p in lote if p.get('email') and p.get('segmento') != 'aliado' and not tipo_aliado(p)], key=lambda p: -p['puntaje'])
     sin = sorted([p for p in lote if not p.get('email')], key=lambda p: -p['puntaje'])
     # Mezclar fuentes (Florida y Texas primero) para que no salgan solo camioneros o Connecticut
     orden = ['sunbiz', 'texas', 'camara', 'osm', 'fmcsa', 'connecticut']
