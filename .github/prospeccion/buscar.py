@@ -826,7 +826,18 @@ def main():
         return (bool(p.get('email')) * 3 + bool(p.get('web')) * 2 + (p['fuente'] not in ('osm',)) + (p['categoria'] != 'general'))
     todos.sort(key=pre, reverse=True)
     tope = int(cfg.get('maxRevisar') or 1500)
-    lote = todos[:tope]
+    # Cupo reservado para las fuentes sin web conocida (licencias y registros nuevos), mezcladas entre sí,
+    # para que no queden siempre al final detrás de los negocios que ya traen web
+    LIC = ('contratistafl', 'restaurantefl', 'tdlr', 'sunbiz', 'texas')
+    reserva = int(cfg.get('reservaLicencias') or 350)
+    grupos_lic = {f: [p for p in todos if p['fuente'] == f] for f in LIC}
+    lic = []
+    while len(lic) < reserva and any(grupos_lic.values()):
+        for f in LIC:
+            if grupos_lic[f] and len(lic) < reserva:
+                lic.append(grupos_lic[f].pop(0))
+    ids_lic = {id(p) for p in lic}
+    lote = lic + [p for p in todos if id(p) not in ids_lic][:max(0, tope - len(lic))]
     with cf.ThreadPoolExecutor(24) as ex:
         lote = list(ex.map(enriquecer, lote))
 
