@@ -1,0 +1,75 @@
+crumb_es: Páginas web para constructoras en Fort Myers
+crumb_en: Websites for contractors in Fort Myers
+service:
+  name_es: Páginas web para constructoras en Fort Myers
+  name_en: Websites for contractors in Fort Myers
+  type: Web design
+hero:
+  bg_word: SWFL
+  eyebrow_es: Diseño web · Constructoras · Fort Myers
+  eyebrow_en: Web design · Contractors · Fort Myers
+  title_es: PÁGINAS WEB PARA CONSTRUCTORAS<span class="accent">EN FORT MYERS</span>
+  title_en: WEBSITES FOR CONTRACTORS<span class="accent">IN FORT MYERS</span>
+  sub_es: El suroeste de Florida no para de construir y reconstruir. Hacemos páginas web para constructoras, techadores y remodeladores de Fort Myers, Cape Coral y Naples, listas en 24 horas.
+  sub_en: Southwest Florida keeps building and rebuilding. We build websites for contractors, roofers and remodelers in Fort Myers, Cape Coral and Naples, ready in 24 hours.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Trabajan con constructoras de Cape Coral y Naples?
+  a_es: 'Sí. Es nuestra región: trabajamos con contratistas de todo Lee y Collier, de Fort Myers a Naples.'
+  q_en: Do you work with contractors in Cape Coral and Naples?
+  a_en: 'Yes. It is our home region: we work with contractors across Lee and Collier, from Fort Myers to Naples.'
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- caibo-construction
+- pina-water-system
+areas:
+- Fort Myers
+- Cape Coral
+- Naples
+- Lehigh Acres
+- Estero
+- Bonita Springs
+- Lee County
+combo: true
+cityref: city_fortmyers
+indref: ind_construction
+es:
+  name: constructoras en Fort Myers
+  points:
+  - icon: fa-solid fa-house-chimney
+    title: RECONSTRUCCIÓN
+    desc: 'Techos, ventanas y remodelación tras tormentas: servicios claros con botón de estimado.'
+  - icon: fa-solid fa-water
+    title: CASAS NUEVAS Y PISCINAS
+    desc: Constructoras de casas, piscinas y muelles con galería de proyectos terminados.
+  - icon: fa-solid fa-location-dot
+    title: LEE Y COLLIER
+    desc: Mostramos exactamente qué ciudades cubres para que Google te muestre cerca.
+en:
+  name: contractors in Fort Myers
+  points:
+  - icon: fa-solid fa-house-chimney
+    title: REBUILDING
+    desc: 'Roofing, windows and remodeling after storms: clear services with an estimate button.'
+  - icon: fa-solid fa-water
+    title: NEW HOMES & POOLS
+    desc: Home builders, pools and docks with a gallery of finished projects.
+  - icon: fa-solid fa-location-dot
+    title: LEE & COLLIER
+    desc: We show exactly which cities you cover so Google shows you nearby.

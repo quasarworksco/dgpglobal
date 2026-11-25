@@ -1,0 +1,75 @@
+crumb_es: Páginas web para restaurantes en Miami
+crumb_en: Websites for restaurants in Miami
+service:
+  name_es: Páginas web para restaurantes en Miami
+  name_en: Websites for restaurants in Miami
+  type: Web design
+hero:
+  bg_word: MIAMI
+  eyebrow_es: Diseño web · Restaurantes · Miami
+  eyebrow_en: Web design · Restaurants · Miami
+  title_es: PÁGINAS WEB PARA RESTAURANTES<span class="accent">EN MIAMI</span>
+  title_en: WEBSITES FOR RESTAURANTS<span class="accent">IN MIAMI</span>
+  sub_es: 'Miami se decide en el celular: fotos, menú y cómo llegar. Hacemos páginas web para restaurantes, cafeterías y food trucks de Miami, con menú en línea y pedidos por WhatsApp, listas en 24 horas.'
+  sub_en: 'In Miami, people pick where to eat on their phone: photos, menu and directions. We build websites for Miami restaurants, cafés and food trucks with an online menu and WhatsApp ordering, ready in 24 hours.'
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Pueden poner mi menú en dos idiomas?
+  a_es: Sí. Tu menú queda en español e inglés, con precios y fotos, fácil de actualizar cuando cambies platos.
+  q_en: Can you put my menu in two languages?
+  a_en: Yes. Your menu goes up in English and Spanish, with prices and photos, and it is easy to update when dishes change.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- the-sweet-zone
+- mq-store
+areas:
+- Miami
+- Doral
+- Hialeah
+- Kendall
+- Little Havana
+- Miami Beach
+- Brickell
+combo: true
+cityref: city_miami
+indref: ''
+es:
+  name: restaurantes en Miami
+  points:
+  - icon: fa-solid fa-utensils
+    title: MENÚ QUE SE LEE BIEN
+    desc: El menú en texto, con precios y fotos, en español e inglés. Nada de PDFs borrosos.
+  - icon: fa-brands fa-whatsapp
+    title: PEDIDOS EN UN TOQUE
+    desc: Botones para pedir por WhatsApp, llamar o ir a tus apps de delivery.
+  - icon: fa-solid fa-location-dot
+    title: DE DORAL A MIAMI BEACH
+    desc: Ubicación, horario y estacionamiento claros para turistas y vecinos.
+en:
+  name: restaurants in Miami
+  points:
+  - icon: fa-solid fa-utensils
+    title: A MENU PEOPLE CAN READ
+    desc: Your menu in text, with prices and photos, in English and Spanish. No blurry PDFs.
+  - icon: fa-brands fa-whatsapp
+    title: ONE-TAP ORDERS
+    desc: Buttons to order on WhatsApp, call you or open your delivery apps.
+  - icon: fa-solid fa-location-dot
+    title: FROM DORAL TO MIAMI BEACH
+    desc: Clear location, hours and parking for tourists and locals alike.

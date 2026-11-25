@@ -1,0 +1,22 @@
+{% comment %}Enlaces internos entre ciudad, industria e industria+ciudad (combo). Se muestra solo si hay algo que enlazar.{% endcomment %}
+{% assign yo = site.data.routes[page.ref] %}{% assign hay = false %}
+{% for pair in site.data.routes %}{% if pair[1].combo and pair[0] != page.ref %}{% assign ok = false %}{% if pair[1].cityref == page.ref %}{% assign ok = true %}{% endif %}{% if pair[1].indref == page.ref %}{% assign ok = true %}{% endif %}{% if yo.combo and pair[1].cityref == yo.cityref %}{% assign ok = true %}{% endif %}{% if ok %}{% assign hay = true %}{% endif %}{% endif %}{% endfor %}
+{% if yo.combo %}{% assign hay = true %}{% endif %}
+{% if hay %}
+<div class="section" style="padding-top:0">
+  <div class="reveal">
+    <div class="sec-eyebrow">{% if page.lang == 'en' %}Specialties{% else %}Especialidades{% endif %}</div>
+    <h2 class="sec-title">{% if page.lang == 'en' %}WEBSITES BY <span class="accent">INDUSTRY AND CITY</span>{% else %}PÁGINAS POR <span class="accent">INDUSTRIA Y CIUDAD</span>{% endif %}</h2>
+  </div>
+  <div class="ind-grid">
+    {% if yo.combo %}{% assign rc = site.data.routes[yo.cityref] %}{% assign cc = site.data.content[yo.cityref] %}
+    <a class="ind-card reveal" href="{{ rc[page.lang] }}"><span class="ind-card-icon"><i class="fa-solid fa-location-dot"></i></span><span class="ind-card-name">{% if page.lang == 'en' %}Web design in {% else %}Diseño web en {% endif %}{{ cc[page.lang].name }}</span><i class="fa-solid fa-arrow-right ind-card-arrow"></i></a>
+    {% if yo.indref %}{% assign ri = site.data.routes[yo.indref] %}{% assign ci = site.data.content[yo.indref] %}
+    <a class="ind-card reveal" href="{{ ri[page.lang] }}"><span class="ind-card-icon"><i class="fa-solid fa-briefcase"></i></span><span class="ind-card-name">{% if page.lang == 'en' %}{{ ci.crumb_en }}{% else %}{{ ci.crumb_es }}{% endif %}</span><i class="fa-solid fa-arrow-right ind-card-arrow"></i></a>{% endif %}
+    {% endif %}
+    {% for pair in site.data.routes %}{% if pair[1].combo and pair[0] != page.ref %}{% assign ok = false %}{% if pair[1].cityref == page.ref %}{% assign ok = true %}{% endif %}{% if pair[1].indref == page.ref %}{% assign ok = true %}{% endif %}{% if yo.combo and pair[1].cityref == yo.cityref %}{% assign ok = true %}{% endif %}{% if ok %}{% assign kk = pair[0] %}{% assign cx = site.data.content[kk] %}{% assign lng = page.lang %}{% assign tx = cx[lng] %}
+    <a class="ind-card reveal" href="{{ pair[1][page.lang] }}"><span class="ind-card-icon"><i class="fa-solid fa-star"></i></span><span class="ind-card-name">{% if page.lang == 'en' %}Websites for {% else %}Páginas para {% endif %}{{ tx.name }}</span><i class="fa-solid fa-arrow-right ind-card-arrow"></i></a>
+    {% endif %}{% endif %}{% endfor %}
+  </div>
+</div>
+{% endif %}

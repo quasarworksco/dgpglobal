@@ -1,0 +1,75 @@
+crumb_es: Páginas web para talleres mecánicos en Houston
+crumb_en: Websites for auto repair shops in Houston
+service:
+  name_es: Páginas web para talleres mecánicos en Houston
+  name_en: Websites for auto repair shops in Houston
+  type: Web design
+hero:
+  bg_word: HTX
+  eyebrow_es: Diseño web · Talleres mecánicos · Houston
+  eyebrow_en: Web design · Auto repair shops · Houston
+  title_es: PÁGINAS WEB PARA TALLERES MECÁNICOS<span class="accent">EN HOUSTON</span>
+  title_en: WEBSITES FOR AUTO REPAIR SHOPS<span class="accent">IN HOUSTON</span>
+  sub_es: En Houston nadie vive sin carro, y cuando falla buscan un taller de confianza en el celular. Hacemos páginas web para talleres mecánicos de Houston con citas por WhatsApp, listas en 24 horas.
+  sub_en: Nobody in Houston lives without a car, and when it breaks down they search for a trusted shop on their phone. We build websites for Houston auto repair shops with WhatsApp booking, ready in 24 hours.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Sirve para un mecánico móvil?
+  a_es: Sí. Para servicio móvil mostramos tus zonas, horarios y un botón para pedir servicio desde donde esté el cliente.
+  q_en: Does it work for a mobile mechanic?
+  a_en: Yes. For mobile service we show your areas, hours and a button to request service from wherever the customer is.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- tecmeca
+- casanova-car-care
+areas:
+- Houston
+- Pasadena
+- Katy
+- Sugar Land
+- Pearland
+- Humble
+- Harris County
+combo: true
+cityref: city_houston
+indref: ind_auto
+es:
+  name: talleres mecánicos en Houston
+  points:
+  - icon: fa-solid fa-screwdriver-wrench
+    title: SERVICIOS CLAROS
+    desc: 'Frenos, aceite, diagnóstico, transmisión, aire: cada servicio con su descripción.'
+  - icon: fa-brands fa-whatsapp
+    title: CITAS POR WHATSAPP
+    desc: El cliente agenda o pregunta precio en un toque, en español o inglés.
+  - icon: fa-solid fa-van-shuttle
+    title: SERVICIO MÓVIL
+    desc: Si vas a domicilio, mostramos tus zonas de servicio en todo el área.
+en:
+  name: auto repair shops in Houston
+  points:
+  - icon: fa-solid fa-screwdriver-wrench
+    title: CLEAR SERVICES
+    desc: 'Brakes, oil, diagnostics, transmission, A/C: each service with its description.'
+  - icon: fa-brands fa-whatsapp
+    title: WHATSAPP BOOKING
+    desc: Customers book or ask for a price in one tap, in English or Spanish.
+  - icon: fa-solid fa-van-shuttle
+    title: MOBILE SERVICE
+    desc: If you go to the customer, we show your service areas across the metro.

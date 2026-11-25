@@ -1,0 +1,74 @@
+crumb_es: Páginas web para compañías de limpieza en Tampa
+crumb_en: Websites for cleaning companies in Tampa
+service:
+  name_es: Páginas web para compañías de limpieza en Tampa
+  name_en: Websites for cleaning companies in Tampa
+  type: Web design
+hero:
+  bg_word: TAMPA
+  eyebrow_es: Diseño web · Compañías de limpieza · Tampa
+  eyebrow_en: Web design · Cleaning companies · Tampa
+  title_es: PÁGINAS WEB PARA COMPAÑÍAS DE LIMPIEZA<span class="accent">EN TAMPA</span>
+  title_en: WEBSITES FOR CLEANING COMPANIES<span class="accent">IN TAMPA</span>
+  sub_es: Tampa Bay crece y con ella la demanda de limpieza residencial y comercial. Hacemos páginas web para compañías de limpieza de Tampa con cotización en línea, listas en 24 horas.
+  sub_en: Tampa Bay keeps growing, and so does demand for residential and commercial cleaning. We build websites for Tampa cleaning companies with online quotes, ready in 24 hours.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Sirve para limpieza comercial y residencial a la vez?
+  a_es: Sí. Separamos los dos servicios en secciones distintas, cada una con su formulario, para que cada cliente encuentre lo suyo.
+  q_en: Does it work for both commercial and residential cleaning?
+  a_en: Yes. We split the two services into separate sections, each with its own form, so every customer finds what they need.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- smelling-clean
+- cleaning-group
+areas:
+- Tampa
+- St. Petersburg
+- Clearwater
+- Brandon
+- Riverview
+- Hillsborough County
+combo: true
+cityref: city_tampa
+indref: ind_cleaning
+es:
+  name: compañías de limpieza en Tampa
+  points:
+  - icon: fa-solid fa-building
+    title: OFICINAS Y COMERCIOS
+    desc: Una sección para limpieza comercial con contratos recurrentes y cotización por metro cuadrado.
+  - icon: fa-solid fa-house
+    title: CASAS Y MUDANZAS
+    desc: Limpieza profunda, de mudanza y recurrente, cada una con su precio y botón.
+  - icon: fa-solid fa-location-dot
+    title: TODA LA BAHÍA
+    desc: Tampa, St. Petersburg, Clearwater y Brandon señalados para Google.
+en:
+  name: cleaning companies in Tampa
+  points:
+  - icon: fa-solid fa-building
+    title: OFFICES & COMMERCIAL
+    desc: A section for commercial cleaning with recurring contracts and per-square-foot quotes.
+  - icon: fa-solid fa-house
+    title: HOMES & MOVE-OUTS
+    desc: Deep, move-out and recurring cleaning, each with its own price and button.
+  - icon: fa-solid fa-location-dot
+    title: THE WHOLE BAY
+    desc: Tampa, St. Petersburg, Clearwater and Brandon clearly shown for Google.

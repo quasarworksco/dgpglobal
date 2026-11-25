@@ -1,0 +1,75 @@
+crumb_es: Páginas web para talleres mecánicos en Dallas
+crumb_en: Websites for auto repair shops in Dallas
+service:
+  name_es: Páginas web para talleres mecánicos en Dallas
+  name_en: Websites for auto repair shops in Dallas
+  type: Web design
+hero:
+  bg_word: DFW
+  eyebrow_es: Diseño web · Talleres mecánicos · Dallas
+  eyebrow_en: Web design · Auto repair shops · Dallas
+  title_es: PÁGINAS WEB PARA TALLERES MECÁNICOS<span class="accent">EN DALLAS</span>
+  title_en: WEBSITES FOR AUTO REPAIR SHOPS<span class="accent">IN DALLAS</span>
+  sub_es: En el Metroplex se maneja todo el día, y un buen taller vive de su reputación. Hacemos páginas web para talleres de Dallas, Irving y Arlington, listas en 24 horas.
+  sub_en: The Metroplex drives all day, and a good shop lives on its reputation. We build websites for auto repair shops in Dallas, Irving and Arlington, ready in 24 hours.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Ya hicieron páginas para talleres en Texas?
+  a_es: Sí. Tenemos clientes de talleres en Texas, como un taller eléctrico automotriz móvil en Arlington.
+  q_en: Have you built sites for auto shops in Texas?
+  a_en: Yes. We have auto shop clients in Texas, like a mobile auto electrical shop in Arlington.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- tecmeca
+- casanova-car-care
+areas:
+- Dallas
+- Irving
+- Garland
+- Arlington
+- Grand Prairie
+- Mesquite
+- Dallas County
+combo: true
+cityref: city_dallas
+indref: ind_auto
+es:
+  name: talleres mecánicos en Dallas
+  points:
+  - icon: fa-solid fa-gauge-high
+    title: DIAGNÓSTICO Y ELECTRICIDAD
+    desc: Servicios especializados explicados claro, para que el cliente entienda qué haces.
+  - icon: fa-solid fa-star
+    title: REPUTACIÓN EN GOOGLE
+    desc: Mostramos tus reseñas y te ayudamos a conseguir más.
+  - icon: fa-solid fa-city
+    title: TODO EL METROPLEX
+    desc: Dallas, Irving, Garland y Arlington señalados para que te encuentren cerca.
+en:
+  name: auto repair shops in Dallas
+  points:
+  - icon: fa-solid fa-gauge-high
+    title: DIAGNOSTICS & ELECTRICAL
+    desc: Specialized services explained clearly so customers understand what you do.
+  - icon: fa-solid fa-star
+    title: GOOGLE REPUTATION
+    desc: We showcase your reviews and help you get more.
+  - icon: fa-solid fa-city
+    title: THE WHOLE METROPLEX
+    desc: Dallas, Irving, Garland and Arlington clearly shown so nearby drivers find you.

@@ -63,3 +63,14 @@ city_sarasota: {es: "/diseno-web/sarasota/", en: "/en/web-design/sarasota/", cit
 city_portstlucie: {es: "/diseno-web/port-st-lucie/", en: "/en/web-design/port-st-lucie/", city: true, nofooter: true}
 city_portcharlotte: {es: "/diseno-web/port-charlotte/", en: "/en/web-design/port-charlotte/", city: true, nofooter: true}
 city_dallas: {es: "/diseno-web/dallas/", en: "/en/web-design/dallas/", city: true, nofooter: true}
+# Industria + ciudad
+combo_rest_miami: {es: "/diseno-web/restaurantes-miami/", en: "/en/web-design/restaurants-miami/", combo: true, cityref: city_miami}
+combo_rest_orlando: {es: "/diseno-web/restaurantes-orlando/", en: "/en/web-design/restaurants-orlando/", combo: true, cityref: city_orlando}
+combo_rest_houston: {es: "/diseno-web/restaurantes-houston/", en: "/en/web-design/restaurants-houston/", combo: true, cityref: city_houston}
+combo_cons_miami: {es: "/diseno-web/construccion-miami/", en: "/en/web-design/contractors-miami/", combo: true, cityref: city_miami, indref: ind_construction}
+combo_cons_fortmyers: {es: "/diseno-web/construccion-fort-myers/", en: "/en/web-design/contractors-fort-myers/", combo: true, cityref: city_fortmyers, indref: ind_construction}
+combo_cons_houston: {es: "/diseno-web/construccion-houston/", en: "/en/web-design/contractors-houston/", combo: true, cityref: city_houston, indref: ind_construction}
+combo_clean_orlando: {es: "/diseno-web/limpieza-orlando/", en: "/en/web-design/cleaning-companies-orlando/", combo: true, cityref: city_orlando, indref: ind_cleaning}
+combo_clean_tampa: {es: "/diseno-web/limpieza-tampa/", en: "/en/web-design/cleaning-companies-tampa/", combo: true, cityref: city_tampa, indref: ind_cleaning}
+combo_auto_houston: {es: "/diseno-web/talleres-houston/", en: "/en/web-design/auto-repair-houston/", combo: true, cityref: city_houston, indref: ind_auto}
+combo_auto_dallas: {es: "/diseno-web/talleres-dallas/", en: "/en/web-design/auto-repair-dallas/", combo: true, cityref: city_dallas, indref: ind_auto}

@@ -1,0 +1,75 @@
+crumb_es: Páginas web para constructoras en Houston
+crumb_en: Websites for contractors in Houston
+service:
+  name_es: Páginas web para constructoras en Houston
+  name_en: Websites for contractors in Houston
+  type: Web design
+hero:
+  bg_word: HTX
+  eyebrow_es: Diseño web · Constructoras · Houston
+  eyebrow_en: Web design · Contractors · Houston
+  title_es: PÁGINAS WEB PARA CONSTRUCTORAS<span class="accent">EN HOUSTON</span>
+  title_en: WEBSITES FOR CONTRACTORS<span class="accent">IN HOUSTON</span>
+  sub_es: Houston crece en todas direcciones y los contratistas compiten por cada proyecto. Hacemos páginas web bilingües para constructoras y oficios de Houston, listas en 24 horas.
+  sub_en: Houston keeps growing in every direction and contractors compete for every project. We build bilingual websites for Houston contractors and trades, ready in 24 hours.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Sirve para subcontratistas que trabajan para constructoras?
+  a_es: Sí. Mostramos tu experiencia, seguros y proyectos para que las constructoras generales confíen en ti.
+  q_en: Does it work for subcontractors who work for builders?
+  a_en: Yes. We show your experience, insurance and projects so general contractors trust you.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- caibo-construction
+- tecmeca
+areas:
+- Houston
+- Katy
+- Pasadena
+- Pearland
+- Sugar Land
+- The Woodlands
+- Harris County
+combo: true
+cityref: city_houston
+indref: ind_construction
+es:
+  name: constructoras en Houston
+  points:
+  - icon: fa-solid fa-helmet-safety
+    title: OFICIOS DE TODO TIPO
+    desc: Construcción, remodelación, concreto, techos, aire acondicionado y electricidad.
+  - icon: fa-solid fa-language
+    title: CLIENTES EN DOS IDIOMAS
+    desc: Tu página en español e inglés para dueños de casa y constructoras generales.
+  - icon: fa-solid fa-file-signature
+    title: ESTIMADOS EN LÍNEA
+    desc: Formulario de estimado con fotos para que el cliente te cuente el trabajo desde el celular.
+en:
+  name: contractors in Houston
+  points:
+  - icon: fa-solid fa-helmet-safety
+    title: EVERY TRADE
+    desc: Construction, remodeling, concrete, roofing, HVAC and electrical.
+  - icon: fa-solid fa-language
+    title: CUSTOMERS IN TWO LANGUAGES
+    desc: Your site in English and Spanish for homeowners and general contractors.
+  - icon: fa-solid fa-file-signature
+    title: ONLINE ESTIMATES
+    desc: An estimate form with photos so customers can describe the job from their phone.

@@ -1,0 +1,74 @@
+crumb_es: Páginas web para restaurantes en Orlando
+crumb_en: Websites for restaurants in Orlando
+service:
+  name_es: Páginas web para restaurantes en Orlando
+  name_en: Websites for restaurants in Orlando
+  type: Web design
+hero:
+  bg_word: ORLANDO
+  eyebrow_es: Diseño web · Restaurantes · Orlando
+  eyebrow_en: Web design · Restaurants · Orlando
+  title_es: PÁGINAS WEB PARA RESTAURANTES<span class="accent">EN ORLANDO</span>
+  title_en: WEBSITES FOR RESTAURANTS<span class="accent">IN ORLANDO</span>
+  sub_es: Entre turistas y vecinos, Orlando busca dónde comer en Google cada minuto. Hacemos páginas web para restaurantes y food trucks de Orlando y Kissimmee, listas en 24 horas.
+  sub_en: Between tourists and locals, Orlando searches for places to eat every minute. We build websites for restaurants and food trucks in Orlando and Kissimmee, ready in 24 hours.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Sirve para un food truck que cambia de lugar?
+  a_es: Sí. Agregamos un calendario sencillo de ubicaciones para que tus clientes sepan dónde encontrarte cada día.
+  q_en: Does it work for a food truck that moves around?
+  a_en: Yes. We add a simple location schedule so your customers know where to find you each day.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- the-sweet-zone
+- mq-store
+areas:
+- Orlando
+- Kissimmee
+- Winter Park
+- Lake Nona
+- Sanford
+- Orange County
+combo: true
+cityref: city_orlando
+indref: ''
+es:
+  name: restaurantes en Orlando
+  points:
+  - icon: fa-solid fa-plane-arrival
+    title: LISTA PARA TURISTAS
+    desc: Información clara en inglés y español para visitantes que no conocen la zona.
+  - icon: fa-solid fa-truck
+    title: FOOD TRUCKS
+    desc: Muestra dónde estarás cada día de la semana y tu menú del día.
+  - icon: fa-solid fa-champagne-glasses
+    title: CATERING Y EVENTOS
+    desc: Sección propia para catering y eventos privados con formulario de cotización.
+en:
+  name: restaurants in Orlando
+  points:
+  - icon: fa-solid fa-plane-arrival
+    title: READY FOR TOURISTS
+    desc: Clear information in English and Spanish for visitors who don't know the area.
+  - icon: fa-solid fa-truck
+    title: FOOD TRUCKS
+    desc: Show where you'll be each day of the week and today's menu.
+  - icon: fa-solid fa-champagne-glasses
+    title: CATERING & EVENTS
+    desc: A dedicated section for catering and private events with a quote form.

@@ -1,0 +1,75 @@
+crumb_es: Páginas web para restaurantes en Houston
+crumb_en: Websites for restaurants in Houston
+service:
+  name_es: Páginas web para restaurantes en Houston
+  name_en: Websites for restaurants in Houston
+  type: Web design
+hero:
+  bg_word: HTX
+  eyebrow_es: Diseño web · Restaurantes · Houston
+  eyebrow_en: Web design · Restaurants · Houston
+  title_es: PÁGINAS WEB PARA RESTAURANTES<span class="accent">EN HOUSTON</span>
+  title_en: WEBSITES FOR RESTAURANTS<span class="accent">IN HOUSTON</span>
+  sub_es: Houston es una de las capitales de la comida en Estados Unidos, y la competencia es fuerte. Hacemos páginas web bilingües para restaurantes y taquerías de Houston, listas en 24 horas.
+  sub_en: Houston is one of the food capitals of the US, and the competition is tough. We build bilingual websites for Houston restaurants and taquerias, ready in 24 hours.
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Pueden conectar mi página con mis apps de delivery?
+  a_es: Sí. Agregamos botones directos a tus apps de delivery y a pedidos por WhatsApp o llamada.
+  q_en: Can you connect my site with my delivery apps?
+  a_en: Yes. We add direct buttons to your delivery apps and to WhatsApp or phone orders.
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- the-sweet-zone
+- tecmeca
+areas:
+- Houston
+- Katy
+- Pasadena
+- Sugar Land
+- Pearland
+- Spring
+- Harris County
+combo: true
+cityref: city_houston
+indref: ''
+es:
+  name: restaurantes en Houston
+  points:
+  - icon: fa-solid fa-pepper-hot
+    title: DESTACA ENTRE MILES
+    desc: Fotos reales, tus especialidades y reseñas para que te elijan frente a la competencia.
+  - icon: fa-solid fa-language
+    title: BILINGÜE DE VERDAD
+    desc: Menú y textos escritos por personas en español e inglés.
+  - icon: fa-solid fa-map
+    title: TODA EL ÁREA
+    desc: 'Katy, Pasadena, Sugar Land: mostramos tus zonas de delivery y catering.'
+en:
+  name: restaurants in Houston
+  points:
+  - icon: fa-solid fa-pepper-hot
+    title: STAND OUT FROM THOUSANDS
+    desc: Real photos, your specialties and reviews so diners pick you over the competition.
+  - icon: fa-solid fa-language
+    title: TRULY BILINGUAL
+    desc: Menu and copy written by people in English and Spanish.
+  - icon: fa-solid fa-map
+    title: THE WHOLE AREA
+    desc: 'Katy, Pasadena, Sugar Land: we show your delivery and catering areas.'

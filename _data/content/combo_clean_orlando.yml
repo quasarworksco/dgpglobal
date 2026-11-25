@@ -1,0 +1,74 @@
+crumb_es: Páginas web para compañías de limpieza en Orlando
+crumb_en: Websites for cleaning companies in Orlando
+service:
+  name_es: Páginas web para compañías de limpieza en Orlando
+  name_en: Websites for cleaning companies in Orlando
+  type: Web design
+hero:
+  bg_word: ORLANDO
+  eyebrow_es: Diseño web · Compañías de limpieza · Orlando
+  eyebrow_en: Web design · Cleaning companies · Orlando
+  title_es: PÁGINAS WEB PARA COMPAÑÍAS DE LIMPIEZA<span class="accent">EN ORLANDO</span>
+  title_en: WEBSITES FOR CLEANING COMPANIES<span class="accent">IN ORLANDO</span>
+  sub_es: 'Casas de vacaciones, oficinas y hogares: Orlando necesita limpieza todos los días. Hacemos páginas web para compañías de limpieza de Orlando con cotización en línea, listas en 24 horas.'
+  sub_en: 'Vacation homes, offices and family homes: Orlando needs cleaning every day. We build websites for Orlando cleaning companies with online quotes, ready in 24 hours.'
+  chips:
+  - icon: fa-solid fa-bolt
+    es: Lista en 24 horas
+    en: Ready in 24 hours
+  - icon: fa-solid fa-language
+    es: Español e inglés
+    en: Spanish & English
+  - icon: fa-solid fa-receipt
+    es: Pago único
+    en: One-time payment
+faq:
+- q_es: ¿Pueden hacer una sección para casas de alquiler vacacional?
+  a_es: 'Sí. Es muy buscado en Orlando y Kissimmee: explicamos tu servicio de limpieza entre huéspedes con un formulario para administradores.'
+  q_en: Can you add a section for vacation rental cleaning?
+  a_en: 'Yes. It is in high demand in Orlando and Kissimmee: we explain your turnover cleaning service with a form for property managers.'
+- q_es: ¿Cuánto tarda mi página web?
+  a_es: La tenemos lista para revisar en 24 horas desde que recibimos tu información.
+  q_en: How long does my website take?
+  a_en: It is ready to review 24 hours after we receive your information.
+- q_es: ¿Podemos reunirnos en persona?
+  a_es: 'Trabajamos 100% en línea desde Florida: nos reunimos por videollamada o WhatsApp y te entregamos todo a distancia.'
+  q_en: Can we meet in person?
+  a_en: 'We work 100% online from Florida: we meet by video call or WhatsApp and deliver everything remotely.'
+projects:
+- smelling-clean
+- cleaning-group
+areas:
+- Orlando
+- Kissimmee
+- Winter Garden
+- Clermont
+- Davenport
+- Orange County
+combo: true
+cityref: city_orlando
+indref: ind_cleaning
+es:
+  name: compañías de limpieza en Orlando
+  points:
+  - icon: fa-solid fa-key
+    title: ALQUILERES VACACIONALES
+    desc: 'Limpieza entre huéspedes para casas de alquiler: una sección pensada para administradores de propiedades.'
+  - icon: fa-solid fa-calculator
+    title: COTIZACIÓN AL MOMENTO
+    desc: Formulario con tamaño de la casa, tipo de limpieza y frecuencia.
+  - icon: fa-solid fa-star
+    title: RESEÑAS QUE DAN CONFIANZA
+    desc: 'Dejar entrar a alguien a casa requiere confianza: mostramos tus mejores reseñas.'
+en:
+  name: cleaning companies in Orlando
+  points:
+  - icon: fa-solid fa-key
+    title: VACATION RENTALS
+    desc: 'Turnover cleaning for rental homes: a section built for property managers.'
+  - icon: fa-solid fa-calculator
+    title: INSTANT QUOTE REQUESTS
+    desc: A form with home size, type of cleaning and frequency.
+  - icon: fa-solid fa-star
+    title: REVIEWS THAT BUILD TRUST
+    desc: 'Letting someone into a home takes trust: we highlight your best reviews.'
