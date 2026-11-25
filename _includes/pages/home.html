@@ -152,8 +152,8 @@
 <!-- VIDEO: DGP en 15 segundos (sin sonido) — puente entre el hero y los servicios -->
 <div class="hv-wrap hv-bridge">
   <div class="hv-frame">
-    <video class="hv-video" muted loop playsinline preload="none" poster="/assets/video/dgp-15s-poster.jpg" aria-label="{% if page.lang == 'es' %}Video: DGP Global Group en 15 segundos{% else %}Video: DGP Global Group in 15 seconds{% endif %}">
-      <source src="/assets/video/dgp-15s.mp4" type="video/mp4">
+    <video class="hv-video" muted loop playsinline preload="none" poster="/assets/video/dgp-15s{% if page.lang == 'en' %}-en{% endif %}-poster.jpg" aria-label="{% if page.lang == 'es' %}Video: DGP Global Group en 15 segundos{% else %}Video: DGP Global Group in 15 seconds{% endif %}">
+      <source src="/assets/video/dgp-15s{% if page.lang == 'en' %}-en{% endif %}.mp4" type="video/mp4">
     </video>
   </div>
 </div>
@@ -238,8 +238,8 @@
 <!-- VIDEO 2: sitios web y sistemas a medida -->
 <div class="hv-wrap hv-bridge hv-bridge--navy">
   <div class="hv-frame">
-    <video class="hv-video" muted loop playsinline preload="none" poster="/assets/video/dgp-sistemas-poster.jpg" aria-label="{% if page.lang == 'es' %}Video: sitios web y sistemas a medida de DGP{% else %}Video: DGP websites and custom systems{% endif %}">
-      <source src="/assets/video/dgp-sistemas.mp4" type="video/mp4">
+    <video class="hv-video" muted loop playsinline preload="none" poster="/assets/video/dgp-sistemas{% if page.lang == 'en' %}-en{% endif %}-poster.jpg" aria-label="{% if page.lang == 'es' %}Video: sitios web y sistemas a medida de DGP{% else %}Video: DGP websites and custom systems{% endif %}">
+      <source src="/assets/video/dgp-sistemas{% if page.lang == 'en' %}-en{% endif %}.mp4" type="video/mp4">
     </video>
   </div>
 </div>
