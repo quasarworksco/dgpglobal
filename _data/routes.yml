@@ -33,6 +33,15 @@ guide_website_cost: {es: "/guias/cuanto-cuesta-una-pagina-web/", en: "/en/guides
 guide_google_maps: {es: "/guias/como-aparecer-en-google-maps/", en: "/en/guides/how-to-show-up-on-google-maps/", guide: true}
 guide_logo_cost: {es: "/guias/cuanto-cuesta-un-logo-profesional/", en: "/en/guides/how-much-does-a-professional-logo-cost/", guide: true}
 guide_whatsapp_sales: {es: "/guias/vender-por-whatsapp-con-pagina-web/", en: "/en/guides/sell-on-whatsapp-with-a-website/", guide: true}
+guide_google_30d: {es: "/guias/como-conseguir-clientes-por-google-en-30-dias/", en: "/en/guides/how-to-get-customers-from-google-in-30-days/", guide: true}
+guide_web_vs_social: {es: "/guias/pagina-web-o-solo-redes-sociales/", en: "/en/guides/website-vs-social-media-only/", guide: true}
+guide_domain: {es: "/guias/como-elegir-el-dominio-de-tu-negocio/", en: "/en/guides/how-to-choose-a-domain-name/", guide: true}
+guide_web_mistakes: {es: "/guias/errores-que-hacen-que-tu-web-no-venda/", en: "/en/guides/website-mistakes-that-cost-you-customers/", guide: true}
+guide_google_reviews: {es: "/guias/como-conseguir-resenas-en-google/", en: "/en/guides/how-to-get-more-google-reviews/", guide: true}
+guide_restaurant_site: {es: "/guias/pagina-web-para-restaurantes/", en: "/en/guides/restaurant-website-checklist/", guide: true}
+guide_contractor_site: {es: "/guias/pagina-web-para-contratistas/", en: "/en/guides/contractor-website-checklist/", guide: true}
+guide_local_seo: {es: "/guias/que-es-el-seo-local/", en: "/en/guides/local-seo-explained/", guide: true}
+guide_new_business_online: {es: "/guias/negocio-nuevo-primer-mes-en-internet/", en: "/en/guides/new-business-first-month-online/", guide: true}
 # City landing pages
 city_florida: {es: "/diseno-web/florida/", en: "/en/web-design/florida/", city: true}
 city_miami: {es: "/diseno-web/miami/", en: "/en/web-design/miami/", city: true}
